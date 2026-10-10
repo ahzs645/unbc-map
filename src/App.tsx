@@ -5,8 +5,9 @@ import {
   BookOpen,
   Check,
   ChevronRight,
+  ChevronDown,
+  Menu,
   ExternalLink,
-  Info,
   Layers,
   MapPin,
   Mountain,
@@ -57,6 +58,7 @@ import type { StyleSpecification } from "maplibre-gl";
 import type { FeatureCollection } from "geojson";
 import "@pgmaps/geo-toolkit/styles.css";
 import "./styles.css";
+import "./nals-theme.css";
 
 const icons = {
   learning: BookOpen,
@@ -311,6 +313,16 @@ export default function App() {
   const [homeKey, setHomeKey] = useState(0);
   const [focusKey, setFocusKey] = useState(0);
   const [about, setAbout] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [headerSearch, setHeaderSearch] = useState(false);
+  useEffect(() => {
+    const closeMenu = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && !document.querySelector("dialog[open]"))
+        setMenuOpen(false);
+    };
+    window.addEventListener("keydown", closeMenu);
+    return () => window.removeEventListener("keydown", closeMenu);
+  }, []);
   const [shareStatus, setShareStatus] = useState("");
   const [mapReady, setMapReady] = useState(false);
   useEffect(() => {
@@ -499,56 +511,116 @@ export default function App() {
       <a className="skip-link" href="#campus-search">
         Skip to campus explorer
       </a>
-      <header className="masthead">
-        <a
-          className="wordmark"
-          href={location.pathname}
-          aria-label="UNBC Campus Explorer home"
-        >
-          <span className="wordmark-name">
-            UNBC
-            <span className="wordmark-rule" />
-          </span>
-          <span className="wordmark-text">
-            UNIVERSITY OF
-            <br />
-            NORTHERN BRITISH COLUMBIA
-          </span>
-        </a>
-        <div className="masthead-right">
-          <span className="product-name">Campus Explorer</span>
+      <header className="masthead mastbackground">
+        <div className="nals-header-inner">
           <button
-            className="about-button"
-            aria-label="About this map"
-            onClick={() => setAbout(true)}
+            className="mobile-menu-toggle"
+            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+            aria-expanded={menuOpen}
+            aria-controls="campus-navigation"
+            onClick={() => setMenuOpen(!menuOpen)}
           >
-            <Info size={16} />
-            <span>About this map</span>
+            {menuOpen ? <X size={28} /> : <Menu size={30} />}
           </button>
           <a
-            className="visit-link"
-            href="https://www.unbc.ca/"
-            target="_blank"
-            rel="noreferrer"
+            className="site-header__logo"
+            href={location.pathname}
+            aria-label="NALS UNBC Campus Explorer home"
           >
-            Visit UNBC
-            <ArrowRight size={16} />
+            <img
+              src={`${import.meta.env.BASE_URL}brand/nals-logo-white.svg`}
+              alt="UNBC — Northern Analytical Laboratory Services"
+              width="325"
+              height="146"
+            />
           </a>
+          <div className="nals-header-tools">
+            <a
+              className="apply-button"
+              href="https://www.unbc.ca/admissions/apply-now"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Apply to UNBC
+            </a>
+            <button
+              className="custom-search-toggle"
+              aria-label="Search campus"
+              onClick={() => setHeaderSearch(true)}
+            >
+              <Search size={21} />
+              <ChevronDown size={14} />
+            </button>
+          </div>
+          <nav
+            id="campus-navigation"
+            className={`nals-navigation ${menuOpen ? "is-menu-open" : ""}`}
+            aria-label="Campus navigation"
+          >
+            <button
+              className="current-page"
+              aria-current="page"
+              onClick={() => {
+                reset();
+                setMenuOpen(false);
+              }}
+            >
+              Campus map
+            </button>
+            <a
+              href={officialMap}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setMenuOpen(false)}
+            >
+              Building directory
+            </a>
+            <a
+              href="https://www.unbc.ca/"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setMenuOpen(false)}
+            >
+              Visit UNBC
+            </a>
+            <button
+              className="about-button"
+              aria-label="About this map"
+              onClick={() => {
+                setAbout(true);
+              }}
+            >
+              About this map
+            </button>
+            <a
+              className="mobile-apply"
+              href="https://www.unbc.ca/admissions/apply-now"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Apply to UNBC
+            </a>
+          </nav>
         </div>
       </header>
       <div className="context-bar">
         <span>
           <MapPin size={14} />
-          Prince George, British Columbia
+          Prince George campus <ChevronRight size={12} />
+          <strong>Campus Explorer</strong>
         </span>
-        <a
-          href="https://www.unbc.ca/about-unbc/tour"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Your campus. Your next discovery.
-          <ArrowRight size={14} />
-        </a>
+        <div className="contentoverbutton">
+          <a
+            href="https://projects.ahmadjalil.com/nals-wp/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            NALS website
+          </a>
+          <a href={officialMap} target="_blank" rel="noreferrer">
+            Download campus map
+          </a>
+        </div>
       </div>
       <main
         id="campus-search"
@@ -702,7 +774,24 @@ export default function App() {
         </WorkspaceProvider>
       </main>
       <footer className="app-footer">
-        <span>Independent UNBC map concept</span>
+        <a
+          className="footer-logo"
+          href="https://projects.ahmadjalil.com/nals-wp/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src={`${import.meta.env.BASE_URL}brand/nals-logo-green.svg`}
+            alt="Northern Analytical Laboratory Services, UNBC"
+            width="160"
+            height="72"
+          />
+        </a>
+        <span className="footer-address">
+          3333 University Way · Prince George, BC
+          <br />
+          <span>Independent campus map concept</span>
+        </span>
         <span className="footer-credit">
           Built with{" "}
           <a
@@ -717,6 +806,17 @@ export default function App() {
         </span>
       </footer>
       {about && <About onClose={() => setAbout(false)} />}
+      {headerSearch && (
+        <CampusSearch
+          onClose={() => setHeaderSearch(false)}
+          onSelect={(place) => {
+            filter("all", "");
+            select(place);
+            setHeaderSearch(false);
+            setMenuOpen(false);
+          }}
+        />
+      )}
     </div>
   );
 }
@@ -760,8 +860,25 @@ function About({ onClose }: { onClose: () => void }) {
           >
             PGMaps GeoToolkit
           </a>
-          , styled using the UNBC palette and BC Sans typography supplied in the
-          NALS theme.
+          , with the logo and responsive masthead from the{" "}
+          <a
+            href="https://github.com/ahzs645/nals-wp"
+            target="_blank"
+            rel="noreferrer"
+          >
+            NALS WordPress theme
+          </a>
+          , its BC Sans and Helvetica Neue Black typography, navigation tabs,
+          buttons, and neutral backgrounds. The NALS lockup is generated by the
+          same{" "}
+          <a
+            href="https://github.com/ahzs645/unbc-logo"
+            target="_blank"
+            rel="noreferrer"
+          >
+            UNBC logo kit
+          </a>{" "}
+          used by the theme showcase.
         </p>
         <h3>Map sources</h3>
         <p>
@@ -802,6 +919,72 @@ function About({ onClose }: { onClose: () => void }) {
           UNBC campus information
           <ExternalLink size={15} />
         </a>
+      </div>
+    </dialog>
+  );
+}
+
+function CampusSearch({
+  onClose,
+  onSelect,
+}: {
+  onClose: () => void;
+  onSelect: (place: Place) => void;
+}) {
+  const [term, setTerm] = useState("");
+  useEffect(() => {
+    const previous = document.activeElement as HTMLElement | null;
+    const dialog = document.querySelector<HTMLDialogElement>("#header-search")!;
+    dialog.showModal();
+    return () => {
+      dialog.close();
+      previous?.focus();
+    };
+  }, []);
+  const matches = places.filter((place) =>
+    `${place.name} ${place.short} ${place.number}`
+      .toLowerCase()
+      .includes(term.trim().toLowerCase()),
+  );
+  return (
+    <dialog
+      id="header-search"
+      className="nals-search-dialog"
+      aria-labelledby="header-search-title"
+      onCancel={onClose}
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onClose();
+      }}
+    >
+      <button
+        className="icon-button search-close"
+        aria-label="Close campus search"
+        onClick={onClose}
+      >
+        <X size={22} />
+      </button>
+      <h2 id="header-search-title">Search campus</h2>
+      <label className="sr-only" htmlFor="header-search-input">
+        Search campus from header
+      </label>
+      <input
+        id="header-search-input"
+        type="search"
+        autoFocus
+        placeholder="Building name or number"
+        value={term}
+        onChange={(event) => setTerm(event.target.value)}
+      />
+      <div className="header-search-results">
+        {matches.map((place) => (
+          <button key={place.id} onClick={() => onSelect(place)}>
+            <span>{place.name}</span>
+            <ChevronRight size={16} />
+          </button>
+        ))}
+        {matches.length === 0 && (
+          <p>No places found. Try another building name.</p>
+        )}
       </div>
     </dialog>
   );

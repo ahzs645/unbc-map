@@ -1,3 +1,6 @@
 [submodule "packages/geo-toolkit"]
 	path = packages/geo-toolkit
 	url = https://github.com/ahzs645/geo-toolkit.git
+[submodule "packages/unbc-logo"]
+	path = packages/unbc-logo
+	url = https://github.com/ahzs645/unbc-logo.git

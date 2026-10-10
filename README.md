@@ -1,6 +1,6 @@
 # UNBC Campus Explorer
 
-A UNBC styled interactive campus map built with the standalone **PGMaps GeoToolkit**, using the forest green, teal, gold, warm neutrals, and BC Sans typography in the supplied NALS WordPress theme.
+A UNBC styled interactive campus map built with the standalone **PGMaps GeoToolkit**, using the supplied **NALS WordPress theme** styling and its actual UNBC/NALS logo lockup. The masthead uses the theme’s radial green gradient, Apply/search controls, navigation and secondary tabs; BC Sans and Helvetica Neue Black provide the body and display typography. The footer uses the green NALS lockup.
 
 **Live map:** https://projects.ahmadjalil.com/unbc-map/
 
@@ -25,6 +25,7 @@ git clone --recurse-submodules https://github.com/ahzs645/unbc-map.git
 cd unbc-map
 npm install --global npm@11.19.0
 npm ci
+npm run brand:build
 npm run toolkit:build
 npm run dev
 ```
@@ -46,20 +47,25 @@ The browser checks serve the production build at `/unbc-map/` and cover real Web
 - `src/data.ts`: curated place directory, category colours, and official links.
 - `src/mapStyles.ts`: UNBC basemap palette and tile providers.
 - `src/App.tsx`: directory, map interactions, detail cards, and source notes.
-- `src/styles.css`: original responsive UNBC styled interface.
+- `src/styles.css`: campus explorer interface.
+- `src/nals-theme.css`: responsive adaptation of the supplied NALS theme’s header, typography, navigation, buttons, and footer styles.
+- `scripts/build-brand.mjs`: generates the same NALS white/green lockups as `nals-wp/showcase/logo.mjs`, using the pinned `packages/unbc-logo` submodule.
+- `public/brand/`: generated SVG logo lockups with embedded department-line typography.
 - `public/data/campus.geojson`: local, bounded OpenStreetMap geometry snapshot.
 
 ## Sources and licences
 
 Building names/numbers follow [UNBC campus maps](https://www.unbc.ca/about-unbc/campus-maps), including the campus overview updated March 2026 and building directory updated April 2026. The Prince George campus address and territory acknowledgement follow [UNBC campus contact information](https://www.unbc.ca/about-unbc/contact). Official sources take priority where OSM building names differ.
 
-Coordinates and 159 building, parking, garden, and path geometries were extracted from the [OpenStreetMap API](https://www.openstreetmap.org/api/0.6/map?bbox=-122.824,53.886,-122.800,53.899) on October 10, 2026. OpenStreetMap data is © OpenStreetMap contributors, available under the [Open Database License](https://www.openstreetmap.org/copyright). The derived geometry dataset and OSM coordinates remain under the ODbL; the MIT application licence does not replace their licence. Each place links to its original OSM object. The snapshot is bounded to the campus and does not require live Overpass queries.
+Coordinates and 159 building, parking, garden, and path geometries were extracted from the [OpenStreetMap API](https://www.openstreetmap.org/api/0.6/map?bbox=-122.824,53.886,-122.800,53.899) on October 10, 2026. OpenStreetMap data is © OpenStreetMap contributors, available under the [Open Database License](https://www.openstreetmap.org/copyright). The derived geometry dataset and OSM coordinates remain under the ODbL; the application licence does not replace their licence. Each place links to its original OSM object. The snapshot is bounded to the campus and does not require live Overpass queries.
 
 The campus/dark basemaps use [CARTO](https://carto.com/attributions) with OpenStreetMap attribution. Satellite imagery uses Esri World Imagery, with source credits shown on the map. Those remote services require internet access; the local place directory remains usable when a basemap is unavailable. Imagery dates vary by location.
 
-BC Sans Regular/Bold are supplied in the user-provided NALS theme, distributed under the [SIL Open Font License](public/fonts/LICENSE_OFL.txt), with provenance in the [official BC Sans project](https://github.com/bcgov/bc-sans). The proprietary Helvetica Neue Black file from the theme is not redistributed. Display headings use installed system font fallbacks. The interface uses the supplied colour values with original CSS rather than copying the WordPress theme implementation. No official university logo asset is included.
+BC Sans Regular/Bold/Light are supplied in the user-provided NALS theme, distributed under the [SIL Open Font License](public/fonts/LICENSE_OFL.txt), with provenance in the [official BC Sans project](https://github.com/bcgov/bc-sans).
 
-App source is MIT licensed. GeoToolkit retains its MIT licence in the submodule. Other dependencies retain their respective licences.
+The supplied NALS theme is [GPL v2 or later](https://github.com/ahzs645/nals-wp). `src/nals-theme.css` adapts its SCSS styling. This application is distributed under GPL v2 or later to preserve the theme’s terms; GeoToolkit retains its MIT licence in its submodule. Other dependencies retain their respective licences.
+
+The logo is generated through the same [UNBC logo kit](https://github.com/ahzs645/unbc-logo) used by the NALS showcase, with the locked Northern Analytical Laboratory Services department line. UNBC artwork and trademarks retain their owners’ rights. `HelveticaNeueBlack.otf` comes from the provided theme; the SVG department line embeds the kit’s Helvetica Neue LT Pro Black. These are commercial brand fonts, not covered by the application’s GPL or the BC Sans OFL; downstream reuse needs the appropriate font licence. See [brand provenance](public/brand/SOURCES.md).
 
 Locations represent approximate building or area centres, not verified public or accessible entrances. This map does not provide room-level routing, live transit, hours, or accessibility guarantees. Use UNBC’s official resources for those details.
 

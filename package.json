@@ -9,9 +9,10 @@
   "scripts": {
     "toolkit:build": "node scripts/build-toolkit.mjs",
     "dev": "vite --host 127.0.0.1",
-    "build": "npm run toolkit:build && tsc --noEmit && vite build",
+    "build": "npm run brand:build && npm run toolkit:build && tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "playwright test"
+    "test": "playwright test",
+    "brand:build": "node scripts/build-brand.mjs"
   },
   "dependencies": {
     "@pgmaps/geo-toolkit": "0.1.0",

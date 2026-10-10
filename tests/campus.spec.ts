@@ -133,8 +133,12 @@ test("selected places survive reloads, styles switch, and home clears selection"
   await expect(page.locator(".campus-marker.is-selected")).toHaveCount(0);
 });
 
-test("source notes open accessibly and close with Escape", async ({ page }) => {
+test("source notes open accessibly and close with Escape", async ({
+  page,
+}, testInfo) => {
   await page.goto("./");
+  if (testInfo.project.name === "mobile")
+    await page.getByRole("button", { name: "Open navigation" }).click();
   await page.getByRole("button", { name: "About this map" }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await expect(page.getByText("Map sources", { exact: true })).toBeVisible();
@@ -143,4 +147,56 @@ test("source notes open accessibly and close with Escape", async ({ page }) => {
   await expect(
     page.getByRole("button", { name: "About this map" }),
   ).toBeFocused();
+});
+
+test("NALS branding loads and header search opens a place", async ({
+  page,
+}, testInfo) => {
+  await page.goto("./");
+  await expect(
+    page.getByRole("img", {
+      name: "UNBC — Northern Analytical Laboratory Services",
+      exact: true,
+    }),
+  ).toBeVisible();
+
+  await page
+    .getByRole("button", { name: "Search campus", exact: true })
+    .click();
+  await expect
+    .poll(() =>
+      page
+        .locator(".site-header__logo img")
+        .evaluate((image: HTMLImageElement) => image.naturalWidth),
+    )
+    .toBeGreaterThan(0);
+  await expect
+    .poll(() =>
+      page.evaluate(() =>
+        document.fonts.check('900 28px "Helvetica Neue Black"'),
+      ),
+    )
+    .toBe(true);
+  await page
+    .getByRole("searchbox", { name: "Search campus from header" })
+    .fill("weller");
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Geoffrey R. Weller Library" })
+    .click();
+  await expect(page.locator("#header-search")).toHaveCount(0);
+  await expect(
+    page.getByRole("article", { name: "About Geoffrey R. Weller Library" }),
+  ).toBeVisible();
+  await expect(page).toHaveURL(/#place=library$/);
+  if (testInfo.project.name === "mobile") {
+    await page.getByRole("button", { name: "Close feature card" }).click();
+    await page.getByRole("button", { name: "Open navigation" }).click();
+  }
+  await page.getByRole("button", { name: "Campus map", exact: true }).click();
+  await expect(page).not.toHaveURL(/#place=/);
+  if (testInfo.project.name === "mobile")
+    await expect(
+      page.getByRole("button", { name: "Open navigation" }),
+    ).toHaveAttribute("aria-expanded", "false");
 });
