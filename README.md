@@ -18,11 +18,12 @@ This is an independent design concept, not an official University of Northern Br
 
 ## Develop
 
-Requires Node.js 22 or newer.
+Requires Node.js 22.12 or newer and npm 11.19.0 (the version used by CI).
 
 ```sh
 git clone --recurse-submodules https://github.com/ahzs645/unbc-map.git
 cd unbc-map
+npm install --global npm@11.19.0
 npm ci
 npm run toolkit:build
 npm run dev
