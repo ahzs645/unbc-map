@@ -1,0 +1,111 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://github.com/ahzs645/nals-wp/chrome/brand.schema.json",
+	"title": "UNBC Chrome site settings (brand.json)",
+	"description": "Overrides for chrome/defaults.json. Objects merge, arrays replace, null keeps the default, false switches a part off. Site-root URLs ('/contact/') are prefixed with the site's address.",
+	"type": "object",
+	"definitions": {
+		"link": {
+			"type": "object",
+			"required": ["label", "url"],
+			"properties": { "label": { "type": "string" }, "url": { "type": "string" } },
+			"additionalProperties": false
+		},
+		"links": { "type": "array", "items": { "$ref": "#/definitions/link" } },
+		"linkOrOff": { "oneOf": [{ "$ref": "#/definitions/link" }, { "const": false }, { "type": "null" }] },
+		"linksOrOff": { "oneOf": [{ "$ref": "#/definitions/links" }, { "const": false }, { "type": "null" }] }
+	},
+	"properties": {
+		"$schema": { "type": "string" },
+		"home": { "type": "string", "description": "Where the logo links. Default '/'." },
+		"logo": {
+			"type": "object",
+			"properties": {
+				"department": { "type": "string", "description": "Department line under the wordmark; wraps as UNBC's official sub-logos do. Use \\n to force a break. Empty for the plain wordmark." },
+				"label": { "type": "string", "description": "Accessible name prefix. Default 'University of Northern British Columbia'." }
+			},
+			"additionalProperties": false
+		},
+		"skipLink": { "oneOf": [{ "type": "object", "properties": { "label": { "type": "string" }, "target": { "type": "string" } } }, { "const": false }] },
+		"cta": { "$ref": "#/definitions/linkOrOff", "description": "Gold button beside the search tab. Default 'Apply to UNBC'." },
+		"mobileCta": { "$ref": "#/definitions/linkOrOff", "description": "Gold button at the end of the phone menu. Default: the cta." },
+		"menu": { "$ref": "#/definitions/links", "description": "Main menu. In WordPress the Navigation block supplies it when it has links." },
+		"audience": {
+			"oneOf": [
+				{ "type": "object", "properties": { "label": { "type": "string" }, "links": { "$ref": "#/definitions/links" } }, "additionalProperties": false },
+				{ "const": false }
+			],
+			"description": "'Information For' links in the phone menu (and the desktop tabs, unless tabs is set)."
+		},
+		"tabs": { "$ref": "#/definitions/linksOrOff", "description": "Warm tabs under the masthead on desktop. Default: the audience links." },
+		"search": {
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"action": { "type": "string", "description": "Form action. Default https://www.unbc.ca/search; '/' searches this site (WordPress)." },
+						"param": { "type": "string", "description": "Query parameter: 'site_keyword' for unbc.ca, 's' for WordPress." },
+						"placeholder": { "type": "string" },
+						"links": { "$ref": "#/definitions/links", "description": "Quick links under the search box." }
+					},
+					"additionalProperties": false
+				},
+				{ "const": false }
+			]
+		},
+		"footer": {
+			"type": "object",
+			"properties": {
+				"address": {
+					"type": "object",
+					"properties": {
+						"name": { "type": "string" },
+						"lines": { "type": "array", "items": { "type": "string" } },
+						"phoneLabel": { "type": "string" },
+						"phone": { "type": "string" },
+						"tel": { "type": "string", "description": "When set, the phone number links to tel:<tel>." }
+					},
+					"additionalProperties": false
+				},
+				"addressLinks": { "$ref": "#/definitions/links" },
+				"acknowledgement": {
+					"oneOf": [
+						{ "type": "object", "properties": { "text": { "type": "string" }, "link": { "$ref": "#/definitions/link" } }, "additionalProperties": false },
+						{ "const": false }
+					]
+				},
+				"menu": { "$ref": "#/definitions/links" },
+				"social": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"required": ["network", "label", "url"],
+						"properties": {
+							"network": { "enum": ["facebook", "instagram", "linkedin", "x", "youtube", "tiktok", "bluesky", "threads", "flickr", "vimeo"] },
+							"label": { "type": "string" },
+							"url": { "type": "string" }
+						},
+						"additionalProperties": false
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"subfooter": {
+			"type": "object",
+			"properties": {
+				"menu": { "$ref": "#/definitions/links" },
+				"cookieSettings": {
+					"oneOf": [
+						{ "type": "object", "properties": { "label": { "type": "string" }, "fallbackUrl": { "type": "string" } }, "additionalProperties": false },
+						{ "const": false }
+					]
+				},
+				"copyright": { "type": "string" }
+			},
+			"additionalProperties": false
+		},
+		"breadcrumbs": { "type": "object", "properties": { "homeLabel": { "type": "string" } }, "additionalProperties": false },
+		"scrollTop": { "type": "boolean" }
+	}
+}

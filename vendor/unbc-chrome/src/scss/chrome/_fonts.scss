@@ -1,0 +1,34 @@
+@use 'sass:string';
+
+// @font-face rules for the chrome. $path is where the theme's font files
+// live, relative to the compiled stylesheet. A host that already declares
+// BC Sans (the NALS theme does) passes $bcsans: false and only gets the
+// lockup's department-line face.
+@mixin unbc-chrome-fonts($path, $bcsans: true) {
+  @if $bcsans {
+    @each $family, $file, $weight, $style in
+      ("bcsans-regular", "bcsans-regular.woff", normal, normal),
+      ("bcsans-bold", "bcsans-bold.woff", 700, normal),
+      ("bcsans-light", "bcsans-light.woff", 200, normal),
+      ("bcsans-italic", "bcsans-italic.woff", normal, italic)
+    {
+      @font-face {
+        font-family: $family;
+        font-style: $style;
+        font-weight: $weight;
+        font-display: swap;
+        src: url(string.unquote('"#{$path}#{$file}"')) format("woff");
+      }
+    }
+  }
+
+  // Helvetica Neue LT Pro 95 Black, synced from the UNBC logo kit. The
+  // lockup sets its department line at weight 800 in this family.
+  @font-face {
+    font-family: "HelveticaNeueUNBC";
+    font-style: normal;
+    font-weight: 800 900;
+    font-display: swap;
+    src: url(string.unquote('"#{$path}HelveticaNeueLTPro-Black.otf"')) format("opentype");
+  }
+}

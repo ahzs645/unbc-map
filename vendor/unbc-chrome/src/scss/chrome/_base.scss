@@ -1,0 +1,142 @@
+@use 'settings' as *;
+
+// Everything the chrome draws sits under .unbc-chrome, so host styles for
+// bare elements (a, ul, button) and the host's own .container/.menu/.btn
+// classes cannot leak in, and the chrome's rules cannot leak out.
+
+.unbc-chrome {
+  color: $unbc-text;
+  font-family: $unbc-font-regular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  position: relative;
+  text-align: left;
+
+  &,
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+
+  button {
+    font: inherit;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+
+  .unbc-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+
+    @include unbc-up($unbc-bp-md)  { max-width: $unbc-container-md; }
+    @include unbc-up($unbc-bp-lg)  { max-width: $unbc-container-lg; }
+    @include unbc-up($unbc-bp-xl)  { max-width: $unbc-container-xl; }
+    @include unbc-up($unbc-bp-xxl) { max-width: $unbc-container-xxl; }
+  }
+
+  .unbc-icon {
+    display: inline-block;
+    flex: none;
+    height: 1em;
+    vertical-align: -0.125em;
+    width: auto;
+  }
+
+  // www.unbc.ca's .btn: warm grey, BC Sans Bold 18/22, 12px padding.
+  .unbc-button {
+    background: $unbc-warm;
+    border: 0;
+    border-radius: 3px;
+    color: $unbc-text;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $unbc-font-bold;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 12px;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      background: $unbc-warm-hover;
+      color: $unbc-text;
+    }
+  }
+
+  .unbc-button--gold {
+    background: $unbc-gold;
+    color: $unbc-white;
+
+    &:hover,
+    &:focus-visible {
+      background: $unbc-gold-dark;
+      color: $unbc-white;
+    }
+  }
+
+  :focus-visible {
+    outline: 2px solid $unbc-teal;
+    outline-offset: 2px;
+  }
+}
+
+.unbc-sr-only,
+.unbc-chrome .unbc-sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.unbc-chrome .unbc-skip-link {
+  background: $unbc-white;
+  color: $unbc-teal;
+  left: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: -100px;
+  z-index: 10000;
+
+  &:focus {
+    top: 15px;
+  }
+}
+
+// Keeps the page still under the open mobile menu.
+html.unbc-menu-open,
+html.unbc-menu-open body {
+  overflow: hidden;
+}
