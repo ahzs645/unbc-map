@@ -1,0 +1,145 @@
+/* Campus map on UNBC Chrome. The header, footer and breadcrumbs are styled by
+ * vendor/unbc-chrome (imported in src/chrome.tsx); this file adds the page
+ * typography the map's own panels use, the full-height map stage, and the
+ * campus results inside the chrome's search overlay.
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+@font-face {
+  font-family: "BC Sans";
+  src: url("../vendor/unbc-chrome/assets/fonts/BCSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BC Sans";
+  src: url("../vendor/unbc-chrome/assets/fonts/BCSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BC Sans";
+  src: url("../vendor/unbc-chrome/assets/fonts/BCSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "helvetica-black";
+  src: url("../vendor/unbc-chrome/assets/fonts/helvetica-black.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root,
+.unbc-workspace {
+  font-family: "bcsans-regular", "BC Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---- Layout: header, breadcrumbs and map fill the window; the UNBC footer
+   follows below it, as on www.unbc.ca. ------------------------------------ */
+.app-shell {
+  background: #fff;
+}
+.map-stage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 560px;
+}
+.chrome-slot {
+  flex-shrink: 0;
+}
+.map-workspace {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+/* Breadcrumbs bar; the chrome's "Information For" tabs hang over its right
+   end from the masthead. */
+.context-bar {
+  flex-shrink: 0;
+  min-height: 34px;
+  background: #fff;
+  border-bottom: 1px solid #eae7e5;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+.context-bar .unbc-breadcrumb {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1140px;
+}
+@media (min-width: 1590px) {
+  .context-bar .unbc-breadcrumb {
+    max-width: 1530px;
+  }
+}
+
+/* ---- Campus results in the header search overlay ------------------------ */
+.campus-search-results [role="group"] {
+  margin: 14px 0 0;
+  background: #fff;
+  border: 1px solid #eae7e5;
+  border-radius: 3px;
+  max-height: min(340px, 45vh);
+  overflow-y: auto;
+}
+.campus-search-results button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  padding: 11px 14px;
+  border: 0;
+  border-bottom: 1px solid #eae7e5;
+  background: none;
+  color: #006161;
+  font-family: "bcsans-regular", "BC Sans", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+.campus-search-results button:last-child {
+  border-bottom: 0;
+}
+.campus-search-results button:hover,
+.campus-search-results button:focus-visible {
+  background: #f4f4f4;
+  color: #29292a;
+}
+.campus-search-results p {
+  margin: 0;
+  padding: 12px 14px;
+  color: #525154;
+  font-size: 15px;
+}
+
+/* ---- Map panels in the UNBC type and neutrals ---------------------------- */
+.campus-sidebar-title,
+.sidebar-heading,
+.place-detail h2,
+.about-content h2 {
+  font-family: "helvetica-black", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400 !important;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+.campus-sidebar-header {
+  background: #f4f4f4 !important;
+  border-bottom-color: #eae7e5 !important;
+}
+.unbc-workspace .directory-link {
+  background: #eae7e5;
+  border-radius: 2px;
+}
+.unbc-workspace .directory-link:hover {
+  background: #dfdad7;
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .campus-sidebar-title {
+    font-size: 26px !important;
+  }
+}

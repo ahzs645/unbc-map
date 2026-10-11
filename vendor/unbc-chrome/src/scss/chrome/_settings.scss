@@ -1,0 +1,51 @@
+// UNBC Chrome settings. Every value is measured from www.unbc.ca (October
+// 2026) and marked !default, so a host can `@use 'chrome' with (...)` to
+// adjust one without forking the partials.
+
+$unbc-green:          #035642 !default;  // masthead, search border, toggle icon
+$unbc-green-deep:     #00231a !default;  // masthead gradient edge
+$unbc-logo-green:     #00573d !default;  // footer wordmark (logo-unbc-green.svg)
+$unbc-teal:           #006161 !default;  // links
+$unbc-gold:           #977000 !default;  // Apply to UNBC
+$unbc-gold-dark:      #794e00 !default;
+$unbc-warm:           #eae7e5 !default;  // tabs, buttons, menu dividers
+$unbc-warm-hover:     #dfdad7 !default;
+$unbc-grey:           #f4f4f4 !default;  // search overlay, footer, toggle
+$unbc-text:           #29292a !default;
+$unbc-muted:          #525154 !default;  // social icons, search input text
+$unbc-crumb:          #999999 !default;
+$unbc-white:          #ffffff !default;
+
+$unbc-font-regular: "bcsans-regular", "Helvetica Neue", Arial, Helvetica, Verdana, Geneva, sans-serif !default;
+$unbc-font-bold:    "bcsans-bold", "Helvetica Neue", Arial, Helvetica, Verdana, Geneva, sans-serif !default;
+$unbc-font-light:   "bcsans-light", "Helvetica Neue", Arial, Helvetica, Verdana, Geneva, sans-serif !default;
+$unbc-font-italic:  "bcsans-italic", "Helvetica Neue", Arial, Helvetica, Verdana, Geneva, sans-serif !default;
+
+// Bootstrap 3 tiers, as www.unbc.ca uses them, plus its 1590px wide tier.
+$unbc-bp-md:  768px !default;
+$unbc-bp-lg:  992px !default;
+$unbc-bp-xl:  1200px !default;
+$unbc-bp-xxl: 1590px !default;
+
+$unbc-container-md:  750px !default;
+$unbc-container-lg:  970px !default;
+$unbc-container-xl:  1170px !default;
+$unbc-container-xxl: 1560px !default;
+
+// The lockup's ink, in its own 178-unit space: the wordmark is 30.68 units
+// tall; each department line adds 10 (the renderers crop the viewBox to it).
+$unbc-logo-header-width: 340px !default;   // = www.unbc.ca's 340px logo box
+$unbc-logo-mobile-width: 235px !default;
+$unbc-logo-footer-width: 200px !default;
+
+@mixin unbc-up($bp) {
+  @media (min-width: $bp) { @content; }
+}
+
+@mixin unbc-down($bp) {
+  @media (max-width: ($bp - 0.02px)) { @content; }
+}
+
+@mixin unbc-between($lo, $hi) {
+  @media (min-width: $lo) and (max-width: ($hi - 0.02px)) { @content; }
+}

@@ -138,63 +138,85 @@ test("source notes open accessibly and close with Escape", async ({
 }, testInfo) => {
   await page.goto("./");
   if (testInfo.project.name === "mobile")
-    await page.getByRole("button", { name: "Open navigation" }).click();
-  await page.getByRole("button", { name: "About this map" }).click();
+    await page.getByRole("button", { name: "Menu", exact: true }).click();
+  await page.getByRole("link", { name: "About this map" }).first().click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await expect(page.getByText("Map sources", { exact: true })).toBeVisible();
   await page.keyboard.press("Escape");
   await expect(page.getByRole("dialog")).toHaveCount(0);
   await expect(
-    page.getByRole("button", { name: "About this map" }),
+    page.locator('.unbc-chrome a[href="#about"]:visible').first(),
   ).toBeFocused();
 });
 
-test("NALS branding loads and header search opens a place", async ({
+test("UNBC Chrome header and footer render, and header search opens a place", async ({
   page,
 }, testInfo) => {
   await page.goto("./");
-  await expect(
-    page.getByRole("img", {
-      name: "UNBC — Northern Analytical Laboratory Services",
-      exact: true,
-    }),
-  ).toBeVisible();
-
-  await page
-    .getByRole("button", { name: "Search campus", exact: true })
-    .click();
+  const logo = page.locator(".unbc-logo--header");
+  await expect(logo).toBeVisible();
+  await expect(logo).toHaveAttribute(
+    "aria-label",
+    "University of Northern British Columbia Northern Analytical Laboratory Services",
+  );
+  // The department line wraps exactly as the UNBC logo kit locks it.
+  await expect(logo.locator("text")).toHaveText([
+    "Northern Analytical",
+    "Laboratory Services",
+  ]);
+  await expect(page.locator(".unbc-footer__land")).toContainText(
+    "traditional territories",
+  );
+  await expect(page.locator(".unbc-logo--footer")).toBeAttached();
   await expect
     .poll(() =>
-      page
-        .locator(".site-header__logo img")
-        .evaluate((image: HTMLImageElement) => image.naturalWidth),
+      page.evaluate(() => document.fonts.check('800 12px "HelveticaNeueUNBC"')),
     )
-    .toBeGreaterThan(0);
+    .toBe(true);
   await expect
     .poll(() =>
       page.evaluate(() => document.fonts.check('400 28px "helvetica-black"')),
     )
     .toBe(true);
+
+  const toggle = page.getByRole("button", { name: "Search campus", exact: true });
+  await toggle.click();
+  await expect(toggle).toHaveAttribute("aria-expanded", "true");
+  const search = page.getByRole("searchbox", { name: "Search campus", exact: true });
+  await expect(search).toBeFocused();
+  await search.fill("weller");
   await page
-    .getByRole("searchbox", { name: "Search campus from header" })
-    .fill("weller");
-  await page
-    .getByRole("dialog")
+    .locator(".campus-search-results")
     .getByRole("button", { name: "Geoffrey R. Weller Library" })
     .click();
-  await expect(page.locator("#header-search")).toHaveCount(0);
+  await expect(toggle).toHaveAttribute("aria-expanded", "false");
   await expect(
     page.getByRole("article", { name: "About Geoffrey R. Weller Library" }),
   ).toBeVisible();
   await expect(page).toHaveURL(/#place=library$/);
+
+  // Submitting the search selects the first match instead of leaving the map.
+  if (testInfo.project.name === "mobile")
+    await page.getByRole("button", { name: "Close feature card" }).click();
+  else await page.getByRole("button", { name: "Close place details" }).click();
+  await toggle.click();
+  await search.fill("mccaffray");
+  await search.press("Enter");
+  await expect(page).toHaveURL(/#place=/);
+  await expect(page).toHaveURL(/unbc-map\//);
+  await expect(toggle).toHaveAttribute("aria-expanded", "false");
+
   if (testInfo.project.name === "mobile") {
     await page.getByRole("button", { name: "Close feature card" }).click();
-    await page.getByRole("button", { name: "Open navigation" }).click();
+    await page.getByRole("button", { name: "Menu", exact: true }).click();
   }
-  await page.getByRole("button", { name: "Campus map", exact: true }).click();
+  await page
+    .locator(".unbc-chrome a:visible", { hasText: /^Campus map$/ })
+    .first()
+    .click();
   await expect(page).not.toHaveURL(/#place=/);
   if (testInfo.project.name === "mobile")
     await expect(
-      page.getByRole("button", { name: "Open navigation" }),
+      page.getByRole("button", { name: "Menu", exact: true }),
     ).toHaveAttribute("aria-expanded", "false");
 });

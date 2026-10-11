@@ -1,0 +1,339 @@
+@use 'settings' as *;
+
+// Masthead: green radial gradient, logo, main menu, the warm "Information
+// For" tabs that hang below it, and the phone menu. Geometry matches
+// www.unbc.ca: 141px tall from 1200px (wordmark top at 38.7px, menu at
+// 100px), 156px from 768px (wordmark at 20.7px, menu at 115px), 80px on
+// phones with the hamburger, logo and search tab in one row.
+
+.unbc-chrome {
+  .unbc-header {
+    background-color: $unbc-green;
+    background-image: radial-gradient(ellipse at center, $unbc-green 59%, $unbc-green-deep 100%);
+    color: $unbc-white;
+    position: relative;
+    z-index: 100;
+
+    @include unbc-down($unbc-bp-md) {
+      height: 80px;
+    }
+
+    @include unbc-up($unbc-bp-md) {
+      padding: 15px 0;
+    }
+
+    @include unbc-up($unbc-bp-xl) {
+      padding: 0 0 15px;
+    }
+  }
+
+  .unbc-header__top {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+
+    @include unbc-up($unbc-bp-md) {
+      align-items: flex-start;
+    }
+
+    @include unbc-up($unbc-bp-xl) {
+      max-width: $unbc-container-xl;
+    }
+
+    @include unbc-up($unbc-bp-xxl) {
+      max-width: $unbc-container-xxl;
+    }
+  }
+
+  // The hamburger: Font Awesome bars at 36px, white, 15px from the edge.
+  .unbc-header__menu-toggle {
+    background: none;
+    border: 0;
+    color: $unbc-white;
+    cursor: pointer;
+    flex: none;
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+    padding: 0;
+    width: 32px;
+
+    &:hover,
+    &:focus-visible {
+      color: #d9d9d9;
+    }
+
+    .unbc-icon {
+      height: 36px;
+      vertical-align: top;
+    }
+
+    .unbc-icon--close {
+      display: none;
+    }
+
+    &[aria-expanded="true"] {
+      .unbc-icon--menu { display: none; }
+      .unbc-icon--close { display: inline-block; }
+    }
+
+    @include unbc-up($unbc-bp-md) {
+      display: none;
+    }
+  }
+
+  // ---- Logo ---------------------------------------------------------------
+  // The SVG's viewBox starts at the top of the wordmark, so its box top is
+  // the wordmark top. Wider department lockups step down to keep the last
+  // line inside the masthead.
+
+  .unbc-logo {
+    color: currentColor;
+    display: block;
+    flex: none;
+    line-height: 0;
+
+    &:hover,
+    &:focus-visible {
+      color: currentColor;
+    }
+  }
+
+  .unbc-logo__svg {
+    display: block;
+    height: auto;
+    overflow: visible;
+    width: 100%;
+  }
+
+  .unbc-logo--header {
+    color: $unbc-white;
+    width: min(#{$unbc-logo-mobile-width}, calc(100vw - 147px));
+
+    &[data-lines="3"] { width: min(212px, calc(100vw - 147px)); }
+    &[data-lines="4"],
+    &[data-lines="5"],
+    &[data-lines="6"] { width: min(180px, calc(100vw - 147px)); }
+
+    @include unbc-up($unbc-bp-md) {
+      margin-top: 5.7px;
+      width: $unbc-logo-header-width;
+
+      &[data-lines="3"] { width: 260px; }
+      &[data-lines="4"],
+      &[data-lines="5"],
+      &[data-lines="6"] { width: 200px; }
+    }
+
+    @include unbc-up($unbc-bp-xl) {
+      margin-top: 38.7px;
+
+      &[data-lines="3"] { width: 290px; }
+      &[data-lines="4"],
+      &[data-lines="5"],
+      &[data-lines="6"] { width: 230px; }
+    }
+  }
+
+  // ---- Main menu -----------------------------------------------------------
+
+  .unbc-header__bottom {
+    display: none;
+
+    @include unbc-up($unbc-bp-md) {
+      display: block;
+      margin-top: 20px;
+    }
+
+    // www.unbc.ca lets the menu run the full width between 768 and 991px.
+    @include unbc-between($unbc-bp-md, $unbc-bp-lg) {
+      .unbc-container { max-width: none; }
+    }
+  }
+
+  .unbc-primary-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    // 8px margins plus the word space between www.unbc.ca's inline-block items.
+    li {
+      margin: 0 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .unbc-primary-nav__link {
+    border-bottom: 2px solid transparent;
+    color: $unbc-white;
+    display: block;
+    font-family: $unbc-font-bold;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22.5px;
+    transition: border-color 0.5s ease;
+
+    &:hover,
+    &:focus-visible,
+    &.is-active,
+    &.is-active-trail {
+      border-bottom-color: $unbc-white;
+      color: $unbc-white;
+    }
+  }
+
+  // ---- Information For tabs -------------------------------------------------
+
+  .unbc-subheader {
+    display: none;
+    height: 0;
+    position: relative;
+    z-index: 99;
+
+    @include unbc-up($unbc-bp-md) {
+      display: block;
+    }
+
+    .unbc-container {
+      position: relative;
+    }
+  }
+
+  .unbc-tabs__list {
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    right: 27px;
+    top: 0;
+  }
+
+  .unbc-tabs__link {
+    background: $unbc-warm;
+    border-radius: 0 0 3px 3px;
+    color: #000;
+    display: block;
+    font-family: $unbc-font-bold;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    padding: 6px 12px;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus-visible {
+      background: $unbc-warm-hover;
+      color: #000;
+    }
+  }
+
+  // ---- Phone menu ----------------------------------------------------------
+
+  .unbc-mobile-nav {
+    background: $unbc-white;
+    color: $unbc-text;
+    display: none;
+    height: calc(100vh - 80px);
+    height: calc(100dvh - 80px);
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 25px;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  &.is-menu-open .unbc-mobile-nav {
+    @include unbc-down($unbc-bp-md) {
+      display: block;
+    }
+  }
+
+  .unbc-mobile-nav__list li {
+    border-bottom: 2px solid $unbc-warm;
+  }
+
+  .unbc-mobile-nav__link,
+  .unbc-mobile-nav__heading {
+    color: $unbc-text;
+    display: block;
+    font-family: $unbc-font-light;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.3;
+    padding: 9px 15px;
+  }
+
+  .unbc-mobile-nav__link {
+    &:hover,
+    &:focus-visible,
+    &.is-active,
+    &.is-active-trail {
+      color: $unbc-green;
+    }
+  }
+
+  .unbc-mobile-nav__section {
+    border-top: 24px solid $unbc-warm;
+  }
+
+  .unbc-mobile-nav__main + .unbc-mobile-nav__section {
+    margin-top: -2px;
+  }
+
+  .unbc-mobile-nav__heading::after {
+    content: ":";
+  }
+
+  .unbc-mobile-nav__sublist {
+    margin: 0 0 10px 15px;
+  }
+
+  .unbc-mobile-nav__sublink {
+    color: $unbc-text;
+    display: block;
+    font-family: $unbc-font-light;
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 1.3;
+    padding: 3px 10px 3px 15px;
+    position: relative;
+
+    // Font Awesome chevron-right, 12px, light grey.
+    &::before {
+      border-right: 1.5px solid #b3b3b3;
+      border-top: 1.5px solid #b3b3b3;
+      content: "";
+      height: 6px;
+      left: 1px;
+      position: absolute;
+      top: 11px;
+      transform: rotate(45deg);
+      width: 6px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $unbc-green;
+    }
+  }
+
+  .unbc-mobile-nav__cta {
+    margin: 24px auto 5px;
+    text-align: center;
+    width: 100%;
+
+    .unbc-button {
+      margin-bottom: 12px;
+      width: 90%;
+    }
+  }
+}

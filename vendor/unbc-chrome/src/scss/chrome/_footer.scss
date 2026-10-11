@@ -1,0 +1,294 @@
+@use 'settings' as *;
+
+// Footer (grey) and sub-footer (white), as www.unbc.ca draws them.
+
+.unbc-chrome {
+  .unbc-footer {
+    background: $unbc-grey;
+    padding: 48px 0;
+  }
+
+  .unbc-footer__address p {
+    line-height: 24px;
+  }
+
+  .unbc-footer__address strong {
+    font-family: $unbc-font-bold;
+    font-weight: 700;
+  }
+
+  .unbc-footer__address a {
+    color: $unbc-teal;
+
+    &:hover,
+    &:focus-visible {
+      color: $unbc-text;
+      text-decoration: underline;
+    }
+  }
+
+  .unbc-footer__address-links {
+    margin: 5px 0 40px;
+    overflow: hidden;
+  }
+
+  .unbc-footer__address-list {
+    margin-left: -1px;
+
+    @include unbc-up($unbc-bp-md) {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    li {
+      padding: 0 12px 0 0;
+
+      @include unbc-up($unbc-bp-md) {
+        border-left: 1px solid #000;
+        padding: 0 12px;
+
+        &:first-child {
+          border-left: 0;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .unbc-footer__address-link {
+    border-bottom: 2px solid transparent;
+    color: $unbc-teal;
+    display: inline-block;
+    font-family: $unbc-font-bold;
+    font-weight: 700;
+    line-height: 24px;
+    transition: border-color 0.5s ease, color 0.5s ease;
+
+    &:hover,
+    &:focus-visible {
+      border-color: #000;
+      color: $unbc-text;
+    }
+  }
+
+  .unbc-footer__land {
+    line-height: 1.6;
+    margin: 0 0 40px;
+
+    em {
+      font-family: $unbc-font-italic;
+      font-style: italic;
+    }
+
+    a {
+      color: $unbc-teal;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus-visible {
+        color: $unbc-text;
+      }
+    }
+  }
+
+  // Footer menu, separated by middle dots from 768px (www.unbc.ca's
+  // `.footer-nav li::after { content: "\b7" }`), stacked on phones.
+  .unbc-footer__nav-list li {
+    display: block;
+
+    @include unbc-up($unbc-bp-md) {
+      display: inline-block;
+
+      // The dot sits between word spaces, as it does on www.unbc.ca.
+      &::after {
+        content: "\b7";
+        display: inline-block;
+        margin: 0 4px;
+      }
+
+      &:last-child::after {
+        content: none;
+      }
+    }
+  }
+
+  .unbc-footer__nav-link {
+    border-bottom: 2px solid transparent;
+    color: $unbc-teal;
+    display: block;
+    font-family: $unbc-font-bold;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0 0 10px;
+    transition: border-color 0.5s ease;
+
+    @include unbc-up($unbc-bp-md) {
+      display: inline-block;
+      margin: 0 11px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      border-color: #000;
+    }
+  }
+
+  .unbc-footer__nav-list li:first-child .unbc-footer__nav-link {
+    margin-left: 0;
+  }
+
+  .unbc-footer__social {
+    margin: 50px 0 0;
+
+    @include unbc-down($unbc-bp-md) {
+      margin-top: 40px;
+    }
+  }
+
+  .unbc-footer__social-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include unbc-down($unbc-bp-md) {
+      gap: 14px;
+    }
+  }
+
+  .unbc-social {
+    align-items: center;
+    border: 2px solid $unbc-muted;
+    border-radius: 50%;
+    color: $unbc-muted;
+    display: flex;
+    font-size: 30px;
+    height: 54px;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 54px;
+
+    @include unbc-down($unbc-bp-md) {
+      font-size: 20px;
+      height: 40px;
+      width: 40px;
+    }
+
+    .unbc-icon {
+      height: 0.9em;
+      vertical-align: 0;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background: $unbc-muted;
+      color: $unbc-white;
+    }
+  }
+
+  .unbc-social__label {
+    font-size: 11px;
+    line-height: 1;
+  }
+
+  // ---- Sub-footer ------------------------------------------------------------
+
+  .unbc-subfooter {
+    background: $unbc-white;
+    padding: 12px 0;
+  }
+
+  .unbc-subfooter__row {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 0 24px;
+
+    @include unbc-up($unbc-bp-md) {
+      align-items: center;
+      flex-direction: row;
+      gap: 48px;
+    }
+  }
+
+  .unbc-logo--footer {
+    color: $unbc-logo-green;
+    width: $unbc-logo-footer-width;
+
+    &[data-lines="0"] {
+      margin: 6px 0;
+    }
+  }
+
+  // 24px padding plus the word space www.unbc.ca's inline-block items carry.
+  .unbc-subfooter__list li {
+    display: inline-block;
+    padding: 0 28px 0 0;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .unbc-subfooter__link {
+    color: $unbc-teal;
+    display: block;
+    line-height: 24px;
+
+    &:hover,
+    &:focus-visible {
+      color: $unbc-text;
+      text-decoration: underline;
+    }
+  }
+
+  .unbc-subfooter__cookie {
+    height: 46px;
+    max-width: 533px;
+    width: 100%;
+
+    @include unbc-up($unbc-bp-md) {
+      width: auto;
+    }
+  }
+
+  .unbc-subfooter__copyright {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 24px;
+  }
+
+  // ---- Scroll to top -----------------------------------------------------------
+
+  .unbc-scroll-top {
+    align-items: center;
+    background: $unbc-white;
+    border: 2px solid $unbc-teal;
+    border-radius: 50%;
+    bottom: -75px;
+    color: $unbc-teal;
+    display: flex;
+    font-size: 40px;
+    height: 50px;
+    justify-content: center;
+    padding: 0 0 2px;
+    position: fixed;
+    right: 40px;
+    transition: all 0.3s ease-in-out;
+    width: 50px;
+    z-index: 99;
+
+    &.is-active {
+      bottom: 40px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      border-color: $unbc-text;
+      color: $unbc-text;
+    }
+
+    @include unbc-down($unbc-bp-md) {
+      display: none;
+    }
+  }
+}

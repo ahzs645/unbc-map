@@ -1,0 +1,10 @@
+// UNBC Chrome: header, footer and breadcrumbs. Pair with chrome/render.mjs
+// (or inc/chrome-render.php) for the markup and chrome/unbc-chrome.js for
+// behaviour. Fonts come separately: @include unbc-chrome-fonts(...).
+@forward 'settings';
+@forward 'fonts';
+@use 'base';
+@use 'search';
+@use 'header';
+@use 'footer';
+@use 'breadcrumb';

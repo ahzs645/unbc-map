@@ -1,6 +1,6 @@
 # UNBC Campus Explorer
 
-A UNBC styled interactive campus map built with the standalone **PGMaps GeoToolkit**, using the supplied **NALS WordPress theme** styling and its actual UNBC/NALS logo lockup. The masthead uses the theme’s radial green gradient, Apply/search controls, navigation and secondary tabs; NALS 1.0.1’s BC Sans and Helvetica Black web fonts provide the body and display typography. The compact masthead is 112px on desktop and 64px on phones (previously 196px/80px), giving the map more space. The footer uses the green NALS lockup.
+A UNBC styled interactive campus map built with the standalone **PGMaps GeoToolkit**, wearing **UNBC Chrome**: the www.unbc.ca header, footer and breadcrumbs from the [NALS WordPress theme](https://github.com/ahzs645/nals-wp), with the NALS department lockup drawn by the [UNBC logo kit](https://github.com/ahzs645/unbc-logo). The header search lists campus places as you type, the menu and footer links open the map's own views, and the full UNBC footer (address, territory acknowledgement, links, social, legal) sits below the full-height map.
 
 **Live map:** https://projects.ahmadjalil.com/unbc-map/
 
@@ -25,7 +25,6 @@ git clone --recurse-submodules https://github.com/ahzs645/unbc-map.git
 cd unbc-map
 npm install --global npm@11.19.0
 npm ci
-npm run brand:build
 npm run toolkit:build
 npm run dev
 ```
@@ -38,6 +37,14 @@ npm test
 
 The browser checks serve the production build at `/unbc-map/` and cover real WebGL initialization, local campus layers, production asset paths, fonts, search/filter synchronization, empty results, place links, basemap switching, layer visibility, responsive layout, and the accessible source dialog. External CARTO styles are stubbed for reliable tests; live basemaps are checked separately in the browser.
 
+## Branding: UNBC Chrome
+
+The header, footer and breadcrumbs are [UNBC Chrome](https://github.com/ahzs645/nals-wp/blob/main/chrome/README.md), the same component the NALS WordPress theme uses, so the map matches www.unbc.ca and picks up the theme's brand fixes.
+
+- **Change what it says:** edit `brand.json` (your editor autocompletes it from `vendor/unbc-chrome/chrome/brand.schema.json`). Objects merge over the www.unbc.ca defaults, lists replace them, `false` switches a part off (e.g. `"cta": false`). `/` is the map itself and `#about` opens the map notes. Set `logo.department` to `""` for the plain UNBC wordmark.
+- **Change how the map uses it:** `src/chrome.tsx` (search results, link handling) and `src/brand.css` (layout around it).
+- **Update the chrome itself:** change it in nals-wp, then from this repository run `npm run chrome:sync` with nals-wp checked out next to it (or `NALS_WP=/path/to/nals-wp npm run chrome:sync`), and commit `vendor/unbc-chrome`. Never edit the snapshot by hand.
+
 ## Architecture and toolkit reuse
 
 `packages/geo-toolkit` pins the same public toolkit commit used by the inspected PGMaps checkout: `a7bc7274a6df0c4063f88c0388b61206bf68c2fb`. The app imports its compiled package exports and CSS. It reuses `Map`, markers, fill and line layers, controls, scale bar, workspace provider, sidebar layout/shell, responsive detail cards, and basemap appearance functions. No PGMaps application data, environment files, or scraper code is copied.
@@ -48,10 +55,10 @@ The browser checks serve the production build at `/unbc-map/` and cover real Web
 - `src/mapStyles.ts`: UNBC basemap palette and tile providers.
 - `src/App.tsx`: directory, map interactions, detail cards, and source notes.
 - `src/styles.css`: campus explorer interface.
-- `src/nals-theme.css`: compact responsive adaptation of NALS 1.0.1’s header, typography, navigation, buttons, and footer styles.
-- `scripts/build-brand.mjs`: generates the same NALS white/green lockups as `nals-wp/showcase/logo.mjs`, using the pinned `packages/unbc-logo` submodule.
-- `public/brand/`: generated SVG logo lockups with embedded department-line typography.
-- `vendor/nals-theme`: relevant styles/fonts/logo source assets from upstream commit `53c8c991153c464a9449254c5aa788fd17b4d474` (version 1.0.1, matching the newer supplied ZIP). This source snapshot keeps public builds independent of the private upstream repository. Theme fonts are copied from it by `brand:build`.
+- `brand.json`: the map's UNBC Chrome settings — department line, menu, tabs, search placeholder, footer links. Everything it leaves out is www.unbc.ca's own header and footer.
+- `src/chrome.tsx`: renders the chrome's header, footer and breadcrumbs and plugs the map into them: campus results inside the header search overlay (submitting selects the first match), "Campus map" resets the map, `#about` links open the map notes.
+- `src/brand.css`: the full-height map stage, the breadcrumb bar, the search results, and UNBC type for the map panels.
+- `vendor/unbc-chrome`: a snapshot of UNBC Chrome exported from nals-wp (`SOURCE.json` records the commit). nals-wp is private, so the public Pages build uses this copy instead of a submodule. Refresh it with `npm run chrome:sync` (expects a nals-wp checkout at `../nals-wp`, or set `NALS_WP`). The chrome imports the logo kit as `@ahzs645/unbc-logo`, installed from the `packages/unbc-logo` submodule.
 - `public/data/campus.geojson`: local, bounded OpenStreetMap geometry snapshot.
 
 ## Sources and licences
@@ -62,11 +69,11 @@ Coordinates and 159 building, parking, garden, and path geometries were extracte
 
 The campus/dark basemaps use [CARTO](https://carto.com/attributions) with OpenStreetMap attribution. Satellite imagery uses Esri World Imagery, with source credits shown on the map. Those remote services require internet access; the local place directory remains usable when a basemap is unavailable. Imagery dates vary by location.
 
-BC Sans Regular/Bold/Light are supplied in the user-provided NALS theme, distributed under the [SIL Open Font License](public/fonts/LICENSE_OFL.txt), with provenance in the [official BC Sans project](https://github.com/bcgov/bc-sans).
+BC Sans Regular/Bold/Light/Italic come with UNBC Chrome (`vendor/unbc-chrome/assets/fonts`), distributed under the [SIL Open Font License](licenses/BC-Sans-OFL.txt), with provenance in the [official BC Sans project](https://github.com/bcgov/bc-sans).
 
-The supplied NALS theme is [GPL v2 or later](https://github.com/ahzs645/nals-wp). `src/nals-theme.css` adapts its SCSS styling. This application is distributed under GPL v2 or later to preserve the theme’s terms; GeoToolkit retains its MIT licence in its submodule. Other dependencies retain their respective licences.
+The supplied NALS theme is [GPL v2 or later](https://github.com/ahzs645/nals-wp). `vendor/unbc-chrome` is its UNBC Chrome component, used unmodified. This application is distributed under GPL v2 or later to preserve the theme’s terms; GeoToolkit retains its MIT licence in its submodule. Other dependencies retain their respective licences.
 
-The logo is generated through the same [UNBC logo kit](https://github.com/ahzs645/unbc-logo) used by the NALS showcase, with the locked Northern Analytical Laboratory Services department line. UNBC artwork and trademarks retain their owners’ rights. `HelveticaNeueBlack.otf` and `helvetica-black.woff` come from the theme snapshot; the SVG department line embeds the kit’s Helvetica Neue LT Pro Black. These are commercial brand fonts, not covered by the application’s GPL or the BC Sans OFL; downstream reuse needs the appropriate font licence. See [brand provenance](public/brand/SOURCES.md).
+The lockup is drawn inline by UNBC Chrome with the [UNBC logo kit](https://github.com/ahzs645/unbc-logo)'s artwork and wrapping, with the locked Northern Analytical Laboratory Services department line set in Helvetica Neue LT Pro Black. UNBC artwork and trademarks retain their owners' rights. The Helvetica faces in `vendor/unbc-chrome/assets/fonts` are commercial brand fonts, not covered by the application's GPL or the BC Sans OFL; downstream reuse needs the appropriate font licence.
 
 Locations represent approximate building or area centres, not verified public or accessible entrances. This map does not provide room-level routing, live transit, hours, or accessibility guarantees. Use UNBC’s official resources for those details.
 

@@ -1,0 +1,103 @@
+{
+	"_comment": "UNBC Chrome defaults: the header and footer exactly as www.unbc.ca ships them (captured October 2026). A site's brand.json overrides any of these; objects merge, arrays replace, false switches a part off.",
+	"home": "/",
+	"logo": {
+		"department": "",
+		"label": "University of Northern British Columbia"
+	},
+	"skipLink": {
+		"label": "Skip to main content",
+		"target": "#main-content"
+	},
+	"cta": {
+		"label": "Apply to UNBC",
+		"url": "https://www.unbc.ca/admissions/apply-now"
+	},
+	"mobileCta": null,
+	"menu": [
+		{ "label": "Admissions", "url": "https://www.unbc.ca/programs-and-admissions" },
+		{ "label": "Programs and courses", "url": "https://www.unbc.ca/programs-courses" },
+		{ "label": "Campus life", "url": "https://www.unbc.ca/campus-life" },
+		{ "label": "Indigenous", "url": "https://www.unbc.ca/indigenous-connections" },
+		{ "label": "Research", "url": "https://www.unbc.ca/office-research-and-innovation" },
+		{ "label": "About", "url": "https://www.unbc.ca/about-unbc" },
+		{ "label": "myUNBC", "url": "https://www.unbc.ca/myunbc" }
+	],
+	"audience": {
+		"label": "Information For",
+		"links": [
+			{ "label": "Future students", "url": "https://www.unbc.ca/future-students" },
+			{ "label": "Current students", "url": "https://www.unbc.ca/current-students" },
+			{ "label": "Faculty and staff", "url": "https://www.unbc.ca/faculty-staff" },
+			{ "label": "Alumni", "url": "https://www.unbc.ca/alumni" },
+			{ "label": "Donors", "url": "https://www.unbc.ca/giving" }
+		]
+	},
+	"tabs": null,
+	"search": {
+		"action": "https://www.unbc.ca/search",
+		"param": "site_keyword",
+		"placeholder": "Search UNBC",
+		"links": [
+			{ "label": "Academic calendar", "url": "https://www.unbc.ca/calendar" },
+			{ "label": "Campus services", "url": "https://www.unbc.ca/services" },
+			{ "label": "Campuses", "url": "https://www.unbc.ca/about-unbc/contact" },
+			{ "label": "Library", "url": "https://www.unbc.ca/library" },
+			{ "label": "Maps", "url": "https://www.unbc.ca/about-unbc/campus-maps" },
+			{ "label": "Bookstore", "url": "https://shop.unbc.ca/" },
+			{ "label": "Timberwolves", "url": "https://unbctimberwolves.com/" },
+			{ "label": "Northern Sport Centre", "url": "https://www.unbc.ca/northern-sport-centre" },
+			{ "label": "Events", "url": "https://www.unbc.ca/events" },
+			{ "label": "News", "url": "https://www.unbc.ca/our-stories" },
+			{ "label": "Careers", "url": "https://www.unbc.ca/career-opportunities" }
+		]
+	},
+	"footer": {
+		"address": {
+			"name": "University of Northern British Columbia",
+			"lines": ["3333 University Way", "Prince George, B.C.  Canada  V2N 4Z9"],
+			"phoneLabel": "Prince George campus phone:",
+			"phone": "250-960-5555",
+			"tel": ""
+		},
+		"addressLinks": [
+			{ "label": "UNBC campuses", "url": "https://www.unbc.ca/about-unbc/campus-location-details" },
+			{ "label": "Contact UNBC", "url": "https://www.unbc.ca/about-unbc/contact" }
+		],
+		"acknowledgement": {
+			"text": "For thousands of years, Indigenous Peoples have walked gently on the diverse traditional territories where the University of Northern British Columbia community is grateful to live, work, learn, and play. We are committed to building and nurturing relationships with Indigenous Peoples and we acknowledge their traditional lands.",
+			"link": { "label": "Read the full traditional territory acknowledgement", "url": "https://www.unbc.ca/about-unbc/traditional-territory-acknowledgement" }
+		},
+		"menu": [
+			{ "label": "Contact UNBC", "url": "https://www.unbc.ca/about-unbc/contact" },
+			{ "label": "Login", "url": "https://www.unbc.ca/login" },
+			{ "label": "Careers", "url": "https://www.unbc.ca/career-opportunities" },
+			{ "label": "News", "url": "https://www.unbc.ca/our-stories" },
+			{ "label": "Library", "url": "https://www.unbc.ca/library" },
+			{ "label": "Emergency", "url": "https://www.unbc.ca/emergency-operations" }
+		],
+		"social": [
+			{ "network": "facebook", "label": "Facebook", "url": "https://www.facebook.com/UNBC" },
+			{ "network": "instagram", "label": "Instagram", "url": "https://www.instagram.com/unbc/" },
+			{ "network": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/company/unbc" },
+			{ "network": "youtube", "label": "YouTube", "url": "https://www.youtube.com/c/unbcnews" },
+			{ "network": "tiktok", "label": "TikTok", "url": "https://www.tiktok.com/@unbcstudents" }
+		]
+	},
+	"subfooter": {
+		"menu": [
+			{ "label": "Accessibility", "url": "https://www.unbc.ca/accessibility" },
+			{ "label": "Cookie notice", "url": "https://www.unbc.ca/university-secretary/privacy-and-access/cookie-notice" },
+			{ "label": "Privacy", "url": "https://www.unbc.ca/university-secretary/privacy-and-access/privacy-statement" }
+		],
+		"cookieSettings": {
+			"label": "Cookie Settings",
+			"fallbackUrl": "https://www.unbc.ca/university-secretary/privacy-and-access/cookie-notice"
+		},
+		"copyright": "University of Northern British Columbia"
+	},
+	"breadcrumbs": {
+		"homeLabel": "Home"
+	},
+	"scrollTop": true
+}

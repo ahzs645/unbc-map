@@ -1,0 +1,41 @@
+{
+	"$schema": "./vendor/unbc-chrome/chrome/brand.schema.json",
+	"_comment": "UNBC Chrome settings for the campus map. Everything not set here is www.unbc.ca's own header and footer (vendor/unbc-chrome/chrome/defaults.json). '/' is the map itself; '#about' opens the map notes.",
+	"logo": {
+		"department": "Northern Analytical Laboratory Services"
+	},
+	"skipLink": { "label": "Skip to campus explorer", "target": "#campus-search" },
+	"menu": [
+		{ "label": "Campus map", "url": "/" },
+		{ "label": "Building directory", "url": "https://www.unbc.ca/about-unbc/campus-maps" },
+		{ "label": "Visit UNBC", "url": "https://www.unbc.ca/" },
+		{ "label": "About this map", "url": "#about" }
+	],
+	"audience": {
+		"label": "Campus links",
+		"links": [
+			{ "label": "Download campus map", "url": "https://www.unbc.ca/about-unbc/campus-maps" },
+			{ "label": "Campus information", "url": "https://www.unbc.ca/about-unbc/contact" },
+			{ "label": "NALS website", "url": "https://projects.ahmadjalil.com/nals-wp/" }
+		]
+	},
+	"tabs": [
+		{ "label": "NALS website", "url": "https://projects.ahmadjalil.com/nals-wp/" },
+		{ "label": "Download campus map", "url": "https://www.unbc.ca/about-unbc/campus-maps" }
+	],
+	"search": {
+		"placeholder": "Search campus"
+	},
+	"footer": {
+		"menu": [
+			{ "label": "Contact UNBC", "url": "https://www.unbc.ca/about-unbc/contact" },
+			{ "label": "Building directory", "url": "https://www.unbc.ca/about-unbc/campus-maps" },
+			{ "label": "NALS website", "url": "https://projects.ahmadjalil.com/nals-wp/" },
+			{ "label": "PGMaps GeoToolkit", "url": "https://github.com/ahzs645/geo-toolkit" },
+			{ "label": "Sources & map notes", "url": "#about" }
+		]
+	},
+	"subfooter": {
+		"copyright": "University of Northern British Columbia · Independent campus map concept"
+	}
+}

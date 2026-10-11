@@ -1,0 +1,46 @@
+@use 'settings' as *;
+
+// Breadcrumbs under the page title: 14px grey trail, teal links, "/"
+// separators. www.unbc.ca indents it 12px (24px from 1200px) from a row
+// that sits 15px outside the container.
+
+.unbc-breadcrumb {
+  font-family: $unbc-font-regular;
+  margin: 12px 12px 12px -3px;
+
+  @include unbc-up($unbc-bp-xl) {
+    margin: 12px 24px 12px 9px;
+  }
+
+  .unbc-breadcrumb__list {
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    color: $unbc-crumb;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+
+    + li::before {
+      content: "/";
+      margin: 0 5px 0 6px;
+    }
+  }
+
+  a {
+    color: $unbc-teal;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}

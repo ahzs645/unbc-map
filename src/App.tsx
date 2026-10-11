@@ -5,8 +5,6 @@ import {
   BookOpen,
   Check,
   ChevronRight,
-  ChevronDown,
-  Menu,
   ExternalLink,
   Layers,
   MapPin,
@@ -58,7 +56,8 @@ import type { StyleSpecification } from "maplibre-gl";
 import type { FeatureCollection } from "geojson";
 import "@pgmaps/geo-toolkit/styles.css";
 import "./styles.css";
-import "./nals-theme.css";
+import "./brand.css";
+import { ChromeBreadcrumbs, ChromeFooter, ChromeHeader } from "./chrome";
 
 const icons = {
   learning: BookOpen,
@@ -313,16 +312,6 @@ export default function App() {
   const [homeKey, setHomeKey] = useState(0);
   const [focusKey, setFocusKey] = useState(0);
   const [about, setAbout] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [headerSearch, setHeaderSearch] = useState(false);
-  useEffect(() => {
-    const closeMenu = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && !document.querySelector("dialog[open]"))
-        setMenuOpen(false);
-    };
-    window.addEventListener("keydown", closeMenu);
-    return () => window.removeEventListener("keydown", closeMenu);
-  }, []);
   const [shareStatus, setShareStatus] = useState("");
   const [mapReady, setMapReady] = useState(false);
   useEffect(() => {
@@ -508,315 +497,170 @@ export default function App() {
   );
   return (
     <div className="app-shell">
-      <a className="skip-link" href="#campus-search">
-        Skip to campus explorer
-      </a>
-      <header className="masthead mastbackground">
-        <div className="nals-header-inner">
-          <button
-            className="mobile-menu-toggle"
-            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
-            aria-expanded={menuOpen}
-            aria-controls="campus-navigation"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <X size={28} /> : <Menu size={30} />}
-          </button>
-          <a
-            className="site-header__logo"
-            href={location.pathname}
-            aria-label="NALS UNBC Campus Explorer home"
-          >
-            <img
-              src={`${import.meta.env.BASE_URL}brand/nals-logo-white.svg`}
-              alt="UNBC — Northern Analytical Laboratory Services"
-              width="325"
-              height="146"
-            />
-          </a>
-          <div className="nals-header-tools">
-            <a
-              className="apply-button"
-              href="https://www.unbc.ca/admissions/apply-now"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Apply to UNBC
-            </a>
-            <button
-              className="custom-search-toggle"
-              aria-label="Search campus"
-              onClick={() => setHeaderSearch(true)}
-            >
-              <Search size={21} />
-              <ChevronDown size={14} />
-            </button>
-          </div>
-          <nav
-            id="campus-navigation"
-            className={`nals-navigation ${menuOpen ? "is-menu-open" : ""}`}
-            aria-label="Campus navigation"
-          >
-            <button
-              className="current-page"
-              aria-current="page"
-              onClick={() => {
-                reset();
-                setMenuOpen(false);
-              }}
-            >
-              Campus map
-            </button>
-            <a
-              href={officialMap}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => setMenuOpen(false)}
-            >
-              Building directory
-            </a>
-            <a
-              href="https://www.unbc.ca/"
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => setMenuOpen(false)}
-            >
-              Visit UNBC
-            </a>
-            <button
-              className="about-button"
-              aria-label="About this map"
-              onClick={() => {
-                setAbout(true);
-              }}
-            >
-              About this map
-            </button>
-            <a
-              className="mobile-apply"
-              href="https://www.unbc.ca/admissions/apply-now"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Apply to UNBC
-            </a>
-          </nav>
-        </div>
-      </header>
-      <div className="context-bar">
-        <span>
-          <MapPin size={14} />
-          Prince George campus <ChevronRight size={12} />
-          <strong>Campus Explorer</strong>
-        </span>
-        <div className="contentoverbutton">
-          <a
-            href="https://projects.ahmadjalil.com/nals-wp/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            NALS website
-          </a>
-          <a href={officialMap} target="_blank" rel="noreferrer">
-            Download campus map
-          </a>
-        </div>
-      </div>
-      <main
-        id="campus-search"
-        className="map-workspace"
-        aria-label="Interactive campus explorer"
-      >
-        <WorkspaceProvider theme="light" className="unbc-workspace">
-          <MapSectionLayout
-            sidebar={sidebar}
-            desktopSidebarWidth={350}
-            mobilePeekTitle="Explore campus"
-            mobilePeekSubtitle={`${visible.length} places · Search buildings and landmarks`}
-            mobileInitialSheetState="collapsed"
-          >
-            <Map
-              styles={styles}
-              center={campusCenter}
-              zoom={15.6}
-              maxZoom={20}
-              minZoom={8}
-              maxBounds={[
-                [-123.2, 53.6],
-                [-122.3, 54.1],
-              ]}
-              controls={
-                <MapControls
-                  position="top-right"
-                  mobilePosition="top-right"
-                  showZoom
-                  showCompass
-                />
-              }
-              loader="spinner"
-              showStyleLoadingOverlay={false}
-              attributionControl={{
-                compact: true,
-                customAttribution:
-                  '<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
-              }}
-            >
-              <CampusMap
-                placesShown={visible}
-                selected={selected}
-                select={select}
-                geometry={geometry}
-                outlines={outlines}
-                basemap={basemap}
-                homeKey={homeKey}
-                focusKey={focusKey}
-                onReady={setMapReady}
-              />
-            </Map>
-            <div className="map-toolbar">
-              <div className="basemap-options" aria-label="Basemap style">
-                <Layers size={16} />
-                {(["campus", "satellite", "contrast"] as Basemap[]).map(
-                  (item) => (
-                    <button
-                      key={item}
-                      aria-pressed={basemap === item}
-                      onClick={() => setBasemap(item)}
-                    >
-                      {item === "campus"
-                        ? "Campus"
-                        : item === "satellite"
-                          ? "Satellite"
-                          : "Dark"}
-                    </button>
-                  ),
-                )}
-              </div>
-              <div className="toolbar-actions">
-                <button
-                  className="icon-button"
-                  aria-label="Show whole campus"
-                  title="Show whole campus"
-                  onClick={reset}
-                >
-                  <RotateCcw size={17} />
-                </button>
-                <button
-                  className="icon-button"
-                  aria-label="Copy map link"
-                  title="Copy map link"
-                  onClick={share}
-                >
-                  {shareStatus === "Link copied" ? (
-                    <Check size={17} />
-                  ) : (
-                    <Share2 size={17} />
-                  )}
-                </button>
-              </div>
-            </div>
-            <div className="map-caption">
-              <span className="caption-dot" />
-              <span>Explore the Prince George campus</span>
-            </div>
-            <button
-              className="layer-toggle"
-              aria-pressed={outlines}
-              onClick={() => setOutlines((value) => !value)}
-            >
-              <span className={`toggle-box ${outlines ? "checked" : ""}`}>
-                {outlines && <Check size={12} />}
-              </span>
-              Campus detail
-            </button>
-            {(styleError || dataError) && (
-              <div role="status" className="map-notice">
-                {styleError
-                  ? "Basemap unavailable. Campus places are still searchable; try Satellite or Dark."
-                  : "Campus outlines unavailable. Place markers are still available."}
-              </div>
-            )}
-            {shareStatus && (
-              <div role="status" className="share-status">
-                {shareStatus}
-              </div>
-            )}
-            {selected && (
-              <ResponsiveFeatureDetail
-                popup={
-                  <div className="desktop-detail">
-                    <Detail place={selected} onClose={() => select(null)} />
-                  </div>
-                }
-                card={
-                  <MobileFeatureCard
-                    title={selected.short}
-                    subtitle={
-                      categories.find((item) => item.id === selected.category)!
-                        .label
-                    }
-                    cardKey={selected.id}
-                    height={410}
-                    initialVisibleHeight={310}
-                    onClose={() => select(null)}
-                  >
-                    <Detail place={selected} onClose={() => select(null)} />
-                  </MobileFeatureCard>
-                }
-              />
-            )}
-            <span className="sr-only" role="status">
-              {mapReady
-                ? "Interactive campus map is ready."
-                : "Campus map is loading."}
-            </span>
-          </MapSectionLayout>
-        </WorkspaceProvider>
-      </main>
-      <footer className="app-footer">
-        <a
-          className="footer-logo"
-          href="https://projects.ahmadjalil.com/nals-wp/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src={`${import.meta.env.BASE_URL}brand/nals-logo-green.svg`}
-            alt="Northern Analytical Laboratory Services, UNBC"
-            width="160"
-            height="72"
-          />
-        </a>
-        <span className="footer-address">
-          3333 University Way · Prince George, BC
-          <br />
-          <span>Independent campus map concept</span>
-        </span>
-        <span className="footer-credit">
-          Built with{" "}
-          <a
-            href="https://github.com/ahzs645/geo-toolkit"
-            target="_blank"
-            rel="noreferrer"
-          >
-            PGMaps GeoToolkit
-          </a>
-          <span className="footer-divider">/</span>
-          <button onClick={() => setAbout(true)}>Sources & map notes</button>
-        </span>
-      </footer>
-      {about && <About onClose={() => setAbout(false)} />}
-      {headerSearch && (
-        <CampusSearch
-          onClose={() => setHeaderSearch(false)}
-          onSelect={(place) => {
+      <div className="map-stage">
+        <ChromeHeader
+          onHome={reset}
+          onAbout={() => setAbout(true)}
+          onSelectPlace={(place) => {
             filter("all", "");
             select(place);
-            setHeaderSearch(false);
-            setMenuOpen(false);
           }}
         />
-      )}
+        <ChromeBreadcrumbs />
+        <main
+          id="campus-search"
+          className="map-workspace"
+          aria-label="Interactive campus explorer"
+        >
+          <WorkspaceProvider theme="light" className="unbc-workspace">
+            <MapSectionLayout
+              sidebar={sidebar}
+              desktopSidebarWidth={350}
+              mobilePeekTitle="Explore campus"
+              mobilePeekSubtitle={`${visible.length} places · Search buildings and landmarks`}
+              mobileInitialSheetState="collapsed"
+            >
+              <Map
+                styles={styles}
+                center={campusCenter}
+                zoom={15.6}
+                maxZoom={20}
+                minZoom={8}
+                maxBounds={[
+                  [-123.2, 53.6],
+                  [-122.3, 54.1],
+                ]}
+                controls={
+                  <MapControls
+                    position="top-right"
+                    mobilePosition="top-right"
+                    showZoom
+                    showCompass
+                  />
+                }
+                loader="spinner"
+                showStyleLoadingOverlay={false}
+                attributionControl={{
+                  compact: true,
+                  customAttribution:
+                    '<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
+                }}
+              >
+                <CampusMap
+                  placesShown={visible}
+                  selected={selected}
+                  select={select}
+                  geometry={geometry}
+                  outlines={outlines}
+                  basemap={basemap}
+                  homeKey={homeKey}
+                  focusKey={focusKey}
+                  onReady={setMapReady}
+                />
+              </Map>
+              <div className="map-toolbar">
+                <div className="basemap-options" aria-label="Basemap style">
+                  <Layers size={16} />
+                  {(["campus", "satellite", "contrast"] as Basemap[]).map(
+                    (item) => (
+                      <button
+                        key={item}
+                        aria-pressed={basemap === item}
+                        onClick={() => setBasemap(item)}
+                      >
+                        {item === "campus"
+                          ? "Campus"
+                          : item === "satellite"
+                            ? "Satellite"
+                            : "Dark"}
+                      </button>
+                    ),
+                  )}
+                </div>
+                <div className="toolbar-actions">
+                  <button
+                    className="icon-button"
+                    aria-label="Show whole campus"
+                    title="Show whole campus"
+                    onClick={reset}
+                  >
+                    <RotateCcw size={17} />
+                  </button>
+                  <button
+                    className="icon-button"
+                    aria-label="Copy map link"
+                    title="Copy map link"
+                    onClick={share}
+                  >
+                    {shareStatus === "Link copied" ? (
+                      <Check size={17} />
+                    ) : (
+                      <Share2 size={17} />
+                    )}
+                  </button>
+                </div>
+              </div>
+              <div className="map-caption">
+                <span className="caption-dot" />
+                <span>Explore the Prince George campus</span>
+              </div>
+              <button
+                className="layer-toggle"
+                aria-pressed={outlines}
+                onClick={() => setOutlines((value) => !value)}
+              >
+                <span className={`toggle-box ${outlines ? "checked" : ""}`}>
+                  {outlines && <Check size={12} />}
+                </span>
+                Campus detail
+              </button>
+              {(styleError || dataError) && (
+                <div role="status" className="map-notice">
+                  {styleError
+                    ? "Basemap unavailable. Campus places are still searchable; try Satellite or Dark."
+                    : "Campus outlines unavailable. Place markers are still available."}
+                </div>
+              )}
+              {shareStatus && (
+                <div role="status" className="share-status">
+                  {shareStatus}
+                </div>
+              )}
+              {selected && (
+                <ResponsiveFeatureDetail
+                  popup={
+                    <div className="desktop-detail">
+                      <Detail place={selected} onClose={() => select(null)} />
+                    </div>
+                  }
+                  card={
+                    <MobileFeatureCard
+                      title={selected.short}
+                      subtitle={
+                        categories.find((item) => item.id === selected.category)!
+                          .label
+                      }
+                      cardKey={selected.id}
+                      height={410}
+                      initialVisibleHeight={310}
+                      onClose={() => select(null)}
+                    >
+                      <Detail place={selected} onClose={() => select(null)} />
+                    </MobileFeatureCard>
+                  }
+                />
+              )}
+              <span className="sr-only" role="status">
+                {mapReady
+                  ? "Interactive campus map is ready."
+                  : "Campus map is loading."}
+              </span>
+            </MapSectionLayout>
+          </WorkspaceProvider>
+        </main>
+      </div>
+      <ChromeFooter onHome={reset} onAbout={() => setAbout(true)} />
+      {about && <About onClose={() => setAbout(false)} />}
     </div>
   );
 }
@@ -860,7 +704,7 @@ function About({ onClose }: { onClose: () => void }) {
           >
             PGMaps GeoToolkit
           </a>
-          , with the logo and responsive masthead from the{" "}
+          . The header, footer and breadcrumbs are UNBC Chrome from the{" "}
           <a
             href="https://github.com/ahzs645/nals-wp"
             target="_blank"
@@ -868,17 +712,16 @@ function About({ onClose }: { onClose: () => void }) {
           >
             NALS WordPress theme
           </a>
-          , its BC Sans and Helvetica Neue Black typography, navigation tabs,
-          buttons, and neutral backgrounds. The NALS lockup is generated by the
-          same{" "}
+          : the www.unbc.ca header and footer, in BC Sans, with the NALS lockup
+          drawn by the{" "}
           <a
             href="https://github.com/ahzs645/unbc-logo"
             target="_blank"
             rel="noreferrer"
           >
             UNBC logo kit
-          </a>{" "}
-          used by the theme showcase.
+          </a>
+          .
         </p>
         <h3>Map sources</h3>
         <p>
@@ -919,72 +762,6 @@ function About({ onClose }: { onClose: () => void }) {
           UNBC campus information
           <ExternalLink size={15} />
         </a>
-      </div>
-    </dialog>
-  );
-}
-
-function CampusSearch({
-  onClose,
-  onSelect,
-}: {
-  onClose: () => void;
-  onSelect: (place: Place) => void;
-}) {
-  const [term, setTerm] = useState("");
-  useEffect(() => {
-    const previous = document.activeElement as HTMLElement | null;
-    const dialog = document.querySelector<HTMLDialogElement>("#header-search")!;
-    dialog.showModal();
-    return () => {
-      dialog.close();
-      previous?.focus();
-    };
-  }, []);
-  const matches = places.filter((place) =>
-    `${place.name} ${place.short} ${place.number}`
-      .toLowerCase()
-      .includes(term.trim().toLowerCase()),
-  );
-  return (
-    <dialog
-      id="header-search"
-      className="nals-search-dialog"
-      aria-labelledby="header-search-title"
-      onCancel={onClose}
-      onClick={(event) => {
-        if (event.target === event.currentTarget) onClose();
-      }}
-    >
-      <button
-        className="icon-button search-close"
-        aria-label="Close campus search"
-        onClick={onClose}
-      >
-        <X size={22} />
-      </button>
-      <h2 id="header-search-title">Search campus</h2>
-      <label className="sr-only" htmlFor="header-search-input">
-        Search campus from header
-      </label>
-      <input
-        id="header-search-input"
-        type="search"
-        autoFocus
-        placeholder="Building name or number"
-        value={term}
-        onChange={(event) => setTerm(event.target.value)}
-      />
-      <div className="header-search-results">
-        {matches.map((place) => (
-          <button key={place.id} onClick={() => onSelect(place)}>
-            <span>{place.name}</span>
-            <ChevronRight size={16} />
-          </button>
-        ))}
-        {matches.length === 0 && (
-          <p>No places found. Try another building name.</p>
-        )}
       </div>
     </dialog>
   );
