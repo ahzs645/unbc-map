@@ -1,0 +1,95 @@
+@use 'sass:map';
+@use 'sass:math';
+
+// UNBC brand tokens — sourced from www.unbc.ca theme + msapplication-TileColor
+// Keep this file the single source of truth for brand values.
+
+// ---- Colors --------------------------------------------------------------
+
+// Primary
+$color-primary:        #035642;  // forest green — main brand
+$color-primary-tile:   #00554a;  // msapplication-TileColor / mask-icon
+$color-primary-dark:   #023d2f;  // hover state for primary buttons
+
+// Secondary
+$color-secondary:      #006161;  // teal — links / accents
+
+// Gold accents — UNBC's `.btn--apply` (#977000), used by:
+//   - `.apply-button` masthead CTA
+//   - hamburger-menu "Apply to UNBC" CTA
+//   - `.stats-right` clip-path column (gold-light variant)
+$color-gold:           #977000;
+$color-gold-dark:      #794e00;
+$color-gold-light:     #b79527;
+
+// Neutrals
+$color-warm-neutral:       #eae7e5;  // most-used UNBC bg
+$color-warm-neutral-hover: #dfdad7;
+$color-text:           #29292a;  // body text (not pure black)
+$color-muted:          #525154;
+$color-muted-soft:     #777677;
+$color-divider:        #f4f4f4;
+$color-white:          #ffffff;
+
+// ---- Typography ---------------------------------------------------------
+
+$font-body:    "bcsans-regular", "Helvetica Neue", Arial, Helvetica, Verdana, Geneva, sans-serif;
+$font-display: "helvetica-black", "Helvetica Neue", Arial, Helvetica, Verdana, Geneva, sans-serif;
+
+$font-size-base: 16px;
+$font-size-sm:   11px;
+
+// Fluid scale: lo at 600px viewport → hi at 1600px
+@function fluid($lo, $hi) {
+  $delta: math.div($hi - $lo, 1px);
+  @return calc(#{$lo} + #{$delta} * ((100vw - 600px) / 1000));
+}
+
+$font-size-lg:   fluid(16px, 18px);
+$font-size-xl:   fluid(28px, 35px);
+$font-size-xxl:  fluid(35px, 48px);
+$font-size-md:   fluid(25px, 28px);
+
+// ---- Spacing ------------------------------------------------------------
+
+$space-xs:  3px;
+$space-sm:  10px;
+$space-md:  20px;
+$space-lg:  40px;
+
+// ---- UI -----------------------------------------------------------------
+
+$radius-sm:     2px;     // matches UNBC's form / button radius
+$radius-md:     5px;
+$radius-circle: 50%;
+
+$btn-height:    27px;
+$transition:    0.2s ease-in-out;
+
+// Social
+$social-icon-size:   54px;
+$social-icon-margin: 18px;
+$social-icon-size-mobile:   48px;
+$social-icon-margin-mobile: 18px;
+
+// Breakpoints — match UNBC's Bootstrap-derived grid + xxl tier.
+// Names are camelCase t-shirt sizes; values are min-widths.
+$breakpoints: (
+  xs:  360px,   // smallest phone
+  sm:  480px,   // large phone
+  md:  768px,   // tablet
+  lg:  992px,   // small desktop
+  xl:  1200px,  // desktop
+  xxl: 1590px,  // wide desktop (UNBC's "wide" tier)
+);
+
+// Container widths — match UNBC's .container at each tier.
+$containers: (
+  sm:  750px,
+  md:  970px,   // 992px breakpoint → 970px content
+  lg:  1170px,  // 1200px breakpoint → 1170px content
+  xxl: 1560px,  // 1590px breakpoint → 1560px content
+);
+
+// Backwards-compat alias used in earlier partials.
+$bp-mobile: map.get($breakpoints, md);

@@ -1,0 +1,69 @@
+@use 'sass:color';
+@use 'tokens' as *;
+@use 'breakpoints' as *;
+
+// Magnifying-glass / chevron / X tri-state toggle that opens the
+// .custom-search-overlay panel.
+.custom-search-container {
+  display: inline-block;
+  position: relative;
+  align-self: flex-start;
+  margin-top: 0;
+}
+
+.desktop-overlay__toggle,
+.custom-search-toggle {
+  width: 55px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 21px 9px 6px;
+  border: none;
+  background-color: $color-divider;     // #f4f4f4
+  color: $color-primary;
+  border-radius: 0 0 3px 3px;
+  cursor: pointer;
+  z-index: 1;
+  line-height: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  overflow: visible;
+  transition:
+    background-color 300ms,
+    color $transition,
+    opacity $transition;
+
+  &:hover {
+    background-color: color.adjust($color-divider, $lightness: -4%);
+    opacity: 0.9;
+  }
+
+  svg { flex-shrink: 0; }
+
+  // Active = overlay is open. Swap arrow → X.
+  &.active {
+    background-color: $color-divider;
+
+    .arrow-icon { display: none; }
+    .x-icon     { display: block !important; }
+  }
+}
+
+@include bp-down(md) {
+  // Mobile positioning of .custom-search-container is handled in
+  // _header.scss (it gets pinned absolutely to the masthead top-right).
+  // Don't add top/left overrides here — they conflict with that.
+
+  .desktop-overlay__toggle,
+  .custom-search-toggle {
+    width: 55px;
+    height: 43px;
+    padding: 21px 9px 6px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

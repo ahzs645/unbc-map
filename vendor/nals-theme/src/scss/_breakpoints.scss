@@ -1,0 +1,52 @@
+@use 'sass:map';
+@use 'tokens' as *;
+
+// ---- Mixins -------------------------------------------------------------
+//
+// Usage:
+//   @include bp-up(md)        { ... }   // ≥ 768px
+//   @include bp-down(md)      { ... }   // < 768px (i.e. max-width: 767.98px)
+//   @include bp-between(md, lg) { ... } // 768px to 991.98px
+//
+// Names map to UNBC tiers: xs / sm / md / lg / xl / xxl.
+
+@function bp($name) {
+  @if not map.has-key($breakpoints, $name) {
+    @error "Unknown breakpoint `#{$name}`. Use one of: #{map.keys($breakpoints)}.";
+  }
+  @return map.get($breakpoints, $name);
+}
+
+@mixin bp-up($name) {
+  @media (min-width: bp($name)) { @content; }
+}
+
+@mixin bp-down($name) {
+  // -0.02px keeps min/max queries from overlapping at the boundary.
+  @media (max-width: (bp($name) - 0.02px)) { @content; }
+}
+
+@mixin bp-between($lower, $upper) {
+  @media (min-width: bp($lower)) and (max-width: (bp($upper) - 0.02px)) { @content; }
+}
+
+// ---- Containers ---------------------------------------------------------
+//
+// UNBC's .container scales up at each breakpoint. Adds padding on the
+// sides on smaller viewports and a centered max-width above sm.
+
+.container,
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container {
+  @include bp-up(md)  { max-width: map.get($containers, sm); }
+  @include bp-up(lg)  { max-width: map.get($containers, md); }
+  @include bp-up(xl)  { max-width: map.get($containers, lg); }
+  @include bp-up(xxl) { max-width: map.get($containers, xxl); }
+}

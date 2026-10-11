@@ -24,7 +24,7 @@ for (const color of ["white", "green"]) {
   );
 }
 
-// Pull the theme's web fonts from the pinned NALS 1.0.1 source on every build.
+// Pull the theme's web fonts from the NALS 1.0.1 source snapshot on every build.
 const fonts = new URL("../public/fonts/", import.meta.url);
 await mkdir(fonts, { recursive: true });
 for (const name of [
@@ -38,7 +38,7 @@ for (const name of [
   "helvetica-black.woff",
 ]) {
   await copyFile(
-    new URL(`../packages/nals-wp/assets/fonts/${name}`, import.meta.url),
+    new URL(`../vendor/nals-theme/assets/fonts/${name}`, import.meta.url),
     new URL(name, fonts),
   );
 }

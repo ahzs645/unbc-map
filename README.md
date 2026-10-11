@@ -51,7 +51,7 @@ The browser checks serve the production build at `/unbc-map/` and cover real Web
 - `src/nals-theme.css`: compact responsive adaptation of NALS 1.0.1’s header, typography, navigation, buttons, and footer styles.
 - `scripts/build-brand.mjs`: generates the same NALS white/green lockups as `nals-wp/showcase/logo.mjs`, using the pinned `packages/unbc-logo` submodule.
 - `public/brand/`: generated SVG logo lockups with embedded department-line typography.
-- `packages/nals-wp`: upstream theme pinned at `53c8c991153c464a9449254c5aa788fd17b4d474` (version 1.0.1, matching the newer supplied ZIP). Theme fonts are copied from this source by `brand:build`.
+- `vendor/nals-theme`: relevant styles/fonts/logo source assets from upstream commit `53c8c991153c464a9449254c5aa788fd17b4d474` (version 1.0.1, matching the newer supplied ZIP). This source snapshot keeps public builds independent of the private upstream repository. Theme fonts are copied from it by `brand:build`.
 - `public/data/campus.geojson`: local, bounded OpenStreetMap geometry snapshot.
 
 ## Sources and licences
@@ -66,7 +66,7 @@ BC Sans Regular/Bold/Light are supplied in the user-provided NALS theme, distrib
 
 The supplied NALS theme is [GPL v2 or later](https://github.com/ahzs645/nals-wp). `src/nals-theme.css` adapts its SCSS styling. This application is distributed under GPL v2 or later to preserve the theme’s terms; GeoToolkit retains its MIT licence in its submodule. Other dependencies retain their respective licences.
 
-The logo is generated through the same [UNBC logo kit](https://github.com/ahzs645/unbc-logo) used by the NALS showcase, with the locked Northern Analytical Laboratory Services department line. UNBC artwork and trademarks retain their owners’ rights. `HelveticaNeueBlack.otf` and `helvetica-black.woff` come from the pinned theme; the SVG department line embeds the kit’s Helvetica Neue LT Pro Black. These are commercial brand fonts, not covered by the application’s GPL or the BC Sans OFL; downstream reuse needs the appropriate font licence. See [brand provenance](public/brand/SOURCES.md).
+The logo is generated through the same [UNBC logo kit](https://github.com/ahzs645/unbc-logo) used by the NALS showcase, with the locked Northern Analytical Laboratory Services department line. UNBC artwork and trademarks retain their owners’ rights. `HelveticaNeueBlack.otf` and `helvetica-black.woff` come from the theme snapshot; the SVG department line embeds the kit’s Helvetica Neue LT Pro Black. These are commercial brand fonts, not covered by the application’s GPL or the BC Sans OFL; downstream reuse needs the appropriate font licence. See [brand provenance](public/brand/SOURCES.md).
 
 Locations represent approximate building or area centres, not verified public or accessible entrances. This map does not provide room-level routing, live transit, hours, or accessibility guarantees. Use UNBC’s official resources for those details.
 
