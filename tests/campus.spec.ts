@@ -172,9 +172,7 @@ test("NALS branding loads and header search opens a place", async ({
     .toBeGreaterThan(0);
   await expect
     .poll(() =>
-      page.evaluate(() =>
-        document.fonts.check('900 28px "Helvetica Neue Black"'),
-      ),
+      page.evaluate(() => document.fonts.check('400 28px "helvetica-black"')),
     )
     .toBe(true);
   await page

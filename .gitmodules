@@ -4,3 +4,6 @@
 [submodule "packages/unbc-logo"]
 	path = packages/unbc-logo
 	url = https://github.com/ahzs645/unbc-logo.git
+[submodule "packages/nals-wp"]
+	path = packages/nals-wp
+	url = https://github.com/ahzs645/nals-wp.git

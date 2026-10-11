@@ -1,6 +1,7 @@
 /* NALS WordPress theme adaptation, Copyright 2026 Ahmad Jalil.
  * Based on nals-wp/src/scss/{_header,_navigation,_apply-button,_search-toggle,
- * _typography,_buttons,_footer}.scss from the supplied theme archive.
+ * _typography,_buttons,_footer}.scss from NALS 1.0.1, pinned at packages/nals-wp.
+ * The map uses compact header dimensions while retaining the theme treatments.
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 @font-face {
@@ -15,9 +16,44 @@
   font-weight: 900;
   font-display: swap;
 }
+@font-face {
+  font-family: "bcsans-regular";
+  src: url("/fonts/bcsans-regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "bcsans-regular";
+  src: url("/fonts/bcsans-bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "bcsans-bold";
+  src: url("/fonts/bcsans-bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "bcsans-light";
+  src: url("/fonts/bcsans-light.woff") format("woff");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "helvetica-black";
+  src: url("/fonts/helvetica-black.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+:root,
+.unbc-workspace {
+  font-family: "bcsans-regular", "BC Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
 .masthead {
   background: radial-gradient(ellipse at center, #035642 59%, #00231a 100%);
-  min-height: 196px;
+  min-height: 112px;
   padding: 0 4%;
   display: block;
   z-index: 100;
@@ -28,19 +64,19 @@
 }
 .nals-header-inner {
   max-width: 1170px;
-  height: 196px;
+  height: 112px;
   margin: 0 auto;
   position: relative;
 }
 .site-header__logo {
   display: block;
   position: absolute;
-  top: 16px;
+  top: -2px;
   left: 0;
 }
 .site-header__logo img {
   display: block;
-  width: 325px;
+  width: clamp(200px, 19vw, 260px);
   height: auto;
 }
 .nals-header-tools {
@@ -66,6 +102,7 @@
 }
 .custom-search-toggle {
   width: 55px;
+  height: 43px;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -81,16 +118,17 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 26px;
+  gap: 24px;
   position: absolute;
   right: 0;
-  bottom: 17px;
+  bottom: 12px;
 }
 .nals-navigation a,
 .nals-navigation button {
   color: #fff;
   background: none;
-  font-size: 16px;
+  font-family: "bcsans-bold", "BC Sans", sans-serif;
+  font-size: 16.8px;
   font-weight: 700;
   padding: 5px 0;
   line-height: 1.55;
@@ -107,7 +145,7 @@
   display: none;
 }
 .context-bar {
-  height: 42px;
+  height: 34px;
   padding: 0 max(4%, calc((100% - 1170px) / 2));
   background: #fff;
   border-bottom: 1px solid #eae7e5;
@@ -120,14 +158,16 @@
 .contentoverbutton {
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 12px;
 }
 .contentoverbutton a {
   background: #eae7e5;
   color: #29292a;
-  font-size: 16px;
+  font-family: "bcsans-bold", "BC Sans", sans-serif;
+  font-size: 14px;
   font-weight: 700;
-  padding: 3px 10px;
+  height: 33px;
+  padding: 6px 12px;
   border-radius: 0 0 3px 3px;
   line-height: 1.4;
 }
@@ -140,8 +180,10 @@
 .place-detail h2,
 .about-content h2,
 .nals-search-dialog h2 {
-  font-family: "Helvetica Neue Black", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 900 !important;
+  font-family:
+    "helvetica-black", "Helvetica Neue Black", "Helvetica Neue", Arial,
+    sans-serif;
+  font-weight: 400 !important;
   letter-spacing: 0;
   line-height: 1.1;
 }
@@ -158,7 +200,7 @@
 }
 .app-footer {
   background: #fff;
-  min-height: 80px;
+  min-height: 64px;
   padding: 5px 4%;
   gap: 22px;
 }
@@ -237,6 +279,9 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1000px) {
+  .campus-sidebar-title {
+    font-size: 26px !important;
+  }
   .nals-navigation {
     gap: 18px;
   }
@@ -253,12 +298,12 @@
 }
 @media (max-width: 767px) {
   .masthead {
-    height: 80px;
-    min-height: 80px;
+    height: 64px;
+    min-height: 64px;
     padding: 0 8px;
   }
   .nals-header-inner {
-    height: 80px;
+    height: 64px;
     display: flex;
     align-items: center;
     gap: 4px;
@@ -277,7 +322,7 @@
     position: static;
   }
   .site-header__logo img {
-    width: 180px;
+    width: clamp(145px, calc(100vw - 185px), 190px);
     height: auto;
   }
   .nals-header-tools {
@@ -289,8 +334,9 @@
     display: none;
   }
   .custom-search-toggle {
-    width: 50px;
-    padding: 15px 7px 4px;
+    width: 55px;
+    height: 43px;
+    padding: 21px 9px 6px;
   }
   .nals-navigation {
     display: none;
@@ -301,11 +347,11 @@
     align-items: stretch;
     justify-content: flex-start;
     position: absolute;
-    top: 80px;
+    top: 64px;
     left: -8px;
     right: -8px;
     bottom: auto;
-    max-height: calc(100dvh - 80px);
+    max-height: calc(100dvh - 64px);
     overflow-y: auto;
     padding: 15px 20px 24px;
     gap: 0;
@@ -316,8 +362,9 @@
   .nals-navigation a,
   .nals-navigation button {
     color: #29292a;
+    font-family: "bcsans-light", "BC Sans", sans-serif;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 200;
     padding: 12px 5px;
     text-align: left;
     border-bottom: 1px solid #eae7e5;
@@ -326,11 +373,13 @@
     display: block;
   }
   .nals-navigation .current-page {
+    font-family: "bcsans-bold", "BC Sans", sans-serif;
     color: #035642;
     font-weight: 700;
     border-bottom: 1px solid #eae7e5;
   }
   .nals-navigation .mobile-apply {
+    font-family: "bcsans-bold", "BC Sans", sans-serif;
     display: block;
     background: #977000;
     color: #fff;
@@ -341,7 +390,7 @@
     margin-top: 24px;
   }
   .context-bar {
-    height: 34px;
+    height: 30px;
     padding: 0 16px;
     font-size: 10px;
   }
