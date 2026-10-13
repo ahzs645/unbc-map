@@ -12,6 +12,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { ChevronRight } from "lucide-react";
 import {
+  chromeUrl,
   renderBreadcrumbs,
   renderFooter,
   renderHeader,
@@ -29,6 +30,8 @@ const home = new URL(base, location.href).href;
 export interface ChromeActions {
   onHome: () => void;
   onAbout: () => void;
+  /** Handles a click on another chrome link in place; true if it did. */
+  onLink?: (link: HTMLAnchorElement) => boolean;
 }
 
 export interface ChromeSearchItem {
@@ -46,10 +49,10 @@ export interface ChromeSearch {
 /** Catches clicks on the chrome's links that belong to the map. */
 function useMapLinks(
   ref: React.RefObject<HTMLDivElement | null>,
-  { onHome, onAbout }: ChromeActions,
+  { onHome, onAbout, onLink }: ChromeActions,
 ) {
-  const actions = useRef({ onHome, onAbout });
-  actions.current = { onHome, onAbout };
+  const actions = useRef({ onHome, onAbout, onLink });
+  actions.current = { onHome, onAbout, onLink };
   useEffect(() => {
     const root = ref.current;
     if (!root) return;
@@ -63,6 +66,9 @@ function useMapLinks(
         event.preventDefault();
         window.UNBCChrome?.closeMenu();
         actions.current.onHome();
+      } else if (actions.current.onLink?.(link)) {
+        event.preventDefault();
+        window.UNBCChrome?.closeMenu();
       }
     };
     root.addEventListener("click", onClick);
@@ -81,17 +87,27 @@ const matchesFor = (term: string) => {
 export function ChromeHeader({
   onHome,
   onAbout,
+  onLink,
   onSelectPlace,
   search,
-}: ChromeActions & { onSelectPlace?: (place: Place) => void; search?: ChromeSearch }) {
+  site,
+  activeUrl,
+}: ChromeActions & {
+  onSelectPlace?: (place: Place) => void;
+  search?: ChromeSearch;
+  /** brand.json settings this page replaces, such as its own menu. */
+  site?: Partial<typeof brand>;
+  /** The menu URL to mark as the current page, when the path alone is ambiguous. */
+  activeUrl?: string;
+}) {
   const config = useMemo(() => search ? resolveConfig({
     ...brand,
+    ...site,
     search: { ...brand.search, placeholder: search.label },
-    skipLink: { label: "Skip to NHHR content", target: "#atlas-main" },
-  }) : chromeConfig, [search?.label]);
+  }) : chromeConfig, [search?.label, site]);
   const html = useMemo(
-    () => renderHeader(config, { base, currentPath: search ? "/dev/projects" : "/" }),
-    [config],
+    () => renderHeader(config, { base, currentPath: activeUrl === undefined ? (search ? "/dev/projects" : "/") : null }),
+    [config, activeUrl === undefined],
   );
   const ref = useRef<HTMLDivElement>(null);
   const [slot, setSlot] = useState<HTMLElement | null>(null);
@@ -103,7 +119,22 @@ export function ChromeHeader({
   const matches = (query: string): ChromeSearchItem[] => searchRef.current
     ? searchRef.current.items.filter(item => `${item.name} ${item.searchText ?? ""}`.toLowerCase().includes(query.trim().toLowerCase()))
     : matchesFor(query);
-  useMapLinks(ref, { onHome, onAbout });
+  useMapLinks(ref, { onHome, onAbout, onLink });
+
+  // Several menu items can share one path and differ only by query, so the
+  // page names its current item rather than leaving it to the path.
+  useEffect(() => {
+    if (activeUrl === undefined) return;
+    const current = chromeUrl(activeUrl, base);
+    ref.current
+      ?.querySelectorAll<HTMLAnchorElement>(".unbc-primary-nav__link, .unbc-mobile-nav__link")
+      .forEach((link) => {
+        const active = link.getAttribute("href") === current;
+        link.classList.toggle("is-active", active);
+        if (active) link.setAttribute("aria-current", "page");
+        else link.removeAttribute("aria-current");
+      });
+  }, [html, activeUrl]);
 
   useEffect(() => {
     window.UNBCChrome?.init();
@@ -191,8 +222,11 @@ export function ChromeFooter(actions: ChromeActions) {
   );
 }
 
-/** UNBC › Prince George campus › Campus Explorer. */
-export function ChromeBreadcrumbs({ section }: { section?: string } = {}) {
+/**
+ * UNBC › Prince George campus › Campus Explorer, in the bar under the map's
+ * header; or UNBC › NHHR Atlas › section, under an Atlas page title.
+ */
+export function ChromeBreadcrumbs({ section, className = "context-bar" }: { section?: string; className?: string } = {}) {
   const html = useMemo(
     () =>
       renderBreadcrumbs(
@@ -208,5 +242,5 @@ export function ChromeBreadcrumbs({ section }: { section?: string } = {}) {
       ),
     [section],
   );
-  return <div className="context-bar" dangerouslySetInnerHTML={{ __html: html }} />;
+  return <div className={className} dangerouslySetInnerHTML={{ __html: html }} />;
 }

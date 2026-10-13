@@ -1,25 +1,138 @@
-.atlas-map-panel .atlas-basemap-picker { position: absolute; left: 10px; top: 10px; z-index: 3; display: flex; align-items: center; gap: 6px; margin: 0; padding: 5px 8px; background: #fff; border: 1px solid #cdcfc4; border-radius: 2px; color: #035642; font-size: 11px; box-shadow: 0 1px 4px #0001; }
-.atlas-app .atlas-basemap-picker select { width: 88px; min-width: 0; padding: 3px; border: 0; background: #fff; color: #29292a; font: inherit; }
-.atlas-map-panel .atlas-basemap-notice { position: absolute; left: 10px; top: 51px; z-index: 3; max-width: calc(100% - 65px); margin: 0; padding: 6px 8px; background: #fff; border: 1px solid #cdcfc4; color: #525154; font-size: 11px; line-height: 1.4; }
-.atlas-map-panel .maplibregl-ctrl-attrib { font-size: 10px; }
-.atlas-map-panel .maplibregl-ctrl-bottom-right { bottom: 0 !important; }
-.atlas-institution-label { pointer-events: none; background: #fff; color: #035642; padding: 2px 5px; border-radius: 2px; font: 11px/1.4 "bcsans-regular", Arial, sans-serif; box-shadow: 0 1px 4px #0002; }
-.atlas-point-legend { font-size: 12px; line-height: 1.5; }
-.atlas-point-legend > strong { display: block; }
-.atlas-point-legend svg { width: 290px; max-width: 100%; height: 96px; overflow: visible; }
-.atlas-point-legend svg text { font-size: 9px; fill: #29292a; }
-.atlas-app .atlas-point-legend p, .atlas-app .atlas-institution-scope { font-size: 12px; color: #525154; line-height: 1.6; margin: 6px 0; }
-.atlas-location-detail { display: block; margin-top: 6px; font-size: 11px; line-height: 1.4; }
-.atlas-location-detail > span { display: block; }
-.atlas-map-compact .atlas-point-legend svg { height: 60px; width: 210px; }
-.atlas-map-compact .atlas-point-legend p { font-size: 10px; }
+.atlas-map-panel .atlas-basemap-picker {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 5px 8px;
+  background: #fff;
+  border: 1px solid #cdcfc4;
+  border-radius: 2px;
+  color: #035642;
+  font-size: 13px;
+  box-shadow: 0 1px 4px #0001;
+}
+.atlas-app .atlas-basemap-picker select {
+  width: 88px;
+  min-width: 0;
+  padding: 3px;
+  border: 0;
+  background: #fff;
+  color: #29292a;
+  font: inherit;
+}
+.atlas-map-panel .atlas-basemap-notice {
+  position: absolute;
+  left: 10px;
+  top: 51px;
+  z-index: 3;
+  max-width: calc(100% - 65px);
+  margin: 0;
+  padding: 6px 8px;
+  background: #fff;
+  border: 1px solid #cdcfc4;
+  color: #525154;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.atlas-map-panel .maplibregl-ctrl-attrib {
+  font-size: 12px;
+}
+.atlas-map-panel .maplibregl-ctrl-bottom-right {
+  bottom: 0 !important;
+}
+.atlas-institution-label {
+  pointer-events: none;
+  background: #fff;
+  color: #035642;
+  padding: 2px 5px;
+  border-radius: 2px;
+  font:
+    11px/1.4 "bcsans-regular",
+    Arial,
+    sans-serif;
+  box-shadow: 0 1px 4px #0002;
+}
+.atlas-point-legend {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.atlas-point-legend > strong {
+  display: block;
+}
+.atlas-point-legend svg {
+  width: 290px;
+  max-width: 100%;
+  height: 96px;
+  overflow: visible;
+}
+.atlas-point-legend svg text {
+  font-size: 12px;
+  fill: #29292a;
+}
+.atlas-app .atlas-point-legend p,
+.atlas-app .atlas-institution-scope {
+  font-size: 14px;
+  color: #525154;
+  line-height: 1.6;
+  margin: 6px 0;
+}
+.atlas-location-detail {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.atlas-location-detail > span {
+  display: block;
+}
+.atlas-map-compact .atlas-point-legend svg {
+  height: 60px;
+  width: 210px;
+}
+.atlas-map-compact .atlas-point-legend p {
+  font-size: 12px;
+}
 @media (max-width: 700px) {
-  .atlas-map-panel.atlas-map-points .atlas-basemap-picker { left: auto; right: 45px; }
-  .atlas-map-panel .atlas-basemap-picker { left: 5px; top: 5px; padding: 3px 5px; gap: 4px; font-size: 10px; }
-  .atlas-app .atlas-basemap-picker select { width: 78px; }
-  .atlas-map-panel .atlas-basemap-notice { left: 5px; top: 38px; font-size: 10px; }
+  .atlas-map-panel.atlas-map-points .atlas-basemap-picker {
+    left: auto;
+    right: 45px;
+  }
+  .atlas-map-panel .atlas-basemap-picker {
+    left: 5px;
+    top: 5px;
+    padding: 3px 5px;
+    gap: 4px;
+    font-size: 12px;
+  }
+  .atlas-app .atlas-basemap-picker select {
+    width: 78px;
+  }
+  .atlas-map-panel .atlas-basemap-notice {
+    left: 5px;
+    top: 38px;
+    font-size: 12px;
+  }
 }
 
-.atlas-institution-label { max-width: 180px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.atlas-location-detail { max-height: 150px; overflow: auto; }
-.atlas-route-legend::before { content: ""; display: inline-block; width: 24px; border-top: 2px dashed #977000; margin-right: 6px; vertical-align: middle; }
+.atlas-institution-label {
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.atlas-location-detail {
+  max-height: 150px;
+  overflow: auto;
+}
+.atlas-route-legend::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  border-top: 2px dashed #977000;
+  margin-right: 6px;
+  vertical-align: middle;
+}
