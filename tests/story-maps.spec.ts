@@ -28,8 +28,11 @@ test("reading changes the focused map without replacing its canvas, and shares t
   await page.getByRole("button", { name: "Begin reading", exact: true }).click();
   await expect.poll(() => page.getByTestId("story-reader").evaluate(element => Math.abs(element.getBoundingClientRect().top))).toBeLessThan(3);
   const readerBox = await page.getByTestId("story-reader").boundingBox();
+  // Scroll by chapter 2's measured offset so its heading lands well inside the
+  // reading line on both layouts, whatever chapter 1's rendered text height.
+  const secondChapterTop = await page.getByTestId("story-reader").evaluate(root => root.querySelector("#prince-george-in-context")!.getBoundingClientRect().top - root.getBoundingClientRect().top);
   await page.mouse.move(readerBox!.x + 40, readerBox!.y + Math.min(600, readerBox!.height - 70));
-  await page.mouse.wheel(0, 700);
+  await page.mouse.wheel(0, secondChapterTop - 250);
   await expect(page.getByTestId("story-reader")).toHaveAttribute("data-active-chapter", "prince-george-in-context");
   await expect(page.getByTestId("story-evidence")).toHaveAttribute("data-chapter", "prince-george-in-context");
   await expect(state).toHaveAttribute("data-focus-regions", '["Prince George"]');
