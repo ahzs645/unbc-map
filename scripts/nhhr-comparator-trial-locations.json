@@ -1,0 +1,1441 @@
+{
+  "reviewedAt": "2026-10-12",
+  "coordinateOrder": "longitude, latitude",
+  "locations": [
+    {
+      "code": "bc-cancer-prince-george",
+      "name": "BC Cancer – Prince George (Centre for the North)",
+      "site": "1215 Lethbridge Street · V2M 7E9",
+      "city": "Prince George",
+      "sourceUrl": "https://www.bccancer.bc.ca/centre-for-the-north-site",
+      "locationNote": "Verified facility at the official 1215 Lethbridge Street address. The returned OpenStreetMap clinic is named BC Cancer – Prince George (Centre for the North). The official postal code V2M 7E9 is retained; the Nominatim context postcode differs. This is distinct from the Vancouver BC Cancer agency record in PGMaps and from the adjacent University Hospital of Northern BC. Historical registry listings do not establish current recruitment, local enrollment or eligibility.",
+      "coordinates": [
+        -122.7643857,
+        53.9129846
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/445255632"
+    },
+    {
+      "code": "prince-george-family-ymca",
+      "name": "Prince George Family YMCA",
+      "site": "2020 Massey Drive · V2L 4V7",
+      "city": "Prince George",
+      "sourceUrl": "https://www.ymcabc.ca/locations/prince-george-family-ymca",
+      "locationNote": "Verified operator address at 2020 Massey Drive. The returned OpenStreetMap sports-centre node is named YMCA of Northern BC and matches the street address, Prince George and postal code. A listed trial site does not establish local enrollment, eligibility or current recruitment.",
+      "coordinates": [
+        -122.77237,
+        53.9043694
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/node/7033781790"
+    },
+    {
+      "code": "prince-george-surgery-centre",
+      "name": "Prince George Surgery Centre",
+      "site": "500 Victoria Street · V2L 2J9",
+      "city": "Prince George",
+      "sourceUrl": "https://www.healthlinkbc.ca/find-care/find-health-services/program/surgical-services-1?location_nid=27051",
+      "locationNote": "HealthLink BC explicitly locates Prince George Surgery Centre at 500 Victoria Street. The returned OpenStreetMap address node matches that building address and Prince George. PGMaps has the Surgery Centre at 500 Victoria St with a nearby BC Geocoder point marked for review; the official listing resolves that identity. The official postal code V2L 2J9 is retained; the Nominatim context postcode differs. This point represents the building, not a department or exact study room. UNKNOWN source study status is retained; no current recruitment is inferred.",
+      "coordinates": [
+        -122.750288,
+        53.9160995
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/node/4268588591"
+    },
+    {
+      "code": "vancouver-general",
+      "name": "Vancouver General Hospital",
+      "city": "Vancouver",
+      "site": "899 West 12th Avenue",
+      "sourceUrl": "https://www.vch.ca/en/location/vancouver-general-hospital",
+      "coordinates": [
+        -123.1226691,
+        49.2618427
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/relation/17286359",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "vancouver-st-pauls",
+      "name": "St. Paul’s Hospital — Burrard site",
+      "city": "Vancouver",
+      "site": "1081 Burrard Street",
+      "sourceUrl": "https://medicine.providencehealthcare.org/about-us/",
+      "coordinates": [
+        -123.128928,
+        49.2806187
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/51185697",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Burrard Street object selected; the Station Street replacement hospital object is excluded.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "vancouver-childrens",
+      "name": "BC Children’s Hospital",
+      "city": "Vancouver",
+      "site": "4480 Oak Street",
+      "sourceUrl": "https://www.bcchildrens.ca/clinics-services/physiotherapy-clinic",
+      "coordinates": [
+        -123.1253746,
+        49.2445028
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/36893897",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. PGMaps has a shared 4500 Oak geocoder candidate; operator and named OSM Children’s building confirm 4480 Oak. Women’s 4500 Oak building remains separate.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "vancouver-womens",
+      "name": "BC Women’s Hospital + Health Centre",
+      "city": "Vancouver",
+      "site": "4500 Oak Street",
+      "sourceUrl": "https://www.bcwomens.ca/about/contact",
+      "coordinates": [
+        -123.1248203,
+        49.2437725
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/527856758",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "vancouver-cancer",
+      "name": "BC Cancer — Vancouver main site",
+      "city": "Vancouver",
+      "site": "600 West 10th Avenue",
+      "sourceUrl": "https://www.bccancer.bc.ca/our-services/centres-clinics/bc-cancer-vancouver",
+      "coordinates": [
+        -123.119013,
+        49.2618477
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/88316971",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "vancouver-ubc",
+      "name": "UBC Hospital",
+      "city": "Vancouver",
+      "site": "2211 Wesbrook Mall",
+      "sourceUrl": "https://www.vch.ca/en/location/ubc-hospital",
+      "coordinates": [
+        -123.245747,
+        49.2641866
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/node/8508184533",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. The OSM administrative city is Electoral Area A while the operator uses the Vancouver postal address. Source city query is retained. The PGMaps MSP UBC-payee point incorrectly matched to VGH is rejected.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "calgary-foothills",
+      "name": "Foothills Medical Centre",
+      "city": "Calgary",
+      "site": "1403 29 Street NW",
+      "sourceUrl": "https://www.albertahealthservices.ca/fmc/fmc.aspx",
+      "coordinates": [
+        -114.1349388,
+        51.0651621
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/4860451",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "calgary-childrens",
+      "name": "Alberta Children’s Hospital",
+      "city": "Calgary",
+      "site": "28 Oki Drive NW",
+      "sourceUrl": "https://www.albertahealthservices.ca/ach/ach.aspx",
+      "coordinates": [
+        -114.1480515,
+        51.0746658
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/4814073",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Current operator address is 28 Oki Drive NW, superseding the former Shaganappi Trail address.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "calgary-arthur-child",
+      "name": "Arthur J.E. Child Comprehensive Cancer Centre",
+      "city": "Calgary",
+      "site": "3395 Hospital Drive NW",
+      "sourceUrl": "https://www.albertahealthservices.ca/ajec/page15399.aspx",
+      "coordinates": [
+        -114.131221,
+        51.0672552
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/relation/13352517",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Named building and Hospital Drive match. OSM lacks the operator street number; the operator’s linked address map at [−114.1308546, 51.0666612] corroborates the separate new-centre building. Not merged with the former Tom Baker building.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "calgary-peter-lougheed",
+      "name": "Peter Lougheed Centre",
+      "city": "Calgary",
+      "site": "3500 26 Avenue NE",
+      "sourceUrl": "https://www.albertahealthservices.ca/plc/plc.aspx",
+      "coordinates": [
+        -113.9845974,
+        51.0792148
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/4860979",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "calgary-rockyview",
+      "name": "Rockyview General Hospital",
+      "city": "Calgary",
+      "site": "7007 14 Street SW",
+      "sourceUrl": "https://www.albertahealthservices.ca/rgh/rgh.aspx",
+      "coordinates": [
+        -114.0971138,
+        50.9908499
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/415817797",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. OSM has the campus-edge 75 Avenue road; official AHS entrance/address is 7007 14 Street SW. Named hospital footprint is used rather than an unverified street interpolation.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "calgary-south-health",
+      "name": "South Health Campus",
+      "city": "Calgary",
+      "site": "4448 Front Street SE",
+      "sourceUrl": "https://www.albertahealthservices.ca/shc/shc.aspx",
+      "coordinates": [
+        -113.9526766,
+        50.8822452
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/339691950",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "calgary-tom-baker",
+      "name": "Former Tom Baker Cancer Centre building",
+      "city": "Calgary",
+      "site": "1331 29 Street NW",
+      "sourceUrl": "https://www.albertahealthservices.ca/fmc/Page16420.aspx",
+      "coordinates": [
+        -114.1334768,
+        51.0628884
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/487850912",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Official AHS page explicitly identifies the former Tom Baker site at 1331 29 Street NW, now Special Services Building Ambulatory Centre. This historical named-site display point is separate from Arthur Child. Combined Tom Baker/Arthur Child aliases remain unresolved; recruitment/visit relocation is not inferred.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "halifax-iwk",
+      "name": "IWK Health Centre — University Avenue campus",
+      "city": "Halifax",
+      "site": "5850/5980 University Avenue",
+      "sourceUrl": "https://iwkhealth.ca/contact",
+      "coordinates": [
+        -63.5837315,
+        44.6378638
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/70587389",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "halifax-infirmary",
+      "name": "Halifax Infirmary",
+      "city": "Halifax",
+      "site": "1796 Summer Street",
+      "sourceUrl": "https://www.nshealth.ca/locations-and-facilities/halifax-infirmary",
+      "coordinates": [
+        -63.587161,
+        44.6454753
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/316860834",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "halifax-cancer",
+      "name": "QEII Cancer Centre — Dickson Building",
+      "city": "Halifax",
+      "site": "5820 University Avenue",
+      "sourceUrl": "https://www.nshealth.ca/locations-and-facilities/qeii-cancer-centre",
+      "coordinates": [
+        -63.5813433,
+        44.6381632
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/24509821",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Operator page places cancer care in the Dickson Building; the original Nova Scotia Cancer Centre name is corroborated by the linked operator patient guide. Named OSM Dickson building is used; OSM house number 5780 differs from official 5820 and is not adopted. Broad QEII references are excluded.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "saskatoon-royal",
+      "name": "Royal University Hospital",
+      "city": "Saskatoon",
+      "site": "103 Hospital Drive",
+      "sourceUrl": "https://www.saskhealthauthority.ca/facilities-locations/royal-university-hospital",
+      "coordinates": [
+        -106.6411814,
+        52.1313901
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/39084236",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "saskatoon-cancer",
+      "name": "Saskatoon Cancer Centre",
+      "city": "Saskatoon",
+      "site": "20 Campus Drive",
+      "sourceUrl": "https://saskcancer.ca/treatments/treatment-centres/saskatoon-cancer-centre",
+      "coordinates": [
+        -106.6405118,
+        52.1327869
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/39161194",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "saskatoon-city",
+      "name": "Saskatoon City Hospital",
+      "city": "Saskatoon",
+      "site": "701 Queen Street",
+      "sourceUrl": "https://www.saskhealthauthority.ca/facilities-locations/saskatoon-city-hospital",
+      "coordinates": [
+        -106.6543194,
+        52.1357309
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/23453313",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "saskatoon-st-pauls",
+      "name": "St. Paul’s Hospital — Saskatoon",
+      "city": "Saskatoon",
+      "site": "1702 20th Street West",
+      "sourceUrl": "https://www.saskhealthauthority.ca/facilities-locations/st-pauls-hospital",
+      "coordinates": [
+        -106.695877,
+        52.1267537
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/288405574",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "sudbury-cancer",
+      "name": "Shirley & Jim Fielding Northeast Cancer Centre — Ramsey Lake site",
+      "city": "Sudbury",
+      "site": "41 Ramsey Lake Road",
+      "sourceUrl": "https://hsnsudbury.ca/en/Services-and-Specialties/Cancer-Care/For-Healthcare-Professionals",
+      "coordinates": [
+        -80.9964897,
+        46.4669895
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/781430754",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Official cancer-centre job listing specifies the Ramsey Lake Health Centre campus at 41 Ramsey Lake Road; the returned HSN hospital footprint is a campus reference, not an exact cancer-trial room. Broad Health Sciences North, research institute and historic Northeastern regional-centre aliases remain unresolved.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    },
+    {
+      "code": "thunder-bay-regional",
+      "name": "Thunder Bay Regional Health Sciences Centre — Oliver Road campus",
+      "city": "Thunder Bay",
+      "site": "980 Oliver Road",
+      "sourceUrl": "https://tbrhsc.net/home/information-services/contact-information/",
+      "coordinates": [
+        -89.2695938,
+        48.4235374
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/203612766",
+      "locationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Named hospital and road/postcode match; OSM house number 984 differs from official 980 and is not adopted. Only explicit main-centre/cancer-program aliases are accepted. Research-institute-only and historic regional-centre aliases remain unresolved.",
+      "locationPrecision": "Representative verified facility/building or campus point"
+    }
+  ],
+  "locationEvidence": [
+    {
+      "code": "bc-cancer-prince-george",
+      "city": "Prince George",
+      "sourceSiteAliases": [
+        "BC Cancer - Prince George",
+        "BC Cancer - Centre for the North (Prince George)",
+        "BCCA - Prince George"
+      ],
+      "officialSourceUrls": [
+        "https://www.bccancer.bc.ca/centre-for-the-north-site"
+      ],
+      "officialAddress": "1215 Lethbridge Street · V2M 7E9",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/445255632",
+      "coordinates": [
+        -122.7643857,
+        53.9129846
+      ],
+      "verificationNote": "Verified facility at the official 1215 Lethbridge Street address. The returned OpenStreetMap clinic is named BC Cancer – Prince George (Centre for the North). The official postal code V2M 7E9 is retained; the Nominatim context postcode differs. This is distinct from the Vancouver BC Cancer agency record in PGMaps and from the adjacent University Hospital of Northern BC. Historical registry listings do not establish current recruitment, local enrollment or eligibility.",
+      "existingReview": "scripts/nhhr-trial-sites-reviewed-locations.json"
+    },
+    {
+      "code": "prince-george-family-ymca",
+      "city": "Prince George",
+      "sourceSiteAliases": [
+        "Prince George Family YMCA"
+      ],
+      "officialSourceUrls": [
+        "https://www.ymcabc.ca/locations/prince-george-family-ymca"
+      ],
+      "officialAddress": "2020 Massey Drive · V2L 4V7",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/node/7033781790",
+      "coordinates": [
+        -122.77237,
+        53.9043694
+      ],
+      "verificationNote": "Verified operator address at 2020 Massey Drive. The returned OpenStreetMap sports-centre node is named YMCA of Northern BC and matches the street address, Prince George and postal code. A listed trial site does not establish local enrollment, eligibility or current recruitment.",
+      "existingReview": "scripts/nhhr-trial-sites-reviewed-locations.json"
+    },
+    {
+      "code": "prince-george-surgery-centre",
+      "city": "Prince George",
+      "sourceSiteAliases": [
+        "Prince George Surgery Centre"
+      ],
+      "officialSourceUrls": [
+        "https://www.healthlinkbc.ca/find-care/find-health-services/program/surgical-services-1?location_nid=27051"
+      ],
+      "officialAddress": "500 Victoria Street · V2L 2J9",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/node/4268588591",
+      "coordinates": [
+        -122.750288,
+        53.9160995
+      ],
+      "verificationNote": "HealthLink BC explicitly locates Prince George Surgery Centre at 500 Victoria Street. The returned OpenStreetMap address node matches that building address and Prince George. PGMaps has the Surgery Centre at 500 Victoria St with a nearby BC Geocoder point marked for review; the official listing resolves that identity. The official postal code V2L 2J9 is retained; the Nominatim context postcode differs. This point represents the building, not a department or exact study room. UNKNOWN source study status is retained; no current recruitment is inferred.",
+      "existingReview": "scripts/nhhr-trial-sites-reviewed-locations.json"
+    },
+    {
+      "code": "vancouver-general",
+      "city": "Vancouver",
+      "sourceSiteAliases": [
+        "Vancouver General Hospital",
+        "The Vancouver General Hospital",
+        "Vancouver General Hospital (U of BC)",
+        "Vancouver Coastal Health - Vancouver General Hospital"
+      ],
+      "officialSourceUrls": [
+        "https://www.vch.ca/en/location/vancouver-general-hospital"
+      ],
+      "officialAddress": "899 West 12th Avenue",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/relation/17286359",
+      "coordinates": [
+        -123.1226691,
+        49.2618427
+      ],
+      "returnedOSM": {
+        "osm_type": "relation",
+        "osm_id": 17286359,
+        "name": "Vancouver General Hospital",
+        "lat": "49.2618427",
+        "lon": "-123.1226691",
+        "address": {
+          "amenity": "Vancouver General Hospital",
+          "house_number": "899",
+          "road": "West 12th Avenue",
+          "suburb": "Fairview",
+          "city": "Vancouver",
+          "county": "Metro Vancouver Regional District",
+          "state": "British Columbia",
+          "ISO3166-2-lvl4": "CA-BC",
+          "postcode": "V5Z 0A2",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "pgMapsCandidates": [
+        {
+          "name": "Vancouver General Hospital",
+          "address": "899 W 12th Ave",
+          "status": "geocoded_needs_review",
+          "coordinates": [
+            -123.1236005,
+            49.2614669
+          ]
+        }
+      ],
+      "pgMapsFinding": "Exact named candidates compared; official/OSM evidence controls physical-site decision."
+    },
+    {
+      "code": "vancouver-st-pauls",
+      "city": "Vancouver",
+      "sourceSiteAliases": [
+        "St. Paul's Hospital",
+        "St Paul's Hospital",
+        "St Pauls Hospital",
+        "St. Pauls Hospital",
+        "St. Paul's Hospital - Vancouver",
+        "St. Paul's Hospital Vancouver",
+        "St. Paul's Hospital (Vancouver)",
+        "St. Paul's Hospital, Providence Health Care",
+        "St. Paul's Hospital - Providence Health Care",
+        "Providence Health - St. Paul's Hospital"
+      ],
+      "officialSourceUrls": [
+        "https://medicine.providencehealthcare.org/about-us/"
+      ],
+      "officialAddress": "1081 Burrard Street",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/51185697",
+      "coordinates": [
+        -123.128928,
+        49.2806187
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 51185697,
+        "name": "St. Paul's Hospital",
+        "lat": "49.2806187",
+        "lon": "-123.1289280",
+        "address": {
+          "amenity": "St. Paul's Hospital",
+          "house_number": "1081",
+          "road": "Burrard Street",
+          "neighbourhood": "Davie Village",
+          "suburb": "West End",
+          "city": "Vancouver",
+          "county": "Metro Vancouver Regional District",
+          "state": "British Columbia",
+          "ISO3166-2-lvl4": "CA-BC",
+          "postcode": "V6Z 1Y6",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Burrard Street object selected; the Station Street replacement hospital object is excluded.",
+      "pgMapsCandidates": [
+        {
+          "name": "St. Paul's Hospital",
+          "address": "1081 Burrard St",
+          "status": "geocoded_needs_review",
+          "coordinates": [
+            -123.1289966,
+            49.2805979
+          ]
+        }
+      ],
+      "pgMapsFinding": "Exact named candidates compared; official/OSM evidence controls physical-site decision."
+    },
+    {
+      "code": "vancouver-childrens",
+      "city": "Vancouver",
+      "sourceSiteAliases": [
+        "British Columbia Children's Hospital",
+        "BC Children's Hospital",
+        "British Columbia's Children's Hospital",
+        "BC's Children's Hospital",
+        "BC Children Hospital",
+        "Bc Children'S Hospital"
+      ],
+      "officialSourceUrls": [
+        "https://www.bcchildrens.ca/clinics-services/physiotherapy-clinic"
+      ],
+      "officialAddress": "4480 Oak Street",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/36893897",
+      "coordinates": [
+        -123.1253746,
+        49.2445028
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 36893897,
+        "name": "British Columbia Children's Hospital",
+        "lat": "49.2445028",
+        "lon": "-123.1253746",
+        "address": {
+          "building": "British Columbia Children's Hospital",
+          "house_number": "4480",
+          "road": "Oak Street",
+          "suburb": "South Cambie",
+          "city": "Vancouver",
+          "county": "Metro Vancouver Regional District",
+          "state": "British Columbia",
+          "ISO3166-2-lvl4": "CA-BC",
+          "postcode": "V5Z 0E8",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. PGMaps has a shared 4500 Oak geocoder candidate; operator and named OSM Children’s building confirm 4480 Oak. Women’s 4500 Oak building remains separate.",
+      "pgMapsCandidates": [
+        {
+          "name": "B.C. Children's Hospital",
+          "address": "4500 Oak St",
+          "status": "geocoded_needs_review",
+          "coordinates": [
+            -123.1240727,
+            49.2443202
+          ]
+        },
+        {
+          "name": "British Columbia Children's Hospital",
+          "address": "4480 oak st. vancouver bc v6h 3v4",
+          "status": "source_provided_needs_review",
+          "coordinates": [
+            -123.125479,
+            49.244268
+          ]
+        }
+      ],
+      "pgMapsFinding": "Exact named candidates compared; official/OSM evidence controls physical-site decision."
+    },
+    {
+      "code": "vancouver-womens",
+      "city": "Vancouver",
+      "sourceSiteAliases": [
+        "BC Women's Hospital",
+        "British Columbia Women's Hospital",
+        "British Columbia Women's Hospital and Health Centre",
+        "BC Women's Hospital and Health Centre",
+        "BC Women's Hospital + Health Centre",
+        "BC Women's Hospital & Health Centre",
+        "British Columbia's Women's Hospital"
+      ],
+      "officialSourceUrls": [
+        "https://www.bcwomens.ca/about/contact"
+      ],
+      "officialAddress": "4500 Oak Street",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/527856758",
+      "coordinates": [
+        -123.1248203,
+        49.2437725
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 527856758,
+        "name": "British Columbia Women's Hospital",
+        "lat": "49.2437725",
+        "lon": "-123.1248203",
+        "address": {
+          "building": "British Columbia Women's Hospital",
+          "house_number": "4500",
+          "road": "Oak Street",
+          "suburb": "South Cambie",
+          "city": "Vancouver",
+          "county": "Metro Vancouver Regional District",
+          "state": "British Columbia",
+          "ISO3166-2-lvl4": "CA-BC",
+          "postcode": "V6H 2N9",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "pgMapsCandidates": [
+        {
+          "name": "B.C. Women's Hospital",
+          "address": "4500 Oak St",
+          "status": "geocoded_needs_review",
+          "coordinates": [
+            -123.1240727,
+            49.2443202
+          ]
+        },
+        {
+          "name": "British Columbia Women's Hospital",
+          "address": "4500 Oak St",
+          "status": "verified",
+          "coordinates": [
+            -123.1240727,
+            49.2443202
+          ]
+        }
+      ],
+      "pgMapsFinding": "Exact named candidates compared; official/OSM evidence controls physical-site decision."
+    },
+    {
+      "code": "vancouver-cancer",
+      "city": "Vancouver",
+      "sourceSiteAliases": [
+        "BCCA-Vancouver Cancer Centre",
+        "BCCA - Vancouver Cancer Centre",
+        "British Columbia Cancer Agency - Vancouver Cancer Centre",
+        "British Columbia Cancer Agency (Bcca) - Vancouver Cancer Centre",
+        "BC Cancer Agency - Vancouver Cancer Centre",
+        "Vancouver Cancer Centre",
+        "BC Cancer Vancouver"
+      ],
+      "officialSourceUrls": [
+        "https://www.bccancer.bc.ca/our-services/centres-clinics/bc-cancer-vancouver"
+      ],
+      "officialAddress": "600 West 10th Avenue",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/88316971",
+      "coordinates": [
+        -123.119013,
+        49.2618477
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 88316971,
+        "name": "British Columbia Cancer",
+        "lat": "49.2618477",
+        "lon": "-123.1190130",
+        "address": {
+          "building": "British Columbia Cancer",
+          "house_number": "600",
+          "road": "West 10th Avenue",
+          "suburb": "Fairview",
+          "city": "Vancouver",
+          "county": "Metro Vancouver Regional District",
+          "state": "British Columbia",
+          "ISO3166-2-lvl4": "CA-BC",
+          "postcode": "V5Z 1G1",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "pgMapsCandidates": [
+        {
+          "name": "B.C. Cancer Agency",
+          "address": "600 W 10th Ave",
+          "status": "geocoded_needs_review",
+          "coordinates": [
+            -123.1187451,
+            49.2617877
+          ]
+        }
+      ],
+      "pgMapsFinding": "Exact named candidates compared; official/OSM evidence controls physical-site decision."
+    },
+    {
+      "code": "vancouver-ubc",
+      "city": "Vancouver",
+      "sourceSiteAliases": [
+        "UBC Hospital",
+        "Vancouver Hospital - UBC Hospital Site"
+      ],
+      "officialSourceUrls": [
+        "https://www.vch.ca/en/location/ubc-hospital"
+      ],
+      "officialAddress": "2211 Wesbrook Mall",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/node/8508184533",
+      "coordinates": [
+        -123.245747,
+        49.2641866
+      ],
+      "returnedOSM": {
+        "osm_type": "node",
+        "osm_id": 8508184533,
+        "name": "UBC Hospital",
+        "lat": "49.2641866",
+        "lon": "-123.2457470",
+        "address": {
+          "amenity": "UBC Hospital",
+          "house_number": "2211",
+          "road": "Wesbrook Mall",
+          "suburb": "University of British Columbia Vancouver",
+          "city": "Electoral Area A",
+          "county": "Metro Vancouver Regional District",
+          "state": "British Columbia",
+          "ISO3166-2-lvl4": "CA-BC",
+          "postcode": "V6T 2B5",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. The OSM administrative city is Electoral Area A while the operator uses the Vancouver postal address. Source city query is retained. The PGMaps MSP UBC-payee point incorrectly matched to VGH is rejected.",
+      "pgMapsCandidates": [
+        {
+          "name": "Ubc Hospital",
+          "address": "2211 westbrook mall vancouver bc v6t 2b5",
+          "status": "source_provided_needs_review",
+          "coordinates": [
+            -123.2460022,
+            49.26315579999999
+          ]
+        }
+      ],
+      "pgMapsFinding": "Exact named candidates compared; official/OSM evidence controls physical-site decision."
+    },
+    {
+      "code": "calgary-foothills",
+      "city": "Calgary",
+      "sourceSiteAliases": [
+        "Foothills Medical Centre",
+        "Foothills Medical Center",
+        "Foothills Hospital",
+        "University of Calgary/Foothills Medical Centre",
+        "University of Calgary, Foothills Medical Centre",
+        "University of Calgary - Foothills Medical Centre",
+        "Foothills Medical Centre, University of Calgary",
+        "University of Calgary Foothills Medical Center"
+      ],
+      "officialSourceUrls": [
+        "https://www.albertahealthservices.ca/fmc/fmc.aspx"
+      ],
+      "officialAddress": "1403 29 Street NW",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/4860451",
+      "coordinates": [
+        -114.1349388,
+        51.0651621
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 4860451,
+        "name": "Foothills Medical Centre",
+        "lat": "51.0651621",
+        "lon": "-114.1349388",
+        "address": {
+          "amenity": "Foothills Medical Centre",
+          "house_number": "1403",
+          "road": "29 Street NW",
+          "suburb": "St. Andrews Heights",
+          "city": "Calgary",
+          "state": "Alberta",
+          "ISO3166-2-lvl4": "CA-AB",
+          "postcode": "T2N 4M1",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "calgary-childrens",
+      "city": "Calgary",
+      "sourceSiteAliases": [
+        "Alberta Children's Hospital",
+        "Alberta Children'S Hospital",
+        "Alberta Childrens Hospital",
+        "Alberta's Children Hospital",
+        "Alberta Children's Hospital/University of Calgary",
+        "Alberta Children's Hospital, University of Calgary",
+        "University of Calgary - Alberta Children's Hospital",
+        "University of Calgary / Alberta Children's Hospital",
+        "University of Calgary, Alberta Children's Hospital"
+      ],
+      "officialSourceUrls": [
+        "https://www.albertahealthservices.ca/ach/ach.aspx"
+      ],
+      "officialAddress": "28 Oki Drive NW",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/4814073",
+      "coordinates": [
+        -114.1480515,
+        51.0746658
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 4814073,
+        "name": "Alberta Children's Hospital",
+        "lat": "51.0746658",
+        "lon": "-114.1480515",
+        "address": {
+          "amenity": "Alberta Children's Hospital",
+          "house_number": "28",
+          "road": "Oki Drive NW",
+          "suburb": "University District",
+          "city": "Calgary",
+          "state": "Alberta",
+          "ISO3166-2-lvl4": "CA-AB",
+          "postcode": "T3B 6A8",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Current operator address is 28 Oki Drive NW, superseding the former Shaganappi Trail address.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "calgary-arthur-child",
+      "city": "Calgary",
+      "sourceSiteAliases": [
+        "Arthur J E Child Comprehensive Cancer Centre",
+        "Arthur J.E. Child Comprehensive Cancer Centre",
+        "Arthur J.E. Child Comprehensive Cancer Center",
+        "Arthur J.E. Child Comprehensive Cancer Center-Calgary",
+        "Arthur Je Child Comprehensive Cancer Centre",
+        "Arthur J. E. Child Comprehensive Cancer Centre"
+      ],
+      "officialSourceUrls": [
+        "https://www.albertahealthservices.ca/ajec/page15399.aspx"
+      ],
+      "officialAddress": "3395 Hospital Drive NW",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/relation/13352517",
+      "coordinates": [
+        -114.131221,
+        51.0672552
+      ],
+      "returnedOSM": {
+        "osm_type": "relation",
+        "osm_id": 13352517,
+        "name": "Arthur J.E. Child Comprehensive Cancer Centre",
+        "lat": "51.0672552",
+        "lon": "-114.1312210",
+        "address": {
+          "building": "Arthur J.E. Child Comprehensive Cancer Centre",
+          "road": "Hospital Drive NW",
+          "suburb": "St. Andrews Heights",
+          "city": "Calgary",
+          "state": "Alberta",
+          "ISO3166-2-lvl4": "CA-AB",
+          "postcode": "T2N 2V2",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Named building and Hospital Drive match. OSM lacks the operator street number; the operator’s linked address map at [−114.1308546, 51.0666612] corroborates the separate new-centre building. Not merged with the former Tom Baker building.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference.",
+      "operatorLinkedCoordinates": [
+        -114.1308546,
+        51.0666612
+      ]
+    },
+    {
+      "code": "calgary-peter-lougheed",
+      "city": "Calgary",
+      "sourceSiteAliases": [
+        "Peter Lougheed Centre",
+        "Peter Lougheed Center",
+        "Peter Lougheed Hospital"
+      ],
+      "officialSourceUrls": [
+        "https://www.albertahealthservices.ca/plc/plc.aspx"
+      ],
+      "officialAddress": "3500 26 Avenue NE",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/4860979",
+      "coordinates": [
+        -113.9845974,
+        51.0792148
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 4860979,
+        "name": "Peter Lougheed Centre",
+        "lat": "51.0792148",
+        "lon": "-113.9845974",
+        "address": {
+          "amenity": "Peter Lougheed Centre",
+          "house_number": "3500",
+          "road": "26 Avenue NE",
+          "suburb": "Sunridge",
+          "city": "Calgary",
+          "state": "Alberta",
+          "ISO3166-2-lvl4": "CA-AB",
+          "postcode": "T1Y 6J4",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "calgary-rockyview",
+      "city": "Calgary",
+      "sourceSiteAliases": [
+        "Rockyview General Hospital",
+        "Rockyview Hospital"
+      ],
+      "officialSourceUrls": [
+        "https://www.albertahealthservices.ca/rgh/rgh.aspx"
+      ],
+      "officialAddress": "7007 14 Street SW",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/415817797",
+      "coordinates": [
+        -114.0971138,
+        50.9908499
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 415817797,
+        "name": "Rockyview General Hospital",
+        "lat": "50.9908499",
+        "lon": "-114.0971138",
+        "address": {
+          "amenity": "Rockyview General Hospital",
+          "road": "75 Avenue SW",
+          "suburb": "Eagle Ridge",
+          "city": "Calgary",
+          "state": "Alberta",
+          "ISO3166-2-lvl4": "CA-AB",
+          "postcode": "T2V 2V7",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. OSM has the campus-edge 75 Avenue road; official AHS entrance/address is 7007 14 Street SW. Named hospital footprint is used rather than an unverified street interpolation.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "calgary-south-health",
+      "city": "Calgary",
+      "sourceSiteAliases": [
+        "South Health Campus"
+      ],
+      "officialSourceUrls": [
+        "https://www.albertahealthservices.ca/shc/shc.aspx"
+      ],
+      "officialAddress": "4448 Front Street SE",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/339691950",
+      "coordinates": [
+        -113.9526766,
+        50.8822452
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 339691950,
+        "name": "South Health Campus",
+        "lat": "50.8822452",
+        "lon": "-113.9526766",
+        "address": {
+          "amenity": "South Health Campus",
+          "house_number": "4448",
+          "road": "Front Street SE",
+          "suburb": "Seton",
+          "city": "Calgary",
+          "state": "Alberta",
+          "ISO3166-2-lvl4": "CA-AB",
+          "postcode": "T3M 1M4",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "calgary-tom-baker",
+      "city": "Calgary",
+      "sourceSiteAliases": [
+        "Tom Baker Cancer Centre",
+        "Tom Baker Cancer Center",
+        "Tom Baker Cancer Center - Calgary",
+        "Tom Baker Cancer Centre - Calgary",
+        "Tom Baker Cancer Centre-Calgary",
+        "University of Calgary/Tom Baker Cancer Centre"
+      ],
+      "officialSourceUrls": [
+        "https://www.albertahealthservices.ca/fmc/Page16420.aspx",
+        "https://www.albertahealthservices.ca/assets/info/cca/if-cca-new-patient-appointments-tbcc.pdf"
+      ],
+      "officialAddress": "1331 29 Street NW",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/487850912",
+      "coordinates": [
+        -114.1334768,
+        51.0628884
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 487850912,
+        "name": "Special Services Building Ambulatory Centre",
+        "lat": "51.0628884",
+        "lon": "-114.1334768",
+        "address": {
+          "building": "Special Services Building Ambulatory Centre",
+          "house_number": "1331",
+          "road": "29 Street NW",
+          "suburb": "St. Andrews Heights",
+          "city": "Calgary",
+          "state": "Alberta",
+          "ISO3166-2-lvl4": "CA-AB",
+          "postcode": "T2N 4N2",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Official AHS page explicitly identifies the former Tom Baker site at 1331 29 Street NW, now Special Services Building Ambulatory Centre. This historical named-site display point is separate from Arthur Child. Combined Tom Baker/Arthur Child aliases remain unresolved; recruitment/visit relocation is not inferred.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "halifax-iwk",
+      "city": "Halifax",
+      "sourceSiteAliases": [
+        "IWK Health Centre",
+        "IWK Health Center",
+        "IWK Grace Health Centre",
+        "The IWK Health Centre",
+        "Izaak Walton Killam (IWK) Health Centre"
+      ],
+      "officialSourceUrls": [
+        "https://iwkhealth.ca/contact"
+      ],
+      "officialAddress": "5850/5980 University Avenue",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/70587389",
+      "coordinates": [
+        -63.5837315,
+        44.6378638
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 70587389,
+        "name": "IWK Health Centre",
+        "lat": "44.6378638",
+        "lon": "-63.5837315",
+        "address": {
+          "amenity": "IWK Health Centre",
+          "house_number": "5850/5980",
+          "road": "University Avenue",
+          "suburb": "South End",
+          "city": "Halifax",
+          "municipality": "Halifax Regional Municipality",
+          "county": "Halifax County",
+          "state": "Nova Scotia",
+          "ISO3166-2-lvl4": "CA-NS",
+          "postcode": "B3H 1W2",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "halifax-infirmary",
+      "city": "Halifax",
+      "sourceSiteAliases": [
+        "Halifax Infirmary",
+        "Queen Elizabeth II Health Sciences Centre, Halifax Infirmary"
+      ],
+      "officialSourceUrls": [
+        "https://www.nshealth.ca/locations-and-facilities/halifax-infirmary"
+      ],
+      "officialAddress": "1796 Summer Street",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/316860834",
+      "coordinates": [
+        -63.587161,
+        44.6454753
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 316860834,
+        "name": "Halifax Infirmary",
+        "lat": "44.6454753",
+        "lon": "-63.5871610",
+        "address": {
+          "building": "Halifax Infirmary",
+          "house_number": "1796",
+          "road": "Summer Street",
+          "suburb": "South End",
+          "city": "Halifax",
+          "municipality": "Halifax Regional Municipality",
+          "county": "Halifax County",
+          "state": "Nova Scotia",
+          "ISO3166-2-lvl4": "CA-NS",
+          "postcode": "B3H 3A6",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "halifax-cancer",
+      "city": "Halifax",
+      "sourceSiteAliases": [
+        "Nova Scotia Cancer Centre",
+        "Nova Scotia Cancer Centre at Queen Elizabeth II Health Sciences Centre"
+      ],
+      "officialSourceUrls": [
+        "https://www.nshealth.ca/locations-and-facilities/qeii-cancer-centre",
+        "https://www.nshealth.ca/locations-and-facilities/dickson-building",
+        "https://www.nshealth.ca/sites/default/files/documents/pamphlets/nsccp1414.pdf"
+      ],
+      "officialAddress": "5820 University Avenue",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/24509821",
+      "coordinates": [
+        -63.5813433,
+        44.6381632
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 24509821,
+        "name": "Dickson Building",
+        "lat": "44.6381632",
+        "lon": "-63.5813433",
+        "address": {
+          "building": "Dickson Building",
+          "house_number": "5780",
+          "road": "University Avenue",
+          "suburb": "South End",
+          "city": "Halifax",
+          "municipality": "Halifax Regional Municipality",
+          "county": "Halifax County",
+          "state": "Nova Scotia",
+          "ISO3166-2-lvl4": "CA-NS",
+          "postcode": "B3H 0A2",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Operator page places cancer care in the Dickson Building; the original Nova Scotia Cancer Centre name is corroborated by the linked operator patient guide. Named OSM Dickson building is used; OSM house number 5780 differs from official 5820 and is not adopted. Broad QEII references are excluded.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "saskatoon-royal",
+      "city": "Saskatoon",
+      "sourceSiteAliases": [
+        "Royal University Hospital",
+        "University of Saskatchewan, Royal University Hospital",
+        "Royal University Hospital (Saskatoon)"
+      ],
+      "officialSourceUrls": [
+        "https://www.saskhealthauthority.ca/facilities-locations/royal-university-hospital"
+      ],
+      "officialAddress": "103 Hospital Drive",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/39084236",
+      "coordinates": [
+        -106.6411814,
+        52.1313901
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 39084236,
+        "name": "Royal University Hospital",
+        "lat": "52.1313901",
+        "lon": "-106.6411814",
+        "address": {
+          "amenity": "Royal University Hospital",
+          "house_number": "103",
+          "road": "Hospital Drive",
+          "neighbourhood": "U of S Lands Management Area",
+          "suburb": "University Suburban Development Area",
+          "city": "Saskatoon",
+          "state": "Saskatchewan",
+          "ISO3166-2-lvl4": "CA-SK",
+          "postcode": "S7N 0W8",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "saskatoon-cancer",
+      "city": "Saskatoon",
+      "sourceSiteAliases": [
+        "Saskatoon Cancer Centre",
+        "Saskatoon Cancer Center",
+        "Saskatoon Cancer Centre at the University of Saskatchewan"
+      ],
+      "officialSourceUrls": [
+        "https://saskcancer.ca/treatments/treatment-centres/saskatoon-cancer-centre"
+      ],
+      "officialAddress": "20 Campus Drive",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/39161194",
+      "coordinates": [
+        -106.6405118,
+        52.1327869
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 39161194,
+        "name": "Saskatoon Cancer Centre",
+        "lat": "52.1327869",
+        "lon": "-106.6405118",
+        "address": {
+          "building": "Saskatoon Cancer Centre",
+          "house_number": "20",
+          "road": "Campus Drive",
+          "neighbourhood": "U of S Lands Management Area",
+          "suburb": "University Suburban Development Area",
+          "city": "Saskatoon",
+          "state": "Saskatchewan",
+          "ISO3166-2-lvl4": "CA-SK",
+          "postcode": "S7N 5A3",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "saskatoon-city",
+      "city": "Saskatoon",
+      "sourceSiteAliases": [
+        "Saskatoon City Hospital"
+      ],
+      "officialSourceUrls": [
+        "https://www.saskhealthauthority.ca/facilities-locations/saskatoon-city-hospital"
+      ],
+      "officialAddress": "701 Queen Street",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/23453313",
+      "coordinates": [
+        -106.6543194,
+        52.1357309
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 23453313,
+        "name": "Saskatoon City Hospital",
+        "lat": "52.1357309",
+        "lon": "-106.6543194",
+        "address": {
+          "amenity": "Saskatoon City Hospital",
+          "house_number": "701",
+          "road": "Queen Street",
+          "neighbourhood": "City Park",
+          "city_district": "Core Neighbourhoods Sector",
+          "city": "Saskatoon",
+          "state": "Saskatchewan",
+          "ISO3166-2-lvl4": "CA-SK",
+          "postcode": "S7K 0M5",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "saskatoon-st-pauls",
+      "city": "Saskatoon",
+      "sourceSiteAliases": [
+        "St. Paul's Hospital",
+        "St Paul's Hospital"
+      ],
+      "officialSourceUrls": [
+        "https://www.saskhealthauthority.ca/facilities-locations/st-pauls-hospital"
+      ],
+      "officialAddress": "1702 20th Street West",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/288405574",
+      "coordinates": [
+        -106.695877,
+        52.1267537
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 288405574,
+        "name": "Saint Paul's Hospital",
+        "lat": "52.1267537",
+        "lon": "-106.6958770",
+        "address": {
+          "amenity": "Saint Paul's Hospital",
+          "house_number": "1702",
+          "road": "20th Street West",
+          "neighbourhood": "Pleasant Hill",
+          "city_district": "Core Neighbourhoods Sector",
+          "city": "Saskatoon",
+          "state": "Saskatchewan",
+          "ISO3166-2-lvl4": "CA-SK",
+          "postcode": "S7M 2Z9",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "sudbury-cancer",
+      "city": "Sudbury",
+      "sourceSiteAliases": [
+        "Northeast Cancer Center Health Sciences",
+        "Northeast Cancer Centre, Health Sciences North"
+      ],
+      "officialSourceUrls": [
+        "https://hsnsudbury.ca/en/Services-and-Specialties/Cancer-Care/For-Healthcare-Professionals",
+        "https://careers.hsnsudbury.ca/job/Sudbury-Radiation-Therapist-ON-P3E5J1/1290796647/"
+      ],
+      "officialAddress": "41 Ramsey Lake Road",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/781430754",
+      "coordinates": [
+        -80.9964897,
+        46.4669895
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 781430754,
+        "name": "Health Sciences North",
+        "lat": "46.4669895",
+        "lon": "-80.9964897",
+        "address": {
+          "amenity": "Health Sciences North",
+          "house_number": "41",
+          "road": "Ramsey Lake Road",
+          "suburb": "Sudbury",
+          "city": "Greater Sudbury",
+          "county": "Sudbury District",
+          "state_district": "Northeastern Ontario",
+          "state": "Ontario",
+          "ISO3166-2-lvl4": "CA-ON",
+          "postcode": "P3E 5J1",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Official cancer-centre job listing specifies the Ramsey Lake Health Centre campus at 41 Ramsey Lake Road; the returned HSN hospital footprint is a campus reference, not an exact cancer-trial room. Broad Health Sciences North, research institute and historic Northeastern regional-centre aliases remain unresolved.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    },
+    {
+      "code": "thunder-bay-regional",
+      "city": "Thunder Bay",
+      "sourceSiteAliases": [
+        "Thunder Bay Regional Health Sciences Centre",
+        "Thunder Bay Regional Health Science Centre",
+        "Thunder Bay Regional Health Sciences Center",
+        "Thunder Bay Regional Health Sciences Centre/",
+        "Regional Cancer Care at Thunder Bay Regional Health Sciences Centre",
+        "Cancer Care Program at Thunder Bay Regional Health Sciences",
+        "Northwestern Ontario Regional Cancer Care at Thunder Bay Regional Health Sciences Centre",
+        "Thunder Bay Regional Health Sciences Centre-Regional Cancer Care",
+        "Thunder Bay Regional Health Sciences Centre (Regional Cancer Care)",
+        "Thunder Bay Regional Health Sciences Centre, Regional Cancer Care Clinical Trials"
+      ],
+      "officialSourceUrls": [
+        "https://tbrhsc.net/home/information-services/contact-information/"
+      ],
+      "officialAddress": "980 Oliver Road",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/203612766",
+      "coordinates": [
+        -89.2695938,
+        48.4235374
+      ],
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 203612766,
+        "name": "Thunder Bay Regional Health Sciences Centre",
+        "lat": "48.4235374",
+        "lon": "-89.2695938",
+        "address": {
+          "amenity": "Thunder Bay Regional Health Sciences Centre",
+          "house_number": "984",
+          "road": "Oliver Road",
+          "city_district": "Red River",
+          "city": "Thunder Bay",
+          "county": "Thunder Bay District",
+          "state_district": "Northwestern Ontario",
+          "state": "Ontario",
+          "ISO3166-2-lvl4": "CA-ON",
+          "postcode": "P7B 6V4",
+          "country": "Canada",
+          "country_code": "ca"
+        }
+      },
+      "verificationNote": "Operator identity/address and returned named OpenStreetMap facility/building checked. This representative point does not identify the study room, enrollment, eligibility, current recruitment or a service catchment. Historical source aliases do not establish the effective location of every study visit. Named hospital and road/postcode match; OSM house number 984 differs from official 980 and is not adopted. Only explicit main-centre/cancer-program aliases are accepted. Research-institute-only and historic regional-centre aliases remain unresolved.",
+      "pgMapsCandidates": [],
+      "pgMapsFinding": "No reviewed matching physical site in the BC-focused PGMaps registry; operator/OSM evidence supplies this reference."
+    }
+  ],
+  "pgMapsSource": {
+    "path": "vendor/bcdatamapper/data-sources/healthdata/health_place_registry/health_place_registry.geojson",
+    "sha256": "ec92b282fd20ed0ef417f4ec65c8edd91e5e220592a2f75b087b7295e71e577a"
+  },
+  "limitations": [
+    "Exact city and manually reviewed aliases only; no fuzzy match, umbrella institution, generic site or city-centroid substitution.",
+    "Current operator/building references do not establish study-visit location at every historical date.",
+    "Historical overall RECRUITING statuses are study-wide and not site-level recruitment or availability.",
+    "All original comparator records are reconciled; this finite verified-facility subset is not complete geographic coverage."
+  ]
+}

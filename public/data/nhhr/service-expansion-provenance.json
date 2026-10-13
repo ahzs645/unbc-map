@@ -1,0 +1,3877 @@
+{
+  "reviewedAt": "2026-10-12",
+  "manifestUrl": "https://zoer.k8s.overtheedgepaper.ca/api/projects/acdd692f-a188-4f85-bb5a-83c48d5c7e82/database/data-spaces/de1fe530-a762-52fa-ba11-d01cc5b344df/manifest",
+  "sourceVersion": "NHHR manifest revision 93; original public-source files reviewed 12 October 2026",
+  "sources": {
+    "ot": {
+      "collectionId": "DATA-C053",
+      "filename": "occupational-therapists-in-canada-2024-data-tables-en.xlsx",
+      "originalFileId": "d0f45a99-dba3-4392-88a2-c9c209a3c43f",
+      "sha256": "943af7ea72f15295b6bd5475f18b5858acc54e530c5a7ec4413364543f9c57f2",
+      "sourceRelativePath": "outputs/theo_cba_full_data_package_20260831/originals/02_Health_Costs_and_Utilization/DATA-C053_CIHI_Source_Pull/occupational-therapists-in-canada-2024-data-tables-en.xlsx",
+      "datasetId": "0c0cb2db-d9ab-43bf-8e1b-e023141f493f",
+      "tables": [
+        {
+          "table_name": "nhhr_data_c053_c7f8384ce39d_zip_data_c053__31",
+          "worksheet": "Table 11",
+          "row_count": "111",
+          "parquet_sha256": "77547fa1f666e591e19fd2d2ca28824e9c2fceef3b16491e1e02739416ca6f11"
+        },
+        {
+          "table_name": "nhhr_data_c053_c7f8384ce39d_zip_data_c053__32",
+          "worksheet": "Table 12",
+          "row_count": "110",
+          "parquet_sha256": "f206f073c512c3780f91b45567c1296bdb6a3be46c0dcffeb7e03c6cee3e362b"
+        }
+      ]
+    },
+    "pharmacy": {
+      "collectionId": "DATA-C053",
+      "filename": "pharmacists-in-canada-2015-2024-data-tables-en.xlsx",
+      "originalFileId": "50bbbf44-89f1-4e9d-84d5-d3a33876560b",
+      "sha256": "a61208d52794d2892458394d64b5ec48f7941f8a5b4d03302c5abeb84bba684f",
+      "sourceRelativePath": "outputs/theo_cba_full_data_package_20260831/originals/02_Health_Costs_and_Utilization/DATA-C053_CIHI_Source_Pull/pharmacists-in-canada-2015-2024-data-tables-en.xlsx",
+      "datasetId": "0c0cb2db-d9ab-43bf-8e1b-e023141f493f",
+      "tables": [
+        {
+          "table_name": "nhhr_data_c053_c7f8384ce39d_zip_data_c053__52",
+          "worksheet": "Table 11",
+          "row_count": "112",
+          "parquet_sha256": "de0093fe3724938f92609013f11826f0e38c0091d8c3cade6ce5709f56785932"
+        },
+        {
+          "table_name": "nhhr_data_c053_c7f8384ce39d_zip_data_c053__53",
+          "worksheet": "Table 12",
+          "row_count": "111",
+          "parquet_sha256": "fb2a473c314cfaebd1275e1c746cb46957acf0a5baacd8fafa0511742aa43f09"
+        }
+      ]
+    },
+    "pt": {
+      "collectionId": "DATA-C053",
+      "filename": "physiotherapists-in-canada-2015-2024-data-tables-en.xlsx",
+      "originalFileId": "c43d3742-cf32-4d2b-b1de-537d0862a8b8",
+      "sha256": "eadbe44f977ec6c5422745d017b387d97248742aded5f0c4c524fc0f821378a1",
+      "sourceRelativePath": "outputs/theo_cba_full_data_package_20260831/originals/02_Health_Costs_and_Utilization/DATA-C053_CIHI_Source_Pull/physiotherapists-in-canada-2015-2024-data-tables-en.xlsx",
+      "datasetId": "0c0cb2db-d9ab-43bf-8e1b-e023141f493f",
+      "tables": [
+        {
+          "table_name": "nhhr_data_c053_a67f59c1bbfe_zip_data_c053__13",
+          "worksheet": "Table 11",
+          "row_count": "109",
+          "parquet_sha256": "08c1214525603d64ce954c2abed453489594d463c57d3fb1762225aa26e92181"
+        },
+        {
+          "table_name": "nhhr_data_c053_a67f59c1bbfe_zip_data_c053__14",
+          "worksheet": "Table 12",
+          "row_count": "108",
+          "parquet_sha256": "e5432e24c6c61ebe80bf3cc1c74951a170ff83077e8d36e0695206ec72036c86"
+        }
+      ]
+    },
+    "quickstats": {
+      "collectionId": "DATA-C053",
+      "filename": "health-workforce-quickstats-2024-data-tables-en.xlsx",
+      "originalFileId": "2c1d2bdc-c767-4b4a-96e4-6426c0f278a8",
+      "sha256": "0bc1c14caa3a8a4b5d9519ff8144f1652c9e04a740ad81d8d7e0eb46f05e2443",
+      "sourceRelativePath": "outputs/theo_cba_full_data_package_20260831/originals/02_Health_Costs_and_Utilization/DATA-C053_CIHI_Source_Pull/health-workforce-quickstats-2024-data-tables-en.xlsx",
+      "datasetId": "0c0cb2db-d9ab-43bf-8e1b-e023141f493f",
+      "tables": [
+        {
+          "table_name": "nhhr_data_c053_1a1ed09f34ea_zip_data_c053__30",
+          "worksheet": "Table 7",
+          "row_count": "78",
+          "parquet_sha256": "b93deb1e595ddb4df86d6a3dc68f27bf3efbfab05144b333d9312711a8932035"
+        },
+        {
+          "table_name": "nhhr_data_c053_1a1ed09f34ea_zip_data_c053__31",
+          "worksheet": "Table 8",
+          "row_count": "84",
+          "parquet_sha256": "05fd7ba5494195f7996bd760efbb48407f9e2f9284dd8255d9c13858410726c2"
+        },
+        {
+          "table_name": "nhhr_data_c053_1a1ed09f34ea_zip_data_c053__34",
+          "worksheet": "Notes on Hospital Staffing ind",
+          "row_count": "43",
+          "parquet_sha256": "4a35151ec0ef3db481374c0229c98a46c89ba156c4b31cb5e364a8bcec07e10e"
+        },
+        {
+          "table_name": "nhhr_data_c053_1a1ed09f34ea_zip_data_c053__35",
+          "worksheet": "Notes on Vacancy metrics",
+          "row_count": "37",
+          "parquet_sha256": "f88a69db7ebfaee7b9362a24e573d9b3d58eab4f00162b6207b75a7a28705ac0"
+        },
+        {
+          "table_name": "nhhr_data_c053_1a1ed09f34ea_zip_data_c053__44",
+          "worksheet": "StaffingData",
+          "row_count": "417",
+          "parquet_sha256": "df082c5da2fca8d7a3f514f6eb27e5c18341e3356edd6db0bd63251246e4df37"
+        },
+        {
+          "table_name": "nhhr_data_c053_1a1ed09f34ea_zip_data_c053__47",
+          "worksheet": "VacancyData",
+          "row_count": "1505",
+          "parquet_sha256": "89ff975ff54136a1edd774040e489f5797371198941dff14d7b7ba1270fc5a77"
+        }
+      ]
+    },
+    "jobbank": {
+      "collectionId": "DATA-C044",
+      "filename": "jobbank_wages_2025_open_data_all_2025-11-19.csv",
+      "originalFileId": "b5e765bd-147e-4302-bbb5-967909b940f9",
+      "sha256": "7bd29fb41b2a84eb61a4dbf49bfb63651a8a694c62ce42ac69cb785679d66328",
+      "sourceRelativePath": "outputs/theo_cba_full_data_package_20260831/originals/05_Labour_Education_and_Population/DATA-C044_Job_Bank_Wage_Data/jobbank_wages_2025_open_data_all_2025-11-19.csv",
+      "datasetId": "79b129e1-414b-4b85-9d63-66ab334081fc",
+      "tables": [
+        {
+          "table_name": "nhhr_data_c044_aea184fa6a6c_zip_data_c044_jobban",
+          "worksheet": "",
+          "row_count": "41889",
+          "parquet_sha256": "ba25541a1265dbf7152d61384d0dbbe14bc70cee72e836315d5054aa67452dd5"
+        },
+        {
+          "table_name": "nhhr_data_c044_aea184fa6a6c_zip_data_c044__2",
+          "worksheet": "",
+          "row_count": "2487",
+          "parquet_sha256": "e748924a9fa8ce620d4e140ec0e170d4b3d3d8bcbb022876930c1262d920144c"
+        }
+      ]
+    },
+    "jobbankMetadata": {
+      "collectionId": "DATA-C044",
+      "filename": "open_canada_jobbank_wages_package_show.json",
+      "originalFileId": "e20b0550-991d-422c-8c59-4dcf9914f8f4",
+      "sha256": "3941929b6eb1c52e1f7c94b1a585244d06dc4fc74b7f51cdca9e6cbe3501dc67",
+      "sourceRelativePath": "outputs/theo_cba_full_data_package_20260831/originals/05_Labour_Education_and_Population/DATA-C044_Job_Bank_Wage_Data/open_canada_jobbank_wages_package_show.json",
+      "datasetId": "79b129e1-414b-4b85-9d63-66ab334081fc",
+      "tables": [
+        {
+          "table_name": "nhhr_data_c044_aea184fa6a6c_zip_data_c044_open_c",
+          "worksheet": "",
+          "row_count": "1",
+          "parquet_sha256": "2eec964e5c6aa7b5eba2931c49a028b90644889382089ff753feb3f7668fd667"
+        }
+      ]
+    },
+    "sectorWages": {
+      "collectionId": "DATA-C059",
+      "filename": "statcan_14100064_bc_wages.csv",
+      "originalFileId": "cd364c83-9f49-4137-b796-e82669f0953f",
+      "sha256": "9aca2808149588d0fd63a58b07244e553092de9446b2bf3c72d5628fdd483897",
+      "sourceRelativePath": "Data Research/output/reports/cba_public_pulls/statcan_14100064_bc_wages.csv",
+      "datasetId": "bc5f8ecd-98b3-4185-ada5-ceb71adcbf00",
+      "tables": [
+        {
+          "table_name": "nhhr_data_c059_f19e4b04bb77_zip_data_c059__5",
+          "worksheet": "",
+          "row_count": "1102",
+          "parquet_sha256": "991569a41ebb5714d253c29f10b9cd5b89d15cdb4027d38f185c5ed3ef4e1548"
+        }
+      ]
+    }
+  },
+  "sourceBindings": [
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northwest HSDA",
+      "year": "2015",
+      "sourceKey": "ot",
+      "countCell": "Table 11!C92",
+      "rateCell": "Table 12!C92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northwest HSDA",
+      "year": "2016",
+      "sourceKey": "ot",
+      "countCell": "Table 11!D92",
+      "rateCell": "Table 12!D92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northwest HSDA",
+      "year": "2017",
+      "sourceKey": "ot",
+      "countCell": "Table 11!E92",
+      "rateCell": "Table 12!E92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northwest HSDA",
+      "year": "2018",
+      "sourceKey": "ot",
+      "countCell": "Table 11!F92",
+      "rateCell": "Table 12!F92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northwest HSDA",
+      "year": "2019",
+      "sourceKey": "ot",
+      "countCell": "Table 11!G92",
+      "rateCell": "Table 12!G92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northwest HSDA",
+      "year": "2020",
+      "sourceKey": "ot",
+      "countCell": "Table 11!H92",
+      "rateCell": "Table 12!H92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northwest HSDA",
+      "year": "2021",
+      "sourceKey": "ot",
+      "countCell": "Table 11!I92",
+      "rateCell": "Table 12!I92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northwest HSDA",
+      "year": "2022",
+      "sourceKey": "ot",
+      "countCell": "Table 11!J92",
+      "rateCell": "Table 12!J92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northwest HSDA",
+      "year": "2023",
+      "sourceKey": "ot",
+      "countCell": "Table 11!K92",
+      "rateCell": "Table 12!K92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northwest HSDA",
+      "year": "2024",
+      "sourceKey": "ot",
+      "countCell": "Table 11!L92",
+      "rateCell": "Table 12!L92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northern Interior HSDA",
+      "year": "2015",
+      "sourceKey": "ot",
+      "countCell": "Table 11!C93",
+      "rateCell": "Table 12!C93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northern Interior HSDA",
+      "year": "2016",
+      "sourceKey": "ot",
+      "countCell": "Table 11!D93",
+      "rateCell": "Table 12!D93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northern Interior HSDA",
+      "year": "2017",
+      "sourceKey": "ot",
+      "countCell": "Table 11!E93",
+      "rateCell": "Table 12!E93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northern Interior HSDA",
+      "year": "2018",
+      "sourceKey": "ot",
+      "countCell": "Table 11!F93",
+      "rateCell": "Table 12!F93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northern Interior HSDA",
+      "year": "2019",
+      "sourceKey": "ot",
+      "countCell": "Table 11!G93",
+      "rateCell": "Table 12!G93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northern Interior HSDA",
+      "year": "2020",
+      "sourceKey": "ot",
+      "countCell": "Table 11!H93",
+      "rateCell": "Table 12!H93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northern Interior HSDA",
+      "year": "2021",
+      "sourceKey": "ot",
+      "countCell": "Table 11!I93",
+      "rateCell": "Table 12!I93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northern Interior HSDA",
+      "year": "2022",
+      "sourceKey": "ot",
+      "countCell": "Table 11!J93",
+      "rateCell": "Table 12!J93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northern Interior HSDA",
+      "year": "2023",
+      "sourceKey": "ot",
+      "countCell": "Table 11!K93",
+      "rateCell": "Table 12!K93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northern Interior HSDA",
+      "year": "2024",
+      "sourceKey": "ot",
+      "countCell": "Table 11!L93",
+      "rateCell": "Table 12!L93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northeast HSDA",
+      "year": "2015",
+      "sourceKey": "ot",
+      "countCell": "Table 11!C94",
+      "rateCell": "Table 12!C94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northeast HSDA",
+      "year": "2016",
+      "sourceKey": "ot",
+      "countCell": "Table 11!D94",
+      "rateCell": "Table 12!D94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northeast HSDA",
+      "year": "2017",
+      "sourceKey": "ot",
+      "countCell": "Table 11!E94",
+      "rateCell": "Table 12!E94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northeast HSDA",
+      "year": "2018",
+      "sourceKey": "ot",
+      "countCell": "Table 11!F94",
+      "rateCell": "Table 12!F94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northeast HSDA",
+      "year": "2019",
+      "sourceKey": "ot",
+      "countCell": "Table 11!G94",
+      "rateCell": "Table 12!G94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northeast HSDA",
+      "year": "2020",
+      "sourceKey": "ot",
+      "countCell": "Table 11!H94",
+      "rateCell": "Table 12!H94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northeast HSDA",
+      "year": "2021",
+      "sourceKey": "ot",
+      "countCell": "Table 11!I94",
+      "rateCell": "Table 12!I94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northeast HSDA",
+      "year": "2022",
+      "sourceKey": "ot",
+      "countCell": "Table 11!J94",
+      "rateCell": "Table 12!J94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northeast HSDA",
+      "year": "2023",
+      "sourceKey": "ot",
+      "countCell": "Table 11!K94",
+      "rateCell": "Table 12!K94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Occupational therapists",
+      "region": "Northeast HSDA",
+      "year": "2024",
+      "sourceKey": "ot",
+      "countCell": "Table 11!L94",
+      "rateCell": "Table 12!L94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northwest HSDA",
+      "year": "2015",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!C92",
+      "rateCell": "Table 12!C92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northwest HSDA",
+      "year": "2016",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!D92",
+      "rateCell": "Table 12!D92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northwest HSDA",
+      "year": "2017",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!E92",
+      "rateCell": "Table 12!E92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northwest HSDA",
+      "year": "2018",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!F92",
+      "rateCell": "Table 12!F92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northwest HSDA",
+      "year": "2019",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!G92",
+      "rateCell": "Table 12!G92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northwest HSDA",
+      "year": "2020",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!H92",
+      "rateCell": "Table 12!H92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northwest HSDA",
+      "year": "2021",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!I92",
+      "rateCell": "Table 12!I92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northwest HSDA",
+      "year": "2022",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!J92",
+      "rateCell": "Table 12!J92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northwest HSDA",
+      "year": "2023",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!K92",
+      "rateCell": "Table 12!K92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northwest HSDA",
+      "year": "2024",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!L92",
+      "rateCell": "Table 12!L92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northern Interior HSDA",
+      "year": "2015",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!C93",
+      "rateCell": "Table 12!C93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northern Interior HSDA",
+      "year": "2016",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!D93",
+      "rateCell": "Table 12!D93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northern Interior HSDA",
+      "year": "2017",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!E93",
+      "rateCell": "Table 12!E93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northern Interior HSDA",
+      "year": "2018",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!F93",
+      "rateCell": "Table 12!F93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northern Interior HSDA",
+      "year": "2019",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!G93",
+      "rateCell": "Table 12!G93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northern Interior HSDA",
+      "year": "2020",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!H93",
+      "rateCell": "Table 12!H93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northern Interior HSDA",
+      "year": "2021",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!I93",
+      "rateCell": "Table 12!I93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northern Interior HSDA",
+      "year": "2022",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!J93",
+      "rateCell": "Table 12!J93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northern Interior HSDA",
+      "year": "2023",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!K93",
+      "rateCell": "Table 12!K93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northern Interior HSDA",
+      "year": "2024",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!L93",
+      "rateCell": "Table 12!L93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northeast HSDA",
+      "year": "2015",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!C94",
+      "rateCell": "Table 12!C94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northeast HSDA",
+      "year": "2016",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!D94",
+      "rateCell": "Table 12!D94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northeast HSDA",
+      "year": "2017",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!E94",
+      "rateCell": "Table 12!E94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northeast HSDA",
+      "year": "2018",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!F94",
+      "rateCell": "Table 12!F94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northeast HSDA",
+      "year": "2019",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!G94",
+      "rateCell": "Table 12!G94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northeast HSDA",
+      "year": "2020",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!H94",
+      "rateCell": "Table 12!H94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northeast HSDA",
+      "year": "2021",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!I94",
+      "rateCell": "Table 12!I94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northeast HSDA",
+      "year": "2022",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!J94",
+      "rateCell": "Table 12!J94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northeast HSDA",
+      "year": "2023",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!K94",
+      "rateCell": "Table 12!K94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Pharmacists",
+      "region": "Northeast HSDA",
+      "year": "2024",
+      "sourceKey": "pharmacy",
+      "countCell": "Table 11!L94",
+      "rateCell": "Table 12!L94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northwest HSDA",
+      "year": "2015",
+      "sourceKey": "pt",
+      "countCell": "Table 11!C92",
+      "rateCell": "Table 12!C92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northwest HSDA",
+      "year": "2016",
+      "sourceKey": "pt",
+      "countCell": "Table 11!D92",
+      "rateCell": "Table 12!D92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northwest HSDA",
+      "year": "2017",
+      "sourceKey": "pt",
+      "countCell": "Table 11!E92",
+      "rateCell": "Table 12!E92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northwest HSDA",
+      "year": "2018",
+      "sourceKey": "pt",
+      "countCell": "Table 11!F92",
+      "rateCell": "Table 12!F92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northwest HSDA",
+      "year": "2019",
+      "sourceKey": "pt",
+      "countCell": "Table 11!G92",
+      "rateCell": "Table 12!G92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northwest HSDA",
+      "year": "2020",
+      "sourceKey": "pt",
+      "countCell": "Table 11!H92",
+      "rateCell": "Table 12!H92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northwest HSDA",
+      "year": "2021",
+      "sourceKey": "pt",
+      "countCell": "Table 11!I92",
+      "rateCell": "Table 12!I92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northwest HSDA",
+      "year": "2022",
+      "sourceKey": "pt",
+      "countCell": "Table 11!J92",
+      "rateCell": "Table 12!J92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northwest HSDA",
+      "year": "2023",
+      "sourceKey": "pt",
+      "countCell": "Table 11!K92",
+      "rateCell": "Table 12!K92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northwest HSDA",
+      "year": "2024",
+      "sourceKey": "pt",
+      "countCell": "Table 11!L92",
+      "rateCell": "Table 12!L92"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northern Interior HSDA",
+      "year": "2015",
+      "sourceKey": "pt",
+      "countCell": "Table 11!C93",
+      "rateCell": "Table 12!C93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northern Interior HSDA",
+      "year": "2016",
+      "sourceKey": "pt",
+      "countCell": "Table 11!D93",
+      "rateCell": "Table 12!D93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northern Interior HSDA",
+      "year": "2017",
+      "sourceKey": "pt",
+      "countCell": "Table 11!E93",
+      "rateCell": "Table 12!E93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northern Interior HSDA",
+      "year": "2018",
+      "sourceKey": "pt",
+      "countCell": "Table 11!F93",
+      "rateCell": "Table 12!F93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northern Interior HSDA",
+      "year": "2019",
+      "sourceKey": "pt",
+      "countCell": "Table 11!G93",
+      "rateCell": "Table 12!G93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northern Interior HSDA",
+      "year": "2020",
+      "sourceKey": "pt",
+      "countCell": "Table 11!H93",
+      "rateCell": "Table 12!H93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northern Interior HSDA",
+      "year": "2021",
+      "sourceKey": "pt",
+      "countCell": "Table 11!I93",
+      "rateCell": "Table 12!I93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northern Interior HSDA",
+      "year": "2022",
+      "sourceKey": "pt",
+      "countCell": "Table 11!J93",
+      "rateCell": "Table 12!J93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northern Interior HSDA",
+      "year": "2023",
+      "sourceKey": "pt",
+      "countCell": "Table 11!K93",
+      "rateCell": "Table 12!K93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northern Interior HSDA",
+      "year": "2024",
+      "sourceKey": "pt",
+      "countCell": "Table 11!L93",
+      "rateCell": "Table 12!L93"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northeast HSDA",
+      "year": "2015",
+      "sourceKey": "pt",
+      "countCell": "Table 11!C94",
+      "rateCell": "Table 12!C94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northeast HSDA",
+      "year": "2016",
+      "sourceKey": "pt",
+      "countCell": "Table 11!D94",
+      "rateCell": "Table 12!D94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northeast HSDA",
+      "year": "2017",
+      "sourceKey": "pt",
+      "countCell": "Table 11!E94",
+      "rateCell": "Table 12!E94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northeast HSDA",
+      "year": "2018",
+      "sourceKey": "pt",
+      "countCell": "Table 11!F94",
+      "rateCell": "Table 12!F94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northeast HSDA",
+      "year": "2019",
+      "sourceKey": "pt",
+      "countCell": "Table 11!G94",
+      "rateCell": "Table 12!G94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northeast HSDA",
+      "year": "2020",
+      "sourceKey": "pt",
+      "countCell": "Table 11!H94",
+      "rateCell": "Table 12!H94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northeast HSDA",
+      "year": "2021",
+      "sourceKey": "pt",
+      "countCell": "Table 11!I94",
+      "rateCell": "Table 12!I94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northeast HSDA",
+      "year": "2022",
+      "sourceKey": "pt",
+      "countCell": "Table 11!J94",
+      "rateCell": "Table 12!J94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northeast HSDA",
+      "year": "2023",
+      "sourceKey": "pt",
+      "countCell": "Table 11!K94",
+      "rateCell": "Table 12!K94"
+    },
+    {
+      "view": "allied-health-northern",
+      "profession": "Physiotherapists",
+      "region": "Northeast HSDA",
+      "year": "2024",
+      "sourceKey": "pt",
+      "countCell": "Table 11!L94",
+      "rateCell": "Table 12!L94"
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Pharmacists",
+      "sourceER": "ER59",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12116
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Pharmacists",
+      "sourceER": "ER5950",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12121
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Pharmacists",
+      "sourceER": "ER5960",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12122
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Pharmacists",
+      "sourceER": "ER5970",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12123
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Pharmacists",
+      "sourceER": "ER5980",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12124
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Physiotherapists",
+      "sourceER": "ER59",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12460
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Physiotherapists",
+      "sourceER": "ER5950",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12465
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Physiotherapists",
+      "sourceER": "ER5960",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12466
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Physiotherapists",
+      "sourceER": "ER5970",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12467
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Physiotherapists",
+      "sourceER": "ER5980",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12468
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Occupational therapists",
+      "sourceER": "ER59",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12546
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Occupational therapists",
+      "sourceER": "ER5950",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12551
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Occupational therapists",
+      "sourceER": "ER5960",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12552
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Occupational therapists",
+      "sourceER": "ER5970",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12553
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Occupational therapists",
+      "sourceER": "ER5980",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12554
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Registered nurses and registered psychiatric nurses",
+      "sourceER": "ER59",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12890
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Registered nurses and registered psychiatric nurses",
+      "sourceER": "ER5950",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12895
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Registered nurses and registered psychiatric nurses",
+      "sourceER": "ER5960",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12896
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Registered nurses and registered psychiatric nurses",
+      "sourceER": "ER5970",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12897
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Registered nurses and registered psychiatric nurses",
+      "sourceER": "ER5980",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12898
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Nurse practitioners",
+      "sourceER": "ER59",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12976
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Nurse practitioners",
+      "sourceER": "ER5950",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12981
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Nurse practitioners",
+      "sourceER": "ER5960",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12982
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Nurse practitioners",
+      "sourceER": "ER5970",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12983
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Nurse practitioners",
+      "sourceER": "ER5980",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 12984
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Medical laboratory technologists",
+      "sourceER": "ER59",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 13922
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Medical laboratory technologists",
+      "sourceER": "ER5950",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 13927
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Medical laboratory technologists",
+      "sourceER": "ER5960",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 13928
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Medical laboratory technologists",
+      "sourceER": "ER5970",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 13929
+    },
+    {
+      "view": "health-occupation-wages",
+      "occupation": "Medical laboratory technologists",
+      "sourceER": "ER5980",
+      "sourceKey": "jobbank",
+      "sourceCSVRow": 13930
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Administrative and support services",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 38,
+      "sourceCells": {
+        "overtimeShare": "X38",
+        "overtimeHours": "V38",
+        "regularHours": "W38",
+        "purchasedHours": "Z38",
+        "paidSickHours": "AA38"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Ambulatory care services",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 39,
+      "sourceCells": {
+        "overtimeShare": "X39",
+        "overtimeHours": "V39",
+        "regularHours": "W39",
+        "purchasedHours": "Z39",
+        "paidSickHours": "AA39"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Community health services",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 40,
+      "sourceCells": {
+        "overtimeShare": "X40",
+        "overtimeHours": "V40",
+        "regularHours": "W40",
+        "purchasedHours": "Z40",
+        "paidSickHours": "AA40"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Diagnostic and therapeutic services",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 41,
+      "sourceCells": {
+        "overtimeShare": "X41",
+        "overtimeHours": "V41",
+        "regularHours": "W41",
+        "purchasedHours": "Z41",
+        "paidSickHours": "AA41"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Nursing inpatient services",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 42,
+      "sourceCells": {
+        "overtimeShare": "X42",
+        "overtimeHours": "V42",
+        "regularHours": "W42",
+        "purchasedHours": "Z42",
+        "paidSickHours": "AA42"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Research, education and other services",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 43,
+      "sourceCells": {
+        "overtimeShare": "X43",
+        "overtimeHours": "V43",
+        "regularHours": "W43",
+        "purchasedHours": "Z43",
+        "paidSickHours": "AA43"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Total",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 44,
+      "sourceCells": {
+        "overtimeShare": "X44",
+        "overtimeHours": "V44",
+        "regularHours": "W44",
+        "purchasedHours": "Z44",
+        "paidSickHours": "AA44"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Administrative and support services",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 45,
+      "sourceCells": {
+        "overtimeShare": "X45",
+        "overtimeHours": "V45",
+        "regularHours": "W45",
+        "purchasedHours": "Z45",
+        "paidSickHours": "AA45"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Ambulatory care services",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 46,
+      "sourceCells": {
+        "overtimeShare": "X46",
+        "overtimeHours": "V46",
+        "regularHours": "W46",
+        "purchasedHours": "Z46",
+        "paidSickHours": "AA46"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Community health services",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 47,
+      "sourceCells": {
+        "overtimeShare": "X47",
+        "overtimeHours": "V47",
+        "regularHours": "W47",
+        "purchasedHours": "Z47",
+        "paidSickHours": "AA47"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Diagnostic and therapeutic services",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 48,
+      "sourceCells": {
+        "overtimeShare": "X48",
+        "overtimeHours": "V48",
+        "regularHours": "W48",
+        "purchasedHours": "Z48",
+        "paidSickHours": "AA48"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Nursing inpatient services",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 49,
+      "sourceCells": {
+        "overtimeShare": "X49",
+        "overtimeHours": "V49",
+        "regularHours": "W49",
+        "purchasedHours": "Z49",
+        "paidSickHours": "AA49"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Research, education and other services",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 50,
+      "sourceCells": {
+        "overtimeShare": "X50",
+        "overtimeHours": "V50",
+        "regularHours": "W50",
+        "purchasedHours": "Z50",
+        "paidSickHours": "AA50"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Total",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 51,
+      "sourceCells": {
+        "overtimeShare": "X51",
+        "overtimeHours": "V51",
+        "regularHours": "W51",
+        "purchasedHours": "Z51",
+        "paidSickHours": "AA51"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Administrative and support services",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 52,
+      "sourceCells": {
+        "overtimeShare": "X52",
+        "overtimeHours": "V52",
+        "regularHours": "W52",
+        "purchasedHours": "Z52",
+        "paidSickHours": "AA52"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Ambulatory care services",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 53,
+      "sourceCells": {
+        "overtimeShare": "X53",
+        "overtimeHours": "V53",
+        "regularHours": "W53",
+        "purchasedHours": "Z53",
+        "paidSickHours": "AA53"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Community health services",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 54,
+      "sourceCells": {
+        "overtimeShare": "X54",
+        "overtimeHours": "V54",
+        "regularHours": "W54",
+        "purchasedHours": "Z54",
+        "paidSickHours": "AA54"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Diagnostic and therapeutic services",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 55,
+      "sourceCells": {
+        "overtimeShare": "X55",
+        "overtimeHours": "V55",
+        "regularHours": "W55",
+        "purchasedHours": "Z55",
+        "paidSickHours": "AA55"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Nursing inpatient services",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 56,
+      "sourceCells": {
+        "overtimeShare": "X56",
+        "overtimeHours": "V56",
+        "regularHours": "W56",
+        "purchasedHours": "Z56",
+        "paidSickHours": "AA56"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Research, education and other services",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 57,
+      "sourceCells": {
+        "overtimeShare": "X57",
+        "overtimeHours": "V57",
+        "regularHours": "W57",
+        "purchasedHours": "Z57",
+        "paidSickHours": "AA57"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Total",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 58,
+      "sourceCells": {
+        "overtimeShare": "X58",
+        "overtimeHours": "V58",
+        "regularHours": "W58",
+        "purchasedHours": "Z58",
+        "paidSickHours": "AA58"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Administrative and support services",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 59,
+      "sourceCells": {
+        "overtimeShare": "X59",
+        "overtimeHours": "V59",
+        "regularHours": "W59",
+        "purchasedHours": "Z59",
+        "paidSickHours": "AA59"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Ambulatory care services",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 60,
+      "sourceCells": {
+        "overtimeShare": "X60",
+        "overtimeHours": "V60",
+        "regularHours": "W60",
+        "purchasedHours": "Z60",
+        "paidSickHours": "AA60"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Community health services",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 61,
+      "sourceCells": {
+        "overtimeShare": "X61",
+        "overtimeHours": "V61",
+        "regularHours": "W61",
+        "purchasedHours": "Z61",
+        "paidSickHours": "AA61"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Diagnostic and therapeutic services",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 62,
+      "sourceCells": {
+        "overtimeShare": "X62",
+        "overtimeHours": "V62",
+        "regularHours": "W62",
+        "purchasedHours": "Z62",
+        "paidSickHours": "AA62"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Nursing inpatient services",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 63,
+      "sourceCells": {
+        "overtimeShare": "X63",
+        "overtimeHours": "V63",
+        "regularHours": "W63",
+        "purchasedHours": "Z63",
+        "paidSickHours": "AA63"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Research, education and other services",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 64,
+      "sourceCells": {
+        "overtimeShare": "X64",
+        "overtimeHours": "V64",
+        "regularHours": "W64",
+        "purchasedHours": "Z64",
+        "paidSickHours": "AA64"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Total",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 65,
+      "sourceCells": {
+        "overtimeShare": "X65",
+        "overtimeHours": "V65",
+        "regularHours": "W65",
+        "purchasedHours": "Z65",
+        "paidSickHours": "AA65"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Administrative and support services",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 66,
+      "sourceCells": {
+        "overtimeShare": "X66",
+        "overtimeHours": "V66",
+        "regularHours": "W66",
+        "purchasedHours": "Z66",
+        "paidSickHours": "AA66"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Ambulatory care services",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 67,
+      "sourceCells": {
+        "overtimeShare": "X67",
+        "overtimeHours": "V67",
+        "regularHours": "W67",
+        "purchasedHours": "Z67",
+        "paidSickHours": "AA67"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Community health services",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 68,
+      "sourceCells": {
+        "overtimeShare": "X68",
+        "overtimeHours": "V68",
+        "regularHours": "W68",
+        "purchasedHours": "Z68",
+        "paidSickHours": "AA68"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Diagnostic and therapeutic services",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 69,
+      "sourceCells": {
+        "overtimeShare": "X69",
+        "overtimeHours": "V69",
+        "regularHours": "W69",
+        "purchasedHours": "Z69",
+        "paidSickHours": "AA69"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Nursing inpatient services",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 70,
+      "sourceCells": {
+        "overtimeShare": "X70",
+        "overtimeHours": "V70",
+        "regularHours": "W70",
+        "purchasedHours": "Z70",
+        "paidSickHours": "AA70"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Research, education and other services",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 71,
+      "sourceCells": {
+        "overtimeShare": "X71",
+        "overtimeHours": "V71",
+        "regularHours": "W71",
+        "purchasedHours": "Z71",
+        "paidSickHours": "AA71"
+      }
+    },
+    {
+      "view": "bc-hospital-staffing",
+      "serviceArea": "Total",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "StaffingData",
+      "sourceRow": 72,
+      "sourceCells": {
+        "overtimeShare": "X72",
+        "overtimeHours": "V72",
+        "regularHours": "W72",
+        "purchasedHours": "Z72",
+        "paidSickHours": "AA72"
+      }
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Health care, social work, personal support and mental health",
+      "sourceYear": "2015",
+      "fiscalYear": "2015–2016",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G123",
+      "shareCell": "H123"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Health care, social work, personal support and mental health",
+      "sourceYear": "2016",
+      "fiscalYear": "2016–2017",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G124",
+      "shareCell": "H124"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Health care, social work, personal support and mental health",
+      "sourceYear": "2017",
+      "fiscalYear": "2017–2018",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G125",
+      "shareCell": "H125"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Health care, social work, personal support and mental health",
+      "sourceYear": "2018",
+      "fiscalYear": "2018–2019",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G126",
+      "shareCell": "H126"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Health care, social work, personal support and mental health",
+      "sourceYear": "2019",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G127",
+      "shareCell": "H127"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Health care, social work, personal support and mental health",
+      "sourceYear": "2020",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G128",
+      "shareCell": "H128"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Health care, social work, personal support and mental health",
+      "sourceYear": "2021",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G129",
+      "shareCell": "H129"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Health care, social work, personal support and mental health",
+      "sourceYear": "2022",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G130",
+      "shareCell": "H130"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Health care, social work, personal support and mental health",
+      "sourceYear": "2023",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G131",
+      "shareCell": "H131"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Health care, social work, personal support and mental health",
+      "sourceYear": "2024",
+      "fiscalYear": "2024–2025",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G132",
+      "shareCell": "H132"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Licensed practical nurses",
+      "sourceYear": "2015",
+      "fiscalYear": "2015–2016",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G133",
+      "shareCell": "H133"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Licensed practical nurses",
+      "sourceYear": "2016",
+      "fiscalYear": "2016–2017",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G134",
+      "shareCell": "H134"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Licensed practical nurses",
+      "sourceYear": "2017",
+      "fiscalYear": "2017–2018",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G135",
+      "shareCell": "H135"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Licensed practical nurses",
+      "sourceYear": "2018",
+      "fiscalYear": "2018–2019",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G136",
+      "shareCell": "H136"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Licensed practical nurses",
+      "sourceYear": "2019",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G137",
+      "shareCell": "H137"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Licensed practical nurses",
+      "sourceYear": "2020",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G138",
+      "shareCell": "H138"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Licensed practical nurses",
+      "sourceYear": "2021",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G139",
+      "shareCell": "H139"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Licensed practical nurses",
+      "sourceYear": "2022",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G140",
+      "shareCell": "H140"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Licensed practical nurses",
+      "sourceYear": "2023",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G141",
+      "shareCell": "H141"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Licensed practical nurses",
+      "sourceYear": "2024",
+      "fiscalYear": "2024–2025",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G142",
+      "shareCell": "H142"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Mental health workers",
+      "sourceYear": "2015",
+      "fiscalYear": "2015–2016",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G143",
+      "shareCell": "H143"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Mental health workers",
+      "sourceYear": "2016",
+      "fiscalYear": "2016–2017",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G144",
+      "shareCell": "H144"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Mental health workers",
+      "sourceYear": "2017",
+      "fiscalYear": "2017–2018",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G145",
+      "shareCell": "H145"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Mental health workers",
+      "sourceYear": "2018",
+      "fiscalYear": "2018–2019",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G146",
+      "shareCell": "H146"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Mental health workers",
+      "sourceYear": "2019",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G147",
+      "shareCell": "H147"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Mental health workers",
+      "sourceYear": "2020",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G148",
+      "shareCell": "H148"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Mental health workers",
+      "sourceYear": "2021",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G149",
+      "shareCell": "H149"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Mental health workers",
+      "sourceYear": "2022",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G150",
+      "shareCell": "H150"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Mental health workers",
+      "sourceYear": "2023",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G151",
+      "shareCell": "H151"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Mental health workers",
+      "sourceYear": "2024",
+      "fiscalYear": "2024–2025",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G152",
+      "shareCell": "H152"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nurse practitioners",
+      "sourceYear": "2015",
+      "fiscalYear": "2015–2016",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G153",
+      "shareCell": "H153"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nurse practitioners",
+      "sourceYear": "2016",
+      "fiscalYear": "2016–2017",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G154",
+      "shareCell": "H154"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nurse practitioners",
+      "sourceYear": "2017",
+      "fiscalYear": "2017–2018",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G155",
+      "shareCell": "H155"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nurse practitioners",
+      "sourceYear": "2018",
+      "fiscalYear": "2018–2019",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G156",
+      "shareCell": "H156"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nurse practitioners",
+      "sourceYear": "2019",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G157",
+      "shareCell": "H157"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nurse practitioners",
+      "sourceYear": "2020",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G158",
+      "shareCell": "H158"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nurse practitioners",
+      "sourceYear": "2021",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G159",
+      "shareCell": "H159"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nurse practitioners",
+      "sourceYear": "2022",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G160",
+      "shareCell": "H160"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nurse practitioners",
+      "sourceYear": "2023",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G161",
+      "shareCell": "H161"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nurse practitioners",
+      "sourceYear": "2024",
+      "fiscalYear": "2024–2025",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G162",
+      "shareCell": "H162"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nursing coordinators and supervisors",
+      "sourceYear": "2015",
+      "fiscalYear": "2015–2016",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G163",
+      "shareCell": "H163"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nursing coordinators and supervisors",
+      "sourceYear": "2016",
+      "fiscalYear": "2016–2017",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G164",
+      "shareCell": "H164"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nursing coordinators and supervisors",
+      "sourceYear": "2017",
+      "fiscalYear": "2017–2018",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G165",
+      "shareCell": "H165"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nursing coordinators and supervisors",
+      "sourceYear": "2018",
+      "fiscalYear": "2018–2019",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G166",
+      "shareCell": "H166"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nursing coordinators and supervisors",
+      "sourceYear": "2019",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G167",
+      "shareCell": "H167"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nursing coordinators and supervisors",
+      "sourceYear": "2020",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G168",
+      "shareCell": "H168"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nursing coordinators and supervisors",
+      "sourceYear": "2021",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G169",
+      "shareCell": "H169"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nursing coordinators and supervisors",
+      "sourceYear": "2022",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G170",
+      "shareCell": "H170"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nursing coordinators and supervisors",
+      "sourceYear": "2023",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G171",
+      "shareCell": "H171"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Nursing coordinators and supervisors",
+      "sourceYear": "2024",
+      "fiscalYear": "2024–2025",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G172",
+      "shareCell": "H172"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Occupational therapists",
+      "sourceYear": "2015",
+      "fiscalYear": "2015–2016",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G173",
+      "shareCell": "H173"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Occupational therapists",
+      "sourceYear": "2016",
+      "fiscalYear": "2016–2017",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G174",
+      "shareCell": "H174"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Occupational therapists",
+      "sourceYear": "2017",
+      "fiscalYear": "2017–2018",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G175",
+      "shareCell": "H175"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Occupational therapists",
+      "sourceYear": "2018",
+      "fiscalYear": "2018–2019",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G176",
+      "shareCell": "H176"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Occupational therapists",
+      "sourceYear": "2019",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G177",
+      "shareCell": "H177"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Occupational therapists",
+      "sourceYear": "2020",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G178",
+      "shareCell": "H178"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Occupational therapists",
+      "sourceYear": "2021",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G179",
+      "shareCell": "H179"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Occupational therapists",
+      "sourceYear": "2022",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G180",
+      "shareCell": "H180"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Occupational therapists",
+      "sourceYear": "2023",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G181",
+      "shareCell": "H181"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Occupational therapists",
+      "sourceYear": "2024",
+      "fiscalYear": "2024–2025",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G182",
+      "shareCell": "H182"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Personal support workers",
+      "sourceYear": "2015",
+      "fiscalYear": "2015–2016",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G183",
+      "shareCell": "H183"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Personal support workers",
+      "sourceYear": "2016",
+      "fiscalYear": "2016–2017",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G184",
+      "shareCell": "H184"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Personal support workers",
+      "sourceYear": "2017",
+      "fiscalYear": "2017–2018",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G185",
+      "shareCell": "H185"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Personal support workers",
+      "sourceYear": "2018",
+      "fiscalYear": "2018–2019",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G186",
+      "shareCell": "H186"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Personal support workers",
+      "sourceYear": "2019",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G187",
+      "shareCell": "H187"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Personal support workers",
+      "sourceYear": "2020",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G188",
+      "shareCell": "H188"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Personal support workers",
+      "sourceYear": "2021",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G189",
+      "shareCell": "H189"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Personal support workers",
+      "sourceYear": "2022",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G190",
+      "shareCell": "H190"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Personal support workers",
+      "sourceYear": "2023",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G191",
+      "shareCell": "H191"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Personal support workers",
+      "sourceYear": "2024",
+      "fiscalYear": "2024–2025",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G192",
+      "shareCell": "H192"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Pharmacists",
+      "sourceYear": "2015",
+      "fiscalYear": "2015–2016",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G193",
+      "shareCell": "H193"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Pharmacists",
+      "sourceYear": "2016",
+      "fiscalYear": "2016–2017",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G194",
+      "shareCell": "H194"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Pharmacists",
+      "sourceYear": "2017",
+      "fiscalYear": "2017–2018",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G195",
+      "shareCell": "H195"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Pharmacists",
+      "sourceYear": "2018",
+      "fiscalYear": "2018–2019",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G196",
+      "shareCell": "H196"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Pharmacists",
+      "sourceYear": "2019",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G197",
+      "shareCell": "H197"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Pharmacists",
+      "sourceYear": "2020",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G198",
+      "shareCell": "H198"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Pharmacists",
+      "sourceYear": "2021",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G199",
+      "shareCell": "H199"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Pharmacists",
+      "sourceYear": "2022",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G200",
+      "shareCell": "H200"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Pharmacists",
+      "sourceYear": "2023",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G201",
+      "shareCell": "H201"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Pharmacists",
+      "sourceYear": "2024",
+      "fiscalYear": "2024–2025",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G202",
+      "shareCell": "H202"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physician assistants, midwives and allied health professionals",
+      "sourceYear": "2015",
+      "fiscalYear": "2015–2016",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G203",
+      "shareCell": "H203"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physician assistants, midwives and allied health professionals",
+      "sourceYear": "2016",
+      "fiscalYear": "2016–2017",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G204",
+      "shareCell": "H204"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physician assistants, midwives and allied health professionals",
+      "sourceYear": "2017",
+      "fiscalYear": "2017–2018",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G205",
+      "shareCell": "H205"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physician assistants, midwives and allied health professionals",
+      "sourceYear": "2018",
+      "fiscalYear": "2018–2019",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G206",
+      "shareCell": "H206"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physician assistants, midwives and allied health professionals",
+      "sourceYear": "2019",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G207",
+      "shareCell": "H207"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physician assistants, midwives and allied health professionals",
+      "sourceYear": "2020",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G208",
+      "shareCell": "H208"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physician assistants, midwives and allied health professionals",
+      "sourceYear": "2021",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G209",
+      "shareCell": "H209"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physician assistants, midwives and allied health professionals",
+      "sourceYear": "2022",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G210",
+      "shareCell": "H210"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physician assistants, midwives and allied health professionals",
+      "sourceYear": "2023",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G211",
+      "shareCell": "H211"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physician assistants, midwives and allied health professionals",
+      "sourceYear": "2024",
+      "fiscalYear": "2024–2025",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G212",
+      "shareCell": "H212"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physiotherapists",
+      "sourceYear": "2015",
+      "fiscalYear": "2015–2016",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G213",
+      "shareCell": "H213"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physiotherapists",
+      "sourceYear": "2016",
+      "fiscalYear": "2016–2017",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G214",
+      "shareCell": "H214"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physiotherapists",
+      "sourceYear": "2017",
+      "fiscalYear": "2017–2018",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G215",
+      "shareCell": "H215"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physiotherapists",
+      "sourceYear": "2018",
+      "fiscalYear": "2018–2019",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G216",
+      "shareCell": "H216"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physiotherapists",
+      "sourceYear": "2019",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G217",
+      "shareCell": "H217"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physiotherapists",
+      "sourceYear": "2020",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G218",
+      "shareCell": "H218"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physiotherapists",
+      "sourceYear": "2021",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G219",
+      "shareCell": "H219"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physiotherapists",
+      "sourceYear": "2022",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G220",
+      "shareCell": "H220"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physiotherapists",
+      "sourceYear": "2023",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G221",
+      "shareCell": "H221"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Physiotherapists",
+      "sourceYear": "2024",
+      "fiscalYear": "2024–2025",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G222",
+      "shareCell": "H222"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses, registered psychiatric nurses*, nursing coordinators and supervisors",
+      "sourceYear": "2015",
+      "fiscalYear": "2015–2016",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G223",
+      "shareCell": "H223"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses, registered psychiatric nurses*, nursing coordinators and supervisors",
+      "sourceYear": "2016",
+      "fiscalYear": "2016–2017",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G224",
+      "shareCell": "H224"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses, registered psychiatric nurses*, nursing coordinators and supervisors",
+      "sourceYear": "2017",
+      "fiscalYear": "2017–2018",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G225",
+      "shareCell": "H225"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses, registered psychiatric nurses*, nursing coordinators and supervisors",
+      "sourceYear": "2018",
+      "fiscalYear": "2018–2019",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G226",
+      "shareCell": "H226"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses, registered psychiatric nurses*, nursing coordinators and supervisors",
+      "sourceYear": "2019",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G227",
+      "shareCell": "H227"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses, registered psychiatric nurses*, nursing coordinators and supervisors",
+      "sourceYear": "2020",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G228",
+      "shareCell": "H228"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses, registered psychiatric nurses*, nursing coordinators and supervisors",
+      "sourceYear": "2021",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G229",
+      "shareCell": "H229"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses, registered psychiatric nurses*, nursing coordinators and supervisors",
+      "sourceYear": "2022",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G230",
+      "shareCell": "H230"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses, registered psychiatric nurses*, nursing coordinators and supervisors",
+      "sourceYear": "2023",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G231",
+      "shareCell": "H231"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses, registered psychiatric nurses*, nursing coordinators and supervisors",
+      "sourceYear": "2024",
+      "fiscalYear": "2024–2025",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G232",
+      "shareCell": "H232"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses and registered psychiatric nurses*",
+      "sourceYear": "2015",
+      "fiscalYear": "2015–2016",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G233",
+      "shareCell": "H233"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses and registered psychiatric nurses*",
+      "sourceYear": "2016",
+      "fiscalYear": "2016–2017",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G234",
+      "shareCell": "H234"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses and registered psychiatric nurses*",
+      "sourceYear": "2017",
+      "fiscalYear": "2017–2018",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G235",
+      "shareCell": "H235"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses and registered psychiatric nurses*",
+      "sourceYear": "2018",
+      "fiscalYear": "2018–2019",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G236",
+      "shareCell": "H236"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses and registered psychiatric nurses*",
+      "sourceYear": "2019",
+      "fiscalYear": "2019–2020",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G237",
+      "shareCell": "H237"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses and registered psychiatric nurses*",
+      "sourceYear": "2020",
+      "fiscalYear": "2020–2021",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G238",
+      "shareCell": "H238"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses and registered psychiatric nurses*",
+      "sourceYear": "2021",
+      "fiscalYear": "2021–2022",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G239",
+      "shareCell": "H239"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses and registered psychiatric nurses*",
+      "sourceYear": "2022",
+      "fiscalYear": "2022–2023",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G240",
+      "shareCell": "H240"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses and registered psychiatric nurses*",
+      "sourceYear": "2023",
+      "fiscalYear": "2023–2024",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G241",
+      "shareCell": "H241"
+    },
+    {
+      "view": "bc-health-occupation-vacancies",
+      "occupation": "Registered nurses and registered psychiatric nurses*",
+      "sourceYear": "2024",
+      "fiscalYear": "2024–2025",
+      "sourceKey": "quickstats",
+      "sourceSheet": "VacancyData",
+      "vacanciesCell": "G242",
+      "shareCell": "H242"
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "1997",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 10
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "1997",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 17
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "1997",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 29
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "1997",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 36
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "1998",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 48
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "1998",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 55
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "1998",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 67
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "1998",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 74
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "1999",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 86
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "1999",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 93
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "1999",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 105
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "1999",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 112
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2000",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 124
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2000",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 131
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2000",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 143
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2000",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 150
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2001",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 162
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2001",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 169
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2001",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 181
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2001",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 188
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2002",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 200
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2002",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 207
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2002",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 219
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2002",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 226
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2003",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 238
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2003",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 245
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2003",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 257
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2003",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 264
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2004",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 276
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2004",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 283
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2004",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 295
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2004",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 302
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2005",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 314
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2005",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 321
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2005",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 333
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2005",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 340
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2006",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 352
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2006",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 359
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2006",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 371
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2006",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 378
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2007",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 390
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2007",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 397
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2007",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 409
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2007",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 416
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2008",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 428
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2008",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 435
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2008",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 447
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2008",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 454
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2009",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 466
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2009",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 473
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2009",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 485
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2009",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 492
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2010",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 504
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2010",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 511
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2010",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 523
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2010",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 530
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2011",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 542
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2011",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 549
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2011",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 561
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2011",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 568
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2012",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 580
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2012",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 587
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2012",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 599
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2012",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 606
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2013",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 618
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2013",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 625
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2013",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 637
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2013",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 644
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2014",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 656
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2014",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 663
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2014",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 675
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2014",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 682
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2015",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 694
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2015",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 701
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2015",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 713
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2015",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 720
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2016",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 732
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2016",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 739
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2016",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 751
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2016",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 758
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2017",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 770
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2017",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 777
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2017",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 789
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2017",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 796
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2018",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 808
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2018",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 815
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2018",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 827
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2018",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 834
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2019",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 846
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2019",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 853
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2019",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 865
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2019",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 872
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2020",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 884
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2020",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 891
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2020",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 903
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2020",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 910
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2021",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 922
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2021",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 929
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2021",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 941
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2021",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 948
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2022",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 960
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2022",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 967
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2022",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 979
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2022",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 986
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2023",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 998
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2023",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 1005
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2023",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 1017
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2023",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 1024
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2024",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 1036
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2024",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 1043
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2024",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 1055
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2024",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 1062
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2025",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 1074
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2025",
+      "measure": "average_hourly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 1081
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Health care and social assistance [62]",
+      "year": "2025",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 1093
+    },
+    {
+      "view": "bc-sector-wages",
+      "sector": "Total employees, all industries",
+      "year": "2025",
+      "measure": "average_weekly_wage",
+      "sourceKey": "sectorWages",
+      "sourceCSVRow": 1100
+    }
+  ],
+  "releaseCounts": {
+    "allied-health-northern": 90,
+    "health-occupation-wages": 30,
+    "bc-hospital-staffing": 35,
+    "bc-health-occupation-vacancies": 120,
+    "bc-sector-wages": 58
+  },
+  "missingCounts": {
+    "wageMedians": 13,
+    "vacancyConfidential": 20,
+    "vacancyUnreliable": 12
+  },
+  "methods": {
+    "workforce": "Exact profession/HSDA/year join between original count and rate cells; no rates recomputed",
+    "wage": "Six exact NOC codes × five exact BC reporting labels; original fallback scope, methods and missing values retained",
+    "staffing": "Original overtime fraction×100; denominator independently verified against worked overtime+regular hours",
+    "vacancies": "Original count/share cells; fraction × 100; fiscal periods derived from Table 8 quarterly method, retaining the 2020 exception",
+    "sectorWage": "Original BC sector/calendar-year/hourly-weekly rows pivoted without averaging"
+  },
+  "rights": [
+    "CIHI public-source attribution and original publisher terms apply. No contact, personal-compensation, participant or interview records enter this release.",
+    "Job Bank metadata declares the Open Government Licence—Canada. Wage estimates retain original reference periods, comments and methodology.",
+    "Statistics Canada source attribution and original dissemination terms apply."
+  ],
+  "mappingLimits": [
+    "HSDA 51/52/53 exact names reviewed against existing polygons.",
+    "Wage ER 5950/5960/5970/5980 use 2021 PGMaps context geometry; source geometry vintage is not independently pinned. BC aggregate 59 has no ER polygon.",
+    "BC staffing, vacancies and sector wages remain provincial charts/tables and are never allocated to HSDAs, LHAs or facilities."
+  ]
+}

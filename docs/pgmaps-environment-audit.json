@@ -1,0 +1,2550 @@
+{
+  "reviewedAt": "2026-10-12",
+  "scope": "Read-only PGMaps environmental, climate, hazard, infrastructure, outdoor/forestry and remaining-source family inventory. Local scientific schemas and manifests were inspected selectively; remote services, huge archives and privacy-sensitive records were not comprehensively audited. This fragment proposes no data release or application change.",
+  "statusMeaning": "Status is usage of the named source family in NHHR Atlas; unused does not mean scientifically unusable, and source-only means source metadata/code/vendor outputs exist without an inspected deployed scientific layer. Basemap pixels and shared toolkit code are not use of these analytical datasets.",
+  "entries": [
+    {
+      "id": "air-monitoring",
+      "title": "Air monitoring stations and cached readings",
+      "category": "Environment",
+      "status": "unused",
+      "grain": "Station/sensor metadata and cached pollutant readings; multiple networks are not interchangeable measurements.",
+      "geometry": "Latitude/longitude points; combined catalogue has 3,712 records across 12 networks.",
+      "vintage": "Root manifest generated 18 October 2025; reading timestamps and site status must be taken from each source record.",
+      "rights": "BC, EPA, research-network and community-sensor terms differ. DatasetInfo describes source-dependent terms; no unified redistribution licence verified.",
+      "mapNow": [
+        "A bounded station-presence point layer is technically possible from supplied coordinates.",
+        "Cached readings can accompany a station only with original parameter, unit, method and observation time."
+      ],
+      "missing": [
+        "Review network-specific units, calibration and missing markers before combining readings.",
+        "Generate reviewed station IDs/location metadata and a bounded point release.",
+        "Add native observation-time controls, rather than treating snapshot date as measurement date."
+      ],
+      "cannot": [
+        "Monitoring presence is not exposure, population coverage or current air quality.",
+        "Nearest-monitor distance is not a valid concentration interpolation.",
+        "Station and sensor-network duplicates cannot be added as independent measurements."
+      ],
+      "next": "Start with BC regulatory station metadata around Northern communities, preserving network/status/time and a direct source link.",
+      "sourcePaths": [
+        "public/data/manifest.json",
+        "public/data/monitors/all.json",
+        "public/data/monitors.csv",
+        "public/data/spartan.csv",
+        "public/data/ascent-sites.json",
+        "public/data/bc/bc_air_monitoring_stations.csv",
+        "public/data/epa"
+      ],
+      "verificationScope": "Root catalogue and station CSV/JSON schemas/counts inspected; reading series and all coordinates were not validated. No mentor/contact fields copied.",
+      "notes": []
+    },
+    {
+      "id": "pm25-forecast",
+      "title": "Dated PM2.5 forecast bands and smoke snapshots",
+      "category": "Environment",
+      "status": "unused",
+      "grain": "Forecast model run/valid time and displayed concentration bands; satellite smoke polygons are a separate product.",
+      "geometry": "Native PM2.5 band polygons plus raster tiles; visible smoke: 126 polygons, fallback modelled smoke: 10 multipolygons.",
+      "vintage": "Raster manifest pins 23 June 2026 ECCC RAQDPS.SFC_PM2.5 run; app-owned smoke files have feature-level times and no enclosing provenance manifest.",
+      "rights": "ECCC/NOAA and fallback-source terms require original attribution; app-owned fallback provenance is not established by its filename.",
+      "mapNow": [
+        "Native vector band geometry can be displayed as a dated categorical model overlay after a source review."
+      ],
+      "missing": [
+        "NHHR needs arbitrary polygon/grid overlay support and band legends, separate from its health-area joins.",
+        "Keep model run, valid time, concentration units and forecast classification together.",
+        "Recover original numerical grids for any numerical zonal concentration calculation; available polygons expose bands (pm25_min/pm25_max), not full cell measurements.",
+        "Raster PM2.5 tiles need an explicit raster analysis adapter; current Atlas maps are vector only."
+      ],
+      "cannot": [
+        "Forecast bands are not observed personal exposure, current readings or a measured health outcome.",
+        "Smoke density/class is not equivalent to surface PM2.5.",
+        "Band midpoints do not establish a defensible regional mean."
+      ],
+      "next": "Use one pinned forecast as an explicitly modelled illustration alongside monitoring points; do not derive an NHHR exposure metric from colour bands.",
+      "sourcePaths": [
+        "public/data/aqmap/modelled-pm25-raster-tiles/manifest.json",
+        "public/data/aqmap/modelled-pm25-native-vector.geojson.gz",
+        "public/data/smoke/visible.json",
+        "public/data/smoke/modelled.json",
+        "scripts/sync-bcdatamapper-data.mjs"
+      ],
+      "verificationScope": "Tile manifest, smoke feature schemas/counts and one compressed native-vector feature inspected; forecast fields/cells and fallback provenance not fully audited.",
+      "notes": []
+    },
+    {
+      "id": "satellite-catalogue",
+      "title": "Satellite and atmospheric-grid demonstration metadata",
+      "category": "Environment",
+      "status": "source-only",
+      "grain": "Product descriptors, coverage footprints and four listed H3 cells; not a concentration time series.",
+      "geometry": "Illustrative coverage rectangles/multipolygons and H3 identifiers.",
+      "vintage": "Product descriptors say 2000/2017/2018–present, but contain no dated measurement rows.",
+      "rights": "NASA/ESA/NOAA product terms remain to be checked; metadata does not authorize scientific-data redistribution.",
+      "mapNow": [
+        "Coverage metadata can be shown as a product catalogue, with a clear metadata label."
+      ],
+      "missing": [
+        "Acquire actual product granules/values, QA flags, units and times.",
+        "Add native raster/H3 decoding and true geometry, cloud/quality masking and reviewed aggregation."
+      ],
+      "cannot": [
+        "Coverage rectangles are not NO2, aerosol optical depth or PM2.5 measurements.",
+        "The GEOS-CF entry explicitly describes demonstration metadata."
+      ],
+      "next": "Treat these entries as source links until an actual scientific extract is obtained and validated.",
+      "sourcePaths": [
+        "public/data/grids/tropomi.json",
+        "public/data/satellite/coverage.json"
+      ],
+      "verificationScope": "Both small metadata files inspected in full; no remotely hosted granules fetched.",
+      "notes": []
+    },
+    {
+      "id": "canue",
+      "title": "CANUE environmental exposure and neighbourhood extracts",
+      "category": "Environment",
+      "status": "source-only",
+      "grain": "Dataset/variable/year; postal-derived extracts and a referenced 1 km BC PMTiles grid.",
+      "geometry": "Referenced PMTiles grid and generated boundary aggregates; public/data/canue is absent in this checkout.",
+      "vintage": "Years are variable-specific; the source catalogue URL alone does not establish local temporal coverage.",
+      "rights": "CANUE research-data terms; original postal data and derivative redistribution require explicit terms review. The sync excludes compact CANUE postal aggregate rebuild inputs.",
+      "mapNow": [
+        "PGMaps already has PMTiles selection and boundary-aggregate adapters, but the remote catalogue/tiles were not verified in this audit."
+      ],
+      "missing": [
+        "Acquire a specific permitted source variable/year with source methods and exact bounds.",
+        "NHHR needs PMTiles/native-grid or prevalidated LHA/HSDA aggregate adapters.",
+        "Retain centroid/postal aggregation method, valid-cell coverage and weighting; do not substitute area/population means."
+      ],
+      "cannot": [
+        "A postal/grid proxy is not personal exposure or a health-area outcome.",
+        "A PMTiles centroid aggregate is not automatically population weighted.",
+        "No scientific rows are embedded in the URL/catalogue declaration."
+      ],
+      "next": "Choose one exposure metric and year, verify its permitted source and aggregation, then release a small source-backed Northern LHA table.",
+      "sourcePaths": [
+        "src/maps/pgdata/canueV2.ts",
+        "src/maps/pgdata/canue/constants.ts",
+        "vendor/bcdatamapper/datascrapers/canue",
+        "public/data/climate-vulnerability/holdings-evidence.json"
+      ],
+      "verificationScope": "Adapter interfaces, supported boundary levels and source holdings metadata inspected; remote catalogue, tiles and raw postal records uninspected.",
+      "notes": []
+    },
+    {
+      "id": "bc-enviro-screen",
+      "title": "BC EnviroScreen research reconstruction",
+      "category": "Environment",
+      "status": "unused",
+      "grain": "89 LHA rows, 21 component indicators, a province-wide comparison universe and derived composite scores.",
+      "geometry": "Exact lha_code joins: all 89 released codes exist in the Atlas native LHA index.",
+      "vintage": "Pinned 3 September 2026 release; component observation years differ. Latest status: hybrid-reconstruction.",
+      "rights": "Research reconstruction, explicitly not an official provincial or paper-author product. Underlying CANUE/health/census/environmental source terms differ.",
+      "mapNow": [
+        "Geometry join is ready using existing LHA polygons; a bounded 89-row table is possible."
+      ],
+      "missing": [
+        "Nine benchmark-derived gap indicators need prominent per-indicator provenance and source-equivalence flags.",
+        "Validate definitions, direction, normalization, missing-data treatment and intended interpretation before showing an overall score.",
+        "Keep source years and the all-89-LHA comparison universe under Northern filters."
+      ],
+      "cannot": [
+        "A composite reconstruction is not a validated health-risk probability or NHHR impact.",
+        "Underlying health/environment relationships do not establish causality.",
+        "Exact geometry coverage does not establish source equivalence."
+      ],
+      "next": "Begin with one independently sourced environmental component and its year/unit/provenance; avoid presenting the hybrid overall score as an official index.",
+      "sourcePaths": [
+        "public/data/environmental-burden/bc-enviro-screen/release/latest.json",
+        "public/data/environmental-burden/bc-enviro-screen/release/v2026-09-03-231d562533cb/manifest.json",
+        "public/data/environmental-burden/bc-enviro-screen/release/v2026-09-03-231d562533cb/lha-scores.json",
+        "public/data/environmental-burden/bc-enviro-screen/release/v2026-09-03-231d562533cb/lha-indicators.json",
+        "public/data/environmental-burden/bc-enviro-screen/release/v2026-09-03-231d562533cb/source-provenance.json",
+        "public/data/environmental-burden/bc-enviro-screen/release/v2026-09-03-231d562533cb/validation-summary.json"
+      ],
+      "verificationScope": "Pinned release manifest, score/indicator schemas, provenance and validation summaries inspected; all 89 code joins independently checked against Atlas boundaryIndex. Underlying primitive data and score equations were not reproduced.",
+      "notes": [
+        "Nine benchmark gaps include cancer, COPD, diabetes, future precipitation/temperature, renter burden, low birth weight, low income and traffic density."
+      ]
+    },
+    {
+      "id": "mhcca-inputs",
+      "title": "MHCCA climate-vulnerability FSA inputs",
+      "category": "Climate",
+      "status": "unused",
+      "grain": "193 author-prepared FSA records, 76 downloaded variables versus 80 catalogue variables; mixed aggregated/averaged/imputed inputs.",
+      "geometry": "191 matches to 2021 census FSA geometry; V7X and V7Y remain unlocated.",
+      "vintage": "Checked 22 September 2026; variable years differ and include historical averages and future temperature-change fields.",
+      "rights": "Report, author-prepared dataset, CANUE and other source terms need separate review; no blanket open licence verified.",
+      "mapNow": [
+        "Individual source inputs can be mapped at native FSA grain with appropriate definitions."
+      ],
+      "missing": [
+        "Add native FSA geometry and exact code registration to NHHR; FSA codes are not LHA codes.",
+        "Original boundary edition and selected-variable ambiguities remain unresolved.",
+        "Final CVI is explicitly not reproduced: standardized PCA fails to match the reported model.",
+        "Do not aggregate FSA rates/scores to LHA without valid denominators/methods."
+      ],
+      "cannot": [
+        "The supplied inputs are not primitive observations.",
+        "Input magnitude colours are not a verified vulnerability score or universal risk direction.",
+        "No final reproduced CVI score is available."
+      ],
+      "next": "Offer a labelled diagnostic FSA input browser after rights review; keep the unreproduced composite score out of NHHR maps.",
+      "sourcePaths": [
+        "public/data/climate-vulnerability/manifest.json",
+        "public/data/climate-vulnerability/inputs.json",
+        "public/data/climate-vulnerability/mhcca-fsa-inputs.csv",
+        "public/data/climate-vulnerability/reproducibility.json",
+        "public/data/climate-vulnerability/holdings-evidence.json"
+      ],
+      "verificationScope": "Manifest, variable headers, input cautions and reproducibility status inspected; primitive source values and PCA model not independently reconstructed.",
+      "notes": []
+    },
+    {
+      "id": "bc-climate-projections",
+      "title": "Pinned BC climate projection story sources",
+      "category": "Climate",
+      "status": "source-only",
+      "grain": "Indicator × 30-year climatology × SSP5-8.5 scenario × supplied ensemble percentile; hosted native climate cells.",
+      "geometry": "Referenced BC-intersecting vector cells from pinned R2 release 01b4b7e982f9b2e6d042; no local main climate scientific rows inspected.",
+      "vintage": "Projects updated 6 September 2026; report comparisons 1971–2000, 2041–2070 and 2071–2100.",
+      "rights": "CanDCS-U6/ClimateData.ca/PAVICS and archived ClimateBC source terms apply; archive ClimateBC version is not independently established.",
+      "mapNow": [
+        "Existing PGMaps stories demonstrate source-cell comparisons; scientific manifest/tiles remain remote and were not fetched here."
+      ],
+      "missing": [
+        "Acquire and hash-lock the exact manifest, variable/unit, periods, scenario and percentile.",
+        "Add native cell/polygon streaming and interval/scenario controls, or validate a bounded health-area aggregate.",
+        "Population-weighted report summaries require original population/grid weighting and cannot be substituted with a cell mean."
+      ],
+      "cannot": [
+        "A 30-year climatology is not a forecast for an individual year.",
+        "SSP5-8.5 has no assigned probability here; P10/P50/P90 are not three emissions scenarios.",
+        "Display bins do not classify health risk or hospital-building design temperatures."
+      ],
+      "next": "Adapt one clearly labelled heat indicator and baseline/future comparison, keeping scenario, ensemble spread and whole cell footprints explicit.",
+      "sourcePaths": [
+        "public/data/projects/northern-health-climate-resilience.json",
+        "public/data/projects/bc-climate-mean-temperature.json",
+        "scripts/generate-climate-stories.mjs"
+      ],
+      "verificationScope": "Two source packages and their sourceNote/details/layer identities inspected; scientific remote release and all other climate story packages remain catalogue-only.",
+      "notes": []
+    },
+    {
+      "id": "echoscreen-climate",
+      "title": "EchoScreen Northern climate vector output",
+      "category": "Climate",
+      "status": "source-only",
+      "grain": "Four converted layers: hot-days-past, hot-days-future, summer-precip-change and precip-change.",
+      "geometry": "Vendor output has vector assets with 9,031–12,779 features per layer; public/data/echoscreen-climate is absent despite a configured sync mapping.",
+      "vintage": "Source is NH_climate_projection_maps.gpkg; temporal/scenario/units need the individual layer manifests and original project.",
+      "rights": "User-supplied GPKG/project and upstream climate terms need review; conversion alone establishes no reuse licence.",
+      "mapNow": [
+        "Vendor conversion exists, but it is not a deployed NHHR data layer."
+      ],
+      "missing": [
+        "Review original GPKG layer units, period/scenario and nodata.",
+        "Confirm omitted/merged geometry semantics and complete conversion before syncing or releasing.",
+        "Add native grid/polygon support and a source-specific legend."
+      ],
+      "cannot": [
+        "Converted geometry counts are not valid measurements, health risk or observed patients.",
+        "A missing public deploy directory is not evidence that the source data never existed."
+      ],
+      "next": "Review one layer manifest and original source definition before generating a bounded explicit modelled dataset.",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/climate/echoscreen/output/manifest.json",
+        "public/data/projects/echoscreen-climate-health.json",
+        "scripts/sync-bcdatamapper-data.mjs"
+      ],
+      "verificationScope": "Vendor manifest and sync mapping inspected; original 82 MB GPKG and scientific layer rows uninspected.",
+      "notes": []
+    },
+    {
+      "id": "fire-danger",
+      "title": "Canadian fire-danger categorical snapshots",
+      "category": "Hazards",
+      "status": "unused",
+      "grain": "Captured CWFIS public:fdr_current_shp fire-danger category geometry.",
+      "geometry": "Multipolygon category field g and 39 generated vector tiles.",
+      "vintage": "Captured 23 June 2026, not a live current fire-danger feed.",
+      "rights": "CWFIS/source terms and class legend require original attribution/verification.",
+      "mapNow": [
+        "Dated categorical polygons/tiles can be drawn with the original class legend."
+      ],
+      "missing": [
+        "Native arbitrary-polygon or vector-tile overlay adapter, snapshot date and class decoding.",
+        "A live-warning view would need an explicit refresh/freshness pipeline."
+      ],
+      "cannot": [
+        "Fire danger is not an observed fire perimeter, evacuation order, ignition prediction or individual health risk."
+      ],
+      "next": "Use a clearly dated contextual fire-danger overlay beside Northern sites; retain missing classes and official source links.",
+      "sourcePaths": [
+        "public/data/aqmap/fire-danger-vector-tiles/manifest.json",
+        "public/data/aqmap/fire-danger-vector.geojson.gz",
+        "scripts/build-aqmap-fire-danger-vector.mjs"
+      ],
+      "verificationScope": "Manifest and one compressed feature schema inspected; current source feed/classes not refreshed.",
+      "notes": []
+    },
+    {
+      "id": "pg-planning-hazards",
+      "title": "Prince George planning hazard and evacuation layers",
+      "category": "Hazards",
+      "status": "unused",
+      "grain": "Municipal planning polygons and incident/zone metadata, separate datasets.",
+      "geometry": "400 OCP wildfire polygons, 8 OCP flood polygons and 9 evacuation-zone features.",
+      "vintage": "OCP label 2025; incident fields have dates, but capture/effective completeness was not established.",
+      "rights": "City of Prince George open-data terms; exact layer attribution/licence and incident redistribution terms need confirmation.",
+      "mapNow": [
+        "Native municipal context geometries are locally available."
+      ],
+      "missing": [
+        "Generic categorical polygon overlay support and per-layer effective dates.",
+        "Retain official class/incident status; many OCP feature schemas expose IDs without a hazard severity field.",
+        "Review geometry coverage and official layer definitions before facility intersection."
+      ],
+      "cannot": [
+        "Planning polygons are not observed burn/flood extents or probabilities.",
+        "Cached evacuation features do not establish a current order, safe route or available shelter."
+      ],
+      "next": "Compare verified current facility locations with a dated planning layer as context only, retaining municipal extent and official definition.",
+      "sourcePaths": [
+        "public/data/citypg/ocp_2025_wildfire_development.geojson",
+        "public/data/citypg/ocp_2025_flood_hazard.geojson",
+        "public/data/citypg/evacuation_zones.geojson"
+      ],
+      "verificationScope": "All three local GeoJSON schemas, feature counts and geometry types inspected; only metadata fields, not personnel values, retained.",
+      "notes": []
+    },
+    {
+      "id": "flood-advisories",
+      "title": "BC River Forecast Centre advisory archive",
+      "category": "Hazards",
+      "status": "unused",
+      "grain": "707 deduplicated discovered advisory documents; documents can have several levels/areas.",
+      "geometry": "Historical advisory polygons are not supplied; matchedBoundaries are inferred from bulletin area names.",
+      "vintage": "Discovered documents span 19 October 2010–15 May 2026; capture 16 May 2026, with unknown dates and incomplete historical discovery.",
+      "rights": "BC RFC/source-document terms apply; original official bulletin links should remain available.",
+      "mapNow": [
+        "A source timeline/table and explicitly inferred area-context map are possible."
+      ],
+      "missing": [
+        "Review each bulletin-name to canonical watershed/basin/region match and keep ambiguity.",
+        "Add source-native boundary support; these names cannot directly join LHA codes.",
+        "Do not treat the archive as complete across years or level counts as mutually exclusive events."
+      ],
+      "cannot": [
+        "Matched region context is not a flooded footprint.",
+        "Advisory frequency is not flood incidence, injury burden or a stable historical trend.",
+        "The snapshot does not establish current warnings."
+      ],
+      "next": "Use a small dated bulletin/region explorer with original URLs and clear inferred-context labels, not a flood-extent choropleth.",
+      "sourcePaths": [
+        "public/data/flood/manifest.json",
+        "public/data/flood/advisories.json",
+        "public/data/flood/discovery.json"
+      ],
+      "verificationScope": "Manifest discovery/completeness/era statistics inspected; bulletin text and all inferred boundary matches unreviewed.",
+      "notes": []
+    },
+    {
+      "id": "drought",
+      "title": "Historical BC drought basin levels",
+      "category": "Hazards",
+      "status": "unused",
+      "grain": "Source basin/date drought levels, plus canonical 2025-geometry time-series representation.",
+      "geometry": "40 canonical basins; manifest declares 9,105 canonical records and 11 yearly GeoJSON files for 2015–2025.",
+      "vintage": "2015–2025 historical source windows; stable display geometry is 2025.",
+      "rights": "BC Government/ArcGIS source terms; OGL attribution and original service identities are in metadata.",
+      "mapNow": [
+        "Source-native basin/date ordinal levels can be mapped; canonical basin IDs exist."
+      ],
+      "missing": [
+        "Add basin geometry registration and an as-of/date selector.",
+        "Review historical basin changes before using the 2025 geometry for earlier periods.",
+        "Manifest lists 562 features versus expected 563 for 2016; disclose/check that gap before completeness claims."
+      ],
+      "cannot": [
+        "Ordinal drought levels cannot be averaged or summed as a continuous severity measure.",
+        "A basin level does not establish household water availability, clinical demand or NHHR benefit."
+      ],
+      "next": "Release one source date/window with basin IDs and original level classes; retain historical-geometry and missing-record caveats.",
+      "sourcePaths": [
+        "public/data/drought/manifest.json",
+        "public/data/drought/basins.geojson",
+        "public/data/drought/timeseries.json"
+      ],
+      "verificationScope": "Yearly/canonical manifest inspected; all time-series rows and geometry transformations not validated.",
+      "notes": []
+    },
+    {
+      "id": "snow-survey",
+      "title": "BC snow survey stations and observations",
+      "category": "Hydrology",
+      "status": "unused",
+      "grain": "Station × survey date with snow depth, water equivalent and survey code; active/inactive station catalogue.",
+      "geometry": "390 manual plus 152 automated station points; 23 source basins; 540 station-basin convenience assignments.",
+      "vintage": "Manifest describes 461 current manual observations and 60,604 archive rows; exact survey dates govern interpretation. Automated live observations remain external links.",
+      "rights": "Declared Open Government Licence–BC; preserve individual source citations and measurement units.",
+      "mapNow": [
+        "Station points and a bounded selected survey series can be shown without health-area allocation."
+      ],
+      "missing": [
+        "Define source-specific units/quality codes and observation-time filters.",
+        "Review point-in-basin boundary assignments and preserve unmatched stations.",
+        "Percent-normal is absent; derive it only with an explicit validated climatological baseline."
+      ],
+      "cannot": [
+        "Snow water equivalent is not a flood forecast or household drinking-water quality.",
+        "Inactive station inventory is not current monitoring coverage."
+      ],
+      "next": "Start with Northern station map plus source water-equivalent time series and source-missing markers.",
+      "sourcePaths": [
+        "public/data/snow-survey/manifest.json",
+        "public/data/snow-survey/stations.geojson",
+        "public/data/snow-survey/manual-current.csv",
+        "public/data/snow-survey/manual-archive.csv.gz",
+        "public/data/boundaries/BCSnowSurvey/snow_survey_admin_basins.geojson"
+      ],
+      "verificationScope": "Manifest counts/limits and current CSV header sampled; full archive values and basin assignments unvalidated.",
+      "notes": []
+    },
+    {
+      "id": "river-temperature",
+      "title": "UNBC river/water-temperature reference snapshots",
+      "category": "Hydrology",
+      "status": "source-only",
+      "grain": "Station/date water and optional Daymet air temperature; source repository is an external configured dependency.",
+      "geometry": "Referenced station coordinates and date series; no corresponding source files in PGMaps/public/data.",
+      "vintage": "Source config has last_updated/daymet_last_year fields; actual dates/counts were not fetched in this audit.",
+      "rights": "UNBC reference-repository and sensor/provider licences need direct source verification.",
+      "mapNow": [
+        "PGMaps has station normalization and comparison code, but this audit establishes no loaded scientific station records."
+      ],
+      "missing": [
+        "Acquire the actual stations.json/config.json and selected observation series.",
+        "Keep missing days and the existing 75% month/season coverage rule.",
+        "Add reviewed station points and a date chart rather than assigning station measurements to entire LHAs."
+      ],
+      "cannot": [
+        "River temperature is not drinking-water potability, clinical risk or a measurement of nearby residents."
+      ],
+      "next": "Verify one Northern station catalogue and series through the reference source before releasing a small dated dataset.",
+      "sourcePaths": [
+        "src/pages/dev-water-temperature/useWaterTemperature.ts",
+        "src/pages/dev-water-temperature/data.ts",
+        "src/pages/DevWaterTemperature.tsx",
+        "vite.config.ts"
+      ],
+      "verificationScope": "Loader/schema/coverage calculation source inspected; external/local reference repository data not inspected.",
+      "notes": []
+    },
+    {
+      "id": "wars-wildlife",
+      "title": "Northern-region wildlife road-collision records (WARS)",
+      "category": "Hazards",
+      "status": "unused",
+      "grain": "Wildlife accident record and reported animal quantity; service areas 18–28 with coordinates.",
+      "geometry": "Point archive: 43,801 records and 46,759 reported animals; multiple animals can occur in one record.",
+      "vintage": "1978–2025, captured 18 July 2026; not a complete contemporary hazard feed.",
+      "rights": "Manifest names WARS Data Use Licence Agreement 2026 and all-rights-reserved provincial citation; reuse is not covered by a generic OGL assumption.",
+      "mapNow": [
+        "A permitted bounded annual/species/service-area aggregate or dated point subset is technically possible."
+      ],
+      "missing": [
+        "Review WARS agreement before redistribution.",
+        "Use true event coordinates/quality, time and distinct record IDs; preserve animal quantity as a different measure.",
+        "Road-risk rates need exposure/vehicle-kilometre denominators and a reviewed road-segment matching method."
+      ],
+      "cannot": [
+        "These are wildlife collisions, not human injury cases, water-quality data or clinic admissions.",
+        "Counts do not establish per-driver risk, current unsafe roads or a passenger travel burden."
+      ],
+      "next": "After rights review, summarize Northern collisions by year/species at original service-area grain; only map exact source points or reviewed road-bin aggregates.",
+      "sourcePaths": [
+        "public/data/wars/manifest.json",
+        "public/data/wars/northern_region_wildlife_accidents.csv.gz",
+        "public/data/wars/northern_region_wildlife_accidents.geojson.gz",
+        "vendor/bcdatamapper/datascrapers/bc/wars/output"
+      ],
+      "verificationScope": "Manifest and compressed CSV header inspected; original collisions/coordinate accuracy/record deduplication not fully audited.",
+      "notes": []
+    },
+    {
+      "id": "national-connectivity",
+      "title": "National LTE/5G and broadcasting network snapshots",
+      "category": "Infrastructure",
+      "status": "unused",
+      "grain": "CRTC reported coverage technology/year, road-coverage segments and separate broadcast stations/contours.",
+      "geometry": "Local dissolved LTE/5G multipart polygons (two combined features); 157,175 with-coverage road lines and 6,527 without; other broadcast layers are separate.",
+      "vintage": "Preferred combined overlay is year-end 2024; manifest captured 23 June 2026. Historical packages list LTE 2013–2024 and 5G 2020–2024.",
+      "rights": "Government of Canada terms are declared for CRTC/NRCan; carrier/ISED terms are source-dependent.",
+      "mapNow": [
+        "Dated native LTE/5G coverage polygon context is already locally available and is a practical addition."
+      ],
+      "missing": [
+        "NHHR needs native polygon/line context overlays and compressed GeoJSON decoding, not a forced health-area-value join.",
+        "Define technology, year and overlap rules; review hospital-point intersection before labelling coverage.",
+        "A service-quality/telehealth measure needs observed reliability, speeds, access and service data absent here."
+      ],
+      "cannot": [
+        "Reported coverage is not indoor signal quality, actual speed, outage history or ability to obtain telehealth.",
+        "Broadcast contours/stations are not mobile broadband coverage."
+      ],
+      "next": "Clip a permitted YE2024 LTE/5G context overlay to Northern BC and inspect verified facility points, with technology/year and reported-coverage wording.",
+      "sourcePaths": [
+        "public/data/network-availability/manifest.json",
+        "public/data/network-availability/crtc-wireless-coverage-current.geojson.gz",
+        "public/data/network-availability/crtc-major-roads-with-lte-5g.geojson.gz",
+        "public/data/network-availability/crtc-major-roads-without-lte-5g.geojson.gz"
+      ],
+      "verificationScope": "Manifest/local file presence and layer counts inspected; the very large multipart coverage feature was not decoded fully and road segments were not individually validated.",
+      "notes": []
+    },
+    {
+      "id": "carrier-coverage",
+      "title": "Carrier-specific mobile coverage sources",
+      "category": "Infrastructure",
+      "status": "source-only",
+      "grain": "Provider × technology × published map/tile version; five carrier catalogues.",
+      "geometry": "Manifest references mixed raster/vector carrier endpoints; public cell-coverage contains only metadata.",
+      "vintage": "Captured 26 May 2026; provider layer versions and actual tile availability were not refreshed.",
+      "rights": "Manifest warns source-dependent carrier map terms and against bulk redistribution without review.",
+      "mapNow": [
+        "PGMaps has carrier display/comparison code; remote tiles require separate availability and rights checks."
+      ],
+      "missing": [
+        "Pin permitted provider-native vector data or explicitly labelled native raster coverage; current Atlas is vector only.",
+        "Preserve technology/version/legend semantics and source uncertainty.",
+        "Do not treat pixel-traced demonstration geometry as independent provider measurements."
+      ],
+      "cannot": [
+        "Coverage maps are not measured signal, bandwidth, indoor availability, affordability or health-service uptake."
+      ],
+      "next": "Prefer the openly attributed CRTC reported-coverage context first; add carrier layers only after source/rights and version checks.",
+      "sourcePaths": [
+        "public/data/cell-coverage/manifest.json",
+        "src/pages/DevNetworks.tsx",
+        "scripts/audit-network-vectors.mjs"
+      ],
+      "verificationScope": "Provider catalogue and renderer references inspected; remote endpoints, individual tiles and provider agreements uninspected.",
+      "notes": []
+    },
+    {
+      "id": "ev-charging",
+      "title": "Canada public EV charging station context",
+      "category": "Infrastructure",
+      "status": "unused",
+      "grain": "Station versus charging unit; 15,462 station features and 42,578 units in source metadata.",
+      "geometry": "Locally available station points.",
+      "vintage": "Captured 26 May 2026; source operational status remains a historical snapshot.",
+      "rights": "NLR Alternative Fuel Stations API terms declared; attribution/reuse conditions need direct review.",
+      "mapNow": [
+        "A bounded Northern charging-station point subset is technically ready after source-field review."
+      ],
+      "missing": [
+        "Review station IDs/coordinates/status and distinguish station counts from units/connectors.",
+        "No actual charging availability, outages or route-range model is supplied."
+      ],
+      "cannot": [
+        "Station inventory does not establish an available charger, accessibility, vehicle range or patient ability to travel."
+      ],
+      "next": "Offer dated station context near reviewed routes/sites, keeping source status and connector metadata separate from any travel scenario.",
+      "sourcePaths": [
+        "public/data/ev-charging/manifest.json",
+        "public/data/ev-charging/stations.geojson"
+      ],
+      "verificationScope": "Manifest counts/resources and local file presence inspected; station records/coordinates and live status not reviewed.",
+      "notes": []
+    },
+    {
+      "id": "open-litter",
+      "title": "OpenLitterMap crowdsourced Prince George observations",
+      "category": "Local environment",
+      "status": "unused",
+      "grain": "Uploaded litter observations/objects; effort is concentrated in a small number of contributors.",
+      "geometry": "Point snapshots exist; public geometry/hex methods require a privacy-preserving aggregate review.",
+      "vintage": "Manifest: 18,981 mapped records, dates March 2019–July 2024; capture 28 June 2026.",
+      "rights": "Manifest explicitly says verify current OpenLitterMap reuse terms; contributor/observer fields must not enter a new public release.",
+      "mapNow": [
+        "A permitted de-identified hex/community count layer is possible after aggregation/rights review."
+      ],
+      "missing": [
+        "Exclude usernames, contributor identity and unnecessary precise movement traces.",
+        "Define spatial binning, record/object counts, pickup state and observation-effort bias.",
+        "Compare native geometry and any client-side hex aggregation before publishing."
+      ],
+      "cannot": [
+        "Upload density is not litter prevalence or complete municipal cleanliness.",
+        "Unobserved areas are not clean areas; counts do not establish health burden."
+      ],
+      "next": "Review a coarse de-identified aggregate with original dates and contribution-effort caveats; do not copy person-level raw attributes.",
+      "sourcePaths": [
+        "public/data/open-litter-map/manifest.json",
+        "public/data/open-litter-map"
+      ],
+      "verificationScope": "Manifest structure/counts inspected; contributor values and raw point records deliberately not inspected or copied.",
+      "notes": []
+    },
+    {
+      "id": "city-parks-ecology",
+      "title": "CityPG parks, trees, ecology and amenity assets",
+      "category": "Local environment",
+      "status": "unused",
+      "grain": "Municipal asset/ecological feature, with heterogeneous lifecycle and attribute definitions.",
+      "geometry": "Points, lines and polygons: 5,438 tree points, 201 playing areas, 73 park facility polygons, 736 high-conservation features and 33 outdoor rink points inspected.",
+      "vintage": "Capture/effective dates vary; filenames alone do not establish active/current assets.",
+      "rights": "CityPG open-data terms declared in catalogue; each source layer/attribute licence and update date need preservation.",
+      "mapNow": [
+        "Locally available native geometries can support a municipal green-space/amenity context view."
+      ],
+      "missing": [
+        "NHHR needs native heterogeneous point/line/polygon overlays or a reviewed aggregate at a chosen municipal boundary.",
+        "Accessibility needs validated entrances, routes, opening/access restrictions and a stated distance/time model.",
+        "Tree inventory is not canopy coverage; feature/asset counts are not area or access measures."
+      ],
+      "cannot": [
+        "Municipal extent is not the Prince George LHA or all Northern communities.",
+        "Asset presence does not establish usable greenspace, current maintenance or health benefit."
+      ],
+      "next": "Start with a dated park/tree-presence overlay around verified sites; derive access only from a reviewed network and access definition.",
+      "sourcePaths": [
+        "public/data/citypg/parks_trees.geojson",
+        "public/data/citypg/parks_playing_areas.geojson",
+        "public/data/citypg/parks_facilities.geojson",
+        "public/data/citypg/ecology_high_conservation_value.geojson",
+        "public/data/citypg/ecology_riparian_areas.geojson",
+        "public/data/citypg/ecology_sensitivity.geojson",
+        "public/data/citypg/outdoor_ice_rinks.geojson"
+      ],
+      "verificationScope": "Bounded local GeoJSON schemas, counts and geometry types inspected. Large riparian/sensitivity files were only inventoried; no full geometry/asset validity check.",
+      "notes": []
+    },
+    {
+      "id": "heat-shade-proxies",
+      "title": "Tree/shade/cooling-access and Landsat scene metadata",
+      "category": "Local environment",
+      "status": "unused",
+      "grain": "Presence proxies and scene metadata; not a measured heat/canopy surface.",
+      "geometry": "Seven declared sources: tree points, park/open-space/intact/community forest polygons, facility proxies and Landsat scene metadata.",
+      "vintage": "Captured 3 May 2026; raster acquisition dates vary by scene.",
+      "rights": "CityPG and Landsat/source terms differ; source scene links are metadata, not processed values.",
+      "mapNow": [
+        "Tree/park/forest presence proxies can be drawn at native geometry with explicit labels."
+      ],
+      "missing": [
+        "Actual NDVI/LST needs raster reading, cloud masks, scale factors and reviewed zonal aggregation.",
+        "Cooling-centre status requires independent current operational verification.",
+        "Canopy/shade requires canopy polygons or LiDAR and a defined solar/geometry model."
+      ],
+      "cannot": [
+        "Tree points are not a canopy raster, measured shade or temperature reduction.",
+        "Community/response facilities are not confirmed active cooling centres."
+      ],
+      "next": "Use labelled green-space/tree presence first; process a bounded Landsat scene only after QA/units and region aggregation are specified.",
+      "sourcePaths": [
+        "public/data/heat-shade/manifest.json",
+        "public/data/heat-shade/citypg_trees.geojson",
+        "public/data/heat-shade/citypg_park_open_spaces.geojson",
+        "public/data/heat-shade/landsat_warm_season_scenes.json"
+      ],
+      "verificationScope": "Manifest source counts and caveats inspected; no Landsat pixel processing or cooling-centre validation.",
+      "notes": []
+    },
+    {
+      "id": "forest-visual-inventory",
+      "title": "Forest visual sensitivity, VQO and forestry modelling",
+      "category": "Forestry",
+      "status": "unused",
+      "grain": "Visual inventory unit and modelled viewing station/landform/harvest scenario; not a health indicator.",
+      "geometry": "10,000 source sensitivity features in 100 spatial shards, with original full-resolution geometry.",
+      "vintage": "Manifest sourceLatestUpdate is 2019; current VRI/harvest queries are live exceptions, not a unified snapshot.",
+      "rights": "Declared OGL-BC for visual inventory; DEM and other source/model terms remain separate.",
+      "mapNow": [
+        "Native visual-sensitivity geometry can be shown as forest-planning context."
+      ],
+      "missing": [
+        "Spatial shard loading, ordinal class legends and forestry-specific state are not present in NHHR.",
+        "Full terrain/vegetation/treed-area basis and reviewer-confirmed landform are required for the VQO/VIA model.",
+        "Do not simplify adjacent units independently or silently change the source denominator."
+      ],
+      "cannot": [
+        "Visual sensitivity/forestry percentages are not disease risk, air pollution or habitat health.",
+        "Nearest sensitivity unit is only a review candidate; perspective and planimetric thresholds differ."
+      ],
+      "next": "Keep forestry maps as a linked specialist viewer unless a specific environmental-context question justifies a small documented overlay.",
+      "sourcePaths": [
+        "public/data/forest/visual-inventory/manifest.json",
+        "public/data/forest/visual-inventory",
+        "src/pages/dev-forestry/terrain.ts",
+        "docs/forestry-visual-quality.md"
+      ],
+      "verificationScope": "Manifest and repository renderer constraints inspected; individual shards and forestry model outputs unvalidated.",
+      "notes": []
+    },
+    {
+      "id": "species-big-trees",
+      "title": "Species observations and heritage/big-tree locations",
+      "category": "Forestry",
+      "status": "unused",
+      "grain": "Public observation/taxon or individual registered tree, with uneven reporting/coordinate accuracy.",
+      "geometry": "Species archive metadata describes 118,350 observations across 1,665 taxa; big-tree point asset exists.",
+      "vintage": "Species snapshot 28 August 2026, observations 1973–2026; tree effective dates not checked.",
+      "rights": "Mixed observation licences include non-commercial/no-derivatives and 13,576 null licences; no blanket redistribution permission. Respect location obscuration and avoid observer identities.",
+      "mapNow": [
+        "Permitted coarse biodiversity/heritage context is technically possible after source/rights and location-sensitivity review."
+      ],
+      "missing": [
+        "Native point aggregation/zoom filtering and licence/obscuration-aware release selection.",
+        "Legal conservation designations need authoritative crosswalks, not the iNaturalist threatened flag."
+      ],
+      "cannot": [
+        "Observation density is not abundance, habitat suitability, absence or an official species-risk designation.",
+        "Tree record locations do not establish canopy coverage or current tree condition."
+      ],
+      "next": "Prefer a de-identified permitted regional observation summary or specialist source link; preserve missing/obscured locations.",
+      "sourcePaths": [
+        "public/data/forest/species-at-risk/inaturalist_species_at_risk_live_2026-08-28.manifest.json",
+        "public/data/forest/species-at-risk/inaturalist_species_at_risk_live_latest.json",
+        "public/data/forest/big-trees/bc_bigtree_registry.geojson"
+      ],
+      "verificationScope": "Species manifest counts, licence distribution and caveat inspected; large observation records and observer identities deliberately uninspected.",
+      "notes": []
+    },
+    {
+      "id": "cciss",
+      "title": "CCISS tree-species climate suitability reference and trace layers",
+      "category": "Forestry",
+      "status": "unused",
+      "grain": "Species/site/period reference tables and inferred display-class grid polygons; several artifacts are rendering experiments.",
+      "geometry": "Historical Pl/C4 output has 79,887 polygon features; province trace reconstructs an assumed 10-arc-second grid from display classes.",
+      "vintage": "Pinned package 1.0.3, deployed version unverified; historical test, current reference and inferred public traces are distinct.",
+      "rights": "Original CCISS/package/source-map terms must be verified; traced display data should not be relabelled authoritative model outputs.",
+      "mapNow": [
+        "Existing polygon traces can be shown only with their experiment/inferred-display labels."
+      ],
+      "missing": [
+        "Current Shiny compatibility is false; key schema fields and 14 prediction/site lookup inputs are absent.",
+        "Source model arrays, exact site lookup and class semantics are required for analytical suitability maps.",
+        "Add tiled polygon/grid streaming and explicit resolution/coverage/nodata states."
+      ],
+      "cannot": [
+        "A rendered colour trace is not independently recovered numerical suitability.",
+        "Tree-species suitability is not clinical health vulnerability or wildfire probability."
+      ],
+      "next": "Retain as specialist forestry source material; acquire original numerical/site model outputs before using an analytic metric.",
+      "sourcePaths": [
+        "public/data/cciss/current-reference/manifest.json",
+        "public/data/cciss/historical-Pl-C4-polygons/manifest.json",
+        "public/data/cciss/public-grid-trace/polygons/manifest.json",
+        "public/data/cciss/province-grid-trace/polygons/manifest.json"
+      ],
+      "verificationScope": "Four manifests and incompatibility/missing-input declarations inspected; original model arrays/site predictions and geometry reconstruction were not independently reproduced.",
+      "notes": []
+    },
+    {
+      "id": "outdoor-wildlife-units",
+      "title": "BC wildlife management unit boundaries",
+      "category": "Outdoors",
+      "status": "unused",
+      "grain": "Regulatory management unit, not a health-region or population denominator.",
+      "geometry": "225 BC units, EPSG:4326, shared-topology 10 m simplification from EPSG:3005; metadata reports max area drift 0.368641%.",
+      "vintage": "Source modification 10 March 2026; output captured 19 August 2026.",
+      "rights": "Declared OGL-BC; preserve source layer, simplification and attribution.",
+      "mapNow": [
+        "Native unit polygons are available for contextual ecology/regulatory mapping."
+      ],
+      "missing": [
+        "Register source unit codes/geometry, or perform explicit overlay analysis with documented areas.",
+        "Current activity permissions require regulations/effective dates beyond boundary geometry."
+      ],
+      "cannot": [
+        "Unit boundaries alone do not establish hunting/fishing permission, land access, Indigenous territory or health catchments."
+      ],
+      "next": "Use only for a stated wildlife/ecological source-grain question; do not reuse its unit IDs as LHA codes.",
+      "sourcePaths": [
+        "public/data/bc/outdoors/manifest.json",
+        "public/data/bc/outdoors/regulatory/wildlife-management-units.geojson.gz"
+      ],
+      "verificationScope": "Manifest source CRS, feature count, topology and area-drift metadata inspected; full boundary geometry not independently validated.",
+      "notes": []
+    },
+    {
+      "id": "planned-outdoor-access",
+      "title": "Planned outdoor access, waterway and regulatory layers",
+      "category": "Outdoors",
+      "status": "unavailable",
+      "grain": "Seven planned families: limited-entry hunting, vehicle closures, corridors, land status, boat access, waterways and fishing zones.",
+      "geometry": "No corresponding completed scientific layers declared in the inspected manifest.",
+      "vintage": "Not established; planned is not a captured/effective source dataset.",
+      "rights": "Source/rights/effective-date review still required for each proposed family.",
+      "mapNow": [
+        "No complete mapped-data release established; the manifest complete flag applies to its one delivered wildlife-unit layer."
+      ],
+      "missing": [
+        "Acquire original legal/official layer geometries, IDs, dates and source conditions.",
+        "Water/land access needs topology and reviewed access points, not label-only anchors."
+      ],
+      "cannot": [
+        "A planned layer list does not prove assets, routes, open access or current legal permissions exist."
+      ],
+      "next": "Choose one necessary family, obtain the official source and validate temporal/geometry semantics before implementing any map.",
+      "sourcePaths": [
+        "public/data/bc/outdoors/manifest.json"
+      ],
+      "verificationScope": "Planned-layer catalogue inspected only; no source files or scientific rows inspected.",
+      "notes": []
+    },
+    {
+      "id": "environmental-reporting",
+      "title": "BC environmental reporting and ecosystem indicators",
+      "category": "Environment",
+      "status": "unused",
+      "grain": "Distinct grains: 2018 grizzly unit, ecological drainage unit, and regional-district waste/population indicator.",
+      "geometry": "59 grizzly units, 36 ecological drainage units, 29 regional-district attribute records joined to existing census-division geometry.",
+      "vintage": "Capture 13 August 2026; grizzly edition 2018, waste latest 2023 and population latest 2025.",
+      "rights": "BC environmental/census source terms apply; preserve per-indicator publisher and source edition.",
+      "mapNow": [
+        "Local native source geometries and regional-district attributes are available."
+      ],
+      "missing": [
+        "Register native unit/regional-district IDs and preserve distinct denominators/years.",
+        "Review 122 nearest-assigned invasive occurrences; proximity assignment is not a verified exact location.",
+        "Do not force ecological/drainage counts into health regions without an explicit crosswalk and valid aggregation."
+      ],
+      "cannot": [
+        "Wildlife/invasive/waste indicators are not individual exposure or clinical outcomes.",
+        "Waste rates and population changes cannot be averaged without their source denominators."
+      ],
+      "next": "Begin with a labelled regional waste-rate or native ecosystem-context view, keeping each geography and observation year separate.",
+      "sourcePaths": [
+        "public/data/bc/environmental-reporting/manifest.json",
+        "public/data/bc/environmental-reporting/regional_district_environmental_indicators.json",
+        "public/data/boundaries/BCWildlife/grizzly_bear_population_units_2018.geojson",
+        "public/data/boundaries/BCEcology/ecological_drainage_units_aquatic_invasive_species.geojson"
+      ],
+      "verificationScope": "Manifest source statistics, output identities and regional-district schema/counts inspected; underlying mortality/occurrence rows and assignments not independently validated.",
+      "notes": []
+    },
+    {
+      "id": "industrial-environment-inputs",
+      "title": "Industrial/remediation/disturbance reconstruction inputs",
+      "category": "Environment",
+      "status": "source-only",
+      "grain": "Original industrial site or normalized LHA candidate indicator; reconstruction is separate from regulatory measurements.",
+      "geometry": "Source inventory includes mines/refineries/oil-gas fields/mills; candidate LHA tables reference selected normalized values.",
+      "vintage": "Source vintages differ; file names and candidate status do not establish current industrial operations.",
+      "rights": "NRCan/BC/source-specific terms and original source labels need direct review.",
+      "mapNow": [
+        "Specific independently sourced site geometry may support an environmental context overlay."
+      ],
+      "missing": [
+        "Verify exact original source, operational status, coordinates and emission/remediation definitions.",
+        "Retain candidate/source-equivalence flags and reviewed aggregation."
+      ],
+      "cannot": [
+        "Industrial site presence is not measured pollution, personal exposure, toxic dose or causal disease risk."
+      ],
+      "next": "Acquire one authoritative current/historical site inventory and keep presence distinct from any measured emission indicator.",
+      "sourcePaths": [
+        "public/data/environmental-burden/bc-enviro-screen/rebuilt-nrcan-industrial-lha/manifest.json",
+        "public/data/environmental-burden/bc-enviro-screen/raw-rebuild-seed/compact/nrcan-industrial",
+        "public/data/environmental-burden/bc-enviro-screen/release/v2026-09-03-231d562533cb/source-provenance.json"
+      ],
+      "verificationScope": "File presence and research-release source provenance inspected; underlying industrial geometry/measurement records catalogue-only.",
+      "notes": []
+    },
+    {
+      "id": "terrain-context",
+      "title": "Terrain, hillshade and flatten/visibility dependencies",
+      "category": "Terrain",
+      "status": "source-only",
+      "grain": "DEM tile or modelled viewing station/route; rendered hillshade is not an observation table.",
+      "geometry": "Remote AWS Terrarium raster DEM and local hillshade; PG/SF graphs are separate routing inputs assigned to the access audit.",
+      "vintage": "DEM mosaic edition/resolution depends on source/zoom; PG flatten source has OSM/elevation hashes and stated terrain estimates.",
+      "rights": "AWS terrain/source DEM and graph-engine/OSM licences need separate retention; do not infer a single licence from toolkit code.",
+      "mapNow": [
+        "PGMaps already has terrain/visibility specialist renderers; source DEM availability was not fetched here."
+      ],
+      "missing": [
+        "NHHR currently lacks analytical raster DEM/terrain, tile decoding and worker/visibility model interfaces.",
+        "Keep missing terrain unknown, source resolution and coordinate registration explicit.",
+        "Visibility/access models need their own reviewer assumptions and data coverage."
+      ],
+      "cannot": [
+        "Terrain-only visibility is not cellular signal or guaranteed accessibility.",
+        "Regional terrain is not LiDAR; bridges/tunnels and missing turn restrictions limit route interpretations."
+      ],
+      "next": "Link the existing specialist tool first; add terrain only for a concrete environmental/access question with preserved resolution, licence and modelling assumptions.",
+      "sourcePaths": [
+        "src/pages/dev-forestry/terrain.ts",
+        "src/features/terrain-viewshed/README.md",
+        "public/data/flatten-pg/sources.json",
+        "public/data/flatten-pg/hillshade-0a48f5edbc.png",
+        "public/data/flatten-sf"
+      ],
+      "verificationScope": "Terrain/source documentation and flatten provenance schema inspected; raster pixels and graph/model outputs not audited.",
+      "notes": []
+    },
+    {
+      "id": "historic-fallout",
+      "title": "Historical Canadian fallout reporting posts and shelters",
+      "category": "Historical infrastructure",
+      "status": "unused",
+      "grain": "Historical archival reporting post/shelter or communication line, approximately circa 1963.",
+      "geometry": "1,747 features: 1,439 points and 308 lines; source says shelter locations are approximate.",
+      "vintage": "KML conversion 14 June 2026; subject period is circa 1963 and contributing map began 2014.",
+      "rights": "Google My Maps/archival/contributor rights not established by the local KML copy.",
+      "mapNow": [
+        "Historical context can be mapped after archive/source rights and approximate-location review."
+      ],
+      "missing": [
+        "Keep historical period, approximate accuracy and provenance with every feature.",
+        "No current facility certification or operational data is supplied."
+      ],
+      "cannot": [
+        "These are not current emergency shelters, safe destinations or measured radiation levels."
+      ],
+      "next": "Keep outside the clinical Atlas unless a clearly historical research story needs it; link the archival source and mark approximate points.",
+      "sourcePaths": [
+        "public/data/fallout/fallout-reporting-posts-canada-summary.json",
+        "public/data/fallout/fallout-reporting-posts-canada.geojson",
+        "public/data/fallout/fallout-reporting-posts-canada.kml"
+      ],
+      "verificationScope": "Summary counts/description inspected; original archival location accuracy and individual records unreviewed.",
+      "notes": []
+    },
+    {
+      "id": "nechako-research-portal",
+      "title": "Nechako public research and GIS service showcase",
+      "category": "Research environment",
+      "status": "unused",
+      "grain": "Public research record/location reference, bibliography entry or WMS service/layer metadata; these grains lack a verified common ID crosswalk.",
+      "geometry": "1,408 research records; 51 location IDs, 46 mapped locations, 365 unmapped records; 32 WMS services and 135 named layers are catalogue entries.",
+      "vintage": "Public capture 11 October 2026; saved public projects captured 12 October 2026. Research dates span 12 decades.",
+      "rights": "Each research attachment, WMS service and bibliography source retains its own rights; public metadata is not a universal GIS-data licence.",
+      "mapNow": [
+        "Public research-reference points and source links can support a separate literature/location explorer."
+      ],
+      "missing": [
+        "Verify research-location definitions and deduplicate original identities before joining to NHHR study evidence.",
+        "WMS capabilities are metadata; data layers/identify depend on live services and a missing NHHR WMS adapter.",
+        "No verified crosswalk exists among research IDs, Zotero keys and portal submission IDs."
+      ],
+      "cannot": [
+        "Mapped literature references are not clinical trial sites, participant locations or completed NHHR research.",
+        "Named WMS layers do not establish locally available scientific rows."
+      ],
+      "next": "Offer a linked regional research-source catalogue first; only add a bounded public location/reference table after identity and rights review.",
+      "sourcePaths": [
+        "public/data/nechako-showcase/manifest.json",
+        "public/data/nechako-showcase/public-projects/index.json",
+        "src/maps/nechako/data/portalInventory.ts"
+      ],
+      "verificationScope": "Manifest counts/limitations inspected; WMS services, attachments and underlying portal GIS databases not fetched; private submissions were excluded upstream.",
+      "notes": []
+    }
+  ],
+  "inventory": {
+    "rootManifest": {
+      "path": "public/data/manifest.json",
+      "sha256": "c541eee0701aaf34332f421f3b5c40a338055c3581d23d098f43aaac3775122a",
+      "meaning": "Air-only catalogue, not an exhaustive PGMaps data manifest.",
+      "generatedAt": "2025-10-18T01:44:05.257Z",
+      "airRecords": 3712,
+      "networks": 12
+    },
+    "syncScript": {
+      "path": "scripts/sync-bcdatamapper-data.mjs",
+      "sha256": "d623cd6ba8677eb05e1935cd5d40c17bd1c7f277d34d8709e459d2a83be6f873",
+      "notExecuted": true,
+      "ownership": "vendor/bcdatamapper is scraper source of truth; public copies are generated. App-owned projects, Nechako showcase, story-documents, flatten assets and smoke are preserved.",
+      "conditionalRestrictedData": "Restricted early-learning mappings require PGMAPS_INCLUDE_RESTRICTED_EARLY_LEARNING=1; records not inspected in this fragment.",
+      "skippedRebuildInputs": "Large reconstruction seeds, CANUE postal aggregates and traffic report PDFs are intentionally not deploy copies.",
+      "mappings": [
+        {
+          "source": "vendor/bcdatamapper/datascrapers/air/output",
+          "target": "public/data/.",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "contentMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/boundaries/output",
+          "target": "public/data/boundaries",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "contentMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/tenures/output",
+          "target": "public/data/boundaries",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "contentMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/climate/echoscreen/output",
+          "target": "public/data/echoscreen-climate",
+          "sourceExists": true,
+          "targetExists": false,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/cciss/output",
+          "target": "public/data/cciss",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/laep/output",
+          "target": "public/data/bc/laep",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/mhcca-cvi/output",
+          "target": "public/data/climate-vulnerability",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/forest-map-sources/output/visual-inventory",
+          "target": "public/data/forest/visual-inventory",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/manual/output/acknowledgement",
+          "target": "public/data/acknowledgement",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/manual/output/indicators",
+          "target": "public/data/indicators",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/data-sources/healthdata/bc_wait_times/output/bc-wait-specialists.json",
+          "target": "public/data/bc-wait-specialists.json",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/data-sources/healthdata/erstat/output/erstat-hospitals.json",
+          "target": "public/data/erstat-hospitals.json",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/data-sources/healthdata/health_place_registry/health_place_registry.csv",
+          "target": "public/data/health/health-place-registry.csv",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/data-sources/healthdata/health_place_registry/health_place_registry.geojson",
+          "target": "public/data/health/health-place-registry.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/data-sources/healthdata/health_place_registry/health_place_sites.csv",
+          "target": "public/data/health/health-place-sites.csv",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/data-sources/healthdata/health_place_registry/health_place_sites.geojson",
+          "target": "public/data/health/health-place-sites.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/data-sources/healthdata/statcan_odhf/output/statcan-odhf-bc.csv",
+          "target": "public/data/health/statcan-odhf-bc.csv",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/data-sources/healthdata/statcan_odhf/output/statcan-odhf-bc.geojson",
+          "target": "public/data/health/statcan-odhf-bc.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/health/msp-facilities/output/msp-facilities.geojson",
+          "target": "public/data/health/msp-facilities.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/health/msp-facilities/output/msp-facility-geocode-cache.json",
+          "target": "public/data/health/msp-facility-geocode-cache.json",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/fallout/output",
+          "target": "public/data/fallout",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/citypg/output",
+          "target": "public/data/citypg",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/citypg/output-boundaries/CityPG",
+          "target": "public/data/boundaries/CityPG",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/drought/output",
+          "target": "public/data/drought",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/environmental-reporting/output/manifest.json",
+          "target": "public/data/bc/environmental-reporting/manifest.json",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/environmental-reporting/output/regional_district_environmental_indicators.json",
+          "target": "public/data/bc/environmental-reporting/regional_district_environmental_indicators.json",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/environmental-reporting/output/grizzly_bear_population_units_2018.geojson",
+          "target": "public/data/boundaries/BCWildlife/grizzly_bear_population_units_2018.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/environmental-reporting/output/aquatic_invasive_species_by_edu.geojson",
+          "target": "public/data/boundaries/BCEcology/ecological_drainage_units_aquatic_invasive_species.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/snow-survey/output",
+          "target": "public/data/snow-survey",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/assessment/output",
+          "target": "public/data/bc-assessment",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/census/output",
+          "target": "public/data/census",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/canada/admin-geographies/output",
+          "target": "public/data/canada-admin",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/outdoors/output",
+          "target": "public/data/bc/outdoors",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/forest-map-sources/output/bc_bigtree_registry.geojson",
+          "target": "public/data/forest/big-trees/bc_bigtree_registry.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/forest-map-sources/output/species-at-risk",
+          "target": "public/data/forest/species-at-risk",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/transit/output",
+          "target": "public/data/transit",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/icbc/output",
+          "target": "public/data/icbc",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/wars/output",
+          "target": "public/data/wars",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/nechako-portal/output",
+          "target": "public/data/nechako-portal",
+          "sourceExists": true,
+          "targetExists": false,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/ev-charging/output",
+          "target": "public/data/ev-charging",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/network-availability/output",
+          "target": "public/data/network-availability",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/open-litter-map/output",
+          "target": "public/data/open-litter-map",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/cell-coverage/output",
+          "target": "public/data/cell-coverage",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/healthyplan-pg/output",
+          "target": "public/data/healthyplan-pg",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/heat-shade/output",
+          "target": "public/data/heat-shade",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/eccc/output",
+          "target": "public/data/aqmap",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/citypg/source/heat-shade/citypg_trees.geojson",
+          "target": "public/data/heat-shade/citypg_trees.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/citypg/source/heat-shade/citypg_park_open_spaces.geojson",
+          "target": "public/data/heat-shade/citypg_park_open_spaces.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/citypg/source/heat-shade/citypg_intact_forest.geojson",
+          "target": "public/data/heat-shade/citypg_intact_forest.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/citypg/source/heat-shade/citypg_community_forests.geojson",
+          "target": "public/data/heat-shade/citypg_community_forests.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/citypg/source/heat-shade/citypg_community_facility.geojson",
+          "target": "public/data/heat-shade/citypg_community_facility.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/citypg/source/heat-shade/citypg_response_facilities.geojson",
+          "target": "public/data/heat-shade/citypg_response_facilities.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/walkability/output",
+          "target": "public/data/walkability",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/walkability/source",
+          "target": "public/data/walkability/source",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/citypg/source/public_gis",
+          "target": "public/data/walkability/source/data/public_gis",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/walkability/source/data/supplemental/osm_crossings.geojson",
+          "target": "public/data/walkability/supplemental/osm_crossings.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/walkability/source/data/supplemental/osm_daycares.geojson",
+          "target": "public/data/walkability/supplemental/osm_daycares.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/childcare/output/bc_childcare_locations.geojson",
+          "target": "public/data/walkability/source/data/supplemental/bc_childcare_locations.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/childcare/output/bc_childcare_locations.geojson",
+          "target": "public/data/walkability/supplemental/bc_childcare_locations.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/output/BCSchoolDistricts",
+          "target": "public/data/boundaries/BCSchoolDistricts",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/output/index.json",
+          "target": "public/data/bc/early-learning-boundaries/index.json",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/output/audit-report.json",
+          "target": "public/data/bc/early-learning-boundaries/audit-report.json",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/transit/source/intercity_bus_stops.geojson",
+          "target": "public/data/walkability/source/data/supplemental/intercity_bus_stops.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/transit/source/intercity_bus_stops.geojson",
+          "target": "public/data/walkability/supplemental/intercity_bus_stops.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/transit/source/bc_transit_pg_stops.geojson",
+          "target": "public/data/walkability/source/data/supplemental/bc_transit_pg_stops.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/walkability/source/data/supplemental/report_class3_crosswalks_geocoded.geojson",
+          "target": "public/data/walkability/supplemental/report_class3_crosswalks_geocoded.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/walkability/source/mobility_reconstruction/missing_poi_supplement.geojson",
+          "target": "public/data/walkability/supplemental/missing_poi_supplement.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/walkability/source/mobility_reconstruction/public_mobility_index_asset_scores.csv",
+          "target": "public/data/walkability/assets/public_mobility_index_asset_scores.csv",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/walkability/source/mobility_reconstruction/prioritization/asset_priority_ranked.csv",
+          "target": "public/data/walkability/assets/asset_priority_ranked.csv",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/walkability/source/mobility_reconstruction/prioritization/asset_priority_with_costs.csv",
+          "target": "public/data/walkability/assets/asset_priority_with_costs.csv",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/flood/output",
+          "target": "public/data/flood",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/food-health/output/water",
+          "target": "public/data/water",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/food-health/output/geocoding",
+          "target": "public/data/geocoding",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/food-health/output/restaurants.json",
+          "target": "public/data/restaurants.json",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/food-health/output/restaurant-classifications.json",
+          "target": "public/data/restaurant-classifications.json",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/food-health/output/restaurant-location-overrides.json",
+          "target": "public/data/restaurant-location-overrides.json",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/indigenous/snapshot",
+          "target": "public/data/indigenous",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/fpcc/output/language-geo.geojson",
+          "target": "public/data/fpcc/language-geo.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/fpcc/output/community-geo.geojson",
+          "target": "public/data/fpcc/community-geo.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/fpcc/output/placename-geo.geojson",
+          "target": "public/data/fpcc/placename-geo.geojson",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/native-land/snapshot",
+          "target": "public/data/native-land",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "pathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/environmental-burden/output/bc-enviro-screen",
+          "target": "public/data/environmental-burden/bc-enviro-screen",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "optionalPathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/health/phsa-community-health/output",
+          "target": "public/data/health/phsa-community-health",
+          "sourceExists": false,
+          "targetExists": false,
+          "mappingGroup": "optionalPathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/health/bccdc-chronic-disease-tableau/output",
+          "target": "public/data/health/bccdc-chronic-disease-tableau",
+          "sourceExists": false,
+          "targetExists": false,
+          "mappingGroup": "optionalPathMappings",
+          "defaultEnabled": true
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/cache/help_neighbourhoods.geojson",
+          "target": "public/data/boundaries/BCHELP/help_neighbourhoods.geojson",
+          "sourceExists": true,
+          "targetExists": false,
+          "mappingGroup": "restrictedEarlyLearningMappings",
+          "defaultEnabled": false
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/cache/mcfd_regions.geojson",
+          "target": "public/data/boundaries/BCMCFD/mcfd_regions.geojson",
+          "sourceExists": true,
+          "targetExists": false,
+          "mappingGroup": "restrictedEarlyLearningMappings",
+          "defaultEnabled": false
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/cache/mcfd_service_delivery_areas.geojson",
+          "target": "public/data/boundaries/BCMCFD/mcfd_service_delivery_areas.geojson",
+          "sourceExists": true,
+          "targetExists": false,
+          "mappingGroup": "restrictedEarlyLearningMappings",
+          "defaultEnabled": false
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/cache/mcfd_local_service_areas.geojson",
+          "target": "public/data/boundaries/BCMCFD/mcfd_local_service_areas.geojson",
+          "sourceExists": true,
+          "targetExists": false,
+          "mappingGroup": "restrictedEarlyLearningMappings",
+          "defaultEnabled": false
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/cache/dashboard_mcfd_local_service_areas.geojson",
+          "target": "public/data/boundaries/BCMCFD/dashboard_historical_mcfd_local_service_areas.geojson",
+          "sourceExists": true,
+          "targetExists": false,
+          "mappingGroup": "restrictedEarlyLearningMappings",
+          "defaultEnabled": false
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/cache/dashboard_mcfd_local_service_areas.geojson.gz",
+          "target": "public/data/boundaries/BCMCFD/dashboard_historical_mcfd_local_service_areas.geojson.gz",
+          "sourceExists": true,
+          "targetExists": false,
+          "mappingGroup": "restrictedEarlyLearningMappings",
+          "defaultEnabled": false
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/cache/dashboard_mcfd_service_delivery_areas.geojson",
+          "target": "public/data/boundaries/BCMCFD/dashboard_historical_mcfd_service_delivery_areas.geojson",
+          "sourceExists": true,
+          "targetExists": false,
+          "mappingGroup": "restrictedEarlyLearningMappings",
+          "defaultEnabled": false
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/cache/dashboard_mcfd_service_delivery_areas.geojson.gz",
+          "target": "public/data/boundaries/BCMCFD/dashboard_historical_mcfd_service_delivery_areas.geojson.gz",
+          "sourceExists": true,
+          "targetExists": false,
+          "mappingGroup": "restrictedEarlyLearningMappings",
+          "defaultEnabled": false
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/cache/dashboard_mcfd_regions.geojson",
+          "target": "public/data/boundaries/BCMCFD/dashboard_historical_mcfd_regions.geojson",
+          "sourceExists": true,
+          "targetExists": false,
+          "mappingGroup": "restrictedEarlyLearningMappings",
+          "defaultEnabled": false
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/cache/dashboard_mcfd_regions.geojson.gz",
+          "target": "public/data/boundaries/BCMCFD/dashboard_historical_mcfd_regions.geojson.gz",
+          "sourceExists": true,
+          "targetExists": false,
+          "mappingGroup": "restrictedEarlyLearningMappings",
+          "defaultEnabled": false
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/bc/early-learning-boundaries/cache/dashboard_mcfd_boundary_index.json",
+          "target": "public/data/boundaries/BCMCFD/index.json",
+          "sourceExists": true,
+          "targetExists": false,
+          "mappingGroup": "restrictedEarlyLearningMappings",
+          "defaultEnabled": false
+        },
+        {
+          "source": "vendor/bcdatamapper/datascrapers/environmental-burden/bcenviroscreen/release-snapshot",
+          "target": "public/data/environmental-burden/bc-enviro-screen/release",
+          "sourceExists": true,
+          "targetExists": true,
+          "mappingGroup": "authoritative-release-copy",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    "topLevelDirectories": 46,
+    "topLevelDataFiles": 9,
+    "topLevelAssets": [
+      {
+        "path": "public/data/acknowledgement",
+        "kind": "directory",
+        "files": 3,
+        "bytes": 43924,
+        "owner": "root/geography",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/aqmap",
+        "kind": "directory",
+        "files": 1684,
+        "bytes": 10993261,
+        "owner": "root/story_content",
+        "families": [
+          "pm25-forecast",
+          "fire-danger"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/ascent",
+        "kind": "directory",
+        "files": 1,
+        "bytes": 1,
+        "owner": "root/story_content",
+        "families": [
+          "air-monitoring"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/ascent-sites.json",
+        "kind": "file",
+        "files": 1,
+        "bytes": 11670,
+        "owner": "root/story_content",
+        "families": [
+          "air-monitoring"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/bc",
+        "kind": "directory",
+        "files": 16,
+        "bytes": 4424891,
+        "owner": "root/story_content",
+        "families": [
+          "air-monitoring",
+          "outdoor-wildlife-units",
+          "planned-outdoor-access",
+          "environmental-reporting",
+          "delegated-laep"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/bc-assessment",
+        "kind": "directory",
+        "files": 1,
+        "bytes": 33602872,
+        "owner": "root/story_content",
+        "families": [
+          "delegated-property-assessment"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/bc-wait-specialists.json",
+        "kind": "file",
+        "files": 1,
+        "bytes": 5458859,
+        "owner": "root/story_content",
+        "families": [
+          "root/data food/health snapshots"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/boundaries",
+        "kind": "directory",
+        "files": 73,
+        "bytes": 204853978,
+        "owner": "root/geography (environmental sublayers cross-referenced here)",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/boundary-search",
+        "kind": "directory",
+        "files": 2,
+        "bytes": 2879842,
+        "owner": "root/geography",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/canada-admin",
+        "kind": "directory",
+        "files": 39,
+        "bytes": 201730386,
+        "owner": "root/geography",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/cciss",
+        "kind": "directory",
+        "files": 862,
+        "bytes": 46937125,
+        "owner": "root/story_content",
+        "families": [
+          "cciss"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/cell-coverage",
+        "kind": "directory",
+        "files": 1,
+        "bytes": 17831,
+        "owner": "root/story_content",
+        "families": [
+          "carrier-coverage"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/census",
+        "kind": "directory",
+        "files": 178,
+        "bytes": 267541054,
+        "owner": "root/geography",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/citypg",
+        "kind": "directory",
+        "files": 34,
+        "bytes": 100024678,
+        "owner": "root/story_content",
+        "families": [
+          "city-parks-ecology",
+          "pg-planning-hazards",
+          "root/data transportation/business inputs"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/climate-vulnerability",
+        "kind": "directory",
+        "files": 6,
+        "bytes": 988313,
+        "owner": "root/story_content",
+        "families": [
+          "mhcca-inputs"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/drought",
+        "kind": "directory",
+        "files": 14,
+        "bytes": 65969721,
+        "owner": "root/story_content",
+        "families": [
+          "drought"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/environmental-burden",
+        "kind": "directory",
+        "files": 54,
+        "bytes": 94925915,
+        "owner": "root/story_content",
+        "families": [
+          "bc-enviro-screen",
+          "industrial-environment-inputs"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/epa",
+        "kind": "directory",
+        "files": 7,
+        "bytes": 232917,
+        "owner": "root/story_content",
+        "families": [
+          "air-monitoring"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/erstat-hospitals.json",
+        "kind": "file",
+        "files": 1,
+        "bytes": 1934489,
+        "owner": "root/story_content",
+        "families": [
+          "root/data food/health snapshots"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/ev-charging",
+        "kind": "directory",
+        "files": 2,
+        "bytes": 5051845,
+        "owner": "root/story_content",
+        "families": [
+          "ev-charging"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/fallout",
+        "kind": "directory",
+        "files": 3,
+        "bytes": 1545877,
+        "owner": "root/story_content",
+        "families": [
+          "historic-fallout"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/flatten-pg",
+        "kind": "directory",
+        "files": 4,
+        "bytes": 2756543,
+        "owner": "root/story_content",
+        "families": [
+          "terrain-context",
+          "root/data routing graph"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/flatten-sf",
+        "kind": "directory",
+        "files": 2,
+        "bytes": 4941958,
+        "owner": "root/story_content",
+        "families": [
+          "terrain-context",
+          "root/data routing graph"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/flood",
+        "kind": "directory",
+        "files": 3,
+        "bytes": 3208469,
+        "owner": "root/story_content",
+        "families": [
+          "flood-advisories"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/forest",
+        "kind": "directory",
+        "files": 109,
+        "bytes": 109406883,
+        "owner": "root/story_content",
+        "families": [
+          "forest-visual-inventory",
+          "species-big-trees"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/fpcc",
+        "kind": "directory",
+        "files": 3,
+        "bytes": 357589,
+        "owner": "root/geography",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/geocoding",
+        "kind": "directory",
+        "files": 3,
+        "bytes": 5023220,
+        "owner": "root/geography",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/grids",
+        "kind": "directory",
+        "files": 1,
+        "bytes": 1766,
+        "owner": "root/story_content",
+        "families": [
+          "satellite-catalogue"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/health",
+        "kind": "directory",
+        "files": 9,
+        "bytes": 3372705,
+        "owner": "root/data",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/healthyplan-pg",
+        "kind": "directory",
+        "files": 10,
+        "bytes": 8989353,
+        "owner": "root/data",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/heat-shade",
+        "kind": "directory",
+        "files": 8,
+        "bytes": 11003753,
+        "owner": "root/story_content",
+        "families": [
+          "heat-shade-proxies"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/icbc",
+        "kind": "directory",
+        "files": 11,
+        "bytes": 2128859,
+        "owner": "root/data",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/indicators",
+        "kind": "directory",
+        "files": 2,
+        "bytes": 37026,
+        "owner": "root/geography",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/indigenous",
+        "kind": "directory",
+        "files": 7,
+        "bytes": 5902699,
+        "owner": "root/geography",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/manifest.json",
+        "kind": "file",
+        "files": 1,
+        "bytes": 888,
+        "owner": "root/story_content",
+        "families": [
+          "air-monitoring"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/monitors",
+        "kind": "directory",
+        "files": 6,
+        "bytes": 3400906,
+        "owner": "root/story_content",
+        "families": [
+          "air-monitoring"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/monitors.csv",
+        "kind": "file",
+        "files": 1,
+        "bytes": 769915,
+        "owner": "root/story_content",
+        "families": [
+          "air-monitoring"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/native-land",
+        "kind": "directory",
+        "files": 4,
+        "bytes": 5521674,
+        "owner": "root/geography",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/nechako-showcase",
+        "kind": "directory",
+        "files": 53,
+        "bytes": 7534929,
+        "owner": "root/story_content",
+        "families": [
+          "nechako-research-portal"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/network-availability",
+        "kind": "directory",
+        "files": 16,
+        "bytes": 25796151,
+        "owner": "root/story_content",
+        "families": [
+          "national-connectivity"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/open-litter-map",
+        "kind": "directory",
+        "files": 3,
+        "bytes": 1044270,
+        "owner": "root/story_content",
+        "families": [
+          "open-litter"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/projects",
+        "kind": "directory",
+        "files": 131,
+        "bytes": 2934038,
+        "owner": "catalogue-only packages; source families referenced here",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/restaurant-classifications.json",
+        "kind": "file",
+        "files": 1,
+        "bytes": 12526,
+        "owner": "root/story_content",
+        "families": [
+          "root/data food/health snapshots"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/restaurant-location-overrides.json",
+        "kind": "file",
+        "files": 1,
+        "bytes": 15743,
+        "owner": "root/story_content",
+        "families": [
+          "root/data food/health snapshots"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/restaurants.json",
+        "kind": "file",
+        "files": 1,
+        "bytes": 2441007,
+        "owner": "root/story_content",
+        "families": [
+          "root/data food/health snapshots"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/satellite",
+        "kind": "directory",
+        "files": 1,
+        "bytes": 1375,
+        "owner": "root/story_content",
+        "families": [
+          "satellite-catalogue"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/smoke",
+        "kind": "directory",
+        "files": 2,
+        "bytes": 1747676,
+        "owner": "root/story_content",
+        "families": [
+          "pm25-forecast"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/snow-survey",
+        "kind": "directory",
+        "files": 8,
+        "bytes": 1823355,
+        "owner": "root/story_content",
+        "families": [
+          "snow-survey"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/spartan.csv",
+        "kind": "file",
+        "files": 1,
+        "bytes": 2140,
+        "owner": "root/story_content",
+        "families": [
+          "air-monitoring"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/story-documents",
+        "kind": "directory",
+        "files": 82,
+        "bytes": 50553680,
+        "owner": "catalogue-only media/reference assets",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/transit",
+        "kind": "directory",
+        "files": 6,
+        "bytes": 4738622,
+        "owner": "root/data",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/ui",
+        "kind": "directory",
+        "files": 5,
+        "bytes": 582231,
+        "owner": "non-scientific UI assets",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/walkability",
+        "kind": "directory",
+        "files": 55,
+        "bytes": 67568397,
+        "owner": "root/data",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/wars",
+        "kind": "directory",
+        "files": 3,
+        "bytes": 1566439,
+        "owner": "root/story_content",
+        "families": [
+          "wars-wildlife"
+        ],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      },
+      {
+        "path": "public/data/water",
+        "kind": "directory",
+        "files": 8,
+        "bytes": 23723770,
+        "owner": "root/data",
+        "families": [],
+        "inspection": "Family evidence below, or catalogue/stat only when delegated/non-scientific."
+      }
+    ],
+    "ownedFamilies": 31,
+    "delegatedFamilies": [
+      {
+        "id": "health-food-water-access",
+        "owner": "root/data",
+        "paths": [
+          "health",
+          "water",
+          "healthyplan-pg",
+          "transit",
+          "walkability",
+          "icbc",
+          "restaurants.json",
+          "erstat-hospitals.json",
+          "bc-wait-specialists.json"
+        ],
+        "scope": "Healthcare/food inspection and water-facility health snapshots, HealthyPlan service POIs, local transit/walkability/transport safety."
+      },
+      {
+        "id": "boundaries-census-indigenous",
+        "owner": "root/geography",
+        "paths": [
+          "boundaries",
+          "boundary-search",
+          "census",
+          "canada-admin",
+          "native-land",
+          "indigenous",
+          "fpcc",
+          "acknowledgement",
+          "indicators",
+          "geocoding",
+          "bc/laep"
+        ],
+        "scope": "Boundary editions/crosswalks, census/socioeconomic/economic tables, Indigenous context and geocoding. LAEP audit reports duplicated cleaned2010/2015 inputs and should be reviewed with economic methods."
+      }
+    ],
+    "uncoveredOrCatalogueOnly": [
+      {
+        "path": "public/data/bc-assessment",
+        "reason": "Property-level source may contain sensitive ownership/address attributes and source-specific terms; only file presence/size inventoried, no property records inspected. Requires explicit aggregate/privacy/rights review."
+      },
+      {
+        "path": "public/data/projects",
+        "reason": "All package files inventoried; only relevant climate source notes inspected. Package schemas/renderer completeness not audited."
+      },
+      {
+        "path": "public/data/story-documents",
+        "reason": "Reference media/PDF assets inventoried without content or media-rights audit."
+      },
+      {
+        "path": "public/data/ui",
+        "reason": "Icons/preview assets, not scientific data; no data-map method required."
+      }
+    ],
+    "missingDeployTargets": [
+      {
+        "source": "vendor/bcdatamapper/datascrapers/climate/echoscreen/output",
+        "target": "public/data/echoscreen-climate",
+        "sourceExists": true,
+        "targetExists": false,
+        "mappingGroup": "pathMappings",
+        "defaultEnabled": true
+      },
+      {
+        "source": "vendor/bcdatamapper/datascrapers/bc/nechako-portal/output",
+        "target": "public/data/nechako-portal",
+        "sourceExists": true,
+        "targetExists": false,
+        "mappingGroup": "pathMappings",
+        "defaultEnabled": true
+      }
+    ],
+    "nhhrComparison": {
+      "loadedDatasetCount": 26,
+      "boundedSourceRows": 1710,
+      "loadedDatasets": [
+        {
+          "id": "travel-stop-events",
+          "geography": "route",
+          "rows": 286
+        },
+        {
+          "id": "travel-stop-locations",
+          "geography": "stop",
+          "rows": 58
+        },
+        {
+          "id": "trial-facility-conditions",
+          "geography": "facility",
+          "rows": 171
+        },
+        {
+          "id": "trial-facility-coverage",
+          "geography": "city",
+          "rows": 7
+        },
+        {
+          "id": "clinical-condition-mix",
+          "geography": "city",
+          "rows": 77
+        },
+        {
+          "id": "nursing-workforce-northern",
+          "geography": "hsda",
+          "rows": 120
+        },
+        {
+          "id": "research-income",
+          "geography": "institution",
+          "rows": 28
+        },
+        {
+          "id": "surgical-waits-northern",
+          "geography": "none",
+          "rows": 99
+        },
+        {
+          "id": "hospital-stay-costs",
+          "geography": "ha",
+          "rows": 34
+        },
+        {
+          "id": "population-lha-ages",
+          "geography": "lha",
+          "rows": 102
+        },
+        {
+          "id": "hospital-facilities",
+          "geography": "facility",
+          "rows": 57
+        },
+        {
+          "id": "hospital-facility-costs",
+          "geography": "facility",
+          "rows": 363
+        },
+        {
+          "id": "publications",
+          "geography": "institution",
+          "rows": 40
+        },
+        {
+          "id": "cihr-payments",
+          "geography": "institution",
+          "rows": 39
+        },
+        {
+          "id": "nserc-awards",
+          "geography": "institution",
+          "rows": 36
+        },
+        {
+          "id": "clinical-city",
+          "geography": "city",
+          "rows": 7
+        },
+        {
+          "id": "clinical-pg",
+          "geography": "city",
+          "rows": 10
+        },
+        {
+          "id": "physicians-hsda",
+          "geography": "hsda",
+          "rows": 16
+        },
+        {
+          "id": "population-lha",
+          "geography": "lha",
+          "rows": 102
+        },
+        {
+          "id": "travel-schedule",
+          "geography": "none",
+          "rows": 18
+        },
+        {
+          "id": "travel-benchmarks",
+          "geography": "none",
+          "rows": 5
+        },
+        {
+          "id": "travel-scenarios",
+          "geography": "none",
+          "rows": 3
+        },
+        {
+          "id": "evidence-gaps",
+          "geography": "none",
+          "rows": 13
+        },
+        {
+          "id": "population-review",
+          "geography": "none",
+          "rows": 5
+        },
+        {
+          "id": "trial-sites",
+          "geography": "facility",
+          "rows": 4
+        },
+        {
+          "id": "trial-site-evidence",
+          "geography": "none",
+          "rows": 10
+        }
+      ],
+      "ownedEnvironmentalDatasetImports": 0,
+      "geometryCapability": "Existing Atlas has source-specific HA/HSDA/LHA joins and reviewed point registries/schematic route lines. It has no generic raster/PMTiles/H3/WMS adapter or registered native FSA/basin/MU/grid polygon join in the inspected code.",
+      "qualification": "This is a source-family dependency comparison; original campus imagery and vector Streets/Dark basemap content are not analytical environmental-family imports."
+    }
+  },
+  "priorityCandidates": [
+    "A single independently sourced BC EnviroScreen LHA environmental component, with all reconstruction/source flags visible.",
+    "YE2024 CRTC reported LTE/5G context around reviewed Northern facilities, using native geometry and no service-quality claim.",
+    "A dated municipal park/tree-presence overlay with access/heat proxies labelled honestly.",
+    "A source-native snow survey or drought basin view with actual measurement/date and no forced LHA allocation."
+  ],
+  "missingMapMethods": [
+    "Native arbitrary polygon/line/point context layers independent of health-area code joins.",
+    "Compressed GeoJSON/shard/vector-tile/PMTiles/H3 loading with bounds/LOD and true source geometry.",
+    "Analytical raster/WMS/DEM adapters with nodata/QA/units and model/run/scenario semantics, separate from vector basemap selection.",
+    "Native FSA, watershed/basin and wildlife-unit registration; reviewed joins/weights when converting to LHA/HSDA.",
+    "Source-specific categorical/ordinal and forecast legends; calendar/as-of/period/scenario controls.",
+    "Coverage-aware aggregation with original numerators/denominators, censored values, coordinate precision, source periods and privacy/licence selection."
+  ]
+}

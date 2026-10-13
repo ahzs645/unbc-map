@@ -1,0 +1,475 @@
+{
+  "reviewedAt": "2026-10-12",
+  "manifestUrl": "https://zoer.k8s.overtheedgepaper.ca/api/projects/acdd692f-a188-4f85-bb5a-83c48d5c7e82/database/data-spaces/de1fe530-a762-52fa-ba11-d01cc5b344df/manifest",
+  "manifestRevision": 93,
+  "scope": "Supplemental original-source review of DATA-C049 PSSM, DATA-C016 Northern HA indicators and DATA-X08 enrolment only; previous family findings remain in force.",
+  "release": "/data/nhhr/community-followup.json",
+  "provenanceUrl": "/data/nhhr/community-followup-provenance.json",
+  "pipeline": "scripts/prepare-nhhr-community-followup.py",
+  "checks": [
+    "Offline hash-locked preparation",
+    "Fresh authorized manifest, actual dataset APIs, original downloads and table lineage followed by --refresh --check",
+    "Unique original grains, source period labels, source rounding, reported zeros and omitted combinations checked"
+  ],
+  "releaseViewCount": 5,
+  "releaseRowCount": 1951,
+  "reviews": [
+    {
+      "collectionId": "DATA-C049",
+      "datasetId": "91de0066-9343-4d0f-9138-03766520ddc0",
+      "subfamily": "BC Stats Post-Secondary Supply Model only",
+      "status": "connected",
+      "summary": "Released 468 provincial age-by-credential graduate projections and 996 age-by-NOC health-major-group occupation-entry projections across 12 original fiscal periods. Both views retain source Projection status, December 2024 model vintage, reported zeros and published rounding.",
+      "mapConnection": "No subprovincial measure exists in this workbook. Province-level projections remain charts and records, with no UNBC, health-area or community allocation.",
+      "needs": [
+        "Actual institution- or regional-level graduate/occupation projections and a compatible geographic definition before any campus, CSD, HA or LHA map.",
+        "For a workforce-gap analysis, independent demand, registration, workforce exits, migration and employment definitions on compatible periods."
+      ],
+      "cannot": [
+        "Treat elapsed model fiscal periods as observed graduates.",
+        "Treat occupation entrants as registered or employed professionals, current vacancies, licensed workforce or NHHR staff.",
+        "Add the Total credential row to its components. Rounding can prevent exact component sums.",
+        "Manufacture zeros for the omitted age/NOC combinations.",
+        "Read NOC major group 3 as human health only; veterinary and animal-health categories are retained separately."
+      ],
+      "evidence": [
+        {
+          "collectionId": "DATA-C049",
+          "datasetId": "91de0066-9343-4d0f-9138-03766520ddc0",
+          "kind": "datasetAPI",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/91de0066-9343-4d0f-9138-03766520ddc0",
+          "httpStatus": 200,
+          "sha256": "c9426cdc90045fdca5e3bcc41ba9e587b5b711fdf7a9861914c03e958e49212a",
+          "inspected": true
+        },
+        {
+          "collectionId": "DATA-C049",
+          "datasetId": "91de0066-9343-4d0f-9138-03766520ddc0",
+          "kind": "originalFile",
+          "originalFileId": "9c3033e2-6284-4748-9b23-e9f5221cc8f2",
+          "filename": "bc_post-secondary_supply_model_2023-24_to_2034-35.xlsx",
+          "sourceRelativePath": "Data Research/Data/raw/public_pull_2026-04-29/bc_post-secondary_supply_model_2023-24_to_2034-35.xlsx",
+          "sha256": "c8f5f4c9a31dbfb311b8dd48c9d9c25b96dc662879a22099f5b0cb6d815018a9",
+          "httpStatus": 200,
+          "bytes": 86600,
+          "tables": [
+            {
+              "table_name": "nhhr_data_c049_6e78ae316dce_zip_data_c049_bc_pos",
+              "worksheet": "User Guide",
+              "row_count": "7",
+              "parquet_sha256": "1aeaaeaf8d44723eb8bbef82db193f1f7785acdc51c1c08e3ef7a587d246ef51"
+            },
+            {
+              "table_name": "nhhr_data_c049_6e78ae316dce_zip_data_c049__2",
+              "worksheet": "Graduate Projections",
+              "row_count": "40",
+              "parquet_sha256": "47978e1c65761b56c0e0487493ef8cb5cd0071c3d155fb29974e1b5fc38914ab"
+            },
+            {
+              "table_name": "nhhr_data_c049_6e78ae316dce_zip_data_c049__3",
+              "worksheet": "Occupation Projections",
+              "row_count": "849",
+              "parquet_sha256": "72b8f11a6b8d96f93c860eb77aa051571bbb15bee1b2e9d601b8ac2b030ab06a"
+            }
+          ],
+          "inspected": true
+        }
+      ],
+      "views": [
+        "bc-graduate-projections",
+        "bc-health-occupation-projections"
+      ],
+      "viewSpecifications": [
+        {
+          "id": "bc-graduate-projections",
+          "rows": 468,
+          "geography": "none",
+          "metric": "projected_graduates",
+          "entityField": "credential_type",
+          "timeField": "period",
+          "defaultFilters": {
+            "age_group": "17 to 29",
+            "credential_type": "Baccalaureate degree"
+          },
+          "mapLabelField": null
+        },
+        {
+          "id": "bc-health-occupation-projections",
+          "rows": 996,
+          "geography": "none",
+          "metric": "projected_occupation_entries",
+          "entityField": "occupation",
+          "timeField": "period",
+          "defaultFilters": {
+            "age_group": "17 to 29",
+            "occupation": "Registered nurses and registered psychiatric nurses"
+          },
+          "mapLabelField": null
+        }
+      ],
+      "inspectionScope": "Fresh dataset API and hash-locked original workbook: User Guide, Graduate Projections and Occupation Projections. Scientific release covers all 39 age/credential combinations and 83 original health-major-group age/NOC combinations over 12 fiscal periods; unrelated C049 subfamilies retain their prior reviews.",
+      "sourcePeriod": {
+        "graduateOriginal": "2023/2024 through 2034/2035",
+        "occupationOriginal": "2023/24 through 2034/35",
+        "normalizedDisplay": "2023–2024 through 2034–2035",
+        "modelPrepared": "2024-12-20",
+        "weightedSurveyYears": "2019–2023"
+      },
+      "scopeLimits": [
+        "Ages 17–29, 30–44 and 45–64; credentials taking at least three months.",
+        "International, non-credit and skills-upgrading programs excluded; selected university certificate/diploma credentials excluded.",
+        "Occupation model covers graduates residing in BC and specified near completers; apprenticeship includes private institutions.",
+        "Graduate counts are rounded to five and occupation counts to whole numbers."
+      ],
+      "sourceGuideEvidence": {
+        "worksheet": "User Guide",
+        "preparedDateCell": "A2",
+        "preparedDate": "2024-12-20",
+        "scopeCells": [
+          "A3",
+          "A5",
+          "A6"
+        ],
+        "surveyPeriodCell": "A4",
+        "surveyYears": "2019–2023",
+        "roundingCell": "A7",
+        "graduateRounding": 5,
+        "occupationRounding": 1
+      },
+      "sourceUrls": [
+        "https://www2.gov.bc.ca/gov/content/data/statistics/economy/labour-market-statistics",
+        "https://www2.gov.bc.ca/assets/gov/data/statistics/employment-labour-market/bc_post-secondary_supply_model_methodology_highlights.pdf"
+      ],
+      "suggestedStory": {
+        "title": "Education pathways and projected supply",
+        "views": [
+          "bc-graduate-projections",
+          "bc-health-occupation-projections"
+        ],
+        "method": "Compare one age group and credential or occupation over the published fiscal horizon, clearly distinguishing graduates from modeled occupation entry. Do not describe the province projection as Northern supply."
+      },
+      "reviewDetails": {
+        "datasetAPI": "Fresh authorized dataset API HTTP 200; manifest revision 93 and original workbook/table bindings verified.",
+        "originalSheets": [
+          "User Guide",
+          "Graduate Projections",
+          "Occupation Projections"
+        ],
+        "graduateSourceGridRows": 40,
+        "occupationSourceGridRows": 849,
+        "selectedGraduateCombinations": 39,
+        "selectedHealthOccupationCombinations": 83,
+        "periodCount": 12,
+        "graduateSourceZeros": 12,
+        "occupationSourceZeros": 66,
+        "absentCombinationsFilled": 0,
+        "unrelatedCollectionSubfamilies": "Other funding, cancer, facilities and event evidence in DATA-C049 is outside this supplemental decision and remains in prior reviews."
+      }
+    },
+    {
+      "collectionId": "DATA-C016",
+      "datasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+      "subfamily": "Collected Northern HA fiscal chronic-disease rates",
+      "status": "connected",
+      "summary": "Recovered and released 480 original Northern HA fiscal observations: four age-standardized incidence indicators and four lifetime-prevalence indicators, each for Total/Female/Male across 20 fiscal periods. Source rates remain direct original values per 1,000; they are not recomputed from population.",
+      "mapConnection": "An optional exact HA ID 5 join uses the contemporary PGMaps Northern HA polygon as context. Historical boundary compatibility is unverified. Default display remains the trend chart. One indicator, source sex category and fiscal period is required for one map value; overlapping rows are withheld rather than summed. The visible map place is Northern HA, while the internal entity remains the exact indicator.",
+      "needs": [
+        "Actual CHSA scientific observations; the 309-row locations catalogue does not supply CHSA measurements.",
+        "Historical HA boundary documentation before claiming spatial harmonization across FY2001–2002 to FY2020–2021.",
+        "The standardization population, confidence intervals and detailed registry ascertainment notes for stronger cross-indicator comparisons."
+      ],
+      "cannot": [
+        "Spread Northern HA rates into CHSAs, LHAs, census units, cities or facilities.",
+        "Infer disease counts by multiplying age-standardized rates by Atlas population estimates or projections.",
+        "Treat lifetime prevalence as incidence or add sex/condition rates.",
+        "Treat an April 2026 collection as a current health observation.",
+        "Join older calendar-year series with different age ranges or units merely because indicator names resemble each other.",
+        "Infer trial eligibility, unmet need, causality or an NHHR effect from these aggregate registry observations."
+      ],
+      "evidence": [
+        {
+          "collectionId": "DATA-C016",
+          "datasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+          "kind": "datasetAPI",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/b4d850b9-494b-4de6-96c3-2951defae583",
+          "httpStatus": 200,
+          "sha256": "2693fb5cf115aa51721b55dadc71dc9cc175e4a608e569d1e8d4fecd43fafa7a",
+          "inspected": true
+        },
+        {
+          "collectionId": "DATA-C016",
+          "datasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+          "kind": "originalFile",
+          "originalFileId": "cb9e041c-0ece-4ef8-8242-cb4173e1be9f",
+          "filename": "bc_community_health_indicator_inventory.csv",
+          "sourceRelativePath": "Data Research/Data/processed/public_pull_2026-04-29/bc_community_health_indicator_inventory.csv",
+          "sha256": "32f503c262046e73506930d52d9f9d414ea4097321428168b4d6f2560ec9ca49",
+          "httpStatus": 200,
+          "bytes": 246458,
+          "tables": [
+            {
+              "table_name": "nhhr_data_c016_be21dde25cba_zip_data_c016_bc_com",
+              "worksheet": "",
+              "row_count": "832",
+              "parquet_sha256": "f85cc42d4b887f49a6f8ef23401ed27409878e8335d45a5f821b51b931414ba5"
+            }
+          ],
+          "inspected": true
+        },
+        {
+          "collectionId": "DATA-C016",
+          "datasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+          "kind": "originalFile",
+          "originalFileId": "f27627a4-745c-4a3f-aee1-c968ee5d0dd4",
+          "filename": "bc_community_health_locations.csv",
+          "sourceRelativePath": "Data Research/Data/processed/public_pull_2026-04-29/bc_community_health_locations.csv",
+          "sha256": "0ee79bd6dfdf5b7b1f283dbfe4b98f186a43a75a9bd4f9879cff2744ce2b3d5b",
+          "httpStatus": 200,
+          "bytes": 7354,
+          "tables": [
+            {
+              "table_name": "nhhr_data_c016_be21dde25cba_zip_data_c016__2",
+              "worksheet": "",
+              "row_count": "309",
+              "parquet_sha256": "fd190d66c7a4742e2c2ab0e2298b21cb0a6f6e25c3cb84c56993183ce4c98aa9"
+            }
+          ],
+          "inspected": true
+        },
+        {
+          "collectionId": "DATA-C016",
+          "datasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+          "kind": "originalFile",
+          "originalFileId": "24577601-3509-4120-bf81-f2984294a632",
+          "filename": "bc_community_health_selected_indicators.csv",
+          "sourceRelativePath": "Data Research/Data/processed/public_pull_2026-04-29/bc_community_health_selected_indicators.csv",
+          "sha256": "5d94d79209f28905f5052d1e326a87dd7dd884dca5404e2954e22870cf87d0d3",
+          "httpStatus": 200,
+          "bytes": 121915,
+          "tables": [
+            {
+              "table_name": "nhhr_data_c016_be21dde25cba_zip_data_c016__3",
+              "worksheet": "",
+              "row_count": "653",
+              "parquet_sha256": "0471c37cb9ba50f38f456e628c719d8e5129bf9c9ca7dc76be48ef0f15eb184e"
+            }
+          ],
+          "inspected": true
+        },
+        {
+          "collectionId": "DATA-C016",
+          "datasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+          "kind": "originalFile",
+          "originalFileId": "22bec4ef-7ea0-4057-9146-299624b4ceb9",
+          "filename": "bc_community_health_topics.csv",
+          "sourceRelativePath": "Data Research/Data/processed/public_pull_2026-04-29/bc_community_health_topics.csv",
+          "sha256": "860b528a13a7e1dedcbe2658a8c6026a95f41935d345adef6aa8308db7e16726",
+          "httpStatus": 200,
+          "bytes": 2853,
+          "tables": [
+            {
+              "table_name": "nhhr_data_c016_be21dde25cba_zip_data_c016__4",
+              "worksheet": "",
+              "row_count": "48",
+              "parquet_sha256": "644a00d3dce8c008401862c633553b00129ae0b75a6ac68ec2a189ffc57357f0"
+            }
+          ],
+          "inspected": true
+        }
+      ],
+      "views": [
+        "community-disease-incidence",
+        "community-disease-prevalence"
+      ],
+      "viewSpecifications": [
+        {
+          "id": "community-disease-incidence",
+          "rows": 240,
+          "geography": "ha",
+          "metric": "rate_per_1000",
+          "entityField": "indicator",
+          "timeField": "period",
+          "defaultFilters": {
+            "indicator": "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs)",
+            "sex": "Total"
+          },
+          "mapLabelField": "jurisdiction_name"
+        },
+        {
+          "id": "community-disease-prevalence",
+          "rows": 240,
+          "geography": "ha",
+          "metric": "rate_per_1000",
+          "entityField": "indicator",
+          "timeField": "period",
+          "defaultFilters": {
+            "indicator": "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs)",
+            "sex": "Total"
+          },
+          "mapLabelField": "jurisdiction_name"
+        }
+      ],
+      "inspectionScope": "Fresh dataset API and all four hash-locked original CSVs. Inspected indicator inventory, 309-location catalogue, topics and 653 selected-indicator records; released 480 direct Northern HA fiscal chronic-disease rates. No CHSA scientific rows are present.",
+      "sourcePeriod": {
+        "original": "FY 2001.2002 through FY 2020.2021",
+        "normalizedDisplay": "2001–2002 through 2020–2021",
+        "collectionDate": "2026-04-29"
+      },
+      "geographyEvidence": {
+        "sourceType": "HA",
+        "sourceId": "5",
+        "sourceJurisdiction": "Northern HA",
+        "boundaryAsset": "/data/nhhr/boundaries-ha.geojson",
+        "joinField": "source_location_id",
+        "mapLabelField": "jurisdiction_name",
+        "contextVintage": "Contemporary PGMaps HA context; historical boundary vintage unverified",
+        "downAllocation": false
+      },
+      "scopeLimits": [
+        "Asthma and diabetes ages 1+, COPD ages 35+, hypertension ages 20+.",
+        "Published age-standardized administrative-registry incidence and lifetime prevalence rates per 1,000.",
+        "Source sex labels Total, Female and Male are retained. Condition age universes differ and rates are nonadditive."
+      ],
+      "independentCheckValues": {
+        "FY2020–2021 Total diabetes incidence per 1000": 7.5,
+        "FY2020–2021 Total diabetes lifetime prevalence per 1000": 90.9
+      },
+      "suggestedStory": {
+        "title": "Northern chronic-disease histories",
+        "views": [
+          "community-disease-incidence",
+          "community-disease-prevalence"
+        ],
+        "method": "Follow diabetes or another exact indicator through the historical Northern HA series, explaining the separate incidence and lifetime-prevalence definitions and historical period."
+      },
+      "reviewDetails": {
+        "datasetAPI": "Fresh authorized dataset API HTTP 200; actual selected-indicator original and all three metadata originals inspected.",
+        "inventoryRows": 832,
+        "locationCatalogueRows": 309,
+        "topicRows": 48,
+        "selectedIndicatorRawRows": 653,
+        "nonblankValueRows": 639,
+        "fiscalDiseaseRowsReleased": 480,
+        "releasedRowsPerView": 240,
+        "distinctFiscalPeriods": 20,
+        "scientificCHSARows": 0,
+        "releasedMissingValues": 0,
+        "otherCollectedRows": "Older asthma/COPD calendar series, demographics, old GP rates and cancer counts remain out of this extract; prior reviews are retained."
+      }
+    },
+    {
+      "collectionId": "DATA-X08",
+      "datasetId": "43482dd7-5cee-417b-b339-a203a343d5ee",
+      "subfamily": "Institution enrolment and held city ratios",
+      "status": "connected",
+      "summary": "Released seven primary-verified Fall 2025 institution totals with the four original published full-/part-time undergraduate/graduate components. The Lakehead-only total is recovered independently from the primary table; the workbook Thunder Bay composite is not relabelled as Lakehead. City/population ratios remain held.",
+      "mapConnection": "The seven exact existing comparator labels join reviewed representative institution points. Values describe institution totals and are not allocated to the mapped campus, surrounding city or health region. NOSM and BC Cancer have no emitted enrolment row.",
+      "needs": [
+        "Institution enrolment allocated to compatible campuses, with the relevant published scope and reference date, before city ratios.",
+        "A population denominator matching the enrolment universe, geography and reference period; enrolment is not a count of local resident students.",
+        "An independently verified NOSM institutional record before emitting that comparator."
+      ],
+      "cannot": [
+        "Divide Fall 2025 institutional counts by 2021 CSD/CMA populations to imply a resident student percentage.",
+        "Use UBC all-campus totals as Vancouver-campus enrolment.",
+        "Use the Thunder Bay composite 9,035 as a Lakehead-only total; the independently verified Lakehead total is 8,499.",
+        "Assign approximate NOSM contributions or absent institutions a zero.",
+        "Treat institutional enrolment as FTEs, graduates, health workforce or available NHHR researchers."
+      ],
+      "evidence": [
+        {
+          "collectionId": "DATA-X08",
+          "datasetId": "43482dd7-5cee-417b-b339-a203a343d5ee",
+          "kind": "datasetAPI",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/43482dd7-5cee-417b-b339-a203a343d5ee",
+          "httpStatus": 200,
+          "sha256": "9bb512ea65da9c4ec33e7aa31c72d5334d0394c863daad4e17033e4d073530ab",
+          "inspected": true
+        },
+        {
+          "collectionId": "DATA-X08",
+          "datasetId": "43482dd7-5cee-417b-b339-a203a343d5ee",
+          "kind": "originalFile",
+          "originalFileId": "16f272af-7c4d-4450-b4d0-f3a1348ac90e",
+          "filename": "nhhr_university_city_ratios (1).xlsx",
+          "sourceRelativePath": "Resources/nhhr_university_city_ratios (1).xlsx",
+          "sha256": "48112d838bfa75c70dd965ca3c70086ed33b682ff616235510e06c3660ec0f9e",
+          "httpStatus": 200,
+          "bytes": 19582,
+          "tables": [
+            {
+              "table_name": "nhhr_data_x08_e4993b5b0dfe_zip_data_x08_nhhr_uni",
+              "worksheet": "University-City Ratios",
+              "row_count": "31",
+              "parquet_sha256": "627948938b87178a44d19ed83810e070d6d4e378b372b20cf0482c7bc5e31e97"
+            },
+            {
+              "table_name": "nhhr_data_x08_e4993b5b0dfe_zip_data_x08_nh_2",
+              "worksheet": "Source Links",
+              "row_count": "14",
+              "parquet_sha256": "36fb561f6352a8ac994b74b2625bd6cf091afce7550973925be6db662bfeb71c"
+            }
+          ],
+          "inspected": true
+        },
+        {
+          "kind": "primaryTableVerification",
+          "sourceUrl": "https://univcan.ca/about-universities-canada/facts-and-stats/enrolment-by-university/",
+          "sourceTitle": "Fall 2025 full-time and part-time fall enrolment at Canadian universities",
+          "reviewedAt": "2026-10-12",
+          "method": "Primary page read through web tool; direct command-line request returned HTTP403 and was not bypassed.",
+          "selectedRecordsSha256": "5a4a3d01bb51ffc3a5cb7be673857def3c19f302e29fb04b8f82f046db0f39fc",
+          "verifiedInstitutionCount": 7,
+          "fullPageHash": "Not acquired; no whole-page byte refresh is claimed."
+        }
+      ],
+      "views": [
+        "institution-enrolment"
+      ],
+      "viewSpecifications": [
+        {
+          "id": "institution-enrolment",
+          "rows": 7,
+          "geography": "institution",
+          "metric": "total_enrolment",
+          "entityField": "comparator",
+          "timeField": "academic_year",
+          "defaultFilters": {},
+          "mapLabelField": null
+        }
+      ],
+      "inspectionScope": "Fresh dataset API and hash-locked original University-City Ratios and Source Links sheets, including composite and all-campus notes. Independently checked seven Fall 2025 institutional records on the primary Universities Canada table; city ratios and approximate NOSM contributions remain held.",
+      "sourcePeriod": {
+        "enrolment": "Fall 2025",
+        "heldPopulationDenominators": "2021 municipal/CSD/CA/CMA context with unestablished campus compatibility"
+      },
+      "scopeLimits": [
+        "Four published enrolment categories are additive within each institution; the total is their arithmetic sum.",
+        "The workbook mixes institution, multi-campus and composite scopes. Those scopes are not silently harmonized into city populations."
+      ],
+      "independentCheckValues": {
+        "UNBC institution Fall2025": 3263,
+        "Lakehead institution Fall2025": 8499,
+        "UBC institution Fall2025": 73636,
+        "McMaster institution Fall2025": 37579
+      },
+      "suggestedStory": {
+        "title": "Institutions in their own scope",
+        "views": [
+          "institution-enrolment"
+        ],
+        "method": "Compare the reviewed institution totals and their four categories at representative institution points; explain why a city/student ratio needs stronger campus and population evidence."
+      },
+      "reviewDetails": {
+        "datasetAPI": "Fresh authorized dataset API HTTP 200; original workbook data/notes/source-link sheets inspected.",
+        "dataWorksheet": "University-City Ratios",
+        "sourceWorksheet": "Source Links",
+        "workbookSourceCityRows": 20,
+        "independentlyVerifiedInstitutions": 7,
+        "cityRatiosEmitted": 0,
+        "approximateNOSMEmitted": false,
+        "primaryAccessLimit": "Direct command-line access returned HTTP 403. Browser/web-tool read succeeded and yielded the dated seven-row factual receipt; the refresh script validates that receipt without claiming an external page refresh."
+      }
+    }
+  ]
+}

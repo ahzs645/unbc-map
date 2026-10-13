@@ -1,0 +1,118 @@
+{
+  "reviewedAt": "2026-10-12",
+  "manifestRevision": 93,
+  "sources": [
+    {
+      "collectionId": "DATA-C049",
+      "datasetId": "91de0066-9343-4d0f-9138-03766520ddc0",
+      "filename": "statcan_13100109_cancer_incidence.zip",
+      "originalFileId": "9eec692f-2634-4b31-a4f1-60a2556c5f8a",
+      "sha256": "8ec5c6af703916d69a354be3ba4aba728ddbd0d683cfb0b0db17a3f99b8f190b",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c049_5712d9e6c720_zip_data_c049_statca",
+          "rowCount": 56132,
+          "archiveMember": "13100109.csv",
+          "parquetSha256": "5b6424fb92817d1141ada055fc8aa47a913458bf10a28f903a072896e2697b85"
+        },
+        {
+          "tableName": "nhhr_data_c049_5712d9e6c720_zip_data_c049__24",
+          "rowCount": 56289,
+          "archiveMember": "13100109.csv",
+          "parquetSha256": "16ea23bb3ba43e69ea12490b7ee4966ba4bb3fd832583de86d03436ac8c5329f"
+        },
+        {
+          "tableName": "nhhr_data_c049_5712d9e6c720_zip_data_c049__25",
+          "rowCount": 56187,
+          "archiveMember": "13100109.csv",
+          "parquetSha256": "caf5c4534f81dbe78cc6d2a171389aac4820c8176ed6a2e34239ccf8679359ba"
+        },
+        {
+          "tableName": "nhhr_data_c049_5712d9e6c720_zip_data_c049__26",
+          "rowCount": 56283,
+          "archiveMember": "13100109.csv",
+          "parquetSha256": "885c520b2cb8ec8a19956cd8febb9950fe87efbdf80e49e2442487d3e9a11e12"
+        },
+        {
+          "tableName": "nhhr_data_c049_5712d9e6c720_zip_data_c049__27",
+          "rowCount": 56240,
+          "archiveMember": "13100109.csv",
+          "parquetSha256": "05b91dfced1d79ed8593c0824219d71eb59ca817a255be406507c3c53b5500c3"
+        },
+        {
+          "tableName": "nhhr_data_c049_5712d9e6c720_zip_data_c049__28",
+          "rowCount": 12591,
+          "archiveMember": "13100109.csv",
+          "parquetSha256": "c337511164ad21a0758f075c24df49626173a62e893596f22f68d3e693b0e824"
+        },
+        {
+          "tableName": "nhhr_data_c049_5712d9e6c720_zip_data_c049__29",
+          "rowCount": 229,
+          "archiveMember": "13100109_MetaData.csv",
+          "parquetSha256": "c6ef73e6339b8316809b39b4214e0cd5e27217fe1d20a16cb2681c114af2485a"
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C016",
+      "datasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+      "filename": "canada_research_chairs_chairholders.csv",
+      "originalFileId": "54e36843-af11-44cf-ad56-6e0e7f44cd45",
+      "sha256": "4a02d03d85ff9c4d1470b5824a58c063866b1f5e37418585b70d0c8c4a97d469",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c016_be21dde25cba_zip_data_c016_canada",
+          "rowCount": 1926,
+          "archiveMember": "",
+          "parquetSha256": "da4ecf790588d4003e20af9628a69e4650d9fe9ea306f7cb530f26347c6db636"
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C016",
+      "datasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+      "filename": "canada_research_chairs_comparator_summary.csv",
+      "originalFileId": "2c0cbb91-6b5a-4d21-87fc-1d3e2573c1d2",
+      "sha256": "5b5b329e929678c0baf271f2470262893486a1996cf766b9c71914ab119b7d36",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c016_be21dde25cba_zip_data_c016__9",
+          "rowCount": 8,
+          "archiveMember": "",
+          "parquetSha256": "c2768453368296763de80f9455d4a1aef2ce27beb7788c1ab0caa3027d9b9ae7"
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C016",
+      "datasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+      "filename": "statcan_bc_cancer_incidence_selected_health_regions.csv",
+      "originalFileId": "95f2fbb6-d6c1-4c98-b7bc-a79cfaf49554",
+      "sha256": "de8b291d3e643a65f3bb24a35f4c4d11697c613a0abd2951df1d16aab3589f1e",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c016_be21dde25cba_zip_data_c016__27",
+          "rowCount": 2574,
+          "archiveMember": "",
+          "parquetSha256": "c92703fba39b7f370a1ae1f32036789a10f3cc1173ac799ce2ab3b525eef282d"
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "cancerOriginalRowsParsed": 293722,
+    "cancerReleasedKeys": 572,
+    "derivedCancerCellsReconciled": 1144,
+    "chairOriginalListingRows": 1926,
+    "chairComparatorRows": 8,
+    "chairTiersAndAgenciesReconcile": true
+  },
+  "boundaryRecommendation": {
+    "dataset": "historical-cancer-incidence",
+    "connected": "Official December 2015 Statistics Canada health-region release; exact original DGUID/HR_UID pairs.",
+    "mappedRegions": 3,
+    "provinceAggregateMapped": false,
+    "chartAvailable": true
+  },
+  "mappingConnections": "mapping-connections-provenance.json"
+}

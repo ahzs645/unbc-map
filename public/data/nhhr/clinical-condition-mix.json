@@ -1,0 +1,945 @@
+{
+  "datasets": [
+    {
+      "id": "clinical-condition-mix",
+      "title": "Clinical trial condition mix across comparator cities",
+      "description": "Historical city/domain study counts and fixed-denominator composition shares from NHHR-coded registry evidence.",
+      "topic": "Clinical research",
+      "geography": "city",
+      "status": "observed",
+      "timeLabel": "Aligned comparator snapshot · 29 April 2026",
+      "sourceName": "ClinicalTrials.gov · NHHR condition-domain coding",
+      "sourceUrl": "https://clinicaltrials.gov/",
+      "datasetId": "a308df09-ac89-4591-980f-624a4908a9b6",
+      "tableName": "nhhr_data_c037_69b3f9e8dcdc_zip_data_c037_compar",
+      "notes": [
+        "One row is city × NHHR-coded condition domain. The 77 source rows span 7 comparator cities and 13 exact category labels; the source is a ragged aggregate, not a complete city/category grid.",
+        "The aligned comparator snapshot date is 29 April 2026. This aggregate CSV has no own timestamp field; the date labels the existing validated comparator baseline, not an assertion that every registry record was collected on that day.",
+        "Condition share = 100 × domain studies / all source studies in the same city. Recruiting composition share = 100 × domain RECRUITING records / all source RECRUITING records in the same city. These percentages describe different portfolios, not the recruiting rate within a condition.",
+        "Shares use the fixed full-city denominators. Selecting fewer conditions must not renormalize percentages. City totals are repeated metadata and must not be added across condition rows; they are excluded from the measure selector.",
+        "RECRUITING is the historical overall study status from the source snapshot. It does not establish current recruitment, local-site activation, participant eligibility or enrollment. Explicit source zero recruiting counts remain zero.",
+        "Condition domains are NHHR analysis coding, not original registry diagnosis codes, measured disease burden or findings from interviews. The Prince George reconciliation explicitly maps its finer coded labels to these broader aggregate labels.",
+        "A study can have sites in several cities. Cross-city study/site counts are not unique studies and must not be added into a national portfolio total. Missing city/domain rows are not invented as zero observations.",
+        "City map points represent the query city label, not physical study sites or health-authority catchments. Compare one domain at a time; no sum or average is authorized across multiple condition rows at a city.",
+        "Only public city/domain aggregate fields are released from the strategic work package. No contact, candidate, participant, consent or remuneration records are included."
+      ],
+      "columns": [
+        {
+          "key": "query_city",
+          "label": "Comparator city",
+          "type": "text"
+        },
+        {
+          "key": "condition_domain",
+          "label": "NHHR-coded condition domain",
+          "type": "text"
+        },
+        {
+          "key": "studies",
+          "label": "Source city-site study matches",
+          "type": "number",
+          "unit": "studies"
+        },
+        {
+          "key": "recruiting_snapshot_studies",
+          "label": "RECRUITING in aligned snapshot",
+          "type": "number",
+          "unit": "studies"
+        },
+        {
+          "key": "condition_share_pct",
+          "label": "Share of city study portfolio",
+          "type": "number",
+          "unit": "%"
+        },
+        {
+          "key": "recruiting_condition_share_pct",
+          "label": "Share of city RECRUITING portfolio",
+          "type": "number",
+          "unit": "%"
+        },
+        {
+          "key": "city_studies",
+          "label": "Full-city study denominator · metadata",
+          "type": "text"
+        },
+        {
+          "key": "city_recruiting_snapshot_studies",
+          "label": "Full-city RECRUITING denominator · metadata",
+          "type": "text"
+        },
+        {
+          "key": "snapshot_date",
+          "label": "Aligned comparator snapshot",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "query_city": "Calgary",
+          "condition_domain": "Other / mixed",
+          "studies": 1302,
+          "recruiting_snapshot_studies": 142,
+          "condition_share_pct": 29.07548,
+          "recruiting_condition_share_pct": 27.203065,
+          "city_studies": 4478,
+          "city_recruiting_snapshot_studies": 522,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Calgary",
+          "condition_domain": "Cancer / oncology",
+          "studies": 1172,
+          "recruiting_snapshot_studies": 145,
+          "condition_share_pct": 26.172398,
+          "recruiting_condition_share_pct": 27.777778,
+          "city_studies": 4478,
+          "city_recruiting_snapshot_studies": 522,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Calgary",
+          "condition_domain": "Cardiovascular / stroke",
+          "studies": 569,
+          "recruiting_snapshot_studies": 60,
+          "condition_share_pct": 12.706565,
+          "recruiting_condition_share_pct": 11.494253,
+          "city_studies": 4478,
+          "city_recruiting_snapshot_studies": 522,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Calgary",
+          "condition_domain": "Infectious disease / vaccines",
+          "studies": 345,
+          "recruiting_snapshot_studies": 26,
+          "condition_share_pct": 7.704332,
+          "recruiting_condition_share_pct": 4.980843,
+          "city_studies": 4478,
+          "city_recruiting_snapshot_studies": 522,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Calgary",
+          "condition_domain": "Neurology / brain health",
+          "studies": 220,
+          "recruiting_snapshot_studies": 18,
+          "condition_share_pct": 4.912908,
+          "recruiting_condition_share_pct": 3.448276,
+          "city_studies": 4478,
+          "city_recruiting_snapshot_studies": 522,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Calgary",
+          "condition_domain": "Diabetes / metabolic",
+          "studies": 212,
+          "recruiting_snapshot_studies": 20,
+          "condition_share_pct": 4.734256,
+          "recruiting_condition_share_pct": 3.831418,
+          "city_studies": 4478,
+          "city_recruiting_snapshot_studies": 522,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Calgary",
+          "condition_domain": "Pediatrics / youth",
+          "studies": 197,
+          "recruiting_snapshot_studies": 49,
+          "condition_share_pct": 4.399285,
+          "recruiting_condition_share_pct": 9.386973,
+          "city_studies": 4478,
+          "city_recruiting_snapshot_studies": 522,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Calgary",
+          "condition_domain": "Respiratory",
+          "studies": 179,
+          "recruiting_snapshot_studies": 13,
+          "condition_share_pct": 3.99732,
+          "recruiting_condition_share_pct": 2.490421,
+          "city_studies": 4478,
+          "city_recruiting_snapshot_studies": 522,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Calgary",
+          "condition_domain": "Surgery / trauma",
+          "studies": 96,
+          "recruiting_snapshot_studies": 7,
+          "condition_share_pct": 2.143814,
+          "recruiting_condition_share_pct": 1.340996,
+          "city_studies": 4478,
+          "city_recruiting_snapshot_studies": 522,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Calgary",
+          "condition_domain": "Mental health / substance use",
+          "studies": 91,
+          "recruiting_snapshot_studies": 21,
+          "condition_share_pct": 2.032157,
+          "recruiting_condition_share_pct": 4.022989,
+          "city_studies": 4478,
+          "city_recruiting_snapshot_studies": 522,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Calgary",
+          "condition_domain": "Renal / kidney",
+          "studies": 72,
+          "recruiting_snapshot_studies": 15,
+          "condition_share_pct": 1.607861,
+          "recruiting_condition_share_pct": 2.873563,
+          "city_studies": 4478,
+          "city_recruiting_snapshot_studies": 522,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Calgary",
+          "condition_domain": "Women / maternal health",
+          "studies": 22,
+          "recruiting_snapshot_studies": 5,
+          "condition_share_pct": 0.491291,
+          "recruiting_condition_share_pct": 0.957854,
+          "city_studies": 4478,
+          "city_recruiting_snapshot_studies": 522,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Calgary",
+          "condition_domain": "Rural / Indigenous / community health",
+          "studies": 1,
+          "recruiting_snapshot_studies": 1,
+          "condition_share_pct": 0.022331,
+          "recruiting_condition_share_pct": 0.191571,
+          "city_studies": 4478,
+          "city_recruiting_snapshot_studies": 522,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Halifax",
+          "condition_domain": "Cancer / oncology",
+          "studies": 826,
+          "recruiting_snapshot_studies": 105,
+          "condition_share_pct": 29.249292,
+          "recruiting_condition_share_pct": 34.883721,
+          "city_studies": 2824,
+          "city_recruiting_snapshot_studies": 301,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Halifax",
+          "condition_domain": "Other / mixed",
+          "studies": 732,
+          "recruiting_snapshot_studies": 56,
+          "condition_share_pct": 25.92068,
+          "recruiting_condition_share_pct": 18.604651,
+          "city_studies": 2824,
+          "city_recruiting_snapshot_studies": 301,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Halifax",
+          "condition_domain": "Cardiovascular / stroke",
+          "studies": 367,
+          "recruiting_snapshot_studies": 48,
+          "condition_share_pct": 12.995751,
+          "recruiting_condition_share_pct": 15.946844,
+          "city_studies": 2824,
+          "city_recruiting_snapshot_studies": 301,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Halifax",
+          "condition_domain": "Infectious disease / vaccines",
+          "studies": 214,
+          "recruiting_snapshot_studies": 11,
+          "condition_share_pct": 7.577904,
+          "recruiting_condition_share_pct": 3.654485,
+          "city_studies": 2824,
+          "city_recruiting_snapshot_studies": 301,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Halifax",
+          "condition_domain": "Neurology / brain health",
+          "studies": 162,
+          "recruiting_snapshot_studies": 17,
+          "condition_share_pct": 5.736544,
+          "recruiting_condition_share_pct": 5.647841,
+          "city_studies": 2824,
+          "city_recruiting_snapshot_studies": 301,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Halifax",
+          "condition_domain": "Diabetes / metabolic",
+          "studies": 128,
+          "recruiting_snapshot_studies": 11,
+          "condition_share_pct": 4.532578,
+          "recruiting_condition_share_pct": 3.654485,
+          "city_studies": 2824,
+          "city_recruiting_snapshot_studies": 301,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Halifax",
+          "condition_domain": "Pediatrics / youth",
+          "studies": 99,
+          "recruiting_snapshot_studies": 16,
+          "condition_share_pct": 3.505666,
+          "recruiting_condition_share_pct": 5.315615,
+          "city_studies": 2824,
+          "city_recruiting_snapshot_studies": 301,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Halifax",
+          "condition_domain": "Surgery / trauma",
+          "studies": 80,
+          "recruiting_snapshot_studies": 6,
+          "condition_share_pct": 2.832861,
+          "recruiting_condition_share_pct": 1.993355,
+          "city_studies": 2824,
+          "city_recruiting_snapshot_studies": 301,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Halifax",
+          "condition_domain": "Mental health / substance use",
+          "studies": 68,
+          "recruiting_snapshot_studies": 20,
+          "condition_share_pct": 2.407932,
+          "recruiting_condition_share_pct": 6.644518,
+          "city_studies": 2824,
+          "city_recruiting_snapshot_studies": 301,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Halifax",
+          "condition_domain": "Renal / kidney",
+          "studies": 64,
+          "recruiting_snapshot_studies": 4,
+          "condition_share_pct": 2.266289,
+          "recruiting_condition_share_pct": 1.328904,
+          "city_studies": 2824,
+          "city_recruiting_snapshot_studies": 301,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Halifax",
+          "condition_domain": "Respiratory",
+          "studies": 64,
+          "recruiting_snapshot_studies": 4,
+          "condition_share_pct": 2.266289,
+          "recruiting_condition_share_pct": 1.328904,
+          "city_studies": 2824,
+          "city_recruiting_snapshot_studies": 301,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Halifax",
+          "condition_domain": "Women / maternal health",
+          "studies": 17,
+          "recruiting_snapshot_studies": 3,
+          "condition_share_pct": 0.601983,
+          "recruiting_condition_share_pct": 0.996678,
+          "city_studies": 2824,
+          "city_recruiting_snapshot_studies": 301,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Halifax",
+          "condition_domain": "Rural / Indigenous / community health",
+          "studies": 3,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 0.106232,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 2824,
+          "city_recruiting_snapshot_studies": 301,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Prince George",
+          "condition_domain": "Cancer / oncology",
+          "studies": 7,
+          "recruiting_snapshot_studies": 5,
+          "condition_share_pct": 70.0,
+          "recruiting_condition_share_pct": 83.333333,
+          "city_studies": 10,
+          "city_recruiting_snapshot_studies": 6,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Prince George",
+          "condition_domain": "Diabetes / metabolic",
+          "studies": 1,
+          "recruiting_snapshot_studies": 1,
+          "condition_share_pct": 10.0,
+          "recruiting_condition_share_pct": 16.666667,
+          "city_studies": 10,
+          "city_recruiting_snapshot_studies": 6,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Prince George",
+          "condition_domain": "Respiratory",
+          "studies": 1,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 10.0,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 10,
+          "city_recruiting_snapshot_studies": 6,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Prince George",
+          "condition_domain": "Surgery / trauma",
+          "studies": 1,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 10.0,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 10,
+          "city_recruiting_snapshot_studies": 6,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Saskatoon",
+          "condition_domain": "Cancer / oncology",
+          "studies": 452,
+          "recruiting_snapshot_studies": 52,
+          "condition_share_pct": 33.308769,
+          "recruiting_condition_share_pct": 40.310078,
+          "city_studies": 1357,
+          "city_recruiting_snapshot_studies": 129,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Saskatoon",
+          "condition_domain": "Other / mixed",
+          "studies": 371,
+          "recruiting_snapshot_studies": 20,
+          "condition_share_pct": 27.33972,
+          "recruiting_condition_share_pct": 15.503876,
+          "city_studies": 1357,
+          "city_recruiting_snapshot_studies": 129,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Saskatoon",
+          "condition_domain": "Cardiovascular / stroke",
+          "studies": 150,
+          "recruiting_snapshot_studies": 19,
+          "condition_share_pct": 11.053795,
+          "recruiting_condition_share_pct": 14.728682,
+          "city_studies": 1357,
+          "city_recruiting_snapshot_studies": 129,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Saskatoon",
+          "condition_domain": "Respiratory",
+          "studies": 113,
+          "recruiting_snapshot_studies": 7,
+          "condition_share_pct": 8.327192,
+          "recruiting_condition_share_pct": 5.426357,
+          "city_studies": 1357,
+          "city_recruiting_snapshot_studies": 129,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Saskatoon",
+          "condition_domain": "Diabetes / metabolic",
+          "studies": 62,
+          "recruiting_snapshot_studies": 5,
+          "condition_share_pct": 4.568902,
+          "recruiting_condition_share_pct": 3.875969,
+          "city_studies": 1357,
+          "city_recruiting_snapshot_studies": 129,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Saskatoon",
+          "condition_domain": "Pediatrics / youth",
+          "studies": 50,
+          "recruiting_snapshot_studies": 11,
+          "condition_share_pct": 3.684598,
+          "recruiting_condition_share_pct": 8.527132,
+          "city_studies": 1357,
+          "city_recruiting_snapshot_studies": 129,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Saskatoon",
+          "condition_domain": "Infectious disease / vaccines",
+          "studies": 41,
+          "recruiting_snapshot_studies": 5,
+          "condition_share_pct": 3.021371,
+          "recruiting_condition_share_pct": 3.875969,
+          "city_studies": 1357,
+          "city_recruiting_snapshot_studies": 129,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Saskatoon",
+          "condition_domain": "Neurology / brain health",
+          "studies": 41,
+          "recruiting_snapshot_studies": 1,
+          "condition_share_pct": 3.021371,
+          "recruiting_condition_share_pct": 0.775194,
+          "city_studies": 1357,
+          "city_recruiting_snapshot_studies": 129,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Saskatoon",
+          "condition_domain": "Renal / kidney",
+          "studies": 26,
+          "recruiting_snapshot_studies": 3,
+          "condition_share_pct": 1.915991,
+          "recruiting_condition_share_pct": 2.325581,
+          "city_studies": 1357,
+          "city_recruiting_snapshot_studies": 129,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Saskatoon",
+          "condition_domain": "Mental health / substance use",
+          "studies": 18,
+          "recruiting_snapshot_studies": 3,
+          "condition_share_pct": 1.326455,
+          "recruiting_condition_share_pct": 2.325581,
+          "city_studies": 1357,
+          "city_recruiting_snapshot_studies": 129,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Saskatoon",
+          "condition_domain": "Surgery / trauma",
+          "studies": 18,
+          "recruiting_snapshot_studies": 2,
+          "condition_share_pct": 1.326455,
+          "recruiting_condition_share_pct": 1.550388,
+          "city_studies": 1357,
+          "city_recruiting_snapshot_studies": 129,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Saskatoon",
+          "condition_domain": "Women / maternal health",
+          "studies": 12,
+          "recruiting_snapshot_studies": 1,
+          "condition_share_pct": 0.884304,
+          "recruiting_condition_share_pct": 0.775194,
+          "city_studies": 1357,
+          "city_recruiting_snapshot_studies": 129,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Saskatoon",
+          "condition_domain": "Rural / Indigenous / community health",
+          "studies": 3,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 0.221076,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 1357,
+          "city_recruiting_snapshot_studies": 129,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Sudbury",
+          "condition_domain": "Cancer / oncology",
+          "studies": 204,
+          "recruiting_snapshot_studies": 10,
+          "condition_share_pct": 36.042403,
+          "recruiting_condition_share_pct": 28.571429,
+          "city_studies": 566,
+          "city_recruiting_snapshot_studies": 35,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Sudbury",
+          "condition_domain": "Other / mixed",
+          "studies": 124,
+          "recruiting_snapshot_studies": 9,
+          "condition_share_pct": 21.908127,
+          "recruiting_condition_share_pct": 25.714286,
+          "city_studies": 566,
+          "city_recruiting_snapshot_studies": 35,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Sudbury",
+          "condition_domain": "Cardiovascular / stroke",
+          "studies": 111,
+          "recruiting_snapshot_studies": 14,
+          "condition_share_pct": 19.611307,
+          "recruiting_condition_share_pct": 40.0,
+          "city_studies": 566,
+          "city_recruiting_snapshot_studies": 35,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Sudbury",
+          "condition_domain": "Infectious disease / vaccines",
+          "studies": 53,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 9.363958,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 566,
+          "city_recruiting_snapshot_studies": 35,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Sudbury",
+          "condition_domain": "Respiratory",
+          "studies": 21,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 3.710247,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 566,
+          "city_recruiting_snapshot_studies": 35,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Sudbury",
+          "condition_domain": "Diabetes / metabolic",
+          "studies": 19,
+          "recruiting_snapshot_studies": 1,
+          "condition_share_pct": 3.35689,
+          "recruiting_condition_share_pct": 2.857143,
+          "city_studies": 566,
+          "city_recruiting_snapshot_studies": 35,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Sudbury",
+          "condition_domain": "Mental health / substance use",
+          "studies": 10,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 1.766784,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 566,
+          "city_recruiting_snapshot_studies": 35,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Sudbury",
+          "condition_domain": "Pediatrics / youth",
+          "studies": 10,
+          "recruiting_snapshot_studies": 1,
+          "condition_share_pct": 1.766784,
+          "recruiting_condition_share_pct": 2.857143,
+          "city_studies": 566,
+          "city_recruiting_snapshot_studies": 35,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Sudbury",
+          "condition_domain": "Renal / kidney",
+          "studies": 10,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 1.766784,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 566,
+          "city_recruiting_snapshot_studies": 35,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Sudbury",
+          "condition_domain": "Neurology / brain health",
+          "studies": 2,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 0.353357,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 566,
+          "city_recruiting_snapshot_studies": 35,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Sudbury",
+          "condition_domain": "Surgery / trauma",
+          "studies": 2,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 0.353357,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 566,
+          "city_recruiting_snapshot_studies": 35,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Thunder Bay",
+          "condition_domain": "Cancer / oncology",
+          "studies": 153,
+          "recruiting_snapshot_studies": 7,
+          "condition_share_pct": 74.634146,
+          "recruiting_condition_share_pct": 38.888889,
+          "city_studies": 205,
+          "city_recruiting_snapshot_studies": 18,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Thunder Bay",
+          "condition_domain": "Other / mixed",
+          "studies": 18,
+          "recruiting_snapshot_studies": 6,
+          "condition_share_pct": 8.780488,
+          "recruiting_condition_share_pct": 33.333333,
+          "city_studies": 205,
+          "city_recruiting_snapshot_studies": 18,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Thunder Bay",
+          "condition_domain": "Cardiovascular / stroke",
+          "studies": 17,
+          "recruiting_snapshot_studies": 2,
+          "condition_share_pct": 8.292683,
+          "recruiting_condition_share_pct": 11.111111,
+          "city_studies": 205,
+          "city_recruiting_snapshot_studies": 18,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Thunder Bay",
+          "condition_domain": "Infectious disease / vaccines",
+          "studies": 6,
+          "recruiting_snapshot_studies": 1,
+          "condition_share_pct": 2.926829,
+          "recruiting_condition_share_pct": 5.555556,
+          "city_studies": 205,
+          "city_recruiting_snapshot_studies": 18,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Thunder Bay",
+          "condition_domain": "Renal / kidney",
+          "studies": 3,
+          "recruiting_snapshot_studies": 2,
+          "condition_share_pct": 1.463415,
+          "recruiting_condition_share_pct": 11.111111,
+          "city_studies": 205,
+          "city_recruiting_snapshot_studies": 18,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Thunder Bay",
+          "condition_domain": "Surgery / trauma",
+          "studies": 3,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 1.463415,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 205,
+          "city_recruiting_snapshot_studies": 18,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Thunder Bay",
+          "condition_domain": "Diabetes / metabolic",
+          "studies": 2,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 0.97561,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 205,
+          "city_recruiting_snapshot_studies": 18,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Thunder Bay",
+          "condition_domain": "Mental health / substance use",
+          "studies": 1,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 0.487805,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 205,
+          "city_recruiting_snapshot_studies": 18,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Thunder Bay",
+          "condition_domain": "Neurology / brain health",
+          "studies": 1,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 0.487805,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 205,
+          "city_recruiting_snapshot_studies": 18,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Thunder Bay",
+          "condition_domain": "Pediatrics / youth",
+          "studies": 1,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 0.487805,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 205,
+          "city_recruiting_snapshot_studies": 18,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Vancouver",
+          "condition_domain": "Other / mixed",
+          "studies": 1496,
+          "recruiting_snapshot_studies": 132,
+          "condition_share_pct": 26.771654,
+          "recruiting_condition_share_pct": 21.428571,
+          "city_studies": 5588,
+          "city_recruiting_snapshot_studies": 616,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Vancouver",
+          "condition_domain": "Cancer / oncology",
+          "studies": 1446,
+          "recruiting_snapshot_studies": 183,
+          "condition_share_pct": 25.876879,
+          "recruiting_condition_share_pct": 29.707792,
+          "city_studies": 5588,
+          "city_recruiting_snapshot_studies": 616,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Vancouver",
+          "condition_domain": "Cardiovascular / stroke",
+          "studies": 617,
+          "recruiting_snapshot_studies": 71,
+          "condition_share_pct": 11.041518,
+          "recruiting_condition_share_pct": 11.525974,
+          "city_studies": 5588,
+          "city_recruiting_snapshot_studies": 616,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Vancouver",
+          "condition_domain": "Infectious disease / vaccines",
+          "studies": 562,
+          "recruiting_snapshot_studies": 30,
+          "condition_share_pct": 10.057266,
+          "recruiting_condition_share_pct": 4.87013,
+          "city_studies": 5588,
+          "city_recruiting_snapshot_studies": 616,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Vancouver",
+          "condition_domain": "Respiratory",
+          "studies": 288,
+          "recruiting_snapshot_studies": 32,
+          "condition_share_pct": 5.153901,
+          "recruiting_condition_share_pct": 5.194805,
+          "city_studies": 5588,
+          "city_recruiting_snapshot_studies": 616,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Vancouver",
+          "condition_domain": "Diabetes / metabolic",
+          "studies": 238,
+          "recruiting_snapshot_studies": 19,
+          "condition_share_pct": 4.259127,
+          "recruiting_condition_share_pct": 3.084416,
+          "city_studies": 5588,
+          "city_recruiting_snapshot_studies": 616,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Vancouver",
+          "condition_domain": "Neurology / brain health",
+          "studies": 228,
+          "recruiting_snapshot_studies": 31,
+          "condition_share_pct": 4.080172,
+          "recruiting_condition_share_pct": 5.032468,
+          "city_studies": 5588,
+          "city_recruiting_snapshot_studies": 616,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Vancouver",
+          "condition_domain": "Pediatrics / youth",
+          "studies": 218,
+          "recruiting_snapshot_studies": 49,
+          "condition_share_pct": 3.901217,
+          "recruiting_condition_share_pct": 7.954545,
+          "city_studies": 5588,
+          "city_recruiting_snapshot_studies": 616,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Vancouver",
+          "condition_domain": "Mental health / substance use",
+          "studies": 165,
+          "recruiting_snapshot_studies": 24,
+          "condition_share_pct": 2.952756,
+          "recruiting_condition_share_pct": 3.896104,
+          "city_studies": 5588,
+          "city_recruiting_snapshot_studies": 616,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Vancouver",
+          "condition_domain": "Surgery / trauma",
+          "studies": 148,
+          "recruiting_snapshot_studies": 18,
+          "condition_share_pct": 2.648533,
+          "recruiting_condition_share_pct": 2.922078,
+          "city_studies": 5588,
+          "city_recruiting_snapshot_studies": 616,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Vancouver",
+          "condition_domain": "Renal / kidney",
+          "studies": 117,
+          "recruiting_snapshot_studies": 17,
+          "condition_share_pct": 2.093772,
+          "recruiting_condition_share_pct": 2.75974,
+          "city_studies": 5588,
+          "city_recruiting_snapshot_studies": 616,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Vancouver",
+          "condition_domain": "Women / maternal health",
+          "studies": 60,
+          "recruiting_snapshot_studies": 10,
+          "condition_share_pct": 1.073729,
+          "recruiting_condition_share_pct": 1.623377,
+          "city_studies": 5588,
+          "city_recruiting_snapshot_studies": 616,
+          "snapshot_date": "2026-04-29"
+        },
+        {
+          "query_city": "Vancouver",
+          "condition_domain": "Rural / Indigenous / community health",
+          "studies": 5,
+          "recruiting_snapshot_studies": 0,
+          "condition_share_pct": 0.089477,
+          "recruiting_condition_share_pct": 0.0,
+          "city_studies": 5588,
+          "city_recruiting_snapshot_studies": 616,
+          "snapshot_date": "2026-04-29"
+        }
+      ],
+      "defaultMetric": "condition_share_pct",
+      "entityField": "query_city",
+      "timeField": "snapshot_date",
+      "mapScaleFields": [
+        "condition_domain"
+      ]
+    }
+  ],
+  "snapshot": {
+    "reviewedAt": "2026-10-12",
+    "sourceRowCount": 77,
+    "cityCount": 7,
+    "distinctConditionDomains": 13,
+    "absentCityDomainPairs": 14,
+    "explicitZeroRecruitingRows": 16,
+    "alignedComparatorSnapshot": "2026-04-29",
+    "sourceHasOwnTimestamp": false,
+    "shareConvention": "Percentage points (0–100), rounded to 6 decimals; fixed full-city denominator, never filtered-subset renormalization"
+  }
+}

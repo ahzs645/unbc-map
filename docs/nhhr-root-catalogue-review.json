@@ -1,0 +1,4092 @@
+{
+  "reviewedAt": "2026-10-12",
+  "manifestRevision": 93,
+  "reviews": [
+    {
+      "collectionId": "DATA-C002",
+      "datasetId": "3ca3204c-f1cb-46f0-9777-420b1d82d0ac",
+      "status": "candidate",
+      "summary": "Historical transportation and warehousing assessment; tabular housing, wage and ranking extracts exist but do not measure health outcomes.",
+      "mapConnection": "Report city/CMA/state/country labels need separately verified geography and dates.",
+      "needs": [
+        "Verify the report period, methodology and city-versus-CMA definition before choosing a contextual chart."
+      ],
+      "cannot": [
+        "Do not turn industrial opportunity scores or investment rankings into NHHR health evidence."
+      ],
+      "views": [],
+      "datasetReceipt": {
+        "collectionId": "DATA-C002",
+        "datasetId": "3ca3204c-f1cb-46f0-9777-420b1d82d0ac",
+        "metadataSha256": "63321ae55c9af3e652f8537b73fd8fe500ccb35b114f1aebcb702037e375e4c7",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 23,
+      "catalogueFilePathsReviewed": 24,
+      "catalogueTablesReviewed": 49,
+      "evidence": [
+        {
+          "name": "cleaned_extracted_tables.xlsx",
+          "fileId": "6eb356c0-9174-43bf-bd06-2511ee7d498e",
+          "sha256": "2a9844ffeddb5fdfc0179e19b7fd7fd8be690b91c9cd80512c5a19c9cd7710ee",
+          "bytes": 52807,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002_cleane",
+              "rows": 6,
+              "worksheet": "table_001_housing_starts_by_dwe"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__2",
+              "rows": 11,
+              "worksheet": "table_003_fdi_into_north_americ"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__3",
+              "rows": 21,
+              "worksheet": "table_004_fdi_into_bc_ab_ak_by_"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__4",
+              "rows": 13,
+              "worksheet": "table_005_fdi_into_british_colu"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__5",
+              "rows": 7,
+              "worksheet": "table_009_canada_us_quality_com"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__6",
+              "rows": 23,
+              "worksheet": "logical_table_010_012_province_"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__7",
+              "rows": 20,
+              "worksheet": "logical_table_013_015_city_rank"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__8",
+              "rows": 25,
+              "worksheet": "logical_table_016_018_city_rank"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__9",
+              "rows": 21,
+              "worksheet": "table_021_manufacturing_annual_"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__10",
+              "rows": 8,
+              "worksheet": "logical_table_028_032_regional_"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__11",
+              "rows": 14,
+              "worksheet": "logical_table_035_044_opportuni"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__12",
+              "rows": 8,
+              "worksheet": "table_002_external_demand_facto"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__13",
+              "rows": 18,
+              "worksheet": "table_006_target_regions"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__14",
+              "rows": 3,
+              "worksheet": "table_007_supply_chain_comments"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__15",
+              "rows": 1,
+              "worksheet": "table_008_competing_locations_l"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__16",
+              "rows": 10,
+              "worksheet": "table_019_property_utility_cost"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__17",
+              "rows": 13,
+              "worksheet": "table_020_transportation_annual"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__18",
+              "rows": 21,
+              "worksheet": "table_022_transportation_locati"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__19",
+              "rows": 26,
+              "worksheet": "table_023_manufacturing_locatio"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__20",
+              "rows": 23,
+              "worksheet": "table_024_transportation_annual"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__21",
+              "rows": 25,
+              "worksheet": "table_025_manufacturing_annual_"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__22",
+              "rows": 23,
+              "worksheet": "table_026_transportation_locati"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__23",
+              "rows": 25,
+              "worksheet": "table_027_manufacturing_locatio"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__24",
+              "rows": 16,
+              "worksheet": "table_033_value_chain_part_1"
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__25",
+              "rows": 18,
+              "worksheet": "table_034_value_chain_part_2"
+            }
+          ]
+        },
+        {
+          "name": "cleaned_logical_table_010_012_province_state_rankings_quality.csv",
+          "fileId": "8c907f84-160d-4bba-aa74-c46a4d84d648",
+          "sha256": "1caadee7be7a6416f7f1232e5536d09eaaf4e6b4cf3774f72e712409f51444df",
+          "bytes": 3212,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__26",
+              "rows": 22,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "Data Point",
+            "Rank",
+            "Data",
+            "Unit",
+            "Year",
+            "Source"
+          ],
+          "rowCount": 22
+        },
+        {
+          "name": "cleaned_logical_table_013_015_city_rankings_quality.csv",
+          "fileId": "e205c573-b376-4249-9b4a-4ed16ed26cc4",
+          "sha256": "a2e43cc7d3e9bd5bb368748302109e2753126fcbf02c1d9d7bf60e07fc5c9da9",
+          "bytes": 3347,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__27",
+              "rows": 19,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "Data Point",
+            "Rank",
+            "Data",
+            "Unit",
+            "Year",
+            "Source"
+          ],
+          "rowCount": 19
+        },
+        {
+          "name": "cleaned_logical_table_016_018_city_rankings_labour_cost.csv",
+          "fileId": "52da39e7-bc12-4674-854b-1c0fc3e3d4c3",
+          "sha256": "477c85bbe0b67259efd287a14f7c94c63d62d5d5b328d84c6d839d0efd1d62e7",
+          "bytes": 4422,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__28",
+              "rows": 24,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "Role",
+            "Category",
+            "Rank",
+            "Salary (USD)",
+            "Year",
+            "Source"
+          ],
+          "rowCount": 24
+        },
+        {
+          "name": "table_028_032_competitor_comparison.csv",
+          "fileId": "9902cfed-a4c8-44b4-addb-c5f305096b1f",
+          "sha256": "fc3a8adab0c9232ba75d786dfe7b43773ce76932dd598722a26791f2bff37a73",
+          "bytes": 8944,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002_table_",
+              "rows": 7,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "Attribute",
+            "Prince George",
+            "Kelowna",
+            "Edmonton",
+            "Vancouver",
+            "Seattle"
+          ],
+          "rowCount": 7
+        },
+        {
+          "name": "cleaned_logical_table_035_044_opportunity_assessment.csv",
+          "fileId": "135484f7-dfbf-4b49-ba8d-97bc5bc6c655",
+          "sha256": "dca4b2db0bb0293cc54bd90b0a25062b7184e3dc88444739536f97bc860070d1",
+          "bytes": 8983,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__29",
+              "rows": 13,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "Subsector",
+            "Opportunity Name / Type",
+            "Opportunity Description",
+            "Evidence",
+            "Priority/Timing"
+          ],
+          "rowCount": 13
+        },
+        {
+          "name": "cleaned_table_001_housing_starts_by_dwelling_type_2023_ytd.csv",
+          "fileId": "2283f8fd-93fa-4246-be2f-78fb4a3175e2",
+          "sha256": "0841f8b1739306fbb3242cba71e15c404aa8fb173f6f05667c9dd13885d21ddd",
+          "bytes": 133,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__30",
+              "rows": 5,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "Dwelling Type",
+            "YTD-22",
+            "YTD-23",
+            "Change"
+          ],
+          "rowCount": 5
+        },
+        {
+          "name": "cleaned_table_003_fdi_into_north_america_by_source_country.csv",
+          "fileId": "180d0954-5d0c-4132-ae8b-082596343dc2",
+          "sha256": "897dcc92632048172b0cb1fb9aadd04c4c314aadccd79ef0e4828ae67a12f4b1",
+          "bytes": 323,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__31",
+              "rows": 10,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "FDI Destination",
+            "Source Country",
+            "Number of Projects"
+          ],
+          "rowCount": 10
+        },
+        {
+          "name": "cleaned_table_004_fdi_into_bc_ab_ak_by_source_country.csv",
+          "fileId": "bf82dd5c-1458-4c42-966c-c281eef0baee",
+          "sha256": "111daa0e336e2fe9828c43ad534668b3b98caa59c14200ea6669bc9bb43538ce",
+          "bytes": 624,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__32",
+              "rows": 20,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "FDI Destination",
+            "Source Country",
+            "Number of Projects"
+          ],
+          "rowCount": 20
+        },
+        {
+          "name": "cleaned_table_005_fdi_into_british_columbia_by_source_country.csv",
+          "fileId": "33bfd9b9-77c5-47ee-b3dd-9a49ac64a934",
+          "sha256": "f75248a7b2835a44bcf5efebc7dac754ff3a1ccfedca4df6653a86bb5729037c",
+          "bytes": 392,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__33",
+              "rows": 12,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "FDI Destination",
+            "Source Country",
+            "Number of Projects"
+          ],
+          "rowCount": 12
+        },
+        {
+          "name": "cleaned_table_009_canada_us_quality_comparison.csv",
+          "fileId": "5b4d4a58-9254-40c2-8afc-8eb1e9219492",
+          "sha256": "41edf6767b0b3b43fc4b4745cde7f62d8622b668fdebce27aafe612976873f73",
+          "bytes": 632,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__34",
+              "rows": 6,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "Data Point",
+            "Canada",
+            "United States",
+            "Year",
+            "Source"
+          ],
+          "rowCount": 6
+        },
+        {
+          "name": "cleaned_table_021_manufacturing_annual_wages_by_naics.csv",
+          "fileId": "44bae77c-5d8e-406f-8208-19e094a23e33",
+          "sha256": "981a7c574fb5c9763ce2caaaa3ee06dbad0f1d75c1c8434c181e86f9d1361765",
+          "bytes": 1800,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__35",
+              "rows": 20,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "Annual Wages by Subsector - 2022",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "rowCount": 20
+        },
+        {
+          "name": "manifest.json",
+          "fileId": "70f380f2-550e-462a-8d6a-d9338cca770f",
+          "sha256": "ac3779fd249d03d2dda0209a6e884eb4a8ac4c3c2c9ee711d998f673c0b60cf3",
+          "bytes": 6439,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002_manife",
+              "rows": 25,
+              "worksheet": ""
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__36",
+              "rows": 5,
+              "worksheet": ""
+            },
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__37",
+              "rows": 1,
+              "worksheet": ""
+            }
+          ],
+          "jsonKeys": [
+            "source_raw_folder",
+            "qa_source",
+            "workbook",
+            "table_count",
+            "tables",
+            "notes",
+            "cleaning_qa_report",
+            "coverage_gaps_report",
+            "swarm_supplemental_folder"
+          ]
+        },
+        {
+          "name": "opportunity_assessment_table_035_044_cleaned.csv",
+          "fileId": "cc669017-33aa-4681-a95c-bfde2f531283",
+          "sha256": "1c5253c3bb9f96c67b5965e66ba2094a0e3f6f47eaa236073c55e06300be6e17",
+          "bytes": 9126,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002_opport",
+              "rows": 13,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "subsector",
+            "opportunity_name_type",
+            "opportunity_description",
+            "evidence",
+            "priority_timing",
+            "source_tables"
+          ],
+          "rowCount": 13
+        },
+        {
+          "name": "table_001_p024_housing_starts_by_dwelling_type_in_prince_george_2023_ytd.csv",
+          "fileId": "079091eb-2cff-42c2-a1cd-8aeac30f7bfd",
+          "sha256": "11b3cf5074397a97e3d22d528af6e0c090429d04a4e2999bbd4bbc4ffde31ba7",
+          "bytes": 127,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__38",
+              "rows": 5,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "Dwelling Type",
+            "YTD-22",
+            "YTD-23",
+            "Change"
+          ],
+          "rowCount": 5
+        },
+        {
+          "name": "table_003_p040_greenfield_transportation_warehousing_sector.csv",
+          "fileId": "2b73b145-80a0-490b-8129-7936e9686611",
+          "sha256": "29ea049d5a2fcefe968ca244091b9f7e335bed9dbeca7ccd49a347b6d9e06df3",
+          "bytes": 312,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__39",
+              "rows": 10,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "FDI Destination",
+            "Source Country",
+            "Number of Projects"
+          ],
+          "rowCount": 10
+        },
+        {
+          "name": "table_004_p041_greenfield_and_expansion_17_transportation_and_warehousing_dependent_sec.csv",
+          "fileId": "870de585-efc9-4064-972f-97f83f7746cd",
+          "sha256": "65839deebb3ca72d4ce09fa779195e36ec43273b9b17a24136ecce7e4deb6f92",
+          "bytes": 603,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__40",
+              "rows": 20,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "FDI Destination",
+            "Source Country",
+            "Number of Projects"
+          ],
+          "rowCount": 20
+        },
+        {
+          "name": "table_005_p041_greenfield_and_expansion_17_transportation_and_warehousing_dependent_sec.csv",
+          "fileId": "66dd7cb9-516f-400c-8ffa-a65ea2ea06d0",
+          "sha256": "2ab90f7316d72bae7fb447187a977e062696021366ebbe79ac9ba778f236c6c3",
+          "bytes": 379,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__41",
+              "rows": 12,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "FDI Destination",
+            "Source Country",
+            "Number of Projects"
+          ],
+          "rowCount": 12
+        },
+        {
+          "name": "table_009_p066_us_in_the_following_areas.csv",
+          "fileId": "d630abb6-d91a-420e-bc3c-521e9b912c36",
+          "sha256": "d0a7286a9e7e995d87f91a68e9e99018445834079a0501a1bb9dd574539d2cdf",
+          "bytes": 625,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__42",
+              "rows": 6,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "Data Point",
+            "Canada",
+            "United States",
+            "Year",
+            "Source"
+          ],
+          "rowCount": 6
+        },
+        {
+          "name": "table_010_012_province_state_rankings.csv",
+          "fileId": "d2336baa-bf5c-40b3-85b4-826e1c9e7709",
+          "sha256": "d6983c1e71a6374a88d255f15f36859761370cec77ae4309cc2bc8afad17f924",
+          "bytes": 3298,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__43",
+              "rows": 22,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "Data Point",
+            "Rank",
+            "Data",
+            "Unit",
+            "Year",
+            "Source"
+          ],
+          "rowCount": 22
+        },
+        {
+          "name": "table_013_015_city_rankings.csv",
+          "fileId": "88216e48-7733-4c94-862f-52d3bf8ac91a",
+          "sha256": "f147063989bbbcebaa1dd602ebddabb391bb3c2a6f95de07920eae232e4dcac0",
+          "bytes": 3421,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__44",
+              "rows": 19,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "Data Point",
+            "Rank",
+            "Data",
+            "Unit",
+            "Year",
+            "Source"
+          ],
+          "rowCount": 19
+        },
+        {
+          "name": "table_016_018_city_rankings_labour_cost.csv",
+          "fileId": "7cf93ced-75a1-4015-bfdc-ea2d7929e826",
+          "sha256": "8848a67cb0ae2d66d4c3985c043ad26cff7db3055a079352bf3f14996062aa56",
+          "bytes": 4554,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__45",
+              "rows": 24,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "Role",
+            "Category",
+            "Rank",
+            "Salary (USD)",
+            "Year",
+            "Source"
+          ],
+          "rowCount": 24
+        },
+        {
+          "name": "table_021_p079_manufacturing_annual_wages_cad_by_4_digit_naics_by_cma_msa.csv",
+          "fileId": "26c70e1d-ed48-41a9-80ca-79e070fe99d9",
+          "sha256": "4dab6ed8dbe558108a615d4058c05962a8b3ad325d18f995843a6fb080f1857b",
+          "bytes": 1739,
+          "tables": [
+            {
+              "name": "nhhr_data_c002_50ffcf20d0ff_zip_data_c002__46",
+              "rows": 19,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "NAICS",
+            "Subsectors",
+            "Prince George",
+            "Kelowna",
+            "Vancouver",
+            "Edmonton",
+            "Seattle",
+            "Rank"
+          ],
+          "rowCount": 19
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C007",
+      "datasetId": "13973ad6-c6c4-4c12-ad4a-06c721f511a6",
+      "status": "metadata",
+      "summary": "Acquisition logs, aliases and source registries document provenance rather than independent observations.",
+      "mapConnection": "No measured geographic outcome.",
+      "needs": [
+        "Use aliases as evidence for an exact reviewed identity connection; never fuzzy-join by name alone."
+      ],
+      "cannot": [
+        "Download statuses and file counts are not scientific or health measures."
+      ],
+      "views": [],
+      "datasetReceipt": {
+        "collectionId": "DATA-C007",
+        "datasetId": "13973ad6-c6c4-4c12-ad4a-06c721f511a6",
+        "metadataSha256": "e919747c2ebfc44542b1416508b7d49718da2e10b2bc8e813ef1cfdde77f0870",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 21,
+      "catalogueFilePathsReviewed": 21,
+      "catalogueTablesReviewed": 21,
+      "evidence": [
+        {
+          "name": "browser_download_test_results.json",
+          "fileId": "cfbb9ec7-fe17-409f-9a58-dd27aa1fd029",
+          "sha256": "15e108249ed57a84cdb95670ce761ec79f735ec5253424829440ce54767a1479",
+          "bytes": 1069,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007_browse",
+              "rows": 3,
+              "worksheet": ""
+            }
+          ],
+          "jsonKeys": [
+            {
+              "name": "cihr_2024_25_xlsx",
+              "url": "https://open.canada.ca/data/dataset/49edb1d7-5cb4-4fa7-897c-515d1aad5da3/resource/b9d0adcd-a898-4e70-9dca-5b96db76ffe3/download/cihr_investments_investissements_irsc_202425.xlsx",
+              "error": "Browser Use cannot open https://open.canada.ca/data/dataset/49edb1d7-5cb4-4fa7-897c-515d1aad5da3/resource/b9d0adcd-a898-4e70-9dca-5b96db76ffe3/download/cihr_investments_investissements_irsc_202425.xlsx in tab 1. Browser reported: net::ERR_CONNECTION_RESET"
+            },
+            {
+              "name": "nserc_2024_awards_csv",
+              "url": "https://www.nserc-crsng.gc.ca/opendata/NSERC_FY2024_Expenditures.csv",
+              "error": "Browser Use cannot open https://www.nserc-crsng.gc.ca/opendata/NSERC_FY2024_Expenditures.csv in tab 1. Browser reported: net::ERR_ABORTED"
+            },
+            {
+              "name": "sshrc_2024_awards_csv",
+              "url": "https://www.sshrc-crsh.gc.ca/opendata/SSHRC_FY2024_Expenditures.csv",
+              "error": "Browser Use cannot open https://www.sshrc-crsh.gc.ca/opendata/SSHRC_FY2024_Expenditures.csv in tab 1. Browser reported: net::ERR_ABORTED"
+            }
+          ]
+        },
+        {
+          "name": "document_crosswalk.csv",
+          "fileId": "f970c096-67ac-469d-967c-b3c38a819762",
+          "sha256": "cbb11d09e8506235015ea959d03d59e7c546fffaffcef839899944c4187ff28c",
+          "bytes": 4162,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007_docume",
+              "rows": 14,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "document",
+            "relative_path",
+            "role",
+            "known_sheets_or_sections",
+            "what_it_contributes",
+            "tracker_connection",
+            "exists"
+          ],
+          "rowCount": 14
+        },
+        {
+          "name": "download_log_browser_use_retries.csv",
+          "fileId": "7bc250b1-07a4-4284-a44b-75b16fbdfa1c",
+          "sha256": "0925f79f048861c054855badf8fe50c7c98019c3e85d91bf3cb62e46f90c1c85",
+          "bytes": 800,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007_downlo",
+              "rows": 2,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_id",
+            "source_name",
+            "attempted_url",
+            "saved_path",
+            "status",
+            "notes"
+          ],
+          "rowCount": 2
+        },
+        {
+          "name": "download_log_cihr.csv",
+          "fileId": "30f6f311-6310-4ab6-aab6-6547c88e8293",
+          "sha256": "b5dab430c5dc54e56d704be3ddddf63254026c34efe5f392b51e1754b34b1f72",
+          "bytes": 10939,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007__2",
+              "rows": 30,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_id",
+            "source_name",
+            "attempted_url",
+            "saved_path",
+            "status",
+            "notes"
+          ],
+          "rowCount": 30
+        },
+        {
+          "name": "download_log_funding_infrastructure.csv",
+          "fileId": "42ff6bdd-e739-44e6-ba6f-86490ef81532",
+          "sha256": "cc4631f5fcf61bd155c60dbae2f9e1a8a111e3c80264adb7aac3c989a14d746c",
+          "bytes": 56748,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007__3",
+              "rows": 194,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_id",
+            "source_name",
+            "attempted_url",
+            "saved_path",
+            "status",
+            "notes"
+          ],
+          "rowCount": 194
+        },
+        {
+          "name": "download_log_manual_retries.csv",
+          "fileId": "1d08650b-bc7c-42a4-ac89-88a573ff3983",
+          "sha256": "9f8de38ddc65246e473cc32832b8c6b3760b0bf1e5025557133b1814488630ca",
+          "bytes": 553,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007__4",
+              "rows": 2,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_id",
+            "source_name",
+            "attempted_url",
+            "saved_path",
+            "status",
+            "notes"
+          ],
+          "rowCount": 2
+        },
+        {
+          "name": "download_log_publications_trials.csv",
+          "fileId": "9a68a739-177d-4824-b2da-a093e8b6bc38",
+          "sha256": "0358b3190c552412ab99eb716a400315f9b24e35ad2e31c526f4d7797a3911d1",
+          "bytes": 19991,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007__5",
+              "rows": 45,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_id",
+            "source_name",
+            "attempted_url",
+            "saved_path",
+            "status",
+            "notes"
+          ],
+          "rowCount": 45
+        },
+        {
+          "name": "download_log_regional_workforce.csv",
+          "fileId": "f48f0ae2-114e-41e0-8a1b-e7a63928c25f",
+          "sha256": "02a6d3676e3fe2715b409b8141ec32129084111f09e91d1b96ac939efe86b477",
+          "bytes": 5339,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007__6",
+              "rows": 15,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_id",
+            "source_name",
+            "attempted_url",
+            "saved_path",
+            "status",
+            "notes"
+          ],
+          "rowCount": 15
+        },
+        {
+          "name": "download_log_reports_finance.csv",
+          "fileId": "f1719c0b-9d21-4769-a96f-691ee8efa41e",
+          "sha256": "ff39be9fa57801769b0ee3736b80a6390244c906e94a71f230a03cbcdd54f022",
+          "bytes": 15781,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007__7",
+              "rows": 37,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_id",
+            "source_name",
+            "attempted_url",
+            "saved_path",
+            "status",
+            "notes"
+          ],
+          "rowCount": 37
+        },
+        {
+          "name": "download_manifest_consolidated.csv",
+          "fileId": "f8a02007-cbc7-4671-8d02-abcc88e286b5",
+          "sha256": "a036bbdf05668e8fafb9fb377afa35ad5c044bc75ff586f4e036b7882d282a5f",
+          "bytes": 123614,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007__8",
+              "rows": 325,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "log_file",
+            "source_id",
+            "source_name",
+            "attempted_url",
+            "saved_path",
+            "file_exists",
+            "bytes",
+            "status",
+            "notes"
+          ],
+          "rowCount": 325
+        },
+        {
+          "name": "download_summary_by_source.csv",
+          "fileId": "1b7a5582-c9eb-45c5-b629-9dbd5277f98a",
+          "sha256": "c06ec005fb0b594328eb285c3dd30c5b8ec804bccc4a9d4573ba2856c3498e1e",
+          "bytes": 10717,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007__9",
+              "rows": 294,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_id",
+            "successful_or_saved",
+            "failed_or_blocked",
+            "all_status_counts"
+          ],
+          "rowCount": 294
+        },
+        {
+          "name": "extraction_queue.csv",
+          "fileId": "f662868d-2060-450f-a006-f17b5aa2bbac",
+          "sha256": "b196871a9a11bc72c0d883c789a5d2fb8cc9a8245431540e0f92a5320e9ac13a",
+          "bytes": 6863,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007_extrac",
+              "rows": 33,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "sort_order",
+            "phase",
+            "source_id",
+            "source_name",
+            "bucket",
+            "first_action",
+            "local_path",
+            "owner",
+            "status"
+          ],
+          "rowCount": 33
+        },
+        {
+          "name": "institution_aliases.csv",
+          "fileId": "87c02989-a05d-4b82-936a-8692a67c85ea",
+          "sha256": "1a7fbab5dcda08f51b83f8d7a359a4e4ed18ec77c488a1ee50b18d193db68e45",
+          "bytes": 1223,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007_instit",
+              "rows": 8,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "institution_id",
+            "canonical_name",
+            "aliases",
+            "city",
+            "province",
+            "region_bucket",
+            "comparator_tier",
+            "primary_sources"
+          ],
+          "rowCount": 8
+        },
+        {
+          "name": "raw_file_inventory.csv",
+          "fileId": "7aaeaa47-9ad2-4ac5-ac76-00a51feb7a6c",
+          "sha256": "2a547073b9dbb4a380e9fb42e1ecc800319104b7a591ff821672fd1913bf4aff",
+          "bytes": 24320,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007_raw_fi",
+              "rows": 227,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "relative_path",
+            "folder",
+            "bytes",
+            "modified"
+          ],
+          "rowCount": 227
+        },
+        {
+          "name": "remaining_downloads.csv",
+          "fileId": "83911114-6f6e-4f13-b0d6-0df099d9ff8d",
+          "sha256": "739a194aa3831304a9996a74c09c22c195cb2945234c291f6592ffc4d8538329",
+          "bytes": 3429,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007_remain",
+              "rows": 14,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_id",
+            "remaining_item",
+            "status",
+            "what_we_have",
+            "recommended_next_step"
+          ],
+          "rowCount": 14
+        },
+        {
+          "name": "report_extract_log_finance_rankings.csv",
+          "fileId": "3af799f3-8291-4360-85ff-06e8c37c259b",
+          "sha256": "3107e28f42f1bc842ee69139de1738a21b2af09e4fa450d3dd942b8d1f0efc82",
+          "bytes": 2491,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007_report",
+              "rows": 8,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source",
+            "input_path",
+            "output_path",
+            "status",
+            "notes"
+          ],
+          "rowCount": 8
+        },
+        {
+          "name": "report_extract_log_policy_economic.csv",
+          "fileId": "c67b619d-342e-44d2-ac0e-f2fa6866c7db",
+          "sha256": "a23502c947ecef54a46cbb8cc1d2152886dea40a63fc15c5374559d30c4861e1",
+          "bytes": 2169,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007__10",
+              "rows": 2,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "timestamp_local",
+            "worker_scope",
+            "output_file",
+            "source_files_reviewed",
+            "rows_written",
+            "status",
+            "notes"
+          ],
+          "rowCount": 2
+        },
+        {
+          "name": "report_extraction_readiness.csv",
+          "fileId": "d34b436c-8c50-46ad-8389-8696e9a61490",
+          "sha256": "c68d7b0ff98714563599a3e0e78b680c86eac378b2334c31b3b3828a2dae5e48",
+          "bytes": 11074,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007__11",
+              "rows": 12,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "report_source",
+            "readiness",
+            "file_count",
+            "file_types",
+            "page_counts_pdf",
+            "files",
+            "extractability_notes",
+            "recommended_usable_output",
+            "blockers_or_qa",
+            "intended_use"
+          ],
+          "rowCount": 12
+        },
+        {
+          "name": "report_sources_status.csv",
+          "fileId": "09df9180-37bd-468b-b1b6-00987211f031",
+          "sha256": "7a4403861f7fbc1c688fa84550fb0df1ae97cde832e6d769af1b6d3af4f2f837",
+          "bytes": 1808,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007__12",
+              "rows": 12,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "report_source",
+            "status",
+            "what_we_have",
+            "local_path_pattern"
+          ],
+          "rowCount": 12
+        },
+        {
+          "name": "source_bucket_map.csv",
+          "fileId": "0f4fb2b5-c5d8-4984-8642-e42638e827d6",
+          "sha256": "1d83a928aa249dd9d3c78e17ffca0edad09ef225246d9d16383c3bf624c301c2",
+          "bytes": 718,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007_source",
+              "rows": 4,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "bucket",
+            "definition",
+            "recommended_use",
+            "count"
+          ],
+          "rowCount": 4
+        },
+        {
+          "name": "source_registry.csv",
+          "fileId": "d81f09f3-e1c6-43e7-904f-5434000b3339",
+          "sha256": "1aa6e45a27df6ea42b467f7096656f74b0bcbe1ed3b871b64644561755f41f54",
+          "bytes": 17419,
+          "tables": [
+            {
+              "name": "nhhr_data_c007_84752ee86efd_zip_data_c007__13",
+              "rows": 33,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_id",
+            "domain",
+            "source_name",
+            "bucket",
+            "access_method",
+            "source_url",
+            "unit_of_comparison",
+            "variables_to_extract",
+            "timeframe",
+            "data_format",
+            "local_path",
+            "priority",
+            "theory_tested",
+            "output",
+            "first_action",
+            "owner",
+            "status",
+            "notes"
+          ],
+          "rowCount": 33
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C008",
+      "datasetId": "94bf79c1-a37b-40f8-911c-32c4f4552733",
+      "status": "supporting",
+      "summary": "Overlapping analytical summaries support existing publication, funding and clinical portfolios. New CFI views are computed from the original award source.",
+      "mapConnection": "Institution/city summaries overlap current released views.",
+      "needs": [
+        "Use original C039 for infrastructure and C052 for research income; preserve separate definitions."
+      ],
+      "cannot": [
+        "Do not add summary totals to their original records or combine research income, award commitments and payments."
+      ],
+      "views": [
+        "publications",
+        "research-income",
+        "clinical-city",
+        "cfi-infrastructure"
+      ],
+      "datasetReceipt": {
+        "collectionId": "DATA-C008",
+        "datasetId": "94bf79c1-a37b-40f8-911c-32c4f4552733",
+        "metadataSha256": "08adf6fca1f6743fbab2b5aab9ce59e266acd3aa45399b1be9d1c92434cbd167",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 11,
+      "catalogueFilePathsReviewed": 12,
+      "catalogueTablesReviewed": 11,
+      "evidence": [
+        {
+          "name": "caubo_research_income_summary.csv",
+          "fileId": "60bc1627-0a62-4227-ba1f-59ce78f452cd",
+          "sha256": "a9684a6d170f50d74278c230c082f5274df8bd8860f2f5a94865e5201f1fb53b",
+          "bytes": 840,
+          "tables": [
+            {
+              "name": "nhhr_data_c008_8934fe9fd2a3_zip_data_c008_caubo_",
+              "rows": 16,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "institution_id",
+            "institution",
+            "reporting_period",
+            "caubo_sponsored_research_income_000"
+          ],
+          "rowCount": 16
+        },
+        {
+          "name": "cfi_comparator_summary.csv",
+          "fileId": "15c20e57-8539-457c-a67e-49bd1862ff65",
+          "sha256": "5fe3f46b49e6272913fd4434403563bdcfe6554ad0c78756cc34f7885127e078",
+          "bytes": 489,
+          "tables": [
+            {
+              "name": "nhhr_data_c008_8934fe9fd2a3_zip_data_c008_cfi_co",
+              "rows": 7,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "institution_id",
+            "institution",
+            "cfi_projects",
+            "cfi_contribution",
+            "first_decision_year",
+            "latest_decision_year"
+          ],
+          "rowCount": 7
+        },
+        {
+          "name": "cihr_bc_region_summary.csv",
+          "fileId": "a0b341e4-2055-4945-8885-980dff49a7ed",
+          "sha256": "e04df3667c30cd2e2f07bf6242b9295df618d2f61286a98e554125fe7d0ea153",
+          "bytes": 428,
+          "tables": [
+            {
+              "name": "nhhr_data_c008_8934fe9fd2a3_zip_data_c008_cihr_b",
+              "rows": 6,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "bc_region_code",
+            "records",
+            "cihr_total",
+            "share_of_bc_cihr_total"
+          ],
+          "rowCount": 6
+        },
+        {
+          "name": "cihr_comparator_summary.csv",
+          "fileId": "b1b7d808-82fe-480c-aff7-55ce25e96de5",
+          "sha256": "9811e56dd77518f4c18045aaa6f13ebdc9449cdc5b5209783f1dce76ed04eddb",
+          "bytes": 608,
+          "tables": [
+            {
+              "name": "nhhr_data_c008_8934fe9fd2a3_zip_data_c008_cihr_c",
+              "rows": 7,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "institution_id",
+            "institution",
+            "cihr_records",
+            "cihr_total",
+            "cihr_2015_2026",
+            "first_competition_year",
+            "latest_competition_year"
+          ],
+          "rowCount": 7
+        },
+        {
+          "name": "clinical_trials_city_summary.csv",
+          "fileId": "e324492d-431e-4c02-8096-a91eecfb7455",
+          "sha256": "576315a738e4fb127fad038dddd2125f5e9c73c69ef25a65f0eba40b0c2512c2",
+          "bytes": 1165,
+          "tables": [
+            {
+              "name": "nhhr_data_c008_8934fe9fd2a3_zip_data_c008_clinic",
+              "rows": 9,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "geography",
+            "total_count_reported_by_api",
+            "sample_records_downloaded",
+            "source_file",
+            "full_downloaded_query_studies",
+            "exact_query_city_site_studies",
+            "exact_query_city_site_rows"
+          ],
+          "rowCount": 9
+        },
+        {
+          "name": "comparator_evidence_matrix.csv",
+          "fileId": "b20a711c-7c59-400e-88a0-6fa80f3ca6e9",
+          "sha256": "abc02b71e173855583b983fba20e700722bb23d060c65c49412b662ad0353288",
+          "bytes": 1717,
+          "tables": [
+            {
+              "name": "nhhr_data_c008_8934fe9fd2a3_zip_data_c008_compar",
+              "rows": 8,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "institution_id",
+            "institution",
+            "city",
+            "cihr_total",
+            "cihr_2015_2026",
+            "cihr_records",
+            "reporting_period",
+            "latest_caubo_sponsored_research_income_000",
+            "rank_2024",
+            "research_infosource_fy2024_research_income_000",
+            "research_intensity_per_faculty_000",
+            "cfi_projects",
+            "cfi_contribution",
+            "works_2021_2025",
+            "works_2024",
+            "works_2025",
+            "nserc_partial_award_amount",
+            "nserc_partial_records",
+            "clinical_trials_city_total",
+            "clinical_trials_exact_city_site_studies"
+          ],
+          "rowCount": 8
+        },
+        {
+          "name": "data_inventory_summary.csv",
+          "fileId": "3087576c-ebbe-4d91-bb4a-cc95f954adf1",
+          "sha256": "7979e52145aa7df21318510192a72f39e123fb131419e4edcd7cb34031f19a5c",
+          "bytes": 27526,
+          "tables": [
+            {
+              "name": "nhhr_data_c008_8934fe9fd2a3_zip_data_c008_data_i",
+              "rows": 292,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "relative_path",
+            "folder",
+            "extension",
+            "bytes"
+          ],
+          "rowCount": 292
+        },
+        {
+          "name": "manual_report_findings.csv",
+          "fileId": "d2e2da76-11bb-4790-8d5f-1f8568cd6457",
+          "sha256": "e0674a2c03973b54726949054aa954df4bf086a6705d13696aa31cc5b86f6755",
+          "bytes": 1906,
+          "tables": [
+            {
+              "name": "nhhr_data_c008_8934fe9fd2a3_zip_data_c008_manual",
+              "rows": 8,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "theme",
+            "finding",
+            "source",
+            "caveat"
+          ],
+          "rowCount": 8
+        },
+        {
+          "name": "nserc_partial_1991_2000_summary.csv",
+          "fileId": "b6429387-db4b-4986-876a-c8dafac60a0b",
+          "sha256": "e178147831c69615e3b95338579a0598bae46ab047aeab310e3e35fc6319df31",
+          "bytes": 1220,
+          "tables": [
+            {
+              "name": "nhhr_data_c008_8934fe9fd2a3_zip_data_c008_nserc_",
+              "rows": 7,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "institution_id",
+            "nserc_partial_records",
+            "nserc_partial_award_amount",
+            "first_fiscal_year",
+            "latest_fiscal_year",
+            "institution",
+            "coverage_note"
+          ],
+          "rowCount": 7
+        },
+        {
+          "name": "openalex_publication_counts.csv",
+          "fileId": "2c8bedf8-ba0c-4d8c-99c5-b524f2ab4279",
+          "sha256": "e4f623d3bfdc38558de788ad56b90b12671b9057eda78ffd746aac86b69a7ced",
+          "bytes": 459,
+          "tables": [
+            {
+              "name": "nhhr_data_c008_8934fe9fd2a3_zip_data_c008_openal",
+              "rows": 7,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "institution_id",
+            "institution",
+            "openalex_total_meta_count",
+            "works_2021_2025",
+            "works_2024",
+            "works_2025"
+          ],
+          "rowCount": 7
+        },
+        {
+          "name": "research_infosource_comparator_summary.csv",
+          "fileId": "7065b732-bfeb-422c-af34-c8013274279d",
+          "sha256": "d47498b8969fe88f948c00ce72c23687734d026b1ffb73901fbc268644760aae",
+          "bytes": 698,
+          "tables": [
+            {
+              "name": "nhhr_data_c008_8934fe9fd2a3_zip_data_c008_resear",
+              "rows": 7,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "institution_id",
+            "entity_type",
+            "entity_name",
+            "province",
+            "rank_2024",
+            "current_research_amount_000",
+            "pct_change_2023_2024",
+            "research_intensity_per_faculty_000",
+            "research_intensity_per_grad_student_000",
+            "tier"
+          ],
+          "rowCount": 7
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C011",
+      "datasetId": "2870d34b-43cd-4e62-8d71-0bf06fcfb8e4",
+      "status": "metadata",
+      "summary": "Leadership evidence backbone and data-gap trackers describe requests and evidence planning.",
+      "mapConnection": "No independent measured geography.",
+      "needs": [
+        "Fulfil missing source requests before building an observed measure."
+      ],
+      "cannot": [
+        "Internal requests and proposed evidence are not observed health outcomes."
+      ],
+      "views": [],
+      "datasetReceipt": {
+        "collectionId": "DATA-C011",
+        "datasetId": "2870d34b-43cd-4e62-8d71-0bf06fcfb8e4",
+        "metadataSha256": "c30f2a616d9460d109fddf0383942533325fd638e7631c07e95028a90f272c1a",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 3,
+      "catalogueFilePathsReviewed": 3,
+      "catalogueTablesReviewed": 3,
+      "evidence": [
+        {
+          "name": "expanded_data_source_backlog.csv",
+          "fileId": "1cc359c7-d99a-4dcc-aa27-3c9d1af36571",
+          "sha256": "663bdc5774c515d2dba9ca9376b8b81ab187d9881ede74027b2089b43a8a2b7c",
+          "bytes": 6076,
+          "tables": [
+            {
+              "name": "nhhr_data_c011_2f6e9a39b0ca_zip_data_c011_expand",
+              "rows": 27,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "priority",
+            "source",
+            "source_url",
+            "access_type",
+            "analysis_use",
+            "next_action"
+          ],
+          "rowCount": 27
+        },
+        {
+          "name": "internal_data_gap_request_tracker.csv",
+          "fileId": "48c45b9c-bab2-45d2-a542-5a071b0661b8",
+          "sha256": "d636e0ebfae503eff6a1cb17b0c6c0ff8b60ce4f8c6a1857c45386887403ae75",
+          "bytes": 7608,
+          "tables": [
+            {
+              "name": "nhhr_data_c011_2f6e9a39b0ca_zip_data_c011_intern",
+              "rows": 10,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "request_id",
+            "priority",
+            "owner_group",
+            "input_needed",
+            "specific_fields_requested",
+            "time_period",
+            "granularity",
+            "linked_monetization_methods",
+            "why_needed",
+            "current_public_backbone",
+            "requested_format",
+            "privacy_sensitivity",
+            "decision_use",
+            "due_phase",
+            "status"
+          ],
+          "rowCount": 10
+        },
+        {
+          "name": "leadership_evidence_backbone.csv",
+          "fileId": "e9bef233-67a9-4452-8ce6-5f242c32227c",
+          "sha256": "96a65aef5799ba2584ed14029c5e24995b4d0087ec8f421cb26efe98d5e4f0f9",
+          "bytes": 2744,
+          "tables": [
+            {
+              "name": "nhhr_data_c011_2f6e9a39b0ca_zip_data_c011_leader",
+              "rows": 5,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "evidence_area",
+            "strong_finding",
+            "comparison_or_context",
+            "decision_use",
+            "source_table",
+            "confidence"
+          ],
+          "rowCount": 5
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C012",
+      "datasetId": "7a0b8ced-71ed-4e8a-aea2-37030adec6a2",
+      "status": "candidate",
+      "summary": "Analytical extracts include capital projects, operating accounts and sector facts, alongside long report grids. Source citations and parsing rejects are retained.",
+      "mapConnection": "Facility, organizational and province-level measures need individual source validation.",
+      "needs": [
+        "Validate each original report page, column header, unit and reporting period; review duplicate project lines and variance sign conventions."
+      ],
+      "cannot": [
+        "Do not chart generic numeric mentions or mixed-unit report facts as one metric; hospital equipment lines do not locate current assets."
+      ],
+      "views": [],
+      "datasetReceipt": {
+        "collectionId": "DATA-C012",
+        "datasetId": "7a0b8ced-71ed-4e8a-aea2-37030adec6a2",
+        "metadataSha256": "dc9f91f17d4a1a6d66c89b78ffec0d51aa532902341da3760082911621d59f86",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 14,
+      "catalogueFilePathsReviewed": 16,
+      "catalogueTablesReviewed": 25,
+      "evidence": [
+        {
+          "name": "all_analytic_outputs_summary.csv",
+          "fileId": "5a29f3ad-4fac-49d1-bcd8-5908c507e832",
+          "sha256": "d140c3f723038023a8c32ea17537bac310dc167847dec033d5e9ebcd79a88dc8",
+          "bytes": 554,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012_all_an",
+              "rows": 15,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "file",
+            "rows"
+          ],
+          "rowCount": 15
+        },
+        {
+          "name": "analytic_export_summary.csv",
+          "fileId": "a68b5c17-0f26-400b-a2e0-7107cf73efb8",
+          "sha256": "d471a51d1326a004fcf6310cc2f8bdf625da331fc7c4ad9ab4d5ffb5604c572b",
+          "bytes": 299,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012_analyt",
+              "rows": 5,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "table_name",
+            "rows",
+            "source_count",
+            "generated_at"
+          ],
+          "rowCount": 5
+        },
+        {
+          "name": "bc_life_sciences_sector_metrics_long.csv",
+          "fileId": "ea69a693-71aa-46f0-b3c4-4f173dca177d",
+          "sha256": "abb01868a2c859a1ce57748d928f042856362f6686ca558560aaed54460d2f53",
+          "bytes": 34741,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012_bc_lif",
+              "rows": 72,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_page",
+            "source_line",
+            "source_citation",
+            "metric_group",
+            "indicator",
+            "geography",
+            "year",
+            "value_raw",
+            "value",
+            "unit",
+            "source_text"
+          ],
+          "rowCount": 72
+        },
+        {
+          "name": "caubo_member_institutions_2018_2019.csv",
+          "fileId": "91bb76e4-5a0f-4bd7-9130-477596e79f3a",
+          "sha256": "029c37ce226d29be971c47ae6c132bd72e19de317397051bc5208a7780eb5370",
+          "bytes": 37423,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012__5",
+              "rows": 103,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_page",
+            "source_line",
+            "source_citation",
+            "fiscal_year",
+            "institution_code",
+            "institution_name",
+            "fiscal_year_end_month",
+            "fiscal_year_end_day",
+            "raw_text"
+          ],
+          "rowCount": 103
+        },
+        {
+          "name": "caubo_parse_rejects_2018_2019.csv",
+          "fileId": "866c5809-7e32-497a-9aa1-8a318272cc09",
+          "sha256": "1d6e2304a1b94b51b2b1fb6725bd4e63cd108be600804fe2df65d4d7db5b328e",
+          "bytes": 1170062,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012__6",
+              "rows": 2321,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_page",
+            "source_line",
+            "source_citation",
+            "report_no",
+            "report_title",
+            "scope_type",
+            "scope_name",
+            "dimension_type",
+            "numeric_count",
+            "expected_numeric_count",
+            "raw_text"
+          ],
+          "rowCount": 2321
+        },
+        {
+          "name": "html_links_clean.csv",
+          "fileId": "0fe507ea-a36b-457f-8fa0-bb82018c7765",
+          "sha256": "81d7fc845735dd89fad0f1cd464be61f0b8dac94ebcb71f48d98519f1b4f1cad",
+          "bytes": 937428,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012_html_l",
+              "rows": 1895,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_link_number",
+            "source_citation",
+            "link_text",
+            "href",
+            "absolute_url_if_available"
+          ],
+          "rowCount": 1895
+        },
+        {
+          "name": "html_text_blocks_clean.csv",
+          "fileId": "50041abc-d4ea-4d7a-bf8c-3d4eccb4f3d3",
+          "sha256": "cd6ae5a09be01f5b98e638f8d6a9e242a02540f40cf9750d50165e74150dd6ed",
+          "bytes": 1354745,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012_html_t",
+              "rows": 2879,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_block",
+            "source_citation",
+            "block_type",
+            "section_label",
+            "text"
+          ],
+          "rowCount": 2879
+        },
+        {
+          "name": "ndit_committed_funds.csv",
+          "fileId": "d3f75c97-49d5-46bc-ab35-e4fb1336ac05",
+          "sha256": "848912ccef3a63d59ce5ea307a68881913f89d7fcf05771f9738489f77ab86f6",
+          "bytes": 4815,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012_ndit_c",
+              "rows": 8,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_page",
+            "source_line",
+            "source_citation",
+            "account",
+            "source_text",
+            "total_funding_approved_raw",
+            "total_funding_approved",
+            "disbursements_2024_raw",
+            "disbursements_2024",
+            "disbursements_2023_raw",
+            "disbursements_2023",
+            "outstanding_commitments_2024_raw",
+            "outstanding_commitments_2024",
+            "outstanding_commitments_2023_raw",
+            "outstanding_commitments_2023"
+          ],
+          "rowCount": 8
+        },
+        {
+          "name": "ndit_financial_statement_long.csv",
+          "fileId": "aea5b0c8-f7df-45f0-bb07-dc1aa3b6afbe",
+          "sha256": "edcef16c8dd223713a1caa9614bd60b2fde85d3a063636f72b8fb974ee815c4f",
+          "bytes": 263459,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012_ndit_f",
+              "rows": 468,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_page",
+            "source_line",
+            "source_citation",
+            "organization",
+            "statement_name",
+            "fiscal_year",
+            "row_label",
+            "column_label",
+            "amount",
+            "currency",
+            "unit",
+            "raw_value",
+            "source_text"
+          ],
+          "rowCount": 468
+        },
+        {
+          "name": "northern_health_capital_projects.csv",
+          "fileId": "36c19768-b125-4743-b8eb-4c2884fa731a",
+          "sha256": "5b25041cdbea7d2c3c5ad60a374e6f81f040e0330020dd1408bcac726ff785c1",
+          "bytes": 24566,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012_northe",
+              "rows": 46,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_page",
+            "source_line",
+            "source_citation",
+            "report_period",
+            "facility",
+            "project_name",
+            "project_value_raw",
+            "project_value",
+            "regional_district_funding_raw",
+            "regional_district_funding",
+            "funder_code",
+            "source_text"
+          ],
+          "rowCount": 46
+        },
+        {
+          "name": "northern_health_operating_summary.csv",
+          "fileId": "bef6f86f-4f8c-44dc-9db6-e857fd90d138",
+          "sha256": "7a7abdcd9e8553071ee3b1fd58d84d38f68e94fd48fcab0e74a373dea20f57b2",
+          "bytes": 7767,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012__7",
+              "rows": 15,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_page",
+            "source_line",
+            "source_citation",
+            "report_period",
+            "fiscal_year",
+            "category",
+            "budget_thousands",
+            "actual_thousands",
+            "variance_thousands",
+            "variance_percent",
+            "prior_actual_thousands",
+            "source_text"
+          ],
+          "rowCount": 15
+        },
+        {
+          "name": "prince_george_economic_goals.csv",
+          "fileId": "2852d8d0-87c2-4057-b852-19df08f281d0",
+          "sha256": "624f59b6fc9160b34d7344e84c77b76cd5a910b4ee5ea953f8f91e0ae66855f2",
+          "bytes": 3064,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012_prince",
+              "rows": 5,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_block",
+            "source_citation",
+            "goal_number",
+            "goal_title",
+            "goal_description"
+          ],
+          "rowCount": 5
+        },
+        {
+          "name": "report_numeric_facts_clean.csv",
+          "fileId": "65a29811-4712-4d9d-b0c0-89900e550e85",
+          "sha256": "3aed476ba17c135436f306666afa2db479e8ca628aeeb70e1487598c6b18490b",
+          "bytes": 2240171,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012_report",
+              "rows": 4514,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_page",
+            "source_line",
+            "source_citation",
+            "section_label",
+            "line_type",
+            "value_raw",
+            "value_type",
+            "value_number",
+            "unit_or_currency",
+            "context_text"
+          ],
+          "rowCount": 4514
+        },
+        {
+          "name": "report_table_rows_clean.csv",
+          "fileId": "2e3464d4-32c3-426c-aa68-861070b0ea98",
+          "sha256": "e43e7fb97e6b8643d53bbaae7c02b967ba6996236a88136ddb8b365adecdc4a3",
+          "bytes": 12533698,
+          "tables": [
+            {
+              "name": "nhhr_data_c012_54329385f37e_zip_data_c012__8",
+              "rows": 16741,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_page",
+            "source_line",
+            "source_citation",
+            "table_id",
+            "row_in_table_source_order",
+            "row_type",
+            "row_label",
+            "header_columns_json",
+            "header_source_citation",
+            "values_json",
+            "parse_quality",
+            "raw_text"
+          ],
+          "rowCount": 16741
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C013",
+      "datasetId": "4550b0f1-8ed5-44fa-92f9-fe0d278f0b07",
+      "status": "supporting",
+      "summary": "HTML link, text and table extractions are report provenance and cached grids, rather than a unified analytical dataset.",
+      "mapConnection": "Document geography must be derived from each original table definition.",
+      "needs": [
+        "Validate row labels, units and source headers for any selected table."
+      ],
+      "cannot": [
+        "HTML row counts and extracted numbers do not form a geographic outcome."
+      ],
+      "views": [],
+      "datasetReceipt": {
+        "collectionId": "DATA-C013",
+        "datasetId": "4550b0f1-8ed5-44fa-92f9-fe0d278f0b07",
+        "metadataSha256": "a3dd2a5ac5b046b061e33530016fb38570b28882a6e8de20368d80c5d19c6bc1",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 4,
+      "catalogueFilePathsReviewed": 4,
+      "catalogueTablesReviewed": 4,
+      "evidence": [
+        {
+          "name": "html_links.csv",
+          "fileId": "38640825-ce77-4977-b3ee-4c89330bb777",
+          "sha256": "033dfa6bbdaa22bcf12b8b06c5295e978d443ac109750349427e85c64da9c933",
+          "bytes": 1803354,
+          "tables": [
+            {
+              "name": "nhhr_data_c013_e07c4c4f2c98_zip_data_c013_html_l",
+              "rows": 3593,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_link_number",
+            "source_citation",
+            "link_text",
+            "href",
+            "absolute_url_if_available"
+          ],
+          "rowCount": 3593
+        },
+        {
+          "name": "html_manifest.csv",
+          "fileId": "f263ca8f-39b5-467b-a664-6988464dbd93",
+          "sha256": "114e1fc2a3962602143edaaa53ef2927652aa89e0db89e44fe648833d25e63b0",
+          "bytes": 6369,
+          "tables": [
+            {
+              "name": "nhhr_data_c013_e07c4c4f2c98_zip_data_c013_html_m",
+              "rows": 18,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "canonical_or_og_url",
+            "text_blocks",
+            "links",
+            "table_rows"
+          ],
+          "rowCount": 18
+        },
+        {
+          "name": "html_table_rows.csv",
+          "fileId": "645eea5b-b0d9-49ed-ab9e-68f6912c2cf0",
+          "sha256": "9d10528af5a87f7974c9549ea93f96655241da6226fc98b521e8df6e7609b4b0",
+          "bytes": 848,
+          "tables": [
+            {
+              "name": "nhhr_data_c013_e07c4c4f2c98_zip_data_c013_html_t",
+              "rows": 1,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_table",
+            "source_table_row",
+            "source_citation",
+            "cell_count",
+            "cells_pipe"
+          ],
+          "rowCount": 1
+        },
+        {
+          "name": "html_text_blocks.csv",
+          "fileId": "d81ea0b0-b765-423b-a4b5-c469dab5d9d2",
+          "sha256": "a0c1e4c9fd7093a5e3ee7a109f2fd51ca38680c683c3f037626c45c866934cf8",
+          "bytes": 1729019,
+          "tables": [
+            {
+              "name": "nhhr_data_c013_e07c4c4f2c98_zip_data_c013__2",
+              "rows": 3700,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_block",
+            "source_citation",
+            "block_type",
+            "section_label",
+            "text"
+          ],
+          "rowCount": 3700
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C014",
+      "datasetId": "1c5c587c-e416-48c6-b3e9-6596a171fd09",
+      "status": "supporting",
+      "summary": "PDF pages, lines and numeric mentions support document review. The source includes multipart numeric-extraction grids.",
+      "mapConnection": "A mentioned place is not a measured geographic unit.",
+      "needs": [
+        "Return to the original report page and validate the table before selecting measures."
+      ],
+      "cannot": [
+        "Do not treat every numeric mention as an independent count, rate or time series."
+      ],
+      "views": [],
+      "datasetReceipt": {
+        "collectionId": "DATA-C014",
+        "datasetId": "1c5c587c-e416-48c6-b3e9-6596a171fd09",
+        "metadataSha256": "489806a3642e781621a873cd4de948f3e253846783c29ca63c818de283111d6f",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 4,
+      "catalogueFilePathsReviewed": 5,
+      "catalogueTablesReviewed": 12,
+      "evidence": [
+        {
+          "name": "pdf_lines_labeled.csv",
+          "fileId": "23122dc7-949c-49aa-a32e-f1b61765cb69",
+          "sha256": "d7df45b7e4111b0857be75342ce58f6b7ef1f6df99956509abf7511507c820b6",
+          "bytes": 16483385,
+          "tables": [
+            {
+              "name": "nhhr_data_c014_71a853dfa28f_zip_data_c014_pdf_li",
+              "rows": 37876,
+              "worksheet": ""
+            },
+            {
+              "name": "nhhr_data_c014_71a853dfa28f_zip_data_c014__2",
+              "rows": 590,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_page",
+            "source_citation",
+            "source_line",
+            "section_label",
+            "line_type",
+            "text"
+          ],
+          "rowCount": 38466
+        },
+        {
+          "name": "pdf_manifest.csv",
+          "fileId": "19cd9e54-32f5-45fd-a93a-fda95a2268c4",
+          "sha256": "3122652b01ba0b9aafbaf8d680005a9d8e5736c710fcef5f1e5f2a7ccd30c45c",
+          "bytes": 5098,
+          "tables": [
+            {
+              "name": "nhhr_data_c014_71a853dfa28f_zip_data_c014_pdf_ma",
+              "rows": 11,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "status",
+            "page_count_pdfinfo",
+            "page_count_extracted",
+            "non_empty_lines",
+            "numeric_mentions",
+            "table_like_lines",
+            "warnings"
+          ],
+          "rowCount": 11
+        },
+        {
+          "name": "pdf_page_text.csv",
+          "fileId": "cdfe3b83-09e4-4aec-88d4-2695cc54d13c",
+          "sha256": "5fd87c8078c8f87119e81978fa4d53129f41eac3e453c4fbd279cce0b6ab0177",
+          "bytes": 3035598,
+          "tables": [
+            {
+              "name": "nhhr_data_c014_71a853dfa28f_zip_data_c014_pdf_pa",
+              "rows": 1396,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_page",
+            "source_citation",
+            "non_empty_line_count",
+            "text"
+          ],
+          "rowCount": 1396
+        },
+        {
+          "name": "pdf_table_like_lines.csv",
+          "fileId": "9b225ee3-1d04-4467-b2a0-b6e1eeb1e79e",
+          "sha256": "eac3e3f8d098f42a04030be97bf8a849e2b0529ac76f7ea5fa6c3777025dc66e",
+          "bytes": 9794446,
+          "tables": [
+            {
+              "name": "nhhr_data_c014_71a853dfa28f_zip_data_c014_pdf_ta",
+              "rows": 16741,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_slug",
+            "source_label",
+            "source_document_relpath",
+            "source_document_abspath",
+            "source_page",
+            "source_citation",
+            "source_line",
+            "section_label",
+            "column_count",
+            "numeric_token_count",
+            "columns_json",
+            "text"
+          ],
+          "rowCount": 16741
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C015",
+      "datasetId": "1f5be486-029c-4189-9634-99ea7f75c95f",
+      "status": "metadata",
+      "summary": "Presentation package metadata and a quality report describe an authored artifact, not collected scientific measurements.",
+      "mapConnection": "No independent geometry.",
+      "needs": [
+        "Use underlying source collections for evidence."
+      ],
+      "cannot": [
+        "Presentation quality fields are not NHHR outcomes."
+      ],
+      "views": [],
+      "datasetReceipt": {
+        "collectionId": "DATA-C015",
+        "datasetId": "1f5be486-029c-4189-9634-99ea7f75c95f",
+        "metadataSha256": "cb2c99a7f1d57820d6d9406242a446d216fe4417e6ca31ec24a66f87f729c7b5",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 2,
+      "catalogueFilePathsReviewed": 2,
+      "catalogueTablesReviewed": 2,
+      "evidence": [
+        {
+          "name": "package.json",
+          "fileId": "963477f1-3d99-441e-961d-14f2ea3e150c",
+          "sha256": "609158e6c5fbc237939fa3ddf7faab80ab690bdc0c8d584414a885130103c4e8",
+          "bytes": 42,
+          "tables": [
+            {
+              "name": "nhhr_data_c015_807ac5210965_zip_data_c015_packag",
+              "rows": 1,
+              "worksheet": ""
+            }
+          ],
+          "jsonKeys": [
+            "private",
+            "type"
+          ]
+        },
+        {
+          "name": "quality-report.json",
+          "fileId": "0d449fbc-9295-47d2-a0c3-cd24ab774ff6",
+          "sha256": "a389f7ddba271dea95e0f419064dee5af0edc4d7de7c18a23851370375048504",
+          "bytes": 712,
+          "tables": [
+            {
+              "name": "nhhr_data_c015_807ac5210965_zip_data_c015_qualit",
+              "rows": 1,
+              "worksheet": ""
+            }
+          ],
+          "jsonKeys": [
+            "workspace",
+            "pptx",
+            "checks",
+            "failures",
+            "warnings"
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C016",
+      "datasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+      "status": "connected",
+      "summary": "Research-chair counts reconcile to the collected listing. Historical cancer derivatives reconcile to original C049 cells. Other public pulls retain documented parsing and coverage gaps.",
+      "mapConnection": "Eight reviewed campus references, including McMaster. Historical cancer derivatives reconcile to original C049; that view now uses verified December 2015 health-region geometry.",
+      "needs": [
+        "Community-health indicators need heading/value reconstruction and source-period checks; WorkBC tables have shifted multilevel headers; first-page project samples are incomplete."
+      ],
+      "cannot": [
+        "Do not present April 2026 road events or trial statuses as current; do not infer missing project totals from first-page results."
+      ],
+      "views": [
+        "research-chairs",
+        "historical-cancer-incidence"
+      ],
+      "datasetReceipt": {
+        "collectionId": "DATA-C016",
+        "datasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+        "metadataSha256": "2693fb5cf115aa51721b55dadc71dc9cc175e4a608e569d1e8d4fecd43fafa7a",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 42,
+      "catalogueFilePathsReviewed": 84,
+      "catalogueTablesReviewed": 42,
+      "evidence": [
+        {
+          "name": "bc_community_health_indicator_inventory.csv",
+          "fileId": "cb9e041c-0ece-4ef8-8242-cb4173e1be9f",
+          "sha256": "32f503c262046e73506930d52d9f9d414ea4097321428168b4d6f2560ec9ca49",
+          "bytes": 246458,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_bc_com",
+              "rows": 832,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "location_type",
+            "topic",
+            "indicator_name",
+            "source",
+            "source_display_name",
+            "subindicator_name",
+            "form_value"
+          ],
+          "rowCount": 832
+        },
+        {
+          "name": "bc_community_health_locations.csv",
+          "fileId": "f27627a4-745c-4a3f-aee1-c968ee5d0dd4",
+          "sha256": "0ee79bd6dfdf5b7b1f283dbfe4b98f186a43a75a9bd4f9879cff2744ce2b3d5b",
+          "bytes": 7354,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__2",
+              "rows": 309,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "location_type",
+            "name",
+            "id"
+          ],
+          "rowCount": 309
+        },
+        {
+          "name": "bc_community_health_selected_indicators.csv",
+          "fileId": "24577601-3509-4120-bf81-f2984294a632",
+          "sha256": "5d94d79209f28905f5052d1e326a87dd7dd884dca5404e2954e22870cf87d0d3",
+          "bytes": 121915,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__3",
+              "rows": 653,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "requested_location_type",
+            "requested_location_id",
+            "requested_location_name",
+            "requested_topic",
+            "Indicator",
+            "Jurisdiction Name",
+            "Year(s)",
+            "Sex",
+            "Value",
+            "Unit",
+            "Data Source"
+          ],
+          "rowCount": 653
+        },
+        {
+          "name": "bc_community_health_topics.csv",
+          "fileId": "22bec4ef-7ea0-4057-9146-299624b4ceb9",
+          "sha256": "860b528a13a7e1dedcbe2658a8c6026a95f41935d345adef6aa8308db7e16726",
+          "bytes": 2853,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__4",
+              "rows": 48,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "location_type",
+            "topic",
+            "topic_id"
+          ],
+          "rowCount": 48
+        },
+        {
+          "name": "bc_hospitals_by_health_authority.csv",
+          "fileId": "747f53ce-ef44-4658-ba47-0d288a6bc291",
+          "sha256": "bfd1ebd1c7107de41d5d32909e112031ff8bb31db97301ac5bd1f9f697220947",
+          "bytes": 1102,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_bc_hos",
+              "rows": 8,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "rg_name",
+            "hospitals",
+            "cities",
+            "cancer_named_facilities"
+          ],
+          "rowCount": 8
+        },
+        {
+          "name": "bc_hospitals_healthlinkbc_clean.csv",
+          "fileId": "fe547de6-c1c9-4207-b3df-8a5c0296c860",
+          "sha256": "3cad571d7c5d9bb2cede0cc432584ee7c0fc9d47702926e33cd8284a15a07b5f",
+          "bytes": 38997,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__5",
+              "rows": 91,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "rg_name",
+            "sv_name",
+            "sv_description",
+            "phone_number",
+            "website",
+            "wheelchair_accessible",
+            "hours",
+            "city",
+            "province",
+            "postal_code",
+            "latitude",
+            "longitude",
+            "811_link",
+            "is_northern_health",
+            "is_prince_george",
+            "has_cancer_in_name"
+          ],
+          "rowCount": 91
+        },
+        {
+          "name": "bc_northern_health_hospitals.csv",
+          "fileId": "a5315795-adae-4b7c-a2c0-72e62e905d81",
+          "sha256": "e4c324252b0c4ca70e70d31b1851a50c2ea47f807d0009795f8fb1af5ee5d263",
+          "bytes": 7267,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_bc_nor",
+              "rows": 19,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "rg_name",
+            "sv_name",
+            "sv_description",
+            "phone_number",
+            "website",
+            "wheelchair_accessible",
+            "hours",
+            "city",
+            "province",
+            "postal_code",
+            "latitude",
+            "longitude",
+            "811_link",
+            "is_northern_health",
+            "is_prince_george",
+            "has_cancer_in_name"
+          ],
+          "rowCount": 19
+        },
+        {
+          "name": "bc_student_outcomes_downloaded_files.csv",
+          "fileId": "854fe2cd-6bc0-4e3c-9e5e-f5ade4181f6a",
+          "sha256": "7e73455b020d555b0a3f3a110cd1febc8978aeeac574e1038325149bb72f446a",
+          "bytes": 581,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_bc_stu",
+              "rows": 2,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "title_or_caption",
+            "raw_file",
+            "url"
+          ],
+          "rowCount": 2
+        },
+        {
+          "name": "bc_student_outcomes_publication_links.csv",
+          "fileId": "0aa862b6-9e8e-4f56-9390-37e2cd1ec9f4",
+          "sha256": "112c52b7bd7eabf74611161189e17d32346946e90951cee8e3176b6b71444ba5",
+          "bytes": 4718,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__6",
+              "rows": 35,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "title_or_caption",
+            "url",
+            "file_type",
+            "is_data_file"
+          ],
+          "rowCount": 35
+        },
+        {
+          "name": "bc_surgical_wait_times_northern_selected.csv",
+          "fileId": "80cd54c2-3089-4ccc-a62c-78ad3890f8e3",
+          "sha256": "868e1c3b426feb2c1d2c735cdf0a0681b372227ae8114e0e57f9f56483916344",
+          "bytes": 132036,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_bc_sur",
+              "rows": 211,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "procedure",
+            "level",
+            "health_authority",
+            "facility",
+            "name",
+            "cases_waiting_text",
+            "cases_waiting",
+            "p50_wait_text",
+            "p50_wait_weeks",
+            "p90_wait_text",
+            "p90_wait_weeks",
+            "source_url"
+          ],
+          "rowCount": 211
+        },
+        {
+          "name": "bc_surgical_wait_times_procedure_inventory.csv",
+          "fileId": "6c629ed6-b578-474c-8ac4-99b6b343536a",
+          "sha256": "6fe4e4b65b2b3d906c4141a24196816e0ed4f64d0cb0ccf929c1c350c6244520",
+          "bytes": 21169,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__7",
+              "rows": 155,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "procedure",
+            "url",
+            "adult",
+            "selected_for_pull"
+          ],
+          "rowCount": 155
+        },
+        {
+          "name": "bc_surgical_wait_times_selected_procedures.csv",
+          "fileId": "a4501981-da1e-481d-a664-022f84cc5d94",
+          "sha256": "71e2d4c56f5e1be3c1687803264f9c58816dd2796e4c2c69586f0ba59fcc2e6b",
+          "bytes": 1297129,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__8",
+              "rows": 2129,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "procedure",
+            "level",
+            "health_authority",
+            "facility",
+            "name",
+            "cases_waiting_text",
+            "cases_waiting",
+            "p50_wait_text",
+            "p50_wait_weeks",
+            "p90_wait_text",
+            "p90_wait_weeks",
+            "source_url"
+          ],
+          "rowCount": 2129
+        },
+        {
+          "name": "canada_research_chairs_chairholders.csv",
+          "fileId": "54e36843-af11-44cf-ad56-6e0e7f44cd45",
+          "sha256": "4a02d03d85ff9c4d1470b5824a58c063866b1f5e37418585b70d0c8c4a97d469",
+          "bytes": 331952,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_canada",
+              "rows": 1926,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "researcher",
+            "chairholder_title",
+            "tier",
+            "institution",
+            "agency",
+            "discipline"
+          ],
+          "rowCount": 1926
+        },
+        {
+          "name": "canada_research_chairs_comparator_summary.csv",
+          "fileId": "2c0cbb91-6b5a-4d21-87fc-1d3e2573c1d2",
+          "sha256": "5b5b329e929678c0baf271f2470262893486a1996cf766b9c71914ab119b7d36",
+          "bytes": 650,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__9",
+              "rows": 8,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "comparator",
+            "institution_names",
+            "crc_count",
+            "tier_1_count",
+            "tier_2_count",
+            "cihr_count",
+            "nserc_count",
+            "sshrc_count",
+            "health_discipline_count"
+          ],
+          "rowCount": 8
+        },
+        {
+          "name": "drivebc_open511_active_events_by_area.csv",
+          "fileId": "f0ed6bc4-f403-4715-a8ed-a7db085bf913",
+          "sha256": "8c009f05c15876b9e11ec70bb500c2b27e2402d67819e06d8c29cf0790284515",
+          "bytes": 456,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_driveb",
+              "rows": 10,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "area",
+            "active_events",
+            "event_types"
+          ],
+          "rowCount": 10
+        },
+        {
+          "name": "drivebc_open511_active_events_flat.csv",
+          "fileId": "cf342837-d502-4572-8ee8-f1686534c6ef",
+          "sha256": "3d6160155f69d6517dcd106e7e38f5f6566dfa515bef1ac069b936cff57bdb44",
+          "bytes": 23461,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__10",
+              "rows": 50,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "id",
+            "event_type",
+            "severity",
+            "status",
+            "headline",
+            "created",
+            "updated",
+            "areas",
+            "roads",
+            "description"
+          ],
+          "rowCount": 50
+        },
+        {
+          "name": "genomebc_health_or_northern_project_cards.csv",
+          "fileId": "b254d7e7-f274-47fc-b280-cafd630735c2",
+          "sha256": "ee56f2f809e4b51ef79b140b38e5b58f738bbca05082aaf7161b53d79f30678c",
+          "bytes": 19035,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_genome",
+              "rows": 33,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "title",
+            "url",
+            "sector",
+            "project_leaders",
+            "budget",
+            "fiscal_year",
+            "status",
+            "card_text",
+            "source_page",
+            "source_url",
+            "mentions_health",
+            "mentions_north_unbc"
+          ],
+          "rowCount": 33
+        },
+        {
+          "name": "genomebc_project_cards.csv",
+          "fileId": "60269193-c4c1-4221-9ca8-f1b741bd9ac2",
+          "sha256": "1fdff002d398eb753fb17e033fcd2146abbfd7bcf3b982924ea3e23a50756edb",
+          "bytes": 31532,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__11",
+              "rows": 54,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "title",
+            "url",
+            "sector",
+            "project_leaders",
+            "budget",
+            "fiscal_year",
+            "status",
+            "card_text",
+            "source_page",
+            "source_url",
+            "mentions_health",
+            "mentions_north_unbc"
+          ],
+          "rowCount": 54
+        },
+        {
+          "name": "health_research_bc_relevant_wp_search_results.csv",
+          "fileId": "214aceec-0e02-4d77-9708-08e46f589c80",
+          "sha256": "7a4bdbd87996e87be1b9faff060df94acc069b2867fc8e983dca25db4c94cdf4",
+          "bytes": 23243,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_health",
+              "rows": 137,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "search_term",
+            "id",
+            "title",
+            "url",
+            "type",
+            "subtype"
+          ],
+          "rowCount": 137
+        },
+        {
+          "name": "mitacs_projects_first_page.csv",
+          "fileId": "26c3d9f4-19f1-4658-aae4-b5ab9f1c61d6",
+          "sha256": "6ca32b15beba94a4b28193bf61914158059a14816ab22fc26e7500b33f11f7e8",
+          "bytes": 49050,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_mitacs",
+              "rows": 36,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "title",
+            "url",
+            "summary_text",
+            "faculty_supervisor",
+            "student",
+            "partner",
+            "discipline",
+            "sector",
+            "university",
+            "program",
+            "source_page",
+            "source_url"
+          ],
+          "rowCount": 36
+        },
+        {
+          "name": "mitacs_projects_relevant_first_page.csv",
+          "fileId": "4ff47b01-0053-4095-8d04-55689d9ae72a",
+          "sha256": "08bd23bd6c6c45510327f59444abae933a45ddd09b2fb39898867fe99530c8a5",
+          "bytes": 5954,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__12",
+              "rows": 4,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "title",
+            "url",
+            "summary_text",
+            "faculty_supervisor",
+            "student",
+            "partner",
+            "discipline",
+            "sector",
+            "university",
+            "program",
+            "source_page",
+            "source_url"
+          ],
+          "rowCount": 4
+        },
+        {
+          "name": "open_canada_grants_nhhr_city_summary.csv",
+          "fileId": "54486468-f205-4d42-b1f8-bc96d10f5a59",
+          "sha256": "935891210681d4d88c88096b986a1efdad62d2b4600e11087652ca147473c7af",
+          "bytes": 8031,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_open_c",
+              "rows": 180,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "recipient_province",
+            "recipient_city",
+            "records",
+            "agreement_value_sum",
+            "agreement_value_median"
+          ],
+          "rowCount": 180
+        },
+        {
+          "name": "open_canada_grants_nhhr_latest_agreement_matches.csv",
+          "fileId": "c10c4f75-ccbc-4d5d-9a09-dd99b004381b",
+          "sha256": "9d7f34c94e169826b602501610398777b0ae9bbe9a3ab39819d2458048cc8c75",
+          "bytes": 6068191,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__13",
+              "rows": 3901,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "ref_number",
+            "amendment_number",
+            "amendment_date",
+            "agreement_type",
+            "recipient_type",
+            "recipient_business_number",
+            "recipient_legal_name",
+            "recipient_operating_name",
+            "research_organization_name",
+            "recipient_country",
+            "recipient_province",
+            "recipient_city",
+            "recipient_postal_code",
+            "federal_riding_name_en",
+            "federal_riding_name_fr",
+            "federal_riding_number",
+            "prog_name_en",
+            "prog_name_fr",
+            "prog_purpose_en",
+            "prog_purpose_fr",
+            "agreement_title_en",
+            "agreement_title_fr",
+            "agreement_number",
+            "agreement_value",
+            "foreign_currency_type",
+            "foreign_currency_value",
+            "agreement_start_date",
+            "agreement_end_date",
+            "coverage",
+            "description_en",
+            "description_fr",
+            "naics_identifier",
+            "expected_results_en",
+            "expected_results_fr",
+            "additional_information_en",
+            "additional_information_fr",
+            "owner_org",
+            "owner_org_title",
+            "matched_terms"
+          ],
+          "rowCount": 3901
+        },
+        {
+          "name": "open_canada_grants_nhhr_latest_city_summary.csv",
+          "fileId": "90bd3621-b4b3-4928-ab38-57c20c763f5a",
+          "sha256": "950a52afe755d3ed21f50fe3aded976122981e0ad396575ddcc1cad41efeed3c",
+          "bytes": 8004,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__14",
+              "rows": 180,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "recipient_province",
+            "recipient_city",
+            "records",
+            "agreement_value_sum",
+            "agreement_value_median"
+          ],
+          "rowCount": 180
+        },
+        {
+          "name": "open_canada_grants_nhhr_latest_owner_org_summary.csv",
+          "fileId": "b99936b4-806a-4514-ac68-135f6a6c069d",
+          "sha256": "3f0d3dcc6cc38ca6d27a1d46a88b0f1a0d2a1673d376af165b69f4cf60f5cf70",
+          "bytes": 3497,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__15",
+              "rows": 37,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "owner_org_title",
+            "records",
+            "agreement_value_sum",
+            "agreement_value_median"
+          ],
+          "rowCount": 37
+        },
+        {
+          "name": "open_canada_grants_nhhr_latest_program_summary.csv",
+          "fileId": "fb8dd4ba-3628-4e6d-9aa9-404c3723f7e6",
+          "sha256": "e5cf084397de27ad150259598a6e0323c9022a10087e8159536b99e70c891c83",
+          "bytes": 24079,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__16",
+              "rows": 342,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "prog_name_en",
+            "records",
+            "agreement_value_sum",
+            "agreement_value_median"
+          ],
+          "rowCount": 342
+        },
+        {
+          "name": "open_canada_grants_nhhr_latest_recipient_summary.csv",
+          "fileId": "e8e0548f-3655-42e1-b635-3333fda9b33d",
+          "sha256": "1a64ab2423ad44d26af8142e7c9be24f8545123e0d9e667731ca6a142f049388",
+          "bytes": 116941,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__17",
+              "rows": 1538,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "recipient_legal_name",
+            "recipient_city",
+            "recipient_province",
+            "records",
+            "agreement_value_sum",
+            "agreement_value_median"
+          ],
+          "rowCount": 1538
+        },
+        {
+          "name": "open_canada_grants_nhhr_latest_term_summary.csv",
+          "fileId": "8154a0dc-e1a2-4304-9c8d-f091879f4098",
+          "sha256": "9adffb7957ed65fd08082540c2e9e813123cb35944d949ce5ba90a58ece3f2b7",
+          "bytes": 237,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__18",
+              "rows": 6,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "matched_terms",
+            "records",
+            "agreement_value_sum"
+          ],
+          "rowCount": 6
+        },
+        {
+          "name": "open_canada_grants_nhhr_latest_year_summary.csv",
+          "fileId": "19b3419b-467f-4ec6-bf86-68f4ae9f1954",
+          "sha256": "88cffe6d0fc21c1d7e3f0af0f22664763db10f2a4ba41dd8ac13b0e18f6f94da",
+          "bytes": 693,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__19",
+              "rows": 21,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "agreement_start_year",
+            "records",
+            "agreement_value_sum",
+            "agreement_value_median"
+          ],
+          "rowCount": 21
+        },
+        {
+          "name": "open_canada_grants_nhhr_owner_org_summary.csv",
+          "fileId": "6c06ec08-bd28-42af-9364-114bfd45574b",
+          "sha256": "c1b2528e3357908fc3954f63c3d484ea534a5adda54ffad752e8f10324d07945",
+          "bytes": 3500,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__20",
+              "rows": 37,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "owner_org_title",
+            "records",
+            "agreement_value_sum",
+            "agreement_value_median"
+          ],
+          "rowCount": 37
+        },
+        {
+          "name": "open_canada_grants_nhhr_program_summary.csv",
+          "fileId": "7e33f5e6-e972-49d1-aec9-c5f11cd4f59c",
+          "sha256": "33d81904f994d73d00d15dfdf10e56c60f2821544fdeb95573f3d67663489457",
+          "bytes": 24224,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__21",
+              "rows": 344,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "prog_name_en",
+            "records",
+            "agreement_value_sum",
+            "agreement_value_median"
+          ],
+          "rowCount": 344
+        },
+        {
+          "name": "open_canada_grants_nhhr_recipient_summary.csv",
+          "fileId": "29599be2-d693-468d-bc97-ac2287adf1ec",
+          "sha256": "149bf390925881ea2671f07255043140b8719f168b29bd1a813ab674f5e2a96f",
+          "bytes": 118472,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__22",
+              "rows": 1553,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "recipient_legal_name",
+            "recipient_city",
+            "recipient_province",
+            "records",
+            "agreement_value_sum",
+            "agreement_value_median"
+          ],
+          "rowCount": 1553
+        },
+        {
+          "name": "open_canada_grants_nhhr_term_matches.csv",
+          "fileId": "b545792d-3299-4916-8c06-7d657ed2b20b",
+          "sha256": "bcd0d1d2c563914a4412ef232b34db2bdf563a07097e39c026720360ff8323fd",
+          "bytes": 7216882,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__23",
+              "rows": 4360,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "ref_number",
+            "amendment_number",
+            "amendment_date",
+            "agreement_type",
+            "recipient_type",
+            "recipient_business_number",
+            "recipient_legal_name",
+            "recipient_operating_name",
+            "research_organization_name",
+            "recipient_country",
+            "recipient_province",
+            "recipient_city",
+            "recipient_postal_code",
+            "federal_riding_name_en",
+            "federal_riding_name_fr",
+            "federal_riding_number",
+            "prog_name_en",
+            "prog_name_fr",
+            "prog_purpose_en",
+            "prog_purpose_fr",
+            "agreement_title_en",
+            "agreement_title_fr",
+            "agreement_number",
+            "agreement_value",
+            "foreign_currency_type",
+            "foreign_currency_value",
+            "agreement_start_date",
+            "agreement_end_date",
+            "coverage",
+            "description_en",
+            "description_fr",
+            "naics_identifier",
+            "expected_results_en",
+            "expected_results_fr",
+            "additional_information_en",
+            "additional_information_fr",
+            "owner_org",
+            "owner_org_title",
+            "matched_terms"
+          ],
+          "rowCount": 4360
+        },
+        {
+          "name": "open_canada_grants_nhhr_term_summary.csv",
+          "fileId": "e7e5d5b1-431e-427e-ae9c-5f31964e0c8e",
+          "sha256": "a87d9efc294986203e3d26c4979b256b86892db8e55617a65652e0d8a178a7ca",
+          "bytes": 237,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__24",
+              "rows": 6,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "matched_terms",
+            "records",
+            "agreement_value_sum"
+          ],
+          "rowCount": 6
+        },
+        {
+          "name": "open_canada_grants_nhhr_year_summary.csv",
+          "fileId": "69c886d0-8c39-457b-975f-a5089d389fd8",
+          "sha256": "e2ef52db627310e27a9588c3ae0aaad6680a8877145e29cc8e5ad1edf63b6f82",
+          "bytes": 681,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__25",
+              "rows": 21,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "agreement_start_year",
+            "records",
+            "agreement_value_sum",
+            "agreement_value_median"
+          ],
+          "rowCount": 21
+        },
+        {
+          "name": "public_p1_processed_outputs.csv",
+          "fileId": "82e88abd-ce44-4320-af7a-8c1923794b78",
+          "sha256": "24b0c1a22ca8232231821b7b051e278e100aa084ea91916b5b1562c14c68d29b",
+          "bytes": 1173,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_public",
+              "rows": 10,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "file",
+            "bytes"
+          ],
+          "rowCount": 10
+        },
+        {
+          "name": "public_p1_pull_inventory.csv",
+          "fileId": "c0a05e33-c57a-468d-bb70-04d133c35bea",
+          "sha256": "7a059b3ac3594f3c6fd05bed2a26e2c7d433749a6407c6e211f13a04993b803e",
+          "bytes": 1208,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__26",
+              "rows": 4,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_key",
+            "source_url",
+            "raw_file",
+            "status",
+            "notes",
+            "processed_on"
+          ],
+          "rowCount": 4
+        },
+        {
+          "name": "statcan_bc_cancer_incidence_latest_summary.csv",
+          "fileId": "8251d1d6-4756-41b3-8255-7da820ced60e",
+          "sha256": "1329447568d57cffc1861df58ae0ffe2f7471f36b2d5c1c4025707eeae3874d8",
+          "bytes": 14577,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_statca",
+              "rows": 99,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "period",
+            "geo",
+            "sex",
+            "cancer_site",
+            "Cancer incidence (rate per 100,000 population)",
+            "Number of new cancer cases"
+          ],
+          "rowCount": 99
+        },
+        {
+          "name": "statcan_bc_cancer_incidence_selected_health_regions.csv",
+          "fileId": "95f2fbb6-d6c1-4c98-b7bc-a79cfaf49554",
+          "sha256": "de8b291d3e643a65f3bb24a35f4c4d11697c613a0abd2951df1d16aab3589f1e",
+          "bytes": 509158,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__27",
+              "rows": 2574,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "period",
+            "geo",
+            "sex",
+            "cancer_site",
+            "measure",
+            "UOM",
+            "value",
+            "STATUS"
+          ],
+          "rowCount": 2574
+        },
+        {
+          "name": "workbc_lmo_health_related_rows.csv",
+          "fileId": "aedf0e4a-ad70-400c-9105-7f4d7abe4b91",
+          "sha256": "1b45a59c6eb8e73f42e66b4d3adcd1cff91cc855034697a43a04926d4eaba053",
+          "bytes": 2080,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016_workbc",
+              "rows": 16,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "table_index",
+            "Training, Education, Experience and Responsibilities",
+            "Job Openings",
+            "% of Total",
+            "Unnamed: 3",
+            "Industry",
+            "Expansion",
+            "Replacement",
+            "Total Job Openings",
+            "Unnamed: 4",
+            "Occupational Group",
+            "('Region', 'Region')",
+            "('Employment (2025)', 'Employment (2025)')",
+            "('Annual Employment Growth Rate (2025-2035)', 'Annual Employment Growth Rate (2025-2035)')",
+            "('Job Openings (2025-2035)', 'Expansion')",
+            "('Job Openings (2025-2035)', 'Replacement')",
+            "('Job Openings (2025-2035)', 'Total')",
+            "('Unnamed: 6_level_0', 'Unnamed: 6_level_1')",
+            "0",
+            "('Industry', 'Industry')"
+          ],
+          "rowCount": 16
+        },
+        {
+          "name": "workbc_lmo_html_tables_long.csv",
+          "fileId": "80954b54-8b60-4019-b0ec-997239258df6",
+          "sha256": "ec9258168a4f150e98b3129b930f15a3e701e83b239f1e2cdff472ae10759175",
+          "bytes": 10276,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__28",
+              "rows": 85,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "table_index",
+            "Training, Education, Experience and Responsibilities",
+            "Job Openings",
+            "% of Total",
+            "Unnamed: 3",
+            "Industry",
+            "Expansion",
+            "Replacement",
+            "Total Job Openings",
+            "Unnamed: 4",
+            "Occupational Group",
+            "('Region', 'Region')",
+            "('Employment (2025)', 'Employment (2025)')",
+            "('Annual Employment Growth Rate (2025-2035)', 'Annual Employment Growth Rate (2025-2035)')",
+            "('Job Openings (2025-2035)', 'Expansion')",
+            "('Job Openings (2025-2035)', 'Replacement')",
+            "('Job Openings (2025-2035)', 'Total')",
+            "('Unnamed: 6_level_0', 'Unnamed: 6_level_1')",
+            "0",
+            "('Industry', 'Industry')"
+          ],
+          "rowCount": 85
+        },
+        {
+          "name": "workbc_lmo_links.csv",
+          "fileId": "bd840f83-53cc-4b65-8611-0f91f1381e5a",
+          "sha256": "d86d3d56b84c1dc71f57d456b4025246ad425f189bc7ff3675b9607c77df0dab",
+          "bytes": 1266,
+          "tables": [
+            {
+              "name": "nhhr_data_c016_be21dde25cba_zip_data_c016__29",
+              "rows": 11,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "text",
+            "url"
+          ],
+          "rowCount": 11
+        }
+      ],
+      "mappingConnectionReceipt": "mapping-connections-provenance.json"
+    },
+    {
+      "collectionId": "DATA-C018",
+      "datasetId": "00f847a7-9982-49f5-a2f1-a6038fd4738f",
+      "status": "candidate",
+      "summary": "Policy and economic evidence is a heterogeneous report-claim register with values, periods, geography and confidence notes.",
+      "mapConnection": "Mostly province or institutional report scopes, not health-area observations.",
+      "needs": [
+        "Validate each original table and normalize units before a bounded quantitative extract."
+      ],
+      "cannot": [
+        "Qualitative claims, percentages, nominal GDP and headcounts cannot share a numeric axis or establish NHHR impact."
+      ],
+      "views": [],
+      "datasetReceipt": {
+        "collectionId": "DATA-C018",
+        "datasetId": "00f847a7-9982-49f5-a2f1-a6038fd4738f",
+        "metadataSha256": "02ed9a5f8a9cd7d64bbb05a22472cf75a6bd316c446df4d01a5e1da1f25ca7bb",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 2,
+      "catalogueFilePathsReviewed": 2,
+      "catalogueTablesReviewed": 2,
+      "evidence": [
+        {
+          "name": "policy_economic_evidence.csv",
+          "fileId": "e5c45f60-cf8a-4a21-9146-ce31a1f43c97",
+          "sha256": "99369319c78f627fce2fd9828987d6614cf5c7d9ef445ce1d2fe26f6a68eb704",
+          "bytes": 30029,
+          "tables": [
+            {
+              "name": "nhhr_data_c018_60927d7841f4_zip_data_c018_policy",
+              "rows": 89,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "report/source",
+            "topic",
+            "metric_or_claim",
+            "value_if_any",
+            "geography",
+            "year",
+            "page_or_section",
+            "source_path",
+            "extraction_confidence",
+            "notes"
+          ],
+          "rowCount": 89
+        },
+        {
+          "name": "policy_economic_source_notes.csv",
+          "fileId": "ed1034e6-ed9e-4963-8e88-bd2f44ae9bfa",
+          "sha256": "c9c0f01222eeb4714c092914af0c89111e8ae2b0294ebb78769a4da5a362c6cd",
+          "bytes": 3823,
+          "tables": [
+            {
+              "name": "nhhr_data_c018_60927d7841f4_zip_data_c018__2",
+              "rows": 9,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source",
+            "source_path",
+            "source_type",
+            "coverage",
+            "usable_evidence_summary",
+            "limitations",
+            "extraction_confidence"
+          ],
+          "rowCount": 9
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C021",
+      "datasetId": "6e2d7eda-93e0-42c3-b1d3-a3a8a029d3e6",
+      "status": "metadata",
+      "summary": "CAUBO resource inventory points to annual sources; it contains acquisition metadata rather than financial observations.",
+      "mapConnection": "Use exact CAUBO institution-code joins in the existing income view.",
+      "needs": [
+        "Use recovered C052 annual records for research income."
+      ],
+      "cannot": [
+        "Do not count inventory rows as institutions with measured income."
+      ],
+      "views": [
+        "research-income"
+      ],
+      "datasetReceipt": {
+        "collectionId": "DATA-C021",
+        "datasetId": "6e2d7eda-93e0-42c3-b1d3-a3a8a029d3e6",
+        "metadataSha256": "2d6e8085ad715a4cf60b320cfea63b5c1c5a03e81f95b4e7d3bf3b5b43b66b0d",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 1,
+      "catalogueFilePathsReviewed": 1,
+      "catalogueTablesReviewed": 1,
+      "evidence": [
+        {
+          "name": "caubo_resource_inventory.csv",
+          "fileId": "a7372b94-86a5-412c-8a0f-bb2e310305d4",
+          "sha256": "779dd8ff257d25e167194f5f7c61d439f261832d652e079942643665c9bcdba3",
+          "bytes": 960,
+          "tables": [
+            {
+              "name": "nhhr_data_c021_ce4b3ffc8a08_zip_data_c021_caubo_",
+              "rows": 5,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "label",
+            "url",
+            "local_path"
+          ],
+          "rowCount": 5
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C026",
+      "datasetId": "381b8c34-befd-4c83-8ee1-8bad454cbd74",
+      "status": "blocked",
+      "summary": "Scenario grid combines CIHR payments with NSERC award amounts across different periods and adds assumed spillover percentages.",
+      "mapConnection": "Institution tags can locate an assumption, but do not validate it.",
+      "needs": [
+        "A defensible scenario needs a harmonized accounting definition, nonoverlapping periods and evidence for any spillover assumption."
+      ],
+      "cannot": [
+        "Do not publish this combined number as observed direct research value or NHHR benefit."
+      ],
+      "views": [
+        "cihr-payments",
+        "nserc-awards"
+      ],
+      "datasetReceipt": {
+        "collectionId": "DATA-C026",
+        "datasetId": "381b8c34-befd-4c83-8ee1-8bad454cbd74",
+        "metadataSha256": "7eebde52d5d00a1be44be96b1ca1941244d4163109c52d2b3a1704115643f744",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 1,
+      "catalogueFilePathsReviewed": 2,
+      "catalogueTablesReviewed": 1,
+      "evidence": [
+        {
+          "name": "monetization_direct_research_value_scenarios.csv",
+          "fileId": "1cd81e11-3daf-4343-bc8e-1ab94c95df40",
+          "sha256": "e19d26edd9f6b438dd60d4f7168dd9dc54397a127eacd6b0a80747744c0788e8",
+          "bytes": 822,
+          "tables": [
+            {
+              "name": "nhhr_data_c026_a759c69f1304_zip_data_c026_moneti",
+              "rows": 7,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "comparator",
+            "cihr_paid_2021_2025",
+            "nserc_awards_2021_2024",
+            "direct_research_value",
+            "spillover_low_10pct",
+            "spillover_base_20pct",
+            "spillover_high_35pct"
+          ],
+          "rowCount": 7
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C027",
+      "datasetId": "d5daf92c-6440-42be-9475-f9282f8983b6",
+      "status": "metadata",
+      "summary": "Screenshot-derived monetization methods are a methods/request reference.",
+      "mapConnection": "No independent observed geography.",
+      "needs": [
+        "Validate methods and retrieve the underlying observations."
+      ],
+      "cannot": [
+        "A screenshot or assumed method is not a measured saving."
+      ],
+      "views": [],
+      "datasetReceipt": {
+        "collectionId": "DATA-C027",
+        "datasetId": "d5daf92c-6440-42be-9475-f9282f8983b6",
+        "metadataSha256": "69765ce9f9145efab495284cb1ea4b8511d189c158e2decbe85ca160ab971d89",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 1,
+      "catalogueFilePathsReviewed": 1,
+      "catalogueTablesReviewed": 1,
+      "evidence": [
+        {
+          "name": "monetization_methods_from_screenshot.csv",
+          "fileId": "7d618aa6-8c73-4541-9c86-c59a709f5968",
+          "sha256": "f5412cc3467c9d356edc32202bd2a31e376b63797d1ae12847f987648d27647e",
+          "bytes": 8108,
+          "tables": [
+            {
+              "name": "nhhr_data_c027_baa57362231d_zip_data_c027_moneti",
+              "rows": 17,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "method_id",
+            "monetization_method",
+            "formula_simplified",
+            "data_required",
+            "source_hint_from_image",
+            "nhhr_use_case",
+            "available_public_data",
+            "private_or_new_data_needed",
+            "calculation_status",
+            "first_calculation_design"
+          ],
+          "rowCount": 17
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C028",
+      "datasetId": "4904e2d7-52c7-497a-96ad-3085254fbc3b",
+      "status": "metadata",
+      "summary": "Missing-data request tracker is useful for planning the next source connections.",
+      "mapConnection": "No measured geometry.",
+      "needs": [
+        "Obtain requested public aggregates with source definitions and geographic identifiers."
+      ],
+      "cannot": [
+        "Requested values are not observed data or zeros."
+      ],
+      "views": [],
+      "datasetReceipt": {
+        "collectionId": "DATA-C028",
+        "datasetId": "4904e2d7-52c7-497a-96ad-3085254fbc3b",
+        "metadataSha256": "ec35ac6ebad0b531bcce543468ffe9c7b281fb594a63a57b0ebf918a55074976",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 1,
+      "catalogueFilePathsReviewed": 2,
+      "catalogueTablesReviewed": 1,
+      "evidence": [
+        {
+          "name": "monetization_missing_data_requests.csv",
+          "fileId": "a2b127c5-4dc1-449f-9146-ee7923e4bb23",
+          "sha256": "c3d53d647f1c6222bc8d59d6fdd7a1525730a5f9616b555fa69da4a00b1772b4",
+          "bytes": 3620,
+          "tables": [
+            {
+              "name": "nhhr_data_c028_647361c81825_zip_data_c028_moneti",
+              "rows": 17,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "method_id",
+            "monetization_method",
+            "private_or_new_data_needed",
+            "first_calculation_design",
+            "request_priority"
+          ],
+          "rowCount": 17
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C034",
+      "datasetId": "f96b3b41-2e61-4518-a94b-96e8b4b4082b",
+      "status": "metadata",
+      "summary": "Official acquisition inventory documents available sources, URLs and collection statuses.",
+      "mapConnection": "Geographic connections come from each retrieved original.",
+      "needs": [
+        "Follow the source collections and verify actual tables."
+      ],
+      "cannot": [
+        "Inventory row counts are not counts of grants, patients or researchers."
+      ],
+      "views": [],
+      "datasetReceipt": {
+        "collectionId": "DATA-C034",
+        "datasetId": "f96b3b41-2e61-4518-a94b-96e8b4b4082b",
+        "metadataSha256": "0df74bc959c7a73fd41f3632531f7848f85791f49dfac7dd53ea995fc1ac49be",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 1,
+      "catalogueFilePathsReviewed": 1,
+      "catalogueTablesReviewed": 1,
+      "evidence": [
+        {
+          "name": "official_source_acquisition_inventory.csv",
+          "fileId": "48c377de-f2fe-45c0-8ab7-cd46bc3b2051",
+          "sha256": "41eb7a11605017127b3bf3aaee4d372a9550d05cb6c3dce161fb8ac9881685ff",
+          "bytes": 47631,
+          "tables": [
+            {
+              "name": "nhhr_data_c034_a847f120f6ed_zip_data_c034_offici",
+              "rows": 172,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source",
+            "url",
+            "local_path",
+            "status",
+            "bytes",
+            "note"
+          ],
+          "rowCount": 172
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C036",
+      "datasetId": "a8a5de7b-c722-4189-9bf7-0e3efedfcbdf",
+      "status": "metadata",
+      "summary": "Pull summary describes source acquisition results.",
+      "mapConnection": "No geographic measure.",
+      "needs": [
+        "Use underlying collected tables."
+      ],
+      "cannot": [
+        "Successful downloads are not scientific outcomes."
+      ],
+      "views": [],
+      "datasetReceipt": {
+        "collectionId": "DATA-C036",
+        "datasetId": "a8a5de7b-c722-4189-9bf7-0e3efedfcbdf",
+        "metadataSha256": "b16d747d373425812cd016977ebf7e1dc25ad8554f1660a7565578a30628cd41",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 1,
+      "catalogueFilePathsReviewed": 1,
+      "catalogueTablesReviewed": 1,
+      "evidence": [
+        {
+          "name": "source_pull_summary.csv",
+          "fileId": "571ff3ff-32a0-4abf-89bc-1c30e2d0781e",
+          "sha256": "639411d46b4601257bd6fc645d6d83ec07b29950190e2897b9b7f6336ca939f4",
+          "bytes": 140,
+          "tables": [
+            {
+              "name": "nhhr_data_c036_248da79593fd_zip_data_c036_source",
+              "rows": 6,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "source_group",
+            "files",
+            "total_bytes"
+          ],
+          "rowCount": 6
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-X06",
+      "datasetId": "1818d845-80e5-468b-909b-28b3f21ac9a6",
+      "status": "supporting",
+      "summary": "Delivery catalogues and current source copies duplicate originals and retain package provenance.",
+      "mapConnection": "Join through canonical original hashes and exact source identifiers.",
+      "needs": [
+        "Prefer the canonical scientific collection over copied delivery-package grids."
+      ],
+      "cannot": [
+        "Do not count the same annual investment workbook or export again as additional data."
+      ],
+      "views": [
+        "research-income",
+        "cihr-payments"
+      ],
+      "datasetReceipt": {
+        "collectionId": "DATA-X06",
+        "datasetId": "1818d845-80e5-468b-909b-28b3f21ac9a6",
+        "metadataSha256": "124ca1ed588f2ecb2d8c960042bd305f2ee328068ca5b0db7485e99ca8085633",
+        "status": "ready"
+      },
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "originalFilesInspected": 10,
+      "catalogueFilePathsReviewed": 35,
+      "catalogueTablesReviewed": 203,
+      "evidence": [
+        {
+          "name": "NHHR_Simplified_Data_Holdings_Catalog_2026-07-23.xlsx",
+          "fileId": "eaaff0be-676a-41d9-8ccd-18500ab4360d",
+          "sha256": "4950ff1185fe936177e6126fc53f2db8e3be3515f865c7ad0cb79e46b914c78e",
+          "bytes": 132231,
+          "tables": [
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nhhr_sim",
+              "rows": 14,
+              "worksheet": "README"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_2",
+              "rows": 31,
+              "worksheet": "Source Index"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_3",
+              "rows": 78,
+              "worksheet": "Data Holdings"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_4",
+              "rows": 720,
+              "worksheet": "Dataset Files"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_5",
+              "rows": 5,
+              "worksheet": "External Access"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_6",
+              "rows": 95,
+              "worksheet": "ICI External Sources"
+            }
+          ]
+        },
+        {
+          "name": "NHHR_Actual_Data_Holdings_and_Request_Catalog_2026-07-23.xlsx",
+          "fileId": "0a7fee4e-afb2-4bae-926c-8b812fa8ce1a",
+          "sha256": "ac9ae6daefc42b1af8bc3a967fbb7627f893e2a0753c98bb1555cf4850c7479c",
+          "bytes": 231844,
+          "tables": [
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nhhr_act",
+              "rows": 23,
+              "worksheet": "README"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_7",
+              "rows": 31,
+              "worksheet": "Source Index"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_8",
+              "rows": 78,
+              "worksheet": "Data Holdings"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_9",
+              "rows": 720,
+              "worksheet": "Dataset Files"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_10",
+              "rows": 67,
+              "worksheet": "Duplicates"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_11",
+              "rows": 35,
+              "worksheet": "Request Form"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_12",
+              "rows": 33,
+              "worksheet": "Data Dictionary"
+            }
+          ]
+        },
+        {
+          "name": "NHHR_External_Data_Sources_and_Acquisition_Guide_2026-07-23.xlsx",
+          "fileId": "bc87af44-6c6b-42a8-ab2e-73b245056091",
+          "sha256": "07896b7ef10bdaa6ba722ea5d01e4bbc96997c1d5e9d97743e5b5885461acab1",
+          "bytes": 22653,
+          "tables": [
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nhhr_ext",
+              "rows": 15,
+              "worksheet": "Overview"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_13",
+              "rows": 5,
+              "worksheet": "Access Guide"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_14",
+              "rows": 95,
+              "worksheet": "ICI Feature Classes"
+            }
+          ]
+        },
+        {
+          "name": "NHHR_Theo_CBA_Full_Data_Package_Manifest_2026-08-31.xlsx",
+          "fileId": "0d61e6c7-941e-401d-8345-70b9e7ec4b5c",
+          "sha256": "391626ff5e74949b0cebebf3cfa2ed8d5fa22d61c72829208437a0549f130462",
+          "bytes": 20738,
+          "tables": [
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nhhr_the",
+              "rows": 14,
+              "worksheet": "Package Summary"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_15",
+              "rows": 28,
+              "worksheet": "Collections"
+            }
+          ]
+        },
+        {
+          "name": "NHHR_Theo_CBA_Data_Request_Fulfillment_2026-08-31.xlsx",
+          "fileId": "4613cb5c-03eb-4cb1-b0d3-d063035483fb",
+          "sha256": "e0d7780107007b012f6f66525176689bba1b0e9906c34fbd5c0272267b6354fb",
+          "bytes": 73465,
+          "tables": [
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_16",
+              "rows": 15,
+              "worksheet": "Summary"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_17",
+              "rows": 28,
+              "worksheet": "Request Assessment"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_18",
+              "rows": 21,
+              "worksheet": "Compilation Plan"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_19",
+              "rows": 270,
+              "worksheet": "Requested Source Files"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_20",
+              "rows": 10,
+              "worksheet": "Release Checks"
+            }
+          ]
+        },
+        {
+          "name": "NHHR_Data_Inventory_and_Request_Catalog_2026-07-23.xlsx",
+          "fileId": "fc4d9fd9-20c2-4276-8f3d-be249a0a1b49",
+          "sha256": "75158181c1e4a1e7b6c1afd04f09b36cfd73b841099dc382ef22b8e40b3f0855",
+          "bytes": 353611,
+          "tables": [
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nhhr_dat",
+              "rows": 23,
+              "worksheet": "README"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_21",
+              "rows": 130,
+              "worksheet": "Data Catalog"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_22",
+              "rows": 1576,
+              "worksheet": "File Manifest"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_23",
+              "rows": 332,
+              "worksheet": "Duplicates"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_24",
+              "rows": 35,
+              "worksheet": "Request Form"
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_nh_25",
+              "rows": 20,
+              "worksheet": "Data Dictionary"
+            }
+          ]
+        },
+        {
+          "name": "package_inventory.json",
+          "fileId": "cfed3130-ec93-44a8-a92f-feed9d5fd239",
+          "sha256": "fec01a0a64c9b5e5ee10b468cd640ed379cc27b5266fc132f33c1b30e0caa065",
+          "bytes": 454424,
+          "tables": [
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_package_",
+              "rows": 27,
+              "worksheet": ""
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_pa_2",
+              "rows": 269,
+              "worksheet": ""
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_pa_3",
+              "rows": 55,
+              "worksheet": ""
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_pa_4",
+              "rows": 5,
+              "worksheet": ""
+            },
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_pa_5",
+              "rows": 1,
+              "worksheet": ""
+            }
+          ],
+          "jsonKeys": [
+            "packageName",
+            "preparedOn",
+            "sourceWorkspace",
+            "packageRoot",
+            "collectionCount",
+            "sourceFileCount",
+            "totalSourceBytes",
+            "allSizeVerified",
+            "collections",
+            "files",
+            "convertedFiles",
+            "convertedFileCount",
+            "totalConvertedBytes",
+            "allHashVerified",
+            "finalizedOn",
+            "recipientPackageContents",
+            "recipientScriptsIncluded"
+          ]
+        },
+        {
+          "name": "manifest_converted_csv.csv",
+          "fileId": "ba9b04a3-8ba8-4f99-8086-cd98888244d6",
+          "sha256": "5d55afa1dcb34e81b61b204dbb4797db7e31dea1645ce46926e47256e73d369d",
+          "bytes": 14792,
+          "tables": [
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_manifest",
+              "rows": 55,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "collectionId",
+            "fileName",
+            "packageRelativePath",
+            "sizeBytes",
+            "sizeMiB",
+            "sha256",
+            "status"
+          ],
+          "rowCount": 55
+        },
+        {
+          "name": "manifest_collections.csv",
+          "fileId": "1e3ff3d4-2152-4c6d-9cfc-ce5c1fb19521",
+          "sha256": "78dbc73dff4990d04499f969801e315740e279f84c37bc5e2254c126bf9ccb09",
+          "bytes": 15656,
+          "tables": [
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_ma_2",
+              "rows": 27,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "packageGroup",
+            "collectionId",
+            "collectionName",
+            "sourcePublisher",
+            "dataType",
+            "includes",
+            "geography",
+            "timeCoverage",
+            "dataStage",
+            "formats",
+            "fileCount",
+            "sizeMiB",
+            "releaseDecision",
+            "caveat"
+          ],
+          "rowCount": 27
+        },
+        {
+          "name": "manifest_files.csv",
+          "fileId": "3a206082-c802-422d-8492-39eed7434410",
+          "sha256": "75b79e6792553918d03cb6b72ee1534ac8558ce6056b30801a6131afaf2475d6",
+          "bytes": 249870,
+          "tables": [
+            {
+              "name": "nhhr_data_x06_45f48cd68fa5_zip_data_x06_ma_3",
+              "rows": 269,
+              "worksheet": ""
+            }
+          ],
+          "columns": [
+            "assetId",
+            "collectionId",
+            "collectionName",
+            "packageGroup",
+            "sourcePublisher",
+            "dataType",
+            "includes",
+            "fileName",
+            "extension",
+            "holdingRole",
+            "dataStage",
+            "sourceRelativePath",
+            "packageRelativePath",
+            "sourceSha256",
+            "sourceBytes",
+            "packageBytes",
+            "sizeVerified",
+            "columnPreview",
+            "approxCsvRows",
+            "userReleaseDecision",
+            "caveat",
+            "packageSha256",
+            "hashVerified"
+          ],
+          "rowCount": 269
+        }
+      ]
+    }
+  ]
+}

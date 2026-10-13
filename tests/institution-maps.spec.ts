@@ -1,0 +1,120 @@
+import { test, expect } from '@playwright/test';
+import { readFile } from 'node:fs/promises';
+import { mockBasemaps } from './basemap-fixtures';
+
+type RenderedPoint = { code: string; value: number | null; radius: number };
+const explorer = 'dev/projects?view=explore';
+test.beforeEach(async ({ page }) => { await mockBasemaps(page); });
+
+test('NSERC opens on the latest period and rendered dot area follows source amounts', async ({ page, request }) => {
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  const release = await (await request.get('data/nhhr/atlas-snapshot.json')).json();
+  const source = release.datasets.find((item: { id: string }) => item.id === 'nserc-awards');
+  const cohort = source.rows.filter((row: Record<string, unknown>) => String(row.fiscal_year) === '2024');
+  const unbc = cohort.find((row: Record<string, unknown>) => row.comparator === 'UNBC / Prince George');
+  const ubc = cohort.find((row: Record<string, unknown>) => row.comparator === 'UBC / Vancouver');
+  await page.goto(`${explorer}&dataset=nserc-awards&metric=total_award_amount`);
+  await expect(page.getByRole('tab', { name: 'Map', exact: true })).toHaveAttribute('aria-selected', 'true');
+  await expect(page.getByTestId('year-select')).toHaveValue('2024');
+  const state = page.getByTestId('atlas-map-state');
+  await expect(state).toHaveAttribute('data-ready', 'true');
+  await expect(state).toHaveAttribute('data-geometry', 'points');
+  await expect(state).toHaveAttribute('data-matched-count', '6');
+  await expect(state).toHaveAttribute('data-rendered-features', '6');
+  const rendered: RenderedPoint[] = JSON.parse((await state.getAttribute('data-rendered-points'))!);
+  const unbcPoint = rendered.find(item => item.code === 'unbc')!;
+  const ubcPoint = rendered.find(item => item.code === 'ubc')!;
+  expect(unbcPoint.value).toBe(unbc.total_award_amount);
+  expect(ubcPoint.value).toBe(ubc.total_award_amount);
+  expect(unbcPoint.radius ** 2 / ubcPoint.radius ** 2).toBeCloseTo(unbc.total_award_amount / ubc.total_award_amount, 5);
+  await page.getByTestId('entity-select').selectOption('UNBC / Prince George');
+  await expect(state).toHaveAttribute('data-matched-count', '1');
+  await expect.poll(async () => JSON.parse((await state.getAttribute('data-rendered-points'))!).length).toBe(1);
+  const filtered: RenderedPoint[] = JSON.parse((await state.getAttribute('data-rendered-points'))!);
+  expect(filtered[0].radius).toBeCloseTo(unbcPoint.radius, 6);
+  expect(await state.getAttribute('data-bubble-scale-max')).toBe(String(Math.max(...cohort.map((row: Record<string, number>) => row.total_award_amount))));
+  await expect(page.locator('.atlas-institution-scope')).toContainText('institution as a whole');
+  await page.getByRole('combobox', { name: 'Select map institution' }).selectOption('UNBC / Prince George');
+  await expect(page.locator('.atlas-location-detail')).toContainText('3333 University Way');
+  expect(errors).toEqual([]);
+});
+
+test('period and measure controls update dots while map, chart, table and CSV keep one subset', async ({ page, request }) => {
+  const release = await (await request.get('data/nhhr/atlas-snapshot.json')).json();
+  const dataset = release.datasets.find((item: { id: string }) => item.id === 'nserc-awards');
+  const row = dataset.rows.find((item: Record<string, unknown>) => item.comparator === 'UNBC / Prince George' && String(item.fiscal_year) === '2019');
+  await page.goto(`${explorer}&dataset=nserc-awards`);
+  await page.getByTestId('year-select').selectOption('2019');
+  await page.getByTestId('entity-select').selectOption('UNBC / Prince George');
+  await page.getByTestId('metric-select').selectOption('awards');
+  const state = page.getByTestId('atlas-map-state');
+  await expect(state).toHaveAttribute('data-metric', 'awards');
+  await expect.poll(async () => JSON.parse((await state.getAttribute('data-rendered-points')) ?? '[]')[0]?.value).toBe(row.awards);
+  await page.getByRole('tab', { name: 'Chart', exact: true }).click();
+  await expect(page.locator('.atlas-bar-row')).toHaveCount(1);
+  await expect(page.locator('.atlas-bar-row')).toContainText(`${row.awards} awards`);
+  await page.reload();
+  await expect(page.getByRole('tab', { name: 'Chart', exact: true })).toHaveAttribute('aria-selected', 'true');
+  await expect(page.getByTestId('year-select')).toHaveValue('2019');
+  await expect(page.getByTestId('entity-select')).toHaveValue('UNBC / Prince George');
+  await page.getByRole('tab', { name: 'Table', exact: true }).click();
+  await expect(page.locator('.atlas-data-table tbody tr')).toHaveCount(1);
+  const downloadEvent = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'CSV', exact: true }).click();
+  const csv = await readFile((await (await downloadEvent).path())!, 'utf8');
+  expect(csv.split(/\r?\n/)).toHaveLength(2);
+  expect(csv).toContain('"UNBC / Prince George","2019"');
+  expect(csv).toContain(`"${row.awards}"`);
+  await page.getByRole('tab', { name: 'Map', exact: true }).click();
+  await expect(state).toHaveAttribute('data-matched-count', '1');
+  await page.getByTestId('metric-select').selectOption('median_award_amount');
+  await expect.poll(async () => JSON.parse((await state.getAttribute('data-rendered-points')) ?? '[]')[0]?.value).toBe(row.median_award_amount);
+});
+
+test('all-period institution maps withhold ambiguous values and preserve the choice on reload', async ({ page }) => {
+  await page.goto(`${explorer}&dataset=nserc-awards`);
+  await page.getByTestId('year-select').selectOption('');
+  await expect(page.getByTestId('atlas-map-state')).toHaveAttribute('data-matched-count', '0');
+  await expect(page.locator('.atlas-map-join-note')).toContainText('36 ambiguous rows withheld');
+  await expect(page.locator('.atlas-point-legend')).toContainText('Filter to one source record per place');
+  await page.reload();
+  await expect(page.getByTestId('year-select')).toHaveValue('');
+  await expect(page.locator('.atlas-map-join-note')).toContainText('36 ambiguous rows withheld');
+  await page.getByRole('tab', { name: 'Chart', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Trends over time', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('.atlas-results-line')).toContainText('36 of 36');
+});
+
+test('publication and CIHR cohorts map only verified sites at their original grain', async ({ page, request }) => {
+  const locations = await (await request.get('data/nhhr/locations-institutions.geojson')).json();
+  expect(locations.features).toHaveLength(9);
+  expect(new Set(locations.features.map((feature: { properties: { code: string } }) => feature.properties.code)).size).toBe(9);
+  expect(locations.features.every((feature: { geometry: { type: string; coordinates: number[] }; properties: Record<string, string> }) => feature.geometry.type === 'Point' && feature.geometry.coordinates.every(Number.isFinite) && feature.properties.source_url.startsWith('https://') && feature.properties.coordinate_source_url.startsWith('https://www.openstreetmap.org/'))).toBe(true);
+  await page.goto(`${explorer}&dataset=publications`);
+  await expect(page.getByTestId('year-select')).toHaveValue('2025');
+  await expect(page.getByTestId('atlas-map-state')).toHaveAttribute('data-matched-count', '8');
+  await page.goto(`${explorer}&dataset=cihr-payments`);
+  await expect(page.getByTestId('year-select')).toHaveValue('2024');
+  await expect(page.getByTestId('atlas-map-state')).toHaveAttribute('data-matched-count', '7');
+  await expect(page.getByTestId('year-select').locator('option[value="2025"]')).toHaveCount(0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
+test('the institutional story chapter exposes accessible values and its filtered explorer', async ({ page }) => {
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.goto('dev/projects/research-pathways#institutional-awards-on-the-map');
+  await expect(page.getByTestId('story-reader')).toHaveAttribute('data-active-chapter', 'institutional-awards-on-the-map');
+  await expect(page.getByTestId('atlas-map-state')).toHaveAttribute('data-rendered-features', '6');
+  expect((await page.locator('.atlas-map-canvas').boundingBox())!.height).toBeGreaterThanOrEqual(110);
+  const active = page.locator('.editorial-slide[data-active="true"]');
+  await active.getByText('Read the institution values', { exact: true }).click();
+  await expect(active.locator('.atlas-chapter-values tbody tr')).toHaveCount(6);
+  await expect(active.locator('.atlas-chapter-values tbody')).toContainText('UNBC / Prince George');
+  await active.getByRole('button', { name: 'Explore the source data', exact: true }).click();
+  await expect(page).toHaveURL(/dataset=nserc-awards/);
+  await expect(page.getByTestId('year-select')).toHaveValue('2024');
+  await expect(page.getByRole('tab', { name: 'Map', exact: true })).toHaveAttribute('aria-selected', 'true');
+  expect(errors).toEqual([]);
+});

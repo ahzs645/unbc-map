@@ -1,0 +1,80 @@
+{
+  "schema": "nhhr-boundaries-v1",
+  "pgMapsCommit": "bbf7e5861d9cb76ab7c44ba0a0b71954b9d6bbcd",
+  "bcDataMapperCommit": "da85fa7b6b786386e41758cb51a20312a19e90b8",
+  "sources": [
+    {
+      "level": "hsda",
+      "sourcePath": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/simplified/health_service_delivery_areas.json",
+      "sourceService": "https://openmaps.gov.bc.ca/geo/pub/ows",
+      "sourceLayer": "WHSE_ADMIN_BOUNDARIES.BCHA_HEALTH_SERV_DEL_AREA_SP",
+      "sourceSnapshotCapturedAt": "2025-10-19T01:40:01.939Z",
+      "sourceSha256": "8f69b0f5a88fb49bded0c6a7ab703158685b97cf36f00a5cf85f4a9647d0ecb4",
+      "featureCount": 16,
+      "outputBytes": 2306170,
+      "simplification": {
+        "sourceSnapshot": "health_service_delivery_areas.json",
+        "sourceCrs": "EPSG:4326",
+        "workingCrs": "EPSG:3005",
+        "outputCrs": "EPSG:4326",
+        "simplification": "Mapshaper shared-topology Ramer-Douglas-Peucker",
+        "simplificationToleranceMetres": 75,
+        "topologyPreserving": true,
+        "mapshaperVersion": "0.6.113",
+        "coordinatePrecision": 6
+      }
+    },
+    {
+      "level": "lha",
+      "sourcePath": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/simplified/local_health_areas.json",
+      "sourceService": "https://openmaps.gov.bc.ca/geo/pub/ows",
+      "sourceLayer": "WHSE_ADMIN_BOUNDARIES.BCHA_LOCAL_HEALTH_AREA_SP",
+      "sourceSnapshotCapturedAt": "2025-10-19T01:40:05.398Z",
+      "sourceSha256": "e0a30bb70cf4e149d9d859eb18f0df1f58c661ecb1c25b048aee21b2118184c8",
+      "featureCount": 89,
+      "outputBytes": 3912805,
+      "simplification": {
+        "sourceSnapshot": "local_health_areas.json",
+        "sourceCrs": "EPSG:4326",
+        "workingCrs": "EPSG:3005",
+        "outputCrs": "EPSG:4326",
+        "simplification": "Mapshaper shared-topology Ramer-Douglas-Peucker",
+        "simplificationToleranceMetres": 50,
+        "topologyPreserving": true,
+        "mapshaperVersion": "0.6.113",
+        "coordinatePrecision": 6
+      }
+    },
+    {
+      "level": "ha",
+      "sourcePath": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/simplified/health_authorities.json",
+      "sourceService": "https://openmaps.gov.bc.ca/geo/pub/ows",
+      "sourceLayer": "WHSE_ADMIN_BOUNDARIES.BCHA_HEALTH_AUTHORITY_BNDRY_SP",
+      "sourceSnapshotCapturedAt": "2025-10-19T01:39:59.240Z",
+      "sourceSha256": "f130f4dad389a9a0bf724fbeb69a7d068df74d78e52d72d9612d3b220f10cdcb",
+      "featureCount": 5,
+      "outputBytes": 1571423,
+      "simplification": {
+        "sourceSnapshot": "health_authorities.json",
+        "sourceCrs": "EPSG:4326",
+        "workingCrs": "EPSG:3005",
+        "outputCrs": "EPSG:4326",
+        "simplification": "Mapshaper shared-topology Ramer-Douglas-Peucker",
+        "simplificationToleranceMetres": 100,
+        "topologyPreserving": true,
+        "mapshaperVersion": "0.6.113",
+        "coordinatePrecision": 6
+      }
+    }
+  ],
+  "crosswalkSource": "https://www150.statcan.gc.ca/n1/pub/82-402-x/2025001/app-ann/app-ann01-eng.htm",
+  "crosswalkMethod": "Explicit reviewed 16-row Statistics Canada 2024 HSDA code to BC Ministry of Health HSDA code lookup. No names, prefixes or fuzzy matches used at runtime.",
+  "healthAuthorityCrosswalkMethod": "Exact reviewed CIHI source label to the five Ministry territorial HA codes. Province and PHSA are intentionally unmatched. See crosswalk-health-authority.README.md.",
+  "hierarchyMethod": "Parent identifiers as supplied by BC Ministry of Health CHSA snapshot. No population allocation or new spatial intersection.",
+  "limitations": [
+    "Boundary vintage is unestablished in the local snapshot.",
+    "Historical values are displayed on contextual polygons; no claim of boundary harmonization.",
+    "City and institution observations retain their source grain at verified representative points, without health-area allocation.",
+    "PHSA and province reporting units are not allocated among the five territorial HA polygons."
+  ]
+}

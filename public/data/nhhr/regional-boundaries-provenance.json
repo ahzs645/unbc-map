@@ -1,0 +1,64 @@
+{
+  "boundaries": [
+    {
+      "level": "cd",
+      "sourcePath": "vendor/bcdatamapper/datascrapers/census/output/bc-da-simplified/parents/cd.geojson",
+      "sourceSha256": "4006a04102b3be2c74264334dcbfd1ea2bc39f81bc986f2e7ee37d189591b86b",
+      "sourceFeatures": 29,
+      "releasedFeatures": 29,
+      "asset": "boundaries-cd.geojson",
+      "sha256": "32bba8c373602b519d86a3d0a140ffa64b0b062a62b5f66c53616e16d0e083fd",
+      "censusYear": 2021,
+      "geometryTransformation": "Exact source geometry retained; attributes normalized; selected complete polygons, no independent simplification.",
+      "licence": "Statistics Canada Open Licence",
+      "licenceUrl": "https://www.statcan.gc.ca/en/reference/licence",
+      "limitations": [
+        "Display polygons are simplified native 2021 statistical geography, not municipal legal boundaries for other years.",
+        "No cross-grain allocation or spatial weights applied."
+      ]
+    },
+    {
+      "level": "csd",
+      "sourcePath": "vendor/bcdatamapper/datascrapers/census/output/bc-da-simplified/parents/csd.geojson",
+      "sourceSha256": "aa0e85e0e1f452bdfd518183793c3161919e703da481e1567092793c7dbb50a6",
+      "sourceFeatures": 751,
+      "releasedFeatures": 7,
+      "asset": "boundaries-csd.geojson",
+      "sha256": "6809516f604064404f18db2c7f0097e7235bebbd824090065f862b103db23334",
+      "censusYear": 2021,
+      "geometryTransformation": "Exact source geometry retained; attributes normalized; selected complete polygons, no independent simplification.",
+      "licence": "Statistics Canada Open Licence",
+      "licenceUrl": "https://www.statcan.gc.ca/en/reference/licence",
+      "limitations": [
+        "Display polygons are simplified native 2021 statistical geography, not municipal legal boundaries for other years.",
+        "No cross-grain allocation or spatial weights applied."
+      ]
+    },
+    {
+      "level": "er",
+      "sourcePath": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_economic_regions_2021.geojson.gz",
+      "sourceSha256": "feb193fbc3d06e421a331f80eccde1dc0a2ed5e67e4184c6b947ab88bd4b709f",
+      "sourceFeatures": 8,
+      "releasedFeatures": 8,
+      "asset": "boundaries-er.geojson",
+      "sha256": "cd09f16109a8d9f25b26da5e93d05f747107fd60746af4cf088eadb0d51eb094",
+      "censusYear": 2021,
+      "geometryTransformation": "Exact source geometry retained; attributes normalized; selected complete polygons, no independent simplification.",
+      "licence": "Statistics Canada Open Licence",
+      "licenceUrl": "https://www.statcan.gc.ca/en/reference/licence",
+      "limitations": [
+        "Display polygons are simplified native 2021 statistical geography, not municipal legal boundaries for other years.",
+        "No cross-grain allocation or spatial weights applied."
+      ]
+    }
+  ],
+  "exactCsdSelection": [
+    "5947012",
+    "5949011",
+    "5951043",
+    "5953023",
+    "5955014",
+    "5955034",
+    "5959007"
+  ]
+}

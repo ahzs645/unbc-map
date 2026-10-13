@@ -1,5 +1,5 @@
 {
-  "name": "unbc-map",
+  "name": "nhhr-atlas",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -9,9 +9,11 @@
   "scripts": {
     "toolkit:build": "node scripts/build-toolkit.mjs",
     "dev": "vite --host 127.0.0.1",
-    "build": "npm run toolkit:build && tsc --noEmit && vite build",
+    "build": "npm run toolkit:build && tsc --noEmit && vite build && node scripts/prepare-spa-pages.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "test": "playwright test",
+    "data:prepare": "python3 scripts/prepare-nhhr-data.py",
+    "data:boundaries": "node scripts/prepare-nhhr-boundaries.mjs",
     "chrome:sync": "node scripts/sync-chrome.mjs"
   },
   "dependencies": {

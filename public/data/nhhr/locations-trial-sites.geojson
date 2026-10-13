@@ -1,0 +1,68 @@
+{
+  "type": "FeatureCollection",
+  "name": "Verified physical Prince George trial facilities",
+  "reviewedAt": "2026-10-12",
+  "attribution": "© OpenStreetMap contributors · ODbL",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "bc-cancer-prince-george",
+      "properties": {
+        "code": "bc-cancer-prince-george",
+        "name": "BC Cancer – Prince George (Centre for the North)",
+        "site": "1215 Lethbridge Street · V2M 7E9",
+        "city": "Prince George",
+        "sourceUrl": "https://www.bccancer.bc.ca/centre-for-the-north-site",
+        "locationNote": "Verified facility at the official 1215 Lethbridge Street address. The returned OpenStreetMap clinic is named BC Cancer – Prince George (Centre for the North). The official postal code V2M 7E9 is retained; the Nominatim context postcode differs. This is distinct from the Vancouver BC Cancer agency record in PGMaps and from the adjacent University Hospital of Northern BC. Historical registry listings do not establish current recruitment, local enrollment or eligibility.",
+        "coordinateSourceUrl": "https://www.openstreetmap.org/way/445255632"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7643857,
+          53.9129846
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prince-george-family-ymca",
+      "properties": {
+        "code": "prince-george-family-ymca",
+        "name": "Prince George Family YMCA",
+        "site": "2020 Massey Drive · V2L 4V7",
+        "city": "Prince George",
+        "sourceUrl": "https://www.ymcabc.ca/locations/prince-george-family-ymca",
+        "locationNote": "Verified operator address at 2020 Massey Drive. The returned OpenStreetMap sports-centre node is named YMCA of Northern BC and matches the street address, Prince George and postal code. A listed trial site does not establish local enrollment, eligibility or current recruitment.",
+        "coordinateSourceUrl": "https://www.openstreetmap.org/node/7033781790"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.77237,
+          53.9043694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "prince-george-surgery-centre",
+      "properties": {
+        "code": "prince-george-surgery-centre",
+        "name": "Prince George Surgery Centre",
+        "site": "500 Victoria Street · V2L 2J9",
+        "city": "Prince George",
+        "sourceUrl": "https://www.healthlinkbc.ca/find-care/find-health-services/program/surgical-services-1?location_nid=27051",
+        "locationNote": "HealthLink BC explicitly locates Prince George Surgery Centre at 500 Victoria Street. The returned OpenStreetMap address node matches that building address and Prince George. PGMaps has the Surgery Centre at 500 Victoria St with a nearby BC Geocoder point marked for review; the official listing resolves that identity. The official postal code V2L 2J9 is retained; the Nominatim context postcode differs. This point represents the building, not a department or exact study room. UNKNOWN source study status is retained; no current recruitment is inferred.",
+        "coordinateSourceUrl": "https://www.openstreetmap.org/node/4268588591"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.750288,
+          53.9160995
+        ]
+      }
+    }
+  ]
+}

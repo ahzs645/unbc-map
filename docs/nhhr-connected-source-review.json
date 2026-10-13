@@ -1,0 +1,484 @@
+{
+  "reviewedAt": "2026-10-12",
+  "manifestRevision": 93,
+  "reviews": [
+    {
+      "collectionId": "DATA-C010",
+      "datasetId": "d85b189f-9d24-421c-883c-6b759f081900",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Verified Prince George trial sites, Prince George study-site evidence. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed facility, none connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "views": [
+        "trial-sites",
+        "trial-site-evidence"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/d85b189f-9d24-421c-883c-6b759f081900",
+          "httpStatus": 200,
+          "responseSha256": "6a337467a037f04da297745f295cb6042ce876bdf036461863df5cf9aa848b1b",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        },
+        {
+          "kind": "reviewed-release-proof",
+          "asset": "trial-sites-provenance.json",
+          "sha256": "f4c5345f03ccbba4ecc673a82b82c35c5066640da0bda71449c6b2c5959ba10f"
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C019",
+      "datasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Clinical trials with an exact-city site, Prince George registered study portfolio, Validation questions still open. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed city, none connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "views": [
+        "clinical-city",
+        "clinical-pg",
+        "evidence-gaps"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/960a9b75-413f-4f1c-9fc6-19e11fe04707",
+          "httpStatus": 200,
+          "responseSha256": "06a8b915e330524611dbe9b7df185092e26217c11ecd4a1f5f1c3d12089ffcfe",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C024",
+      "datasetId": "361da856-2537-4052-93e6-3c962ba4fa8e",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Population denominator audit. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed none connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "views": [
+        "population-review"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/361da856-2537-4052-93e6-3c962ba4fa8e",
+          "httpStatus": 200,
+          "responseSha256": "49848b66a5fbd4870d35902151503db7f3b5e33348393914c5ff855816bca3f4",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C025",
+      "datasetId": "ef462b97-d355-49b8-be02-a742c86d5101",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: CIHR annual payments. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed institution connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "views": [
+        "cihr-payments"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/ef462b97-d355-49b8-be02-a742c86d5101",
+          "httpStatus": 200,
+          "responseSha256": "e743c53466cf3574f879bef3d1bbfe6ceae80c8daeccecd76bafe32865abb17b",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C029",
+      "datasetId": "2ab4d668-f4f7-4179-8718-7344d5f6337f",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: NSERC awards by institution. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed institution connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "views": [
+        "nserc-awards"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/2ab4d668-f4f7-4179-8718-7344d5f6337f",
+          "httpStatus": 200,
+          "responseSha256": "6e50492a937b3c8e3cc2dc992a966b7ff84d579ca632f43987dd2b08e157aa90",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C030",
+      "datasetId": "f2e77e60-9bc1-439a-80c1-d169e07caa97",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Research publications by institution. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed institution connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "views": [
+        "publications"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/f2e77e60-9bc1-439a-80c1-d169e07caa97",
+          "httpStatus": 200,
+          "responseSha256": "99ce5ff806b96f26c986bb33a8cb6c4207f8d4407251d27cc1e14c99825901ad",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C032",
+      "datasetId": "eb3407f1-61f3-4902-9828-3533cd3933fa",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Hypothetical avoided-travel scenarios. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed none connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "views": [
+        "travel-scenarios"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/eb3407f1-61f3-4902-9828-3533cd3933fa",
+          "httpStatus": 200,
+          "responseSha256": "5f9b99e1660425d225854025766db0bbde8f1b1ef026707afa18a32db7d670d0",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C040",
+      "datasetId": "50a3dad1-f1e4-413d-9519-356f1089c53f",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Nursing direct-care workforce in Northern health regions. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed hsda connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "views": [
+        "nursing-workforce-northern"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/50a3dad1-f1e4-413d-9519-356f1089c53f",
+          "httpStatus": 200,
+          "responseSha256": "c9296fb66332208d5950cd3f457e536ded90babe52eac1f8be6392d729597592",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        },
+        {
+          "kind": "reviewed-release-proof",
+          "asset": "nursing-workforce-provenance.json",
+          "sha256": "77160b3e0d6ce3c09e6c937a680712bd5d8be18caa2f0b0fe9cc533ee2a809a9"
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C042",
+      "datasetId": "570ebb49-f165-4d5a-89e8-78e1122ab485",
+      "status": "supporting",
+      "summary": "Raw public registry records already support the exact Prince George whitelist and source-city validation. A catalogue-only label did not mean this source had never been used.",
+      "mapConnection": "Registry city centroids are not verified facilities and are not imported as facility coordinates.",
+      "needs": [
+        "For additional facilities, verify exact names and addresses independently; keep unresolved site descriptions unassigned."
+      ],
+      "cannot": [
+        "Do not bulk-map reused city-centre coordinates or claim historical overall trial status as current local recruitment."
+      ],
+      "views": [
+        "trial-sites",
+        "trial-site-evidence",
+        "clinical-city"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/570ebb49-f165-4d5a-89e8-78e1122ab485",
+          "httpStatus": 200,
+          "responseSha256": "f929fc1d2bf1f3844749ac31b38be013a01c880438f52815625f51279331a4b6",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        },
+        {
+          "kind": "reviewed-release-proof",
+          "asset": "trial-sites-provenance.json"
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C037",
+      "datasetId": "a308df09-ac89-4591-980f-624a4908a9b6",
+      "status": "restricted",
+      "summary": "Restricted strategic package. Only separately reviewed physician, city-condition and verified-facility aggregates are released; internal participant and strategy material is not exposed.",
+      "mapConnection": "Reviewed HSDA codes, exact city labels and individually verified facility aliases; no population or participant allocation.",
+      "needs": [
+        "Use only the reviewed aggregate releases and their safe provenance."
+      ],
+      "cannot": [
+        "Do not expose protected participant, interview, consent, contact or internal strategic records."
+      ],
+      "views": [
+        "physicians-hsda",
+        "clinical-condition-mix",
+        "trial-facility-conditions",
+        "trial-facility-coverage"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/a308df09-ac89-4591-980f-624a4908a9b6",
+          "httpStatus": 200,
+          "responseSha256": "a73855a301ecd5d37bcb6894b13b8b816c60c675fd77dba58c647ca55212157f",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        },
+        {
+          "kind": "reviewed-release-proof",
+          "asset": "clinical-condition-mix-provenance.json",
+          "sha256": "3c87e1e7e73c2a6b0088efc9c011be7133e0ef3120d252c538dec77fbe3d81a7"
+        },
+        {
+          "kind": "reviewed-release-proof",
+          "asset": "trial-facility-conditions-provenance.json",
+          "sha256": "ab7c1904a6d815f1429d5e0ae918cf2b302506edfad1d64080c4bf95b13a9797"
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C051",
+      "datasetId": "f7b55b36-aa3e-4279-82ce-c0c1c2198f7e",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Northern local health area populations, Northern LHA population age structure. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed lha connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "views": [
+        "population-lha",
+        "population-lha-ages"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/f7b55b36-aa3e-4279-82ce-c0c1c2198f7e",
+          "httpStatus": 200,
+          "responseSha256": "49ca2db183bdc3f22f3ed26bae1e2797721cb16c75a514f2d606bf8901773aab",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        },
+        {
+          "kind": "reviewed-release-proof",
+          "asset": "population-ages-provenance.json",
+          "sha256": "451a5b1a875832db37db31e0e28ff11bea704ea4ce7352760dc6b54fc387cc01"
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C052",
+      "datasetId": "a90c9d46-801e-4a6d-9b04-b3835def053a",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: CAUBO sponsored research income. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed institution connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "views": [
+        "research-income"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/a90c9d46-801e-4a6d-9b04-b3835def053a",
+          "httpStatus": 200,
+          "responseSha256": "2e48e745ead8b561ad0451bd7c5f4d4cddfcf77bbc138db3f1a12e0037f21e1b",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        },
+        {
+          "kind": "reviewed-release-proof",
+          "asset": "research-income-provenance.json",
+          "sha256": "5bb6c677cdf58c94fd90faf90980f12bb0b2d2b5ee47e9db5dc4a716ee27ae65"
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C069",
+      "datasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Northern Health Connections route patterns, Travel cost assumptions and benchmarks, Historical patient-travel stop events, Recorded events by travel reference location. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed none, route, stop connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "views": [
+        "travel-schedule",
+        "travel-benchmarks",
+        "travel-stop-events",
+        "travel-stop-locations"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+          "httpStatus": 200,
+          "responseSha256": "dce9945f9d40b35e8ebdbf0318c3819927ec988d9a72474cb76f7e14f0a32ead",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        },
+        {
+          "kind": "reviewed-release-proof",
+          "asset": "travel-network-provenance.json",
+          "sha256": "3225714ac654b7962093f9333d0a07739238d200e704166b526ba0a6b1eaf0d3"
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C072",
+      "datasetId": "a2987ed6-8b5d-4548-aab0-10f962545539",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Northern Health scheduled surgery waits, Hospital and surgical facility source directory. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed facility, none connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "views": [
+        "surgical-waits-northern",
+        "hospital-facilities"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/a2987ed6-8b5d-4548-aab0-10f962545539",
+          "httpStatus": 200,
+          "responseSha256": "842b73cfeea93abeb9257c31a3c1b805fbfa2441c1e52300edc5fb73e482ac68",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        },
+        {
+          "kind": "reviewed-release-proof",
+          "asset": "additional-evidence-provenance.json",
+          "sha256": "6c42fe6258658b1950d00d384ae38f2ee255f9bb8c7d4e7200e49769b47cfafb"
+        },
+        {
+          "kind": "reviewed-release-proof",
+          "asset": "hospital-facilities-provenance.json",
+          "sha256": "af8e969c91df98eb58d99c498a747427b86ab7f0f4bcf8e592a08610e2228126"
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C073",
+      "datasetId": "8502dc29-352e-4bb5-80a4-1d7b14cd843d",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: BC standard hospital stay costs, Hospital facility costs per weighted case. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed facility, ha connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "views": [
+        "hospital-stay-costs",
+        "hospital-facility-costs"
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/8502dc29-352e-4bb5-80a4-1d7b14cd843d",
+          "httpStatus": 200,
+          "responseSha256": "f6dbcfd453c9dffad4b198aa3df7d1e3cc4de323d306aee1800dc2bec64c7782",
+          "sourceStatus": "ready",
+          "artifactVersion": 1
+        },
+        {
+          "kind": "reviewed-release-proof",
+          "asset": "additional-evidence-provenance.json",
+          "sha256": "6c42fe6258658b1950d00d384ae38f2ee255f9bb8c7d4e7200e49769b47cfafb"
+        },
+        {
+          "kind": "reviewed-release-proof",
+          "asset": "hospital-facilities-provenance.json",
+          "sha256": "af8e969c91df98eb58d99c498a747427b86ab7f0f4bcf8e592a08610e2228126"
+        }
+      ]
+    }
+  ]
+}

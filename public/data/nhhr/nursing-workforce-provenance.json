@@ -1,0 +1,179 @@
+{
+  "schema": "nhhr-nursing-workforce-v1",
+  "reviewedAt": "2026-10-12",
+  "manifestRevisionReviewed": 93,
+  "manifestUrl": "https://zoer.k8s.overtheedgepaper.ca/api/projects/acdd692f-a188-4f85-bb5a-83c48d5c7e82/database/data-spaces/de1fe530-a762-52fa-ba11-d01cc5b344df/manifest",
+  "source": {
+    "collectionId": "DATA-C040",
+    "datasetId": "50a3dad1-f1e4-413d-9519-356f1089c53f",
+    "filename": "nursing-in-canada-2015-2024-data-tables-en.xlsx",
+    "originalFileId": "e397fa11-b96a-454e-b640-0be14dbdc269",
+    "sha256": "a734d082d9ad06235b1dc000aa791054eec1ed7919a96eb01be197a3b01d1386",
+    "sourceRelativePath": "Data Research/Data/raw/cihi/nursing-in-canada-2015-2024-data-tables-en.xlsx",
+    "worksheets": {
+      "Table 11": {
+        "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__34",
+        "gridRows": 349,
+        "part": "xl/worksheets/sheet13.xml",
+        "measure": "Direct-care nurse count"
+      },
+      "Table 12": {
+        "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__35",
+        "gridRows": 346,
+        "part": "xl/worksheets/sheet14.xml",
+        "measure": "Direct-care nurses per 10,000 population"
+      }
+    }
+  },
+  "publisherUrl": "https://www.cihi.ca/en/the-state-of-the-health-workforce-in-canada-2024/go-in-depth-2024-health-workforce-data",
+  "methodologyUrl": "https://www.cihi.ca/sites/default/files/document/nursing-in-canada-2024-meth-notes-en.pdf",
+  "sourceTables": [
+    {
+      "worksheet": "Table 11",
+      "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__34",
+      "gridRows": 349,
+      "part": "xl/worksheets/sheet13.xml",
+      "measure": "Direct-care nurse count",
+      "title": "Table 11  Regulated nurses employed in direct care, by health region and type of professional, 2015 to 2024",
+      "headerCells": "A2:M2",
+      "headers": [
+        "Type of professional",
+        "Province/territory",
+        "Health region",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+      ],
+      "sourceStatements": [
+        "Statistics Canada. Postal CodeOM Conversion File (PCCF). 2022.",
+        "Statistics Canada. Estimates of population (2021 Census and administrative data), by age group and sex for July 1st, Canada, provinces, territories, health regions (2023 boundaries).",
+        "Health Workforce Database, Canadian Institute for Health Information."
+      ]
+    },
+    {
+      "worksheet": "Table 12",
+      "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__35",
+      "gridRows": 346,
+      "part": "xl/worksheets/sheet14.xml",
+      "measure": "Direct-care nurses per 10,000 population",
+      "title": "Table 12  Regulated nurses employed in direct care per 10,000 population, by health region and type of professional, 2015 to 2024",
+      "headerCells": "A2:M2",
+      "headers": [
+        "Type of professional",
+        "Province/territory",
+        "Health region",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024"
+      ],
+      "sourceStatements": [
+        "Statistics Canada. Postal CodeOM Conversion File (PCCF). 2022.",
+        "Statistics Canada. Estimates of population (2021 Census and administrative data), by age group and sex for July 1st, Canada, provinces, territories, health regions (2023 boundaries).",
+        "Health Workforce Database, Canadian Institute for Health Information."
+      ]
+    }
+  ],
+  "selection": {
+    "province": "British Columbia",
+    "regions": [
+      "Northwest HSDA",
+      "Northern Interior HSDA",
+      "Northeast HSDA"
+    ],
+    "nursingTypes": [
+      "Nurse practitioners",
+      "Registered nurses",
+      "Registered psychiatric nurses",
+      "Licensed practical nurses"
+    ],
+    "years": [
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+    ]
+  },
+  "crosswalk": [
+    {
+      "sourceProvince": "British Columbia",
+      "sourceRegionName": "Northwest HSDA",
+      "bcHsdaCode": "51",
+      "boundaryLabel": "Northwest"
+    },
+    {
+      "sourceProvince": "British Columbia",
+      "sourceRegionName": "Northern Interior HSDA",
+      "bcHsdaCode": "52",
+      "boundaryLabel": "Northern Interior"
+    },
+    {
+      "sourceProvince": "British Columbia",
+      "sourceRegionName": "Northeast HSDA",
+      "bcHsdaCode": "53",
+      "boundaryLabel": "Northeast"
+    }
+  ],
+  "crosswalkMethod": "Explicit three-row source-name identity lookup verified against the Ministry of Health HSDA index. No fuzzy matching, generic prefix inference or geographic allocation.",
+  "joinKeys": [
+    "province",
+    "region_name",
+    "nursing_type",
+    "year"
+  ],
+  "uniqueness": "hsda_code + nursing_type + year",
+  "rows": 120,
+  "validation": {
+    "countKeys": 120,
+    "rateKeys": 120,
+    "exactJoinedKeys": 120,
+    "unmatchedKeys": 0,
+    "duplicateKeys": 0,
+    "boundaryMatches": 120,
+    "unreportedCountValues": 3,
+    "unreportedRateValues": 3,
+    "sourceUnreportedMarker": "—",
+    "unreportedMeaning": "Not applicable, nonexistent or unreported (source marker)",
+    "reportedNortheastNp2018ZeroPreserved": true,
+    "np2024Counts": {
+      "51": 14,
+      "52": 28,
+      "53": 7
+    }
+  },
+  "methods": [
+    "Original cached cell literals from the selected workbook sheets only; no formulas are recalculated.",
+    "Numeric counts and publisher rates parsed directly; exact source literals, source cell coordinates and reporting statuses retained.",
+    "Counts/rates joined by explicit keys rather than worksheet row positions; no missing-cell imputation or rates aggregation.",
+    "Only public HSDA/type/year aggregates are released. Raw source bytes and authorized request headers remain outside the public release."
+  ],
+  "limitations": [
+    "One observation is an HSDA, nursing type and year. Table 11 counts and Table 12 publisher rates join by exact province, region label, nursing type and year; their worksheet row numbers differ. Select one year and nursing type to map. All-type groups remain ambiguous rather than summed.",
+    "Direct care means services provided directly to clients. These regional counts exclude nursing administration, education and research. They are not full-time equivalents, vacancies, research staffing or a measure of appointment access.",
+    "Publisher rates per 10,000 population are copied from Table 12. They are not recalculated using Atlas population, 2025 projections or rounded source counts. Rates are not summed or averaged across regions or professions.",
+    "The source em-dash means not applicable, nonexistent or unreported because of quality issues; it does not specify which. All three 2019 psychiatric-nurse records retain null counts/rates and the exact raw marker. The Northeast NP count/rate in 2018 is a genuine reported zero.",
+    "The workbook references PCCF 2022 and Statistics Canada July 1 population estimates using 2023 health-region boundaries. Atlas polygons have an unestablished vintage and provide context only; no boundary harmonization or individual postal-code reassignment is performed.",
+    "CIHI assigns regions using primary-worksite postal codes, with residence postal codes when worksite data is absent. The enhanced regional mapping introduced in 2021 applies to the reported 2015–2024 series. BC regulatory and reporting changes require care with historical comparisons, especially 2018–2019.",
+    "The source is CIHI Nursing in Canada, 2024, Tables 11 and 12. No individual registrations, identities, contacts or participant records are included. Source collection and current service availability are different questions."
+  ],
+  "rightsNote": "© Canadian Institute for Health Information. Original publisher terms and attribution apply; this extract does not imply CIHI endorsement. The source catalogue's sharing classification is not blanket permission for unrelated individual-level content."
+}

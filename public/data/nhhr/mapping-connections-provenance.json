@@ -1,0 +1,85 @@
+{
+  "reviewedAt": "2026-10-12",
+  "sources": [
+    {
+      "name": "HR_059b11a_e.zip",
+      "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/82-402-x/2015002/data-donnees/boundary-limites/arcinfo/HR_059b11a_e.zip",
+      "sha256": "96a9633d00b467399190a38c95e0b6c601fdf4c90734d5f0648580655f93fc43",
+      "bytes": 392037
+    },
+    {
+      "name": "mcmaster-osm-way.json",
+      "sourceUrl": "https://api.openstreetmap.org/api/0.6/way/23122301/full.json",
+      "sha256": "813986a230d82b98511309b5921fc4eee60d192931315f5dff4db0cd86391aaf",
+      "bytes": 33063
+    },
+    {
+      "name": "mcmaster-nominatim.json",
+      "sourceUrl": "https://nominatim.openstreetmap.org/search?q=McMaster+University+Hamilton&format=jsonv2&limit=3&polygon_geojson=1",
+      "sha256": "003e9c742941ab54bc5a70d5a9282bace0be19851fe0c59daac5962d08f9a496",
+      "bytes": 5421
+    },
+    {
+      "name": "health-regions-2015-download-page.html",
+      "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/82-402-x/2015002/hrbf-flrs-eng.htm",
+      "sha256": "11e2c95c91ff2eac9d1f7873c60ee89b71e7ccbd20d1a0f01a36d31ad5efdc88",
+      "bytes": 28196
+    },
+    {
+      "name": "lfs-geography-2025.html",
+      "sourceUrl": "https://www150.statcan.gc.ca/n1/pub/71-543-g/2025001/app_ann_a-eng.htm",
+      "sha256": "f87d2405eaf0b22df2d897ace0bb049f542f1a04a0d0728cf6f5e7ef03bf0535",
+      "bytes": 20626
+    },
+    {
+      "name": "mcmaster-official-campus.html",
+      "sourceUrl": "https://nuclear.mcmaster.ca/nuclear-resonance/getting-to-campus/",
+      "sha256": "90945c61d8af37eb767cf811d969c9c06c0dce24b211c6500d5ae6283e150293",
+      "bytes": 60874
+    }
+  ],
+  "historicalCancer": {
+    "boundaryVintage": "December 2015",
+    "archiveMember": "HR_059a11a_e_Sept2015.shp",
+    "originalCRS": "EPSG:3347",
+    "outputCRS": "EPSG:4326",
+    "transformation": "Reprojected official polygons; no independent simplification or current-geometry substitution.",
+    "sourceDguidToHrUid": {
+      "2015A00075951": "5951",
+      "2015A00075952": "5952",
+      "2015A00075953": "5953"
+    },
+    "provinceAggregateMapped": false,
+    "licenceUrl": "https://www.statcan.gc.ca/en/reference/licence"
+  },
+  "combinedLabourRegion": {
+    "publisherDefinitionUrl": "https://www150.statcan.gc.ca/n1/pub/71-543-g/2025001/app_ann_a-eng.htm",
+    "pgMapsSourcePath": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_economic_regions_2021.geojson.gz",
+    "pgMapsSourceSha256": "feb193fbc3d06e421a331f80eccde1dc0a2ed5e67e4184c6b947ab88bd4b709f",
+    "nativeAssetSha256": "cd09f16109a8d9f25b26da5e93d05f747107fd60746af4cf088eadb0d51eb094",
+    "nativeCodes": [
+      "5960",
+      "5970"
+    ],
+    "displayKey": "lfs-north-coast-nechako-2021",
+    "sourceDguidRemainsBlank": true,
+    "method": "Exact topological union of adjacent PGMaps 2021 polygons. One source value, no disaggregation or independent simplification.",
+    "reportingFeatureCount": 7,
+    "componentIntersectionArea": 0,
+    "unionAreaDegreesSquared": 53.734247973866005,
+    "componentAreaSumDegreesSquared": 53.73424797386599,
+    "limitations": "Territorial reporting context; LFS target-population exclusions remain. Separate economic-region measures keep the eight native polygons."
+  },
+  "mcmaster": {
+    "comparator": "McMaster / Hamilton",
+    "officialLocationUrl": "https://nuclear.mcmaster.ca/nuclear-resonance/getting-to-campus/",
+    "osmObjectUrl": "https://www.openstreetmap.org/way/23122301",
+    "osmVersion": 30,
+    "coordinates": [
+      -79.91783,
+      43.26394
+    ],
+    "pointWithinCampusPolygon": true,
+    "role": "Representative institutional point; not a project, participant or funding allocation."
+  }
+}

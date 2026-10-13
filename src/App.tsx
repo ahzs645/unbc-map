@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import {
   ArrowDownToLine,
   ArrowRight,
@@ -301,6 +301,8 @@ function CampusMap({
 
 export default function App() {
   const [selected, setSelected] = useState<Place | null>(initialPlace);
+  const selectedRef = useRef(selected);
+  selectedRef.current = selected;
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<Category | "all">("all");
   const [basemap, setBasemap] = useState<Basemap>("campus");
@@ -343,6 +345,7 @@ export default function App() {
     [category, query],
   );
   function select(place: Place | null) {
+    selectedRef.current = place;
     setSelected(place);
     setFocusKey((key) => key + 1);
     history.replaceState(
@@ -643,7 +646,11 @@ export default function App() {
                       cardKey={selected.id}
                       height={410}
                       initialVisibleHeight={310}
-                      onClose={() => select(null)}
+                      onClose={() => {
+                        // An outgoing card's animation can finish after a new
+                        // search result opens. Close only that outgoing place.
+                        if (selectedRef.current?.id === selected.id) select(null);
+                      }}
                     >
                       <Detail place={selected} onClose={() => select(null)} />
                     </MobileFeatureCard>

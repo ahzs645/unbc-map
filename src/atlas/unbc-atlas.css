@@ -1,0 +1,107 @@
+/* The Atlas is a page within the existing UNBC site, using its brand styles. */
+.unbc-atlas-shell { background: #fff; min-height: 100vh; }
+.unbc-atlas-shell .atlas-app {
+  --atlas-green: #035642;
+  --atlas-dark: #035642;
+  --atlas-ink: #29292a;
+  --atlas-muted: #525154;
+  --atlas-paper: #fff;
+  --atlas-line: #eae7e5;
+  --atlas-sand: #f4f4f4;
+  font-family: "bcsans-regular", "BC Sans", "Helvetica Neue", Arial, sans-serif;
+}
+.atlas-app h1, .atlas-app h2, .atlas-app h3,
+.atlas-app .atlas-story-card h3, .atlas-app .atlas-source-register h3,
+.atlas-app .atlas-explore-banner h3 {
+  font-family: "helvetica-black", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.atlas-app h1 { font-size: 33px; line-height: 1.15; }
+.atlas-app h2 { font-size: 26px; line-height: 1.2; }
+.atlas-app h3, .atlas-app .atlas-story-card h3 { font-size: 22px; line-height: 1.25; }
+.atlas-section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px max(24px, calc((100% - 1140px) / 2));
+  background: #f4f4f4;
+  border-bottom: 1px solid #eae7e5;
+}
+.atlas-section-nav button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #dedfd6;
+  background: #fff;
+  color: #035642;
+  border-radius: 2px;
+  font-size: 13px;
+}
+.atlas-section-nav button[aria-current="page"] { background: #035642; color: #fff; border-color: #035642; }
+.atlas-page-heading { max-width: 1188px; padding: 32px 24px 24px; margin: auto; border-bottom: 1px solid #eae7e5; }
+.atlas-page-heading h1 { margin: 10px 0 12px; }
+.atlas-page-heading > p:last-child { color: #525154; font-size: 14px; }
+.atlas-app .atlas-eyebrow { color: #977000; font-size: 11px; }
+.atlas-app .atlas-stories-section, .atlas-app .atlas-story-detail,
+.atlas-app .atlas-about { max-width: 1188px; padding: 28px 24px 40px; }
+.atlas-app .atlas-explorer { max-width: 1530px; padding: 24px; }
+.atlas-app .atlas-explorer-heading { margin-bottom: 24px; }
+.atlas-app .atlas-story-art { display: none; }
+.atlas-app .atlas-story-card { background: #fff; border-color: #eae7e5; }
+.atlas-app .atlas-story-card:hover { transform: none; border-color: #035642; }
+.atlas-app .atlas-story-card-body { padding: 22px; }
+.atlas-app .atlas-story-card p { font-size: 14px; }
+.atlas-app .atlas-explore-banner { background: #f4f4f4; border-color: #eae7e5; margin-top: 28px; }
+.atlas-app .atlas-explore-banner h3 { font-size: 26px; }
+.atlas-app .atlas-primary { background: #035642; border-color: #035642; border-radius: 2px; font-size: 13px; }
+.atlas-app .atlas-search,
+.atlas-app .atlas-filter-field select, .atlas-app .atlas-sort select,
+.atlas-app .atlas-map-toolbar select, .atlas-app .atlas-map-toolbar button,
+.atlas-app .atlas-export-actions button, .atlas-app .atlas-display-tabs button,
+.atlas-app .atlas-chart-mode button { background: #fff; border-color: #cdcfc4; border-radius: 2px; }
+.atlas-app .atlas-explorer-layout { grid-template-columns: 350px minmax(0, 1fr); gap: 0; border: 1px solid #eae7e5; }
+.atlas-app .atlas-dataset-sidebar { padding: 24px 20px; background: #f4f4f4; border-right: 1px solid #eae7e5; }
+.atlas-app .atlas-dataset-list { background: #fff; }
+.atlas-app .atlas-dataset-list > button { background: #fff; border-color: #eae7e5; }
+.atlas-app .atlas-dataset-list > button.is-active { background: #edf3ef; border-left-color: #035642; }
+.atlas-app .atlas-explorer-workspace { border: 0; background: #fff; padding: 24px; }
+.atlas-app .atlas-story-evidence, .atlas-app .atlas-source-notes,
+.atlas-app .atlas-source-notes summary { background: #f4f4f4; border-color: #eae7e5; }
+.atlas-app .atlas-source-notes > div { background: #fff; }
+.atlas-app .atlas-inventory-summary, .atlas-app .atlas-scope-note { background: #f4f4f4; border-color: #eae7e5; }
+.atlas-app .atlas-inventory-summary p { font-size: 14px; }
+.atlas-app .atlas-data-table th { background: #f4f4f4; }
+.atlas-app .atlas-data-table td { background: #fff; }
+.atlas-app .atlas-map-detail { border-radius: 2px !important; }
+.atlas-app .atlas-bar-fill { background: #035642; }
+.atlas-app .atlas-bar-row:nth-child(3n+2) .atlas-bar-fill { background: #006161; }
+.atlas-app .atlas-bar-row:nth-child(3n+3) .atlas-bar-fill { background: #568174; }
+.atlas-app .atlas-bar-track { background: #eae7e5; }
+.atlas-app .atlas-chart-selection { background: #edf3ef; border-color: #035642; }
+@media (min-width: 1590px) {
+  .atlas-section-nav { padding-left: max(24px, calc((100% - 1530px) / 2)); }
+}
+@media (max-width: 1000px) {
+  .atlas-app .atlas-explorer-layout { grid-template-columns: 280px minmax(0, 1fr); }
+}
+@media (max-width: 800px) {
+  .atlas-app .atlas-explorer-layout { grid-template-columns: 1fr; }
+  .atlas-app .atlas-dataset-sidebar { border-right: 0; border-bottom: 1px solid #eae7e5; }
+}
+@media (max-width: 550px) {
+  .atlas-section-nav { padding: 12px 16px; gap: 6px; }
+  .atlas-section-nav button { font-size: 12px; padding: 8px 10px; }
+  .atlas-page-heading, .atlas-app .atlas-stories-section, .atlas-app .atlas-story-detail,
+  .atlas-app .atlas-about, .atlas-app .atlas-explorer { padding-left: 16px; padding-right: 16px; }
+  .atlas-app .atlas-explorer-workspace { padding: 20px 14px; }
+  .atlas-app .atlas-explorer-heading h1 { font-size: 33px; }
+}
+
+/* Connection register uses the existing source/table presentation. */
+.atlas-connections { margin: 28px 0; }
+.atlas-connections > p { font-size: 13px; line-height: 1.7; margin: 14px 0; }
+.atlas-connections .atlas-data-table { border: 1px solid #eae7e5; }
+.atlas-connections th, .atlas-connections td { min-width: 180px; max-width: 420px; white-space: normal; line-height: 1.6; vertical-align: top; }
+.atlas-connections .atlas-text-button { text-align: left; white-space: normal; }

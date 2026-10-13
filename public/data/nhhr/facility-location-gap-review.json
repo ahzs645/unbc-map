@@ -1,0 +1,472 @@
+{
+  "reviewDate": "2026-10-12",
+  "scope": "Supplemental location verification for existing published Atlas sources; no new scientific observations, personal contacts or clinical availability measures.",
+  "sources": [
+    {
+      "filename": "gateway.html",
+      "url": "https://www.northernhealth.ca/find-a-facility/long-term-care/gateway-lodge-long-term-care",
+      "sha256": "e07c3e323166c830e7f31975533f2515272dae1adafd0bef6d16b122108517e2",
+      "bytes": 127637,
+      "kind": "operator source"
+    },
+    {
+      "filename": "rotary.html",
+      "url": "https://www.northernhealth.ca/find-a-facility/long-term-care/rotary-manor",
+      "sha256": "2040a62008b9e3325fdebb42827b601bf28e520d0730095601a92f0aa78aad7d",
+      "bytes": 126275,
+      "kind": "operator source"
+    },
+    {
+      "filename": "houston.html",
+      "url": "https://www.northernhealth.ca/find-a-facility/health-units/houston-health-centre",
+      "sha256": "736724b9b00135f5e60b32692056fbe98f569b7bfc501c4c301cfda4f9a5cb23",
+      "bytes": 118023,
+      "kind": "operator source"
+    },
+    {
+      "filename": "tumbler.html",
+      "url": "https://www.northernhealth.ca/find-a-facility/health-units/tumbler-ridge-health-centre",
+      "sha256": "038e8ff9bc131de4b689b2def7ba94ca14d154452f98cc7b616310050e4b6e8a",
+      "bytes": 120671,
+      "kind": "operator source"
+    },
+    {
+      "filename": "stikine.html",
+      "url": "https://www.northernhealth.ca/find-a-facility/health-units/stikine-health-centre-health-unit",
+      "sha256": "39eb1e768595c247ddeb36ae43ff7d4272ffff0c0387cba2cb4811cea0b9ad69",
+      "bytes": 118653,
+      "kind": "operator source"
+    },
+    {
+      "filename": "nh-2015-long-term-care.pdf",
+      "url": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/long-term-care-by-community.pdf",
+      "sha256": "641acd48897b09f55c4e9a37b12fc885708d9a6b671bfc0c1d1aefc668d41611",
+      "bytes": 113220,
+      "kind": "operator source"
+    },
+    {
+      "filename": "nh-2022-health-offices.pdf",
+      "url": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/health-offices-by-community.pdf",
+      "sha256": "ad372494e5b916efe6ae6f3bc1a91f167a9539f6d5931af3782242d9ffe383e4",
+      "bytes": 102610,
+      "kind": "operator source"
+    },
+    {
+      "filename": "nh-historical-addresses.pdf",
+      "url": "https://www.northernhealth.ca/sites/northern_health/files/services/digital-health/documents/nh-healthelife-health-info-by-city.pdf",
+      "sha256": "7393e515e8153319e686f49ef720c54a8e5c5ee95c120abf399fc2a1b6431aec",
+      "bytes": 162806,
+      "kind": "operator source"
+    },
+    {
+      "filename": "gateway-bcgeocoder.json",
+      "url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=1488+20th+Avenue+Prince+George+BC&maxResults=1",
+      "sha256": "24e414ac748fcc1f39adf05df61551e7455a9d5bc691b0a9357f18f444c14d6a",
+      "bytes": 1675,
+      "kind": "official geocoder receipt"
+    },
+    {
+      "filename": "houston-bcgeocoder.json",
+      "url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=3202+14th+Street+Houston+BC&maxResults=1",
+      "sha256": "f6a69f70a10612d8f0fda8d64193fc87da51ecbcff9bc83d6cd32ac22e9f186d",
+      "bytes": 1747,
+      "kind": "official geocoder receipt"
+    },
+    {
+      "filename": "rotary-bcgeocoder.json",
+      "url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=1121+90th+Avenue+Dawson+Creek+BC&maxResults=1",
+      "sha256": "de249086bdda9e9de114954fa19c1ada8150010e24798bd620a6f61cd73a700d",
+      "bytes": 1663,
+      "kind": "official geocoder receipt"
+    },
+    {
+      "filename": "tumbler-bcgeocoder.json",
+      "url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=220+Front+Street+Tumbler+Ridge+BC&maxResults=1",
+      "sha256": "c0e57514693713ff55a3e21fa201864450d1b19fa5867e3b06c78b8a3d07b0aa",
+      "bytes": 1691,
+      "kind": "official geocoder receipt"
+    },
+    {
+      "filename": "stikine-historical-bcgeocoder.json",
+      "url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=7171+Highway+37+Dease+Lake+BC&maxResults=1",
+      "sha256": "a76b8ff4802097e69756111f52f50c1ed6040e180fa66255645e43013282e2e1",
+      "bytes": 1801,
+      "kind": "official geocoder receipt"
+    },
+    {
+      "filename": "mills-historical-bcgeocoder.json",
+      "url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=4720+Haugland+Avenue+Terrace+BC&maxResults=1",
+      "sha256": "b6646dfca65c90666b4ed3b03c8591d670482e427545e289de36630739e0d3ae",
+      "bytes": 1675,
+      "kind": "official geocoder receipt"
+    }
+  ],
+  "verifiedCapitalLocations": [
+    {
+      "code": "capital-context-gateway",
+      "originalLabels": [
+        "Gateway Lodge"
+      ],
+      "name": "Gateway Lodge",
+      "site": "1488 20th Avenue",
+      "city": "Prince George",
+      "province": "BC",
+      "coordinates": [
+        -122.7534096,
+        53.905646
+      ],
+      "sourceUrl": "https://www.northernhealth.ca/find-a-facility/long-term-care/gateway-lodge-long-term-care",
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=1488+20th+Avenue+Prince+George+BC&maxResults=1",
+      "locationNote": "July 2015 operator directory and current operator page agree on the long-term-care address. The adjacent assisted-living address 1462 is not substituted. A named OSM campus has a conflicting street-address tag, so its centroid is not selected. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+      "locationPrecision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+      "referenceKind": "Reporting-site address parcel",
+      "sourcePeriod": "Original report period(s); operator address corroboration noted",
+      "geocoderReceipt": "gateway-bcgeocoder.json",
+      "matchPrecision": "CIVIC_NUMBER",
+      "score": 100,
+      "siteId": "a9ce04e6-3bb7-4864-8397-7adf8be7e512",
+      "historicalSourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/long-term-care-by-community.pdf#page=2",
+      "coordinateBaseDataDate": "2026-07-07T20:10:43Z",
+      "coordinateQueryDate": "2026-10-12T22:14:06",
+      "coordinateCopyrightNotice": "Copyright © 2024 Province of British Columbia",
+      "coordinateLicenseUrl": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+      "locationPositionalAccuracy": "high",
+      "fullMatchedAddress": "1488 20th Ave, Prince George, BC",
+      "locationDescriptor": "parcelPoint"
+    },
+    {
+      "code": "capital-context-houston",
+      "originalLabels": [
+        "Houston Health Centre"
+      ],
+      "name": "Houston Health Centre",
+      "site": "3202 14th Street West",
+      "city": "Houston",
+      "province": "BC",
+      "coordinates": [
+        -126.6524369,
+        54.3961409
+      ],
+      "sourceUrl": "https://www.northernhealth.ca/find-a-facility/health-units/houston-health-centre",
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=3202+14th+Street+Houston+BC&maxResults=1",
+      "locationNote": "January 2022 operator directory and current operator page agree on 3202 14th Street. The BC geocoder resolves the official West street-name alias with CIVIC_NUMBER precision and score 99. Street-only Nominatim candidates were rejected. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+      "locationPrecision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+      "referenceKind": "Reporting-site address parcel",
+      "sourcePeriod": "Original report period(s); operator address corroboration noted",
+      "geocoderReceipt": "houston-bcgeocoder.json",
+      "matchPrecision": "CIVIC_NUMBER",
+      "score": 99,
+      "siteId": "ad07ece4-69bf-4989-88c4-0b6ef13f168c",
+      "historicalSourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/health-offices-by-community.pdf#page=2",
+      "coordinateBaseDataDate": "2026-07-07T20:10:43Z",
+      "coordinateQueryDate": "2026-10-12T22:14:08",
+      "coordinateCopyrightNotice": "Copyright © 2024 Province of British Columbia",
+      "coordinateLicenseUrl": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+      "locationPositionalAccuracy": "high",
+      "fullMatchedAddress": "3202 14th St W, Houston, BC",
+      "locationDescriptor": "parcelPoint"
+    },
+    {
+      "code": "capital-context-rotary",
+      "originalLabels": [
+        "Rotary Manor"
+      ],
+      "name": "Rotary Manor",
+      "site": "1121 90th Avenue",
+      "city": "Dawson Creek",
+      "province": "BC",
+      "coordinates": [
+        -120.2357358,
+        55.77296
+      ],
+      "sourceUrl": "https://www.northernhealth.ca/find-a-facility/long-term-care/rotary-manor",
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=1121+90th+Avenue+Dawson+Creek+BC&maxResults=1",
+      "locationNote": "July 2015 operator directory and current operator page agree on 1121 90th Avenue. This parcel reference is separate from Northview at 1125 and does not assert a particular wing or equipment location. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+      "locationPrecision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+      "referenceKind": "Reporting-site address parcel",
+      "sourcePeriod": "Original report period(s); operator address corroboration noted",
+      "geocoderReceipt": "rotary-bcgeocoder.json",
+      "matchPrecision": "CIVIC_NUMBER",
+      "score": 100,
+      "siteId": "8eeb29b3-dd81-4d9c-9490-4a6208300989",
+      "historicalSourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/long-term-care-by-community.pdf#page=1",
+      "coordinateBaseDataDate": "2026-07-07T20:10:43Z",
+      "coordinateQueryDate": "2026-10-12T22:14:09",
+      "coordinateCopyrightNotice": "Copyright © 2024 Province of British Columbia",
+      "coordinateLicenseUrl": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+      "locationPositionalAccuracy": "high",
+      "fullMatchedAddress": "1121 90 Ave, Dawson Creek, BC",
+      "locationDescriptor": "parcelPoint"
+    },
+    {
+      "code": "capital-context-tumbler",
+      "originalLabels": [
+        "Tumbler Ridge Health Centre"
+      ],
+      "name": "Tumbler Ridge Health Centre",
+      "site": "220 Front Street",
+      "city": "Tumbler Ridge",
+      "province": "BC",
+      "coordinates": [
+        -121.0001636,
+        55.1244002
+      ],
+      "sourceUrl": "https://www.northernhealth.ca/find-a-facility/health-units/tumbler-ridge-health-centre",
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=220+Front+Street+Tumbler+Ridge+BC&maxResults=1",
+      "locationNote": "The operator historical health-information directory (PDF metadata created December 2021) and current health-centre page identify 220 Front Street. OSM calls a building at this shared address Primary Care Clinic; no service-to-building allocation is inferred. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+      "locationPrecision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+      "referenceKind": "Reporting-site address parcel",
+      "sourcePeriod": "Original report period(s); operator address corroboration noted",
+      "geocoderReceipt": "tumbler-bcgeocoder.json",
+      "matchPrecision": "CIVIC_NUMBER",
+      "score": 100,
+      "siteId": "88b64efc-7999-42f5-b1f4-e1ab0387e002",
+      "historicalSourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/digital-health/documents/nh-healthelife-health-info-by-city.pdf#page=4",
+      "coordinateBaseDataDate": "2026-07-07T20:10:43Z",
+      "coordinateQueryDate": "2026-10-12T22:14:11",
+      "coordinateCopyrightNotice": "Copyright © 2024 Province of British Columbia",
+      "coordinateLicenseUrl": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+      "locationPositionalAccuracy": "high",
+      "fullMatchedAddress": "220 Front St, Tumbler Ridge, BC",
+      "locationDescriptor": "parcelPoint"
+    },
+    {
+      "code": "capital-context-stikine-historical",
+      "originalLabels": [
+        "Stikine Regional Health Centre"
+      ],
+      "name": "Stikine Regional Health Centre",
+      "site": "7171 Highway 37",
+      "city": "Dease Lake",
+      "province": "BC",
+      "coordinates": [
+        -129.9920508,
+        58.4417797
+      ],
+      "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/health-offices-by-community.pdf",
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=7171+Highway+37+Dease+Lake+BC&maxResults=1",
+      "locationNote": "The January 2022 operator directory identifies Stikine Health Centre at 7171 Highway 37. The BC geocoder resolves that highway alias to 7171 Stikine Health Ctr, with CIVIC_NUMBER precision and score 100. The current operator page instead says 48875 Highway 37; its BLOCK-only result is rejected. The point retains the original-period address parcel and does not claim that addresses are interchangeable. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+      "locationPrecision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+      "referenceKind": "Historical address parcel",
+      "sourcePeriod": "Original report period(s); operator address corroboration noted",
+      "geocoderReceipt": "stikine-historical-bcgeocoder.json",
+      "matchPrecision": "CIVIC_NUMBER",
+      "score": 100,
+      "siteId": "e4ded669-7346-41ed-84ca-00f1eac03178",
+      "historicalSourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/health-offices-by-community.pdf#page=1",
+      "coordinateBaseDataDate": "2026-07-07T20:10:43Z",
+      "coordinateQueryDate": "2026-10-12T22:15:40",
+      "coordinateCopyrightNotice": "Copyright © 2024 Province of British Columbia",
+      "coordinateLicenseUrl": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+      "locationPositionalAccuracy": "high",
+      "fullMatchedAddress": "7171 Stikine Health Ctr, Dease Lake, BC",
+      "locationDescriptor": "parcelPoint"
+    },
+    {
+      "code": "capital-context-mills-historical",
+      "originalLabels": [
+        "Mills Memorial Hospital"
+      ],
+      "name": "Mills Memorial Hospital — historical address parcel",
+      "site": "4720 Haugland Avenue",
+      "city": "Terrace",
+      "province": "BC",
+      "coordinates": [
+        -128.5961926,
+        54.5113996
+      ],
+      "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/digital-health/documents/nh-healthelife-health-info-by-city.pdf",
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=4720+Haugland+Avenue+Terrace+BC&maxResults=1",
+      "locationNote": "The operator health-information directory, whose PDF metadata was created December 2021, identifies Mills Memorial Hospital at 4720 Haugland Avenue. This is an original-address parcel reference for the 2020–2022 equipment rows only. It is not the demolished hospital building centroid, the present Ksyen building, an equipment position or the replacement-project site. The parcel point is a current geocoder representation of the historical address, not historical parcel geometry. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+      "locationPrecision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+      "referenceKind": "Historical address parcel",
+      "sourcePeriod": "2020-2022 only",
+      "geocoderReceipt": "mills-historical-bcgeocoder.json",
+      "matchPrecision": "CIVIC_NUMBER",
+      "score": 100,
+      "siteId": "ba800a90-2264-4b0e-80d1-098956bcaa81",
+      "historicalSourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/digital-health/documents/nh-healthelife-health-info-by-city.pdf#page=4",
+      "coordinateBaseDataDate": "2026-07-07T20:10:43Z",
+      "coordinateQueryDate": "2026-10-12T22:15:40",
+      "coordinateCopyrightNotice": "Copyright © 2024 Province of British Columbia",
+      "coordinateLicenseUrl": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+      "locationPositionalAccuracy": "high",
+      "fullMatchedAddress": "4720 Haugland Ave, Terrace, BC",
+      "locationDescriptor": "parcelPoint"
+    }
+  ],
+  "remaining": [
+    {
+      "id": "directory-dr-al-hogg",
+      "sourceKey": "17644873",
+      "label": "Dr. Al Hogg Pavilion",
+      "sourcePeriod": "2026-04-29",
+      "decision": "Unlocated",
+      "reason": "Shared 15521 Russell Avenue campus address does not verify the named North Bluff Road building. Returned OSM way 673740191 is about 180 metres from the source directory point. Municipal search metadata describes Al Hogg Pavilion on North Bluff Road, but its full plan and operator map images could not be retrieved (HTTP 403); no precise building join is accepted. The shared campus-address coordinate is not substituted for the named building.",
+      "evidenceUrls": [
+        "https://www.fraserhealth.ca/Service-Directory/Service-at-Location/1/5/dr-al-hogg-pavilion",
+        "https://www.openstreetmap.org/way/673740191",
+        "https://pub-whiterockcity.escribemeetings.com/filestream.ashx?DocumentId=11623"
+      ],
+      "viewId": "healthlink-hospital-additions",
+      "datasetId": "91de0066-9343-4d0f-9138-03766520ddc0",
+      "tableName": "nhhr_data_c049_6e78ae316dce_zip_data_c049_bc_hos",
+      "asset": "facility-followup.json"
+    },
+    {
+      "id": "capital-dawson-replacement",
+      "sourceKey": "nh-capital-2020-2022-p50-t1-r1",
+      "label": "Dawson Creek and District Hospital: Hospital Replacement",
+      "sourcePeriod": "2020-2022",
+      "decision": "Unlocated project target",
+      "reason": "Operator documents identify a greenfield replacement beside Northern Lights College, distinct from the operating 11100 13th Street hospital. Neither an old hospital point nor a BLOCK-only guessed address is adopted; an exact project-site geometry or published coordinate is still needed.",
+      "evidenceUrls": [
+        "https://letstalk.northernhealth.ca/dcdh-replacement",
+        "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/strategic-service-plans/documents/service-plan-report-2020-21.pdf"
+      ],
+      "viewId": "northern-capital-projects",
+      "datasetId": "7a0b8ced-71ed-4e8a-aea2-37030adec6a2",
+      "tableName": "nhhr_data_c012_54329385f37e_zip_data_c012__8",
+      "asset": "facility-followup.json"
+    },
+    {
+      "id": "capital-mills-replacement",
+      "sourceKey": "nh-capital-2020-2022-p50-t1-r7",
+      "label": "Mills Memorial Hospital: Hospital Replacement",
+      "sourcePeriod": "2020-2022",
+      "decision": "Unlocated project target",
+      "reason": "The original replacement project includes the hospital, Seven Sisters and site demolition/redevelopment. A present Ksyen hospital point or former-address parcel cannot represent the complete planned construction target. Exact bounded project-site geometry is still needed.",
+      "evidenceUrls": [
+        "https://letstalk.northernhealth.ca/mmh/news_feed/sneak-peak-at-draft-site-plans",
+        "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/strategic-service-plans/documents/service-plan-report-2020-21.pdf"
+      ],
+      "viewId": "northern-capital-projects",
+      "datasetId": "7a0b8ced-71ed-4e8a-aea2-37030adec6a2",
+      "tableName": "nhhr_data_c012_54329385f37e_zip_data_c012__8",
+      "asset": "facility-followup.json"
+    },
+    {
+      "id": "capital-stuart-replacement",
+      "sourceKey": "nh-capital-2020-2022-p50-t1-r15",
+      "label": "Stuart Lake Hospital: Hospital Replacement",
+      "sourcePeriod": "2020-2022",
+      "decision": "Unlocated project target",
+      "reason": "Official project and relocation records distinguish former 600 Stuart Drive East from new 606, and the project includes old-building demolition and site redevelopment. The current named OSM hospital geometry is campus-wide, not a verified historical construction-target footprint. No old/current building substitution is made.",
+      "evidenceUrls": [
+        "https://news.gov.bc.ca/releases/2020PREM0001-000088",
+        "https://www2.gov.bc.ca/assets/gov/health/practitioner-pro/medical-services-plan/diagnostic-facilities/report_to_the_msc_-_20240918_acdf_list_of_approvals.pdf",
+        "https://letstalk.northernhealth.ca/Stuart-Lake-Hospital"
+      ],
+      "viewId": "northern-capital-projects",
+      "datasetId": "7a0b8ced-71ed-4e8a-aea2-37030adec6a2",
+      "tableName": "nhhr_data_c012_54329385f37e_zip_data_c012__8",
+      "asset": "facility-followup.json"
+    },
+    {
+      "id": "capital-quesnel-leasehold",
+      "sourceKey": "nh-capital-2020-2022-p50-t1-r11",
+      "label": "Quesnel Substance Abuse Club: Leasehold Improvement",
+      "sourcePeriod": "2020-2022",
+      "decision": "Unlocated leasehold",
+      "reason": "Original and subsequent operator project tables confirm the project label but no physical leased-site address. An organization or community name is insufficient.",
+      "evidenceUrls": [
+        "https://www.northernhealth.ca/sites/northern_health/files/about-us/leadership/documents/2024-04-15-public-agenda.pdf"
+      ],
+      "viewId": "northern-capital-projects",
+      "datasetId": "7a0b8ced-71ed-4e8a-aea2-37030adec6a2",
+      "tableName": "nhhr_data_c012_54329385f37e_zip_data_c012__8",
+      "asset": "facility-followup.json"
+    },
+    {
+      "id": "hospital-victoria-aggregate",
+      "label": "Greater Victoria Hospitals",
+      "sourcePeriod": "Directory capture 2026-06-15",
+      "decision": "Aggregate; no point",
+      "reason": "The source names a hospital group. Individual constituent allocations are not established.",
+      "viewId": "hospital-facilities",
+      "datasetId": "a2987ed6-8b5d-4548-aab0-10f962545539",
+      "tableName": "nhhr_data_c072_8ecfe860a47c_zip_data_c072__16",
+      "asset": "hospital-facilities.json",
+      "sha256": "a0566a4011d52ddb55f389a87d5064318ee5844a259dc5c9fc477ce839ee169a",
+      "sourceKey": "134"
+    },
+    {
+      "id": "hospital-generic-surgery",
+      "label": "Surgery Centre",
+      "sourcePeriod": "Directory capture 2026-06-15",
+      "decision": "Identity unresolved",
+      "reason": "Generic source label is insufficient to adopt the independently verified Prince George Surgery Centre trial location.",
+      "viewId": "hospital-facilities",
+      "datasetId": "a2987ed6-8b5d-4548-aab0-10f962545539",
+      "tableName": "nhhr_data_c072_8ecfe860a47c_zip_data_c072__16",
+      "asset": "hospital-facilities.json",
+      "sha256": "a0566a4011d52ddb55f389a87d5064318ee5844a259dc5c9fc477ce839ee169a",
+      "sourceKey": "8338"
+    },
+    {
+      "id": "hospital-generic-cancer-agency",
+      "label": "B.C. Cancer Agency",
+      "sourcePeriod": "Directory capture 2026-06-15",
+      "decision": "Organization; no unique point",
+      "reason": "The provincial agency label does not identify one cancer centre and cannot inherit the Prince George trial centre.",
+      "viewId": "hospital-facilities",
+      "datasetId": "a2987ed6-8b5d-4548-aab0-10f962545539",
+      "tableName": "nhhr_data_c072_8ecfe860a47c_zip_data_c072__16",
+      "asset": "hospital-facilities.json",
+      "sha256": "a0566a4011d52ddb55f389a87d5064318ee5844a259dc5c9fc477ce839ee169a",
+      "sourceKey": "8288"
+    },
+    {
+      "id": "trial-regional-first-nations",
+      "label": "13 individual First Nations in north-Central BC near Prince George, BC",
+      "sourcePeriod": "2026-04-29",
+      "decision": "Unnamed regional description",
+      "reason": "No individual First Nation facility identities or consent/governance context are established. The city tag cannot become a point or inferred community allocation.",
+      "viewId": "trial-sites",
+      "datasetId": "d85b189f-9d24-421c-883c-6b759f081900",
+      "tableName": "nhhr_data_c010_9e6f293c5f27_zip_data_c010__4",
+      "asset": "trial-sites.json",
+      "sha256": "145c7874c62dfb28a11e4189c27184292e67b64542996fe8330e18c2930dd04b",
+      "sourceKey": "NCT04105088",
+      "evidenceUrls": [
+        "https://clinicaltrials.gov/study/NCT04105088"
+      ]
+    },
+    {
+      "id": "travel-mackenzie-junction",
+      "label": "Mackenzie Junction",
+      "sourcePeriod": "Historical schedule capture 2026-06-16",
+      "decision": "Pickup location unresolved",
+      "reason": "A road junction is established, but the original schedule lacks a verified boarding-side/pickup point. Current reseller listings use 400 Skeena Drive in town, which conflicts with the original junction grain; that coordinate is not adopted.",
+      "evidenceUrls": [
+        "https://districtofmackenzie.ca/discover-mackenzie/getting-here-maps/",
+        "https://districtoftaylor.com/wp-content/uploads/2023/09/August-2023-Taylor-Times.pdf"
+      ],
+      "viewId": "travel-stop-locations",
+      "datasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "tableName": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_nh_con",
+      "asset": "travel-network.json",
+      "sha256": "a52990eabe7d4ca4d3691cb2d2631ffe3ee8ab1ac39b954d206fa6f4bad3c768"
+    },
+    {
+      "id": "travel-small-river",
+      "label": "Small River (Rest Area)",
+      "sourcePeriod": "Historical schedule capture 2026-06-16",
+      "decision": "Pickup location unresolved",
+      "reason": "The operator schedule establishes the stop name, not a precise rest-area boarding point. No arbitrary locality, unrelated River Jordan result or assumed road-side location is adopted.",
+      "evidenceUrls": [
+        "https://nhconnections.ca/sites/connections/files/documents/bus-schedule-nh-connections.pdf"
+      ],
+      "viewId": "travel-stop-locations",
+      "datasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "tableName": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_nh_con",
+      "asset": "travel-network.json",
+      "sha256": "a52990eabe7d4ca4d3691cb2d2631ffe3ee8ab1ac39b954d206fa6f4bad3c768"
+    }
+  ],
+  "coordinateRules": [
+    "Coordinates are actual returned official BC Address Geocoder parcel points, not invented building centroids.",
+    "Only CIVIC_NUMBER precision with identity-matched operator address is accepted; BLOCK and street/locality-only results are rejected.",
+    "Historical address parcel references describe address context, not historical building or asset geometry. Replacement project targets remain separate."
+  ]
+}

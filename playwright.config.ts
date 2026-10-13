@@ -1,5 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
+const base = process.env.ATLAS_BASE_PATH || "/";
+
 export default defineConfig({
   testDir: "./tests",
   timeout: 30000,
@@ -7,7 +9,7 @@ export default defineConfig({
     launchOptions: {
       args: ["--use-angle=swiftshader", "--enable-unsafe-swiftshader"],
     },
-    baseURL: "http://127.0.0.1:5180/unbc-map/",
+    baseURL: `http://127.0.0.1:5180${base}`,
     trace: "retain-on-failure",
   },
   projects: [
@@ -24,8 +26,8 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npm run preview -- --port 5180 --strictPort --base /unbc-map/",
-    url: "http://127.0.0.1:5180/unbc-map/",
+    command: `npm run preview -- --port 5180 --strictPort --base ${base}`,
+    url: `http://127.0.0.1:5180${base}`,
     reuseExistingServer: false,
   },
 });

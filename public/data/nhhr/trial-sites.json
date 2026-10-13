@@ -1,0 +1,435 @@
+{
+  "reviewedAt": "2026-10-12",
+  "sourceVersion": "NHHR manifest revision 93 · April 29, 2026 validated trial whitelist",
+  "datasets": [
+    {
+      "topic": "Clinical research",
+      "status": "observed",
+      "timeLabel": "Historical registry snapshot · April 29, 2026",
+      "sourceName": "ClinicalTrials.gov · NHHR validated site whitelist",
+      "sourceUrl": "https://clinicaltrials.gov/",
+      "datasetId": "d85b189f-9d24-421c-883c-6b759f081900",
+      "tableName": "nhhr_data_c010_9e6f293c5f27_zip_data_c010__4",
+      "timeField": "snapshot_date",
+      "id": "trial-sites",
+      "title": "Verified Prince George trial sites",
+      "description": "Distinct studies from the ten-study historical whitelist, grouped at three verified physical facilities; one regional First Nations description remains unlocated.",
+      "geography": "facility",
+      "mapLocationsAsset": "locations-trial-sites.geojson",
+      "notes": [
+        "Coverage is the ten distinct NCT IDs in the NHHR April 29, 2026 exact-site whitelist, reconciled with the final validation tiers and C019 coded study table. This selected historical portfolio is not all Prince George trials or a national total.",
+        "Status is overall study status recorded in the source snapshot, not verified local-site status or current availability. A listing does not establish local enrollment, screening capacity, eligibility or current recruitment. UNKNOWN is retained and is not recoded as inactive.",
+        "BC Cancer - Prince George, BC Cancer - Centre for the North (Prince George), and BCCA - Prince George collapse to one verified Prince George physical facility. The PGMaps Vancouver B.C. Cancer Agency record and the adjacent UHNBC hospital are different places and are not substituted.",
+        "The source description of 13 individual First Nations in north-central BC remains one unlocated source record. No community names or points are inferred, and the source city tag is not sufficient for a location.",
+        "The C042 raw sample contains only three of these ten NCT IDs. All three reuse the same Prince George city-centroid coordinates; those coordinates are rejected. Verified physical points instead use official facility addresses and returned permanent OpenStreetMap objects reviewed on October 12, 2026.",
+        "Summary and study-site evidence describe the same source records and must not be added together. Each summary count uses distinct NCT IDs within a site; no patient or participant counts are inferred. Personal contact, investigator and interview-target fields are excluded.",
+        "Three map points locate named source facilities. Marker values count historical study records associated with that site, not patients, service demand, site recruitment capacity or a catchment. Coordinates represent the mapped facility/building; they do not identify a trial room."
+      ],
+      "columns": [
+        {
+          "key": "facility_name",
+          "label": "Verified facility / source description",
+          "type": "text"
+        },
+        {
+          "key": "location_code",
+          "label": "Verified physical-site code",
+          "type": "text"
+        },
+        {
+          "key": "city",
+          "label": "Source city tag",
+          "type": "text"
+        },
+        {
+          "key": "site_category",
+          "label": "Site category",
+          "type": "text"
+        },
+        {
+          "key": "distinct_studies",
+          "label": "Distinct source studies",
+          "type": "number",
+          "unit": "studies"
+        },
+        {
+          "key": "recruiting_snapshot_studies",
+          "label": "RECRUITING in source snapshot",
+          "type": "number",
+          "unit": "studies"
+        },
+        {
+          "key": "active_not_recruiting_snapshot_studies",
+          "label": "ACTIVE_NOT_RECRUITING in source snapshot",
+          "type": "number",
+          "unit": "studies"
+        },
+        {
+          "key": "unknown_status_studies",
+          "label": "UNKNOWN in source snapshot",
+          "type": "number",
+          "unit": "studies"
+        },
+        {
+          "key": "snapshot_date",
+          "label": "Source snapshot date",
+          "type": "text"
+        },
+        {
+          "key": "source_facility_aliases",
+          "label": "Original facility names",
+          "type": "text"
+        },
+        {
+          "key": "nct_ids",
+          "label": "Original registry IDs",
+          "type": "text"
+        },
+        {
+          "key": "registry_urls",
+          "label": "Public study links",
+          "type": "text"
+        },
+        {
+          "key": "location_status",
+          "label": "Location verification",
+          "type": "text"
+        },
+        {
+          "key": "location_note",
+          "label": "Location scope / unmatched reason",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "facility_name": "BC Cancer – Prince George (Centre for the North)",
+          "location_code": "bc-cancer-prince-george",
+          "city": "Prince George",
+          "site_category": "Physical facility",
+          "distinct_studies": 7,
+          "recruiting_snapshot_studies": 5,
+          "active_not_recruiting_snapshot_studies": 2,
+          "unknown_status_studies": 0,
+          "snapshot_date": "2026-04-29",
+          "source_facility_aliases": "BC Cancer - Centre for the North (Prince George); BC Cancer - Prince George; BCCA - Prince George",
+          "nct_ids": "NCT02756793; NCT03862911; NCT04797299; NCT05050929; NCT05470010; NCT05640999; NCT07152821",
+          "registry_urls": "https://clinicaltrials.gov/study/NCT02756793; https://clinicaltrials.gov/study/NCT03862911; https://clinicaltrials.gov/study/NCT04797299; https://clinicaltrials.gov/study/NCT05050929; https://clinicaltrials.gov/study/NCT05470010; https://clinicaltrials.gov/study/NCT05640999; https://clinicaltrials.gov/study/NCT07152821",
+          "location_status": "Verified physical facility",
+          "location_note": "Verified facility at the official 1215 Lethbridge Street address. The returned OpenStreetMap clinic is named BC Cancer – Prince George (Centre for the North). The official postal code V2M 7E9 is retained; the Nominatim context postcode differs. This is distinct from the Vancouver BC Cancer agency record in PGMaps and from the adjacent University Hospital of Northern BC. Historical registry listings do not establish current recruitment, local enrollment or eligibility."
+        },
+        {
+          "facility_name": "Prince George Family YMCA",
+          "location_code": "prince-george-family-ymca",
+          "city": "Prince George",
+          "site_category": "Physical facility",
+          "distinct_studies": 1,
+          "recruiting_snapshot_studies": 1,
+          "active_not_recruiting_snapshot_studies": 0,
+          "unknown_status_studies": 0,
+          "snapshot_date": "2026-04-29",
+          "source_facility_aliases": "Prince George Family YMCA",
+          "nct_ids": "NCT06440395",
+          "registry_urls": "https://clinicaltrials.gov/study/NCT06440395",
+          "location_status": "Verified physical facility",
+          "location_note": "Verified operator address at 2020 Massey Drive. The returned OpenStreetMap sports-centre node is named YMCA of Northern BC and matches the street address, Prince George and postal code. A listed trial site does not establish local enrollment, eligibility or current recruitment."
+        },
+        {
+          "facility_name": "Prince George Surgery Centre",
+          "location_code": "prince-george-surgery-centre",
+          "city": "Prince George",
+          "site_category": "Physical facility",
+          "distinct_studies": 1,
+          "recruiting_snapshot_studies": 0,
+          "active_not_recruiting_snapshot_studies": 0,
+          "unknown_status_studies": 1,
+          "snapshot_date": "2026-04-29",
+          "source_facility_aliases": "Prince George Surgery Centre",
+          "nct_ids": "NCT02963233",
+          "registry_urls": "https://clinicaltrials.gov/study/NCT02963233",
+          "location_status": "Verified physical facility",
+          "location_note": "HealthLink BC explicitly locates Prince George Surgery Centre at 500 Victoria Street. The returned OpenStreetMap address node matches that building address and Prince George. PGMaps has the Surgery Centre at 500 Victoria St with a nearby BC Geocoder point marked for review; the official listing resolves that identity. The official postal code V2L 2J9 is retained; the Nominatim context postcode differs. This point represents the building, not a department or exact study room. UNKNOWN source study status is retained; no current recruitment is inferred."
+        },
+        {
+          "facility_name": "13 individual First Nations in north-Central BC near Prince George, BC",
+          "location_code": null,
+          "city": "Prince George",
+          "site_category": "Regional source description",
+          "distinct_studies": 1,
+          "recruiting_snapshot_studies": 0,
+          "active_not_recruiting_snapshot_studies": 0,
+          "unknown_status_studies": 1,
+          "snapshot_date": "2026-04-29",
+          "source_facility_aliases": "13 individual First Nations in north-Central BC near Prince George, BC",
+          "nct_ids": "NCT04105088",
+          "registry_urls": "https://clinicaltrials.gov/study/NCT04105088",
+          "location_status": "Unlocated regional description",
+          "location_note": "The source describes 13 First Nations across north-central BC rather than one named physical facility. Individual community identities and site coordinates are not established by this reviewed table; the Prince George city tag is insufficient for a point."
+        }
+      ],
+      "defaultMetric": "distinct_studies",
+      "entityField": "facility_name",
+      "boundaryKeyField": "location_code"
+    },
+    {
+      "topic": "Clinical research",
+      "status": "observed",
+      "timeLabel": "Historical registry snapshot · April 29, 2026",
+      "sourceName": "ClinicalTrials.gov · NHHR validated site whitelist",
+      "sourceUrl": "https://clinicaltrials.gov/",
+      "datasetId": "d85b189f-9d24-421c-883c-6b759f081900",
+      "tableName": "nhhr_data_c010_9e6f293c5f27_zip_data_c010__4",
+      "timeField": "snapshot_date",
+      "id": "trial-site-evidence",
+      "title": "Prince George study-site evidence",
+      "description": "Ten deduplicated original NCT/site relationships behind the verified-facility summary, retaining source aliases, historical study statuses and the unlocated regional description.",
+      "geography": "none",
+      "notes": [
+        "Coverage is the ten distinct NCT IDs in the NHHR April 29, 2026 exact-site whitelist, reconciled with the final validation tiers and C019 coded study table. This selected historical portfolio is not all Prince George trials or a national total.",
+        "Status is overall study status recorded in the source snapshot, not verified local-site status or current availability. A listing does not establish local enrollment, screening capacity, eligibility or current recruitment. UNKNOWN is retained and is not recoded as inactive.",
+        "BC Cancer - Prince George, BC Cancer - Centre for the North (Prince George), and BCCA - Prince George collapse to one verified Prince George physical facility. The PGMaps Vancouver B.C. Cancer Agency record and the adjacent UHNBC hospital are different places and are not substituted.",
+        "The source description of 13 individual First Nations in north-central BC remains one unlocated source record. No community names or points are inferred, and the source city tag is not sufficient for a location.",
+        "The C042 raw sample contains only three of these ten NCT IDs. All three reuse the same Prince George city-centroid coordinates; those coordinates are rejected. Verified physical points instead use official facility addresses and returned permanent OpenStreetMap objects reviewed on October 12, 2026.",
+        "Summary and study-site evidence describe the same source records and must not be added together. Each summary count uses distinct NCT IDs within a site; no patient or participant counts are inferred. Personal contact, investigator and interview-target fields are excluded.",
+        "Each record is an original NCT ID and reviewed site/category. This table supports inspection and public registry links; it is not separately spatially aggregated at runtime. NHHR condition-domain coding is an analytical interpretation."
+      ],
+      "columns": [
+        {
+          "key": "nct_id",
+          "label": "Registry ID",
+          "type": "text"
+        },
+        {
+          "key": "brief_title",
+          "label": "Public study title",
+          "type": "text"
+        },
+        {
+          "key": "facility_name",
+          "label": "Verified facility / source description",
+          "type": "text"
+        },
+        {
+          "key": "source_facility_name",
+          "label": "Original facility name",
+          "type": "text"
+        },
+        {
+          "key": "location_code",
+          "label": "Verified physical-site code",
+          "type": "text"
+        },
+        {
+          "key": "city",
+          "label": "Source city tag",
+          "type": "text"
+        },
+        {
+          "key": "overall_status",
+          "label": "Status in source snapshot",
+          "type": "text"
+        },
+        {
+          "key": "condition_domain",
+          "label": "NHHR coded condition domain",
+          "type": "text"
+        },
+        {
+          "key": "source_validation_tier",
+          "label": "Source validation tier",
+          "type": "text"
+        },
+        {
+          "key": "location_status",
+          "label": "Location verification",
+          "type": "text"
+        },
+        {
+          "key": "location_note",
+          "label": "Location scope / unmatched reason",
+          "type": "text"
+        },
+        {
+          "key": "snapshot_date",
+          "label": "Source snapshot date",
+          "type": "text"
+        },
+        {
+          "key": "study_site_record",
+          "label": "Reviewed study-site record",
+          "type": "number",
+          "unit": "records"
+        },
+        {
+          "key": "registry_url",
+          "label": "Public registry link",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "nct_id": "NCT02756793",
+          "brief_title": "Stereotactic Radiotherapy for Oligo-Progressive Metastatic Cancer (The STOP Trial)",
+          "facility_name": "BC Cancer – Prince George (Centre for the North)",
+          "source_facility_name": "BC Cancer - Prince George",
+          "location_code": "bc-cancer-prince-george",
+          "city": "Prince George",
+          "overall_status": "ACTIVE_NOT_RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "source_validation_tier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+          "location_status": "Verified physical facility",
+          "location_note": "Verified facility at the official 1215 Lethbridge Street address. The returned OpenStreetMap clinic is named BC Cancer – Prince George (Centre for the North). The official postal code V2M 7E9 is retained; the Nominatim context postcode differs. This is distinct from the Vancouver BC Cancer agency record in PGMaps and from the adjacent University Hospital of Northern BC. Historical registry listings do not establish current recruitment, local enrollment or eligibility.",
+          "snapshot_date": "2026-04-29",
+          "study_site_record": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT02756793"
+        },
+        {
+          "nct_id": "NCT02963233",
+          "brief_title": "Type II Pediatric Supracondylar Humerus Fracture Management and Outcomes: A Prospective Multi-centre Cohort Study",
+          "facility_name": "Prince George Surgery Centre",
+          "source_facility_name": "Prince George Surgery Centre",
+          "location_code": "prince-george-surgery-centre",
+          "city": "Prince George",
+          "overall_status": "UNKNOWN",
+          "condition_domain": "Trauma / orthopedics",
+          "source_validation_tier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+          "location_status": "Verified physical facility",
+          "location_note": "HealthLink BC explicitly locates Prince George Surgery Centre at 500 Victoria Street. The returned OpenStreetMap address node matches that building address and Prince George. PGMaps has the Surgery Centre at 500 Victoria St with a nearby BC Geocoder point marked for review; the official listing resolves that identity. The official postal code V2L 2J9 is retained; the Nominatim context postcode differs. This point represents the building, not a department or exact study room. UNKNOWN source study status is retained; no current recruitment is inferred.",
+          "snapshot_date": "2026-04-29",
+          "study_site_record": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT02963233"
+        },
+        {
+          "nct_id": "NCT03862911",
+          "brief_title": "Stereotactic Ablative Radiotherapy for Comprehensive Treatment of Oligometastatic (1-3 Metastases) Cancer",
+          "facility_name": "BC Cancer – Prince George (Centre for the North)",
+          "source_facility_name": "BC Cancer - Prince George",
+          "location_code": "bc-cancer-prince-george",
+          "city": "Prince George",
+          "overall_status": "ACTIVE_NOT_RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "source_validation_tier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+          "location_status": "Verified physical facility",
+          "location_note": "Verified facility at the official 1215 Lethbridge Street address. The returned OpenStreetMap clinic is named BC Cancer – Prince George (Centre for the North). The official postal code V2M 7E9 is retained; the Nominatim context postcode differs. This is distinct from the Vancouver BC Cancer agency record in PGMaps and from the adjacent University Hospital of Northern BC. Historical registry listings do not establish current recruitment, local enrollment or eligibility.",
+          "snapshot_date": "2026-04-29",
+          "study_site_record": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT03862911"
+        },
+        {
+          "nct_id": "NCT04105088",
+          "brief_title": "Bayis Ilh Tus - A Strong Breath: Prevalence and Contributors to COPD in First Nations Communities in British Columbia",
+          "facility_name": "13 individual First Nations in north-Central BC near Prince George, BC",
+          "source_facility_name": "13 individual First Nations in north-Central BC near Prince George, BC",
+          "location_code": null,
+          "city": "Prince George",
+          "overall_status": "UNKNOWN",
+          "condition_domain": "Respiratory / COPD",
+          "source_validation_tier": "REVIEW_TIER_STRUCTURED_CITY_PG_BUT_REGIONAL_COMMUNITY_SITE",
+          "location_status": "Unlocated regional description",
+          "location_note": "The source describes 13 First Nations across north-central BC rather than one named physical facility. Individual community identities and site coordinates are not established by this reviewed table; the Prince George city tag is insufficient for a point.",
+          "snapshot_date": "2026-04-29",
+          "study_site_record": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT04105088"
+        },
+        {
+          "nct_id": "NCT04797299",
+          "brief_title": "Prospective Evaluation of Breast-Conserving Surgery Alone in Low-Risk Ductal Carcinoma in Situ (DCIS)",
+          "facility_name": "BC Cancer – Prince George (Centre for the North)",
+          "source_facility_name": "BC Cancer - Centre for the North (Prince George)",
+          "location_code": "bc-cancer-prince-george",
+          "city": "Prince George",
+          "overall_status": "RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "source_validation_tier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+          "location_status": "Verified physical facility",
+          "location_note": "Verified facility at the official 1215 Lethbridge Street address. The returned OpenStreetMap clinic is named BC Cancer – Prince George (Centre for the North). The official postal code V2M 7E9 is retained; the Nominatim context postcode differs. This is distinct from the Vancouver BC Cancer agency record in PGMaps and from the adjacent University Hospital of Northern BC. Historical registry listings do not establish current recruitment, local enrollment or eligibility.",
+          "snapshot_date": "2026-04-29",
+          "study_site_record": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT04797299"
+        },
+        {
+          "nct_id": "NCT05050929",
+          "brief_title": "RAPid SimPLE Targeted Radiation Treatment for Brain Metastases",
+          "facility_name": "BC Cancer – Prince George (Centre for the North)",
+          "source_facility_name": "BC Cancer - Prince George",
+          "location_code": "bc-cancer-prince-george",
+          "city": "Prince George",
+          "overall_status": "RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "source_validation_tier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+          "location_status": "Verified physical facility",
+          "location_note": "Verified facility at the official 1215 Lethbridge Street address. The returned OpenStreetMap clinic is named BC Cancer – Prince George (Centre for the North). The official postal code V2M 7E9 is retained; the Nominatim context postcode differs. This is distinct from the Vancouver BC Cancer agency record in PGMaps and from the adjacent University Hospital of Northern BC. Historical registry listings do not establish current recruitment, local enrollment or eligibility.",
+          "snapshot_date": "2026-04-29",
+          "study_site_record": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT05050929"
+        },
+        {
+          "nct_id": "NCT05470010",
+          "brief_title": "Smartphone App-Based Mindfulness Intervention for French and English Speaker Cancer Survivors",
+          "facility_name": "BC Cancer – Prince George (Centre for the North)",
+          "source_facility_name": "BCCA - Prince George",
+          "location_code": "bc-cancer-prince-george",
+          "city": "Prince George",
+          "overall_status": "RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "source_validation_tier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+          "location_status": "Verified physical facility",
+          "location_note": "Verified facility at the official 1215 Lethbridge Street address. The returned OpenStreetMap clinic is named BC Cancer – Prince George (Centre for the North). The official postal code V2M 7E9 is retained; the Nominatim context postcode differs. This is distinct from the Vancouver BC Cancer agency record in PGMaps and from the adjacent University Hospital of Northern BC. Historical registry listings do not establish current recruitment, local enrollment or eligibility.",
+          "snapshot_date": "2026-04-29",
+          "study_site_record": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT05470010"
+        },
+        {
+          "nct_id": "NCT05640999",
+          "brief_title": "Adjuvant Therapy in POLE-Mutated and p53-Wildtype/NSMP Early Stage Endometrial Cancer RAINBO BLUE & TAPER",
+          "facility_name": "BC Cancer – Prince George (Centre for the North)",
+          "source_facility_name": "BCCA - Prince George",
+          "location_code": "bc-cancer-prince-george",
+          "city": "Prince George",
+          "overall_status": "RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "source_validation_tier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+          "location_status": "Verified physical facility",
+          "location_note": "Verified facility at the official 1215 Lethbridge Street address. The returned OpenStreetMap clinic is named BC Cancer – Prince George (Centre for the North). The official postal code V2M 7E9 is retained; the Nominatim context postcode differs. This is distinct from the Vancouver BC Cancer agency record in PGMaps and from the adjacent University Hospital of Northern BC. Historical registry listings do not establish current recruitment, local enrollment or eligibility.",
+          "snapshot_date": "2026-04-29",
+          "study_site_record": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT05640999"
+        },
+        {
+          "nct_id": "NCT06440395",
+          "brief_title": "Small Steps for Big Changes - Healthy Cities Implementation Science",
+          "facility_name": "Prince George Family YMCA",
+          "source_facility_name": "Prince George Family YMCA",
+          "location_code": "prince-george-family-ymca",
+          "city": "Prince George",
+          "overall_status": "RECRUITING",
+          "condition_domain": "Diabetes / prevention",
+          "source_validation_tier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+          "location_status": "Verified physical facility",
+          "location_note": "Verified operator address at 2020 Massey Drive. The returned OpenStreetMap sports-centre node is named YMCA of Northern BC and matches the street address, Prince George and postal code. A listed trial site does not establish local enrollment, eligibility or current recruitment.",
+          "snapshot_date": "2026-04-29",
+          "study_site_record": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT06440395"
+        },
+        {
+          "nct_id": "NCT07152821",
+          "brief_title": "Botensilimab + Balstilimab vs Best Supportive Care as Therapy in Chemo-refractory, Unresectable, Colorectal Adenocarcinoma",
+          "facility_name": "BC Cancer – Prince George (Centre for the North)",
+          "source_facility_name": "BCCA - Prince George",
+          "location_code": "bc-cancer-prince-george",
+          "city": "Prince George",
+          "overall_status": "RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "source_validation_tier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+          "location_status": "Verified physical facility",
+          "location_note": "Verified facility at the official 1215 Lethbridge Street address. The returned OpenStreetMap clinic is named BC Cancer – Prince George (Centre for the North). The official postal code V2M 7E9 is retained; the Nominatim context postcode differs. This is distinct from the Vancouver BC Cancer agency record in PGMaps and from the adjacent University Hospital of Northern BC. Historical registry listings do not establish current recruitment, local enrollment or eligibility.",
+          "snapshot_date": "2026-04-29",
+          "study_site_record": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT07152821"
+        }
+      ],
+      "defaultMetric": "study_site_record",
+      "entityField": "nct_id"
+    }
+  ]
+}

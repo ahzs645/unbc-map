@@ -1,0 +1,407 @@
+{
+  "reviewedAt": "2026-10-12",
+  "manifestUrl": "https://zoer.k8s.overtheedgepaper.ca/api/projects/acdd692f-a188-4f85-bb5a-83c48d5c7e82/database/data-spaces/de1fe530-a762-52fa-ba11-d01cc5b344df/manifest",
+  "manifestRevision": 93,
+  "sourceSnapshotDate": "2026-04-29",
+  "originalSources": [
+    {
+      "collectionId": "DATA-C010",
+      "datasetId": "d85b189f-9d24-421c-883c-6b759f081900",
+      "filename": "prince_george_exact_site_whitelist.csv",
+      "originalFileId": "b1cbb418-b55d-4745-b56d-f9905f36c2d3",
+      "sha256": "8a73850827226665484d5ccccd0354065d4c8d637ffca5ed5647bb3ab0d7b765",
+      "tableName": "nhhr_data_c010_9e6f293c5f27_zip_data_c010__3",
+      "tableParquetSha256": "65e0cc425aac22b992a7dfd9066dc16ddbb8af5d4a60b13419548d6f5f55e4d5",
+      "sourceRelativePath": "Data Research/Data/processed/clinical_trials/prince_george_whitelist_2026-04-29/prince_george_exact_site_whitelist.csv",
+      "sourceRowCount": 10
+    },
+    {
+      "collectionId": "DATA-C010",
+      "datasetId": "d85b189f-9d24-421c-883c-6b759f081900",
+      "filename": "prince_george_final_validated_whitelist.csv",
+      "originalFileId": "72546d16-6f7b-4e1f-a3c8-9f966bd5fa04",
+      "sha256": "f8f079ecca4997571004f2afb8c907375e592ed5305701600c5fcaa509f0aafa",
+      "tableName": "nhhr_data_c010_9e6f293c5f27_zip_data_c010__4",
+      "tableParquetSha256": "62ed9ff9e4986d6c89e4bf8d82bd11fe5d8144097befccdf8ddb8c8271268284",
+      "sourceRelativePath": "Data Research/Data/processed/clinical_trials/prince_george_whitelist_2026-04-29/prince_george_final_validated_whitelist.csv",
+      "sourceRowCount": 10
+    },
+    {
+      "collectionId": "DATA-C019",
+      "datasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "filename": "prince_george_clinical_trials_coded.csv",
+      "originalFileId": "0681a2cb-fb75-4a25-b75f-65302f729518",
+      "sha256": "c062d1f662c498b3e4712b801ce34106b9b94bae2a86d9ef1d9f1849981c1290",
+      "tableName": "nhhr_data_c019_abdefd338a78_zip_data_c019_prince",
+      "tableParquetSha256": "47feb2afb1e16043e751642b014d8e58020eab6c0161d1e2125fd9bbce2e8c3c",
+      "sourceRelativePath": "Data Research/Data/processed/report_ready_synthesis_2026-04-29/smarter_ai_minimum_bundle/tables/prince_george_clinical_trials_coded.csv",
+      "sourceRowCount": 10
+    },
+    {
+      "collectionId": "DATA-C042",
+      "datasetId": "570ebb49-f165-4d5a-89e8-78e1122ab485",
+      "filename": "clinicaltrials_v2_studies_sample_city_prince_george.json",
+      "originalFileId": "2abf3657-bc8c-45af-ace4-9fbd5fc0e59d",
+      "sha256": "7eb9bf9d61e02e6634a30f6f108e74e6f86dccd408b32a0ce8300376ff22423e",
+      "tableName": "nhhr_data_c042_9a0d86bdb6f3_zip_data_c042__9",
+      "tableParquetSha256": "e01006dcc89e79317c116f7e3589488e0553633a0abf40219c95d0d2716d62a9",
+      "sourceRelativePath": "Data Research/Data/raw/clinical_trials/clinicaltrials_v2_studies_sample_city_prince_george.json",
+      "sourceRowCount": 25,
+      "envelopeTableName": "nhhr_data_c042_9a0d86bdb6f3_zip_data_c042__10",
+      "envelopeTableParquetSha256": "d0bae1c5a604e88613bf610cc57374de544ce8055f59c15da1f48bc191b8a7e7"
+    }
+  ],
+  "sourceFieldsSelected": {
+    "whitelist": [
+      "nct_id",
+      "brief_title",
+      "overall_status",
+      "exact_prince_george_site_count",
+      "exact_prince_george_sites",
+      "classification",
+      "final_validation_tier"
+    ],
+    "codedStudyTable": [
+      "nct_id",
+      "brief_title",
+      "overall_status",
+      "condition_domain",
+      "facilities"
+    ],
+    "rawSample": [
+      "protocolSection.identificationModule.nctId",
+      "protocolSection.contactsLocationsModule.locations facility/city/state/zip/country/geoPoint"
+    ]
+  },
+  "releaseGrain": {
+    "trial-sites": "One source-snapshot row per verified physical facility or distinct unlocated source description; distinct NCT IDs counted within that site/category.",
+    "trial-site-evidence": "One deduplicated original NCT ID / reviewed source site-category pair."
+  },
+  "coverage": {
+    "whitelistedDistinctStudies": 10,
+    "physicalFacilities": 3,
+    "locatedStudySitePairs": 9,
+    "unlocatedStudySitePairs": 1,
+    "sourceSiteCategories": 4,
+    "summaryValues": [
+      7,
+      1,
+      1,
+      1
+    ],
+    "historicalRecruitingStudyCounts": [
+      5,
+      1,
+      0,
+      0
+    ],
+    "unknownStudyStatuses": 2
+  },
+  "locationReviewSha256": "74dfd16c0126f4f10e946d52fc6d00f71141d9fd375c79d81f4e257b654b46b8",
+  "locationEvidence": [
+    {
+      "code": "bc-cancer-prince-george",
+      "officialAddress": {
+        "house_number": "1215",
+        "road": "Lethbridge Street",
+        "city": "Prince George",
+        "postcode": "V2M 7E9"
+      },
+      "sourceSiteAliases": [
+        "BC Cancer - Prince George",
+        "BC Cancer - Centre for the North (Prince George)",
+        "BCCA - Prince George"
+      ],
+      "pgMapsFinding": "No Centre for the North/Prince George facility record. B.C. Cancer Agency is a Vancouver record, excluded.",
+      "returnedOSM": {
+        "osm_type": "way",
+        "osm_id": 445255632,
+        "lat": "53.9129846",
+        "lon": "-122.7643857",
+        "category": "amenity",
+        "type": "clinic",
+        "name": "BC Cancer – Prince George (Centre for the North)",
+        "display_name": "BC Cancer – Prince George (Centre for the North), 1215, Lethbridge Street, Prince George, Regional District of Fraser-Fort George, British Columbia, V2L 3X3, Canada",
+        "address": {
+          "amenity": "BC Cancer – Prince George (Centre for the North)",
+          "house_number": "1215",
+          "road": "Lethbridge Street",
+          "city": "Prince George",
+          "county": "Regional District of Fraser-Fort George",
+          "state": "British Columbia",
+          "ISO3166-2-lvl4": "CA-BC",
+          "postcode": "V2L 3X3",
+          "country": "Canada",
+          "country_code": "ca"
+        },
+        "boundingbox": [
+          "53.9127241",
+          "53.9132701",
+          "-122.7650800",
+          "-122.7639479"
+        ]
+      },
+      "nominatimResponseSha256": "b25a0a63f88b62c83789475ce887ae9206e3844b507be930169d85703ad91be9"
+    },
+    {
+      "code": "prince-george-family-ymca",
+      "officialAddress": {
+        "house_number": "2020",
+        "road": "Massey Drive",
+        "city": "Prince George",
+        "postcode": "V2L 4V7"
+      },
+      "sourceSiteAliases": [
+        "Prince George Family YMCA"
+      ],
+      "pgMapsFinding": "No exact Family YMCA facility record in the reviewed health-place/site registries.",
+      "returnedOSM": {
+        "osm_type": "node",
+        "osm_id": 7033781790,
+        "lat": "53.9043694",
+        "lon": "-122.7723700",
+        "category": "leisure",
+        "type": "sports_centre",
+        "name": "YMCA of Northern BC",
+        "display_name": "YMCA of Northern BC, 2020, Massey Drive, Prince George, Regional District of Fraser-Fort George, British Columbia, V2L 4V7, Canada",
+        "address": {
+          "leisure": "YMCA of Northern BC",
+          "house_number": "2020",
+          "road": "Massey Drive",
+          "city": "Prince George",
+          "county": "Regional District of Fraser-Fort George",
+          "state": "British Columbia",
+          "ISO3166-2-lvl4": "CA-BC",
+          "postcode": "V2L 4V7",
+          "country": "Canada",
+          "country_code": "ca"
+        },
+        "boundingbox": [
+          "53.9043194",
+          "53.9044194",
+          "-122.7724200",
+          "-122.7723200"
+        ]
+      },
+      "nominatimResponseSha256": "23387e0c2f17397a79765257ed28c61cb9845867c58ace75a0e7ee3abff44bde"
+    },
+    {
+      "code": "prince-george-surgery-centre",
+      "officialAddress": {
+        "house_number": "500",
+        "road": "Victoria Street",
+        "city": "Prince George",
+        "postcode": "V2L 2J9"
+      },
+      "sourceSiteAliases": [
+        "Prince George Surgery Centre"
+      ],
+      "pgMapsFinding": "Exact alias/address candidate Surgery Centre, 500 Victoria St, Prince George; PGMaps verification geocoded_needs_review. HealthLink BC independently confirms named physical identity.",
+      "returnedOSM": {
+        "osm_type": "node",
+        "osm_id": 4268588591,
+        "lat": "53.9160995",
+        "lon": "-122.7502880",
+        "category": "place",
+        "type": "house",
+        "name": "",
+        "display_name": "500, Victoria Street, Prince George, Regional District of Fraser-Fort George, British Columbia, V2L 2K1, Canada",
+        "address": {
+          "house_number": "500",
+          "road": "Victoria Street",
+          "city": "Prince George",
+          "county": "Regional District of Fraser-Fort George",
+          "state": "British Columbia",
+          "ISO3166-2-lvl4": "CA-BC",
+          "postcode": "V2L 2K1",
+          "country": "Canada",
+          "country_code": "ca"
+        },
+        "boundingbox": [
+          "53.9160495",
+          "53.9161495",
+          "-122.7503380",
+          "-122.7502380"
+        ]
+      },
+      "nominatimResponseSha256": "9d9e72fffdcf36565eb98e679c3885fd30d90251185735ea7861ad18aa1d567d"
+    }
+  ],
+  "pgMapsReview": {
+    "sourceRegistry": "vendor/bcdatamapper/data-sources/healthdata/health_place_registry/health_place_registry.csv",
+    "sha256": "5485a4788943578831a54f5c57b8e1cdace7c6de26e4594eb959400b1ebae789",
+    "sourceSites": "vendor/bcdatamapper/data-sources/healthdata/health_place_registry/health_place_sites.csv",
+    "sitesSha256": "6f0329470c3bfe5796cbf9a2570306f00fd73d22e7378410cc623dc2e60bd58e",
+    "readOnly": true,
+    "surgeryCentreCandidate": {
+      "canonicalName": "Surgery Centre",
+      "address": "500 Victoria St",
+      "city": "Prince George",
+      "coordinates": [
+        -122.7502254,
+        53.9160905
+      ],
+      "verificationStatus": "geocoded_needs_review",
+      "sourceUrl": "https://downtownpg.com/businesses/prince-george-surgery-centre/"
+    },
+    "rejectedVancouverAgency": {
+      "canonicalName": "B.C. Cancer Agency",
+      "address": "600 W 10th Ave",
+      "city": "Vancouver",
+      "reason": "Different city and physical facility; never assigned to Prince George trial aliases."
+    }
+  },
+  "rawSampleCoordinateReview": {
+    "sourceSampleStudyRows": 25,
+    "whitelistIntersectionRows": 3,
+    "sourcePointRejected": [
+      -122.75301,
+      53.9166
+    ],
+    "records": [
+      {
+        "nctId": "NCT02963233",
+        "facility": "Prince George Surgery Centre",
+        "city": "Prince George",
+        "state": "British Columbia",
+        "zip": "V2L 2J9",
+        "country": "Canada",
+        "geoPoint": {
+          "lat": 53.9166,
+          "lon": -122.75301
+        },
+        "coordinateDecision": "Rejected repeated Prince George city-centroid coordinates; not a physical-site locator."
+      },
+      {
+        "nctId": "NCT04105088",
+        "facility": "13 individual First Nations in north-Central BC near Prince George, BC",
+        "city": "Prince George",
+        "state": "British Columbia",
+        "zip": "V2K5S3",
+        "country": "Canada",
+        "geoPoint": {
+          "lat": 53.9166,
+          "lon": -122.75301
+        },
+        "coordinateDecision": "Rejected repeated Prince George city-centroid coordinates; not a physical-site locator."
+      },
+      {
+        "nctId": "NCT07152821",
+        "facility": "BCCA - Prince George",
+        "city": "Prince George",
+        "state": "British Columbia",
+        "zip": "V2M 7E9",
+        "country": "Canada",
+        "geoPoint": {
+          "lat": 53.9166,
+          "lon": -122.75301
+        },
+        "coordinateDecision": "Rejected repeated Prince George city-centroid coordinates; not a physical-site locator."
+      }
+    ],
+    "decision": "No raw city-centroid point is used in the physical-site registry or GeoJSON."
+  },
+  "rowBindings": [
+    {
+      "nctId": "NCT02756793",
+      "sourceFacility": "BC Cancer - Prince George",
+      "locationCode": "bc-cancer-prince-george",
+      "sourceStatus": "ACTIVE_NOT_RECRUITING",
+      "sourceValidationTier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+      "registryUrl": "https://clinicaltrials.gov/study/NCT02756793"
+    },
+    {
+      "nctId": "NCT02963233",
+      "sourceFacility": "Prince George Surgery Centre",
+      "locationCode": "prince-george-surgery-centre",
+      "sourceStatus": "UNKNOWN",
+      "sourceValidationTier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+      "registryUrl": "https://clinicaltrials.gov/study/NCT02963233"
+    },
+    {
+      "nctId": "NCT03862911",
+      "sourceFacility": "BC Cancer - Prince George",
+      "locationCode": "bc-cancer-prince-george",
+      "sourceStatus": "ACTIVE_NOT_RECRUITING",
+      "sourceValidationTier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+      "registryUrl": "https://clinicaltrials.gov/study/NCT03862911"
+    },
+    {
+      "nctId": "NCT04105088",
+      "sourceFacility": "13 individual First Nations in north-Central BC near Prince George, BC",
+      "locationCode": null,
+      "sourceStatus": "UNKNOWN",
+      "sourceValidationTier": "REVIEW_TIER_STRUCTURED_CITY_PG_BUT_REGIONAL_COMMUNITY_SITE",
+      "registryUrl": "https://clinicaltrials.gov/study/NCT04105088"
+    },
+    {
+      "nctId": "NCT04797299",
+      "sourceFacility": "BC Cancer - Centre for the North (Prince George)",
+      "locationCode": "bc-cancer-prince-george",
+      "sourceStatus": "RECRUITING",
+      "sourceValidationTier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+      "registryUrl": "https://clinicaltrials.gov/study/NCT04797299"
+    },
+    {
+      "nctId": "NCT05050929",
+      "sourceFacility": "BC Cancer - Prince George",
+      "locationCode": "bc-cancer-prince-george",
+      "sourceStatus": "RECRUITING",
+      "sourceValidationTier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+      "registryUrl": "https://clinicaltrials.gov/study/NCT05050929"
+    },
+    {
+      "nctId": "NCT05470010",
+      "sourceFacility": "BCCA - Prince George",
+      "locationCode": "bc-cancer-prince-george",
+      "sourceStatus": "RECRUITING",
+      "sourceValidationTier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+      "registryUrl": "https://clinicaltrials.gov/study/NCT05470010"
+    },
+    {
+      "nctId": "NCT05640999",
+      "sourceFacility": "BCCA - Prince George",
+      "locationCode": "bc-cancer-prince-george",
+      "sourceStatus": "RECRUITING",
+      "sourceValidationTier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+      "registryUrl": "https://clinicaltrials.gov/study/NCT05640999"
+    },
+    {
+      "nctId": "NCT06440395",
+      "sourceFacility": "Prince George Family YMCA",
+      "locationCode": "prince-george-family-ymca",
+      "sourceStatus": "RECRUITING",
+      "sourceValidationTier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+      "registryUrl": "https://clinicaltrials.gov/study/NCT06440395"
+    },
+    {
+      "nctId": "NCT07152821",
+      "sourceFacility": "BCCA - Prince George",
+      "locationCode": "bc-cancer-prince-george",
+      "sourceStatus": "RECRUITING",
+      "sourceValidationTier": "WHITELIST_DIRECT_PRINCE_GEORGE_PHYSICAL_SITE",
+      "registryUrl": "https://clinicaltrials.gov/study/NCT07152821"
+    }
+  ],
+  "unmatched": [
+    {
+      "nctId": "NCT04105088",
+      "sourceDescription": "13 individual First Nations in north-Central BC near Prince George, BC",
+      "locationCode": null,
+      "coordinates": null,
+      "reason": "The source describes 13 First Nations across north-central BC rather than one named physical facility. Individual community identities and site coordinates are not established by this reviewed table; the Prince George city tag is insufficient for a point.",
+      "registryUrl": "https://clinicaltrials.gov/study/NCT04105088"
+    }
+  ],
+  "privacy": "Only allowlisted public science/site metadata is accessed for transformation. Personal contact names, emails, phones, investigators, participant records and interview-target fields are not copied to released rows or provenance.",
+  "aggregation": "Distinct NCT IDs per verified site/category, after alias collapse and NCT/site deduplication. Source site summaries, near-site duplicates, C019 copies, and C042 sample rows are not added to these counts. The two released datasets describe the same source records and must not be summed together.",
+  "limitations": [
+    "Coverage is the ten distinct NCT IDs in the NHHR April 29, 2026 exact-site whitelist, reconciled with the final validation tiers and C019 coded study table. This selected historical portfolio is not all Prince George trials or a national total.",
+    "Status is overall study status recorded in the source snapshot, not verified local-site status or current availability. A listing does not establish local enrollment, screening capacity, eligibility or current recruitment. UNKNOWN is retained and is not recoded as inactive.",
+    "BC Cancer - Prince George, BC Cancer - Centre for the North (Prince George), and BCCA - Prince George collapse to one verified Prince George physical facility. The PGMaps Vancouver B.C. Cancer Agency record and the adjacent UHNBC hospital are different places and are not substituted.",
+    "The source description of 13 individual First Nations in north-central BC remains one unlocated source record. No community names or points are inferred, and the source city tag is not sufficient for a location.",
+    "The C042 raw sample contains only three of these ten NCT IDs. All three reuse the same Prince George city-centroid coordinates; those coordinates are rejected. Verified physical points instead use official facility addresses and returned permanent OpenStreetMap objects reviewed on October 12, 2026.",
+    "Summary and study-site evidence describe the same source records and must not be added together. Each summary count uses distinct NCT IDs within a site; no patient or participant counts are inferred. Personal contact, investigator and interview-target fields are excluded."
+  ],
+  "coordinateAttribution": "© OpenStreetMap contributors; coordinate objects and returned location context are available under the Open Database License (ODbL). https://www.openstreetmap.org/copyright"
+}

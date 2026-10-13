@@ -1,0 +1,121 @@
+[
+  {
+    "code": "city-vancouver",
+    "query_city": "Vancouver",
+    "name": "Vancouver",
+    "city": "Vancouver",
+    "province": "British Columbia",
+    "site": "Representative city point",
+    "coordinates": [
+      -123.11395,
+      49.26087
+    ],
+    "sourceUrl": "https://vancouver.ca/news-calendar/our-city.aspx",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/relation/1852574",
+    "coordinateQueryUrl": "https://nominatim.openstreetmap.org/search?q=Vancouver%2C+British+Columbia%2C+Canada&format=jsonv2&countrycodes=ca&addressdetails=1&limit=3",
+    "coordinateObjectName": "Vancouver",
+    "locationNote": "Representative Vancouver city point. Exact Vancouver registry tags are not a verified municipal-boundary containment test; this point is separate from the UBC Point Grey institution point, which lies outside municipal Vancouver. It does not locate a study facility or allocate city counts to UBC or BC Cancer."
+  },
+  {
+    "code": "city-calgary",
+    "query_city": "Calgary",
+    "name": "Calgary",
+    "city": "Calgary",
+    "province": "Alberta",
+    "site": "Representative city point",
+    "coordinates": [
+      -114.05754,
+      51.04561
+    ],
+    "sourceUrl": "https://www.calgary.ca/info-requests/contact-us.html",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/relation/3227127",
+    "coordinateQueryUrl": "https://nominatim.openstreetmap.org/search?q=Calgary%2C+Alberta%2C+Canada&format=jsonv2&countrycodes=ca&addressdetails=1&limit=3",
+    "coordinateObjectName": "Calgary",
+    "locationNote": "Representative Calgary city point for the exact source query_city label. It does not locate study facilities, allocate counts to a university campus, or imply city-boundary coverage."
+  },
+  {
+    "code": "city-halifax",
+    "query_city": "Halifax",
+    "name": "Halifax",
+    "city": "Halifax",
+    "province": "Nova Scotia",
+    "site": "Representative city point",
+    "coordinates": [
+      -63.58595,
+      44.64862
+    ],
+    "sourceUrl": "https://cdn.halifax.ca/sites/default/files/documents/city-hall/boards-committees-commissions/191127cdac84.pdf",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/relation/9092218",
+    "coordinateQueryUrl": "https://nominatim.openstreetmap.org/search?q=Halifax%2C+Nova+Scotia%2C+Canada&format=jsonv2&countrycodes=ca&addressdetails=1&limit=3",
+    "coordinateObjectName": "Halifax",
+    "locationNote": "Representative point for the mapped Halifax urban place within Halifax Regional Municipality. The source Halifax tag is not expanded to all of HRM, Dartmouth, Bedford, the Halifax metropolitan area, or a health catchment. This point does not locate study facilities."
+  },
+  {
+    "code": "city-saskatoon",
+    "query_city": "Saskatoon",
+    "name": "Saskatoon",
+    "city": "Saskatoon",
+    "province": "Saskatchewan",
+    "site": "Representative city point",
+    "coordinates": [
+      -106.66077,
+      52.1318
+    ],
+    "sourceUrl": "https://www.saskatoon.ca/community-culture-heritage/new-saskatoon/life-saskatoon",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/relation/4189345",
+    "coordinateQueryUrl": "https://nominatim.openstreetmap.org/search?q=Saskatoon%2C+Saskatchewan%2C+Canada&format=jsonv2&countrycodes=ca&addressdetails=1&limit=3",
+    "coordinateObjectName": "Saskatoon",
+    "locationNote": "Representative Saskatoon city point for the exact source query_city label. It does not locate study facilities, allocate counts to a university campus, or imply city-boundary coverage."
+  },
+  {
+    "code": "city-sudbury",
+    "query_city": "Sudbury",
+    "name": "Sudbury",
+    "city": "Sudbury",
+    "province": "Ontario",
+    "site": "Representative city point",
+    "coordinates": [
+      -80.99121,
+      46.49272
+    ],
+    "sourceUrl": "https://www.greatersudbury.ca/live/about-greater-sudbury/history/",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/relation/7568929",
+    "coordinateQueryUrl": "https://nominatim.openstreetmap.org/search?q=Sudbury%2C+Ontario%2C+Canada&format=jsonv2&countrycodes=ca&addressdetails=1&limit=3",
+    "coordinateObjectName": "Greater Sudbury",
+    "locationNote": "Representative central city point returned for the mapped Greater Sudbury municipal object. The source query_city remains exactly Sudbury; it is not relabelled or expanded to all Greater Sudbury communities, Sudbury District, or a health catchment. This point does not locate study facilities."
+  },
+  {
+    "code": "city-thunder-bay",
+    "query_city": "Thunder Bay",
+    "name": "Thunder Bay",
+    "city": "Thunder Bay",
+    "province": "Ontario",
+    "site": "Representative city point",
+    "coordinates": [
+      -89.2598,
+      48.40641
+    ],
+    "sourceUrl": "https://www.thunderbay.ca/city-hall/history-heritage-and-records/history-of-thunder-bay/",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/relation/7596931",
+    "coordinateQueryUrl": "https://nominatim.openstreetmap.org/search?q=Thunder+Bay%2C+Ontario%2C+Canada&format=jsonv2&countrycodes=ca&addressdetails=1&limit=3",
+    "coordinateObjectName": "Thunder Bay",
+    "locationNote": "Representative Thunder Bay city point for the exact source query_city label; not Thunder Bay District. It does not locate study facilities or allocate counts to Lakehead or NOSM campuses."
+  },
+  {
+    "code": "city-prince-george",
+    "query_city": "Prince George",
+    "name": "Prince George",
+    "city": "Prince George",
+    "province": "British Columbia",
+    "site": "Representative city point",
+    "coordinates": [
+      -122.74537,
+      53.91286
+    ],
+    "sourceUrl": "https://www.princegeorge.ca/community-culture/heritage/history-prince-george",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/relation/2243544",
+    "coordinateQueryUrl": "https://nominatim.openstreetmap.org/search?q=Prince+George%2C+British+Columbia%2C+Canada&format=jsonv2&countrycodes=ca&addressdetails=1&limit=3",
+    "coordinateObjectName": "Prince George",
+    "locationNote": "Representative Prince George city point for the exact source query_city label. It does not locate the facilities named by the ten study records or a proposed NHHR building and does not represent Prince George LHA, Northern Interior HSDA, or the Northern Health catchment."
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "health_region_code": "5911",
+    "bc_hsda_code": "11",
+    "statcan_2024_name": "East Kootenay"
+  },
+  {
+    "health_region_code": "5912",
+    "bc_hsda_code": "12",
+    "statcan_2024_name": "Kootenay-Boundary"
+  },
+  {
+    "health_region_code": "5913",
+    "bc_hsda_code": "13",
+    "statcan_2024_name": "Okanagan"
+  },
+  {
+    "health_region_code": "5914",
+    "bc_hsda_code": "14",
+    "statcan_2024_name": "Thompson/Cariboo"
+  },
+  {
+    "health_region_code": "5921",
+    "bc_hsda_code": "21",
+    "statcan_2024_name": "Fraser East"
+  },
+  {
+    "health_region_code": "5922",
+    "bc_hsda_code": "22",
+    "statcan_2024_name": "Fraser North"
+  },
+  {
+    "health_region_code": "5923",
+    "bc_hsda_code": "23",
+    "statcan_2024_name": "Fraser South"
+  },
+  {
+    "health_region_code": "5931",
+    "bc_hsda_code": "31",
+    "statcan_2024_name": "Richmond"
+  },
+  {
+    "health_region_code": "5932",
+    "bc_hsda_code": "32",
+    "statcan_2024_name": "Vancouver"
+  },
+  {
+    "health_region_code": "5933",
+    "bc_hsda_code": "33",
+    "statcan_2024_name": "North Shore/Coast Garibaldi"
+  },
+  {
+    "health_region_code": "5941",
+    "bc_hsda_code": "41",
+    "statcan_2024_name": "South Vancouver Island"
+  },
+  {
+    "health_region_code": "5942",
+    "bc_hsda_code": "42",
+    "statcan_2024_name": "Central Vancouver Island"
+  },
+  {
+    "health_region_code": "5943",
+    "bc_hsda_code": "43",
+    "statcan_2024_name": "North Vancouver Island"
+  },
+  {
+    "health_region_code": "5951",
+    "bc_hsda_code": "51",
+    "statcan_2024_name": "Northwest"
+  },
+  {
+    "health_region_code": "5952",
+    "bc_hsda_code": "52",
+    "statcan_2024_name": "Northern Interior"
+  },
+  {
+    "health_region_code": "5953",
+    "bc_hsda_code": "53",
+    "statcan_2024_name": "Northeast"
+  }
+]

@@ -1,0 +1,1978 @@
+{
+  "reviewedAt": "2026-10-12",
+  "manifestRevision": 93,
+  "manifestUrl": "https://zoer.k8s.overtheedgepaper.ca/api/projects/acdd692f-a188-4f85-bb5a-83c48d5c7e82/database/data-spaces/de1fe530-a762-52fa-ba11-d01cc5b344df/manifest",
+  "collectionCount": 85,
+  "connectedSourceCollections": 46,
+  "explorerViews": 71,
+  "loadedRows": 10382,
+  "statusCounts": {
+    "blocked": 2,
+    "candidate": 9,
+    "connected": 45,
+    "metadata": 12,
+    "restricted": 3,
+    "supporting": 14
+  },
+  "releaseAssets": [
+    "atlas-snapshot",
+    "additional-evidence",
+    "population-ages",
+    "research-income",
+    "nursing-workforce",
+    "trial-sites",
+    "hospital-facilities",
+    "travel-network",
+    "clinical-condition-mix",
+    "trial-facility-conditions",
+    "public-expansion",
+    "research-expansion",
+    "regional-expansion",
+    "service-expansion",
+    "research-followup",
+    "community-followup",
+    "facility-followup",
+    "chsa-connections"
+  ],
+  "scope": "All 85 public NHHR collection inventories and dataset endpoints reviewed, with actual originals inspected by source family. Only selected measures are validated and released. Metadata, repeated source copies and model coefficients are not independent scientific observations. Protected participant/consent collections and personal records are excluded.",
+  "audits": [
+    {
+      "file": "nhhr-root-catalogue-review.json",
+      "sha256": "1449d81992b10d68df7e9dceb05eb815f22d7119c5a2595c2a28952d165390e8",
+      "reviewCount": 17
+    },
+    {
+      "file": "nhhr-research-catalogue-review.json",
+      "sha256": "fcb9f6dab8033e9ed2ca004dbeaf8a5c75c213142c7baff48822096f91595adc",
+      "reviewCount": 16
+    },
+    {
+      "file": "nhhr-regional-catalogue-review.json",
+      "sha256": "a615f8c9b8b5ab3c7080d27baf9db52d912e937f18eca3b06c0c950d2e7b70ff",
+      "reviewCount": 20
+    },
+    {
+      "file": "nhhr-service-catalogue-review.json",
+      "sha256": "f4bb462a841ac5307235990b36a99ed26679d16554f17de6750109891b9448b6",
+      "reviewCount": 17
+    },
+    {
+      "file": "nhhr-facility-followup-review.json",
+      "sha256": "7fa059f065ce3409d93fdd40db9c70a8c0007d1317e5a7982e56a1e00762a0a0",
+      "reviewCount": 2,
+      "kind": "follow-up"
+    },
+    {
+      "file": "nhhr-community-followup-review.json",
+      "sha256": "345ba39ab25e637676e4031ad65e071ea76289acf634787533c382d1e4a5a1a1",
+      "reviewCount": 3,
+      "kind": "follow-up"
+    },
+    {
+      "file": "nhhr-research-followup-review.json",
+      "sha256": "dc23c8ba15d1a463f5b50482ec9655d88903db1473abdae28880b3add63136a0",
+      "reviewCount": 5,
+      "kind": "follow-up"
+    },
+    {
+      "file": "nhhr-reference-followup-review.json",
+      "sha256": "ed35096aaa5ef0a90474315fb18c9f6e3e73088deee3ae86049fc2d039d4fbc3",
+      "reviewCount": 3,
+      "kind": "follow-up"
+    },
+    {
+      "file": "nhhr-chsa-connections-review.json",
+      "sha256": "b158142a6587666462fdc0dbf5e6a1fe80184c78ea1e2043abecca74de9e2d76",
+      "reviewCount": 1,
+      "kind": "follow-up"
+    }
+  ],
+  "primaryExplorerViews": 69,
+  "supplementalViews": [
+    {
+      "id": "northern-chsa-incidence",
+      "title": "Northern CHSA disease incidence",
+      "datasetId": "CDR2022",
+      "sourceName": "BC Ministry of Health via BCCDC / PHSA Community Health Data",
+      "sourceUrl": "https://communityhealth.phsa.ca/GetTheData/SearchByLocation",
+      "timeLabel": "FY 2001–2002 through FY 2020–2021 · CHSA v2018 · retrieved 12 October 2026",
+      "notes": [
+        "Supplementary public measurements retrieved directly from BCCDC/PHSA on 12 October 2026. They were not present as CHSA scientific rows in the collected Zoer C016 CSV; C016 only supplies related inventory context.",
+        "Native CHSA identifiers, names and hierarchy match the source profile’s 2018 boundary configuration. The map uses the archived Ministry geometry mirrored by Community Map of Canada, not PGMaps current 2022 polygons. McBride/Valemount remains one 2018 area; its value is not split between later McBride and Valemount areas.",
+        "The two views retain eight original indicators, Total only, over FY 2001.2002 through FY 2020.2021. A normalized display period retains the fiscal duration. October 2026 retrieval does not make these rates current.",
+        "Rates use the 2011 Canadian Census population for age standardization. They are published administrative-registry measures per 1,000, not raw cases or crude percentages. Incidence and lifetime prevalence have separate definitions, retained with the original notes and further-information link.",
+        "Asthma and diabetes use ages 1+, COPD ages 35+, and hypertension ages 20+. Different age universes limit cross-condition rankings. Select one indicator and fiscal period for one value per CHSA; rates are not additive across places or conditions.",
+        "The database download omits 187 potential indicator/year cells among the 29 listed Northern CHSAs. Six latest missing cells have explicit profile CSV dashes and remain null; other absent historical cells remain absent. The dash does not specify its particular non-release reason. Neither omissions nor unreleased communities are assigned zero.",
+        "Forty Northern v2018 context polygons include 29 publicly listed measured CHSAs. The portal excludes publicly identifiable Indigenous CHSAs; no restricted values are requested or reconstructed. This public subset cannot supply a complete Northern total.",
+        "The source warns that small numerator or denominator counts can create volatility and obscure trends. Confidence intervals are not provided in these downloads. Rates do not establish trial eligibility, service demand, causal changes or NHHR effects, and are not multiplied by population projections to infer cases.",
+        "Database rates retain their reported one-decimal precision. The 226 reported latest cells reconcile with the higher-precision profile literals within the source rounding interval; those profile literals are verification evidence rather than replacement series values.",
+        "Copyright © 2026 Provincial Health Services Authority. Source designations and profile URLs are retained in the records and exports; see PHSA terms of use and the portal’s data-download guidance."
+      ],
+      "relatedZoerDatasetIds": [
+        "b4d850b9-494b-4de6-96c3-2951defae583"
+      ],
+      "supplementalSources": [
+        {
+          "name": "PHSA General Health topic (CDR2022)",
+          "url": "https://communityhealth.phsa.ca/GetTheData/SearchByLocation",
+          "scope": "Direct public CHSA CSV measurements, Total only, original FY2001–2002 to FY2020–2021; retrieved 12 October 2026."
+        },
+        {
+          "name": "PHSA CHSA v2018 Health Profiles",
+          "url": "https://communityhealth.phsa.ca/CHSAHealthProfiles",
+          "scope": "Original profile geography vintage and exact latest source dashes; profile/database precision reconciliation."
+        }
+      ]
+    },
+    {
+      "id": "northern-chsa-prevalence",
+      "title": "Northern CHSA lifetime disease prevalence",
+      "datasetId": "CDR2022",
+      "sourceName": "BC Ministry of Health via BCCDC / PHSA Community Health Data",
+      "sourceUrl": "https://communityhealth.phsa.ca/GetTheData/SearchByLocation",
+      "timeLabel": "FY 2001–2002 through FY 2020–2021 · CHSA v2018 · retrieved 12 October 2026",
+      "notes": [
+        "Supplementary public measurements retrieved directly from BCCDC/PHSA on 12 October 2026. They were not present as CHSA scientific rows in the collected Zoer C016 CSV; C016 only supplies related inventory context.",
+        "Native CHSA identifiers, names and hierarchy match the source profile’s 2018 boundary configuration. The map uses the archived Ministry geometry mirrored by Community Map of Canada, not PGMaps current 2022 polygons. McBride/Valemount remains one 2018 area; its value is not split between later McBride and Valemount areas.",
+        "The two views retain eight original indicators, Total only, over FY 2001.2002 through FY 2020.2021. A normalized display period retains the fiscal duration. October 2026 retrieval does not make these rates current.",
+        "Rates use the 2011 Canadian Census population for age standardization. They are published administrative-registry measures per 1,000, not raw cases or crude percentages. Incidence and lifetime prevalence have separate definitions, retained with the original notes and further-information link.",
+        "Asthma and diabetes use ages 1+, COPD ages 35+, and hypertension ages 20+. Different age universes limit cross-condition rankings. Select one indicator and fiscal period for one value per CHSA; rates are not additive across places or conditions.",
+        "The database download omits 187 potential indicator/year cells among the 29 listed Northern CHSAs. Six latest missing cells have explicit profile CSV dashes and remain null; other absent historical cells remain absent. The dash does not specify its particular non-release reason. Neither omissions nor unreleased communities are assigned zero.",
+        "Forty Northern v2018 context polygons include 29 publicly listed measured CHSAs. The portal excludes publicly identifiable Indigenous CHSAs; no restricted values are requested or reconstructed. This public subset cannot supply a complete Northern total.",
+        "The source warns that small numerator or denominator counts can create volatility and obscure trends. Confidence intervals are not provided in these downloads. Rates do not establish trial eligibility, service demand, causal changes or NHHR effects, and are not multiplied by population projections to infer cases.",
+        "Database rates retain their reported one-decimal precision. The 226 reported latest cells reconcile with the higher-precision profile literals within the source rounding interval; those profile literals are verification evidence rather than replacement series values.",
+        "Copyright © 2026 Provincial Health Services Authority. Source designations and profile URLs are retained in the records and exports; see PHSA terms of use and the portal’s data-download guidance."
+      ],
+      "relatedZoerDatasetIds": [
+        "b4d850b9-494b-4de6-96c3-2951defae583"
+      ],
+      "supplementalSources": [
+        {
+          "name": "PHSA General Health topic (CDR2022)",
+          "url": "https://communityhealth.phsa.ca/GetTheData/SearchByLocation",
+          "scope": "Direct public CHSA CSV measurements, Total only, original FY2001–2002 to FY2020–2021; retrieved 12 October 2026."
+        },
+        {
+          "name": "PHSA CHSA v2018 Health Profiles",
+          "url": "https://communityhealth.phsa.ca/CHSAHealthProfiles",
+          "scope": "Original profile geography vintage and exact latest source dashes; profile/database precision reconciliation."
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "collectionId": "DATA-C002",
+      "datasetId": "3ca3204c-f1cb-46f0-9777-420b1d82d0ac",
+      "status": "candidate",
+      "summary": "Historical transportation and warehousing assessment; tabular housing, wage and ranking extracts exist but do not measure health outcomes.",
+      "mapConnection": "Report city/CMA/state/country labels need separately verified geography and dates.",
+      "needs": [
+        "Verify the report period, methodology and city-versus-CMA definition before choosing a contextual chart."
+      ],
+      "cannot": [
+        "Do not turn industrial opportunity scores or investment rankings into NHHR health evidence."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C002",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 23
+    },
+    {
+      "collectionId": "DATA-C003",
+      "datasetId": "6878b326-4a1b-4b62-afd1-c5aa4f67aa1c",
+      "status": "connected",
+      "summary": "Five BC export workbooks and five DataBC metadata files were inspected. The 2025 top-ten BC destination extract retains nominal CAD values. Other sheets have annual, monthly, percentage or seasonally adjusted grains; annual commodity cells store raw CAD behind million-dollar display formats.",
+      "mapConnection": "Provincial destination charts; no Northern allocation.",
+      "needs": [
+        "Local export geographies and project attribution are absent."
+      ],
+      "cannot": [
+        "Goods exports are not research returns, Northern GDP or causal NHHR benefits. Display formatting must not be confused with raw cached-value units."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C003",
+      "views": [
+        "bc-export-destinations"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 10
+    },
+    {
+      "collectionId": "DATA-C004",
+      "datasetId": "04cd612c-106a-414f-8623-c71df1177b49",
+      "status": "connected",
+      "summary": "All 24 CMHC worksheets, definitions and survey coverage were inspected. Four BC March and year-to-date observations are released; the collected workbook has no rows for the target Northern municipalities.",
+      "mapConnection": "Provincial charts; no municipality join.",
+      "needs": [
+        "Local sources or exact CMA boundaries are needed for local mapping."
+      ],
+      "cannot": [
+        "Starts are not completions, rental availability or care capacity. Monthly and year-to-date intervals overlap."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C004",
+      "views": [
+        "bc-housing-starts"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C005",
+      "datasetId": "4282a002-97e3-4788-b2c1-684526f83f28",
+      "status": "connected",
+      "summary": "All four CREA workbooks and 240 worksheet tables were inspected. A bounded annual BC and Interior BC benchmark-price extract is released.",
+      "mapConnection": "CREA reporting markets remain chart-only.",
+      "needs": [
+        "Exact reporting-market boundaries and source archive redistribution terms are not established."
+      ],
+      "cannot": [
+        "Interior BC is distinct from Northern Health and municipal CSDs. Nominal benchmark prices are not rents or average sale prices."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C005",
+      "views": [
+        "bc-housing-benchmarks"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C006",
+      "datasetId": "9b51fa8b-718c-46e0-adf0-2db6e5146493",
+      "status": "connected",
+      "summary": "All six original ZIP CSV and metadata sources were inspected: ER labour, ER and CMA industry/occupation employment, provincial occupation wages, CMA building permits and country/industry FDI. The newer ER labour view retains monthly three-month moving averages.",
+      "mapConnection": "Six exact 2021 ER DGUIDs join native polygons. North Coast and Nechako use one verified union of PGMaps ERs 5960 and 5970, consistent with the publisher’s combined LFS reporting geography. Its source DGUID remains blank.",
+      "needs": [
+        "CMA records require exact CMA geometry, not city points. Older 2016 ER series remain separate and chart-only."
+      ],
+      "cannot": [
+        "Moving averages overlap and cannot be summed. Provincial wages, CMA permits and country/industry FDI cannot be assigned to Northern hospital catchments."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C006",
+      "views": [
+        "regional-labour-monthly"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 6
+    },
+    {
+      "collectionId": "DATA-C007",
+      "datasetId": "13973ad6-c6c4-4c12-ad4a-06c721f511a6",
+      "status": "metadata",
+      "summary": "Acquisition logs, aliases and source registries document provenance rather than independent observations.",
+      "mapConnection": "No measured geographic outcome.",
+      "needs": [
+        "Use aliases as evidence for an exact reviewed identity connection; never fuzzy-join by name alone."
+      ],
+      "cannot": [
+        "Download statuses and file counts are not scientific or health measures."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C007",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 21
+    },
+    {
+      "collectionId": "DATA-C008",
+      "datasetId": "94bf79c1-a37b-40f8-911c-32c4f4552733",
+      "status": "supporting",
+      "summary": "Overlapping analytical summaries support existing publication, funding and clinical portfolios. New CFI views are computed from the original award source.",
+      "mapConnection": "Institution/city summaries overlap current released views.",
+      "needs": [
+        "Use original C039 for infrastructure and C052 for research income; preserve separate definitions."
+      ],
+      "cannot": [
+        "Do not add summary totals to their original records or combine research income, award commitments and payments."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C008",
+      "views": [],
+      "relatedViews": [
+        "publications",
+        "research-income",
+        "clinical-city"
+      ],
+      "originalFilesInspected": 11
+    },
+    {
+      "collectionId": "DATA-C009",
+      "datasetId": "ae521786-0f65-43cf-86a7-a88d77bf4dc5",
+      "status": "supporting",
+      "summary": "Cumulative CIHR British Columbia institution summary supports the existing annual CIHR view, but lacks its fiscal grain.",
+      "mapConnection": "Exact institution names can use the reviewed institutional registry; bc_region_code is an analysis macroregion and has no automatic HA/LHA equivalence.",
+      "needs": [
+        "Recover decision/payment window and CIHR contribution/equipment definitions before a separate cumulative view; reconcile to C041."
+      ],
+      "cannot": [
+        "Cannot label cumulative contributions as annual payments or allocate institution totals to populations."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C009",
+      "views": [],
+      "relatedViews": [
+        "cihr-payments"
+      ],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C010",
+      "datasetId": "d85b189f-9d24-421c-883c-6b759f081900",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Verified Prince George trial sites, Prince George study-site evidence. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed facility, none connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C010",
+      "views": [
+        "trial-sites",
+        "trial-site-evidence"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C011",
+      "datasetId": "2870d34b-43cd-4e62-8d71-0bf06fcfb8e4",
+      "status": "metadata",
+      "summary": "Leadership evidence backbone and data-gap trackers describe requests and evidence planning.",
+      "mapConnection": "No independent measured geography.",
+      "needs": [
+        "Fulfil missing source requests before building an observed measure."
+      ],
+      "cannot": [
+        "Internal requests and proposed evidence are not observed health outcomes."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C011",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 3
+    },
+    {
+      "collectionId": "DATA-C012",
+      "datasetId": "7a0b8ced-71ed-4e8a-aea2-37030adec6a2",
+      "status": "connected",
+      "summary": "All 64 printed capital rows are reconciled to original Northern Health PDF tables: 30 for 2020–2022 and 34 for 2022–2024. The dedicated 46-row subset omits 18 records and truncates facility headings/descriptions. Separate project and reporting-site views preserve nominal dollar columns and period scope. Five reporting-site address parcels and a distinct historical Mills address parcel now recover eight previously unlocated records; none is labelled as a building centroid or equipment position.",
+      "mapConnection": "Sixty project records use 11 existing facility references and six verified address-parcel references, summarized as 23 located facility/period groups. Four construction-target/leasehold project rows remain unlocated. Historical Mills equipment rows use their original-address parcel, distinct from Ksyen; the replacement target is withheld. Only printed-row counts are mapped; project dollars are not summed into site values.",
+      "needs": [
+        "Independently resolve historical/moved hospital, replacement-building and leasehold project sites before precise geographic assignment.",
+        "Completion status, actual cash spending, retained assets and clinical outputs require additional sources.",
+        "Operating accounts, sector facts and other report extracts remain outside the reviewed capital-project tables; their source definitions, units and periods require separate validation."
+      ],
+      "cannot": [
+        "Published project values and district funding are not annual spending, current asset values or clinical outcomes.",
+        "Report intervals can repeat projects; amounts cannot be summed across windows into lifetime investment or an NHHR return.",
+        "A dash is missing, not zero. Published funder codes are not rewritten from geographic expectations."
+      ],
+      "inspectionScope": "Earlier audit scope: Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures. Follow-up scope: Supplemental Northern Health capital-project scope only: original PDFs and exact generic-table rows. Other operating, CAUBO, sector, economic-goal and NDIT extracts remain under prior family review decisions.",
+      "reviewId": "DATA-C012",
+      "views": [
+        "northern-capital-projects",
+        "northern-capital-site-context"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 14
+    },
+    {
+      "collectionId": "DATA-C013",
+      "datasetId": "4550b0f1-8ed5-44fa-92f9-fe0d278f0b07",
+      "status": "supporting",
+      "summary": "HTML link, text and table extractions are report provenance and cached grids, rather than a unified analytical dataset.",
+      "mapConnection": "Document geography must be derived from each original table definition.",
+      "needs": [
+        "Validate row labels, units and source headers for any selected table."
+      ],
+      "cannot": [
+        "HTML row counts and extracted numbers do not form a geographic outcome."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C013",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 4
+    },
+    {
+      "collectionId": "DATA-C014",
+      "datasetId": "1c5c587c-e416-48c6-b3e9-6596a171fd09",
+      "status": "supporting",
+      "summary": "PDF pages, lines and numeric mentions support document review. The source includes multipart numeric-extraction grids.",
+      "mapConnection": "A mentioned place is not a measured geographic unit.",
+      "needs": [
+        "Return to the original report page and validate the table before selecting measures."
+      ],
+      "cannot": [
+        "Do not treat every numeric mention as an independent count, rate or time series."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C014",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 4
+    },
+    {
+      "collectionId": "DATA-C015",
+      "datasetId": "1f5be486-029c-4189-9634-99ea7f75c95f",
+      "status": "metadata",
+      "summary": "Presentation package metadata and a quality report describe an authored artifact, not collected scientific measurements.",
+      "mapConnection": "No independent geometry.",
+      "needs": [
+        "Use underlying source collections for evidence."
+      ],
+      "cannot": [
+        "Presentation quality fields are not NHHR outcomes."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C015",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-C016",
+      "datasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+      "status": "connected",
+      "summary": "Recovered and released 480 original Northern HA fiscal observations: four age-standardized incidence indicators and four lifetime-prevalence indicators, each for Total/Female/Male across 20 fiscal periods. Source rates remain direct original values per 1,000; they are not recomputed from population. The original collected C016 CSV still contains Northern HA/BC scientific values, with no CHSA observations. Its location catalogue provides related metadata only. The newly retrieved external PHSA CDR2022 measurements are separate supplementary sources, not a recovered Zoer scientific table. Existing disease-rate and research-chair releases retain their own original provenance.",
+      "mapConnection": "The existing chair listing retains eight reviewed institutional campus references. An optional exact HA ID 5 join uses the contemporary PGMaps Northern HA polygon as context. Historical boundary compatibility is unverified. Default display remains the trend chart. One indicator, source sex category and fiscal period is required for one map value; overlapping rows are withheld rather than summed. The visible map place is Northern HA, while the internal entity remains the exact indicator. Existing collected Northern HA values retain their optional contextual HA join without down-allocation. Related supplementary views independently retrieve native CHSA v2018 measurements and use an explicitly attributed historical display geometry; the C016 location catalogue is not their measurement provenance.",
+      "needs": [
+        "The collected C016 source still has no CHSA scientific observations; its 309-row catalogue supplies locations only. This Atlas mapping gap is filled separately by clearly attributed PHSA CDR2022 supplements.",
+        "Historical HA boundary documentation before claiming spatial harmonization across FY2001–2002 to FY2020–2021.",
+        "The standardization population, confidence intervals and detailed registry ascertainment notes for stronger cross-indicator comparisons.",
+        "Keep all earlier sibling-source review limits and existing releases; this update only explains the new external CHSA connection.",
+        "WorkBC tables have shifted multilevel headers; first-page project samples are incomplete."
+      ],
+      "cannot": [
+        "Spread Northern HA rates into CHSAs, LHAs, census units, cities or facilities.",
+        "Infer disease counts by multiplying age-standardized rates by Atlas population estimates or projections.",
+        "Treat lifetime prevalence as incidence or add sex/condition rates.",
+        "Treat an April 2026 collection as a current health observation.",
+        "Join older calendar-year series with different age ranges or units merely because indicator names resemble each other.",
+        "Infer trial eligibility, unmet need, causality or an NHHR effect from these aggregate registry observations.",
+        "Assign newly retrieved PHSA CHSA measurements to the C016 location catalogue or claim they were scientific rows already collected in Zoer.",
+        "Allocate the original HA measures into CHSA polygons.",
+        "Do not present April 2026 road events or trial statuses as current; do not infer missing project totals from first-page results."
+      ],
+      "inspectionScope": "Earlier audit scope: Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures. Follow-up scope: Fresh dataset API and all four hash-locked original CSVs. Inspected indicator inventory, 309-location catalogue, topics and 653 selected-indicator records; released 480 direct Northern HA fiscal chronic-disease rates. No CHSA scientific rows are present. Fresh authorized Zoer manifest revision 93 and actual C016/C049 dataset APIs; original C016 file/table inventory and previously hash-verified scientific CSV, compared with separately retrieved public PHSA downloads. C049 has no community-health scientific table in its actual API inventory.",
+      "reviewId": "DATA-C016",
+      "views": [
+        "research-chairs",
+        "community-disease-incidence",
+        "community-disease-prevalence"
+      ],
+      "relatedViews": [
+        "historical-cancer-incidence",
+        "northern-chsa-incidence",
+        "northern-chsa-prevalence"
+      ],
+      "originalFilesInspected": 42
+    },
+    {
+      "collectionId": "DATA-C017",
+      "datasetId": "6eb40441-1a52-4331-8512-66e09ee2c11d",
+      "status": "connected",
+      "summary": "Existing CAUBO expenditure/income scopes remain intact. Ninety normalized ranking rows reconcile with original C045 facts for selected extracts. Compact CRA financial field labels are incorrect and not used as money measures.",
+      "mapConnection": "Previously reviewed exact institution/campus context remains; normalized copies add no independent observations.",
+      "needs": [
+        "Use C045 publisher definitions for ranking/intensity facts; validate C043 raw code meanings and institution filing units before charity-finance amounts."
+      ],
+      "cannot": [
+        "Do not duplicate CAUBO or ranking copies, use mislabeled compact totals or reinterpret ratios as staff/salaries."
+      ],
+      "inspectionScope": "Fresh authorized dataset endpoint and canonical file/table catalogue, full hash verification for the selected originals; scientific fields parsed with explicit allowlists. Only released institutional/organization measures are validated. Personal or director records are excluded.",
+      "reviewId": "DATA-C017",
+      "views": [
+        "research-expenditures"
+      ],
+      "relatedViews": [
+        "research-income"
+      ],
+      "originalFilesInspected": 5
+    },
+    {
+      "collectionId": "DATA-C018",
+      "datasetId": "00f847a7-9982-49f5-a2f1-a6038fd4738f",
+      "status": "candidate",
+      "summary": "Policy and economic evidence is a heterogeneous report-claim register with values, periods, geography and confidence notes.",
+      "mapConnection": "Mostly province or institutional report scopes, not health-area observations.",
+      "needs": [
+        "Validate each original table and normalize units before a bounded quantitative extract."
+      ],
+      "cannot": [
+        "Qualitative claims, percentages, nominal GDP and headcounts cannot share a numeric axis or establish NHHR impact."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C018",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-C019",
+      "datasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Clinical trials with an exact-city site, Prince George registered study portfolio, Validation questions still open. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed city, none connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C019",
+      "views": [
+        "clinical-city",
+        "clinical-pg",
+        "evidence-gaps"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C020",
+      "datasetId": "6ebbd44c-a68e-4360-b8f0-8404c1871455",
+      "status": "metadata",
+      "summary": "The original inventory has eight resource links and local paths, with no scientific observations. Related BC Stats population originals are independently connected through C038.",
+      "mapConnection": "Source-navigation support only.",
+      "needs": [
+        "Follow original resource endpoints and validate their measurements before use."
+      ],
+      "cannot": [
+        "Inventory entries are not community populations. Private local paths are omitted from released rows."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C020",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C021",
+      "datasetId": "6e2d7eda-93e0-42c3-b1d3-a3a8a029d3e6",
+      "status": "metadata",
+      "summary": "CAUBO resource inventory points to annual sources; it contains acquisition metadata rather than financial observations.",
+      "mapConnection": "Use exact CAUBO institution-code joins in the existing income view.",
+      "needs": [
+        "Use recovered C052 annual records for research income."
+      ],
+      "cannot": [
+        "Do not count inventory rows as institutions with measured income."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C021",
+      "views": [],
+      "relatedViews": [
+        "research-income"
+      ],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C022",
+      "datasetId": "6e496ecb-472c-4a46-8ee5-cedd8cfc0f84",
+      "status": "metadata",
+      "summary": "Seven CIHI resource references identify source workbooks; they are not scientific health observations. The workbooks are covered by C053 and existing workforce releases.",
+      "mapConnection": "Follow each referenced scientific workbook and use its explicit regional grain. This inventory has no analytical geography.",
+      "needs": [
+        "Keep these references as source navigation and lineage; deduplicate workbook references by hash."
+      ],
+      "cannot": [
+        "Resource counts do not measure workforce, service capacity, institutions or unique datasets."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C022",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C023",
+      "datasetId": "6d5e5cf9-8b90-424e-a8f5-1de44069c8ce",
+      "status": "metadata",
+      "summary": "CIHR resource inventory is acquisition/source metadata, not scientific payment rows.",
+      "mapConnection": "No geographic observation; use source URLs to reach C054 annual payment originals.",
+      "needs": [
+        "Scientific values and paid-institution identity come from the listed annual originals; sanitize local paths."
+      ],
+      "cannot": [
+        "Cannot chart resource/file counts as research funding or infer activity from last-modified dates."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C023",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C024",
+      "datasetId": "361da856-2537-4052-93e6-3c962ba4fa8e",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Population denominator audit. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed none connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C024",
+      "views": [
+        "population-review"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C025",
+      "datasetId": "ef462b97-d355-49b8-be02-a742c86d5101",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: CIHR annual payments. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed institution connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C025",
+      "views": [
+        "cihr-payments"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C026",
+      "datasetId": "381b8c34-befd-4c83-8ee1-8bad454cbd74",
+      "status": "blocked",
+      "summary": "Scenario grid combines CIHR payments with NSERC award amounts across different periods and adds assumed spillover percentages.",
+      "mapConnection": "Institution tags can locate an assumption, but do not validate it.",
+      "needs": [
+        "A defensible scenario needs a harmonized accounting definition, nonoverlapping periods and evidence for any spillover assumption."
+      ],
+      "cannot": [
+        "Do not publish this combined number as observed direct research value or NHHR benefit."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C026",
+      "views": [],
+      "relatedViews": [
+        "cihr-payments",
+        "nserc-awards"
+      ],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C027",
+      "datasetId": "d5daf92c-6440-42be-9475-f9282f8983b6",
+      "status": "metadata",
+      "summary": "Screenshot-derived monetization methods are a methods/request reference.",
+      "mapConnection": "No independent observed geography.",
+      "needs": [
+        "Validate methods and retrieve the underlying observations."
+      ],
+      "cannot": [
+        "A screenshot or assumed method is not a measured saving."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C027",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C028",
+      "datasetId": "4904e2d7-52c7-497a-96ad-3085254fbc3b",
+      "status": "metadata",
+      "summary": "Missing-data request tracker is useful for planning the next source connections.",
+      "mapConnection": "No measured geometry.",
+      "needs": [
+        "Obtain requested public aggregates with source definitions and geographic identifiers."
+      ],
+      "cannot": [
+        "Requested values are not observed data or zeros."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C028",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C029",
+      "datasetId": "2ab4d668-f4f7-4179-8718-7344d5f6337f",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: NSERC awards by institution. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed institution connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C029",
+      "views": [
+        "nserc-awards"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C030",
+      "datasetId": "f2e77e60-9bc1-439a-80c1-d169e07caa97",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Research publications by institution. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed institution connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C030",
+      "views": [
+        "publications"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C031",
+      "datasetId": "9d111cc7-219b-4c4d-b158-ec0a732b40d9",
+      "status": "blocked",
+      "summary": "All 12 derived population rows were inspected. Prince George 211, 088 and Peace River North 78, 602 are exactly twice the verified C051 total-gender counts of 105, 544 and 39, 301. These flawed values are not released.",
+      "mapConnection": "Superseded by the verified raw C051 LHA population and age views.",
+      "needs": [
+        "Rebuild denominators using Gender=T only and recompute affected derived rates."
+      ],
+      "cannot": [
+        "Total, male and female population cannot be added. Doubled denominators cannot support observed population or rates."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C031",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C032",
+      "datasetId": "eb3407f1-61f3-4902-9828-3533cd3933fa",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Hypothetical avoided-travel scenarios. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed none connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C032",
+      "views": [
+        "travel-scenarios"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C033",
+      "datasetId": "170d868b-bc4e-4526-bc5a-16c28af314dc",
+      "status": "metadata",
+      "summary": "NSERC resource inventory identifies award, partner, co-applicant and dictionary files.",
+      "mapConnection": "No observation geography; exact institution mapping requires scientific award tables.",
+      "needs": [
+        "Follow C046/C055 originals, validate award grain and period."
+      ],
+      "cannot": [
+        "Cannot interpret source inventory counts as awards or payments."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C033",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C034",
+      "datasetId": "f96b3b41-2e61-4518-a94b-96e8b4b4082b",
+      "status": "metadata",
+      "summary": "Official acquisition inventory documents available sources, URLs and collection statuses.",
+      "mapConnection": "Geographic connections come from each retrieved original.",
+      "needs": [
+        "Follow the source collections and verify actual tables."
+      ],
+      "cannot": [
+        "Inventory row counts are not counts of grants, patients or researchers."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C034",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C035",
+      "datasetId": "44d351cc-c792-40db-b37d-eb0caa5d1e59",
+      "status": "supporting",
+      "summary": "OpenAlex institution inventory provides query/identity context for indexed-work views, rather than a new independent outcome.",
+      "mapConnection": "Reviewed OpenAlex IDs, display names and Canadian country codes join comparator institutions.",
+      "needs": [
+        "Resolve ambiguous institution search candidates, preserve exact IDs and avoid raw local paths."
+      ],
+      "cannot": [
+        "All-time works_count is not the bounded yearly view, verified publications, health-only output or a national unique-work total."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C035",
+      "views": [],
+      "relatedViews": [
+        "publications",
+        "publications-history"
+      ],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C036",
+      "datasetId": "a8a5de7b-c722-4189-9bf7-0e3efedfcbdf",
+      "status": "metadata",
+      "summary": "Pull summary describes source acquisition results.",
+      "mapConnection": "No geographic measure.",
+      "needs": [
+        "Use underlying collected tables."
+      ],
+      "cannot": [
+        "Successful downloads are not scientific outcomes."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-C036",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C038",
+      "datasetId": "4493b28c-a2cb-4f43-acb0-af8e41c78655",
+      "status": "connected",
+      "summary": "All four originals were inspected: multiheader annual and quarterly provincial CSVs, and two six-sheet municipal workbooks. Seven Northern municipalities are released from the latest Mun-RD worksheet for 2011–2025.",
+      "mapConnection": "Seven reviewed source SGC/native CSD pairs. The 2021 polygons are display context; source estimates use July 1 municipal boundaries for each year.",
+      "needs": [
+        "Year-specific legal boundaries or documented harmonization are needed for historical spatial comparisons."
+      ],
+      "cannot": [
+        "Municipalities, LHAs and CMAs differ. Prince George municipal 2025 population 85, 944 is distinct from LHA population 105, 544. Historical province series have documented breaks and differing reference dates."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C038",
+      "views": [
+        "municipal-population"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 4
+    },
+    {
+      "collectionId": "DATA-C039",
+      "datasetId": "48f45689-ac76-4d21-927a-c07f55936d5c",
+      "status": "connected",
+      "summary": "Primary CFI workbook yields 185 observed decision-year rows and seven cumulative lead-institution summaries; all seven totals independently match upstream C008 comparator summaries.",
+      "mapConnection": "All seven source institutions have reviewed representative campus points. McMaster’s official Hamilton main-campus address matches independently retrieved OpenStreetMap way 23122301.",
+      "needs": [
+        "Historical institution names and collaborators need explicit identity/allocation rules for wider coverage."
+      ],
+      "cannot": [
+        "CFI contribution is not annual cash paid, total project cost or CAUBO income. Project records lack a stable project ID. Medical, health and life sciences includes life sciences. No campus/population allocation."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C039",
+      "views": [
+        "cfi-projects-by-year",
+        "cfi-projects-total"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C040",
+      "datasetId": "50a3dad1-f1e4-413d-9519-356f1089c53f",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Nursing direct-care workforce in Northern health regions. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed hsda connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C040",
+      "views": [
+        "nursing-workforce-northern"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C041",
+      "datasetId": "0a97fa48-6c2f-471c-ae9a-11337eeabd16",
+      "status": "supporting",
+      "summary": "Full funding-decisions CSV has Institution_Paid, CIHR_Contribution, CIHR_Equipment and Term_Years_Months, but no fiscal/date field. It is cumulative decision context for CIHR, not an annual extension.",
+      "mapConnection": "Exact paid-institution identity can join the campus registry after decisions scope reconciliation.",
+      "needs": [
+        "Establish decision window and contribution/equipment semantics, reconcile C009 and annual C054 without adding unlike measures. Decode source Latin-1 consistently."
+      ],
+      "cannot": [
+        "No annual payment trend, yearly growth or grants-paid total can be recovered from a table without a fiscal period. Personal Name field is excluded."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C041",
+      "views": [],
+      "relatedViews": [
+        "cihr-payments"
+      ],
+      "originalFilesInspected": 3
+    },
+    {
+      "collectionId": "DATA-C042",
+      "datasetId": "570ebb49-f165-4d5a-89e8-78e1122ab485",
+      "status": "supporting",
+      "summary": "Raw public registry records already support the exact Prince George whitelist and source-city validation. A catalogue-only label did not mean this source had never been used.",
+      "mapConnection": "Registry city centroids are not verified facilities and are not imported as facility coordinates.",
+      "needs": [
+        "For additional facilities, verify exact names and addresses independently; keep unresolved site descriptions unassigned."
+      ],
+      "cannot": [
+        "Do not bulk-map reused city-centre coordinates or claim historical overall trial status as current local recruitment."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C042",
+      "views": [],
+      "relatedViews": [
+        "trial-sites",
+        "trial-site-evidence",
+        "clinical-city"
+      ],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C043",
+      "datasetId": "b839ab83-e3a5-4f73-8b4c-84ac1de47829",
+      "status": "candidate",
+      "summary": "Three safe non-director originals fully hash-verified. Eight exact university legal entities join by BN; source definitions correct compact label errors, but UNBC reported amount scale prevents a validated broad monetary release.",
+      "mapConnection": "Exact BN/legal-entity/FPE observation, distinct from university research/campus scope.",
+      "needs": [
+        "Resolve original filing currency/unit practice for UNBC through the filed return/audited accounts; confirm all-activity legal-entity scope. Directors remain excluded."
+      ],
+      "cannot": [
+        "No implicit x1000 correction, no research-only interpretation or campus allocation of whole-charity finance."
+      ],
+      "inspectionScope": "Fresh authorized dataset endpoint and canonical file/table catalogue, full hash verification for the selected originals; scientific fields parsed with explicit allowlists. Only released institutional/organization measures are validated. Personal or director records are excluded.",
+      "reviewId": "DATA-C043",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 3
+    },
+    {
+      "collectionId": "DATA-C044",
+      "datasetId": "79b129e1-414b-4b85-9d63-66ab334081fc",
+      "status": "connected",
+      "summary": "The original CSV contains 44,376 occupation/area wage rows split across two Parquet chunks. Thirty selected healthcare wage rows retain 17 reported medians and 13 missing estimates.",
+      "mapConnection": "Exact ER5950/5960/5970/5980 labels join native economic-region codes. The 2021 PGMaps polygons supply context; source boundary vintage is unestablished. Provincial ER59 remains unshaded.",
+      "needs": [
+        "Select one occupation. Retain source method, reference period, original comments and provincial fallback scope.",
+        "Use economic regions rather than HSDA/LHA allocation. Matching fallback values do not prove regional wage equality.",
+        "This is the 19 November 2025 release, with 2023–2024/2024 reference periods, rather than a 2025 observation series."
+      ],
+      "cannot": [
+        "Wages are estimates rather than payroll, job offers, vacancies or a hub budget.",
+        "Low and high wage estimates are not confidence intervals.",
+        "The SAE model’s 2021 Census input does not alone establish boundary vintage."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C044",
+      "views": [
+        "health-occupation-wages"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-C045",
+      "datasetId": "01ad6a0d-3db4-42a8-8501-7af1d597335d",
+      "status": "connected",
+      "summary": "Original50-university/40-health-organization publisher tables support seven university intensity facts and five bounded health-organization comparisons; selected values reconcile to C017 normalized copies.",
+      "mapConnection": "Seven institution points provide context. Health authorities/zones remain nonspatial organizational records.",
+      "needs": [
+        "Full tables and proprietary layouts/logos are not reproduced; wider reuse requires publisher terms/permission. Preserve headcount denominators and publisher revisions."
+      ],
+      "cannot": [
+        "Not health-only income, FTEs, salaries, available staff, hospital beds or NHHR benefits. Do not allocate authority/zone totals to one hospital."
+      ],
+      "inspectionScope": "Fresh authorized dataset endpoint and canonical file/table catalogue, full hash verification for the selected originals; scientific fields parsed with explicit allowlists. Only released institutional/organization measures are validated. Personal or director records are excluded.",
+      "reviewId": "DATA-C045",
+      "views": [
+        "university-research-intensity",
+        "hospital-research-organizations"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 4
+    },
+    {
+      "collectionId": "DATA-C046",
+      "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+      "status": "connected",
+      "summary": "Ten complete fiscal award files yield 67 observed institution/year groups. Numbered/NA instalments and competition-year ranges are retained; 1999 truncated excerpt is excluded after reconciliation.",
+      "mapConnection": "Exact dated institution names/OrganizationID pairs use current reviewed campus representatives only.",
+      "needs": [
+        "Older historical location assumptions are not resolved by current campus coordinates. The source window remains separate from the fully reviewed C055 2001–2018 extension and recent 2019–2024 extract."
+      ],
+      "cannot": [
+        "Awards/fiscal allocations are not independently verified lifetime commitments or actual cash payments; different institutions sharing an application retain allocations. No co-applicant/person map."
+      ],
+      "inspectionScope": "Fresh authorized dataset endpoint and canonical file/table catalogue, full hash verification for the selected originals; scientific fields parsed with explicit allowlists. Only released institutional/organization measures are validated. Personal or director records are excluded.",
+      "reviewId": "DATA-C046",
+      "views": [
+        "nserc-awards-history"
+      ],
+      "relatedViews": [
+        "nserc-awards"
+      ],
+      "originalFilesInspected": 13
+    },
+    {
+      "collectionId": "DATA-C047",
+      "datasetId": "75bb40c3-48ba-4bb8-98f0-e018b20211b5",
+      "status": "connected",
+      "summary": "Verified Canadian institution identity and all-year indexed-work responses yield 70 observed rows for 2016–2025; all 35 overlapping 2021–2025 rows exactly reconcile with existing publications.",
+      "mapConnection": "Seven verified institution IDs join the existing reviewed campus registry.",
+      "needs": [
+        "Additional institutional/cancer-centre identities need exact source response and point review; distinguish work samples from full corpus."
+      ],
+      "cannot": [
+        "No unique cross-institution total, health-only output or research impact inference; exclude partial 2026 and future-indexed 2027."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C047",
+      "views": [
+        "publications-history"
+      ],
+      "relatedViews": [
+        "publications"
+      ],
+      "originalFilesInspected": 15
+    },
+    {
+      "collectionId": "DATA-C048",
+      "datasetId": "995cf2c5-ecda-47ee-b5c7-f71fe1125179",
+      "status": "candidate",
+      "summary": "The transportation/warehousing extraction has 46 files and 89 tables, including CSV/workbook renditions of the same report pages. Original samples show split headings and historical labour-cost rankings.",
+      "mapConnection": "City/CMA/MSA comparison labels are economic units, rather than clinical catchments. No health-boundary join follows from a report table.",
+      "needs": [
+        "Recover original report geography, vintage and units; reconcile raw and accepted renditions.",
+        "Validate any bounded economic comparison against original PDF cells and an explicit city/CMA/MSA crosswalk."
+      ],
+      "cannot": [
+        "Rankings do not measure healthcare wages or research-service availability.",
+        "Split headings and duplicate page renditions are not additional independent observations."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C048",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-C049",
+      "datasetId": "91de0066-9343-4d0f-9138-03766520ddc0",
+      "status": "connected",
+      "summary": "The HealthLink original has 91 distinct location records and 81 service identities. Eighty-two records match 79 already-reviewed sites and are retained in coverage receipts. Nine additions preserve building/campus grain: eight verified points and one unresolved building. Released 468 provincial age-by-credential graduate projections and 996 age-by-NOC health-major-group occupation-entry projections across 12 original fiscal periods. Both views retain source Projection status, December 2024 model vintage, reported zeros and published rounding.",
+      "mapConnection": "The existing cancer view retains its exact December 2015 DGUID/HR_UID boundary join. Eight independently reviewed new building/campus points; no invented or shifted coordinates. Shared-campus pavilions remain distinct from hospital reporting units. Whitehorse retains source province YT. No subprovincial measure exists in this workbook. Province-level projections remain charts and records, with no UNBC, health-area or community allocation.",
+      "needs": [
+        "Resolve Dr. Al Hogg’s directory-versus-building location discrepancy before assigning a point.",
+        "Review opening/closure or service changes independently before any current availability claim.",
+        "Actual institution- or regional-level graduate/occupation projections and a compatible geographic definition before any campus, CSD, HA or LHA map.",
+        "For a workforce-gap analysis, independent demand, registration, workforce exits, migration and employment definitions on compatible periods.",
+        "Other collection subfamilies, including incident/event records, retain their earlier source-specific review gaps; this follow-up validates the released graduate, occupation and hospital-directory tables only.",
+        "grant agreements require department/program filtering, amendment identity and complete multipart hash verification."
+      ],
+      "cannot": [
+        "Directory presence is not beds, clinical capacity, research participation or an additional independent acute hospital.",
+        "Service IDs and location IDs are different grains. Separate buildings on one campus cannot be treated as independent hospital reporting units.",
+        "Treat elapsed model fiscal periods as observed graduates.",
+        "Treat occupation entrants as registered or employed professionals, current vacancies, licensed workforce or NHHR staff.",
+        "Add the Total credential row to its components. Rounding can prevent exact component sums.",
+        "Manufacture zeros for the omitted age/NOC combinations.",
+        "Read NOC major group 3 as human health only; veterinary and animal-health categories are retained separately.",
+        "Projected graduate supply is not Northern staffing or UNBC output. Historical incidents are not live travel conditions. Broad grant agreements are not all research payments and cannot be added to agency funding."
+      ],
+      "inspectionScope": "Supplemental hospital-directory scope only. Previously connected historical cancer and separately reviewed graduate projections remain independent family views. Fresh dataset API and hash-locked original workbook: User Guide, Graduate Projections and Occupation Projections. Scientific release covers all 39 age/credential combinations and 83 original health-major-group age/NOC combinations over 12 fiscal periods; unrelated C049 subfamilies retain their prior reviews.",
+      "reviewId": "DATA-C049",
+      "views": [
+        "historical-cancer-incidence",
+        "bc-graduate-projections",
+        "bc-health-occupation-projections",
+        "healthlink-hospital-additions"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 4
+    },
+    {
+      "collectionId": "DATA-C037",
+      "datasetId": "a308df09-ac89-4591-980f-624a4908a9b6",
+      "status": "restricted",
+      "summary": "Restricted strategic package. Only separately reviewed physician, city-condition and verified-facility aggregates are released; internal participant and strategy material is not exposed.",
+      "mapConnection": "Reviewed HSDA codes, exact city labels and individually verified facility aliases; no population or participant allocation.",
+      "needs": [
+        "Use only the reviewed aggregate releases and their safe provenance."
+      ],
+      "cannot": [
+        "Do not expose protected participant, interview, consent, contact or internal strategic records."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C037",
+      "views": [
+        "physicians-hsda",
+        "clinical-condition-mix",
+        "trial-facility-conditions",
+        "trial-facility-coverage"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C050",
+      "datasetId": "439beff1-5c30-4965-9ad7-eb074d7a0fe5",
+      "status": "connected",
+      "summary": "Seven original PubMed ESearch responses supply recorded affiliation-query counts, with 20-ID return samples each. Queries have differing exact names/abbreviations and no capture timestamp in response.",
+      "mapConnection": "Recorded institution query context uses seven reviewed campus representatives; no article is allocated to a facility.",
+      "needs": [
+        "Article-level affiliation validation, deduplication and recorded capture/year filters are needed for validated publication trends or cross-source coverage."
+      ],
+      "cannot": [
+        "20 returned IDs are samples, not total matches. Query counts are not verified institutional publications, annual output, impact or a PubMed/OpenAlex percentage."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C050",
+      "views": [
+        "pubmed-affiliation-counts"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 7
+    },
+    {
+      "collectionId": "DATA-C051",
+      "datasetId": "f7b55b36-aa3e-4279-82ce-c0c1c2198f7e",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Northern local health area populations, Northern LHA population age structure. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed lha connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C051",
+      "views": [
+        "population-lha",
+        "population-lha-ages"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C052",
+      "datasetId": "a90c9d46-801e-4a6d-9b04-b3835def053a",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: CAUBO sponsored research income. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed institution connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C052",
+      "views": [
+        "research-income"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C053",
+      "datasetId": "0c0cb2db-d9ab-43bf-8e1b-e023141f493f",
+      "status": "connected",
+      "summary": "Eight files and 222 worksheet/archive tables cover overlapping workforce sources. Three bounded views provide 90 Northern allied-health rows, 35 BC hospital staffing rows and 120 BC vacancy estimates.",
+      "mapConnection": "Exact Northern HSDA names join codes 51/52/53. Provincial staffing/vacancy data remain charts and tables. Existing nursing and physician observations are not duplicated.",
+      "needs": [
+        "Select one profession, service area or occupation. Keep direct-care people, staffing hours and average vacancies distinct.",
+        "Retain source cells, per-10,000 rates, fiscal periods, original markers and publisher methods. Vacancy composition is not a standard vacancy rate.",
+        "Fiscal vacancy labels follow the explicit quarterly method; FY2020–2021 uses only 2020Q4/2021Q1.",
+        "Review further profession/jurisdiction categories separately. Formatting-inflated worksheet dimensions do not count scientific observations."
+      ],
+      "cannot": [
+        "Direct-care people are not FTEs, vacancies or available trial coordinators.",
+        "Provincial measures cannot establish Northern facility vacancies, service quality or NHHR effects.",
+        "Total and overlapping categories cannot be added into new unique-person/job totals.",
+        "Purchased and paid sick hours are outside the overtime share denominator."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C053",
+      "views": [
+        "allied-health-northern",
+        "bc-hospital-staffing",
+        "bc-health-occupation-vacancies"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 7
+    },
+    {
+      "collectionId": "DATA-C054",
+      "datasetId": "69e4df2d-682d-4149-947f-ffd6347f6c49",
+      "status": "supporting",
+      "summary": "All collected annual CIHR workbooks 2000–2025 Q3 and dictionary were fully hash-verified; worksheet schemas inspected. Older books remain candidates; the Q3 expectation amount view is blocked by blank source values, supporting existing 2019–2024 payments. Archive is a duplicate delivery container.",
+      "mapConnection": "InstitutionPaidCode/Name is the payment geography; ResearchInstitutionCode/Name is a separate role and must not silently replace it.",
+      "needs": [
+        "Aggregate safe paid-institution fields by original FiscalYear and validate source funding-reference uniqueness per year. EN-Metadata row 28 states Q1–Q3 AmountPaidFY is EXPECTED full-fiscal-year payment subject to change, not actual money paid through Q3. Only Q4 is actual paid. All 7,309 expected-amount cells are blank (7,310 worksheet rows include the header), despite 7,309 unique paid institution/fiscal/reference keys. The seven exact comparator institutions contain 1,695 funding records, also with blank expected amounts. Future expected-payment adaptation must require actual nonempty amounts; older schemas need dictionary-based adapters."
+      ],
+      "cannot": [
+        "Research teams/partners create no extra independent payments. Awarded/total paid amounts are not AmountPaidFY; Q3 expected amounts cannot be labeled paid-to-date or actual full-year payments. Blank expected cells cannot be zero, TotalAmountPaid (AB), TotalAmountAwarded (AC), or other inferred funding amounts; no extrapolation from Q3 or person/department map."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C054",
+      "views": [],
+      "relatedViews": [
+        "cihr-payments"
+      ],
+      "originalFilesInspected": 28
+    },
+    {
+      "collectionId": "DATA-C055",
+      "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+      "status": "connected",
+      "summary": "All 18 collected annual originals 2001–2018 fully reconstructed/hash-verified; 17 complete years yield 119 groups. The truncated collected 2011 file is excluded and independently replaced by seven groups from the complete official NSERC 2011 publisher export, yielding 126 mixed-origin observations. Scientific row grain is preserved.",
+      "mapConnection": "Seven exact institutional IDs use current reviewed campus context; no allocation to historical facilities.",
+      "needs": [
+        "The 2011 publisher recovery is outside Zoer: retain distinct origin/resource/hash provenance and the original truncation audit. Preserve original fiscal codes and unknown/combined instalment tokens."
+      ],
+      "cannot": [
+        "Do not treat the truncated 2011 capture as a real funding decline, deduplicate different programmes by application ID, or invent IDs for anonymous source allocations."
+      ],
+      "inspectionScope": "Fresh authorized dataset endpoint and canonical file/table catalogue, full hash verification for the selected originals; scientific fields parsed with explicit allowlists. Only released institutional/organization measures are validated. Personal or director records are excluded.",
+      "reviewId": "DATA-C055",
+      "views": [
+        "nserc-awards-2001-2018"
+      ],
+      "relatedViews": [
+        "nserc-awards"
+      ],
+      "originalFilesInspected": 19
+    },
+    {
+      "collectionId": "DATA-C056",
+      "datasetId": "3d68a488-f8ae-4f7d-9d0a-88368a4255b1",
+      "status": "supporting",
+      "summary": "Verified Canadian five-year OpenAlex counts support existing publications. The candidate named Northern Health is incorrectly Northern Norway Regional Health Authority and is blocked from Canadian views.",
+      "mapConnection": "Verified Canadian IDs only; I63903255 returns country NO and ROR 05f6c0c45, with Norwegian operator website.",
+      "needs": [
+        "Resolve a genuine Northern Health BC identity before loading that candidate; never relabel the Norway response."
+      ],
+      "cannot": [
+        "Its 123 indexed works in 2021–2025 do not describe Northern Health BC. Raw institution search candidates cannot establish identity by filename."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C056",
+      "views": [],
+      "relatedViews": [
+        "publications"
+      ],
+      "originalFilesInspected": 17
+    },
+    {
+      "collectionId": "DATA-C057",
+      "datasetId": "15e93e14-a3b8-4cfd-9fa1-7bf2a458d3dd",
+      "status": "connected",
+      "summary": "Original SSHRC payments produce six institutional source-fiscal-code 2024 aggregates. Fifteen rows tagged 2022 are excluded; institution-specific split funding-file amounts are retained.",
+      "mapConnection": "Exact administered institution names use six reviewed campus points; absent NOSM is not synthesized as zero.",
+      "needs": [
+        "Older fiscal files would need their own source locks and institution identities; retain publisher April 1–March 31 definition without inventing fiscal code start/end."
+      ],
+      "cannot": [
+        "Payments are not commitments, health-only research, applicant salaries or NHHR income. Global file-number deduplication discards split institutional allocations."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C057",
+      "views": [
+        "sshrc-payments"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-C058",
+      "datasetId": "fac35376-dd9b-4da6-b116-15a7cccca987",
+      "status": "connected",
+      "summary": "The original business-count CSV and metadata were inspected: 1, 050, 274 rows. The released subset has 19 observed combinations of seven Northern municipalities and three industries; two absent combinations are not assigned zero.",
+      "mapConnection": "Exact 2021 municipal DGUID/CSD joins. Source REF_DATE 2025-07 is retained despite the December filename.",
+      "needs": [
+        "Business counts without employees and independently verified current activity are absent."
+      ],
+      "cannot": [
+        "Employer locations are not employees, companies, care sites or clinical capacity. Total and individual industries overlap."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C058",
+      "views": [
+        "municipal-business-locations"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C058",
+      "datasetId": "dd9af696-6c3c-4ca9-8422-81b6f7dafa04",
+      "status": "connected",
+      "summary": "The original annual employment CSV and metadata were inspected: 92, 340 rows. The subset retains seven BC survey areas, 2020–2025, and three alternative industry/occupation classifications.",
+      "mapConnection": "Seven 2021 LFS reporting areas: six exact native ERs and one verified union of North Coast 5960 and Nechako 5970. One combined value is retained; the derived display key does not replace a blank source DGUID.",
+      "needs": [
+        "Confidence intervals are not included in the selected estimate rows; do not infer statistical significance from map shading."
+      ],
+      "cannot": [
+        "Health industries and nursing occupations overlap. Estimated employed people are distinct from licensed nurse registrations."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C058-02",
+      "views": [
+        "regional-employment-annual"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C058",
+      "datasetId": "28a8d35a-8ac3-4f99-9eb7-fe94123d0dcb",
+      "status": "connected",
+      "summary": "The archived construction-price CSV and metadata were inspected: 137, 304 rows, 1981 Q1–2024 Q2, 2016 CMA geography, index base 2017=100. A bounded Vancouver quarterly view is released.",
+      "mapConnection": "Chart-only; no Northern CMA data or reviewed 2016 CMA geometry.",
+      "needs": [
+        "Exact 2016 CMA geometry for a spatial display; review the successor series for current prices."
+      ],
+      "cannot": [
+        "Indexes are not CAD costs, rents or dwelling volumes. The YYYY-MM reference dates encode quarters, not months."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C058-03",
+      "views": [
+        "vancouver-construction-index"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C058",
+      "datasetId": "47c4df52-1822-4901-8c8e-79b393df33a2",
+      "status": "connected",
+      "summary": "The complete hash-verified 2021 Census archive and metadata were inspected: 14, 386, 308 data rows. Housing and income extracts retain 29 BC census divisions and seven Northern municipalities with exact native DGUIDs.",
+      "mapConnection": "Exact native 2021 CD/CSD geometry joins. No health-region conversion or population allocation.",
+      "needs": [
+        "Additional Census facets need source-specific universes, denominators and suppression checks."
+      ],
+      "cannot": [
+        "Percentages have different universes and cannot be added. Income refers to 2020; housing and labour context refer to 2021. Indigenous community values are not inferred from neighbouring municipalities."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C058-04",
+      "views": [
+        "census-housing-cd",
+        "census-housing-csd"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C058",
+      "datasetId": "e81d39fa-0062-4d02-998e-6838f8f8a7d2",
+      "status": "connected",
+      "summary": "The original provincial business-count CSV and metadata were inspected: 85, 684 rows. BC industry/size observations retain source REF_DATE 2025-01 despite the June filename.",
+      "mapConnection": "Province-only chart.",
+      "needs": [
+        "Use native municipal C058 for local observations, rather than allocating provincial totals."
+      ],
+      "cannot": [
+        "Size categories and totals overlap. Employer locations are not employee totals or hospital capacity."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C058-05",
+      "views": [
+        "bc-business-locations"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C058",
+      "datasetId": "82004dc5-379b-4338-91ed-c8dc922c93d5",
+      "status": "connected",
+      "summary": "The original national input-output CSV and metadata were inspected: 225, 944 rows. Bounded 2022 output coefficients retain three industries and five coefficient types.",
+      "mapConnection": "National model-input chart, with no local spatial allocation.",
+      "needs": [
+        "A justified economic model, output shock and leakage assumptions are required before any impact scenario."
+      ],
+      "cannot": [
+        "Published coefficients are not observed NHHR benefits or independent additive effects."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C058-06",
+      "views": [
+        "canada-output-coefficients"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C058",
+      "datasetId": "f9e22a7a-3e25-4e65-9d72-63d0c024fc5e",
+      "status": "connected",
+      "summary": "The original provincial input-output CSV and metadata were inspected: 4, 998, 743 rows. Five upload parts were reconstructed and the canonical hash verified. BC 2022 coefficients preserve Within province and All provinces response coverage.",
+      "mapConnection": "Provincial model-input chart, with no Northern allocation.",
+      "needs": [
+        "A justified regional model and leakage/response-coverage assumptions are required before a project scenario."
+      ],
+      "cannot": [
+        "Direct, indirect, induced, simple and total coefficients overlap. Response coverage differs from the location where the original industry output occurs."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C058-07",
+      "views": [
+        "bc-output-coefficients"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C059",
+      "datasetId": "bc5f8ecd-98b3-4185-ada5-ceb71adcbf00",
+      "status": "connected",
+      "summary": "Ten public-source pulls contain overlapping hospital-cost subsets, Statistics Canada series and benchmarks. A 58-row sector-wage view connects two BC employee-industry groups across 1997–2025.",
+      "mapConnection": "Sector wages remain provincial charts/tables. Economic-region LFS needs original scale reconciliation and exact geography; provincial rows cannot be allocated to health areas.",
+      "needs": [
+        "Keep current-CAD hourly and weekly wage metrics separate. Industry classifications differ from healthcare occupations.",
+        "Avoid duplicating existing hospital-cost and travel-benchmark records.",
+        "The LFS extract omits SCALAR_FACTOR: Employment 83.36 labelled Persons needs full Table 14-10-0387 reconciliation before release.",
+        "Review retirement/migration units and source dimensions; refresh official benchmark definitions before new cost scenarios."
+      ],
+      "cannot": [
+        "Provincial industry averages are not Northern occupation medians, individual pay or current offers.",
+        "Do not convert weekly to hourly pay using assumed work hours.",
+        "LFS values cannot be labelled literal people until source scale is verified.",
+        "Canada/BC/facility hospital-cost extracts overlap."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C059",
+      "views": [
+        "bc-sector-wages"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 10
+    },
+    {
+      "collectionId": "DATA-C060",
+      "datasetId": "221dfa8d-f503-497d-9145-6029e6262c4d",
+      "status": "connected",
+      "summary": "All 1, 200 retirement-age rows and metadata were inspected. Canada 2015–2025 total-gender/all-retiree average and median ages are released.",
+      "mapConnection": "National chart only.",
+      "needs": [
+        "Northern occupation-specific retirement observations are absent."
+      ],
+      "cannot": [
+        "Retirement age is retrospective, not a forecast of staffing losses or attrition."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C060",
+      "views": [
+        "canada-retirement-age"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-C062",
+      "datasetId": "3931c38d-6b56-4e32-aceb-ba75aa36eefb",
+      "status": "connected",
+      "summary": "All 1, 090, 980 annual wage rows and metadata were inspected after nine-part hash verification. BC 2020–2025 hourly wages retain explicit gender, age, work type, industry and statistic selections.",
+      "mapConnection": "Province-only chart; nominal CAD per hour.",
+      "needs": [
+        "Regional occupation wages require independently verified sources such as C044."
+      ],
+      "cannot": [
+        "Average and median wages cannot be added. Current nominal wages are distinct from 2022 constant-dollar graduate income."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C062",
+      "views": [
+        "bc-hourly-wages"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-C064",
+      "datasetId": "d9fbd74a-c144-4159-a7c8-cd391f6892d0",
+      "status": "connected",
+      "summary": "All 480, 928 archived LFS rows and metadata were inspected after three-part hash verification. Separate Northern August–December 2024 moving-average estimates retain the older 2016 geography and thousands scalar.",
+      "mapConnection": "Chart-only; the 2016 source is not harmonized to 2021 display polygons.",
+      "needs": [
+        "Reviewed 2016 ER geometry or a separately validated 2021 replacement is required for a map."
+      ],
+      "cannot": [
+        "The source Persons label needs its thousands scalar. Overlapping moving averages cannot be summed or spliced across boundary vintages."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C064",
+      "views": [
+        "regional-labour-archived"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-C066",
+      "datasetId": "f63c0663-2cf5-4fa9-ac73-106deff517f7",
+      "status": "connected",
+      "summary": "All 7, 944 origin/destination migration rows and metadata were inspected. BC arrivals, departures and net retain complete 12-counterparty annual flows from 2015/2016 onward.",
+      "mapConnection": "Provincial flow charts.",
+      "needs": [
+        "Municipal or health-region migration sources are required for local maps."
+      ],
+      "cannot": [
+        "Interprovincial flows exclude international migration, births, deaths and within-province moves. No Northern retention or healthcare-demand forecast is implied."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C066",
+      "views": [
+        "bc-interprovincial-migration"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-C068",
+      "datasetId": "6a43ddf9-f257-4768-a2e8-ac194ed352f8",
+      "status": "candidate",
+      "summary": "Hydrogen-hub tables describe prospective 2035 scenarios and qualitative context. Three original samples establish model assumptions rather than observed health-service data.",
+      "mapConnection": "Local demand, comparison hubs and broad nation descriptions need their original scope. They do not create health-area observations or community points.",
+      "needs": [
+        "Recover exact report pages, units, scenario definitions and sharing rights.",
+        "Base demand 7.5 ktpa H2 and approximately 898 GJ needs energy-scale reconciliation against the source page; no multiplier is inferred.",
+        "Use appropriate authoritative geography and governance for any community description reuse."
+      ],
+      "cannot": [
+        "Scenarios are not observed energy demand, clinical access or health benefits.",
+        "Engineering ranges are not NHHR operating costs."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C068",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 3
+    },
+    {
+      "collectionId": "DATA-C069",
+      "datasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Northern Health Connections route patterns, Travel cost assumptions and benchmarks, Historical patient-travel stop events, Recorded events by travel reference location. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed none, route, stop connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C069",
+      "views": [
+        "travel-schedule",
+        "travel-benchmarks",
+        "travel-stop-events",
+        "travel-stop-locations"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C070",
+      "datasetId": "186ac4db-da46-4c2c-87cc-98fe6a32dd74",
+      "status": "candidate",
+      "summary": "The collected permit SQLite is a planning reference, not an observed cost series. Visual review of original Schedule A-1 confirms that the parsed Garage/Accessory Building value 69 is a construction valuation per square foot, not a $69 permit fee. Brackets, security, unit values and flat charges must remain distinct.",
+      "mapConnection": "This municipal schedule has no distributed observations. A city point would identify the jurisdiction rather than locate each charge.",
+      "needs": [
+        "A source-linked reference can expose separately validated fees with exact basis and conditions. The current 850-line amount column omits these distinctions and is held from quantitative explorer charts.",
+        "For institutional construction, retain the original project-value brackets, January 2024 schedule effective label and December 2025 consolidation date; verify amendments for an actual project. A local project scope is needed for a cost calculation."
+      ],
+      "cannot": [
+        "A parsed number is not automatically a fee or project charge.",
+        "Fee brackets cannot be summed as capital costs or property values."
+      ],
+      "inspectionScope": "Fresh Zoer dataset endpoint and original SQLite/CSV hashes checked on 12 October 2026; selected source rows and their definitions reviewed. No claims, consumption, building permits issued or other utilization records are supplied.",
+      "reviewId": "DATA-C070",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C071",
+      "datasetId": "7bbf9009-4cf6-44d7-ae35-27c4fbbcc8e9",
+      "status": "candidate",
+      "summary": "Five mixed residential seed rates and 207 extracted lines remain tariff references. The Tier 1 seed is approximate and marked verify; percentage changes, commodity charges and electricity unit rates are different measures. The original contains no verified institutional consumption or rate-class allocation.",
+      "mapConnection": "No verified service territories or consumption observations are supplied. Provider-wide tariffs do not establish local LHA or facility costs.",
+      "needs": [
+        "Select and verify an applicable institutional rate schedule with effective date, basic/delivery/commodity charges, tiers, riders and tax treatment; do not substitute residential seeds.",
+        "Provider territories and a measured consumption/load profile are required to map or calculate facility operating costs. The existing PGMaps health boundaries do not establish utility eligibility."
+      ],
+      "cannot": [
+        "Energy charges and percentage rate changes cannot be averaged together.",
+        "Residential rates do not establish institutional rates or complete bills."
+      ],
+      "inspectionScope": "Fresh Zoer dataset endpoint and original SQLite/CSV hashes checked on 12 October 2026; selected source rows and their definitions reviewed. No claims, consumption, building permits issued or other utilization records are supplied.",
+      "reviewId": "DATA-C071",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C072",
+      "datasetId": "a2987ed6-8b5d-4548-aab0-10f962545539",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: Northern Health scheduled surgery waits, Hospital and surgical facility source directory. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed facility, none connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C072",
+      "views": [
+        "surgical-waits-northern",
+        "hospital-facilities"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C073",
+      "datasetId": "8502dc29-352e-4bb5-80a4-1d7b14cd843d",
+      "status": "connected",
+      "summary": "Existing bounded source extracts are connected: BC standard hospital stay costs, Hospital facility costs per weighted case. Selected observations retain source grain, dates, units and limitations; other tables in the larger package are not automatically released.",
+      "mapConnection": "Existing reviewed facility, ha connections use native codes or exact source-identity crosswalks; rows without compatible geometry remain in the source records.",
+      "needs": [
+        "Review original definitions and identity keys before extending to unreleased tables; do not count overlapping originals and summaries twice."
+      ],
+      "cannot": [
+        "Do not allocate organizational or province totals to smaller places, infer current availability from historical snapshots, or replace missing measurements with zero."
+      ],
+      "inspectionScope": "Current dataset endpoint and full source inventory; previously reviewed selected originals and release checks. Larger unreleased source packages are not validated in full by these bounded extracts.",
+      "reviewId": "DATA-C073",
+      "views": [
+        "hospital-stay-costs",
+        "hospital-facility-costs"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-C074",
+      "datasetId": "1ba70ac3-8c15-4e70-b887-457fa1202fa7",
+      "status": "candidate",
+      "summary": "The two original formats reconcile to 6,310 billing-code catalogue entries, including 70 marked inactive. Selected entries retain third-party URLs, fee text and inactive flags. They are not claims, services performed or observed payments, and an inactive $50 entry is not a current billable service.",
+      "mapConnection": "No observational geography exists. Codes do not map to hospitals simply because those procedures may occur there.",
+      "needs": [
+        "Join exact codes to an official dated MSC schedule plus later change bulletins and conditions before releasing a bounded current-fee reference. The official page now lists a May 2026 schedule and September 2026 LFP schedule; July 2026 EEG changes demonstrate that the older January schedule alone is insufficient for all codes.",
+        "Use aggregate claims with reporting period and service geography to visualize utilization. A code catalogue has no hospital/facility allocation; official code definitions cannot manufacture claims."
+      ],
+      "cannot": [
+        "Codes do not count patients, performed services, payments or trial costs.",
+        "Listed fees do not establish guaranteed current payments or hospital costs."
+      ],
+      "inspectionScope": "Fresh Zoer dataset endpoint and original SQLite/CSV hashes checked on 12 October 2026; selected source rows and their definitions reviewed. No claims, consumption, building permits issued or other utilization records are supplied.",
+      "reviewId": "DATA-C074",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-C075",
+      "datasetId": "d25eb6b4-cbed-41a6-b789-c5325a024e89",
+      "status": "supporting",
+      "summary": "All four SQLite tables were inspected: bc_wages 1, 102; retirement_age 400; northern_bc_lfs 570; bc_migration 54. Original C060/C062/C066 sources are preferred. Northern LFS rows lose the scalar and label only a year despite the monthly moving-average source.",
+      "mapConnection": "Derived model support, with no new native geography join.",
+      "needs": [
+        "Recover exact month, source statistic and thousands scalar before using the derived Northern LFS table."
+      ],
+      "cannot": [
+        "A value of 126.0 labelled Persons does not mean 126 people. A year label alone does not establish an annual average or direct care benefit."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C075",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-C076",
+      "datasetId": "b8042ed8-330f-4801-afa7-7aaf3a19b534",
+      "status": "connected",
+      "summary": "The 32, 255-row education-income SQLite table and CSV mirror were inspected. BC graduation cohorts 2010–2017 retain four credentials, reported-income graduates and two/five-year median outcomes.",
+      "mapConnection": "Provincial cohort chart; 2022 constant CAD.",
+      "needs": [
+        "Local campus, health-field and retention breakdowns are absent in the collected source."
+      ],
+      "cannot": [
+        "Only total field of study is present. Graduation year differs from follow-up year. Medians are not individual incomes and cannot be summed."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C076",
+      "views": [
+        "bc-graduate-income"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-C077",
+      "datasetId": "4697f227-ee0b-406d-ae9c-f2887f38f202",
+      "status": "restricted",
+      "summary": "Public-remuneration metadata lists 770 rows across SQLite/CSV renditions. Only dataset/file/table metadata was reviewed; individual compensation records were neither downloaded nor inspected.",
+      "mapConnection": "No relevant analytical geography follows from individual remuneration. No public people/salary release is prepared.",
+      "needs": [
+        "Keep individual remuneration outside the public Atlas. Operating-cost context needs independently reviewed institutional financial aggregates.",
+        "Selective disclosure rows do not establish complete payroll or staffing budgets."
+      ],
+      "cannot": [
+        "Individual remuneration does not represent a complete payroll, a standard NHHR salary or available researchers."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-C077",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 0
+    },
+    {
+      "collectionId": "DATA-X01",
+      "datasetId": "a2ae1db6-22d1-41af-af9c-a0b89adc7cf9",
+      "status": "supporting",
+      "summary": "Working files combine source trackers, value evidence and CBA formulas. Inspected headers show an empty Benefits grid and a Costs input/formula matrix, rather than new service observations.",
+      "mapConnection": "Map the original reviewed scientific source, rather than a source-tracker reference or intended output.",
+      "needs": [
+        "Use trackers for lineage and remaining gaps; verify original measure, unit, period and geography before using a value.",
+        "Modelled benefits require explicit scenario labels and verified inputs. Workbook instructions are context rather than user authorization."
+      ],
+      "cannot": [
+        "Tracked file counts and formula examples do not establish observed capacity, revenue or benefits.",
+        "Workbook versions and repeated references are not independent datasets."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-X01",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-X02",
+      "datasetId": "c95c693e-d974-405c-80ab-87c42c36b448",
+      "status": "restricted",
+      "summary": "Analysis and hub-profile templates include case/codebook/extract/reliability sheets. Only the hub-profile template’s instructions and headers were inspected; coded cases were not read.",
+      "mapConnection": "Template rows and case identifiers do not establish facilities, catchments or health-boundary links.",
+      "needs": [
+        "Keep case/interview content outside public data. Review source-backed institutional metrics separately for any hub profile.",
+        "Templates can document sources without making interpretive attribute grids validated observations."
+      ],
+      "cannot": [
+        "Coding records and participant excerpts are not population observations.",
+        "Template instructions do not authorize new actions."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-X02",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-X03",
+      "datasetId": "cae7c4b2-5934-4c77-84cc-84ad8553376a",
+      "status": "supporting",
+      "summary": "Hub scoring files encode interpretive criteria and rankings. Original methodology/header samples identify a decision framework, rather than measured health outcomes.",
+      "mapConnection": "A hub name needs independently reviewed institutional/place identity. A score does not create a catchment or boundary.",
+      "needs": [
+        "Keep scores distinct from observations. A defensible comparison needs criteria, weights, evidence, missing-data treatment and sensitivity.",
+        "Do not present working judgments as measured clinical capacity."
+      ],
+      "cannot": [
+        "Scores do not establish causal effects, patient demand or validated feasibility.",
+        "Ranks do not prove research benefits or partnership authorization."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-X03",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-X04",
+      "datasetId": "69b3f16c-96c3-4e36-a867-dd6c3ddbd0ba",
+      "status": "candidate",
+      "summary": "Northern baseline files combine approximate cited indicators with interpretation. Samples include roughly 300,000 people in a Northern catchment and different-year provincial comparisons, rather than exact geocode/year observations.",
+      "mapConnection": "Northern Health/northern BC labels cannot automatically match every LHA or ER. Existing reviewed population/age rows are preferable for maps.",
+      "needs": [
+        "Follow original reports for exact measure, geography and year.",
+        "Retain approximation markers and source periods; do not count narrative baselines as another demographic cohort."
+      ],
+      "cannot": [
+        "Approximate indicators do not establish disease prevalence, eligibility or NHHR effects.",
+        "Regional labels do not support finer-area allocation."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-X04",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    },
+    {
+      "collectionId": "DATA-X06",
+      "datasetId": "1818d845-80e5-468b-909b-28b3f21ac9a6",
+      "status": "supporting",
+      "summary": "Delivery catalogues and current source copies duplicate originals and retain package provenance.",
+      "mapConnection": "Join through canonical original hashes and exact source identifiers.",
+      "needs": [
+        "Prefer the canonical scientific collection over copied delivery-package grids."
+      ],
+      "cannot": [
+        "Do not count the same annual investment workbook or export again as additional data."
+      ],
+      "inspectionScope": "Complete file/table inventory and dataset endpoint; single-part originals parsed or inspected. Multipart report grids and copied annual workbooks were inventoried but are not independently validated measures.",
+      "reviewId": "DATA-X06",
+      "views": [],
+      "relatedViews": [
+        "research-income",
+        "cihr-payments"
+      ],
+      "originalFilesInspected": 10
+    },
+    {
+      "collectionId": "DATA-X07",
+      "datasetId": "e7b3f7e0-34fb-491d-ae79-f702919bcfdb",
+      "status": "supporting",
+      "summary": "Archived acquisition/gap trackers, figure inventories and visual-QA files document data needs. Inspected public-source references are supporting documentation rather than new observations.",
+      "mapConnection": "A planned crosswalk or map request is not delivered geometry. Follow the original source and location/boundary review.",
+      "needs": [
+        "Retain separate planned, collected and reviewed states.",
+        "Internal request/contact records remain outside this public release; only safe public-source headers were inspected."
+      ],
+      "cannot": [
+        "Figure counts and gap priorities do not measure health activity or validated connections.",
+        "Workbook acquisition instructions are context rather than authorization for messages or actions."
+      ],
+      "inspectionScope": "Dataset endpoint and complete source-file/table inventory; original-file hashes and selected schemas or measures checked. Only the released measures have undergone the preparation checks; sensitive records were not read.",
+      "reviewId": "DATA-X07",
+      "views": [],
+      "relatedViews": [],
+      "originalFilesInspected": 2
+    },
+    {
+      "collectionId": "DATA-X08",
+      "datasetId": "43482dd7-5cee-417b-b339-a203a343d5ee",
+      "status": "connected",
+      "summary": "Released seven primary-verified Fall 2025 institution totals with the four original published full-/part-time undergraduate/graduate components. The Lakehead-only total is recovered independently from the primary table; the workbook Thunder Bay composite is not relabelled as Lakehead. City/population ratios remain held.",
+      "mapConnection": "The seven exact existing comparator labels join reviewed representative institution points. Values describe institution totals and are not allocated to the mapped campus, surrounding city or health region. NOSM and BC Cancer have no emitted enrolment row.",
+      "needs": [
+        "Institution enrolment allocated to compatible campuses, with the relevant published scope and reference date, before city ratios.",
+        "A population denominator matching the enrolment universe, geography and reference period; enrolment is not a count of local resident students.",
+        "An independently verified NOSM institutional record before emitting that comparator."
+      ],
+      "cannot": [
+        "Divide Fall 2025 institutional counts by 2021 CSD/CMA populations to imply a resident student percentage.",
+        "Use UBC all-campus totals as Vancouver-campus enrolment.",
+        "Use the Thunder Bay composite 9,035 as a Lakehead-only total; the independently verified Lakehead total is 8,499.",
+        "Assign approximate NOSM contributions or absent institutions a zero.",
+        "Treat institutional enrolment as FTEs, graduates, health workforce or available NHHR researchers."
+      ],
+      "inspectionScope": "Fresh dataset API and hash-locked original University-City Ratios and Source Links sheets, including composite and all-campus notes. Independently checked seven Fall 2025 institutional records on the primary Universities Canada table; city ratios and approximate NOSM contributions remain held.",
+      "reviewId": "DATA-X08",
+      "views": [
+        "institution-enrolment"
+      ],
+      "relatedViews": [],
+      "originalFilesInspected": 1
+    }
+  ],
+  "boundaryProposals": [
+    {
+      "title": "Archived cancer incidence",
+      "status": "connected",
+      "datasetId": "historical-cancer-incidence",
+      "recommended": "Connected: official December 2015 Statistics Canada boundaries, matched by original DGUID/HR_UID pairs.",
+      "reason": "Three Northern HSDAs have archived polygons. The BC benchmark remains in charts and records without an overlapping province polygon."
+    },
+    {
+      "title": "Combined North Coast and Nechako labour estimates",
+      "status": "connected",
+      "datasetId": "regional-employment-annual",
+      "recommended": "Connected: verified union of PGMaps 2021 economic regions 5960 and 5970.",
+      "reason": "Statistics Canada defines one combined LFS reporting area. Its source value is mapped once; blank source identifiers remain blank and the display key is explicitly derived."
+    },
+    {
+      "title": "Finer community health maps",
+      "status": "connected",
+      "datasetId": "northern-chsa-incidence",
+      "recommended": "Connected: supplementary PHSA incidence and lifetime-prevalence rates for 29 publicly listed Northern CHSAs, joined by native codes to matching 2018 display boundaries.",
+      "reason": "The collected Zoer C016 extract has no CHSA scientific rows. New publisher measurements are attributed separately. Forty archived Ministry polygons from the Community Map of Canada mirror provide display context; current PGMaps polygons cannot replace the changed 2018 McBride/Valemount geography. Historical omitted cells and unreleased communities remain missing, and the mirror is used for visualization only."
+    },
+    {
+      "title": "McMaster institutional comparator",
+      "status": "connected",
+      "datasetId": "cfi-projects-total",
+      "recommended": "Connected: verified main-campus reference at 1280 Main Street West, Hamilton.",
+      "reason": "The official university address agrees with independently retrieved OpenStreetMap campus geometry. Institution-wide totals are not allocated to a campus, individual project or nearby population."
+    }
+  ],
+  "supplementalReviews": [
+    {
+      "datasetId": "CDR2022",
+      "sourceOrigin": "supplemental",
+      "sourceName": "PHSA public source CDR2022",
+      "sourceUrl": "https://communityhealth.phsa.ca/GetTheData/SearchByLocation",
+      "status": "connected",
+      "summary": "Two supplementary views contain 4,453 directly downloaded historical Northern CHSA registry rates and six explicit unreleased latest-period profile cells. All rates retain their native 2018 areas, Total sex category, original fiscal periods, 2011 Canadian Census age standardization and four separate disease definitions.",
+      "mapConnection": "Forty archived Northern CHSA v2018 polygons provide context for 29 publicly listed measured CHSAs, using exact identifiers and names. Geometry is explicitly retrieved from the Community Map of Canada mirror attributed to BC Ministry of Health April 2019, rather than the unavailable historical official ZIP or the current PGMaps v2022 layer. McBride/Valemount remains one historical area. No health-authority values are allocated downward.",
+      "needs": [
+        "A fresh direct official v2018 geometry archive would strengthen geometry provenance; its historical DataBC ZIP currently returns HTTP 404.",
+        "Current CHSA observations would require independently reviewed periods, definitions and matching modern geometry.",
+        "Confidence intervals and condition-specific non-release reasons are not provided by these downloads."
+      ],
+      "cannot": [
+        "Sum standardized rates across CHSAs or conditions, infer raw case counts from population projections, or interpret them as crude resident percentages.",
+        "Assign a 2018 McBride/Valemount rate to later McBride and Valemount polygons separately.",
+        "Treat 29 publicly listed CHSAs as complete Northern population coverage or assign unlisted communities zero.",
+        "Fill absent historical cells with zero or reconstruct unreleased values.",
+        "Claim a transient per-request API topic/indicator GUID is a permanent source dataset ID. CDR2022 is the actual stable source key in the PHSA query contract.",
+        "Use the licensed display mirror for downstream spatial analysis or area-weighted allocation.",
+        "Describe FY2001–2002 to FY2020–2021 as current because retrieval occurred in October 2026.",
+        "Infer trial eligibility, current demand, causality or NHHR impact from these aggregate rates."
+      ]
+    }
+  ],
+  "facilityLocationReviewAsset": "facility-location-gap-review.json"
+}

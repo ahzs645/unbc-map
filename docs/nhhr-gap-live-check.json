@@ -1,0 +1,242 @@
+[
+  {
+    "name": "chsa-map",
+    "viewport": {
+      "width": 1360,
+      "height": 900
+    },
+    "attrs": {
+      "data-testid": "atlas-map-state",
+      "data-ready": "true",
+      "data-feature-count": "40",
+      "data-matched-count": "29",
+      "data-rendered-features": "40",
+      "data-metric": "rate_per_1000",
+      "data-focus-regions": "[]",
+      "data-focus-count": "0",
+      "data-scale-domain": "[3.5,11.9]",
+      "data-camera": "{\"center\":[-125.159088,55.629775566219735],\"zoom\":4.56526105265356,\"bearing\":0,\"pitch\":0}",
+      "data-basemap": "streets",
+      "data-basemap-format": "vector",
+      "data-raster-sources": "0",
+      "data-basemap-status": "ready",
+      "data-basemap-features": "51",
+      "data-basemap-error": "",
+      "data-geometry": "polygons",
+      "data-map-aggregation": "none"
+    },
+    "overflow": 0,
+    "errors": []
+  },
+  {
+    "name": "chsa-story",
+    "viewport": {
+      "width": 1360,
+      "height": 900
+    },
+    "attrs": {
+      "data-testid": "atlas-map-state",
+      "data-ready": "true",
+      "data-feature-count": "40",
+      "data-matched-count": "3",
+      "data-rendered-features": "5",
+      "data-metric": "rate_per_1000",
+      "data-focus-regions": "[\"5241\",\"5242\",\"5243\"]",
+      "data-focus-count": "0",
+      "data-scale-domain": "[89.6,103.3]",
+      "data-camera": "{\"center\":[-122.75228899999999,53.92704201473151],\"zoom\":9.687948728798787,\"bearing\":0,\"pitch\":0}",
+      "data-basemap": "streets",
+      "data-basemap-format": "vector",
+      "data-raster-sources": "0",
+      "data-basemap-status": "ready",
+      "data-basemap-features": "96",
+      "data-basemap-error": "",
+      "data-geometry": "polygons",
+      "data-map-aggregation": "none"
+    },
+    "overflow": 0,
+    "errors": []
+  },
+  {
+    "name": "nserc-2011",
+    "viewport": {
+      "width": 1360,
+      "height": 900
+    },
+    "attrs": {
+      "data-testid": "atlas-map-state",
+      "data-ready": "true",
+      "data-feature-count": "9",
+      "data-matched-count": "7",
+      "data-rendered-features": "7",
+      "data-metric": "award_amount_cad",
+      "data-focus-regions": "[]",
+      "data-focus-count": "0",
+      "data-scale-domain": "[1615488,78769758]",
+      "data-camera": "{\"center\":[-93.41749,48.85937995781299],\"zoom\":3.2622641457004438,\"bearing\":0,\"pitch\":0}",
+      "data-basemap": "streets",
+      "data-basemap-format": "vector",
+      "data-raster-sources": "0",
+      "data-basemap-status": "ready",
+      "data-basemap-features": "247",
+      "data-basemap-error": "",
+      "data-geometry": "points",
+      "data-bubble-scale-max": "78769758",
+      "data-rendered-points": "[{\"code\":\"calgary\",\"value\":36583904,\"radius\":21.807970302655132},{\"code\":\"dalhousie\",\"value\":25286344,\"radius\":18.13064454885946},{\"code\":\"lakehead\",\"value\":2767591,\"radius\":5.998203246252723},{\"code\":\"mcmaster\",\"value\":34475686,\"radius\":21.170283847035442},{\"code\":\"ubc\",\"value\":78769758,\"radius\":32},{\"code\":\"unbc\",\"value\":1615488,\"radius\":4.582706998205114},{\"code\":\"usask\",\"value\":39178448,\"radius\":22.568039679205615}]",
+      "data-map-aggregation": "none"
+    },
+    "overflow": 0,
+    "errors": []
+  },
+  {
+    "name": "capital-parcels",
+    "viewport": {
+      "width": 1360,
+      "height": 900
+    },
+    "attrs": {
+      "data-testid": "atlas-map-state",
+      "data-ready": "true",
+      "data-feature-count": "25",
+      "data-matched-count": "13",
+      "data-rendered-features": "13",
+      "data-metric": "reported_projects",
+      "data-focus-regions": "[]",
+      "data-focus-count": "0",
+      "data-scale-domain": "[1,6]",
+      "data-camera": "{\"center\":[-126.15913745,55.80708106738601],\"zoom\":4.7511739624600295,\"bearing\":0,\"pitch\":0}",
+      "data-basemap": "streets",
+      "data-basemap-format": "vector",
+      "data-raster-sources": "0",
+      "data-basemap-status": "ready",
+      "data-basemap-features": "34",
+      "data-basemap-error": "",
+      "data-geometry": "points",
+      "data-bubble-scale-max": "6",
+      "data-rendered-points": "[{\"code\":\"capital-context-gateway\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"capital-context-houston\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"capital-context-mills-historical\",\"value\":2,\"radius\":18.475208614068023},{\"code\":\"capital-context-rotary\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"capital-context-stikine-historical\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"capital-context-tumbler\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"hospital-g-r-baker-memorial-hospital\",\"value\":2,\"radius\":18.475208614068023},{\"code\":\"hospital-mcbride-and-district-hospital\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"hospital-northern-haida-gwaii-hospital-and-health-centre\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"hospital-prince-rupert-regional-hospital\",\"value\":6,\"radius\":32},{\"code\":\"hospital-saint-john-hospital\",\"value\":3,\"radius\":22.627416997969522},{\"code\":\"hospital-university-hospital-of-northern-british-columbia\",\"value\":5,\"radius\":29.21186973360886},{\"code\":\"hospital-wrinch-memorial-hospital\",\"value\":1,\"radius\":13.063945294843617}]",
+      "data-map-aggregation": "none"
+    },
+    "overflow": 0,
+    "errors": []
+  },
+  {
+    "name": "chsa-map",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "attrs": {
+      "data-testid": "atlas-map-state",
+      "data-ready": "true",
+      "data-feature-count": "40",
+      "data-matched-count": "29",
+      "data-rendered-features": "40",
+      "data-metric": "rate_per_1000",
+      "data-focus-regions": "[]",
+      "data-focus-count": "0",
+      "data-scale-domain": "[3.5,11.9]",
+      "data-camera": "{\"center\":[-125.15908800000003,55.629775566219735],\"zoom\":3.6918426364767303,\"bearing\":0,\"pitch\":0}",
+      "data-basemap": "streets",
+      "data-basemap-format": "vector",
+      "data-raster-sources": "0",
+      "data-basemap-status": "ready",
+      "data-basemap-features": "22",
+      "data-basemap-error": "",
+      "data-geometry": "polygons",
+      "data-map-aggregation": "none"
+    },
+    "overflow": 0,
+    "errors": []
+  },
+  {
+    "name": "chsa-story",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "attrs": {
+      "data-testid": "atlas-map-state",
+      "data-ready": "true",
+      "data-feature-count": "40",
+      "data-matched-count": "3",
+      "data-rendered-features": "10",
+      "data-metric": "rate_per_1000",
+      "data-focus-regions": "[\"5241\",\"5242\",\"5243\"]",
+      "data-focus-count": "0",
+      "data-scale-domain": "[89.6,103.3]",
+      "data-camera": "{\"center\":[-125.8,54.1],\"zoom\":4,\"bearing\":0,\"pitch\":0}",
+      "data-basemap": "streets",
+      "data-basemap-format": "vector",
+      "data-raster-sources": "0",
+      "data-basemap-status": "ready",
+      "data-basemap-features": "4",
+      "data-basemap-error": "",
+      "data-geometry": "polygons",
+      "data-map-aggregation": "none"
+    },
+    "overflow": 0,
+    "errors": []
+  },
+  {
+    "name": "nserc-2011",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "attrs": {
+      "data-testid": "atlas-map-state",
+      "data-ready": "true",
+      "data-feature-count": "9",
+      "data-matched-count": "7",
+      "data-rendered-features": "7",
+      "data-metric": "award_amount_cad",
+      "data-focus-regions": "[]",
+      "data-focus-count": "0",
+      "data-scale-domain": "[1615488,78769758]",
+      "data-camera": "{\"center\":[-93.41749,48.85937995781299],\"zoom\":1.5433809105176954,\"bearing\":0,\"pitch\":0}",
+      "data-basemap": "streets",
+      "data-basemap-format": "vector",
+      "data-raster-sources": "0",
+      "data-basemap-status": "ready",
+      "data-basemap-features": "26",
+      "data-basemap-error": "",
+      "data-geometry": "points",
+      "data-bubble-scale-max": "78769758",
+      "data-rendered-points": "[{\"code\":\"calgary\",\"value\":36583904,\"radius\":21.807970302655132},{\"code\":\"dalhousie\",\"value\":25286344,\"radius\":18.13064454885946},{\"code\":\"lakehead\",\"value\":2767591,\"radius\":5.998203246252723},{\"code\":\"mcmaster\",\"value\":34475686,\"radius\":21.170283847035442},{\"code\":\"ubc\",\"value\":78769758,\"radius\":32},{\"code\":\"unbc\",\"value\":1615488,\"radius\":4.582706998205114},{\"code\":\"usask\",\"value\":39178448,\"radius\":22.568039679205615}]",
+      "data-map-aggregation": "none"
+    },
+    "overflow": 0,
+    "errors": []
+  },
+  {
+    "name": "capital-parcels",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "attrs": {
+      "data-testid": "atlas-map-state",
+      "data-ready": "true",
+      "data-feature-count": "25",
+      "data-matched-count": "13",
+      "data-rendered-features": "13",
+      "data-metric": "reported_projects",
+      "data-focus-regions": "[]",
+      "data-focus-count": "0",
+      "data-scale-domain": "[1,6]",
+      "data-camera": "{\"center\":[-126.15913745,55.80708106738601],\"zoom\":3.8573133484597446,\"bearing\":0,\"pitch\":0}",
+      "data-basemap": "streets",
+      "data-basemap-format": "vector",
+      "data-raster-sources": "0",
+      "data-basemap-status": "ready",
+      "data-basemap-features": "15",
+      "data-basemap-error": "",
+      "data-geometry": "points",
+      "data-bubble-scale-max": "6",
+      "data-rendered-points": "[{\"code\":\"capital-context-gateway\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"capital-context-houston\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"capital-context-mills-historical\",\"value\":2,\"radius\":18.475208614068023},{\"code\":\"capital-context-rotary\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"capital-context-stikine-historical\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"capital-context-tumbler\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"hospital-g-r-baker-memorial-hospital\",\"value\":2,\"radius\":18.475208614068023},{\"code\":\"hospital-mcbride-and-district-hospital\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"hospital-northern-haida-gwaii-hospital-and-health-centre\",\"value\":1,\"radius\":13.063945294843617},{\"code\":\"hospital-prince-rupert-regional-hospital\",\"value\":6,\"radius\":32},{\"code\":\"hospital-saint-john-hospital\",\"value\":3,\"radius\":22.627416997969522},{\"code\":\"hospital-university-hospital-of-northern-british-columbia\",\"value\":5,\"radius\":29.21186973360886},{\"code\":\"hospital-wrinch-memorial-hospital\",\"value\":1,\"radius\":13.063945294843617}]",
+      "data-map-aggregation": "none"
+    },
+    "overflow": 0,
+    "errors": []
+  }
+]

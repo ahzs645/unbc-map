@@ -1,0 +1,3232 @@
+{
+  "sources": [
+    {
+      "collectionId": "DATA-C049",
+      "datasetId": "91de0066-9343-4d0f-9138-03766520ddc0",
+      "filename": "bc_hospitals_healthlinkbc.csv",
+      "originalFileId": "89e04ea4-d6e2-4c89-854d-c1b651141db1",
+      "sha256": "47cd7ddd4a622effe834243970934c2647203387edf248c1d8c31650d7bbab12",
+      "sourceRelativePath": "Data Research/Data/raw/public_pull_2026-04-29/bc_hospitals_healthlinkbc.csv",
+      "tableName": "nhhr_data_c049_6e78ae316dce_zip_data_c049_bc_hos",
+      "sourceRows": 91
+    },
+    {
+      "collectionId": "DATA-C012",
+      "datasetId": "7a0b8ced-71ed-4e8a-aea2-37030adec6a2",
+      "filename": "northern_health_capital_projects.csv",
+      "originalFileId": "36c19768-b125-4743-b8eb-4c2884fa731a",
+      "sha256": "5b25041cdbea7d2c3c5ad60a374e6f81f040e0330020dd1408bcac726ff785c1",
+      "sourceRelativePath": "Data Research/Data/processed/manual_reports/analytic_tables/northern_health_capital_projects.csv",
+      "tableName": "nhhr_data_c012_54329385f37e_zip_data_c012_northe",
+      "sourceRows": 46
+    },
+    {
+      "collectionId": "DATA-C012",
+      "datasetId": "7a0b8ced-71ed-4e8a-aea2-37030adec6a2",
+      "filename": "report_table_rows_clean.csv",
+      "originalFileId": "2e3464d4-32c3-426c-aa68-861070b0ea98",
+      "sha256": "e43e7fb97e6b8643d53bbaae7c02b967ba6996236a88136ddb8b365adecdc4a3",
+      "sourceRelativePath": "Data Research/Data/processed/manual_reports/analytic_tables/report_table_rows_clean.csv",
+      "tableName": "nhhr_data_c012_54329385f37e_zip_data_c012__8",
+      "sourceRows": 16741
+    }
+  ],
+  "primaryReports": [
+    {
+      "name": "annual-report-pandemic-2020-2022.pdf",
+      "url": "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/annual-reports/documents/annual-report-pandemic-2020-2022.pdf",
+      "sha256": "f8335686a4455462779f95aa1b26a14eba2decdaf995a671e89fe8d7d2448bf0",
+      "bytes": 13499574,
+      "httpStatus": 200
+    },
+    {
+      "name": "biennial-report-highlights-2022-2024.pdf",
+      "url": "https://www.northernhealth.ca/sites/northern_health/files/about-us/reports/annual-reports/documents/biennial-report-highlights-2022-2024.pdf",
+      "sha256": "edb1ad637b8bdfcab3ba48309b43fb5bdf792ea1ea60e0a456e035e3050f99cc",
+      "bytes": 8001197,
+      "httpStatus": 200
+    }
+  ],
+  "baselineRegistry": {
+    "path": "src/atlas/hospitalLocations.json",
+    "sha256": "403b7bc90119697bde888200928477c3274b8eea33378f0dd5d7faf65011b007",
+    "pointCount": 84
+  },
+  "readOnlyPgmapsRegistry": {
+    "path": "vendor/bcdatamapper/data-sources/healthdata/health_place_registry/health_place_registry.csv",
+    "sha256": "5485a4788943578831a54f5c57b8e1cdace7c6de26e4594eb959400b1ebae789"
+  },
+  "reviewedCapitalCells": [
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 49,
+      "source_line": 8,
+      "table_index": 1,
+      "table_row": 1,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Mills Memorial Hospital",
+      "project_name": "Ultrasound 1 Replacement",
+      "project_value_raw": "$256,000",
+      "district_funding_raw": "$82,165",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Mills Memorial Hospital: Ultrasound 1 Replacement",
+      "generic_table_row_label": "Mills Memorial Hospital: Ultrasound 1",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 49, line 8",
+      "generic_row_values": [
+        "$256,000",
+        "$82,165",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 49,
+      "source_line": 11,
+      "table_index": 1,
+      "table_row": 2,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Mills Memorial Hospital",
+      "project_name": "Ultrasound 2 Replacement",
+      "project_value_raw": "$256,000",
+      "district_funding_raw": "$78,538",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Mills Memorial Hospital: Ultrasound 2 Replacement",
+      "generic_table_row_label": "Mills Memorial Hospital: Ultrasound 2",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 49, line 11",
+      "generic_row_values": [
+        "$256,000",
+        "$78,538",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 49,
+      "source_line": 14,
+      "table_index": 1,
+      "table_row": 3,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Prince Rupert Regional Hospital",
+      "project_name": "Ultrasound 1 Replacement",
+      "project_value_raw": "$224,000",
+      "district_funding_raw": "$89,600",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Prince Rupert Regional Hospital: Ultrasound 1 Replacement",
+      "generic_table_row_label": "Prince Rupert Regional Hospital: Ultrasound",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 49, line 14",
+      "generic_row_values": [
+        "$224,000",
+        "$89,600",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 49,
+      "source_line": 17,
+      "table_index": 1,
+      "table_row": 4,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Prince Rupert Regional Hospital",
+      "project_name": "X-Ray Luminos Lotus Max Replacement",
+      "project_value_raw": "$786,471",
+      "district_funding_raw": "$ -",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Prince Rupert Regional Hospital: X-Ray Luminos Lotus Max Replacement",
+      "generic_table_row_label": "Prince Rupert Regional Hospital: X-Ray",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 49, line 17",
+      "generic_row_values": [
+        "$786,471",
+        "$-",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 49,
+      "source_line": 20,
+      "table_index": 1,
+      "table_row": 5,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Prince Rupert Regional Hospital",
+      "project_name": "X-Ray Replacement",
+      "project_value_raw": "$293,595",
+      "district_funding_raw": "$ -",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Prince Rupert Regional Hospital: X-Ray Replacement",
+      "generic_table_row_label": "Prince Rupert Regional Hospital: X-Ray",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 49, line 20",
+      "generic_row_values": [
+        "$293,595",
+        "$-",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 49,
+      "source_line": 23,
+      "table_index": 1,
+      "table_row": 6,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Prince Rupert Regional Hospital",
+      "project_name": "Mobile X-Ray Replacement",
+      "project_value_raw": "$293,595",
+      "district_funding_raw": "$ -",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Prince Rupert Regional Hospital: Mobile X-Ray Replacement",
+      "generic_table_row_label": "Prince Rupert Regional Hospital: Mobile",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 49, line 23",
+      "generic_row_values": [
+        "$293,595",
+        "$-",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 49,
+      "source_line": 26,
+      "table_index": 1,
+      "table_row": 7,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "St. John Hospital",
+      "project_name": "Ultrasound 1 Replacement",
+      "project_value_raw": "$253,000",
+      "district_funding_raw": "$101,200",
+      "funder_code": "SNRHD",
+      "raw_pdf_description": "St. John Hospital: Ultrasound 1 Replacement",
+      "generic_table_row_label": "St. John Hospital: Ultrasound 1 Replacement",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 49, line 26",
+      "generic_row_values": [
+        "$253,000",
+        "$101,200",
+        "SNRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 49,
+      "source_line": 28,
+      "table_index": 1,
+      "table_row": 8,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Stikine Regional Health Centre",
+      "project_name": "X-Ray Machine Replacement",
+      "project_value_raw": "$535,000",
+      "district_funding_raw": "$171,997",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Stikine Regional Health Centre: X-Ray Machine Replacement",
+      "generic_table_row_label": "Stikine Regional Health Centre: X-Ray",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 49, line 28",
+      "generic_row_values": [
+        "$535,000",
+        "$171,997",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 49,
+      "source_line": 31,
+      "table_index": 1,
+      "table_row": 9,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "University Hospital of Northern BC",
+      "project_name": "DI Canon Aplio 500 Ultrasound Replacement",
+      "project_value_raw": "$249,000",
+      "district_funding_raw": "$99,600",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "University Hospital of Northern BC: DI Canon Aplio 500 Ultrasound Replacement",
+      "generic_table_row_label": "University Hospital of Northern BC: DI Canon",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 49, line 31",
+      "generic_row_values": [
+        "$249,000",
+        "$99,600",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 49,
+      "source_line": 34,
+      "table_index": 1,
+      "table_row": 10,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Wrinch Memorial Hospital",
+      "project_name": "Ultrasound Replacement",
+      "project_value_raw": "$260,000",
+      "district_funding_raw": "$104,000",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Wrinch Memorial Hospital: Ultrasound Replacement",
+      "generic_table_row_label": "Wrinch Memorial Hospital: Ultrasound",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 49, line 34",
+      "generic_row_values": [
+        "$260,000",
+        "$104,000",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 5,
+      "table_index": 1,
+      "table_row": 1,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Dawson Creek and District Hospital",
+      "project_name": "Hospital Replacement",
+      "project_value_raw": "$ 377,860,000",
+      "district_funding_raw": "$150,229,000",
+      "funder_code": "PRRHD",
+      "raw_pdf_description": "Dawson Creek and District Hospital Replacement",
+      "generic_table_row_label": "Dawson Creek and District Hospital Replacement",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 5",
+      "generic_row_values": [
+        "$ 377,860,000 $150,229,000",
+        "PRRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 7,
+      "table_index": 1,
+      "table_row": 2,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "GR Baker Memorial Hospital",
+      "project_name": "Sterile Compounding Room Upgrade",
+      "project_value_raw": "$114,000",
+      "district_funding_raw": "$40,691",
+      "funder_code": "CCRHD",
+      "raw_pdf_description": "GR Baker Memorial Hospital: Sterile Compounding Room Upgrade",
+      "generic_table_row_label": "GR Baker Memorial Hospital: Sterile Compounding $114,000",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 7",
+      "generic_row_values": [
+        "$40,691",
+        "CCRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 9,
+      "table_index": 1,
+      "table_row": 3,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "GR Baker Memorial Hospital",
+      "project_name": "Emergency Room and Intensive Care Unit Addition",
+      "project_value_raw": "$27,000,000",
+      "district_funding_raw": "$10,800,000",
+      "funder_code": "CCRHD",
+      "raw_pdf_description": "GR Baker Memorial Hospital: Emergency Room and Intensive Care Unit Addition",
+      "generic_table_row_label": "GR Baker Memorial Hospital: Emergency Room and $27,000,000",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 9",
+      "generic_row_values": [
+        "$10,800,000",
+        "CCRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 11,
+      "table_index": 1,
+      "table_row": 4,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Gateway Lodge",
+      "project_name": "Vocera",
+      "project_value_raw": "$497,000",
+      "district_funding_raw": "$198,800",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "Gateway Lodge: Vocera",
+      "generic_table_row_label": "Gateway Lodge: Vocera",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 11",
+      "generic_row_values": [
+        "$497,000",
+        "$198,800",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 12,
+      "table_index": 1,
+      "table_row": 5,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Houston Health Centre",
+      "project_name": "AHU Replacement",
+      "project_value_raw": "$866,715",
+      "district_funding_raw": "$346,686",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Houston Health Centre: AHU Replacement",
+      "generic_table_row_label": "Houston Health Centre: AHU Replacement",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 12",
+      "generic_row_values": [
+        "$866,715",
+        "$346,686",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 13,
+      "table_index": 1,
+      "table_row": 6,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "McBride Hospital",
+      "project_name": "Boiler Plant Upgrade",
+      "project_value_raw": "$403,582",
+      "district_funding_raw": "$-",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "McBride Hospital: Boiler Plant Upgrade",
+      "generic_table_row_label": "McBride Hospital: Boiler Plant Upgrade",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 13",
+      "generic_row_values": [
+        "$403,582",
+        "$-",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 15,
+      "table_index": 1,
+      "table_row": 7,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Mills Memorial Hospital",
+      "project_name": "Hospital Replacement",
+      "project_value_raw": "$622,595,000",
+      "district_funding_raw": "$110,200,000",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Mills Memorial Hospital Replacement",
+      "generic_table_row_label": "Mills Memorial Hospital Replacement",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 15",
+      "generic_row_values": [
+        "$622,595,000 $110,200,000",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 17,
+      "table_index": 1,
+      "table_row": 8,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Northern Haida Gwaii Hospital",
+      "project_name": "Nurse Call Phase 2",
+      "project_value_raw": "$158,000",
+      "district_funding_raw": "$57,652",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Northern Haida Gwaii Hospital: Nurse Call Phase 2",
+      "generic_table_row_label": "Northern Haida Gwaii Hospital: Nurse Call Phase 2",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 17",
+      "generic_row_values": [
+        "$158,000",
+        "$57,652",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 18,
+      "table_index": 1,
+      "table_row": 9,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Prince Rupert Regional Hospital",
+      "project_name": "Domestic Hot Water Upgrade",
+      "project_value_raw": "$478,998",
+      "district_funding_raw": "$191,600",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Prince Rupert Regional Hospital: Domestic Hot Water Upgrade",
+      "generic_table_row_label": "Prince Rupert Regional Hospital: Domestic Hot",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 18",
+      "generic_row_values": [
+        "$478,998",
+        "$191,600",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 20,
+      "table_index": 1,
+      "table_row": 10,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Prince Rupert Regional Hospital",
+      "project_name": "Medical Device Reprocessing Department - Equipment Replacement & Centralization",
+      "project_value_raw": "$838,000",
+      "district_funding_raw": "$-",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Prince Rupert Regional Hospital: Medical Device Reprocessing Department - Equipment Replacement & Centralization",
+      "generic_table_row_label": "Prince Rupert Regional Hospital: Medical",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 20",
+      "generic_row_values": [
+        "$838,000",
+        "$-",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 23,
+      "table_index": 1,
+      "table_row": 11,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Quesnel Substance Abuse Club",
+      "project_name": "Leasehold Improvement",
+      "project_value_raw": "$1,271,000",
+      "district_funding_raw": "$508,400",
+      "funder_code": "CCRHD",
+      "raw_pdf_description": "Quesnel Substance Abuse Club: Leasehold Improvement",
+      "generic_table_row_label": "Quesnel Substance Abuse Club: Leasehold",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 23",
+      "generic_row_values": [
+        "$1,271,000",
+        "$508,400",
+        "CCRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 25,
+      "table_index": 1,
+      "table_row": 12,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Rotary Manor",
+      "project_name": "Chiller Replacement",
+      "project_value_raw": "$293,000",
+      "district_funding_raw": "$98,933",
+      "funder_code": "PRRHD",
+      "raw_pdf_description": "Rotary Manor: Chiller Replacement",
+      "generic_table_row_label": "Rotary Manor: Chiller Replacement",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 25",
+      "generic_row_values": [
+        "$293,000",
+        "$98,933",
+        "PRRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 27,
+      "table_index": 1,
+      "table_row": 13,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "St. John Hospital",
+      "project_name": "Heat Pumps and Coils",
+      "project_value_raw": "$591,384",
+      "district_funding_raw": "$208,954",
+      "funder_code": "SNRHD",
+      "raw_pdf_description": "St. John Hospital: Heat Pumps and Coils",
+      "generic_table_row_label": "St. John Hospital: Heat Pumps and Coils",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 27",
+      "generic_row_values": [
+        "$591,384",
+        "$208,954",
+        "SNRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 29,
+      "table_index": 1,
+      "table_row": 14,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "St. John Hospital",
+      "project_name": "Sterile Compounding Room Upgrade",
+      "project_value_raw": "$1,972,000",
+      "district_funding_raw": "$788,800",
+      "funder_code": "SNRHD",
+      "raw_pdf_description": "St. John Hospital: Sterile Compounding Room Upgrade",
+      "generic_table_row_label": "St. John Hospital: Sterile Compounding Room",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 29",
+      "generic_row_values": [
+        "$1,972,000",
+        "$788,800",
+        "SNRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 31,
+      "table_index": 1,
+      "table_row": 15,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Stuart Lake Hospital",
+      "project_name": "Hospital Replacement",
+      "project_value_raw": "$116,124,000",
+      "district_funding_raw": "$18,400,000",
+      "funder_code": "SNRHD",
+      "raw_pdf_description": "Stuart Lake Hospital Replacement",
+      "generic_table_row_label": "Stuart Lake Hospital Replacement",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 31",
+      "generic_row_values": [
+        "$116,124,000 $18,400,000",
+        "SNRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 33,
+      "table_index": 1,
+      "table_row": 16,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "Tumbler Ridge Health Centre",
+      "project_name": "Cooling System Replacement",
+      "project_value_raw": "$598,000",
+      "district_funding_raw": "$239,200",
+      "funder_code": "PRRHD",
+      "raw_pdf_description": "Tumbler Ridge Health Centre: Cooling System Replacement",
+      "generic_table_row_label": "Tumbler Ridge Health Centre: Cooling System",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 33",
+      "generic_row_values": [
+        "$598,000",
+        "$239,200",
+        "PRRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 35,
+      "table_index": 1,
+      "table_row": 17,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "University Hospital of Northern BC",
+      "project_name": "Cardiac Services Department Upgrade",
+      "project_value_raw": "$12,500,000",
+      "district_funding_raw": "$5,000,000",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "University Hospital of Northern BC: Cardiac Services Department Upgrade",
+      "generic_table_row_label": "University Hospital of Northern BC: Cardiac",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 35",
+      "generic_row_values": [
+        "$12,500,000",
+        "$5,000,000",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 37,
+      "table_index": 1,
+      "table_row": 18,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "University Hospital of Northern BC",
+      "project_name": "Negative Pressure Upgrade",
+      "project_value_raw": "$360,000",
+      "district_funding_raw": "$-",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "University Hospital of Northern BC: Negative Pressure Upgrade",
+      "generic_table_row_label": "University Hospital of Northern BC: Negative",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 37",
+      "generic_row_values": [
+        "$360,000",
+        "$-",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 39,
+      "table_index": 1,
+      "table_row": 19,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "University Hospital of Northern BC",
+      "project_name": "Integrated Fault Detection & Diagnostics",
+      "project_value_raw": "$225,032",
+      "district_funding_raw": "$62,153",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "University Hospital of Northern BC Integrated Fault Detection & Diagnostics",
+      "generic_table_row_label": "University Hospital of Northern BC Integrated Fault",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 39",
+      "generic_row_values": [
+        "$225,032",
+        "$62,153",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2020-2022",
+      "source_slug": "northern_health_annual_report_pandemic_2020-2022",
+      "source_page": 50,
+      "source_line": 41,
+      "table_index": 1,
+      "table_row": 20,
+      "published_headers": [
+        "Project Description",
+        "Project Value",
+        "Regional Health District Funding",
+        "Regional Health District"
+      ],
+      "facility_name": "University Hospital of Northern BC",
+      "project_name": "Transformer Replacement",
+      "project_value_raw": "$2,125,000",
+      "district_funding_raw": "$850,000",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "University Hospital of Northern BC: Transformer Replacement",
+      "generic_table_row_label": "University Hospital of Northern BC: Transformer",
+      "source_citation": "Data/raw/manual_reports/northern_health_annual_report_pandemic_2020-2022.pdf p. 50, line 41",
+      "generic_row_values": [
+        "$2,125,000",
+        "$850,000",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 51,
+      "source_line": 14,
+      "table_index": 1,
+      "table_row": 1,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health fistrict funding",
+        "Regional health district"
+      ],
+      "facility_name": "G.R. Baker Hospital",
+      "project_name": "General X-ray",
+      "project_value_raw": "$626,567",
+      "district_funding_raw": "$250,627",
+      "funder_code": "CCRHD",
+      "raw_pdf_description": "General X-ray",
+      "generic_table_row_label": "General X-ray",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 51, line 14",
+      "generic_row_values": [
+        "$626,567",
+        "$250,627",
+        "CCRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 51,
+      "source_line": 16,
+      "table_index": 1,
+      "table_row": 2,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health fistrict funding",
+        "Regional health district"
+      ],
+      "facility_name": "G.R. Baker Hospital",
+      "project_name": "Ultrasound replacement",
+      "project_value_raw": "$202,782",
+      "district_funding_raw": "$81,113",
+      "funder_code": "CCRHD",
+      "raw_pdf_description": "Ultrasound replacement",
+      "generic_table_row_label": "Ultrasound",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 51, line 16",
+      "generic_row_values": [
+        "$202,782",
+        "$81,113",
+        "CCRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 51,
+      "source_line": 19,
+      "table_index": 1,
+      "table_row": 3,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health fistrict funding",
+        "Regional health district"
+      ],
+      "facility_name": "G.R. Baker Hospital",
+      "project_name": "Chemistry analyzer replacement",
+      "project_value_raw": "$691,000",
+      "district_funding_raw": "$276,400",
+      "funder_code": "CCRHD",
+      "raw_pdf_description": "Chemistry analyzer replacement",
+      "generic_table_row_label": "Chemistry analyzer",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 51, line 19",
+      "generic_row_values": [
+        "$691,000",
+        "$276,400",
+        "CCRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 51,
+      "source_line": 22,
+      "table_index": 1,
+      "table_row": 4,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health fistrict funding",
+        "Regional health district"
+      ],
+      "facility_name": "G.R. Baker Hospital",
+      "project_name": "Surgical tower replacement",
+      "project_value_raw": "$307,000",
+      "district_funding_raw": "$122,800",
+      "funder_code": "CCRHD",
+      "raw_pdf_description": "Surgical tower replacement",
+      "generic_table_row_label": "Surgical tower",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 51, line 22",
+      "generic_row_values": [
+        "$307,000",
+        "$122,800",
+        "CCRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 52,
+      "source_line": 10,
+      "table_index": 1,
+      "table_row": 1,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "University Hospital of Northern British Columbia",
+      "project_name": "IVUS system",
+      "project_value_raw": "$153,475",
+      "district_funding_raw": "$61,390",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "IVUS system",
+      "generic_table_row_label": "IVUS system",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 52, line 10",
+      "generic_row_values": [
+        "$153,475",
+        "$61,390",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 52,
+      "source_line": 12,
+      "table_index": 1,
+      "table_row": 2,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "University Hospital of Northern British Columbia",
+      "project_name": "Ultrasound replacement",
+      "project_value_raw": "$209,481",
+      "district_funding_raw": "$83,793",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "Ultrasound replacement",
+      "generic_table_row_label": "Ultrasound",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 52, line 12",
+      "generic_row_values": [
+        "$209,481",
+        "$83,793",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 52,
+      "source_line": 15,
+      "table_index": 1,
+      "table_row": 3,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "University Hospital of Northern British Columbia",
+      "project_name": "X-ray room replacement",
+      "project_value_raw": "$500,512",
+      "district_funding_raw": "$200,205",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "X-ray room replacement",
+      "generic_table_row_label": "X-ray room",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 52, line 15",
+      "generic_row_values": [
+        "$500,512",
+        "$200,205",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 52,
+      "source_line": 18,
+      "table_index": 1,
+      "table_row": 4,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "University Hospital of Northern British Columbia",
+      "project_name": "Telemetry and monitoring system upgrade",
+      "project_value_raw": "$1,227,000",
+      "district_funding_raw": "$323,600",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "Telemetry and monitoring system upgrade",
+      "generic_table_row_label": "Telemetry and",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 52, line 18",
+      "generic_row_values": [
+        "$1,227,000",
+        "$323,600",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 52,
+      "source_line": 22,
+      "table_index": 1,
+      "table_row": 5,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "University Hospital of Northern British Columbia",
+      "project_name": "Chemistry automation",
+      "project_value_raw": "$9,608,000",
+      "district_funding_raw": "$3,843,200",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "Chemistry automation",
+      "generic_table_row_label": "Chemistry",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 52, line 22",
+      "generic_row_values": [
+        "$9,608,000",
+        "$3,843,200",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 52,
+      "source_line": 25,
+      "table_index": 1,
+      "table_row": 6,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "University Hospital of Northern British Columbia",
+      "project_name": "Sysmex machines replacement",
+      "project_value_raw": "$494,433",
+      "district_funding_raw": "$192,510",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "Sysmex machines replacement",
+      "generic_table_row_label": "Sysmex machines",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 52, line 25",
+      "generic_row_values": [
+        "$494,433",
+        "$192,510",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 52,
+      "source_line": 28,
+      "table_index": 1,
+      "table_row": 7,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "University Hospital of Northern British Columbia",
+      "project_name": "Tissue processor replacement",
+      "project_value_raw": "$195,156",
+      "district_funding_raw": "$78,062",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "Tissue processor replacement",
+      "generic_table_row_label": "Tissue processor",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 52, line 28",
+      "generic_row_values": [
+        "$195,156",
+        "$78,062",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 52,
+      "source_line": 31,
+      "table_index": 1,
+      "table_row": 8,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "University Hospital of Northern British Columbia",
+      "project_name": "Maternity and fetal monitoring system",
+      "project_value_raw": "$324,000",
+      "district_funding_raw": "$93,200",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "Maternity and fetal monitoring system",
+      "generic_table_row_label": "Maternity and fetal",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 52, line 31",
+      "generic_row_values": [
+        "$324,000",
+        "$93,200",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 52,
+      "source_line": 34,
+      "table_index": 1,
+      "table_row": 9,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "University Hospital of Northern British Columbia",
+      "project_name": "Anesthesia units x3 replacement",
+      "project_value_raw": "$407,479",
+      "district_funding_raw": "$143,600",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "Anesthesia units x3 replacement",
+      "generic_table_row_label": "Anesthesia units x3",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 52, line 34",
+      "generic_row_values": [
+        "$407,479",
+        "$143,600",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 52,
+      "source_line": 37,
+      "table_index": 1,
+      "table_row": 10,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "University Hospital of Northern British Columbia",
+      "project_name": "Eye microscope replacement",
+      "project_value_raw": "$332,352",
+      "district_funding_raw": "$132,940",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "Eye microscope replacement",
+      "generic_table_row_label": "Eye microscope",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 52, line 37",
+      "generic_row_values": [
+        "$332,352",
+        "$132,940",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 52,
+      "source_line": 40,
+      "table_index": 1,
+      "table_row": 11,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "University Hospital of Northern British Columbia",
+      "project_name": "Sterilizer replacement",
+      "project_value_raw": "$123,353",
+      "district_funding_raw": "-",
+      "funder_code": "FFGRHD",
+      "raw_pdf_description": "Sterilizer replacement",
+      "generic_table_row_label": "Sterilizer",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 52, line 40",
+      "generic_row_values": [
+        "$123,353",
+        "-",
+        "FFGRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 53,
+      "source_line": 9,
+      "table_index": 1,
+      "table_row": 1,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Bulkley Valley Hospital",
+      "project_name": "Chemistry analyzers replacement",
+      "project_value_raw": "$767,000",
+      "district_funding_raw": "$306,800",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Chemistry analyzers replacement",
+      "generic_table_row_label": "Chemistry",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 53, line 9",
+      "generic_row_values": [
+        "$767,000",
+        "$306,800",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 53,
+      "source_line": 13,
+      "table_index": 1,
+      "table_row": 2,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Bulkley Valley Hospital",
+      "project_name": "Anesthetic machine replacement",
+      "project_value_raw": "$104,250",
+      "district_funding_raw": "$39,915",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Anesthetic machine replacement",
+      "generic_table_row_label": "Anesthetic machine",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 53, line 13",
+      "generic_row_values": [
+        "$104,250",
+        "$39,915",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 53,
+      "source_line": 21,
+      "table_index": 2,
+      "table_row": 1,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Houston Health Centre",
+      "project_name": "X-ray machine replacement",
+      "project_value_raw": "$511,375",
+      "district_funding_raw": "$204,550",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "X-ray machine replacement",
+      "generic_table_row_label": "X-ray machine",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 53, line 21",
+      "generic_row_values": [
+        "$511,375",
+        "$204,550",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 53,
+      "source_line": 29,
+      "table_index": 3,
+      "table_row": 1,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Kitimat General Hospital",
+      "project_name": "Bone densitometer replacement",
+      "project_value_raw": "$159,924",
+      "district_funding_raw": "$63,970",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Bone densitometer replacement",
+      "generic_table_row_label": "Bone densitometer",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 53, line 29",
+      "generic_row_values": [
+        "$159,924",
+        "$63,970",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 53,
+      "source_line": 33,
+      "table_index": 3,
+      "table_row": 2,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Kitimat General Hospital",
+      "project_name": "Anesthetic machine replacement",
+      "project_value_raw": "$101,429",
+      "district_funding_raw": "$40,572",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Anesthetic machine replacement",
+      "generic_table_row_label": "Anesthetic machine",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 53, line 33",
+      "generic_row_values": [
+        "$101,429",
+        "$40,572",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 53,
+      "source_line": 41,
+      "table_index": 4,
+      "table_row": 1,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Northern Haida Gwaii Hospital and Health Centre",
+      "project_name": "Ultrasound replacement",
+      "project_value_raw": "$213,598",
+      "district_funding_raw": "$85,439",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Ultrasound replacement",
+      "generic_table_row_label": "Ultrasound",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 53, line 41",
+      "generic_row_values": [
+        "$213,598",
+        "$85,439",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 54,
+      "source_line": 10,
+      "table_index": 1,
+      "table_row": 1,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Prince Rupert Regional Hospital",
+      "project_name": "Ultrasound machine replacement",
+      "project_value_raw": "$212,418",
+      "district_funding_raw": "$84,967",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Ultrasound machine replacement",
+      "generic_table_row_label": "Ultrasound machine",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 54, line 10",
+      "generic_row_values": [
+        "$212,418",
+        "$84,967",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 54,
+      "source_line": 18,
+      "table_index": 2,
+      "table_row": 1,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Wrinch Memorial Hospital",
+      "project_name": "Anesthetic machine replacement",
+      "project_value_raw": "$102,299",
+      "district_funding_raw": "$40,920",
+      "funder_code": "NWRHD",
+      "raw_pdf_description": "Anesthetic machine replacement",
+      "generic_table_row_label": "Anesthetic machine",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 54, line 18",
+      "generic_row_values": [
+        "$102,299",
+        "$40,920",
+        "NWRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 54,
+      "source_line": 26,
+      "table_index": 3,
+      "table_row": 1,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Dawson Creek and District Hospital",
+      "project_name": "CT replacement",
+      "project_value_raw": "$1,957,375",
+      "district_funding_raw": "$779,043",
+      "funder_code": "PRRHD",
+      "raw_pdf_description": "CT replacement",
+      "generic_table_row_label": "CT replacement",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 54, line 26",
+      "generic_row_values": [
+        "$1,957,375",
+        "$779,043",
+        "PRRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 54,
+      "source_line": 28,
+      "table_index": 3,
+      "table_row": 2,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Dawson Creek and District Hospital",
+      "project_name": "Mobile C-Arm replacement",
+      "project_value_raw": "$256,691",
+      "district_funding_raw": "$102,676",
+      "funder_code": "PRRHD",
+      "raw_pdf_description": "Mobile C-Arm replacement",
+      "generic_table_row_label": "Mobile C-Arm",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 54, line 28",
+      "generic_row_values": [
+        "$256,691",
+        "$102,676",
+        "PRRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 54,
+      "source_line": 31,
+      "table_index": 3,
+      "table_row": 3,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Dawson Creek and District Hospital",
+      "project_name": "X-ray replacement",
+      "project_value_raw": "$899,000",
+      "district_funding_raw": "$359,600",
+      "funder_code": "PRRHD",
+      "raw_pdf_description": "X-ray replacement",
+      "generic_table_row_label": "X-ray replacement",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 54, line 31",
+      "generic_row_values": [
+        "$899,000",
+        "$359,600",
+        "PRRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 54,
+      "source_line": 33,
+      "table_index": 3,
+      "table_row": 4,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Dawson Creek and District Hospital",
+      "project_name": "Chemistry analyzers replacement",
+      "project_value_raw": "$877,000",
+      "district_funding_raw": "$350,800",
+      "funder_code": "PRRHD",
+      "raw_pdf_description": "Chemistry analyzers replacement",
+      "generic_table_row_label": "Chemistry",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 54, line 33",
+      "generic_row_values": [
+        "$877,000",
+        "$350,800",
+        "PRRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 54,
+      "source_line": 37,
+      "table_index": 3,
+      "table_row": 5,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Dawson Creek and District Hospital",
+      "project_name": "Anesthetic machine replacement",
+      "project_value_raw": "$101,344",
+      "district_funding_raw": "$40,538",
+      "funder_code": "PRRHD",
+      "raw_pdf_description": "Anesthetic machine replacement",
+      "generic_table_row_label": "Anesthetic machine",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 54, line 37",
+      "generic_row_values": [
+        "$101,344",
+        "$40,538",
+        "PRRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 54,
+      "source_line": 40,
+      "table_index": 3,
+      "table_row": 6,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Dawson Creek and District Hospital",
+      "project_name": "Patient monitoring system replacement",
+      "project_value_raw": "$431,000",
+      "district_funding_raw": "$172,400",
+      "funder_code": "PRRHD",
+      "raw_pdf_description": "Patient monitoring system replacement",
+      "generic_table_row_label": "Patient monitoring",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 54, line 40",
+      "generic_row_values": [
+        "$431,000",
+        "$172,400",
+        "PRRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 55,
+      "source_line": 9,
+      "table_index": 1,
+      "table_row": 1,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Fort St. John Hospital",
+      "project_name": "Chemistry analyzer replacement",
+      "project_value_raw": "$1,305,149",
+      "district_funding_raw": "$522,060",
+      "funder_code": "SNRHD",
+      "raw_pdf_description": "Chemistry analyzer replacement",
+      "generic_table_row_label": "Chemistry analyzer",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 55, line 9",
+      "generic_row_values": [
+        "$1,305,149",
+        "$522,060",
+        "SNRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 55,
+      "source_line": 12,
+      "table_index": 1,
+      "table_row": 2,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Fort St. John Hospital",
+      "project_name": "C-Arm replacement",
+      "project_value_raw": "$269,570",
+      "district_funding_raw": "$107,828",
+      "funder_code": "SNRHD",
+      "raw_pdf_description": "C-Arm replacement",
+      "generic_table_row_label": "C-Arm replacement",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 55, line 12",
+      "generic_row_values": [
+        "$269,570",
+        "$107,828",
+        "SNRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 55,
+      "source_line": 14,
+      "table_index": 1,
+      "table_row": 3,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Fort St. John Hospital",
+      "project_name": "Orthopedic fracture table",
+      "project_value_raw": "$175,356",
+      "district_funding_raw": "$70,142",
+      "funder_code": "SNRHD",
+      "raw_pdf_description": "Orthopedic fracture table",
+      "generic_table_row_label": "Orthopedic fracture",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 55, line 14",
+      "generic_row_values": [
+        "$175,356",
+        "$70,142",
+        "SNRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 55,
+      "source_line": 17,
+      "table_index": 1,
+      "table_row": 4,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Fort St. John Hospital",
+      "project_name": "X-ray room and portable replacement",
+      "project_value_raw": "$1,195,000",
+      "district_funding_raw": "$478,000",
+      "funder_code": "SNRHD",
+      "raw_pdf_description": "X-ray room and portable replacement",
+      "generic_table_row_label": "X-ray room",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 55, line 17",
+      "generic_row_values": [
+        "$1,195,000",
+        "$478,000",
+        "SNRHD"
+      ]
+    },
+    {
+      "report_period": "2022-2024",
+      "source_slug": "northern_health_biennial_report_highlights_2022-2024",
+      "source_page": 55,
+      "source_line": 21,
+      "table_index": 1,
+      "table_row": 5,
+      "published_headers": [
+        "Project description",
+        "Project value",
+        "Regional health district funding",
+        "Regional health district"
+      ],
+      "facility_name": "Fort St. John Hospital",
+      "project_name": "Anesthetic machine replacement",
+      "project_value_raw": "$103,075",
+      "district_funding_raw": "$41,230",
+      "funder_code": "SNRHD",
+      "raw_pdf_description": "Anesthetic machine replacement",
+      "generic_table_row_label": "Anesthetic machine",
+      "source_citation": "Data/raw/manual_reports/northern_health_biennial_report_highlights_2022-2024.pdf p. 55, line 21",
+      "generic_row_values": [
+        "$103,075",
+        "$41,230",
+        "SNRHD"
+      ]
+    }
+  ],
+  "coverage": {
+    "sourceDirectoryRows": 91,
+    "sourceDirectoryServiceIds": 81,
+    "existingSourceRows": 82,
+    "existingPhysicalSites": 79,
+    "additionRows": 9,
+    "verifiedAdditions": 8,
+    "unlocatedAdditions": 1,
+    "existingMatches": [
+      {
+        "source_location_id": "17643950",
+        "source_service_id": "17992315",
+        "source_label": "BC Children's Hospital",
+        "source_address": "4500 Oak Street",
+        "source_city": "Vancouver",
+        "existing_location_code": "hospital-bc-children-s-hospital",
+        "existing_name": "BC Children's Hospital",
+        "existing_source_url": "https://www.bcchildrens.ca/",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/36893897",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17644367",
+        "source_service_id": "17690738",
+        "source_label": "Abbotsford Regional Hospital and Cancer Centre",
+        "source_address": "32900 Marshall Road",
+        "source_city": "Abbotsford",
+        "existing_location_code": "hospital-abbotsford-regional-hospital-cancer-centre",
+        "existing_name": "Abbotsford Regional Hospital & Cancer Centre",
+        "existing_source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Abbotsford/abbotsford-regional-hospital-and-cancer-centre",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/293945054",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17644361",
+        "source_service_id": "17691002",
+        "source_label": "Delta Hospital",
+        "source_address": "5800 Mountain View Boulevard",
+        "source_city": "Delta",
+        "existing_location_code": "hospital-delta-hospital",
+        "existing_name": "Delta Hospital",
+        "existing_source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Delta/delta-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/902491360",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17644353",
+        "source_service_id": "17992280",
+        "source_label": "Burnaby Hospital",
+        "source_address": "3935 Kincaid Street",
+        "source_city": "Burnaby",
+        "existing_location_code": "hospital-burnaby-hospital",
+        "existing_name": "Burnaby Hospital",
+        "existing_source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/41839791",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17644355",
+        "source_service_id": "17992283",
+        "source_label": "Chilliwack General Hospital",
+        "source_address": "45600 Menholm Road",
+        "source_city": "Chilliwack",
+        "existing_location_code": "hospital-chilliwack-general-hospital",
+        "existing_name": "Chilliwack General Hospital",
+        "existing_source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Chilliwack/chilliwack-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/25207131",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17644429",
+        "source_service_id": "17992296",
+        "source_label": "Langley Memorial Hospital",
+        "source_address": "22051 Fraser Highway",
+        "source_city": "Langley",
+        "existing_location_code": "hospital-langley-memorial-hospital",
+        "existing_name": "Langley Memorial Hospital",
+        "existing_source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/233309999",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17644420",
+        "source_service_id": "17992306",
+        "source_label": "Royal Columbian Hospital",
+        "source_address": "330 E Columbia Street",
+        "source_city": "New Westminster",
+        "existing_location_code": "hospital-royal-columbian-hospital",
+        "existing_name": "Royal Columbian Hospital",
+        "existing_source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/New-Westminster/royal-columbian-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/41879302",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17644418",
+        "source_service_id": "17992309",
+        "source_label": "Peace Arch Hospital",
+        "source_address": "15521 Russell Avenue",
+        "source_city": "White Rock",
+        "existing_location_code": "hospital-peace-arch-hospital",
+        "existing_name": "Peace Arch Hospital",
+        "existing_source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/White-Rock/peace-arch-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/476150022",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17644460",
+        "source_service_id": "17992312",
+        "source_label": "Mission Memorial Hospital",
+        "source_address": "7324 Hurd Street",
+        "source_city": "Mission",
+        "existing_location_code": "hospital-mission-memorial-hospital",
+        "existing_name": "Mission Memorial Hospital",
+        "existing_source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Mission/mission-memorial-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/396326194",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17644442",
+        "source_service_id": "17992330",
+        "source_label": "Fraser Canyon Hospital",
+        "source_address": "1275 7th Avenue",
+        "source_city": "Hope",
+        "existing_location_code": "hospital-fraser-canyon-hospital",
+        "existing_name": "Fraser Canyon Hospital",
+        "existing_source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Hope/fraser-canyon-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/902487947",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17644370",
+        "source_service_id": "17992336",
+        "source_label": "Jim Pattison Outpatient Care and Surgery Centre",
+        "source_address": "9750 140th Street",
+        "source_city": "Surrey",
+        "existing_location_code": "hospital-jim-pattison-outpatient-care-and-surgery-centre",
+        "existing_name": "Jim Pattison Outpatient Care and Surgery Centre",
+        "existing_source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Surrey/jim-pattison-outpatient-care-and-surgery-centre",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/138669627",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17644363",
+        "source_service_id": "17992342",
+        "source_label": "Ridge Meadows Hospital",
+        "source_address": "11666 Laity Street",
+        "source_city": "Maple Ridge",
+        "existing_location_code": "hospital-ridge-meadows-hospital",
+        "existing_name": "Ridge Meadows Hospital",
+        "existing_source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/902053499",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17644357",
+        "source_service_id": "17992343",
+        "source_label": "Eagle Ridge Hospital",
+        "source_address": "475 Guildford Way",
+        "source_city": "Port Moody",
+        "existing_location_code": "hospital-eagle-ridge-hospital",
+        "existing_name": "Eagle Ridge Hospital",
+        "existing_source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Port-Moody/eagle-ridge-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/41770711",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17644365",
+        "source_service_id": "17992344",
+        "source_label": "Surrey Memorial Hospital",
+        "source_address": "13750 96th Avenue",
+        "source_city": "Surrey",
+        "existing_location_code": "hospital-surrey-memorial-hospital",
+        "existing_name": "Surrey Memorial Hospital",
+        "existing_source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Surrey/surrey-memorial-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/relation/1280789",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646849",
+        "source_service_id": "17691083",
+        "source_label": "100 Mile District General Hospital",
+        "source_address": "555 Cedar Avenue S",
+        "source_city": "100 Mile House",
+        "existing_location_code": "hospital-100-mile-district-general-hospital",
+        "existing_name": "100 Mile District general hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/100-mile-district-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/1469034158",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646553",
+        "source_service_id": "17691126",
+        "source_label": "Arrow Lakes Hospital",
+        "source_address": "97 1st Avenue NE",
+        "source_city": "Nakusp",
+        "existing_location_code": "hospital-arrow-lakes-hospital",
+        "existing_name": "Arrow Lakes Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/arrow-lakes-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/node/4858168655",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17647135",
+        "source_service_id": "17691150",
+        "source_label": "Boundary District Hospital",
+        "source_address": "7649 22nd Street",
+        "source_city": "Grand Forks",
+        "existing_location_code": "hospital-boundary-hospital",
+        "existing_name": "Boundary Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/boundary-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/330174593",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646585",
+        "source_service_id": "17691179",
+        "source_label": "Cariboo Memorial Hospital and Health Centre",
+        "source_address": "517 6th Avenue N",
+        "source_city": "Williams Lake",
+        "existing_location_code": "hospital-cariboo-memorial-hospital",
+        "existing_name": "Cariboo Memorial Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/cariboo-memorial-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/961058486",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646548",
+        "source_service_id": "17691211",
+        "source_label": "Dr. Helmcken Memorial Hospital",
+        "source_address": "640 Park Drive",
+        "source_city": "Clearwater",
+        "existing_location_code": "hospital-dr-helmcken-memorial-hospital",
+        "existing_name": "Dr. Helmcken Memorial Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/dr-helmcken-memorial-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/406228670",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646893",
+        "source_service_id": "17691430",
+        "source_label": "East Kootenay Regional Hospital",
+        "source_address": "13 24th Avenue N",
+        "source_city": "Cranbrook",
+        "existing_location_code": "hospital-east-kootenay-regional-hospital",
+        "existing_name": "East Kootenay Regional Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/east-kootenay-regional-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/851965703",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646590",
+        "source_service_id": "17691446",
+        "source_label": "Elk Valley Hospital",
+        "source_address": "1501 5th Avenue",
+        "source_city": "Fernie",
+        "existing_location_code": "hospital-elk-valley-hospital",
+        "existing_name": "Elk Valley Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/elk-valley-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/102179690",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17647105",
+        "source_service_id": "17691557",
+        "source_label": "Golden and District Hospital",
+        "source_address": "835 9th Avenue S",
+        "source_city": "Golden",
+        "existing_location_code": "hospital-golden-and-district-hospital",
+        "existing_name": "Golden and District Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/golden-district-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/222375116",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17647103",
+        "source_service_id": "17691571",
+        "source_label": "Invermere and District Hospital",
+        "source_address": "850 10th Avenue",
+        "source_city": "Invermere",
+        "existing_location_code": "hospital-invermere-and-district-hospital",
+        "existing_name": "Invermere and District Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/invermere-district-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/222828095",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646551",
+        "source_service_id": "17691577",
+        "source_label": "Kootenay Boundary Regional Hospital",
+        "source_address": "1200 Hospital Bench",
+        "source_city": "Trail",
+        "existing_location_code": "hospital-kootenay-boundary-regional-hospital",
+        "existing_name": "Kootenay Boundary Regional Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/kootenay-boundary-regional-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/1442213136",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646896",
+        "source_service_id": "17691592",
+        "source_label": "Kootenay Lake Hospital",
+        "source_address": "3 View Street",
+        "source_city": "Nelson",
+        "existing_location_code": "hospital-kootenay-lake-hospital",
+        "existing_name": "Kootenay Lake Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/kootenay-lake-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/278139080",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646747",
+        "source_service_id": "17992291",
+        "source_label": "Nicola Valley Hospital and Health Centre",
+        "source_address": "3451 Voght Street",
+        "source_city": "Merritt",
+        "existing_location_code": "hospital-nicola-valley-hospital-and-health-centre",
+        "existing_name": "Nicola Valley Hospital and Health Centre",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/nicola-valley-hospital-and-health-centre",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/1471108233",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17647118",
+        "source_service_id": "17992305",
+        "source_label": "Shuswap Lake General Hospital",
+        "source_address": "601 10th Street NE",
+        "source_city": "Salmon Arm",
+        "existing_location_code": "hospital-shuswap-lake-general-hospital",
+        "existing_name": "Shuswap Lake General Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/shuswap-lake-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/144825870",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646898",
+        "source_service_id": "17992311",
+        "source_label": "Royal Inland Hospital",
+        "source_address": "311 Columbia Street",
+        "source_city": "Kamloops",
+        "existing_location_code": "hospital-royal-inland-hospital",
+        "existing_name": "Royal Inland Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/royal-inland-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/222534272",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646943",
+        "source_service_id": "17992313",
+        "source_label": "Lillooet Hospital and Health Centre",
+        "source_address": "951 Murray Street",
+        "source_city": "Lillooet",
+        "existing_location_code": "hospital-lillooet-hospital-and-health-centre",
+        "existing_name": "Lillooet Hospital and Health Centre",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/lillooet-hospital-health-centre",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/545720213",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646569",
+        "source_service_id": "17992318",
+        "source_label": "Queen Victoria Hospital and Health Centre",
+        "source_address": "1200 Newlands Road",
+        "source_city": "Revelstoke",
+        "existing_location_code": "hospital-queen-victoria-hospital-and-health-centre",
+        "existing_name": "Queen Victoria Hospital and Health Centre",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/queen-victoria-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/1435555664",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17647101",
+        "source_service_id": "17992321",
+        "source_label": "South Okanagan General Hospital",
+        "source_address": "911 McKinney Road",
+        "source_city": "Oliver",
+        "existing_location_code": "hospital-south-okanagan-general-hospital",
+        "existing_name": "South Okanagan General Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/south-okanagan-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/819314272",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646580",
+        "source_service_id": "17992328",
+        "source_label": "Vernon Jubilee Hospital",
+        "source_address": "2101 32nd Street",
+        "source_city": "Vernon",
+        "existing_location_code": "hospital-vernon-jubilee-hospital",
+        "existing_name": "Vernon Jubilee Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/vernon-jubilee-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/696495495",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646738",
+        "source_service_id": "17992329",
+        "source_label": "Kelowna General Hospital",
+        "source_address": "2268 Pandosy Street",
+        "source_city": "Kelowna",
+        "existing_location_code": "hospital-kelowna-general-hospital",
+        "existing_name": "Kelowna General Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/kelowna-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/100584338",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17647098",
+        "source_service_id": "17992335",
+        "source_label": "Creston Valley Hospital and Health Centre",
+        "source_address": "312 15th Avenue N",
+        "source_city": "Creston",
+        "existing_location_code": "hospital-creston-valley-hospital-health-centre",
+        "existing_name": "Creston Valley Hospital & Health Centre",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/creston-valley-hospital-health-centre",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/888625615",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17646582",
+        "source_service_id": "17992348",
+        "source_label": "Penticton Regional Hospital",
+        "source_address": "550 Carmi Avenue",
+        "source_city": "Penticton",
+        "existing_location_code": "hospital-penticton-regional-hospital",
+        "existing_name": "Penticton Regional Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/penticton-regional-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/363169810",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17647096",
+        "source_service_id": "17992350",
+        "source_label": "Princeton General Hospital",
+        "source_address": "98 Ridgewood Drive",
+        "source_city": "Princeton",
+        "existing_location_code": "hospital-princeton-general-hospital",
+        "existing_name": "Princeton General Hospital",
+        "existing_source_url": "https://www.interiorhealth.ca/locations/princeton-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/368030604",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17648978",
+        "source_service_id": "17690807",
+        "source_label": "Vancouver General Hospital - Jim Pattison Pavilion",
+        "source_address": "899 West 12th Avenue",
+        "source_city": "Vancouver",
+        "existing_location_code": "hospital-vancouver-general-hospital",
+        "existing_name": "Vancouver General Hospital",
+        "existing_source_url": "https://www.vch.ca/en/location/vancouver-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/relation/17286359",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17648993",
+        "source_service_id": "17992304",
+        "source_label": "qathet General Hospital",
+        "source_address": "5000 Joyce Avenue",
+        "source_city": "Powell River",
+        "existing_location_code": "hospital-qathet-general-hospital",
+        "existing_name": "qathet General Hospital",
+        "existing_source_url": "https://www.vch.ca/en/location/qathet-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/579986274",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17648998",
+        "source_service_id": "17992323",
+        "source_label": "Sechelt Hospital",
+        "source_address": "5544 Sunshine Coast Highway",
+        "source_city": "Sechelt",
+        "existing_location_code": "hospital-sechelt-hospital",
+        "existing_name": "Sechelt Hospital",
+        "existing_source_url": "https://www.vch.ca/en/location/sechelt-shishalh-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/298029407",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17648961",
+        "source_service_id": "17992326",
+        "source_label": "Lions Gate Hospital",
+        "source_address": "231 East 15th Street",
+        "source_city": "North Vancouver",
+        "existing_location_code": "hospital-lions-gate-hospital",
+        "existing_name": "Lions Gate Hospital",
+        "existing_source_url": "https://www.vch.ca/en/location/lions-gate-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/23811142",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17648966",
+        "source_service_id": "17992331",
+        "source_label": "?u?xva?la?su'ailas Heiltsuk Hospital",
+        "source_address": "88 Waglisla Street",
+        "source_city": "Bella Bella",
+        "existing_location_code": "hospital-heiltsuk-hospital",
+        "existing_name": "Heiltsuk Hospital",
+        "existing_source_url": "https://www.vch.ca/en/location/bella-bella-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/744734229",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17648975",
+        "source_service_id": "17992332",
+        "source_label": "UBC Hospital - Koerner Pavilion",
+        "source_address": "2211 Wesbrook Mall",
+        "source_city": "Vancouver",
+        "existing_location_code": "hospital-ubc-hospital",
+        "existing_name": "UBC Hospital",
+        "existing_source_url": "https://www.vch.ca/en/location/ubc-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/node/8508184533",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17649260",
+        "source_service_id": "17992339",
+        "source_label": "Squamish General Hospital",
+        "source_address": "38140 Behrner Drive",
+        "source_city": "Squamish",
+        "existing_location_code": "hospital-squamish-general-hospital",
+        "existing_name": "Squamish General Hospital",
+        "existing_source_url": "https://www.vch.ca/en/location/squamish-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/1190276710",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17648995",
+        "source_service_id": "17992340",
+        "source_label": "Richmond Hospital",
+        "source_address": "7000 Westminster Highway",
+        "source_city": "Richmond",
+        "existing_location_code": "hospital-richmond-hospital",
+        "existing_name": "Richmond Hospital",
+        "existing_source_url": "https://www.vch.ca/en/location/richmond-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/relation/1731032",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17649124",
+        "source_service_id": "18119693",
+        "source_label": "Bella Coola General Hospital",
+        "source_address": "1025 Elcho Street",
+        "source_city": "Bella Coola",
+        "existing_location_code": "hospital-bella-coola-general-hospital",
+        "existing_name": "Bella Coola General Hospital",
+        "existing_source_url": "https://www.vch.ca/en/location/bella-coola-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/420654453",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17650887",
+        "source_service_id": "17690964",
+        "source_label": "Cormorant Island Community Health Centre",
+        "source_address": "49 School Road",
+        "source_city": "Alert Bay",
+        "existing_location_code": "hospital-cormorant-island-health-centre",
+        "existing_name": "Cormorant Island Health Centre",
+        "existing_source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/cormorant-island-health-centre",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/970434087",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17650858",
+        "source_service_id": "17690971",
+        "source_label": "Cowichan District Hospital",
+        "source_address": "3045 Gibbins Road",
+        "source_city": "Duncan",
+        "existing_location_code": "hospital-cowichan-district-hospital",
+        "existing_name": "Cowichan District Hospital",
+        "existing_source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/cowichan-district-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/1126960983",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17650860",
+        "source_service_id": "17690980",
+        "source_label": "Nanaimo Regional General Hospital",
+        "source_address": "1200 Dufferin Crescent",
+        "source_city": "Nanaimo",
+        "existing_location_code": "hospital-nanaimo-regional-general-hospital",
+        "existing_name": "Nanaimo Regional General Hospital",
+        "existing_source_url": "https://www.islandhealth.ca/care-locations/hospitals-health-centre-locations/nanaimo-regional-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/relation/2694349",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17651030",
+        "source_service_id": "17690996",
+        "source_label": "Tofino General Hospital",
+        "source_address": "261 Neill Street",
+        "source_city": "Tofino",
+        "existing_location_code": "hospital-tofino-general-hospital",
+        "existing_name": "Tofino General Hospital",
+        "existing_source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/tofino-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/1160911664",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17650862",
+        "source_service_id": "17691012",
+        "source_label": "West Coast General Hospital",
+        "source_address": "3949 Port Alberni Highway",
+        "source_city": "Port Alberni",
+        "existing_location_code": "hospital-west-coast-general-hospital",
+        "existing_name": "West Coast General Hospital",
+        "existing_source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/west-coast-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/318779187",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17650856",
+        "source_service_id": "17691020",
+        "source_label": "North Island Hospital Campbell River and District",
+        "source_address": "375 2nd Avenue",
+        "source_city": "Campbell River",
+        "existing_location_code": "hospital-north-island-hospital-campbell-river-district",
+        "existing_name": "North Island Hospital - Campbell River & District",
+        "existing_source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/north-island-hospital-campbell-river-district",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/571903758",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17651090",
+        "source_service_id": "17691064",
+        "source_label": "Port Hardy Hospital",
+        "source_address": "9120 Granville Street",
+        "source_city": "Port Hardy",
+        "existing_location_code": "hospital-port-hardy-hospital",
+        "existing_name": "Port Hardy Hospital",
+        "existing_source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/port-hardy-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/1478447653",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17650784",
+        "source_service_id": "17691157",
+        "source_label": "Victoria General Hospital",
+        "source_address": "1 Hospital Way",
+        "source_city": "Victoria",
+        "existing_location_code": "hospital-victoria-general-hospital",
+        "existing_name": "Victoria General Hospital",
+        "existing_source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/victoria-general-hospital-vgh",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/565659424",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17650864",
+        "source_service_id": "17691164",
+        "source_label": "Lady Minto/Gulf Islands Hospital",
+        "source_address": "135 Crofton Road",
+        "source_city": "Salt Spring Island",
+        "existing_location_code": "hospital-lady-minto-hospital",
+        "existing_name": "Lady Minto Hospital",
+        "existing_source_url": "https://medicalstaff.islandhealth.ca/saltspring-lmh",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/relation/5851879",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17650835",
+        "source_service_id": "17992279",
+        "source_label": "Royal Jubilee Hospital",
+        "source_address": "1952 Bay Street",
+        "source_city": "Victoria",
+        "existing_location_code": "hospital-royal-jubilee-hospital",
+        "existing_name": "Royal Jubilee Hospital",
+        "existing_source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/royal-jubilee-hospital-rjh",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/4766901",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17650866",
+        "source_service_id": "17992316",
+        "source_label": "Saanich Peninsula Hospital",
+        "source_address": "2166 Mount Newton Cross Road",
+        "source_city": "Saanichton",
+        "existing_location_code": "hospital-saanich-peninsula-hospital",
+        "existing_name": "Saanich Peninsula Hospital",
+        "existing_source_url": "https://www.islandhealth.ca/care-locations/hospitals-health-centre-locations/saanich-peninsula-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/800032613",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17650890",
+        "source_service_id": "17992347",
+        "source_label": "Port McNeill Hospital",
+        "source_address": "2750 Kingcome Place",
+        "source_city": "Port McNeill",
+        "existing_location_code": "hospital-port-mcneill-hospital",
+        "existing_name": "Port McNeill Hospital",
+        "existing_source_url": "https://www.islandhealth.ca/locations/hospitals-health-centre-locations/port-mcneill-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/595793357",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "55347959",
+        "source_service_id": "55347966",
+        "source_label": "North Island Hospital Comox Valley",
+        "source_address": "101 Lerwick Road",
+        "source_city": "Courtenay",
+        "existing_location_code": "hospital-north-island-hospital-comox-valley",
+        "existing_name": "North Island Hospital - Comox Valley",
+        "existing_source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/north-island-hospital-comox-valley",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/relation/9631896",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652557",
+        "source_service_id": "17653070",
+        "source_label": "Haida Gwaii Hospital and Health Centre",
+        "source_address": "3209 Oceanview Drive",
+        "source_city": "Daajing Giids",
+        "existing_location_code": "hospital-haida-gwaii-hospital-and-health-centre",
+        "existing_name": "Haida Gwaii Hospital and Health Centre",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/haida-gwaii-hospital-and-health-centre-xaayda-gwaay-ngaaysdll-naay",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/188008270",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652147",
+        "source_service_id": "17691789",
+        "source_label": "Kitimat General Hospital and Health Centre",
+        "source_address": "920 S Lahakas Blvd",
+        "source_city": "Kitimat",
+        "existing_location_code": "hospital-kitimat-general-hospital-and-health-centre",
+        "existing_name": "Kitimat General Hospital and Health Centre",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/kitimat-general-hospital-and-health-centre",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/93844827",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652365",
+        "source_service_id": "17992293",
+        "source_label": "Mackenzie and District Hospital and Health Centre",
+        "source_address": "45 Centennial Drive",
+        "source_city": "Mackenzie",
+        "existing_location_code": "hospital-mackenzie-and-district-hospital",
+        "existing_name": "Mackenzie and District Hospital",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/mackenzie-and-district-hospital-and-health-centre",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/98095449",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652308",
+        "source_service_id": "17992297",
+        "source_label": "Prince Rupert Regional Hospital",
+        "source_address": "1305 Summit Avenue",
+        "source_city": "Prince Rupert",
+        "existing_location_code": "hospital-prince-rupert-regional-hospital",
+        "existing_name": "Prince Rupert Regional Hospital",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/prince-rupert-regional-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/992672370",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652606",
+        "source_service_id": "17992299",
+        "source_label": "Fort St. John Hospital",
+        "source_address": "8407 112th Avenue",
+        "source_city": "Fort St John",
+        "existing_location_code": "hospital-fort-st-john-hospital",
+        "existing_name": "Fort St. John Hospital",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/fort-st-john-hospital-peace-villa",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/258499176",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652362",
+        "source_service_id": "17992300",
+        "source_label": "Chetwynd Hospital and Health Centre",
+        "source_address": "5500 Hospital Road",
+        "source_city": "Chetwynd",
+        "existing_location_code": "hospital-chetwynd-hospital",
+        "existing_name": "Chetwynd Hospital",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/chetwynd-hospital-and-health-centre",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/node/2923666090",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652340",
+        "source_service_id": "17992301",
+        "source_label": "Nats'oojeh Hospital and Health Centre",
+        "source_address": "606 Stuart Drive E",
+        "source_city": "Fort St James",
+        "existing_location_code": "hospital-natsoojeh-hospital-and-health-centre",
+        "existing_name": "Nats’oojeh Hospital and Health Centre",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/natsoojeh-hospital-and-health-centre",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/534618461",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652672",
+        "source_service_id": "17992302",
+        "source_label": "St. John Hospital",
+        "source_address": "3255 Hospital Road",
+        "source_city": "Vanderhoof",
+        "existing_location_code": "hospital-saint-john-hospital",
+        "existing_name": "Saint John Hospital",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/st-john-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/480751591",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652355",
+        "source_service_id": "17992303",
+        "source_label": "Wrinch Memorial Hospital",
+        "source_address": "2510 Highway 62",
+        "source_city": "Hazelton",
+        "existing_location_code": "hospital-wrinch-memorial-hospital",
+        "existing_name": "Wrinch Memorial Hospital",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/wrinch-memorial-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/992113143",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652145",
+        "source_service_id": "17992308",
+        "source_label": "University Hospital of Northern British Columbia",
+        "source_address": "1475 Edmonton Street",
+        "source_city": "Prince George",
+        "existing_location_code": "hospital-university-hospital-of-northern-british-columbia",
+        "existing_name": "University Hospital of Northern British Columbia",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/university-hospital-northern-british-columbia-uhnbc",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/445255625",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652141",
+        "source_service_id": "17992317",
+        "source_label": "G.R. Baker Memorial Hospital",
+        "source_address": "543 Front Street",
+        "source_city": "Quesnel",
+        "existing_location_code": "hospital-g-r-baker-memorial-hospital",
+        "existing_name": "G.R. Baker Memorial Hospital",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/gr-baker-memorial-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/354698177",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652143",
+        "source_service_id": "17992320",
+        "source_label": "Dawson Creek and District Hospital",
+        "source_address": "11100 13th Street",
+        "source_city": "Dawson Creek",
+        "existing_location_code": "hospital-dawson-creek-and-district-hospital",
+        "existing_name": "Dawson Creek and District Hospital",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/dawson-creek-and-district-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/184193563",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652292",
+        "source_service_id": "17992322",
+        "source_label": "Bulkley Valley District Hospital",
+        "source_address": "3950 8th Avenue",
+        "source_city": "Smithers",
+        "existing_location_code": "hospital-bulkley-valley-district-hospital",
+        "existing_name": "Bulkley Valley District Hospital",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/bulkley-valley-district-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/606031382",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652295",
+        "source_service_id": "17992324",
+        "source_label": "McBride and District Hospital",
+        "source_address": "1136 5th Avenue",
+        "source_city": "McBride",
+        "existing_location_code": "hospital-mcbride-and-district-hospital",
+        "existing_name": "McBride and District Hospital",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/mcbride-and-district-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/1290124439",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652267",
+        "source_service_id": "17992325",
+        "source_label": "Northern Haida Gwaii Hospital and Health Centre",
+        "source_address": "2520 Harrison Avenue",
+        "source_city": "Masset",
+        "existing_location_code": "hospital-northern-haida-gwaii-hospital-and-health-centre",
+        "existing_name": "Northern Haida Gwaii Hospital and Health Centre",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/northern-haida-gwaii-hospital-and-health-centre",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/node/2972398342",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652353",
+        "source_service_id": "17992327",
+        "source_label": "Fort Nelson General Hospital",
+        "source_address": "5315 Liard Street",
+        "source_city": "Fort Nelson",
+        "existing_location_code": "hospital-fort-nelson-general-hospital",
+        "existing_name": "Fort Nelson General Hospital",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/fort-nelson-general-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/1472772876",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652667",
+        "source_service_id": "17992337",
+        "source_label": "Lakes District Hospital and Health Centre",
+        "source_address": "741 Centre Street",
+        "source_city": "Burns Lake",
+        "existing_location_code": "hospital-lakes-district-hospital-and-health-centre",
+        "existing_name": "Lakes District Hospital and Health Centre",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/lakes-district-hospital-and-health-centre",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/991903216",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17652898",
+        "source_service_id": "17992338",
+        "source_label": "Ksyen Regional Hospital",
+        "source_address": "2800 Tetrault Street",
+        "source_city": "Terrace",
+        "existing_location_code": "hospital-ksyen-regional-hospital",
+        "existing_name": "Ksyen Regional Hospital",
+        "existing_source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/ksyen-regional-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/1415671343",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17654328",
+        "source_service_id": "18119681",
+        "source_label": "BC Women's Hospital and Health Centre",
+        "source_address": "4500 Oak Street",
+        "source_city": "Vancouver",
+        "existing_location_code": "hospital-bc-women-s-hospital-health-centre",
+        "existing_name": "BC Women's Hospital + Health Centre",
+        "existing_source_url": "https://www.bcwomens.ca/about/contact",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/527856758",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17654602",
+        "source_service_id": "17992314",
+        "source_label": "Mount Saint Joseph Hospital",
+        "source_address": "3080 Prince Edward Street",
+        "source_city": "Vancouver",
+        "existing_location_code": "hospital-mount-saint-joseph-hospital",
+        "existing_name": "Mount Saint Joseph Hospital",
+        "existing_source_url": "https://www.providencehealthcare.org/en/locations/mount-saint-joseph-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/292380824",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17654615",
+        "source_service_id": "17992345",
+        "source_label": "St. Paul's Hospital",
+        "source_address": "1081 Burrard Street",
+        "source_city": "Vancouver",
+        "existing_location_code": "hospital-st-paul-s-hospital",
+        "existing_name": "St. Paul's Hospital",
+        "existing_source_url": "https://www.providencehealthcare.org/en/locations/st-pauls-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/51185697",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17654607",
+        "source_service_id": "17992345",
+        "source_label": "St. Paul's Hospital - Burrard Building",
+        "source_address": "1081 Burrard Street",
+        "source_city": "Vancouver",
+        "existing_location_code": "hospital-st-paul-s-hospital",
+        "existing_name": "St. Paul's Hospital",
+        "existing_source_url": "https://www.providencehealthcare.org/en/locations/st-pauls-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/51185697",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17654598",
+        "source_service_id": "17992345",
+        "source_label": "St. Paul's Hospital - Providence II Building",
+        "source_address": "1081 Burrard Street",
+        "source_city": "Vancouver",
+        "existing_location_code": "hospital-st-paul-s-hospital",
+        "existing_name": "St. Paul's Hospital",
+        "existing_source_url": "https://www.providencehealthcare.org/en/locations/st-pauls-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/51185697",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      },
+      {
+        "source_location_id": "17654595",
+        "source_service_id": "17992345",
+        "source_label": "St. Paul's Hospital - Providence Building",
+        "source_address": "1081 Burrard Street",
+        "source_city": "Vancouver",
+        "existing_location_code": "hospital-st-paul-s-hospital",
+        "existing_name": "St. Paul's Hospital",
+        "existing_source_url": "https://www.providencehealthcare.org/en/locations/st-pauls-hospital",
+        "existing_coordinate_source_url": "https://www.openstreetmap.org/way/51185697",
+        "decision": "Existing reviewed site; omitted from the additions view to avoid duplicate presence."
+      }
+    ],
+    "capitalRows": 64,
+    "capitalReportCounts": {
+      "2020-2022": 30,
+      "2022-2024": 34
+    },
+    "capitalSiteGroups": 27,
+    "locatedCapitalRows": 60,
+    "unlocatedCapitalRows": 4,
+    "locatedCapitalSiteGroups": 23,
+    "unlocatedCapitalSiteGroups": 4,
+    "locationFeatures": 25
+  },
+  "locationReview": [
+    {
+      "sourceLc": "17644873",
+      "code": null,
+      "name": "Dr. Al Hogg Pavilion",
+      "site": "15521 Russell Avenue",
+      "city": "White Rock",
+      "province": "BC",
+      "siteGrain": "Named building on Peace Arch Hospital campus",
+      "coordinates": null,
+      "sourceUrl": "https://www.fraserhealth.ca/-/media/Project/FraserHealth/FraserHealth/employees/clinical-resources/coronavirus-information/ltc-al-li/LTC-Clinical--Operations-Manual-May-2025-Version-20.pdf",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/673740191",
+      "locationNote": "The HealthLink directory point and returned named OSM building centroid differ by about 180 metres. The operator confirms the shared campus address, but the precise building and historical directory match remain unresolved. No point is assigned."
+    },
+    {
+      "sourceLc": "17649184",
+      "code": "facility-followup-vgh-blackmore",
+      "name": "Vancouver General Hospital — Leon Judah Blackmore Pavilion",
+      "site": "855 West 12th Avenue",
+      "city": "Vancouver",
+      "province": "BC",
+      "siteGrain": "Named building on Vancouver General Hospital campus",
+      "coordinates": [
+        -123.1229419,
+        49.2611648
+      ],
+      "sourceUrl": "https://www.vch.ca/sites/default/files/2025-08/vgh-maps-and-directory-tc.pdf",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/88316966",
+      "locationNote": "Operator campus plan names Blackmore Pavilion at 855 West 12th Avenue and locates it beside Jim Pattison. The named OSM building-centre point is used. Its address tag 818 West 10th Avenue conflicts with the operator; that address is not adopted or used as an alias. The point is a representative building location, not an entrance or additional independent hospital."
+    },
+    {
+      "sourceLc": "17649018",
+      "code": "facility-followup-vgh-banfield",
+      "name": "Vancouver General Hospital — Banfield Pavilion",
+      "site": "2785 Ash Street",
+      "city": "Vancouver",
+      "province": "BC",
+      "siteGrain": "Named long-term-care building on Vancouver General Hospital campus",
+      "coordinates": [
+        -123.1184615,
+        49.2611517
+      ],
+      "sourceUrl": "https://www.vch.ca/en/vancouver-general-hospital-vgh/banfield-pavilion",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/88316962",
+      "locationNote": "Operator names Banfield Pavilion at 2785 Ash Street and identifies it as long-term care on the VGH campus. The returned named OSM building at the same address provides the representative centre point. It is not an additional independent acute hospital."
+    },
+    {
+      "sourceLc": "17648972",
+      "code": "facility-followup-vgh-diamond",
+      "name": "Vancouver General Hospital — Gordon and Leslie Diamond Health Care Centre",
+      "site": "2775 Laurel Street",
+      "city": "Vancouver",
+      "province": "BC",
+      "siteGrain": "Named outpatient building beside Vancouver General Hospital campus",
+      "coordinates": [
+        -123.1260002,
+        49.2611461
+      ],
+      "sourceUrl": "https://www.vch.ca/sites/default/files/2025-08/vgh-maps-and-directory-tc.pdf",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/88316995",
+      "locationNote": "Operator campus plan and published clinical-location address confirm 2775 Laurel Street. Returned named OSM building at that address supplies the representative point. Outpatient building presence does not establish beds or service capacity."
+    },
+    {
+      "sourceLc": "17650165",
+      "code": "facility-followup-vgh-willow",
+      "name": "Vancouver General Hospital — Willow Pavilion",
+      "site": "805 West 12th Avenue",
+      "city": "Vancouver",
+      "province": "BC",
+      "siteGrain": "Named building on Vancouver General Hospital campus",
+      "coordinates": [
+        -123.122311,
+        49.2610005
+      ],
+      "sourceUrl": "https://www.vch.ca/sites/default/files/2025-08/vgh-maps-and-directory-tc.pdf",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/88316968",
+      "locationNote": "Operator campus plan confirms Willow Pavilion at 805 West 12th Avenue; the named OSM building provides a representative centre point. The map does not identify individual wards, entrances, service availability or an independent hospital."
+    },
+    {
+      "sourceLc": "17649316",
+      "code": "facility-followup-ubc-detwiller",
+      "name": "UBC Hospital — Detwiller Pavilion",
+      "site": "2255 Wesbrook Mall",
+      "city": "Vancouver",
+      "province": "BC",
+      "siteGrain": "Named building on UBC Hospital campus",
+      "coordinates": [
+        -123.2441555,
+        49.2635731
+      ],
+      "sourceUrl": "https://www.vch.ca/sites/default/files/2023-11/UBC-Hospital-Site-map.pdf",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/99136522",
+      "locationNote": "Operator campus plan distinguishes Detwiller at 2255 Wesbrook Mall from Koerner and Purdy. Returned named OSM building gives the representative centre point. The original directory point is near another part of the campus and is not reused for this separate building."
+    },
+    {
+      "sourceLc": "17649076",
+      "code": "facility-followup-ubc-purdy",
+      "name": "UBC Hospital — Purdy Pavilion",
+      "site": "2221 Wesbrook Mall",
+      "city": "Vancouver",
+      "province": "BC",
+      "siteGrain": "Named building on UBC Hospital campus",
+      "coordinates": [
+        -123.2458694,
+        49.2632866
+      ],
+      "sourceUrl": "https://www.vch.ca/sites/default/files/2023-11/UBC-Hospital-Site-map.pdf",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/99136523",
+      "locationNote": "Operator campus plan distinguishes Purdy at 2221 Wesbrook Mall from Koerner and Detwiller. Returned named OSM building gives the representative centre point. Source directory coordinates are not treated as a shared building point or artificially separated."
+    },
+    {
+      "sourceLc": "58358925",
+      "code": "facility-followup-whitehorse-general",
+      "name": "Whitehorse General Hospital",
+      "site": "5 Hospital Road",
+      "city": "Whitehorse",
+      "province": "YT",
+      "siteGrain": "Hospital campus, represented at the main hospital building",
+      "coordinates": [
+        -135.0437694,
+        60.7181137
+      ],
+      "sourceUrl": "https://yukon.ca/en/places/whitehorse-general-hospital",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/239353105",
+      "locationNote": "Yukon government and operator confirm 5 Hospital Road. OSM returns two named buildings on the same hospital campus; one representative main-building point is used, not two hospitals. Original source province YT is retained despite the BC filename. This is a directory location, not a service-area allocation."
+    },
+    {
+      "sourceLc": "17654610",
+      "code": "facility-followup-holy-family",
+      "name": "Holy Family Hospital",
+      "site": "7801 Argyle Street",
+      "city": "Vancouver",
+      "province": "BC",
+      "siteGrain": "Hospital and rehabilitation campus",
+      "coordinates": [
+        -123.0730841,
+        49.2128237
+      ],
+      "sourceUrl": "https://www.vch.ca/en/location/holy-family-hospital",
+      "coordinateSourceUrl": "https://www.openstreetmap.org/node/8583937606",
+      "locationNote": "Health authority location page and Providence operator publications confirm 7801 Argyle Street in Vancouver. Returned named OSM node at that address provides a representative location. This is the Vancouver site, not same-named hospitals elsewhere."
+    }
+  ],
+  "supplementalLocationReview": {
+    "path": "facility-location-gap-review.json",
+    "sha256": "02d1339cd9270579da03153b748268ff8c37ebcf344bc7ba747b49b86d8f24a5",
+    "verifiedCapitalLocations": [
+      {
+        "code": "capital-context-gateway",
+        "originalLabels": [
+          "Gateway Lodge"
+        ],
+        "name": "Gateway Lodge",
+        "site": "1488 20th Avenue",
+        "city": "Prince George",
+        "province": "BC",
+        "coordinates": [
+          -122.7534096,
+          53.905646
+        ],
+        "sourceUrl": "https://www.northernhealth.ca/find-a-facility/long-term-care/gateway-lodge-long-term-care",
+        "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=1488+20th+Avenue+Prince+George+BC&maxResults=1",
+        "locationNote": "July 2015 operator directory and current operator page agree on the long-term-care address. The adjacent assisted-living address 1462 is not substituted. A named OSM campus has a conflicting street-address tag, so its centroid is not selected. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+        "locationPrecision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+        "referenceKind": "Reporting-site address parcel",
+        "sourcePeriod": "Original report period(s); operator address corroboration noted",
+        "geocoderReceipt": "gateway-bcgeocoder.json",
+        "matchPrecision": "CIVIC_NUMBER",
+        "score": 100,
+        "siteId": "a9ce04e6-3bb7-4864-8397-7adf8be7e512",
+        "historicalSourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/long-term-care-by-community.pdf#page=2",
+        "coordinateBaseDataDate": "2026-07-07T20:10:43Z",
+        "coordinateQueryDate": "2026-10-12T22:14:06",
+        "coordinateCopyrightNotice": "Copyright © 2024 Province of British Columbia",
+        "coordinateLicenseUrl": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+        "locationPositionalAccuracy": "high",
+        "fullMatchedAddress": "1488 20th Ave, Prince George, BC",
+        "locationDescriptor": "parcelPoint"
+      },
+      {
+        "code": "capital-context-houston",
+        "originalLabels": [
+          "Houston Health Centre"
+        ],
+        "name": "Houston Health Centre",
+        "site": "3202 14th Street West",
+        "city": "Houston",
+        "province": "BC",
+        "coordinates": [
+          -126.6524369,
+          54.3961409
+        ],
+        "sourceUrl": "https://www.northernhealth.ca/find-a-facility/health-units/houston-health-centre",
+        "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=3202+14th+Street+Houston+BC&maxResults=1",
+        "locationNote": "January 2022 operator directory and current operator page agree on 3202 14th Street. The BC geocoder resolves the official West street-name alias with CIVIC_NUMBER precision and score 99. Street-only Nominatim candidates were rejected. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+        "locationPrecision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+        "referenceKind": "Reporting-site address parcel",
+        "sourcePeriod": "Original report period(s); operator address corroboration noted",
+        "geocoderReceipt": "houston-bcgeocoder.json",
+        "matchPrecision": "CIVIC_NUMBER",
+        "score": 99,
+        "siteId": "ad07ece4-69bf-4989-88c4-0b6ef13f168c",
+        "historicalSourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/health-offices-by-community.pdf#page=2",
+        "coordinateBaseDataDate": "2026-07-07T20:10:43Z",
+        "coordinateQueryDate": "2026-10-12T22:14:08",
+        "coordinateCopyrightNotice": "Copyright © 2024 Province of British Columbia",
+        "coordinateLicenseUrl": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+        "locationPositionalAccuracy": "high",
+        "fullMatchedAddress": "3202 14th St W, Houston, BC",
+        "locationDescriptor": "parcelPoint"
+      },
+      {
+        "code": "capital-context-rotary",
+        "originalLabels": [
+          "Rotary Manor"
+        ],
+        "name": "Rotary Manor",
+        "site": "1121 90th Avenue",
+        "city": "Dawson Creek",
+        "province": "BC",
+        "coordinates": [
+          -120.2357358,
+          55.77296
+        ],
+        "sourceUrl": "https://www.northernhealth.ca/find-a-facility/long-term-care/rotary-manor",
+        "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=1121+90th+Avenue+Dawson+Creek+BC&maxResults=1",
+        "locationNote": "July 2015 operator directory and current operator page agree on 1121 90th Avenue. This parcel reference is separate from Northview at 1125 and does not assert a particular wing or equipment location. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+        "locationPrecision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+        "referenceKind": "Reporting-site address parcel",
+        "sourcePeriod": "Original report period(s); operator address corroboration noted",
+        "geocoderReceipt": "rotary-bcgeocoder.json",
+        "matchPrecision": "CIVIC_NUMBER",
+        "score": 100,
+        "siteId": "8eeb29b3-dd81-4d9c-9490-4a6208300989",
+        "historicalSourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/long-term-care-by-community.pdf#page=1",
+        "coordinateBaseDataDate": "2026-07-07T20:10:43Z",
+        "coordinateQueryDate": "2026-10-12T22:14:09",
+        "coordinateCopyrightNotice": "Copyright © 2024 Province of British Columbia",
+        "coordinateLicenseUrl": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+        "locationPositionalAccuracy": "high",
+        "fullMatchedAddress": "1121 90 Ave, Dawson Creek, BC",
+        "locationDescriptor": "parcelPoint"
+      },
+      {
+        "code": "capital-context-tumbler",
+        "originalLabels": [
+          "Tumbler Ridge Health Centre"
+        ],
+        "name": "Tumbler Ridge Health Centre",
+        "site": "220 Front Street",
+        "city": "Tumbler Ridge",
+        "province": "BC",
+        "coordinates": [
+          -121.0001636,
+          55.1244002
+        ],
+        "sourceUrl": "https://www.northernhealth.ca/find-a-facility/health-units/tumbler-ridge-health-centre",
+        "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=220+Front+Street+Tumbler+Ridge+BC&maxResults=1",
+        "locationNote": "The operator historical health-information directory (PDF metadata created December 2021) and current health-centre page identify 220 Front Street. OSM calls a building at this shared address Primary Care Clinic; no service-to-building allocation is inferred. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+        "locationPrecision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+        "referenceKind": "Reporting-site address parcel",
+        "sourcePeriod": "Original report period(s); operator address corroboration noted",
+        "geocoderReceipt": "tumbler-bcgeocoder.json",
+        "matchPrecision": "CIVIC_NUMBER",
+        "score": 100,
+        "siteId": "88b64efc-7999-42f5-b1f4-e1ab0387e002",
+        "historicalSourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/digital-health/documents/nh-healthelife-health-info-by-city.pdf#page=4",
+        "coordinateBaseDataDate": "2026-07-07T20:10:43Z",
+        "coordinateQueryDate": "2026-10-12T22:14:11",
+        "coordinateCopyrightNotice": "Copyright © 2024 Province of British Columbia",
+        "coordinateLicenseUrl": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+        "locationPositionalAccuracy": "high",
+        "fullMatchedAddress": "220 Front St, Tumbler Ridge, BC",
+        "locationDescriptor": "parcelPoint"
+      },
+      {
+        "code": "capital-context-stikine-historical",
+        "originalLabels": [
+          "Stikine Regional Health Centre"
+        ],
+        "name": "Stikine Regional Health Centre",
+        "site": "7171 Highway 37",
+        "city": "Dease Lake",
+        "province": "BC",
+        "coordinates": [
+          -129.9920508,
+          58.4417797
+        ],
+        "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/health-offices-by-community.pdf",
+        "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=7171+Highway+37+Dease+Lake+BC&maxResults=1",
+        "locationNote": "The January 2022 operator directory identifies Stikine Health Centre at 7171 Highway 37. The BC geocoder resolves that highway alias to 7171 Stikine Health Ctr, with CIVIC_NUMBER precision and score 100. The current operator page instead says 48875 Highway 37; its BLOCK-only result is rejected. The point retains the original-period address parcel and does not claim that addresses are interchangeable. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+        "locationPrecision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+        "referenceKind": "Historical address parcel",
+        "sourcePeriod": "Original report period(s); operator address corroboration noted",
+        "geocoderReceipt": "stikine-historical-bcgeocoder.json",
+        "matchPrecision": "CIVIC_NUMBER",
+        "score": 100,
+        "siteId": "e4ded669-7346-41ed-84ca-00f1eac03178",
+        "historicalSourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/health-offices-by-community.pdf#page=1",
+        "coordinateBaseDataDate": "2026-07-07T20:10:43Z",
+        "coordinateQueryDate": "2026-10-12T22:15:40",
+        "coordinateCopyrightNotice": "Copyright © 2024 Province of British Columbia",
+        "coordinateLicenseUrl": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+        "locationPositionalAccuracy": "high",
+        "fullMatchedAddress": "7171 Stikine Health Ctr, Dease Lake, BC",
+        "locationDescriptor": "parcelPoint"
+      },
+      {
+        "code": "capital-context-mills-historical",
+        "originalLabels": [
+          "Mills Memorial Hospital"
+        ],
+        "name": "Mills Memorial Hospital — historical address parcel",
+        "site": "4720 Haugland Avenue",
+        "city": "Terrace",
+        "province": "BC",
+        "coordinates": [
+          -128.5961926,
+          54.5113996
+        ],
+        "sourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/digital-health/documents/nh-healthelife-health-info-by-city.pdf",
+        "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=4720+Haugland+Avenue+Terrace+BC&maxResults=1",
+        "locationNote": "The operator health-information directory, whose PDF metadata was created December 2021, identifies Mills Memorial Hospital at 4720 Haugland Avenue. This is an original-address parcel reference for the 2020–2022 equipment rows only. It is not the demolished hospital building centroid, the present Ksyen building, an equipment position or the replacement-project site. The parcel point is a current geocoder representation of the historical address, not historical parcel geometry. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+        "locationPrecision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+        "referenceKind": "Historical address parcel",
+        "sourcePeriod": "2020-2022 only",
+        "geocoderReceipt": "mills-historical-bcgeocoder.json",
+        "matchPrecision": "CIVIC_NUMBER",
+        "score": 100,
+        "siteId": "ba800a90-2264-4b0e-80d1-098956bcaa81",
+        "historicalSourceUrl": "https://www.northernhealth.ca/sites/northern_health/files/services/digital-health/documents/nh-healthelife-health-info-by-city.pdf#page=4",
+        "coordinateBaseDataDate": "2026-07-07T20:10:43Z",
+        "coordinateQueryDate": "2026-10-12T22:15:40",
+        "coordinateCopyrightNotice": "Copyright © 2024 Province of British Columbia",
+        "coordinateLicenseUrl": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+        "locationPositionalAccuracy": "high",
+        "fullMatchedAddress": "4720 Haugland Ave, Terrace, BC",
+        "locationDescriptor": "parcelPoint"
+      }
+    ],
+    "sourceReceipts": [
+      {
+        "filename": "gateway.html",
+        "url": "https://www.northernhealth.ca/find-a-facility/long-term-care/gateway-lodge-long-term-care",
+        "sha256": "e07c3e323166c830e7f31975533f2515272dae1adafd0bef6d16b122108517e2",
+        "bytes": 127637,
+        "kind": "operator source"
+      },
+      {
+        "filename": "rotary.html",
+        "url": "https://www.northernhealth.ca/find-a-facility/long-term-care/rotary-manor",
+        "sha256": "2040a62008b9e3325fdebb42827b601bf28e520d0730095601a92f0aa78aad7d",
+        "bytes": 126275,
+        "kind": "operator source"
+      },
+      {
+        "filename": "houston.html",
+        "url": "https://www.northernhealth.ca/find-a-facility/health-units/houston-health-centre",
+        "sha256": "736724b9b00135f5e60b32692056fbe98f569b7bfc501c4c301cfda4f9a5cb23",
+        "bytes": 118023,
+        "kind": "operator source"
+      },
+      {
+        "filename": "tumbler.html",
+        "url": "https://www.northernhealth.ca/find-a-facility/health-units/tumbler-ridge-health-centre",
+        "sha256": "038e8ff9bc131de4b689b2def7ba94ca14d154452f98cc7b616310050e4b6e8a",
+        "bytes": 120671,
+        "kind": "operator source"
+      },
+      {
+        "filename": "stikine.html",
+        "url": "https://www.northernhealth.ca/find-a-facility/health-units/stikine-health-centre-health-unit",
+        "sha256": "39eb1e768595c247ddeb36ae43ff7d4272ffff0c0387cba2cb4811cea0b9ad69",
+        "bytes": 118653,
+        "kind": "operator source"
+      },
+      {
+        "filename": "nh-2015-long-term-care.pdf",
+        "url": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/long-term-care-by-community.pdf",
+        "sha256": "641acd48897b09f55c4e9a37b12fc885708d9a6b671bfc0c1d1aefc668d41611",
+        "bytes": 113220,
+        "kind": "operator source"
+      },
+      {
+        "filename": "nh-2022-health-offices.pdf",
+        "url": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/health-offices-by-community.pdf",
+        "sha256": "ad372494e5b916efe6ae6f3bc1a91f167a9539f6d5931af3782242d9ffe383e4",
+        "bytes": 102610,
+        "kind": "operator source"
+      },
+      {
+        "filename": "nh-historical-addresses.pdf",
+        "url": "https://www.northernhealth.ca/sites/northern_health/files/services/digital-health/documents/nh-healthelife-health-info-by-city.pdf",
+        "sha256": "7393e515e8153319e686f49ef720c54a8e5c5ee95c120abf399fc2a1b6431aec",
+        "bytes": 162806,
+        "kind": "operator source"
+      },
+      {
+        "filename": "gateway-bcgeocoder.json",
+        "url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=1488+20th+Avenue+Prince+George+BC&maxResults=1",
+        "sha256": "24e414ac748fcc1f39adf05df61551e7455a9d5bc691b0a9357f18f444c14d6a",
+        "bytes": 1675,
+        "kind": "official geocoder receipt"
+      },
+      {
+        "filename": "houston-bcgeocoder.json",
+        "url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=3202+14th+Street+Houston+BC&maxResults=1",
+        "sha256": "f6a69f70a10612d8f0fda8d64193fc87da51ecbcff9bc83d6cd32ac22e9f186d",
+        "bytes": 1747,
+        "kind": "official geocoder receipt"
+      },
+      {
+        "filename": "rotary-bcgeocoder.json",
+        "url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=1121+90th+Avenue+Dawson+Creek+BC&maxResults=1",
+        "sha256": "de249086bdda9e9de114954fa19c1ada8150010e24798bd620a6f61cd73a700d",
+        "bytes": 1663,
+        "kind": "official geocoder receipt"
+      },
+      {
+        "filename": "tumbler-bcgeocoder.json",
+        "url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=220+Front+Street+Tumbler+Ridge+BC&maxResults=1",
+        "sha256": "c0e57514693713ff55a3e21fa201864450d1b19fa5867e3b06c78b8a3d07b0aa",
+        "bytes": 1691,
+        "kind": "official geocoder receipt"
+      },
+      {
+        "filename": "stikine-historical-bcgeocoder.json",
+        "url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=7171+Highway+37+Dease+Lake+BC&maxResults=1",
+        "sha256": "a76b8ff4802097e69756111f52f50c1ed6040e180fa66255645e43013282e2e1",
+        "bytes": 1801,
+        "kind": "official geocoder receipt"
+      },
+      {
+        "filename": "mills-historical-bcgeocoder.json",
+        "url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=4720+Haugland+Avenue+Terrace+BC&maxResults=1",
+        "sha256": "b6646dfca65c90666b4ed3b03c8591d670482e427545e289de36630739e0d3ae",
+        "bytes": 1675,
+        "kind": "official geocoder receipt"
+      }
+    ]
+  },
+  "method": "Explicit exact-source row/alias bindings, independent operator and returned OSM verification, cached published dollar literals. No source contact fields, private absolute paths, synthetic coordinates, clinical capacity or outcome claims. Missing funding stays null; replacement/moved/unverified project sites are not assigned to familiar hospital points."
+}

@@ -1,0 +1,794 @@
+{
+  "reviewedAt": "2026-10-12",
+  "manifestUrl": "https://zoer.k8s.overtheedgepaper.ca/api/projects/acdd692f-a188-4f85-bb5a-83c48d5c7e82/database/data-spaces/de1fe530-a762-52fa-ba11-d01cc5b344df/manifest",
+  "catalogueDatasetId": "3f55330b-895e-4153-afc8-467ec545a1e7",
+  "catalogueFiles": [
+    "NHHR_files.csv",
+    "NHHR_tables.csv"
+  ],
+  "originalSource": {
+    "collectionId": "DATA-C037",
+    "datasetId": "a308df09-ac89-4591-980f-624a4908a9b6",
+    "filename": "comparator_clinical_condition_domain_summary.csv",
+    "originalFileId": "ac6c958e-45ff-4dc1-828a-3ac2bd3cc04a",
+    "sha256": "c53a2738c462388d5b76453f9951bac3825adfd2df180f266f1b1d3b555d9674",
+    "tableName": "nhhr_data_c037_69b3f9e8dcdc_zip_data_c037_compar",
+    "sourceRowCount": 77,
+    "sourceRelativePath": "Data Research/Data/processed/strategic_work_package/comparator_clinical_condition_domain_summary.csv"
+  },
+  "originalDownloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/ac6c958e-45ff-4dc1-828a-3ac2bd3cc04a/download",
+  "releaseGrain": "City × NHHR-coded condition domain; original 77 ragged rows preserved",
+  "snapshotDate": "2026-04-29",
+  "snapshotDateMeaning": "Aligned existing validated comparator baseline. The aggregate CSV has no own timestamp; exact city totals and Prince George study/status reconciliation support alignment, not a new collection-date claim.",
+  "sourceStatusField": "recruiting_now; source historical overall study status, not local recruitment or current availability",
+  "sourceCoding": "NHHR-derived condition domain, not a registry-controlled diagnosis category",
+  "referenceDatasets": [
+    {
+      "id": "clinical-city",
+      "datasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "tableName": "nhhr_data_c019_abdefd338a78_zip_data_c019_compar"
+    },
+    {
+      "id": "clinical-pg",
+      "datasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "tableName": "nhhr_data_c019_abdefd338a78_zip_data_c019_prince"
+    }
+  ],
+  "cityReconciliation": [
+    {
+      "query_city": "Vancouver",
+      "sourceDomainRows": 13,
+      "sourceStudies": 5588,
+      "referenceStudies": 5588,
+      "sourceRecruitingSnapshot": 616,
+      "referenceRecruitingSnapshot": 616
+    },
+    {
+      "query_city": "Calgary",
+      "sourceDomainRows": 13,
+      "sourceStudies": 4478,
+      "referenceStudies": 4478,
+      "sourceRecruitingSnapshot": 522,
+      "referenceRecruitingSnapshot": 522
+    },
+    {
+      "query_city": "Halifax",
+      "sourceDomainRows": 13,
+      "sourceStudies": 2824,
+      "referenceStudies": 2824,
+      "sourceRecruitingSnapshot": 301,
+      "referenceRecruitingSnapshot": 301
+    },
+    {
+      "query_city": "Saskatoon",
+      "sourceDomainRows": 13,
+      "sourceStudies": 1357,
+      "referenceStudies": 1357,
+      "sourceRecruitingSnapshot": 129,
+      "referenceRecruitingSnapshot": 129
+    },
+    {
+      "query_city": "Sudbury",
+      "sourceDomainRows": 11,
+      "sourceStudies": 566,
+      "referenceStudies": 566,
+      "sourceRecruitingSnapshot": 35,
+      "referenceRecruitingSnapshot": 35
+    },
+    {
+      "query_city": "Thunder Bay",
+      "sourceDomainRows": 10,
+      "sourceStudies": 205,
+      "referenceStudies": 205,
+      "sourceRecruitingSnapshot": 18,
+      "referenceRecruitingSnapshot": 18
+    },
+    {
+      "query_city": "Prince George",
+      "sourceDomainRows": 4,
+      "sourceStudies": 10,
+      "referenceStudies": 10,
+      "sourceRecruitingSnapshot": 6,
+      "referenceRecruitingSnapshot": 6
+    }
+  ],
+  "princeGeorgeDomainAliases": {
+    "Cancer / oncology": "Cancer / oncology",
+    "Diabetes / prevention": "Diabetes / metabolic",
+    "Respiratory / COPD": "Respiratory",
+    "Trauma / orthopedics": "Surgery / trauma"
+  },
+  "princeGeorgeStudyBindings": [
+    {
+      "nct_id": "NCT02756793",
+      "sourceFineConditionDomain": "Cancer / oncology",
+      "aggregateConditionDomain": "Cancer / oncology",
+      "sourceOverallStatus": "ACTIVE_NOT_RECRUITING"
+    },
+    {
+      "nct_id": "NCT03862911",
+      "sourceFineConditionDomain": "Cancer / oncology",
+      "aggregateConditionDomain": "Cancer / oncology",
+      "sourceOverallStatus": "ACTIVE_NOT_RECRUITING"
+    },
+    {
+      "nct_id": "NCT04797299",
+      "sourceFineConditionDomain": "Cancer / oncology",
+      "aggregateConditionDomain": "Cancer / oncology",
+      "sourceOverallStatus": "RECRUITING"
+    },
+    {
+      "nct_id": "NCT05050929",
+      "sourceFineConditionDomain": "Cancer / oncology",
+      "aggregateConditionDomain": "Cancer / oncology",
+      "sourceOverallStatus": "RECRUITING"
+    },
+    {
+      "nct_id": "NCT05470010",
+      "sourceFineConditionDomain": "Cancer / oncology",
+      "aggregateConditionDomain": "Cancer / oncology",
+      "sourceOverallStatus": "RECRUITING"
+    },
+    {
+      "nct_id": "NCT05640999",
+      "sourceFineConditionDomain": "Cancer / oncology",
+      "aggregateConditionDomain": "Cancer / oncology",
+      "sourceOverallStatus": "RECRUITING"
+    },
+    {
+      "nct_id": "NCT07152821",
+      "sourceFineConditionDomain": "Cancer / oncology",
+      "aggregateConditionDomain": "Cancer / oncology",
+      "sourceOverallStatus": "RECRUITING"
+    },
+    {
+      "nct_id": "NCT06440395",
+      "sourceFineConditionDomain": "Diabetes / prevention",
+      "aggregateConditionDomain": "Diabetes / metabolic",
+      "sourceOverallStatus": "RECRUITING"
+    },
+    {
+      "nct_id": "NCT04105088",
+      "sourceFineConditionDomain": "Respiratory / COPD",
+      "aggregateConditionDomain": "Respiratory",
+      "sourceOverallStatus": "UNKNOWN"
+    },
+    {
+      "nct_id": "NCT02963233",
+      "sourceFineConditionDomain": "Trauma / orthopedics",
+      "aggregateConditionDomain": "Surgery / trauma",
+      "sourceOverallStatus": "UNKNOWN"
+    }
+  ],
+  "rowBindings": [
+    {
+      "sourceCsvRow": 2,
+      "query_city": "Calgary",
+      "condition_domain": "Other / mixed",
+      "originalStudies": 1302,
+      "originalRecruitingNow": 142
+    },
+    {
+      "sourceCsvRow": 3,
+      "query_city": "Calgary",
+      "condition_domain": "Cancer / oncology",
+      "originalStudies": 1172,
+      "originalRecruitingNow": 145
+    },
+    {
+      "sourceCsvRow": 4,
+      "query_city": "Calgary",
+      "condition_domain": "Cardiovascular / stroke",
+      "originalStudies": 569,
+      "originalRecruitingNow": 60
+    },
+    {
+      "sourceCsvRow": 5,
+      "query_city": "Calgary",
+      "condition_domain": "Infectious disease / vaccines",
+      "originalStudies": 345,
+      "originalRecruitingNow": 26
+    },
+    {
+      "sourceCsvRow": 6,
+      "query_city": "Calgary",
+      "condition_domain": "Neurology / brain health",
+      "originalStudies": 220,
+      "originalRecruitingNow": 18
+    },
+    {
+      "sourceCsvRow": 7,
+      "query_city": "Calgary",
+      "condition_domain": "Diabetes / metabolic",
+      "originalStudies": 212,
+      "originalRecruitingNow": 20
+    },
+    {
+      "sourceCsvRow": 8,
+      "query_city": "Calgary",
+      "condition_domain": "Pediatrics / youth",
+      "originalStudies": 197,
+      "originalRecruitingNow": 49
+    },
+    {
+      "sourceCsvRow": 9,
+      "query_city": "Calgary",
+      "condition_domain": "Respiratory",
+      "originalStudies": 179,
+      "originalRecruitingNow": 13
+    },
+    {
+      "sourceCsvRow": 10,
+      "query_city": "Calgary",
+      "condition_domain": "Surgery / trauma",
+      "originalStudies": 96,
+      "originalRecruitingNow": 7
+    },
+    {
+      "sourceCsvRow": 11,
+      "query_city": "Calgary",
+      "condition_domain": "Mental health / substance use",
+      "originalStudies": 91,
+      "originalRecruitingNow": 21
+    },
+    {
+      "sourceCsvRow": 12,
+      "query_city": "Calgary",
+      "condition_domain": "Renal / kidney",
+      "originalStudies": 72,
+      "originalRecruitingNow": 15
+    },
+    {
+      "sourceCsvRow": 13,
+      "query_city": "Calgary",
+      "condition_domain": "Women / maternal health",
+      "originalStudies": 22,
+      "originalRecruitingNow": 5
+    },
+    {
+      "sourceCsvRow": 14,
+      "query_city": "Calgary",
+      "condition_domain": "Rural / Indigenous / community health",
+      "originalStudies": 1,
+      "originalRecruitingNow": 1
+    },
+    {
+      "sourceCsvRow": 15,
+      "query_city": "Halifax",
+      "condition_domain": "Cancer / oncology",
+      "originalStudies": 826,
+      "originalRecruitingNow": 105
+    },
+    {
+      "sourceCsvRow": 16,
+      "query_city": "Halifax",
+      "condition_domain": "Other / mixed",
+      "originalStudies": 732,
+      "originalRecruitingNow": 56
+    },
+    {
+      "sourceCsvRow": 17,
+      "query_city": "Halifax",
+      "condition_domain": "Cardiovascular / stroke",
+      "originalStudies": 367,
+      "originalRecruitingNow": 48
+    },
+    {
+      "sourceCsvRow": 18,
+      "query_city": "Halifax",
+      "condition_domain": "Infectious disease / vaccines",
+      "originalStudies": 214,
+      "originalRecruitingNow": 11
+    },
+    {
+      "sourceCsvRow": 19,
+      "query_city": "Halifax",
+      "condition_domain": "Neurology / brain health",
+      "originalStudies": 162,
+      "originalRecruitingNow": 17
+    },
+    {
+      "sourceCsvRow": 20,
+      "query_city": "Halifax",
+      "condition_domain": "Diabetes / metabolic",
+      "originalStudies": 128,
+      "originalRecruitingNow": 11
+    },
+    {
+      "sourceCsvRow": 21,
+      "query_city": "Halifax",
+      "condition_domain": "Pediatrics / youth",
+      "originalStudies": 99,
+      "originalRecruitingNow": 16
+    },
+    {
+      "sourceCsvRow": 22,
+      "query_city": "Halifax",
+      "condition_domain": "Surgery / trauma",
+      "originalStudies": 80,
+      "originalRecruitingNow": 6
+    },
+    {
+      "sourceCsvRow": 23,
+      "query_city": "Halifax",
+      "condition_domain": "Mental health / substance use",
+      "originalStudies": 68,
+      "originalRecruitingNow": 20
+    },
+    {
+      "sourceCsvRow": 24,
+      "query_city": "Halifax",
+      "condition_domain": "Renal / kidney",
+      "originalStudies": 64,
+      "originalRecruitingNow": 4
+    },
+    {
+      "sourceCsvRow": 25,
+      "query_city": "Halifax",
+      "condition_domain": "Respiratory",
+      "originalStudies": 64,
+      "originalRecruitingNow": 4
+    },
+    {
+      "sourceCsvRow": 26,
+      "query_city": "Halifax",
+      "condition_domain": "Women / maternal health",
+      "originalStudies": 17,
+      "originalRecruitingNow": 3
+    },
+    {
+      "sourceCsvRow": 27,
+      "query_city": "Halifax",
+      "condition_domain": "Rural / Indigenous / community health",
+      "originalStudies": 3,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 28,
+      "query_city": "Prince George",
+      "condition_domain": "Cancer / oncology",
+      "originalStudies": 7,
+      "originalRecruitingNow": 5
+    },
+    {
+      "sourceCsvRow": 29,
+      "query_city": "Prince George",
+      "condition_domain": "Diabetes / metabolic",
+      "originalStudies": 1,
+      "originalRecruitingNow": 1
+    },
+    {
+      "sourceCsvRow": 30,
+      "query_city": "Prince George",
+      "condition_domain": "Respiratory",
+      "originalStudies": 1,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 31,
+      "query_city": "Prince George",
+      "condition_domain": "Surgery / trauma",
+      "originalStudies": 1,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 32,
+      "query_city": "Saskatoon",
+      "condition_domain": "Cancer / oncology",
+      "originalStudies": 452,
+      "originalRecruitingNow": 52
+    },
+    {
+      "sourceCsvRow": 33,
+      "query_city": "Saskatoon",
+      "condition_domain": "Other / mixed",
+      "originalStudies": 371,
+      "originalRecruitingNow": 20
+    },
+    {
+      "sourceCsvRow": 34,
+      "query_city": "Saskatoon",
+      "condition_domain": "Cardiovascular / stroke",
+      "originalStudies": 150,
+      "originalRecruitingNow": 19
+    },
+    {
+      "sourceCsvRow": 35,
+      "query_city": "Saskatoon",
+      "condition_domain": "Respiratory",
+      "originalStudies": 113,
+      "originalRecruitingNow": 7
+    },
+    {
+      "sourceCsvRow": 36,
+      "query_city": "Saskatoon",
+      "condition_domain": "Diabetes / metabolic",
+      "originalStudies": 62,
+      "originalRecruitingNow": 5
+    },
+    {
+      "sourceCsvRow": 37,
+      "query_city": "Saskatoon",
+      "condition_domain": "Pediatrics / youth",
+      "originalStudies": 50,
+      "originalRecruitingNow": 11
+    },
+    {
+      "sourceCsvRow": 38,
+      "query_city": "Saskatoon",
+      "condition_domain": "Infectious disease / vaccines",
+      "originalStudies": 41,
+      "originalRecruitingNow": 5
+    },
+    {
+      "sourceCsvRow": 39,
+      "query_city": "Saskatoon",
+      "condition_domain": "Neurology / brain health",
+      "originalStudies": 41,
+      "originalRecruitingNow": 1
+    },
+    {
+      "sourceCsvRow": 40,
+      "query_city": "Saskatoon",
+      "condition_domain": "Renal / kidney",
+      "originalStudies": 26,
+      "originalRecruitingNow": 3
+    },
+    {
+      "sourceCsvRow": 41,
+      "query_city": "Saskatoon",
+      "condition_domain": "Mental health / substance use",
+      "originalStudies": 18,
+      "originalRecruitingNow": 3
+    },
+    {
+      "sourceCsvRow": 42,
+      "query_city": "Saskatoon",
+      "condition_domain": "Surgery / trauma",
+      "originalStudies": 18,
+      "originalRecruitingNow": 2
+    },
+    {
+      "sourceCsvRow": 43,
+      "query_city": "Saskatoon",
+      "condition_domain": "Women / maternal health",
+      "originalStudies": 12,
+      "originalRecruitingNow": 1
+    },
+    {
+      "sourceCsvRow": 44,
+      "query_city": "Saskatoon",
+      "condition_domain": "Rural / Indigenous / community health",
+      "originalStudies": 3,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 45,
+      "query_city": "Sudbury",
+      "condition_domain": "Cancer / oncology",
+      "originalStudies": 204,
+      "originalRecruitingNow": 10
+    },
+    {
+      "sourceCsvRow": 46,
+      "query_city": "Sudbury",
+      "condition_domain": "Other / mixed",
+      "originalStudies": 124,
+      "originalRecruitingNow": 9
+    },
+    {
+      "sourceCsvRow": 47,
+      "query_city": "Sudbury",
+      "condition_domain": "Cardiovascular / stroke",
+      "originalStudies": 111,
+      "originalRecruitingNow": 14
+    },
+    {
+      "sourceCsvRow": 48,
+      "query_city": "Sudbury",
+      "condition_domain": "Infectious disease / vaccines",
+      "originalStudies": 53,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 49,
+      "query_city": "Sudbury",
+      "condition_domain": "Respiratory",
+      "originalStudies": 21,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 50,
+      "query_city": "Sudbury",
+      "condition_domain": "Diabetes / metabolic",
+      "originalStudies": 19,
+      "originalRecruitingNow": 1
+    },
+    {
+      "sourceCsvRow": 51,
+      "query_city": "Sudbury",
+      "condition_domain": "Mental health / substance use",
+      "originalStudies": 10,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 52,
+      "query_city": "Sudbury",
+      "condition_domain": "Pediatrics / youth",
+      "originalStudies": 10,
+      "originalRecruitingNow": 1
+    },
+    {
+      "sourceCsvRow": 53,
+      "query_city": "Sudbury",
+      "condition_domain": "Renal / kidney",
+      "originalStudies": 10,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 54,
+      "query_city": "Sudbury",
+      "condition_domain": "Neurology / brain health",
+      "originalStudies": 2,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 55,
+      "query_city": "Sudbury",
+      "condition_domain": "Surgery / trauma",
+      "originalStudies": 2,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 56,
+      "query_city": "Thunder Bay",
+      "condition_domain": "Cancer / oncology",
+      "originalStudies": 153,
+      "originalRecruitingNow": 7
+    },
+    {
+      "sourceCsvRow": 57,
+      "query_city": "Thunder Bay",
+      "condition_domain": "Other / mixed",
+      "originalStudies": 18,
+      "originalRecruitingNow": 6
+    },
+    {
+      "sourceCsvRow": 58,
+      "query_city": "Thunder Bay",
+      "condition_domain": "Cardiovascular / stroke",
+      "originalStudies": 17,
+      "originalRecruitingNow": 2
+    },
+    {
+      "sourceCsvRow": 59,
+      "query_city": "Thunder Bay",
+      "condition_domain": "Infectious disease / vaccines",
+      "originalStudies": 6,
+      "originalRecruitingNow": 1
+    },
+    {
+      "sourceCsvRow": 60,
+      "query_city": "Thunder Bay",
+      "condition_domain": "Renal / kidney",
+      "originalStudies": 3,
+      "originalRecruitingNow": 2
+    },
+    {
+      "sourceCsvRow": 61,
+      "query_city": "Thunder Bay",
+      "condition_domain": "Surgery / trauma",
+      "originalStudies": 3,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 62,
+      "query_city": "Thunder Bay",
+      "condition_domain": "Diabetes / metabolic",
+      "originalStudies": 2,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 63,
+      "query_city": "Thunder Bay",
+      "condition_domain": "Mental health / substance use",
+      "originalStudies": 1,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 64,
+      "query_city": "Thunder Bay",
+      "condition_domain": "Neurology / brain health",
+      "originalStudies": 1,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 65,
+      "query_city": "Thunder Bay",
+      "condition_domain": "Pediatrics / youth",
+      "originalStudies": 1,
+      "originalRecruitingNow": 0
+    },
+    {
+      "sourceCsvRow": 66,
+      "query_city": "Vancouver",
+      "condition_domain": "Other / mixed",
+      "originalStudies": 1496,
+      "originalRecruitingNow": 132
+    },
+    {
+      "sourceCsvRow": 67,
+      "query_city": "Vancouver",
+      "condition_domain": "Cancer / oncology",
+      "originalStudies": 1446,
+      "originalRecruitingNow": 183
+    },
+    {
+      "sourceCsvRow": 68,
+      "query_city": "Vancouver",
+      "condition_domain": "Cardiovascular / stroke",
+      "originalStudies": 617,
+      "originalRecruitingNow": 71
+    },
+    {
+      "sourceCsvRow": 69,
+      "query_city": "Vancouver",
+      "condition_domain": "Infectious disease / vaccines",
+      "originalStudies": 562,
+      "originalRecruitingNow": 30
+    },
+    {
+      "sourceCsvRow": 70,
+      "query_city": "Vancouver",
+      "condition_domain": "Respiratory",
+      "originalStudies": 288,
+      "originalRecruitingNow": 32
+    },
+    {
+      "sourceCsvRow": 71,
+      "query_city": "Vancouver",
+      "condition_domain": "Diabetes / metabolic",
+      "originalStudies": 238,
+      "originalRecruitingNow": 19
+    },
+    {
+      "sourceCsvRow": 72,
+      "query_city": "Vancouver",
+      "condition_domain": "Neurology / brain health",
+      "originalStudies": 228,
+      "originalRecruitingNow": 31
+    },
+    {
+      "sourceCsvRow": 73,
+      "query_city": "Vancouver",
+      "condition_domain": "Pediatrics / youth",
+      "originalStudies": 218,
+      "originalRecruitingNow": 49
+    },
+    {
+      "sourceCsvRow": 74,
+      "query_city": "Vancouver",
+      "condition_domain": "Mental health / substance use",
+      "originalStudies": 165,
+      "originalRecruitingNow": 24
+    },
+    {
+      "sourceCsvRow": 75,
+      "query_city": "Vancouver",
+      "condition_domain": "Surgery / trauma",
+      "originalStudies": 148,
+      "originalRecruitingNow": 18
+    },
+    {
+      "sourceCsvRow": 76,
+      "query_city": "Vancouver",
+      "condition_domain": "Renal / kidney",
+      "originalStudies": 117,
+      "originalRecruitingNow": 17
+    },
+    {
+      "sourceCsvRow": 77,
+      "query_city": "Vancouver",
+      "condition_domain": "Women / maternal health",
+      "originalStudies": 60,
+      "originalRecruitingNow": 10
+    },
+    {
+      "sourceCsvRow": 78,
+      "query_city": "Vancouver",
+      "condition_domain": "Rural / Indigenous / community health",
+      "originalStudies": 5,
+      "originalRecruitingNow": 0
+    }
+  ],
+  "absentCityDomainPairs": [
+    {
+      "query_city": "Prince George",
+      "condition_domain": "Cardiovascular / stroke",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    },
+    {
+      "query_city": "Prince George",
+      "condition_domain": "Infectious disease / vaccines",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    },
+    {
+      "query_city": "Prince George",
+      "condition_domain": "Mental health / substance use",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    },
+    {
+      "query_city": "Prince George",
+      "condition_domain": "Neurology / brain health",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    },
+    {
+      "query_city": "Prince George",
+      "condition_domain": "Other / mixed",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    },
+    {
+      "query_city": "Prince George",
+      "condition_domain": "Pediatrics / youth",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    },
+    {
+      "query_city": "Prince George",
+      "condition_domain": "Renal / kidney",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    },
+    {
+      "query_city": "Prince George",
+      "condition_domain": "Rural / Indigenous / community health",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    },
+    {
+      "query_city": "Prince George",
+      "condition_domain": "Women / maternal health",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    },
+    {
+      "query_city": "Sudbury",
+      "condition_domain": "Rural / Indigenous / community health",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    },
+    {
+      "query_city": "Sudbury",
+      "condition_domain": "Women / maternal health",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    },
+    {
+      "query_city": "Thunder Bay",
+      "condition_domain": "Respiratory",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    },
+    {
+      "query_city": "Thunder Bay",
+      "condition_domain": "Rural / Indigenous / community health",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    },
+    {
+      "query_city": "Thunder Bay",
+      "condition_domain": "Women / maternal health",
+      "reason": "No row in the original coded aggregate; no synthetic zero observation created"
+    }
+  ],
+  "explicitZeroRecruitingRows": 16,
+  "calculations": {
+    "condition_share_pct": "100 × studies / city_studies",
+    "recruiting_condition_share_pct": "100 × recruiting_snapshot_studies / city_recruiting_snapshot_studies; null if the full-city recruiting denominator is zero",
+    "rounding": "6 decimal percentage points; fixed original city denominators"
+  },
+  "denominatorColumns": "Values remain numeric row metadata, while column type=text excludes repeated full-city totals from selectable numeric measures",
+  "limitations": [
+    "One row is city × NHHR-coded condition domain. The 77 source rows span 7 comparator cities and 13 exact category labels; the source is a ragged aggregate, not a complete city/category grid.",
+    "The aligned comparator snapshot date is 29 April 2026. This aggregate CSV has no own timestamp field; the date labels the existing validated comparator baseline, not an assertion that every registry record was collected on that day.",
+    "Condition share = 100 × domain studies / all source studies in the same city. Recruiting composition share = 100 × domain RECRUITING records / all source RECRUITING records in the same city. These percentages describe different portfolios, not the recruiting rate within a condition.",
+    "Shares use the fixed full-city denominators. Selecting fewer conditions must not renormalize percentages. City totals are repeated metadata and must not be added across condition rows; they are excluded from the measure selector.",
+    "RECRUITING is the historical overall study status from the source snapshot. It does not establish current recruitment, local-site activation, participant eligibility or enrollment. Explicit source zero recruiting counts remain zero.",
+    "Condition domains are NHHR analysis coding, not original registry diagnosis codes, measured disease burden or findings from interviews. The Prince George reconciliation explicitly maps its finer coded labels to these broader aggregate labels.",
+    "A study can have sites in several cities. Cross-city study/site counts are not unique studies and must not be added into a national portfolio total. Missing city/domain rows are not invented as zero observations.",
+    "City map points represent the query city label, not physical study sites or health-authority catchments. Compare one domain at a time; no sum or average is authorized across multiple condition rows at a city.",
+    "Only public city/domain aggregate fields are released from the strategic work package. No contact, candidate, participant, consent or remuneration records are included."
+  ]
+}

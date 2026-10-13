@@ -1,0 +1,137 @@
+{
+  "reviewedAt": "2026-10-11",
+  "sources": {
+    "publications": {
+      "collectionId": "DATA-C030",
+      "filename": "monetization_openalex_works_by_comparator_year.csv",
+      "datasetId": "f2e77e60-9bc1-439a-80c1-d169e07caa97",
+      "originalFileId": "aa474167-25ae-4060-9eb2-08daac709264",
+      "sha256": "72f663ac6818018d525e19c16d70f299f5b26d423ef5240c136f1d35a696ec1c",
+      "tableName": "nhhr_data_c030_1cbe254422d8_zip_data_c030_moneti",
+      "sourceRelativePath": "Data Research/Data/processed/source_pull_2026-04-28/monetization_openalex_works_by_comparator_year.csv",
+      "sourceRowCount": 40
+    },
+    "cihr": {
+      "collectionId": "DATA-C025",
+      "filename": "monetization_cihr_recent_paid_by_comparator.csv",
+      "datasetId": "ef462b97-d355-49b8-be02-a742c86d5101",
+      "originalFileId": "bf468ead-dae5-44c3-a150-35dad7d20755",
+      "sha256": "ac69c58b23257b3f230ae5d185901d60c74058b72aa446eda09dac81a5175574",
+      "tableName": "nhhr_data_c025_75f1ce919e34_zip_data_c025_moneti",
+      "sourceRelativePath": "Data Research/Data/processed/source_pull_2026-04-28/monetization_cihr_recent_paid_by_comparator.csv",
+      "sourceRowCount": 46
+    },
+    "nserc": {
+      "collectionId": "DATA-C029",
+      "filename": "monetization_nserc_recent_awards_by_comparator.csv",
+      "datasetId": "2ab4d668-f4f7-4179-8718-7344d5f6337f",
+      "originalFileId": "a0b07b42-7238-4d70-a0f8-0f0c68c4c446",
+      "sha256": "4953b07ce108e8378a46bb893cbe7916933631455340f13618c39a9f89789379",
+      "tableName": "nhhr_data_c029_a4ff9b067490_zip_data_c029_moneti",
+      "sourceRelativePath": "Data Research/Data/processed/source_pull_2026-04-28/monetization_nserc_recent_awards_by_comparator.csv",
+      "sourceRowCount": 36
+    },
+    "clinical_city": {
+      "collectionId": "DATA-C019",
+      "filename": "comparator_clinical_city_summary.csv",
+      "datasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "originalFileId": "96c3361b-5db2-4f03-b056-93f880d52931",
+      "sha256": "e81a0443e7390cb34ea09f1f3198fe8e5929f9f330c1af365c0fb4ca28e51ec2",
+      "tableName": "nhhr_data_c019_abdefd338a78_zip_data_c019_compar",
+      "sourceRelativePath": "Data Research/Data/processed/report_ready_synthesis_2026-04-29/smarter_ai_minimum_bundle/tables/comparator_clinical_city_summary.csv",
+      "sourceRowCount": 7
+    },
+    "clinical_pg": {
+      "collectionId": "DATA-C019",
+      "filename": "prince_george_clinical_trials_coded.csv",
+      "datasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "originalFileId": "0681a2cb-fb75-4a25-b75f-65302f729518",
+      "sha256": "c062d1f662c498b3e4712b801ce34106b9b94bae2a86d9ef1d9f1849981c1290",
+      "tableName": "nhhr_data_c019_abdefd338a78_zip_data_c019_prince",
+      "sourceRelativePath": "Data Research/Data/processed/report_ready_synthesis_2026-04-29/smarter_ai_minimum_bundle/tables/prince_george_clinical_trials_coded.csv",
+      "sourceRowCount": 10
+    },
+    "physicians": {
+      "collectionId": "DATA-C037",
+      "filename": "bc_health_region_physician_comparison.csv",
+      "datasetId": "a308df09-ac89-4591-980f-624a4908a9b6",
+      "originalFileId": "ddf7b687-5990-4271-8027-ce2fd1385e05",
+      "sha256": "5ee0cd3e9fde10028a9995b9d07241c368aa125f7b16940a6c879479ab29c3fb",
+      "tableName": "nhhr_data_c037_69b3f9e8dcdc_zip_data_c037_bc_hea",
+      "sourceRelativePath": "Data Research/Data/processed/strategic_work_package/bc_health_region_physician_comparison.csv",
+      "sourceRowCount": 16
+    },
+    "lha_raw": {
+      "collectionId": "DATA-C051",
+      "filename": "local-health-area-population.csv",
+      "datasetId": "f7b55b36-aa3e-4279-82ce-c0c1c2198f7e",
+      "originalFileId": "3c77000a-c5f3-402b-b49d-6297bec87680",
+      "sha256": "6f4f632fbda6bc9fd1fae9885e1efec8a81d390a3e04050028249c0d92b1fd41",
+      "tableName": "nhhr_data_c051_dbaa1911251e_zip_data_c051_local_",
+      "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/bcstats/local-health-area-population.csv",
+      "sourceRowCount": 17010
+    },
+    "ha_raw": {
+      "collectionId": "DATA-C051",
+      "filename": "health-authority-population.csv",
+      "datasetId": "f7b55b36-aa3e-4279-82ce-c0c1c2198f7e",
+      "originalFileId": "7993804c-62c4-4d36-a3df-b863993ac5d5",
+      "sha256": "47e6488cbebd1f500b9c6de6089d2486ed49572bdf225f193f510fb04e12e608",
+      "tableName": "nhhr_data_c051_dbaa1911251e_zip_data_c051_health",
+      "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/bcstats/health-authority-population.csv",
+      "sourceRowCount": 1134
+    },
+    "schedule": {
+      "collectionId": "DATA-C069",
+      "filename": "nh_connections_schedule.csv",
+      "datasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "originalFileId": "67188a5a-5c39-43bf-8ad9-ac8a21ca1201",
+      "sha256": "16cfbf195d21100219bc7244f501dc4cfbda0c103a06bdcf82eec47b5fe1a07b",
+      "tableName": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_nh_con",
+      "sourceRelativePath": "outputs/theo_cba_full_data_package_20260831/converted_csv/DATA-C069/nh_connections_schedule.csv",
+      "sourceRowCount": 286
+    },
+    "benchmarks": {
+      "collectionId": "DATA-C069",
+      "filename": "travel_cost_benchmarks.csv",
+      "datasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "originalFileId": "c6e6c1e4-3300-4c05-a4f9-5d94b92e8a86",
+      "sha256": "73dd24c021fd88bd8db83190974035e2d2016bf29ed8f203dcd91153b1d5c59d",
+      "tableName": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_travel",
+      "sourceRelativePath": "outputs/theo_cba_full_data_package_20260831/converted_csv/DATA-C069/travel_cost_benchmarks.csv",
+      "sourceRowCount": 5
+    },
+    "scenarios": {
+      "collectionId": "DATA-C032",
+      "filename": "monetization_travel_time_scenario_grid.csv",
+      "datasetId": "eb3407f1-61f3-4902-9828-3533cd3933fa",
+      "originalFileId": "f5fe87cb-a41b-4fad-a576-b1e71e41499e",
+      "sha256": "b4bd9c9507792761fc8637db6aa319d0d5460e792be5c4d8d8a264f5e4621222",
+      "tableName": "nhhr_data_c032_19eddbcc0199_zip_data_c032_moneti",
+      "sourceRelativePath": "Data Research/Data/processed/source_pull_2026-04-28/monetization_travel_time_scenario_grid.csv",
+      "sourceRowCount": 3
+    },
+    "gaps": {
+      "collectionId": "DATA-C019",
+      "filename": "validation_phase_internal_data_request_tracker.csv",
+      "datasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "originalFileId": "080a8639-df19-45eb-bf28-d6ed881b1c94",
+      "sha256": "cf1e0d9bc74e84e5de884ebcc4ed09cca8009aa4516aeeef7778599da7d8e938",
+      "tableName": "nhhr_data_c019_abdefd338a78_zip_data_c019_valida",
+      "sourceRelativePath": "Data Research/Data/processed/report_ready_synthesis_2026-04-29/validation_phase_internal_data_request_tracker.csv",
+      "sourceRowCount": 13
+    },
+    "population_summary": {
+      "collectionId": "DATA-C024",
+      "filename": "monetization_bc_health_authority_2025_denominators.csv",
+      "datasetId": "361da856-2537-4052-93e6-3c962ba4fa8e",
+      "originalFileId": "61bec9a5-ac75-435a-9f65-5bdfadf3e570",
+      "sha256": "c58c6ab495e75e55b7b30ffdf962774831b28e6b2df07f8c51866a79aa14a156",
+      "tableName": "nhhr_data_c024_a23bd96e4c11_zip_data_c024_moneti",
+      "sourceRelativePath": "Data Research/Data/processed/source_pull_2026-04-28/monetization_bc_health_authority_2025_denominators.csv",
+      "sourceRowCount": 5
+    }
+  },
+  "manifestUrl": "https://zoer.k8s.overtheedgepaper.ca/api/projects/acdd692f-a188-4f85-bb5a-83c48d5c7e82/database/data-spaces/de1fe530-a762-52fa-ba11-d01cc5b344df/manifest",
+  "method": "Download manifest-listed dataset originals through catalogue originalFileId; verify original SHA256 before explicit-column release. Imported ZIP/parquet bundle identifiers are not original-file identifiers."
+}

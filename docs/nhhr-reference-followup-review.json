@@ -1,0 +1,225 @@
+{
+  "reviewedAt": "2026-10-12",
+  "scope": "Remaining permit, utility and billing references; actual original formats and official source definitions checked. These are references without utilization observations.",
+  "reviews": [
+    {
+      "collectionId": "DATA-C070",
+      "datasetId": "186ac4db-da46-4c2c-87cc-98fe6a32dd74",
+      "status": "candidate",
+      "summary": "The collected permit SQLite is a planning reference, not an observed cost series. Visual review of original Schedule A-1 confirms that the parsed Garage/Accessory Building value 69 is a construction valuation per square foot, not a $69 permit fee. Brackets, security, unit values and flat charges must remain distinct.",
+      "mapConnection": "This municipal schedule has no distributed observations. A city point would identify the jurisdiction rather than locate each charge.",
+      "needs": [
+        "A source-linked reference can expose separately validated fees with exact basis and conditions. The current 850-line amount column omits these distinctions and is held from quantitative explorer charts.",
+        "For institutional construction, retain the original project-value brackets, January 2024 schedule effective label and December 2025 consolidation date; verify amendments for an actual project. A local project scope is needed for a cost calculation."
+      ],
+      "cannot": [
+        "A parsed number is not automatically a fee or project charge.",
+        "Fee brackets cannot be summed as capital costs or property values."
+      ],
+      "views": [],
+      "inspectionScope": "Fresh Zoer dataset endpoint and original SQLite/CSV hashes checked on 12 October 2026; selected source rows and their definitions reviewed. No claims, consumption, building permits issued or other utilization records are supplied.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/186ac4db-da46-4c2c-87cc-98fe6a32dd74",
+          "responseSha256": "6020a42ec3026d3f30136c6ac3b539165da2b82070ac5ff2f245dca840def4be",
+          "reviewedAt": "2026-10-12"
+        },
+        {
+          "kind": "reviewed-original",
+          "originalFileId": "b7e497e7-58e5-48b6-8f3e-360930a03fab",
+          "filename": "bc_permit_fees.db",
+          "sha256": "cbc2fdb1eca5604332de873e09bab6a27646aa29a4e2b4bc12687c672f2a0590",
+          "httpStatus": 200,
+          "bytes": 212992,
+          "sourceRelativePath": "Data Research/healthdata/bc_permit_fees/bc_permit_fees.db",
+          "tableBindings": [
+            {
+              "tableName": "nhhr_data_c070_e522ea9a05f7_zip_data_c070_bc_per",
+              "worksheet": "",
+              "archiveMember": "",
+              "gridOrSourceRows": 4,
+              "parquetSha256": "b120ac76898b0e80a8f94a2792c647f3cb99bef22d2a605f984847e0e7bbb4b1"
+            },
+            {
+              "tableName": "nhhr_data_c070_e522ea9a05f7_zip_data_c070__2",
+              "worksheet": "",
+              "archiveMember": "",
+              "gridOrSourceRows": 850,
+              "parquetSha256": "2cc273051faa973fef8e772ae35f0686693616aef3b815a69c3e0cd445373e3c"
+            }
+          ],
+          "fullOriginalHashVerified": true
+        },
+        {
+          "kind": "official-source-cross-check",
+          "url": "https://www.princegeorge.ca/sites/default/files/2025-12/BL7557_CONSOLIDATED_2025-12-15.pdf",
+          "sha256": "f3dd83b41c17b7e45b6b61c861d848869a80a894ca4337316609e3d7fcef4786",
+          "pdfPagesReviewed": [
+            15,
+            16
+          ],
+          "printedPages": [
+            "Schedule A page 4",
+            "Schedule A page 5"
+          ],
+          "method": "Original PDF rendered and visually checked, with text extraction for headings, fee bases and conditions.",
+          "findings": [
+            "Residential construction and alteration numbers are valuation per ft², not permit fees.",
+            "Institutional Part 9/3 permit fees use cost brackets; fixed processing charge is separate.",
+            "Moving/demolition security is not an application fee; transfer/extension/re-plan amounts have conditional bases."
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C071",
+      "datasetId": "7bbf9009-4cf6-44d7-ae35-27c4fbbcc8e9",
+      "status": "candidate",
+      "summary": "Five mixed residential seed rates and 207 extracted lines remain tariff references. The Tier 1 seed is approximate and marked verify; percentage changes, commodity charges and electricity unit rates are different measures. The original contains no verified institutional consumption or rate-class allocation.",
+      "mapConnection": "No verified service territories or consumption observations are supplied. Provider-wide tariffs do not establish local LHA or facility costs.",
+      "needs": [
+        "Select and verify an applicable institutional rate schedule with effective date, basic/delivery/commodity charges, tiers, riders and tax treatment; do not substitute residential seeds.",
+        "Provider territories and a measured consumption/load profile are required to map or calculate facility operating costs. The existing PGMaps health boundaries do not establish utility eligibility."
+      ],
+      "cannot": [
+        "Energy charges and percentage rate changes cannot be averaged together.",
+        "Residential rates do not establish institutional rates or complete bills."
+      ],
+      "views": [],
+      "inspectionScope": "Fresh Zoer dataset endpoint and original SQLite/CSV hashes checked on 12 October 2026; selected source rows and their definitions reviewed. No claims, consumption, building permits issued or other utilization records are supplied.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/7bbf9009-4cf6-44d7-ae35-27c4fbbcc8e9",
+          "responseSha256": "bbc2c7271f7f1ab2141fdf610bd4eb013eeb948f79a21cf4da2e5ac68f908334",
+          "reviewedAt": "2026-10-12"
+        },
+        {
+          "kind": "reviewed-original",
+          "originalFileId": "1d27fabf-268a-4a47-8783-580bbadb4273",
+          "filename": "bc_utility_tariffs.db",
+          "sha256": "8b2d913957203420134339f1d4bd8c41e1aace63c1daeaf70183bde84d091336",
+          "httpStatus": 200,
+          "bytes": 69632,
+          "sourceRelativePath": "Data Research/healthdata/bc_utility_tariffs/bc_utility_tariffs.db",
+          "tableBindings": [
+            {
+              "tableName": "nhhr_data_c071_224b546c3e36_zip_data_c071_bc_uti",
+              "worksheet": "",
+              "archiveMember": "",
+              "gridOrSourceRows": 3,
+              "parquetSha256": "2d586b2961f1220fb22e2040899c712c1fdf853244dcf6c35d90f4c2ffa84e30"
+            },
+            {
+              "tableName": "nhhr_data_c071_224b546c3e36_zip_data_c071__2",
+              "worksheet": "",
+              "archiveMember": "",
+              "gridOrSourceRows": 5,
+              "parquetSha256": "11cb51e0a936802739fe3025fc033620793c50eddfbc5dce35461cebb493641d"
+            },
+            {
+              "tableName": "nhhr_data_c071_224b546c3e36_zip_data_c071__3",
+              "worksheet": "",
+              "archiveMember": "",
+              "gridOrSourceRows": 207,
+              "parquetSha256": "64c6fd5eeafbf4124b4a13a3e41653686b476d871b9e2820989d710a4e0bb5fe"
+            }
+          ],
+          "fullOriginalHashVerified": true
+        },
+        {
+          "kind": "official-source-cross-check",
+          "url": "https://www.fortisbc.com/accounts/billing-rates/natural-gas-rates/business-rates",
+          "reviewedAt": "2026-10-12",
+          "findings": [
+            "Business tariffs distinguish basic, delivery and commodity components and eligibility by rate class. A seed commodity charge is not a complete institutional bill."
+          ]
+        },
+        {
+          "kind": "official-source-cross-check",
+          "url": "https://app.bchydro.com/accounts-billing/rates-energy-use/electricity-rates/residential-rates.html",
+          "reviewedAt": "2026-10-12",
+          "scope": "Residential tariff page; does not establish the rate class for an NHHR facility."
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C074",
+      "datasetId": "1ba70ac3-8c15-4e70-b887-457fa1202fa7",
+      "status": "candidate",
+      "summary": "The two original formats reconcile to 6,310 billing-code catalogue entries, including 70 marked inactive. Selected entries retain third-party URLs, fee text and inactive flags. They are not claims, services performed or observed payments, and an inactive $50 entry is not a current billable service.",
+      "mapConnection": "No observational geography exists. Codes do not map to hospitals simply because those procedures may occur there.",
+      "needs": [
+        "Join exact codes to an official dated MSC schedule plus later change bulletins and conditions before releasing a bounded current-fee reference. The official page now lists a May 2026 schedule and September 2026 LFP schedule; July 2026 EEG changes demonstrate that the older January schedule alone is insufficient for all codes.",
+        "Use aggregate claims with reporting period and service geography to visualize utilization. A code catalogue has no hospital/facility allocation; official code definitions cannot manufacture claims."
+      ],
+      "cannot": [
+        "Codes do not count patients, performed services, payments or trial costs.",
+        "Listed fees do not establish guaranteed current payments or hospital costs."
+      ],
+      "views": [],
+      "inspectionScope": "Fresh Zoer dataset endpoint and original SQLite/CSV hashes checked on 12 October 2026; selected source rows and their definitions reviewed. No claims, consumption, building permits issued or other utilization records are supplied.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/1ba70ac3-8c15-4e70-b887-457fa1202fa7",
+          "responseSha256": "76a2929ea4c2d832ce9fa14013d2809ada1cd4bdc23f9d38a37c783c99ec590a",
+          "reviewedAt": "2026-10-12"
+        },
+        {
+          "kind": "reviewed-original",
+          "originalFileId": "1f66fffa-381c-483d-9f7c-4ef24404edc3",
+          "filename": "msp_codes.db",
+          "sha256": "cc0079ef6fc195755b306b4ff0d11d9b5b6286c2b5793d59c1eece8a14c4f0ab",
+          "httpStatus": 200,
+          "bytes": 2170880,
+          "sourceRelativePath": "outputs/theo_cba_full_data_package_20260831/originals/02_Health_Costs_and_Utilization/DATA-C074_MSP_Billing_Codes/msp_codes.db",
+          "tableBindings": [
+            {
+              "tableName": "nhhr_data_c074_a64bb35b7437_zip_data_c074_msp_co",
+              "worksheet": "",
+              "archiveMember": "",
+              "gridOrSourceRows": 6310,
+              "parquetSha256": "de1cd5ca4a996e594ca833bcefb761125be6069e98297ffb058f7507a2f3fa5c"
+            }
+          ],
+          "fullOriginalHashVerified": true
+        },
+        {
+          "kind": "reviewed-original",
+          "originalFileId": "aba22e3a-8509-49d9-b621-2a570bbc32e6",
+          "filename": "codes.csv",
+          "sha256": "00813dba0f432852276bced1103db8c1b32af6f8a855d09adc109a035892d891",
+          "httpStatus": 200,
+          "bytes": 1578113,
+          "sourceRelativePath": "outputs/theo_cba_full_data_package_20260831/converted_csv/DATA-C074/codes.csv",
+          "tableBindings": [
+            {
+              "tableName": "nhhr_data_c074_a64bb35b7437_zip_data_c074_codes_",
+              "worksheet": "",
+              "archiveMember": "",
+              "gridOrSourceRows": 6310,
+              "parquetSha256": "0f4c8e3341aef4f667bf056ffb9c8a5ec8427e289b4651f4ef8554da2fda41b5"
+            }
+          ],
+          "fullOriginalHashVerified": true
+        },
+        {
+          "kind": "official-source-cross-check",
+          "url": "https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/msp/physicians/payment-schedules/msc-payment-schedule",
+          "reviewedAt": "2026-10-12",
+          "scope": "Official schedule landing page and dated change notices; no source-code-to-current-payment equivalence is asserted."
+        },
+        {
+          "kind": "official-source-cross-check",
+          "url": "https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/diagnostic-services/diagnostic-services-announcements",
+          "reviewedAt": "2026-10-12",
+          "findings": [
+            "New, amended and deleted EEG fee items effective 1 July 2026 require later changes alongside the January 2026 payment schedule."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3376 @@
+{
+  "datasets": [
+    {
+      "id": "publications",
+      "title": "Research publications by institution",
+      "description": "Annual OpenAlex work counts for eight selected institutional comparators.",
+      "topic": "Research capacity",
+      "geography": "institution",
+      "status": "observed",
+      "timeLabel": "2021–2025 · collected April 2026",
+      "sourceName": "OpenAlex · NHHR derived summary",
+      "sourceUrl": "https://openalex.org/",
+      "datasetId": "f2e77e60-9bc1-439a-80c1-d169e07caa97",
+      "tableName": "nhhr_data_c030_1cbe254422d8_zip_data_c030_moneti",
+      "notes": [
+        "Institution-affiliated works cover all research fields, not health research alone. They are not NHHR-attributable outputs.",
+        "Institution counts overlap when a work has multiple affiliations; do not sum them into a regional total.",
+        "Coverage reflects the collected OpenAlex snapshot; 2025 may have indexing lag. Absolute workstation source paths are excluded."
+      ],
+      "columns": [
+        {
+          "key": "comparator",
+          "label": "Institution / city",
+          "type": "text"
+        },
+        {
+          "key": "publication_year",
+          "label": "Publication year",
+          "type": "text"
+        },
+        {
+          "key": "works",
+          "label": "Works",
+          "type": "number",
+          "unit": "works"
+        },
+        {
+          "key": "display_name",
+          "label": "OpenAlex institution",
+          "type": "text"
+        },
+        {
+          "key": "openalex_id",
+          "label": "OpenAlex ID",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "comparator": "BC Cancer / Vancouver",
+          "publication_year": "2021",
+          "works": 456,
+          "display_name": "BC Cancer Agency",
+          "openalex_id": "I1289530486"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2021",
+          "works": 9795,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2021",
+          "works": 4915,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2021",
+          "works": 829,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2021",
+          "works": 332,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2021",
+          "works": 16609,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2021",
+          "works": 496,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2021",
+          "works": 4206,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        },
+        {
+          "comparator": "BC Cancer / Vancouver",
+          "publication_year": "2022",
+          "works": 474,
+          "display_name": "BC Cancer Agency",
+          "openalex_id": "I1289530486"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2022",
+          "works": 9023,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2022",
+          "works": 4951,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2022",
+          "works": 908,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2022",
+          "works": 322,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2022",
+          "works": 15453,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2022",
+          "works": 487,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2022",
+          "works": 3957,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        },
+        {
+          "comparator": "BC Cancer / Vancouver",
+          "publication_year": "2023",
+          "works": 510,
+          "display_name": "BC Cancer Agency",
+          "openalex_id": "I1289530486"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2023",
+          "works": 9474,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2023",
+          "works": 4915,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2023",
+          "works": 841,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2023",
+          "works": 326,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2023",
+          "works": 15941,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2023",
+          "works": 535,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2023",
+          "works": 3883,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        },
+        {
+          "comparator": "BC Cancer / Vancouver",
+          "publication_year": "2024",
+          "works": 450,
+          "display_name": "BC Cancer Agency",
+          "openalex_id": "I1289530486"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2024",
+          "works": 9174,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2024",
+          "works": 4966,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2024",
+          "works": 768,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2024",
+          "works": 313,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2024",
+          "works": 15284,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2024",
+          "works": 469,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2024",
+          "works": 3840,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        },
+        {
+          "comparator": "BC Cancer / Vancouver",
+          "publication_year": "2025",
+          "works": 520,
+          "display_name": "BC Cancer Agency",
+          "openalex_id": "I1289530486"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2025",
+          "works": 9398,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2025",
+          "works": 5064,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2025",
+          "works": 815,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2025",
+          "works": 368,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2025",
+          "works": 15060,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2025",
+          "works": 523,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2025",
+          "works": 3878,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        }
+      ],
+      "defaultMetric": "works",
+      "entityField": "comparator",
+      "timeField": "publication_year"
+    },
+    {
+      "id": "cihr-payments",
+      "title": "CIHR annual payments",
+      "description": "Fiscal-year payments recorded for selected institutions, with incomplete 2025 payment coverage removed.",
+      "topic": "Research capacity",
+      "geography": "institution",
+      "status": "observed",
+      "timeLabel": "FY 2019–2024 · collected April 2026",
+      "sourceName": "CIHR · NHHR derived summary",
+      "sourceUrl": "https://cihr-irsc.gc.ca/",
+      "datasetId": "ef462b97-d355-49b8-be02-a742c86d5101",
+      "tableName": "nhhr_data_c025_75f1ce919e34_zip_data_c025_moneti",
+      "notes": [
+        "Fiscal-year payments are not lifetime award commitments. This release omits total_awarded to prevent adding commitments repeatedly across fiscal years.",
+        "FY 2025 has project records but amount_paid_fy is zero for every comparator in the source. Payment coverage is incomplete; these rows are excluded, not interpreted as zero funding.",
+        "Comparator totals reflect NHHR institution matching and collected coverage; no per-capita or NHHR-attributable value is inferred."
+      ],
+      "columns": [
+        {
+          "key": "comparator",
+          "label": "Institution / city",
+          "type": "text"
+        },
+        {
+          "key": "fiscal_year",
+          "label": "Fiscal year",
+          "type": "text"
+        },
+        {
+          "key": "amount_paid_fy",
+          "label": "Amount paid in fiscal year",
+          "type": "number",
+          "unit": "CAD"
+        },
+        {
+          "key": "projects",
+          "label": "Distinct projects",
+          "type": "number",
+          "unit": "projects"
+        },
+        {
+          "key": "rows",
+          "label": "Source award rows",
+          "type": "number",
+          "unit": "rows"
+        }
+      ],
+      "rows": [
+        {
+          "comparator": "Calgary / Calgary",
+          "fiscal_year": "2019",
+          "amount_paid_fy": 53912246,
+          "projects": 436,
+          "rows": 436
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "fiscal_year": "2019",
+          "amount_paid_fy": 17679919,
+          "projects": 148,
+          "rows": 149
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "fiscal_year": "2019",
+          "amount_paid_fy": 639834,
+          "projects": 17,
+          "rows": 17
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "fiscal_year": "2019",
+          "amount_paid_fy": 122411883.01,
+          "projects": 901,
+          "rows": 901
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "fiscal_year": "2019",
+          "amount_paid_fy": 1421284,
+          "projects": 13,
+          "rows": 13
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "fiscal_year": "2019",
+          "amount_paid_fy": 20706343.33,
+          "projects": 79,
+          "rows": 79
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "fiscal_year": "2020",
+          "amount_paid_fy": 71153871,
+          "projects": 474,
+          "rows": 475
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "fiscal_year": "2020",
+          "amount_paid_fy": 25623418,
+          "projects": 141,
+          "rows": 141
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "fiscal_year": "2020",
+          "amount_paid_fy": 811081,
+          "projects": 14,
+          "rows": 14
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "fiscal_year": "2020",
+          "amount_paid_fy": 154549249,
+          "projects": 951,
+          "rows": 952
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "fiscal_year": "2020",
+          "amount_paid_fy": 1594852,
+          "projects": 10,
+          "rows": 10
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "fiscal_year": "2020",
+          "amount_paid_fy": 24207080,
+          "projects": 86,
+          "rows": 86
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "fiscal_year": "2021",
+          "amount_paid_fy": 70611079,
+          "projects": 448,
+          "rows": 448
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "fiscal_year": "2021",
+          "amount_paid_fy": 21968858,
+          "projects": 134,
+          "rows": 134
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "fiscal_year": "2021",
+          "amount_paid_fy": 1428745,
+          "projects": 14,
+          "rows": 14
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "fiscal_year": "2021",
+          "amount_paid_fy": 41667,
+          "projects": 1,
+          "rows": 1
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "fiscal_year": "2021",
+          "amount_paid_fy": 131435776,
+          "projects": 822,
+          "rows": 825
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "fiscal_year": "2021",
+          "amount_paid_fy": 1054973,
+          "projects": 9,
+          "rows": 9
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "fiscal_year": "2021",
+          "amount_paid_fy": 17454921,
+          "projects": 80,
+          "rows": 80
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "fiscal_year": "2022",
+          "amount_paid_fy": 65314447,
+          "projects": 460,
+          "rows": 461
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "fiscal_year": "2022",
+          "amount_paid_fy": 20837818,
+          "projects": 141,
+          "rows": 141
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "fiscal_year": "2022",
+          "amount_paid_fy": 1187632,
+          "projects": 11,
+          "rows": 11
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "fiscal_year": "2022",
+          "amount_paid_fy": 158333,
+          "projects": 1,
+          "rows": 1
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "fiscal_year": "2022",
+          "amount_paid_fy": 126131093.14,
+          "projects": 859,
+          "rows": 859
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "fiscal_year": "2022",
+          "amount_paid_fy": 2026416,
+          "projects": 12,
+          "rows": 12
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "fiscal_year": "2022",
+          "amount_paid_fy": 19677070,
+          "projects": 91,
+          "rows": 91
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "fiscal_year": "2023",
+          "amount_paid_fy": 62802133,
+          "projects": 500,
+          "rows": 500
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "fiscal_year": "2023",
+          "amount_paid_fy": 20168456,
+          "projects": 155,
+          "rows": 155
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "fiscal_year": "2023",
+          "amount_paid_fy": 817419,
+          "projects": 11,
+          "rows": 11
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "fiscal_year": "2023",
+          "amount_paid_fy": 126726335,
+          "projects": 884,
+          "rows": 886
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "fiscal_year": "2023",
+          "amount_paid_fy": 1879625,
+          "projects": 8,
+          "rows": 8
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "fiscal_year": "2023",
+          "amount_paid_fy": 15681949,
+          "projects": 95,
+          "rows": 95
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "fiscal_year": "2024",
+          "amount_paid_fy": 64051385,
+          "projects": 470,
+          "rows": 470
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "fiscal_year": "2024",
+          "amount_paid_fy": 25996449,
+          "projects": 164,
+          "rows": 165
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "fiscal_year": "2024",
+          "amount_paid_fy": 1644821,
+          "projects": 14,
+          "rows": 14
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "fiscal_year": "2024",
+          "amount_paid_fy": 50000,
+          "projects": 1,
+          "rows": 1
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "fiscal_year": "2024",
+          "amount_paid_fy": 126119682,
+          "projects": 908,
+          "rows": 909
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "fiscal_year": "2024",
+          "amount_paid_fy": 978043,
+          "projects": 10,
+          "rows": 10
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "fiscal_year": "2024",
+          "amount_paid_fy": 16851525,
+          "projects": 97,
+          "rows": 97
+        }
+      ],
+      "defaultMetric": "amount_paid_fy",
+      "entityField": "comparator",
+      "timeField": "fiscal_year"
+    },
+    {
+      "id": "nserc-awards",
+      "title": "NSERC awards by institution",
+      "description": "Award amounts and award counts for selected institutional comparators by fiscal year.",
+      "topic": "Research capacity",
+      "geography": "institution",
+      "status": "observed",
+      "timeLabel": "FY 2019–2024 · collected April 2026",
+      "sourceName": "NSERC · NHHR derived summary",
+      "sourceUrl": "https://www.nserc-crsng.gc.ca/",
+      "datasetId": "2ab4d668-f4f7-4179-8718-7344d5f6337f",
+      "tableName": "nhhr_data_c029_a4ff9b067490_zip_data_c029_moneti",
+      "notes": [
+        "NSERC supports natural sciences and engineering; these figures are a broad research-capacity comparator, not health funding alone.",
+        "Award amounts are the source measure and are not directly interchangeable with CIHR annual payments.",
+        "Distinct awards and source rows differ for some institutions; preserve this distinction when comparing counts."
+      ],
+      "columns": [
+        {
+          "key": "comparator",
+          "label": "Institution / city",
+          "type": "text"
+        },
+        {
+          "key": "fiscal_year",
+          "label": "Fiscal year",
+          "type": "text"
+        },
+        {
+          "key": "total_award_amount",
+          "label": "Award amount",
+          "type": "number",
+          "unit": "CAD"
+        },
+        {
+          "key": "awards",
+          "label": "Distinct awards",
+          "type": "number",
+          "unit": "awards"
+        },
+        {
+          "key": "rows",
+          "label": "Source award rows",
+          "type": "number",
+          "unit": "rows"
+        },
+        {
+          "key": "median_award_amount",
+          "label": "Median award amount",
+          "type": "number",
+          "unit": "CAD"
+        }
+      ],
+      "rows": [
+        {
+          "comparator": "Calgary / Calgary",
+          "fiscal_year": "2019",
+          "total_award_amount": 46547786,
+          "awards": 828,
+          "rows": 828,
+          "median_award_amount": 30000
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "fiscal_year": "2019",
+          "total_award_amount": 39143275,
+          "awards": 586,
+          "rows": 586,
+          "median_award_amount": 28000
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "fiscal_year": "2019",
+          "total_award_amount": 3437085,
+          "awards": 111,
+          "rows": 111,
+          "median_award_amount": 22000
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "fiscal_year": "2019",
+          "total_award_amount": 92403032,
+          "awards": 1686,
+          "rows": 1686,
+          "median_award_amount": 32000
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "fiscal_year": "2019",
+          "total_award_amount": 1834016,
+          "awards": 69,
+          "rows": 69,
+          "median_award_amount": 21000
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "fiscal_year": "2019",
+          "total_award_amount": 39965205,
+          "awards": 506,
+          "rows": 506,
+          "median_award_amount": 28000
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "fiscal_year": "2020",
+          "total_award_amount": 49467704,
+          "awards": 858,
+          "rows": 858,
+          "median_award_amount": 31937.5
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "fiscal_year": "2020",
+          "total_award_amount": 41394329,
+          "awards": 556,
+          "rows": 556,
+          "median_award_amount": 30000
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "fiscal_year": "2020",
+          "total_award_amount": 3781134,
+          "awards": 122,
+          "rows": 122,
+          "median_award_amount": 23171.5
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "fiscal_year": "2020",
+          "total_award_amount": 101866201,
+          "awards": 1674,
+          "rows": 1674,
+          "median_award_amount": 33000
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "fiscal_year": "2020",
+          "total_award_amount": 1749396,
+          "awards": 64,
+          "rows": 64,
+          "median_award_amount": 26000
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "fiscal_year": "2020",
+          "total_award_amount": 39589164,
+          "awards": 508,
+          "rows": 508,
+          "median_award_amount": 29000
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "fiscal_year": "2021",
+          "total_award_amount": 51156686,
+          "awards": 860,
+          "rows": 860,
+          "median_award_amount": 33000
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "fiscal_year": "2021",
+          "total_award_amount": 39872118,
+          "awards": 575,
+          "rows": 577,
+          "median_award_amount": 31000
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "fiscal_year": "2021",
+          "total_award_amount": 4093391,
+          "awards": 117,
+          "rows": 117,
+          "median_award_amount": 24000
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "fiscal_year": "2021",
+          "total_award_amount": 99954956,
+          "awards": 1677,
+          "rows": 1681,
+          "median_award_amount": 35000
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "fiscal_year": "2021",
+          "total_award_amount": 2433499,
+          "awards": 69,
+          "rows": 69,
+          "median_award_amount": 28000
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "fiscal_year": "2021",
+          "total_award_amount": 43686025,
+          "awards": 513,
+          "rows": 513,
+          "median_award_amount": 33000
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "fiscal_year": "2022",
+          "total_award_amount": 51974877.91,
+          "awards": 836,
+          "rows": 838,
+          "median_award_amount": 33000
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "fiscal_year": "2022",
+          "total_award_amount": 42536773.54,
+          "awards": 517,
+          "rows": 519,
+          "median_award_amount": 31000
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "fiscal_year": "2022",
+          "total_award_amount": 4397056.22,
+          "awards": 127,
+          "rows": 127,
+          "median_award_amount": 24000
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "fiscal_year": "2022",
+          "total_award_amount": 87791775.93,
+          "awards": 1581,
+          "rows": 1583,
+          "median_award_amount": 35000
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "fiscal_year": "2022",
+          "total_award_amount": 2549978,
+          "awards": 78,
+          "rows": 78,
+          "median_award_amount": 26500
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "fiscal_year": "2022",
+          "total_award_amount": 35822588.6,
+          "awards": 448,
+          "rows": 448,
+          "median_award_amount": 32000
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "fiscal_year": "2023",
+          "total_award_amount": 45411867.66,
+          "awards": 812,
+          "rows": 812,
+          "median_award_amount": 33000
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "fiscal_year": "2023",
+          "total_award_amount": 43843416.48,
+          "awards": 517,
+          "rows": 522,
+          "median_award_amount": 32000
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "fiscal_year": "2023",
+          "total_award_amount": 3553833,
+          "awards": 106,
+          "rows": 106,
+          "median_award_amount": 26000
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "fiscal_year": "2023",
+          "total_award_amount": 88757374.3,
+          "awards": 1536,
+          "rows": 1542,
+          "median_award_amount": 35000
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "fiscal_year": "2023",
+          "total_award_amount": 2394572.26,
+          "awards": 75,
+          "rows": 75,
+          "median_award_amount": 28000
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "fiscal_year": "2023",
+          "total_award_amount": 26602083.17,
+          "awards": 435,
+          "rows": 437,
+          "median_award_amount": 33000
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "fiscal_year": "2024",
+          "total_award_amount": 46675706.74,
+          "awards": 820,
+          "rows": 824,
+          "median_award_amount": 38000
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "fiscal_year": "2024",
+          "total_award_amount": 44182371.54,
+          "awards": 496,
+          "rows": 500,
+          "median_award_amount": 36000
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "fiscal_year": "2024",
+          "total_award_amount": 4008988.9699999997,
+          "awards": 114,
+          "rows": 116,
+          "median_award_amount": 25500
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "fiscal_year": "2024",
+          "total_award_amount": 96176270.91,
+          "awards": 1509,
+          "rows": 1512,
+          "median_award_amount": 40000
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "fiscal_year": "2024",
+          "total_award_amount": 3243913.66,
+          "awards": 88,
+          "rows": 89,
+          "median_award_amount": 28000
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "fiscal_year": "2024",
+          "total_award_amount": 25424030.32,
+          "awards": 412,
+          "rows": 414,
+          "median_award_amount": 35608
+        }
+      ],
+      "defaultMetric": "total_award_amount",
+      "entityField": "comparator",
+      "timeField": "fiscal_year"
+    },
+    {
+      "id": "clinical-city",
+      "title": "Clinical trials with an exact-city site",
+      "description": "ClinicalTrials.gov site matches in seven comparator cities, retained as city counts.",
+      "topic": "Clinical research",
+      "geography": "city",
+      "status": "observed",
+      "timeLabel": "Registry snapshot · April 2026",
+      "sourceName": "ClinicalTrials.gov · NHHR coded summary",
+      "sourceUrl": "https://clinicaltrials.gov/",
+      "datasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "tableName": "nhhr_data_c019_abdefd338a78_zip_data_c019_compar",
+      "notes": [
+        "Exact city-string matches identify registered study sites, not local enrollments, accessible trials, or a health-authority catchment.",
+        "Counts include historical statuses. Recruiting fields describe the collected snapshot and are not live recruitment advice.",
+        "A multi-site study can appear in more than one city. City boundaries and HSDA/LHA boundaries are different geographies; no polygon join or rate is inferred."
+      ],
+      "columns": [
+        {
+          "key": "query_city",
+          "label": "City",
+          "type": "text"
+        },
+        {
+          "key": "exact_city_site_studies",
+          "label": "Studies with an exact-city site",
+          "type": "number",
+          "unit": "studies"
+        },
+        {
+          "key": "recruiting_now",
+          "label": "Recruiting in source snapshot",
+          "type": "number",
+          "unit": "studies"
+        },
+        {
+          "key": "recruiting_or_active",
+          "label": "Recruiting or active",
+          "type": "number",
+          "unit": "studies"
+        },
+        {
+          "key": "oncology_studies",
+          "label": "Oncology studies",
+          "type": "number",
+          "unit": "studies"
+        },
+        {
+          "key": "radiotherapy_studies",
+          "label": "Radiotherapy studies",
+          "type": "number",
+          "unit": "studies"
+        },
+        {
+          "key": "industry_sponsored_studies",
+          "label": "Industry-sponsored studies",
+          "type": "number",
+          "unit": "studies"
+        },
+        {
+          "key": "top_condition_domain",
+          "label": "Largest coded condition domain",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "query_city": "Vancouver",
+          "exact_city_site_studies": 5588,
+          "recruiting_now": 616,
+          "recruiting_or_active": 1192,
+          "oncology_studies": 1446,
+          "radiotherapy_studies": 206,
+          "industry_sponsored_studies": 2926,
+          "top_condition_domain": "Other / mixed"
+        },
+        {
+          "query_city": "Calgary",
+          "exact_city_site_studies": 4478,
+          "recruiting_now": 522,
+          "recruiting_or_active": 1036,
+          "oncology_studies": 1172,
+          "radiotherapy_studies": 226,
+          "industry_sponsored_studies": 2624,
+          "top_condition_domain": "Other / mixed"
+        },
+        {
+          "query_city": "Halifax",
+          "exact_city_site_studies": 2824,
+          "recruiting_now": 301,
+          "recruiting_or_active": 600,
+          "oncology_studies": 826,
+          "radiotherapy_studies": 171,
+          "industry_sponsored_studies": 1541,
+          "top_condition_domain": "Cancer / oncology"
+        },
+        {
+          "query_city": "Saskatoon",
+          "exact_city_site_studies": 1357,
+          "recruiting_now": 129,
+          "recruiting_or_active": 269,
+          "oncology_studies": 452,
+          "radiotherapy_studies": 149,
+          "industry_sponsored_studies": 682,
+          "top_condition_domain": "Cancer / oncology"
+        },
+        {
+          "query_city": "Sudbury",
+          "exact_city_site_studies": 566,
+          "recruiting_now": 35,
+          "recruiting_or_active": 82,
+          "oncology_studies": 204,
+          "radiotherapy_studies": 75,
+          "industry_sponsored_studies": 364,
+          "top_condition_domain": "Cancer / oncology"
+        },
+        {
+          "query_city": "Thunder Bay",
+          "exact_city_site_studies": 205,
+          "recruiting_now": 18,
+          "recruiting_or_active": 40,
+          "oncology_studies": 153,
+          "radiotherapy_studies": 65,
+          "industry_sponsored_studies": 24,
+          "top_condition_domain": "Cancer / oncology"
+        },
+        {
+          "query_city": "Prince George",
+          "exact_city_site_studies": 10,
+          "recruiting_now": 6,
+          "recruiting_or_active": 8,
+          "oncology_studies": 7,
+          "radiotherapy_studies": 4,
+          "industry_sponsored_studies": 0,
+          "top_condition_domain": "Cancer / oncology"
+        }
+      ],
+      "defaultMetric": "exact_city_site_studies",
+      "entityField": "query_city"
+    },
+    {
+      "id": "clinical-pg",
+      "title": "Prince George registered study portfolio",
+      "description": "Ten exact-site registry studies with coded condition and intervention domains.",
+      "topic": "Clinical research",
+      "geography": "city",
+      "status": "observed",
+      "timeLabel": "Registry snapshot · April 2026",
+      "sourceName": "ClinicalTrials.gov · NHHR coded study table",
+      "sourceUrl": "https://clinicaltrials.gov/",
+      "datasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "tableName": "nhhr_data_c019_abdefd338a78_zip_data_c019_prince",
+      "notes": [
+        "Public registry identifiers and facilities are retained; personal contact names, emails, phones, and interview targets are excluded.",
+        "A study listing does not establish local enrollment, screening capacity, participant eligibility, or current recruitment. Follow the registry link for current details.",
+        "NHHR domain coding is an analytical interpretation. Registry completion dates may be planned dates."
+      ],
+      "columns": [
+        {
+          "key": "nct_id",
+          "label": "Registry ID",
+          "type": "text"
+        },
+        {
+          "key": "brief_title",
+          "label": "Study title",
+          "type": "text"
+        },
+        {
+          "key": "overall_status",
+          "label": "Status in source snapshot",
+          "type": "text"
+        },
+        {
+          "key": "condition_domain",
+          "label": "Condition domain",
+          "type": "text"
+        },
+        {
+          "key": "intervention_domain",
+          "label": "Intervention domain",
+          "type": "text"
+        },
+        {
+          "key": "sponsor_category",
+          "label": "Sponsor category",
+          "type": "text"
+        },
+        {
+          "key": "facilities",
+          "label": "Recorded facility",
+          "type": "text"
+        },
+        {
+          "key": "start_date",
+          "label": "Study start date",
+          "type": "text"
+        },
+        {
+          "key": "completion_date",
+          "label": "Recorded completion date",
+          "type": "text"
+        },
+        {
+          "key": "location_count",
+          "label": "Registered locations",
+          "type": "number",
+          "unit": "locations"
+        },
+        {
+          "key": "study_count",
+          "label": "Study records",
+          "type": "number",
+          "unit": "studies"
+        },
+        {
+          "key": "registry_url",
+          "label": "Public registry link",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "nct_id": "NCT02756793",
+          "brief_title": "Stereotactic Radiotherapy for Oligo-Progressive Metastatic Cancer (The STOP Trial)",
+          "overall_status": "ACTIVE_NOT_RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "intervention_domain": "Radiotherapy / radiation oncology",
+          "sponsor_category": "Hospital/research institute",
+          "facilities": "BC Cancer - Prince George",
+          "start_date": "2016-10",
+          "completion_date": "2026-06",
+          "location_count": 7,
+          "study_count": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT02756793"
+        },
+        {
+          "nct_id": "NCT03862911",
+          "brief_title": "Stereotactic Ablative Radiotherapy for Comprehensive Treatment of Oligometastatic (1-3 Metastases) Cancer",
+          "overall_status": "ACTIVE_NOT_RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "intervention_domain": "Radiotherapy / radiation oncology",
+          "sponsor_category": "Provincial cancer agency",
+          "facilities": "BC Cancer - Prince George",
+          "start_date": "2019-11-01",
+          "completion_date": "2030-12-31",
+          "location_count": 17,
+          "study_count": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT03862911"
+        },
+        {
+          "nct_id": "NCT04797299",
+          "brief_title": "Prospective Evaluation of Breast-Conserving Surgery Alone in Low-Risk Ductal Carcinoma in Situ (DCIS)",
+          "overall_status": "RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "intervention_domain": "Procedure / surgical care",
+          "sponsor_category": "Other non-industry",
+          "facilities": "BC Cancer - Centre for the North (Prince George)",
+          "start_date": "2022-11-23",
+          "completion_date": "2035-11-30",
+          "location_count": 24,
+          "study_count": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT04797299"
+        },
+        {
+          "nct_id": "NCT05050929",
+          "brief_title": "RAPid SimPLE Targeted Radiation Treatment for Brain Metastases",
+          "overall_status": "RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "intervention_domain": "Radiotherapy / radiation oncology",
+          "sponsor_category": "Provincial cancer agency",
+          "facilities": "BC Cancer - Prince George",
+          "start_date": "2022-07-01",
+          "completion_date": "2027-12-30",
+          "location_count": 6,
+          "study_count": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT05050929"
+        },
+        {
+          "nct_id": "NCT05470010",
+          "brief_title": "Smartphone App-Based Mindfulness Intervention for French and English Speaker Cancer Survivors",
+          "overall_status": "RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "intervention_domain": "Behavioural / implementation",
+          "sponsor_category": "National trial network",
+          "facilities": "BCCA - Prince George",
+          "start_date": "2025-03-07",
+          "completion_date": "2026-12-31",
+          "location_count": 7,
+          "study_count": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT05470010"
+        },
+        {
+          "nct_id": "NCT05640999",
+          "brief_title": "Adjuvant Therapy in POLE-Mutated and p53-Wildtype/NSMP Early Stage Endometrial Cancer RAINBO BLUE & TAPER",
+          "overall_status": "RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "intervention_domain": "Radiotherapy / radiation oncology",
+          "sponsor_category": "National trial network",
+          "facilities": "BCCA - Prince George",
+          "start_date": "2022-12-19",
+          "completion_date": "2029-06-30",
+          "location_count": 105,
+          "study_count": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT05640999"
+        },
+        {
+          "nct_id": "NCT07152821",
+          "brief_title": "Botensilimab + Balstilimab vs Best Supportive Care as Therapy in Chemo-refractory, Unresectable, Colorectal Adenocarcinoma",
+          "overall_status": "RECRUITING",
+          "condition_domain": "Cancer / oncology",
+          "intervention_domain": "Drug / systemic therapy",
+          "sponsor_category": "National trial network",
+          "facilities": "BCCA - Prince George",
+          "start_date": "2026-03-31",
+          "completion_date": "2029-06-30",
+          "location_count": 17,
+          "study_count": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT07152821"
+        },
+        {
+          "nct_id": "NCT06440395",
+          "brief_title": "Small Steps for Big Changes - Healthy Cities Implementation Science",
+          "overall_status": "RECRUITING",
+          "condition_domain": "Diabetes / prevention",
+          "intervention_domain": "Behavioural / implementation",
+          "sponsor_category": "University-led",
+          "facilities": "Prince George Family YMCA",
+          "start_date": "2024-06-03",
+          "completion_date": "2029-09",
+          "location_count": 12,
+          "study_count": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT06440395"
+        },
+        {
+          "nct_id": "NCT04105088",
+          "brief_title": "Bayis Ilh Tus - A Strong Breath: Prevalence and Contributors to COPD in First Nations Communities in British Columbia",
+          "overall_status": "UNKNOWN",
+          "condition_domain": "Respiratory / COPD",
+          "intervention_domain": "Community epidemiology",
+          "sponsor_category": "University-led",
+          "facilities": "13 individual First Nations in north-Central BC near Prince George, BC",
+          "start_date": "2018-02-13",
+          "completion_date": "2026-03-31",
+          "location_count": 1,
+          "study_count": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT04105088"
+        },
+        {
+          "nct_id": "NCT02963233",
+          "brief_title": "Type II Pediatric Supracondylar Humerus Fracture Management and Outcomes: A Prospective Multi-centre Cohort Study",
+          "overall_status": "UNKNOWN",
+          "condition_domain": "Trauma / orthopedics",
+          "intervention_domain": "Procedure / surgical care",
+          "sponsor_category": "Hospital/research institute",
+          "facilities": "Prince George Surgery Centre",
+          "start_date": "2015-07",
+          "completion_date": null,
+          "location_count": 13,
+          "study_count": 1,
+          "registry_url": "https://clinicaltrials.gov/study/NCT02963233"
+        }
+      ],
+      "defaultMetric": "study_count",
+      "entityField": "nct_id"
+    },
+    {
+      "id": "physicians-hsda",
+      "title": "Physician supply across BC health regions",
+      "description": "Public physician counts and rates for sixteen BC health service delivery areas.",
+      "topic": "Workforce",
+      "geography": "hsda",
+      "status": "observed",
+      "timeLabel": "2020 and 2024 · collected April 2026",
+      "sourceName": "CIHI public physician statistics · NHHR regional summary",
+      "sourceUrl": "https://www.cihi.ca/en/physicians",
+      "datasetId": "a308df09-ac89-4591-980f-624a4908a9b6",
+      "tableName": "nhhr_data_c037_69b3f9e8dcdc_zip_data_c037_bc_hea",
+      "notes": [
+        "Counts are the collected public regional physician measure, not vacancies, full-time equivalents, local appointment access, or NHHR research staff.",
+        "Rates are preserved from the reviewed source; no rates are recomputed using the suspect population summaries.",
+        "Source 59xx health-region codes join to the corresponding two-digit BC HSDA codes using an explicit crosswalk. Boundaries show regions, not physician locations."
+      ],
+      "columns": [
+        {
+          "key": "health_region",
+          "label": "Health service delivery area",
+          "type": "text"
+        },
+        {
+          "key": "health_region_code",
+          "label": "Source health-region code",
+          "type": "text"
+        },
+        {
+          "key": "health_authority_proxy",
+          "label": "Health authority",
+          "type": "text"
+        },
+        {
+          "key": "family_physicians_2020",
+          "label": "Family physicians · 2020",
+          "type": "number",
+          "unit": "physicians"
+        },
+        {
+          "key": "family_physicians_2024",
+          "label": "Family physicians · 2024",
+          "type": "number",
+          "unit": "physicians"
+        },
+        {
+          "key": "family_physicians_per_100k_2024",
+          "label": "Family physicians per 100,000 · 2024",
+          "type": "number",
+          "unit": "per 100,000"
+        },
+        {
+          "key": "specialists_2020",
+          "label": "Specialists · 2020",
+          "type": "number",
+          "unit": "physicians"
+        },
+        {
+          "key": "specialists_2024",
+          "label": "Specialists · 2024",
+          "type": "number",
+          "unit": "physicians"
+        },
+        {
+          "key": "specialists_per_100k_2024",
+          "label": "Specialists per 100,000 · 2024",
+          "type": "number",
+          "unit": "per 100,000"
+        },
+        {
+          "key": "total_physicians_2024",
+          "label": "Total physicians · 2024",
+          "type": "number",
+          "unit": "physicians"
+        },
+        {
+          "key": "total_physicians_per_100k_2024",
+          "label": "Total physicians per 100,000 · 2024",
+          "type": "number",
+          "unit": "per 100,000"
+        }
+      ],
+      "rows": [
+        {
+          "health_region": "Central Vancouver Island HSDA",
+          "health_region_code": "5942",
+          "health_authority_proxy": "Island Health",
+          "family_physicians_2020": 436,
+          "family_physicians_2024": 467,
+          "family_physicians_per_100k_2024": 146.789798266183,
+          "specialists_2020": 241,
+          "specialists_2024": 310,
+          "specialists_per_100k_2024": 97.44076544436132,
+          "total_physicians_2024": 777,
+          "total_physicians_per_100k_2024": 244.23056371054432
+        },
+        {
+          "health_region": "East Kootenay HSDA",
+          "health_region_code": "5911",
+          "health_authority_proxy": "Interior Health",
+          "family_physicians_2020": 146,
+          "family_physicians_2024": 171,
+          "family_physicians_per_100k_2024": 179.8372000084134,
+          "specialists_2020": 48,
+          "specialists_2024": 60,
+          "specialists_per_100k_2024": 63.10077193277665,
+          "total_physicians_2024": 231,
+          "total_physicians_per_100k_2024": 242.93797194119003
+        },
+        {
+          "health_region": "Fraser East HSDA",
+          "health_region_code": "5921",
+          "health_authority_proxy": "Fraser",
+          "family_physicians_2020": 341,
+          "family_physicians_2024": 388,
+          "family_physicians_per_100k_2024": 107.0442274745011,
+          "specialists_2020": 208,
+          "specialists_2024": 244,
+          "specialists_per_100k_2024": 67.31647294788215,
+          "total_physicians_2024": 632,
+          "total_physicians_per_100k_2024": 174.36070042238325
+        },
+        {
+          "health_region": "Fraser North HSDA",
+          "health_region_code": "5922",
+          "health_authority_proxy": "Fraser",
+          "family_physicians_2020": 674,
+          "family_physicians_2024": 791,
+          "family_physicians_per_100k_2024": 98.18841749069632,
+          "specialists_2020": 630,
+          "specialists_2024": 777,
+          "specialists_per_100k_2024": 96.45056939351583,
+          "total_physicians_2024": 1568,
+          "total_physicians_per_100k_2024": 194.63898688421216
+        },
+        {
+          "health_region": "Fraser South HSDA",
+          "health_region_code": "5923",
+          "health_authority_proxy": "Fraser",
+          "family_physicians_2020": 799,
+          "family_physicians_2024": 967,
+          "family_physicians_per_100k_2024": 91.92661841232176,
+          "specialists_2020": 603,
+          "specialists_2024": 743,
+          "specialists_per_100k_2024": 70.63234486076017,
+          "total_physicians_2024": 1710,
+          "total_physicians_per_100k_2024": 162.55896327308193
+        },
+        {
+          "health_region": "Kootenay–Boundary HSDA",
+          "health_region_code": "5912",
+          "health_authority_proxy": "Interior Health",
+          "family_physicians_2020": 146,
+          "family_physicians_2024": 165,
+          "family_physicians_per_100k_2024": 183.8665463176545,
+          "specialists_2020": 65,
+          "specialists_2024": 81,
+          "specialists_per_100k_2024": 90.26175910139403,
+          "total_physicians_2024": 246,
+          "total_physicians_per_100k_2024": 274.1283054190485
+        },
+        {
+          "health_region": "North Shore/Coast Garibaldi HSDA",
+          "health_region_code": "5933",
+          "health_authority_proxy": "Vancouver Coastal",
+          "family_physicians_2020": 473,
+          "family_physicians_2024": 585,
+          "family_physicians_per_100k_2024": 170.697261840846,
+          "specialists_2020": 314,
+          "specialists_2024": 362,
+          "specialists_per_100k_2024": 105.6280492074978,
+          "total_physicians_2024": 947,
+          "total_physicians_per_100k_2024": 276.3253110483438
+        },
+        {
+          "health_region": "North Vancouver Island HSDA",
+          "health_region_code": "5943",
+          "health_authority_proxy": "Island Health",
+          "family_physicians_2020": 258,
+          "family_physicians_2024": 299,
+          "family_physicians_per_100k_2024": 210.338229500816,
+          "specialists_2020": 113,
+          "specialists_2024": 144,
+          "specialists_per_100k_2024": 101.3000168833361,
+          "total_physicians_2024": 443,
+          "total_physicians_per_100k_2024": 311.6382463841521
+        },
+        {
+          "health_region": "Northeast HSDA",
+          "health_region_code": "5953",
+          "health_authority_proxy": "Northern Health",
+          "family_physicians_2020": 71,
+          "family_physicians_2024": 71,
+          "family_physicians_per_100k_2024": 99.1107947010623,
+          "specialists_2020": 16,
+          "specialists_2024": 19,
+          "specialists_per_100k_2024": 26.52260703267864,
+          "total_physicians_2024": 90,
+          "total_physicians_per_100k_2024": 125.63340173374094
+        },
+        {
+          "health_region": "Northern Interior HSDA",
+          "health_region_code": "5952",
+          "health_authority_proxy": "Northern Health",
+          "family_physicians_2020": 234,
+          "family_physicians_2024": 243,
+          "family_physicians_per_100k_2024": 158.4538038694028,
+          "specialists_2020": 128,
+          "specialists_2024": 147,
+          "specialists_per_100k_2024": 95.85477024198438,
+          "total_physicians_2024": 390,
+          "total_physicians_per_100k_2024": 254.3085741113872
+        },
+        {
+          "health_region": "Northwest HSDA",
+          "health_region_code": "5951",
+          "health_authority_proxy": "Northern Health",
+          "family_physicians_2020": 131,
+          "family_physicians_2024": 129,
+          "family_physicians_per_100k_2024": 165.477961927241,
+          "specialists_2020": 34,
+          "specialists_2024": 42,
+          "specialists_per_100k_2024": 53.87654574375289,
+          "total_physicians_2024": 171,
+          "total_physicians_per_100k_2024": 219.3545076709939
+        },
+        {
+          "health_region": "Okanagan HSDA",
+          "health_region_code": "5913",
+          "health_authority_proxy": "Interior Health",
+          "family_physicians_2020": 598,
+          "family_physicians_2024": 664,
+          "family_physicians_per_100k_2024": 149.0677652182698,
+          "specialists_2020": 501,
+          "specialists_2024": 627,
+          "specialists_per_100k_2024": 140.7612783009867,
+          "total_physicians_2024": 1291,
+          "total_physicians_per_100k_2024": 289.8290435192565
+        },
+        {
+          "health_region": "Richmond HSDA",
+          "health_region_code": "5931",
+          "health_authority_proxy": "Vancouver Coastal",
+          "family_physicians_2020": 232,
+          "family_physicians_2024": 294,
+          "family_physicians_per_100k_2024": 121.0045850036631,
+          "specialists_2020": 177,
+          "specialists_2024": 215,
+          "specialists_per_100k_2024": 88.48974753669238,
+          "total_physicians_2024": 509,
+          "total_physicians_per_100k_2024": 209.49433254035546
+        },
+        {
+          "health_region": "South Vancouver Island HSDA",
+          "health_region_code": "5941",
+          "health_authority_proxy": "Island Health",
+          "family_physicians_2020": 746,
+          "family_physicians_2024": 866,
+          "family_physicians_per_100k_2024": 188.1312226139812,
+          "specialists_2020": 638,
+          "specialists_2024": 810,
+          "specialists_per_100k_2024": 175.9656932070725,
+          "total_physicians_2024": 1676,
+          "total_physicians_per_100k_2024": 364.0969158210537
+        },
+        {
+          "health_region": "Thompson/Cariboo HSDA",
+          "health_region_code": "5914",
+          "health_authority_proxy": "Interior Health",
+          "family_physicians_2020": 326,
+          "family_physicians_2024": 342,
+          "family_physicians_per_100k_2024": 131.9016985236266,
+          "specialists_2020": 204,
+          "specialists_2024": 244,
+          "specialists_per_100k_2024": 94.10530537942952,
+          "total_physicians_2024": 586,
+          "total_physicians_per_100k_2024": 226.00700390305613
+        },
+        {
+          "health_region": "Vancouver HSDA",
+          "health_region_code": "5932",
+          "health_authority_proxy": "Vancouver Coastal",
+          "family_physicians_2020": 1258,
+          "family_physicians_2024": 1382,
+          "family_physicians_per_100k_2024": 177.2567529435908,
+          "specialists_2020": 2257,
+          "specialists_2024": 2781,
+          "specialists_per_100k_2024": 356.6939435138394,
+          "total_physicians_2024": 4163,
+          "total_physicians_per_100k_2024": 533.9506964574302
+        }
+      ],
+      "defaultMetric": "specialists_per_100k_2024",
+      "entityField": "health_region",
+      "boundaryKeyField": "health_region_code"
+    },
+    {
+      "id": "population-lha",
+      "title": "Northern local health area populations",
+      "description": "BC Stats total population rows for seventeen Northern local health areas, with projections labelled.",
+      "topic": "Population",
+      "geography": "lha",
+      "status": "observed",
+      "timeLabel": "2020–2025 · collected April 2026",
+      "sourceName": "BC Stats · verified source totals",
+      "sourceUrl": "https://www2.gov.bc.ca/gov/content/data/statistics/people-population-community/population/population-estimates",
+      "datasetId": "f7b55b36-aa3e-4279-82ce-c0c1c2198f7e",
+      "tableName": "nhhr_data_c051_dbaa1911251e_zip_data_c051_local_",
+      "notes": [
+        "Use exactly one Gender=T row per area/year. Source Type is retained: 2025 values are projections, not an observed census count.",
+        "The earlier DATA-C031 summary sums F + M + T and is twice the total. This release derives totals directly from hash-verified DATA-C051 raw rows.",
+        "LHA population is a regional denominator, not a city population or a count of patients served. Boundary codes refer to the source LHA geography."
+      ],
+      "columns": [
+        {
+          "key": "region_name",
+          "label": "Local health area",
+          "type": "text"
+        },
+        {
+          "key": "lha_code",
+          "label": "LHA code",
+          "type": "text"
+        },
+        {
+          "key": "year",
+          "label": "Year",
+          "type": "text"
+        },
+        {
+          "key": "population",
+          "label": "Population",
+          "type": "number",
+          "unit": "people"
+        },
+        {
+          "key": "working_age_population",
+          "label": "Population aged 15–64",
+          "type": "number",
+          "unit": "people"
+        },
+        {
+          "key": "population_type",
+          "label": "Source estimate / projection",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "region_name": "Haida Gwaii",
+          "lha_code": "510",
+          "year": "2020",
+          "population": 4391,
+          "working_age_population": 2906,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Haida Gwaii",
+          "lha_code": "510",
+          "year": "2021",
+          "population": 4446,
+          "working_age_population": 2877,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Haida Gwaii",
+          "lha_code": "510",
+          "year": "2022",
+          "population": 4429,
+          "working_age_population": 2881,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Haida Gwaii",
+          "lha_code": "510",
+          "year": "2023",
+          "population": 4485,
+          "working_age_population": 2883,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Haida Gwaii",
+          "lha_code": "510",
+          "year": "2024",
+          "population": 4471,
+          "working_age_population": 2871,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Haida Gwaii",
+          "lha_code": "510",
+          "year": "2025",
+          "population": 4393,
+          "working_age_population": 2769,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Snow Country",
+          "lha_code": "511",
+          "year": "2020",
+          "population": 800,
+          "working_age_population": 521,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Snow Country",
+          "lha_code": "511",
+          "year": "2021",
+          "population": 842,
+          "working_age_population": 539,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Snow Country",
+          "lha_code": "511",
+          "year": "2022",
+          "population": 889,
+          "working_age_population": 580,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Snow Country",
+          "lha_code": "511",
+          "year": "2023",
+          "population": 817,
+          "working_age_population": 521,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Snow Country",
+          "lha_code": "511",
+          "year": "2024",
+          "population": 840,
+          "working_age_population": 530,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Snow Country",
+          "lha_code": "511",
+          "year": "2025",
+          "population": 827,
+          "working_age_population": 515,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Prince Rupert",
+          "lha_code": "512",
+          "year": "2020",
+          "population": 14167,
+          "working_age_population": 9527,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Prince Rupert",
+          "lha_code": "512",
+          "year": "2021",
+          "population": 14238,
+          "working_age_population": 9542,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Prince Rupert",
+          "lha_code": "512",
+          "year": "2022",
+          "population": 14220,
+          "working_age_population": 9565,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Prince Rupert",
+          "lha_code": "512",
+          "year": "2023",
+          "population": 14224,
+          "working_age_population": 9573,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Prince Rupert",
+          "lha_code": "512",
+          "year": "2024",
+          "population": 14240,
+          "working_age_population": 9511,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Prince Rupert",
+          "lha_code": "512",
+          "year": "2025",
+          "population": 13825,
+          "working_age_population": 9158,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Upper Skeena",
+          "lha_code": "513",
+          "year": "2020",
+          "population": 3892,
+          "working_age_population": 2479,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Upper Skeena",
+          "lha_code": "513",
+          "year": "2021",
+          "population": 3896,
+          "working_age_population": 2500,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Upper Skeena",
+          "lha_code": "513",
+          "year": "2022",
+          "population": 3967,
+          "working_age_population": 2489,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Upper Skeena",
+          "lha_code": "513",
+          "year": "2023",
+          "population": 4068,
+          "working_age_population": 2548,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Upper Skeena",
+          "lha_code": "513",
+          "year": "2024",
+          "population": 4052,
+          "working_age_population": 2529,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Upper Skeena",
+          "lha_code": "513",
+          "year": "2025",
+          "population": 4011,
+          "working_age_population": 2464,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Smithers",
+          "lha_code": "514",
+          "year": "2020",
+          "population": 17356,
+          "working_age_population": 11347,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Smithers",
+          "lha_code": "514",
+          "year": "2021",
+          "population": 17521,
+          "working_age_population": 11254,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Smithers",
+          "lha_code": "514",
+          "year": "2022",
+          "population": 17549,
+          "working_age_population": 11275,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Smithers",
+          "lha_code": "514",
+          "year": "2023",
+          "population": 17629,
+          "working_age_population": 11295,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Smithers",
+          "lha_code": "514",
+          "year": "2024",
+          "population": 17628,
+          "working_age_population": 11241,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Smithers",
+          "lha_code": "514",
+          "year": "2025",
+          "population": 17164,
+          "working_age_population": 10848,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Kitimat",
+          "lha_code": "515",
+          "year": "2020",
+          "population": 9506,
+          "working_age_population": 6304,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Kitimat",
+          "lha_code": "515",
+          "year": "2021",
+          "population": 9575,
+          "working_age_population": 6419,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Kitimat",
+          "lha_code": "515",
+          "year": "2022",
+          "population": 9601,
+          "working_age_population": 6351,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Kitimat",
+          "lha_code": "515",
+          "year": "2023",
+          "population": 10007,
+          "working_age_population": 6588,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Kitimat",
+          "lha_code": "515",
+          "year": "2024",
+          "population": 10148,
+          "working_age_population": 6732,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Kitimat",
+          "lha_code": "515",
+          "year": "2025",
+          "population": 10006,
+          "working_age_population": 6544,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Stikine",
+          "lha_code": "516",
+          "year": "2020",
+          "population": 888,
+          "working_age_population": 557,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Stikine",
+          "lha_code": "516",
+          "year": "2021",
+          "population": 977,
+          "working_age_population": 623,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Stikine",
+          "lha_code": "516",
+          "year": "2022",
+          "population": 1015,
+          "working_age_population": 644,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Stikine",
+          "lha_code": "516",
+          "year": "2023",
+          "population": 982,
+          "working_age_population": 611,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Stikine",
+          "lha_code": "516",
+          "year": "2024",
+          "population": 1006,
+          "working_age_population": 620,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Stikine",
+          "lha_code": "516",
+          "year": "2025",
+          "population": 989,
+          "working_age_population": 605,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Terrace",
+          "lha_code": "517",
+          "year": "2020",
+          "population": 21644,
+          "working_age_population": 14416,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Terrace",
+          "lha_code": "517",
+          "year": "2021",
+          "population": 21724,
+          "working_age_population": 14386,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Terrace",
+          "lha_code": "517",
+          "year": "2022",
+          "population": 21966,
+          "working_age_population": 14473,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Terrace",
+          "lha_code": "517",
+          "year": "2023",
+          "population": 22429,
+          "working_age_population": 14787,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Terrace",
+          "lha_code": "517",
+          "year": "2024",
+          "population": 22916,
+          "working_age_population": 15066,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Terrace",
+          "lha_code": "517",
+          "year": "2025",
+          "population": 22727,
+          "working_age_population": 14808,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Nisga'a",
+          "lha_code": "518",
+          "year": "2020",
+          "population": 1867,
+          "working_age_population": 1180,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Nisga'a",
+          "lha_code": "518",
+          "year": "2021",
+          "population": 1891,
+          "working_age_population": 1177,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Nisga'a",
+          "lha_code": "518",
+          "year": "2022",
+          "population": 1843,
+          "working_age_population": 1150,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Nisga'a",
+          "lha_code": "518",
+          "year": "2023",
+          "population": 1809,
+          "working_age_population": 1137,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Nisga'a",
+          "lha_code": "518",
+          "year": "2024",
+          "population": 1853,
+          "working_age_population": 1160,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Nisga'a",
+          "lha_code": "518",
+          "year": "2025",
+          "population": 1812,
+          "working_age_population": 1118,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Telegraph Creek",
+          "lha_code": "519",
+          "year": "2020",
+          "population": 780,
+          "working_age_population": 519,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Telegraph Creek",
+          "lha_code": "519",
+          "year": "2021",
+          "population": 782,
+          "working_age_population": 388,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Telegraph Creek",
+          "lha_code": "519",
+          "year": "2022",
+          "population": 801,
+          "working_age_population": 403,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Telegraph Creek",
+          "lha_code": "519",
+          "year": "2023",
+          "population": 799,
+          "working_age_population": 422,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Telegraph Creek",
+          "lha_code": "519",
+          "year": "2024",
+          "population": 804,
+          "working_age_population": 440,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Telegraph Creek",
+          "lha_code": "519",
+          "year": "2025",
+          "population": 794,
+          "working_age_population": 429,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Quesnel",
+          "lha_code": "521",
+          "year": "2020",
+          "population": 24131,
+          "working_age_population": 15317,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Quesnel",
+          "lha_code": "521",
+          "year": "2021",
+          "population": 24069,
+          "working_age_population": 15047,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Quesnel",
+          "lha_code": "521",
+          "year": "2022",
+          "population": 23936,
+          "working_age_population": 15004,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Quesnel",
+          "lha_code": "521",
+          "year": "2023",
+          "population": 24107,
+          "working_age_population": 15098,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Quesnel",
+          "lha_code": "521",
+          "year": "2024",
+          "population": 24195,
+          "working_age_population": 15120,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Quesnel",
+          "lha_code": "521",
+          "year": "2025",
+          "population": 23606,
+          "working_age_population": 14538,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Burns Lake",
+          "lha_code": "522",
+          "year": "2020",
+          "population": 6431,
+          "working_age_population": 4002,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Burns Lake",
+          "lha_code": "522",
+          "year": "2021",
+          "population": 6385,
+          "working_age_population": 3932,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Burns Lake",
+          "lha_code": "522",
+          "year": "2022",
+          "population": 6456,
+          "working_age_population": 4020,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Burns Lake",
+          "lha_code": "522",
+          "year": "2023",
+          "population": 6425,
+          "working_age_population": 3989,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Burns Lake",
+          "lha_code": "522",
+          "year": "2024",
+          "population": 6495,
+          "working_age_population": 4014,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Burns Lake",
+          "lha_code": "522",
+          "year": "2025",
+          "population": 6303,
+          "working_age_population": 3847,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Nechako",
+          "lha_code": "523",
+          "year": "2020",
+          "population": 15927,
+          "working_age_population": 10296,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Nechako",
+          "lha_code": "523",
+          "year": "2021",
+          "population": 16006,
+          "working_age_population": 10329,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Nechako",
+          "lha_code": "523",
+          "year": "2022",
+          "population": 16059,
+          "working_age_population": 10191,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Nechako",
+          "lha_code": "523",
+          "year": "2023",
+          "population": 16055,
+          "working_age_population": 10088,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Nechako",
+          "lha_code": "523",
+          "year": "2024",
+          "population": 15971,
+          "working_age_population": 9918,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Nechako",
+          "lha_code": "523",
+          "year": "2025",
+          "population": 15518,
+          "working_age_population": 9486,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Prince George",
+          "lha_code": "524",
+          "year": "2020",
+          "population": 102404,
+          "working_age_population": 69661,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Prince George",
+          "lha_code": "524",
+          "year": "2021",
+          "population": 101730,
+          "working_age_population": 68759,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Prince George",
+          "lha_code": "524",
+          "year": "2022",
+          "population": 102810,
+          "working_age_population": 69221,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Prince George",
+          "lha_code": "524",
+          "year": "2023",
+          "population": 104923,
+          "working_age_population": 70829,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Prince George",
+          "lha_code": "524",
+          "year": "2024",
+          "population": 106696,
+          "working_age_population": 72107,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Prince George",
+          "lha_code": "524",
+          "year": "2025",
+          "population": 105544,
+          "working_age_population": 70647,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Peace River South",
+          "lha_code": "531",
+          "year": "2020",
+          "population": 27090,
+          "working_age_population": 18190,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Peace River South",
+          "lha_code": "531",
+          "year": "2021",
+          "population": 26772,
+          "working_age_population": 17860,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Peace River South",
+          "lha_code": "531",
+          "year": "2022",
+          "population": 26349,
+          "working_age_population": 17436,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Peace River South",
+          "lha_code": "531",
+          "year": "2023",
+          "population": 26748,
+          "working_age_population": 17700,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Peace River South",
+          "lha_code": "531",
+          "year": "2024",
+          "population": 27169,
+          "working_age_population": 17880,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Peace River South",
+          "lha_code": "531",
+          "year": "2025",
+          "population": 26752,
+          "working_age_population": 17392,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Peace River North",
+          "lha_code": "532",
+          "year": "2020",
+          "population": 37466,
+          "working_age_population": 25881,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Peace River North",
+          "lha_code": "532",
+          "year": "2021",
+          "population": 37324,
+          "working_age_population": 25481,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Peace River North",
+          "lha_code": "532",
+          "year": "2022",
+          "population": 38168,
+          "working_age_population": 26108,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Peace River North",
+          "lha_code": "532",
+          "year": "2023",
+          "population": 38847,
+          "working_age_population": 26589,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Peace River North",
+          "lha_code": "532",
+          "year": "2024",
+          "population": 39696,
+          "working_age_population": 27148,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Peace River North",
+          "lha_code": "532",
+          "year": "2025",
+          "population": 39301,
+          "working_age_population": 26606,
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Fort Nelson",
+          "lha_code": "533",
+          "year": "2020",
+          "population": 4749,
+          "working_age_population": 3298,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Fort Nelson",
+          "lha_code": "533",
+          "year": "2021",
+          "population": 4803,
+          "working_age_population": 3282,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Fort Nelson",
+          "lha_code": "533",
+          "year": "2022",
+          "population": 4781,
+          "working_age_population": 3204,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Fort Nelson",
+          "lha_code": "533",
+          "year": "2023",
+          "population": 4800,
+          "working_age_population": 3190,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Fort Nelson",
+          "lha_code": "533",
+          "year": "2024",
+          "population": 4775,
+          "working_age_population": 3173,
+          "population_type": "Estimate"
+        },
+        {
+          "region_name": "Fort Nelson",
+          "lha_code": "533",
+          "year": "2025",
+          "population": 4635,
+          "working_age_population": 3012,
+          "population_type": "Projection"
+        }
+      ],
+      "defaultMetric": "population",
+      "entityField": "region_name",
+      "timeField": "year",
+      "boundaryKeyField": "lha_code"
+    },
+    {
+      "id": "travel-schedule",
+      "title": "Northern Health Connections route patterns",
+      "description": "Recorded route and service-day patterns from the collected public transport schedules.",
+      "topic": "Access and travel",
+      "geography": "none",
+      "status": "observed",
+      "timeLabel": "Schedule capture · 16 June 2026",
+      "sourceName": "Northern Health Connections",
+      "sourceUrl": "https://nhconnections.ca/schedules-and-fares/",
+      "datasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "tableName": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_nh_con",
+      "notes": [
+        "One row is a route and recorded service-day pattern; stop-event counts are not departures per week, passenger volumes, distances, or journey durations.",
+        "Schedule times are preserved as collected text. Arrivals, departures, breaks, and overnight events may be separate records.",
+        "The June 2026 capture is historical. Use the route source link for current schedules, eligibility, fares, and booking."
+      ],
+      "columns": [
+        {
+          "key": "route",
+          "label": "Route",
+          "type": "text"
+        },
+        {
+          "key": "service_day",
+          "label": "Recorded service day / direction",
+          "type": "text"
+        },
+        {
+          "key": "recorded_stop_events",
+          "label": "Recorded stop events",
+          "type": "number",
+          "unit": "stop events"
+        },
+        {
+          "key": "first_stop",
+          "label": "First recorded stop",
+          "type": "text"
+        },
+        {
+          "key": "first_time",
+          "label": "First recorded time",
+          "type": "text"
+        },
+        {
+          "key": "last_stop",
+          "label": "Last recorded stop",
+          "type": "text"
+        },
+        {
+          "key": "last_time",
+          "label": "Last recorded time",
+          "type": "text"
+        },
+        {
+          "key": "source_url",
+          "label": "Route source link",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "route": "Burns Lake Prince George Burns Lake",
+          "service_day": "Tuesday",
+          "recorded_stop_events": 14,
+          "first_stop": "Depart: Burns Lake (Husky CO-OP)",
+          "first_time": "7 am",
+          "last_stop": "Arrive: Burns Lake (Husky CO-OP)",
+          "last_time": "7:30 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/burns-lake-prince-george-burns-lake"
+        },
+        {
+          "route": "Burns Lake Prince George Burns Lake",
+          "service_day": "Wednesday",
+          "recorded_stop_events": 18,
+          "first_stop": "Depart: Burns Lake (Husky CO-OP)",
+          "first_time": "7 am",
+          "last_stop": "Arrive: Burns Lake (Husky CO-OP)",
+          "last_time": "9:10 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/burns-lake-prince-george-burns-lake"
+        },
+        {
+          "route": "Burns Lake Terrace Burns Lake",
+          "service_day": "Thursday",
+          "recorded_stop_events": 22,
+          "first_stop": "Depart: Burns Lake (Husky CO-OP)",
+          "first_time": "6:30 am",
+          "last_stop": "Arrive: Burns Lake (Husky CO-OP)",
+          "last_time": "9 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/burns-lake-terrace-burns-lake"
+        },
+        {
+          "route": "Dawson Creek Fort Nelson Dawson Creek",
+          "service_day": "Thursday",
+          "recorded_stop_events": 4,
+          "first_stop": "Depart: Dawson Creek (Hospital)",
+          "first_time": "7 am",
+          "last_stop": "Arrive: Fort Nelson (Hospital)",
+          "last_time": "5 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/dawson-creek-fort-nelson-dawson-creek"
+        },
+        {
+          "route": "Dawson Creek Fort Nelson Dawson Creek",
+          "service_day": "Tuesday",
+          "recorded_stop_events": 4,
+          "first_stop": "Depart: Fort Nelson (Hospital)",
+          "first_time": "7 am",
+          "last_stop": "Arrive: Dawson Creek (Hospital)",
+          "last_time": "2:45 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/dawson-creek-fort-nelson-dawson-creek"
+        },
+        {
+          "route": "Dawson Creek Fort St John Dawson Creek",
+          "service_day": "Monday, Tuesday, Wednesday, Thursday & Friday",
+          "recorded_stop_events": 3,
+          "first_stop": "Depart: Dawson Creek (Hospital)",
+          "first_time": "7 am",
+          "last_stop": "Arrive: Fort St. John (Hospital)",
+          "last_time": "8 am",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/dawson-creek-fort-st-john-dawson-creek"
+        },
+        {
+          "route": "Dawson Creek Fort St John Dawson Creek",
+          "service_day": "Monday, Tuesday, Wednesday, Thursday & Friday",
+          "recorded_stop_events": 3,
+          "first_stop": "Depart: Fort St. John (Hospital)",
+          "first_time": "4 pm",
+          "last_stop": "Arrive: Dawson Creek (Hospital)",
+          "last_time": "5 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/dawson-creek-fort-st-john-dawson-creek"
+        },
+        {
+          "route": "Mackenzie Prince George Mackenzie",
+          "service_day": "Wednesday",
+          "recorded_stop_events": 8,
+          "first_stop": "Depart: Mackenzie (Hospital)",
+          "first_time": "8 am",
+          "last_stop": "Arrive: Mackenzie (Hospital)",
+          "last_time": "7 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/mackenzie-prince-george-mackenzie"
+        },
+        {
+          "route": "Mcbride Kamloops Mcbride",
+          "service_day": "Thursday",
+          "recorded_stop_events": 28,
+          "first_stop": "Depart: McBride (Hospital)",
+          "first_time": "5:45 am",
+          "last_stop": "Arrive: McBride (Hospital)",
+          "last_time": "10:20 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/mcbride-kamloops-mcbride"
+        },
+        {
+          "route": "Prince George Fort St John Prince George",
+          "service_day": "Sunday* & Thursday",
+          "recorded_stop_events": 10,
+          "first_stop": "Depart: Prince George (UHNBC/KL)",
+          "first_time": "8 am",
+          "last_stop": "Arrive: Fort St. John (Hospital)",
+          "last_time": "3:50 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/prince-george-fort-st-john-prince-george"
+        },
+        {
+          "route": "Prince George Fort St John Prince George",
+          "service_day": "Tuesday & Saturday*",
+          "recorded_stop_events": 10,
+          "first_stop": "Depart: Fort St. John (Hospital)",
+          "first_time": "8 am",
+          "last_stop": "Arrive: Prince George (UHNBC/KL)",
+          "last_time": "3:50 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/prince-george-fort-st-john-prince-george"
+        },
+        {
+          "route": "Prince George Kelowna Prince George",
+          "service_day": "Tuesday & Thursday",
+          "recorded_stop_events": 47,
+          "first_stop": "Depart: Prince George (UHNBC)",
+          "first_time": "8 am",
+          "last_stop": "Arrive: Prince George (UHNBC)",
+          "last_time": "8:30 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/prince-george-kelowna-prince-george"
+        },
+        {
+          "route": "Prince George Prince Rupert Prince George",
+          "service_day": "Monday*, Wednesday*, Thursday & Saturday*",
+          "recorded_stop_events": 22,
+          "first_stop": "Depart: Prince Rupert (Hospital)",
+          "first_time": "8 am",
+          "last_stop": "Arrive: Prince George (UHNBC/KL)",
+          "last_time": "7 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/prince-george-prince-rupert-prince-george"
+        },
+        {
+          "route": "Prince George Prince Rupert Prince George",
+          "service_day": "Sunday*, Monday, Wednesday* & Friday*",
+          "recorded_stop_events": 22,
+          "first_stop": "Depart: Prince George (UHNBC/KL)",
+          "first_time": "8 am",
+          "last_stop": "Arrive: Prince Rupert (Hospital)",
+          "last_time": "7 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/prince-george-prince-rupert-prince-george"
+        },
+        {
+          "route": "Prince George Vancouver Prince George",
+          "service_day": "Sunday, Tuesday & Thursday",
+          "recorded_stop_events": 23,
+          "first_stop": "Depart: Prince George (UHNBC/KL)",
+          "first_time": "8 am",
+          "last_stop": "Arrive: Vancouver (Pacific Central Station - 1150 Station St)",
+          "last_time": "8 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/prince-george-vancouver-prince-george"
+        },
+        {
+          "route": "Prince George Vancouver Prince George",
+          "service_day": "Tuesday, Thursday & Saturday",
+          "recorded_stop_events": 24,
+          "first_stop": "Depart: Vancouver (Pacific Central Station - 1150 Station St)",
+          "first_time": "8:30 am",
+          "last_stop": "Arrive: Prince George (UHNBC/KL)",
+          "last_time": "8:30 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/prince-george-vancouver-prince-george"
+        },
+        {
+          "route": "Quesnel Prince George Quesnel",
+          "service_day": "Tuesday",
+          "recorded_stop_events": 6,
+          "first_stop": "Depart: Quesnel (Hospital Parking)",
+          "first_time": "8 am",
+          "last_stop": "Arrive: Quesnel (Hospital Parking)",
+          "last_time": "6 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/quesnel-prince-george-quesnel"
+        },
+        {
+          "route": "Valemount Prince George Valemount",
+          "service_day": "Tuesday",
+          "recorded_stop_events": 18,
+          "first_stop": "Depart: Valemount (Clinic)",
+          "first_time": "7 am",
+          "last_stop": "Arrive: Valemount (Clinic)",
+          "last_time": "7:15 pm",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/valemount-prince-george-valemount"
+        }
+      ],
+      "defaultMetric": "recorded_stop_events",
+      "entityField": "route"
+    },
+    {
+      "id": "travel-benchmarks",
+      "title": "Travel cost assumptions and benchmarks",
+      "description": "Five collected mileage, fare, and economic-cost benchmarks with distinct units and evidence limits.",
+      "topic": "Access and travel",
+      "geography": "none",
+      "status": "review",
+      "timeLabel": "2025 rates / 2026 fare · captured June 2026",
+      "sourceName": "CRA / NH Connections · NHHR collected benchmarks",
+      "sourceUrl": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/benefits-allowances/automobile/automobile-motor-vehicle-allowances/automobile-allowance-rates.html",
+      "datasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "tableName": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_travel",
+      "notes": [
+        "Values have different units; never add or rank them as a common cost. Select one benchmark and read its unit and evidence note.",
+        "The $20 fare record is described as news-sourced in the collected table and lacks its original news citation. It requires verification before use.",
+        "Economic driving cost is a derived mileage scenario, not an observed patient expense. CRA allowances are tax benchmarks, not measured medical-travel costs."
+      ],
+      "columns": [
+        {
+          "key": "metric",
+          "label": "Benchmark",
+          "type": "text"
+        },
+        {
+          "key": "value",
+          "label": "Source value",
+          "type": "number",
+          "unit": "varies — see unit"
+        },
+        {
+          "key": "unit",
+          "label": "Source unit",
+          "type": "text"
+        },
+        {
+          "key": "period",
+          "label": "Applicable period",
+          "type": "text"
+        },
+        {
+          "key": "source",
+          "label": "Publisher / derivation",
+          "type": "text"
+        },
+        {
+          "key": "source_url",
+          "label": "Source link",
+          "type": "text"
+        },
+        {
+          "key": "note",
+          "label": "Evidence note",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "metric": "CRA automobile allowance - first 5,000 km",
+          "value": 72,
+          "unit": "cents/km",
+          "period": "2025 tax year",
+          "source": "Canada Revenue Agency",
+          "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/benefits-allowances/automobile/automobile-motor-vehicle-allowances/automobile-allowance-rates.html",
+          "note": "Economic mileage basis. 2024 = 70 c/km."
+        },
+        {
+          "metric": "CRA automobile allowance - after 5,000 km",
+          "value": 66,
+          "unit": "cents/km",
+          "period": "2025 tax year",
+          "source": "Canada Revenue Agency",
+          "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/benefits-allowances/automobile/automobile-motor-vehicle-allowances/automobile-allowance-rates.html",
+          "note": "2024 = 64 c/km."
+        },
+        {
+          "metric": "CRA automobile allowance - territories uplift",
+          "value": 4,
+          "unit": "cents/km",
+          "period": "2025 tax year",
+          "source": "Canada Revenue Agency",
+          "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/benefits-allowances/automobile/automobile-motor-vehicle-allowances/automobile-allowance-rates.html",
+          "note": "YT/NWT/NU add 4 c/km."
+        },
+        {
+          "metric": "NH Connections fare Prince George <-> Vancouver",
+          "value": 20,
+          "unit": "CAD each way",
+          "period": "2026",
+          "source": "Northern Health Connections (public reporting)",
+          "source_url": "https://nhconnections.ca/schedules-and-fares/prince-george-vancouver-prince-george",
+          "note": "SUBSIDIZED patient out-of-pocket fare; not published on site, sourced from news. NOT the economic cost."
+        },
+        {
+          "metric": "Economic driving cost Prince George <-> Vancouver",
+          "value": 566,
+          "unit": "CAD one way",
+          "period": "2025 CRA rate",
+          "source": "Derived (CRA 72 c/km x ~786 km)",
+          "source_url": null,
+          "note": "Upper-bound economic cost vs the $20 subsidized fare; brackets the avoided-travel value. ~1,132 round trip."
+        }
+      ],
+      "defaultMetric": "value",
+      "entityField": "metric"
+    },
+    {
+      "id": "travel-scenarios",
+      "title": "Hypothetical avoided-travel scenarios",
+      "description": "Three planning cases showing the effect of assumed reach, avoided trips, trip cost, and patient time.",
+      "topic": "Access and travel",
+      "geography": "none",
+      "status": "scenario",
+      "timeLabel": "Planning assumptions · April 2026",
+      "sourceName": "NHHR scenario calculations",
+      "sourceUrl": "https://zoer.k8s.overtheedgepaper.ca/api/projects/acdd692f-a188-4f85-bb5a-83c48d5c7e82/database/data-spaces/de1fe530-a762-52fa-ba11-d01cc5b344df/manifest",
+      "datasetId": "eb3407f1-61f3-4902-9828-3533cd3933fa",
+      "tableName": "nhhr_data_c032_19eddbcc0199_zip_data_c032_moneti",
+      "notes": [
+        "These are hypothetical inputs and calculations, not measured NHHR benefits, forecasts, avoided trips, or causal effects.",
+        "Travel value = avoided trips × cost per trip. Patient time value = patients reached × hours saved per patient × value per hour.",
+        "The original scenario table carries the doubled Northern population denominator (596414). That field is omitted; no population-based uptake or rate is shown."
+      ],
+      "columns": [
+        {
+          "key": "scenario",
+          "label": "Scenario",
+          "type": "text"
+        },
+        {
+          "key": "patients_reached",
+          "label": "Assumed patients reached",
+          "type": "number",
+          "unit": "patients"
+        },
+        {
+          "key": "avoided_trips",
+          "label": "Assumed avoided trips",
+          "type": "number",
+          "unit": "trips"
+        },
+        {
+          "key": "cost_per_trip",
+          "label": "Assumed cost per trip",
+          "type": "number",
+          "unit": "CAD"
+        },
+        {
+          "key": "avoided_travel_value",
+          "label": "Modelled travel value",
+          "type": "number",
+          "unit": "CAD"
+        },
+        {
+          "key": "hours_saved_per_patient",
+          "label": "Assumed hours per patient",
+          "type": "number",
+          "unit": "hours"
+        },
+        {
+          "key": "value_per_hour",
+          "label": "Assumed value per hour",
+          "type": "number",
+          "unit": "CAD/hour"
+        },
+        {
+          "key": "patient_time_value",
+          "label": "Modelled patient time value",
+          "type": "number",
+          "unit": "CAD"
+        }
+      ],
+      "rows": [
+        {
+          "scenario": "low",
+          "patients_reached": 100,
+          "avoided_trips": 100,
+          "cost_per_trip": 450,
+          "avoided_travel_value": 45000,
+          "hours_saved_per_patient": 3,
+          "value_per_hour": 25,
+          "patient_time_value": 7500
+        },
+        {
+          "scenario": "base",
+          "patients_reached": 300,
+          "avoided_trips": 450,
+          "cost_per_trip": 900,
+          "avoided_travel_value": 405000,
+          "hours_saved_per_patient": 6,
+          "value_per_hour": 35,
+          "patient_time_value": 63000
+        },
+        {
+          "scenario": "high",
+          "patients_reached": 750,
+          "avoided_trips": 1500,
+          "cost_per_trip": 1500,
+          "avoided_travel_value": 2250000,
+          "hours_saved_per_patient": 10,
+          "value_per_hour": 45,
+          "patient_time_value": 337500
+        }
+      ],
+      "defaultMetric": "avoided_travel_value",
+      "entityField": "scenario"
+    },
+    {
+      "id": "evidence-gaps",
+      "title": "Validation questions still open",
+      "description": "Thirteen institution-level requests that describe evidence still needed for feasibility decisions.",
+      "topic": "Evidence and governance",
+      "geography": "none",
+      "status": "review",
+      "timeLabel": "Validation tracker · April 2026",
+      "sourceName": "NHHR validation-phase evidence tracker",
+      "sourceUrl": "https://zoer.k8s.overtheedgepaper.ca/api/projects/acdd692f-a188-4f85-bb5a-83c48d5c7e82/database/data-spaces/de1fe530-a762-52fa-ba11-d01cc5b344df/manifest",
+      "datasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "tableName": "nhhr_data_c019_abdefd338a78_zip_data_c019_valida",
+      "notes": [
+        "This is a request tracker, not supplied enrollment, staffing, financial, governance, or interview evidence. One row represents one evidence request.",
+        "No completed interview findings are included in this snapshot. Interview guides, recruitment materials, or blank coding workbooks must not be presented as interview results.",
+        "Personal contacts, interview candidates, consent records, participant-level data, and internal remuneration are excluded. Community governance acceptability cannot be inferred from public sources."
+      ],
+      "columns": [
+        {
+          "key": "request_id",
+          "label": "Request ID",
+          "type": "text"
+        },
+        {
+          "key": "owner",
+          "label": "Institution / function",
+          "type": "text"
+        },
+        {
+          "key": "priority",
+          "label": "Priority",
+          "type": "text"
+        },
+        {
+          "key": "use",
+          "label": "Decision supported",
+          "type": "text"
+        },
+        {
+          "key": "caveat",
+          "label": "Interpretation limit",
+          "type": "text"
+        },
+        {
+          "key": "evidence_status",
+          "label": "Evidence status",
+          "type": "text"
+        },
+        {
+          "key": "request_count",
+          "label": "Evidence requests",
+          "type": "number",
+          "unit": "requests"
+        }
+      ],
+      "rows": [
+        {
+          "request_id": "BCN-01",
+          "owner": "BC Cancer Centre for the North",
+          "priority": "High",
+          "use": "Validate distributed oncology/radiotherapy clinical-trial access as the first proof lane and define minimum operating requirements.",
+          "caveat": "ClinicalTrials.gov exact-site counts do not measure enrollment, screen failures, workforce capacity, sponsor interest, or protocol complexity.",
+          "evidence_status": "Requested; not supplied in reviewed snapshot",
+          "request_count": 1
+        },
+        {
+          "request_id": "BCN-02",
+          "owner": "BC Cancer Centre for the North",
+          "priority": "High",
+          "use": "Size the patient pool, catchment, and access burden for oncology/radiotherapy trial-access feasibility and avoided-travel scenarios.",
+          "caveat": "Access-burden data do not prove NHHR will eliminate travel or improve outcomes.",
+          "evidence_status": "Requested; not supplied in reviewed snapshot",
+          "request_count": 1
+        },
+        {
+          "request_id": "NH-01",
+          "owner": "Northern Health",
+          "priority": "High",
+          "use": "Identify material patient movement and service lines for the first lane or companion lanes; support avoided-travel and patient-time estimates.",
+          "caveat": "Referral data must be interpreted by service line and geography and cannot be scaled to all Northern Health residents.",
+          "evidence_status": "Requested; not supplied in reviewed snapshot",
+          "request_count": 1
+        },
+        {
+          "request_id": "NH-02",
+          "owner": "Northern Health",
+          "priority": "High",
+          "use": "Replace placeholder travel and time assumptions with service-line-specific inputs for monetization scenarios.",
+          "caveat": "Savings remain scenario-based unless tied to a defined intervention and measured change.",
+          "evidence_status": "Requested; not supplied in reviewed snapshot",
+          "request_count": 1
+        },
+        {
+          "request_id": "NH-03",
+          "owner": "Northern Health",
+          "priority": "Medium",
+          "use": "Test workforce constraints and replacement-cost scenario assumptions for trial operations and node staffing.",
+          "caveat": "Workforce gaps do not prove NHHR will improve retention.",
+          "evidence_status": "Requested; not supplied in reviewed snapshot",
+          "request_count": 1
+        },
+        {
+          "request_id": "UNBC-RO-01",
+          "owner": "UNBC Research Office",
+          "priority": "High",
+          "use": "Complement CIHR/NSERC public inflow and identify health-research activity not captured in public federal award pulls.",
+          "caveat": "Do not combine cash, in-kind, grants, and contracts without clear labels; aggregate confidential partner terms as needed.",
+          "evidence_status": "Requested; not supplied in reviewed snapshot",
+          "request_count": 1
+        },
+        {
+          "request_id": "UNBC-RO-02",
+          "owner": "UNBC Research Office",
+          "priority": "High",
+          "use": "Estimate equivalent external research-production value and identify local versus partner-supported NHHR functions.",
+          "caveat": "Platform value is not revenue unless fees were charged or approved unit values are supplied.",
+          "evidence_status": "Requested; not supplied in reviewed snapshot",
+          "request_count": 1
+        },
+        {
+          "request_id": "UNBC-FF-01",
+          "owner": "UNBC Finance/Facilities",
+          "priority": "High",
+          "use": "Assess existing infrastructure, asset value, capital gaps, and reuse potential for the minimum node model.",
+          "caveat": "Book value, replacement value, and practical research value differ; final claims must state the metric used.",
+          "evidence_status": "Requested; not supplied in reviewed snapshot",
+          "request_count": 1
+        },
+        {
+          "request_id": "UNBC-FF-02",
+          "owner": "UNBC Finance/Facilities",
+          "priority": "Medium",
+          "use": "Define minimum viable operating model and avoid premature capital-heavy scope.",
+          "caveat": "Space availability does not equal operational readiness without staffing, governance, and partner pathways.",
+          "evidence_status": "Requested; not supplied in reviewed snapshot",
+          "request_count": 1
+        },
+        {
+          "request_id": "HR-01",
+          "owner": "NH/UNBC HR",
+          "priority": "High",
+          "use": "Test retention and replacement-cost scenario readiness and identify roles required for first-lane trial access.",
+          "caveat": "No causal retention claim is defensible without NHHR-specific attribution or a clear scenario label.",
+          "evidence_status": "Requested; not supplied in reviewed snapshot",
+          "request_count": 1
+        },
+        {
+          "request_id": "HR-02",
+          "owner": "NH/UNBC HR",
+          "priority": "Medium",
+          "use": "Support workforce-pipeline and human-capital scenario framing.",
+          "caveat": "Lifetime earnings and productivity values require approved assumptions and are not observed NHHR value.",
+          "evidence_status": "Requested; not supplied in reviewed snapshot",
+          "request_count": 1
+        },
+        {
+          "request_id": "GOV-01",
+          "owner": "Indigenous/community governance leads",
+          "priority": "High",
+          "use": "Determine governance requirements and decision gates for the validation phase, first proof lane, and data model.",
+          "caveat": "Governance acceptability cannot be inferred from public data or institutional partner support.",
+          "evidence_status": "Requested; not supplied in reviewed snapshot",
+          "request_count": 1
+        },
+        {
+          "request_id": "GOV-02",
+          "owner": "Indigenous/community governance leads",
+          "priority": "High",
+          "use": "Validate whether the first proof lane aligns with community priorities and access-burden realities.",
+          "caveat": "Qualitative governance input requires permission and context and should not be monetized without explicit agreement.",
+          "evidence_status": "Requested; not supplied in reviewed snapshot",
+          "request_count": 1
+        }
+      ],
+      "defaultMetric": "request_count",
+      "entityField": "request_id"
+    },
+    {
+      "id": "population-review",
+      "title": "Population denominator audit",
+      "description": "A recorded quality issue: five collected health-authority summaries duplicate sex totals.",
+      "topic": "Evidence and governance",
+      "geography": "none",
+      "status": "review",
+      "timeLabel": "2025 source projections",
+      "sourceName": "BC Stats / NHHR denominator review",
+      "sourceUrl": "https://www2.gov.bc.ca/gov/content/data/statistics/people-population-community/population",
+      "datasetId": "361da856-2537-4052-93e6-3c962ba4fa8e",
+      "tableName": "nhhr_data_c024_a23bd96e4c11_zip_data_c024_moneti",
+      "notes": [
+        "Original DATA-C024 totals sum Female + Male + Total, exactly doubling the population. Verified values use the matching 2025 Gender=T row from DATA-C051.",
+        "Northern changes from 596,414 to 298,207. DATA-C031 has the same issue: Prince George LHA changes from 211,088 to 105,544.",
+        "Original numbers remain visible for audit only and are not mapped or used to calculate rates. Verified totals are source projections, not measured NHHR reach."
+      ],
+      "columns": [
+        {
+          "key": "region_name",
+          "label": "Health authority",
+          "type": "text"
+        },
+        {
+          "key": "year",
+          "label": "Year",
+          "type": "text"
+        },
+        {
+          "key": "original_population",
+          "label": "Original summary · duplicated",
+          "type": "number",
+          "unit": "people"
+        },
+        {
+          "key": "verified_total_population",
+          "label": "Verified Gender=T total",
+          "type": "number",
+          "unit": "people"
+        },
+        {
+          "key": "duplication_factor",
+          "label": "Duplication factor",
+          "type": "number",
+          "unit": "times"
+        },
+        {
+          "key": "finding",
+          "label": "Review finding",
+          "type": "text"
+        },
+        {
+          "key": "population_type",
+          "label": "Source estimate / projection",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "region_name": "Fraser",
+          "year": "2025",
+          "original_population": 4508638,
+          "verified_total_population": 2254319,
+          "duplication_factor": 2,
+          "finding": "Original sums F + M + T; use Gender=T once",
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Vancouver Coastal",
+          "year": "2025",
+          "original_population": 2715744,
+          "verified_total_population": 1357872,
+          "duplication_factor": 2,
+          "finding": "Original sums F + M + T; use Gender=T once",
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Vancouver Island",
+          "year": "2025",
+          "original_population": 1818422,
+          "verified_total_population": 909211,
+          "duplication_factor": 2,
+          "finding": "Original sums F + M + T; use Gender=T once",
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Interior",
+          "year": "2025",
+          "original_population": 1755854,
+          "verified_total_population": 877927,
+          "duplication_factor": 2,
+          "finding": "Original sums F + M + T; use Gender=T once",
+          "population_type": "Projection"
+        },
+        {
+          "region_name": "Northern",
+          "year": "2025",
+          "original_population": 596414,
+          "verified_total_population": 298207,
+          "duplication_factor": 2,
+          "finding": "Original sums F + M + T; use Gender=T once",
+          "population_type": "Projection"
+        }
+      ],
+      "defaultMetric": "verified_total_population",
+      "entityField": "region_name"
+    }
+  ],
+  "stories": [
+    {
+      "id": "northern-workforce",
+      "title": "Where specialist supply is thinnest",
+      "kicker": "Workforce · regional evidence",
+      "summary": "Compare Northern health regions with the rest of BC, using the source’s 2024 physician rates.",
+      "body": [
+        "The Northern profile spans Northwest, Northern Interior, and Northeast health service delivery areas. The map joins public regional counts and rates to their corresponding HSDA boundaries.",
+        "In the collected 2024 source, Northern specialist rates range from 26.5 to 95.9 per 100,000 people. Explore each region rather than treating Northern BC as one uniform workforce.",
+        "Physician supply helps frame feasibility questions. It does not measure vacancies, appointment waits, research coordinator capacity, or the impact of NHHR. Those require validation evidence."
+      ],
+      "datasetId": "physicians-hsda",
+      "metric": "specialists_per_100k_2024",
+      "featured": true
+    },
+    {
+      "id": "clinical-access",
+      "title": "A small registered portfolio, a concrete starting point",
+      "kicker": "Clinical research · exact-city sites",
+      "summary": "The collected registry snapshot contains 10 studies with a Prince George site. What could expand local trial access?",
+      "body": [
+        "Prince George has 10 exact-city study matches in the collected summary, including 7 coded oncology studies. Open the study portfolio to inspect titles, facilities, domains, and public registry links.",
+        "City-site counts establish a recorded footprint. They do not show local enrollment, protocol eligibility, screening failures, operating capacity, or whether a listed trial is available now.",
+        "Use the evidence tracker to identify the next questions for institutions: enrollment and referral pathways, staffing, governance requirements, and community priorities. Interview findings are not included in this public snapshot."
+      ],
+      "datasetId": "clinical-city",
+      "metric": "exact_city_site_studies",
+      "featured": true
+    },
+    {
+      "id": "research-scale",
+      "title": "Research capacity in context",
+      "kicker": "Research capacity · institutions",
+      "summary": "Read publications, CIHR payments, and NSERC awards as complementary evidence of institutional scale.",
+      "body": [
+        "The collected OpenAlex table records 523 UNBC-affiliated works in 2025. Compare the five-year series with selected institutions, keeping institutional scope and overlapping affiliations in view.",
+        "CIHR payments describe recorded fiscal-year cash flow, while NSERC amounts describe the source award measure. Different measures and broad institutional mandates make a single combined league table misleading.",
+        "CIHR 2025 project records all carry zero payments in this collected summary. The explorer excludes that year from the paid series because payment coverage is incomplete. Public funding and publications do not establish NHHR-attributable returns."
+      ],
+      "datasetId": "publications",
+      "metric": "works",
+      "featured": true
+    },
+    {
+      "id": "regional-denominators",
+      "title": "Count people once before calculating a rate",
+      "kicker": "Population · data quality",
+      "summary": "A verified source-row check corrects a doubled Northern population denominator and enables LHA mapping.",
+      "body": [
+        "The collected health-authority summary reports Northern at 596,414 in 2025. Tracing it to the original BC Stats rows shows Female + Male + Total were added together. The Gender=T source total is 298,207.",
+        "The same duplication appears in the selected LHA summary. Prince George LHA is 105,544 in the raw total row, compared with 211,088 in the earlier summary. The atlas uses one total row per LHA and year.",
+        "Explore the Northern LHA map with the source estimate/projection type visible. These are health-area populations, not municipal populations or NHHR participants, and 2025 is a projection."
+      ],
+      "datasetId": "population-lha",
+      "metric": "population"
+    },
+    {
+      "id": "travel-assumptions",
+      "title": "What would reducing travel be worth?",
+      "kicker": "Access and travel · hypothetical cases",
+      "summary": "Explore three planning cases and the assumptions that drive modelled travel and patient time values.",
+      "body": [
+        "The base case assumes 300 patients reached, 450 avoided trips, and $900 per trip, producing $405,000 in modelled travel value. Its patient-time calculation assumes six hours per person at $35 per hour, producing $63,000.",
+        "These calculations illustrate how assumptions affect potential value. They are not observed benefits, forecasts, or evidence that NHHR has avoided any trips. The doubled population field in the original scenario source is omitted.",
+        "Read the collected route patterns and benchmark evidence notes alongside the scenarios. Historical schedules, subsidized fares, economic mileage costs, and patient out-of-pocket expenses represent different questions."
+      ],
+      "datasetId": "travel-scenarios",
+      "metric": "avoided_travel_value"
+    },
+    {
+      "id": "validation-path",
+      "title": "From public evidence to a validated operating model",
+      "kicker": "Evidence and governance · next questions",
+      "summary": "The evidence tracker makes missing information visible instead of filling gaps with assumed results.",
+      "body": [
+        "Thirteen institution-level requests describe the information still needed to test feasibility: trial enrollment, staffing, space, funding pathways, travel burden, and governance expectations.",
+        "Public registry, publication, funding, and workforce datasets can help choose questions. They cannot establish community permission, operational readiness, causal effects, or partner commitments.",
+        "No completed interview findings appear in this released snapshot. Recruitment scripts, consent templates, or blank analysis workbooks are preparation materials and should not be treated as findings."
+      ],
+      "datasetId": "evidence-gaps",
+      "metric": "request_count"
+    }
+  ],
+  "snapshot": {
+    "reviewedAt": "2026-10-11",
+    "manifestUrl": "https://zoer.k8s.overtheedgepaper.ca/api/projects/acdd692f-a188-4f85-bb5a-83c48d5c7e82/database/data-spaces/de1fe530-a762-52fa-ba11-d01cc5b344df/manifest",
+    "dataSpaceId": "de1fe530-a762-52fa-ba11-d01cc5b344df",
+    "datasetCount": 12,
+    "rowCount": 294,
+    "releaseScope": "Bounded public-secondary aggregates and public registry records; explicit planning scenarios and review findings.",
+    "limitations": [
+      "Collected source snapshots are historical, not live data.",
+      "Interview, consent, contact, remuneration, and participant records are excluded.",
+      "Source privacy classification is not blanket release permission; only explicitly allowlisted columns are included."
+    ],
+    "sourceLock": "nhhr-source-lock.json"
+  }
+}

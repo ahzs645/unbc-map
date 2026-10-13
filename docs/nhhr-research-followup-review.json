@@ -1,0 +1,1303 @@
+{
+  "reviewedAt": "2026-10-12",
+  "scope": "Supplemental reviews preserve existing released scopes, resolve selected historical/ranking source candidates, and record raw CRA financial-code/unit issues. Individual source records are not public extracts.",
+  "reviews": [
+    {
+      "collectionId": "DATA-C046",
+      "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+      "status": "connected",
+      "summary": "Ten complete fiscal award files yield 67 observed institution/year groups. Numbered/NA instalments and competition-year ranges are retained; 1999 truncated excerpt is excluded after reconciliation.",
+      "mapConnection": "Exact dated institution names/OrganizationID pairs use current reviewed campus representatives only.",
+      "needs": [
+        "Older historical location assumptions are not resolved by current campus coordinates. The source window remains separate from the fully reviewed C055 2001–2018 extension and recent 2019–2024 extract."
+      ],
+      "cannot": [
+        "Awards/fiscal allocations are not independently verified lifetime commitments or actual cash payments; different institutions sharing an application retain allocations. No co-applicant/person map."
+      ],
+      "views": [
+        "nserc-awards-history"
+      ],
+      "inspectionScope": "Fresh authorized dataset endpoint and canonical file/table catalogue, full hash verification for the selected originals; scientific fields parsed with explicit allowlists. Only released institutional/organization measures are validated. Personal or director records are excluded.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "artifactVersion": 1,
+          "responseSha256": "0d767ad914333e15c5d52227f2ed89129d5dc3887fcbbf2ed0cd80d1938f9b83",
+          "httpStatus": 200
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C046",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "filename": "f3_000_Table_definition_-_Awards.csv",
+          "sha256": "d2bec5c48f546a144b89e0d7ea9a25e635d5fce86689bbc4ed24862da09fec22",
+          "originalFileIds": [
+            "4e8a0bbb-ce23-4bc5-940c-a5f25df865d6"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/nserc/f3_000_Table_definition_-_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c046_564e910c80a9_zip_data_c046_f3_000",
+              "rows": 36,
+              "parquetSha256": "598f6f01ffd5c88887a2bc805b48dfb053848cfce9cb736f3a0a2d9fcd9c579f",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C046",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "filename": "f3_003_1991_Awards.csv",
+          "sha256": "1dd15eea1336413335178621a71dca1ef95a4dc115cba22018e8818e186854c6",
+          "originalFileIds": [
+            "b5f117dc-6da2-4edf-9677-4f8e61b7df53"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/nserc/f3_003_1991_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c046_564e910c80a9_zip_data_c046_f3_003",
+              "rows": 18458,
+              "parquetSha256": "ba5083c05a2abdef96d49e304ba6650c0dfe3e7748cd2d76180993aa9043bce8",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C046",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "filename": "f3_006_1992_Awards.csv",
+          "sha256": "32bc65fe61af856f5be0baa8d774d4ad39b9ddefeaef65a91bd9fdfd6148cf02",
+          "originalFileIds": [
+            "c158a744-7150-4a08-9a75-442e20a070ee"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/nserc/f3_006_1992_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c046_564e910c80a9_zip_data_c046_f3_006",
+              "rows": 19154,
+              "parquetSha256": "1601ca158dce83aba8af3f9d6b7f41c0baa737bd5c9d44c0d3b49b8f102c796a",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C046",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "filename": "f3_011_1993_Awards.csv",
+          "sha256": "e4e197428976bd323de469ed57b357b01c961288a2f69a1c3861d5c846788bb1",
+          "originalFileIds": [
+            "7c53c961-ceb7-42b2-a920-b0eb1c0365f0"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/nserc/f3_011_1993_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c046_564e910c80a9_zip_data_c046_f3_011",
+              "rows": 17993,
+              "parquetSha256": "7c23f7c63447baacdbde6d9dadfa3aa31992a694e2370354a680ac877a71c00a",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C046",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "filename": "f3_012_1994_Awards.csv",
+          "sha256": "4eec3250fc027957bb3329a1d1ce0a1b6c54d214aeb0212a18305745498ba535",
+          "originalFileIds": [
+            "8deaf768-45fb-4328-8ac9-fe68cb2c6718"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/nserc/f3_012_1994_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c046_564e910c80a9_zip_data_c046_f3_012",
+              "rows": 17400,
+              "parquetSha256": "66b1389cbe11e56842eec5e0b669f0f0f6da1dcd619600cf56748d4eccd7814a",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C046",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "filename": "f3_015_1995_Awards.csv",
+          "sha256": "df5dcad0d2d1b106ea4c1ae9980dc4417fc02432a789c7a0bf3db7b46bb896ee",
+          "originalFileIds": [
+            "8f4f0037-bfa3-423c-8f29-3a1a94858988"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/nserc/f3_015_1995_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c046_564e910c80a9_zip_data_c046_f3_015",
+              "rows": 15862,
+              "parquetSha256": "74e73c7444dc721fc58e72f6b10424f3f548985195e3e829c1236eb18d22473c",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C046",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "filename": "f3_018_1996_Awards.csv",
+          "sha256": "68889d405b0201dd360a9e8f68894c03e7cf1bcd0d42b90f9856f4c65c8ad90c",
+          "originalFileIds": [
+            "24f9aed0-c1e3-4150-a9f4-c023b3f9c3b4"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/nserc/f3_018_1996_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c046_564e910c80a9_zip_data_c046_f3_018",
+              "rows": 14295,
+              "parquetSha256": "de213792a66c0a41eff140bff8da41a452f40dbae69fd54cecdd4ff9dd218275",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C046",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "filename": "f3_021_1997_Awards.csv",
+          "sha256": "31f5ac0f6316282f53520decce3db0aa16988557a497397f1374ce37e16a151a",
+          "originalFileIds": [
+            "79ab4df4-5612-42ea-878b-877c0e0341e6"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/nserc/f3_021_1997_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c046_564e910c80a9_zip_data_c046_f3_021",
+              "rows": 13832,
+              "parquetSha256": "49dfa5fdfbd4bf7c6f57e58d04a77be5e6cb5d0cb86b5c705827aec66a123688",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C046",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "filename": "f3_024_1998_Awards.csv",
+          "sha256": "a048e2057367296e68691c1c3cc03b0f4b63b4a67e75c27e797d3ca80ed2bf51",
+          "originalFileIds": [
+            "ca3d8245-a8cf-4084-bd07-aaa050552a76"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/nserc/f3_024_1998_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c046_564e910c80a9_zip_data_c046_f3_024",
+              "rows": 14586,
+              "parquetSha256": "ea59a0984ec502e26d397fb70ea0626cfda7721ec166d82506452b190a4385c6",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C046",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "filename": "f3_027_1999_Awards.csv",
+          "sha256": "ac7b82c2628df98de162d4ea5d5425ce90b94163629b042fe38e1807e6804633",
+          "originalFileIds": [
+            "d082be07-84d1-4d21-b752-c20eeacad94b"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/nserc/f3_027_1999_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c046_564e910c80a9_zip_data_c046_f3_027",
+              "rows": 1794,
+              "parquetSha256": "9c9c743076f23ed99a482f31a91e1d3807ecf04b60bc75f22ae7757f525af634",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C046",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "filename": "nserc_027_1999_Awards.csv",
+          "sha256": "04602264c4665c73dbc1d82fc337964d0cafa641ebf397d62282ee3fc9b3f429",
+          "originalFileIds": [
+            "f700ddca-5429-4252-9435-722f6a2d8123"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/nserc/nserc_027_1999_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c046_564e910c80a9_zip_data_c046_nserc_",
+              "rows": 16692,
+              "parquetSha256": "1da038a99d744eaa45128ce8c8d06e48c8c1b221c6bd1782fa533b573acfe24d",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C046",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "filename": "nserc_030_2000_Awards.csv",
+          "sha256": "7700e929589992968e135c1e077ee65bb34b40e91a3811528c0bb8e4a1c78534",
+          "originalFileIds": [
+            "42ea0d82-a366-4902-bb51-15e65d2c3032"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/nserc/nserc_030_2000_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c046_564e910c80a9_zip_data_c046__4",
+              "rows": 17393,
+              "parquetSha256": "81264504387b5fbf69c4c52d0feb9ea0182ac05797a2cce2ae4912dc044c9808",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C046",
+          "datasetId": "44bb094d-1a6e-4344-91f1-29ba8e7fc19d",
+          "filename": "nserc_open_canada_package_metadata_c1b0f627-8c29-427c-ab73-33968ad9176e.json",
+          "sha256": "3618a1ca4fb972cdafda4a2d7cf3f274b0d01cee74f6ef2e9d7bb5b0f0c287c3",
+          "originalFileIds": [
+            "947e0fb4-cebd-4087-b64d-4ed6d88a11fe"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/nserc/nserc_open_canada_package_metadata_c1b0f627-8c29-427c-ab73-33968ad9176e.json",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c046_564e910c80a9_zip_data_c046__7",
+              "rows": 1,
+              "parquetSha256": "c992108e72a822e6f6962d23538107f165f8185beaa023de2e763e6626dbca89",
+              "worksheet": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C055",
+      "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+      "status": "connected",
+      "summary": "All 18 collected annual originals 2001–2018 fully reconstructed/hash-verified; 17 complete years yield 119 groups. The truncated collected 2011 file is excluded and independently replaced by seven groups from the complete official NSERC 2011 publisher export, yielding 126 mixed-origin observations. Scientific row grain is preserved.",
+      "mapConnection": "Seven exact institutional IDs use current reviewed campus context; no allocation to historical facilities.",
+      "needs": [
+        "The 2011 publisher recovery is outside Zoer: retain distinct origin/resource/hash provenance and the original truncation audit. Preserve original fiscal codes and unknown/combined instalment tokens."
+      ],
+      "cannot": [
+        "Do not treat the truncated 2011 capture as a real funding decline, deduplicate different programmes by application ID, or invent IDs for anonymous source allocations."
+      ],
+      "views": [
+        "nserc-awards-2001-2018"
+      ],
+      "inspectionScope": "Fresh authorized dataset endpoint and canonical file/table catalogue, full hash verification for the selected originals; scientific fields parsed with explicit allowlists. Only released institutional/organization measures are validated. Personal or director records are excluded.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "artifactVersion": 1,
+          "responseSha256": "67f1d7c5952fd0016816f79fd87f28fc2dea323efcea31c3fc23b65e1dee54c9",
+          "httpStatus": 200
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "033_2001_Awards.csv",
+          "sha256": "21bb273e5ff7e88fc6670807ff34fd31c0408a1136b8fdd9b7c12e71837a13b1",
+          "originalFileIds": [
+            "44f51d15-9974-4f20-bf30-93ebf4a9b486"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/033_2001_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_c8800259dfb4_zip_data_c055_033_20",
+              "rows": 17022,
+              "parquetSha256": "bd305bed50837e6fcacfcdc6636124a4ff7834b9822940adf20062e6ec6e701a",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "036_2002_Awards.csv",
+          "sha256": "57a02ff0b9ffa3d26bb0bb2588f714ac9fbab5f5b49c84f59d673c245f9a7458",
+          "originalFileIds": [
+            "b39ab8fb-1fc7-416c-9d40-bfe9b1a896f2"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/036_2002_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_c8800259dfb4_zip_data_c055_036_20",
+              "rows": 18102,
+              "parquetSha256": "dce12a362160a2c721dabdae18783dd6127c0b2f0fe57ee045c969f54d229c6d",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "039_2003_Awards.csv",
+          "sha256": "ab8d8db7511ed244a45ffe500f3ba4cc27ed4ee34c2a445b2a6365b032cd142d",
+          "originalFileIds": [
+            "66cff1d7-6541-4fc4-aae9-4c1198630068"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/039_2003_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_c8800259dfb4_zip_data_c055_039_20",
+              "rows": 20951,
+              "parquetSha256": "e49fdaa54cfd673714995d4fc874cbce74b27ce1e8922c0dbd4c639c832832f1",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "042_2004_Awards.csv",
+          "sha256": "8001b0a2400320dc113088da467b41bf07cb0e8d70ca3b01744704d30418244c",
+          "originalFileIds": [
+            "ebf8d6b3-d144-4ecc-ae41-fa1e523f8f42"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/042_2004_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_c8800259dfb4_zip_data_c055_042_20",
+              "rows": 21169,
+              "parquetSha256": "74c67e0cd777b492627be681be25784023a7e8d1c932025b90872860c8724c87",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "045_2005_Awards.csv",
+          "sha256": "2712f189ab58271339baf7ff8599e4932f9796bcaa6af97c7a18b6d89a9cee8a",
+          "originalFileIds": [
+            "9b81c933-4178-406b-b359-67675cf466b9"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/045_2005_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_c8800259dfb4_zip_data_c055_045_20",
+              "rows": 22359,
+              "parquetSha256": "3343d7801408cd7632ddd491eaf24502fa09bc85c36d400d9d79ef2b41e2f91a",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "048_2006_Awards.csv",
+          "sha256": "f40770242cd19d1f1f2565a43591035941aa5dd395b54c9749d243f6b35ac67c",
+          "originalFileIds": [
+            "f98b86b9-99e8-4ce1-acfc-53eb3b1a7900"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/048_2006_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_c8800259dfb4_zip_data_c055_048_20",
+              "rows": 17292,
+              "parquetSha256": "e54c3dbf9b98b278ee751ae044d47490c3b49aee7d38a279cb75e1b1c81216c2",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_c8800259dfb4_zip_data_c055__2",
+              "rows": 5581,
+              "parquetSha256": "c5c07c2d76cd02507156579ec89fad8346bac8e116e6bfabc2b0dc671af042f0",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "051_2007_Awards.csv",
+          "sha256": "8b4027dd4260d05fd4d9e18d71b5922b5fc9ce10833d450d37ceb693aa56f759",
+          "originalFileIds": [
+            "2b5a0a4f-62e6-4f81-9cff-51fe4ae58b36"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/051_2007_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_c8800259dfb4_zip_data_c055_051_20",
+              "rows": 9194,
+              "parquetSha256": "575b99977bcd7813483b27329195e8951a0fd4768cffb8b6f23d9dd2389db801",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_c8800259dfb4_zip_data_c055__3",
+              "rows": 14586,
+              "parquetSha256": "8f3abacdeb69dc3cf7914ef8eba95728a69cc27b063c8048b8eb857cedb18bac",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "054_2008_Awards.csv",
+          "sha256": "74d8f7789cf5120e962b90523abac4baa55c2284b8da62a4e79ab9b674151223",
+          "originalFileIds": [
+            "05d9ea25-c44d-4aa2-8f0f-494beca04a84",
+            "7513e6de-b5c5-4b50-b89a-d879e1d2e3ed"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/054_2008_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_c8800259dfb4_zip_data_c055_054_20",
+              "rows": 9757,
+              "parquetSha256": "2ede415d452947e2b418e2d0820facddb9cc92c1d03e82f61e2b45b0b205c3c7",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_c8800259dfb4_zip_data_c055__4",
+              "rows": 15827,
+              "parquetSha256": "939ffb8f1f04312cb39a40798c6eb641f96db3caea9140f3d56ed8c0d2ee5530",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "057_2009_Awards.csv",
+          "sha256": "4318992bdafca2d0216be930b4b5abd27c6beab3fc3fa9fd0f323216e171c95c",
+          "originalFileIds": [
+            "345b355f-b813-422d-b0fb-5ac64baa89a6",
+            "f4587de2-494a-461e-a7ed-cfa966ebc4f4"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/057_2009_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_c8800259dfb4_zip_data_c055_057_20",
+              "rows": 10425,
+              "parquetSha256": "b64a3401f43a7a6418d4e4c1979e310e7c19f7656fc3c7ec52fbf0199a3f458a",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_c8800259dfb4_zip_data_c055__5",
+              "rows": 14133,
+              "parquetSha256": "90ded79ebb98f91393b66f228581e7589f45106129b61c1eda117656626ce3c5",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "060_2010_Awards.csv",
+          "sha256": "e49b81f0dd1737c921b20e95e6591812f31d278bd58f3da32d8a97bc093c051d",
+          "originalFileIds": [
+            "a0c9d80a-77a1-40a5-ab4b-0a9a5a4c660e",
+            "247599fc-46db-48d5-8e5e-fe0d3fe32d5c"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/060_2010_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_a2f5b4a5a514_zip_data_c055_060_20",
+              "rows": 8541,
+              "parquetSha256": "9fa789f19c3926bd96c51116cd3a121afeb56da6613d86b3f7cfca5d14240ab2",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_a2f5b4a5a514_zip_data_c055__2",
+              "rows": 14439,
+              "parquetSha256": "6451c86e54cf3e442fce132a5fc23d4d30362b271cc41a879e98ea83500491c3",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_a2f5b4a5a514_zip_data_c055__3",
+              "rows": 1236,
+              "parquetSha256": "8d68af04bcad5a805065ff76e8236136a7716e8b0b1bc392125946704623aa68",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "063_2011_Awards.csv",
+          "sha256": "7727ed429892003ffdd6186988b7331cf5b7e19e5176fec0c48d5f85e0d709ce",
+          "originalFileIds": [
+            "d96c9230-ba15-48a9-b1ec-a10711e6e2b3"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/063_2011_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_a2f5b4a5a514_zip_data_c055_063_20",
+              "rows": 8270,
+              "parquetSha256": "bf99fcd58af62a28564a978e4881afb66abdf119a387c0339b1767aedcaad66f",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_a2f5b4a5a514_zip_data_c055__4",
+              "rows": 6306,
+              "parquetSha256": "3098c93530131b9a2af9af877ff2a5fdf8d9424ebf7e752abcbdf66baec15cac",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "066_2012_Awards.csv",
+          "sha256": "dd861e57c26c769238aed7280bd6f40637899b4070943a24f5b822e0732177f2",
+          "originalFileIds": [
+            "46a6d1f1-09ae-46eb-a6db-1fdb1c604c42",
+            "b5f6bb2c-d693-4c6c-8dc4-f684de258530"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/066_2012_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_a2f5b4a5a514_zip_data_c055_066_20",
+              "rows": 7197,
+              "parquetSha256": "f63ea273e280b302f3c66885227fcb5f23cc6899daa569994dd87b231c5a25ef",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_a2f5b4a5a514_zip_data_c055__5",
+              "rows": 12633,
+              "parquetSha256": "42faa034bc6c584ac758df11c92bca3e4aa8f8b9ebb197315e3c89e21a5f214b",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_a2f5b4a5a514_zip_data_c055__6",
+              "rows": 3731,
+              "parquetSha256": "523f91801f85e5a077c8ee5e0f9131ad1eb674f0407400df087a931a3b386c62",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "069_2013_Awards.csv",
+          "sha256": "44c8c93795806107831316380fe922bc32beebe76cc31e7f7338b8b297a418fa",
+          "originalFileIds": [
+            "4e6b8c8a-8b8a-4ed2-8b7a-213fc63eb8f5",
+            "30d7f02e-ac13-46a3-8e91-88d73bf46751"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/069_2013_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_9f8436790d33_zip_data_c055_069_20",
+              "rows": 7669,
+              "parquetSha256": "6c5d05711f2493cd09418393ecd34341420ac44b42032c4b601373800b68b065",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_9f8436790d33_zip_data_c055__2",
+              "rows": 9544,
+              "parquetSha256": "73b7559e87ce2bc09a2768b139a2436dd92f333fdd9f7e875c23ab5000d57323",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_9f8436790d33_zip_data_c055__3",
+              "rows": 6354,
+              "parquetSha256": "c2afa021b05888be8f6871aa8651dd24e735563a2b835bbef3816104716750f7",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "072_2014_Awards.csv",
+          "sha256": "4699d369a2840b508f1f725e51133dccc47e4cde06254cc637893c9286dd8f74",
+          "originalFileIds": [
+            "b3d80744-ab00-4bb2-b76c-27797dcae819",
+            "065cd209-7001-4ad7-8160-1e04559b81ab"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/072_2014_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_9f8436790d33_zip_data_c055_072_20",
+              "rows": 6907,
+              "parquetSha256": "670e53007a100c4afa98956a2f2e313f2d3f82e3479df2a3c636180292b76943",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_9f8436790d33_zip_data_c055__4",
+              "rows": 13038,
+              "parquetSha256": "dfab465f749502986a412105f98edd4002d0a67f296b5f7a4c2668673ff62d2b",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_9f8436790d33_zip_data_c055__5",
+              "rows": 4266,
+              "parquetSha256": "231655382f0a7d8dc42db4e1f50429ad3c8b63abd48236499feebabbb32318d1",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "075_2015_Awards.csv",
+          "sha256": "3bcf0fad44da7b7226dcd065ef8b7bf64c998044a59f5c9e05b97b47a1950bff",
+          "originalFileIds": [
+            "71045db7-4c57-414d-8b23-a9eee156dab7",
+            "69371ebf-f632-46a9-91ad-dd200daaac77"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/075_2015_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_9f8436790d33_zip_data_c055_075_20",
+              "rows": 6819,
+              "parquetSha256": "af1ef52c73b281e6688e346892cbbe3adb6b0e3cb00777c32a4927f46ae4c42b",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_ba160cab4cb4_zip_data_c055_075_20",
+              "rows": 10226,
+              "parquetSha256": "654f559af85a4d44a053601aca8799f9eb62645993f8d39b1d292aa5bb8575e9",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_ba160cab4cb4_zip_data_c055__2",
+              "rows": 7398,
+              "parquetSha256": "f9c9451081744142b30d9f24a466ff6e3dc8b4977bff56d49f233e529e40a183",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "078_2016_Awards.csv",
+          "sha256": "5e327ba271f09d743677b50c920a42ac1518ce19fe8f85fb8b62f29490009b7c",
+          "originalFileIds": [
+            "fc2ba231-229d-46b4-9c96-31537302c4af",
+            "560de763-f97d-4a6a-a854-3bb9f80ab50a"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/078_2016_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_5e4bf161be55_zip_data_c055_078_20",
+              "rows": 7251,
+              "parquetSha256": "92753cfebf01a5a1ad0c2d32656948a20897c99e9f3989ded73ccf8a7705baea",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_5e4bf161be55_zip_data_c055__2",
+              "rows": 7207,
+              "parquetSha256": "82d4c20fa0f0b952f46c2d46d49824ec1fb71257f2b3ed03ee074c5eda31d43f",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_5e4bf161be55_zip_data_c055__3",
+              "rows": 10592,
+              "parquetSha256": "e36cf0b72b1fc224c8f30bcd0aa67963160f42896b71d56804e6142f00e65f73",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "081_2017_Awards.csv",
+          "sha256": "f7e9ae6a032edb46ba76145e866a35a8bb10f52249ea2bbf487830ae7121e152",
+          "originalFileIds": [
+            "8c3d278d-334a-4184-9613-791b3f88a6c2",
+            "4a0708fe-f7f2-4e72-830f-497e6dd6231e"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/081_2017_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_5e4bf161be55_zip_data_c055_081_20",
+              "rows": 6261,
+              "parquetSha256": "2407674ea780835433c962dbf16ee8984ec6f5b5de7555465af6ccb3f785b58c",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_5e4bf161be55_zip_data_c055__4",
+              "rows": 6621,
+              "parquetSha256": "bfb38a40e2461c05262fd184c952c49803f03015cab87a569c1b2ce864da69bf",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_5e4bf161be55_zip_data_c055__5",
+              "rows": 11757,
+              "parquetSha256": "969cc763e29c043b8b62580bf55b1d5e27dcac923bbf78857b1bd1d916c21849",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_5e4bf161be55_zip_data_c055__6",
+              "rows": 829,
+              "parquetSha256": "eec56cc5a234b974460d4377dbf19f6ac933d145cde49e7fe88779b26ed42c09",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C055",
+          "datasetId": "1704b537-adf5-45c0-9aad-7b693dab88ce",
+          "filename": "084_2018_Awards.csv",
+          "sha256": "23d0edb78db5cc651271a95b070c9d669c03bfdf04dc674aae4bb334d3125e86",
+          "originalFileIds": [
+            "7a00626d-22fa-4299-b0e0-4dde9266164f",
+            "3b0598f9-e94e-4e89-b7ca-4d802be45133"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/source_pull_2026-04-28/nserc/084_2018_Awards.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c055_ad98615c4407_zip_data_c055_084_20",
+              "rows": 7940,
+              "parquetSha256": "6d962cb5fe6e62bf3563b080c9c4f5aaba2db5a4c031743c30b5f712fe8e378e",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_ad98615c4407_zip_data_c055__2",
+              "rows": 8124,
+              "parquetSha256": "ab91d74970dcc00642dafc53c7e8deac9db1508223152ce4ec2cb9aeef8051f3",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_ad98615c4407_zip_data_c055__3",
+              "rows": 7931,
+              "parquetSha256": "720f7553985e6da2f7420fc21b285e74091bc912a5b05b0d42fc61ce1ab2ff0a",
+              "worksheet": ""
+            },
+            {
+              "tableName": "nhhr_data_c055_ad98615c4407_zip_data_c055__4",
+              "rows": 2660,
+              "parquetSha256": "ed801ddef8645728fe199451836064b6a28fafbea334f3bf11b52d9585643cbc",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "official-publisher-recovery",
+          "filename": "nserc_grt_fyr2011_award.csv",
+          "url": "https://www.nserc-crsng.gc.ca/opendata/nserc_grt_fyr2011_award.csv",
+          "sha256": "bcce99ac5e8640acfd7c0b422c0f5b37fd2f6c85e719529e12caf86d0a5f2e16",
+          "bytes": 36390655,
+          "origin": "Official NSERC publisher recovery",
+          "resourceId": "22fcf163-1846-4f37-b5ef-0dab0acc5fed"
+        },
+        {
+          "kind": "official-publisher-recovery",
+          "filename": "NSERC_AWARD_DEFINITION.csv",
+          "url": "https://www.nserc-crsng.gc.ca/opendata/NSERC_AWARD_DEFINITION.csv.xls.csv",
+          "sha256": "d2bec5c48f546a144b89e0d7ea9a25e635d5fce86689bbc4ed24862da09fec22",
+          "bytes": 2973,
+          "origin": "Official NSERC publisher dictionary"
+        },
+        {
+          "kind": "official-publisher-recovery",
+          "filename": "open-canada-package.json",
+          "url": "https://open.canada.ca/data/api/action/package_show?id=c1b0f627-8c29-427c-ab73-33968ad9176e",
+          "sha256": "3618a1ca4fb972cdafda4a2d7cf3f274b0d01cee74f6ef2e9d7bb5b0f0c287c3",
+          "origin": "Official Open Government resource metadata"
+        }
+      ],
+      "sourceOrigin": "mixed"
+    },
+    {
+      "collectionId": "DATA-C017",
+      "datasetId": "6eb40441-1a52-4331-8512-66e09ee2c11d",
+      "status": "connected",
+      "summary": "Existing CAUBO expenditure/income scopes remain intact. Ninety normalized ranking rows reconcile with original C045 facts for selected extracts. Compact CRA financial field labels are incorrect and not used as money measures.",
+      "mapConnection": "Previously reviewed exact institution/campus context remains; normalized copies add no independent observations.",
+      "needs": [
+        "Use C045 publisher definitions for ranking/intensity facts; validate C043 raw code meanings and institution filing units before charity-finance amounts."
+      ],
+      "cannot": [
+        "Do not duplicate CAUBO or ranking copies, use mislabeled compact totals or reinterpret ratios as staff/salaries."
+      ],
+      "views": [
+        "research-expenditures"
+      ],
+      "inspectionScope": "Fresh authorized dataset endpoint and canonical file/table catalogue, full hash verification for the selected originals; scientific fields parsed with explicit allowlists. Only released institutional/organization measures are validated. Personal or director records are excluded.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/6eb40441-1a52-4331-8512-66e09ee2c11d",
+          "datasetId": "6eb40441-1a52-4331-8512-66e09ee2c11d",
+          "artifactVersion": 1,
+          "responseSha256": "6e973b49e9e504d9c3b1b0beba7abebee43d036cd55d0e1f96ce0ea0742b27b3",
+          "httpStatus": 200
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C017",
+          "datasetId": "6eb40441-1a52-4331-8512-66e09ee2c11d",
+          "filename": "cra_t3010_2023_charity_finance_compact.csv",
+          "sha256": "0096d4587b59fc57ea5e033e9d66b551d95fde6a46cd4bf9afd88a180093be4a",
+          "originalFileIds": [
+            "8abaf5e2-cab0-4216-b671-a6e9aaed7a53"
+          ],
+          "sourceRelativePath": "Data Research/Data/processed/report_extracts/finance_rankings/cra_t3010_2023_charity_finance_compact.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c017_efb036e5cd0b_zip_data_c017_cra_t3",
+              "rows": 83969,
+              "parquetSha256": "7030fa54655c9d30ff6f3244aab89a086de21dd95a04e801b09f62821d52aa1d",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C017",
+          "datasetId": "6eb40441-1a52-4331-8512-66e09ee2c11d",
+          "filename": "cra_t3010_2023_finance_field_inventory.csv",
+          "sha256": "325394140c376340f4525df520e14aa886aea0b20f250eec53fd9feeef9ee13d",
+          "originalFileIds": [
+            "320689d3-2d2b-458f-a702-8942b60241dd"
+          ],
+          "sourceRelativePath": "Data Research/Data/processed/report_extracts/finance_rankings/cra_t3010_2023_finance_field_inventory.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c017_efb036e5cd0b_zip_data_c017__5",
+              "rows": 155,
+              "parquetSha256": "9bd206f55b2a5535e7b4d2291a9859860d818bfb0352bf7d3d7db5eb34241ca9",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C017",
+          "datasetId": "6eb40441-1a52-4331-8512-66e09ee2c11d",
+          "filename": "research_infosource_2025_rankings_normalized.csv",
+          "sha256": "9cf7adfbf8e91ce04f97cef368b9558a97de6a6c0562de2018351148f0a7c95e",
+          "originalFileIds": [
+            "9d433849-621d-4ab2-9583-8abc46e8e28a"
+          ],
+          "sourceRelativePath": "Data Research/Data/processed/report_extracts/finance_rankings/research_infosource_2025_rankings_normalized.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c017_efb036e5cd0b_zip_data_c017_resear",
+              "rows": 90,
+              "parquetSha256": "5da8abadc7b4b06eefb60c3de02ab894b6fc17afaad8c7d574a2095f383769d5",
+              "worksheet": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C045",
+      "datasetId": "01ad6a0d-3db4-42a8-8501-7af1d597335d",
+      "status": "connected",
+      "summary": "Original50-university/40-health-organization publisher tables support seven university intensity facts and five bounded health-organization comparisons; selected values reconcile to C017 normalized copies.",
+      "mapConnection": "Seven institution points provide context. Health authorities/zones remain nonspatial organizational records.",
+      "needs": [
+        "Full tables and proprietary layouts/logos are not reproduced; wider reuse requires publisher terms/permission. Preserve headcount denominators and publisher revisions."
+      ],
+      "cannot": [
+        "Not health-only income, FTEs, salaries, available staff, hospital beds or NHHR benefits. Do not allocate authority/zone totals to one hospital."
+      ],
+      "views": [
+        "university-research-intensity",
+        "hospital-research-organizations"
+      ],
+      "inspectionScope": "Fresh authorized dataset endpoint and canonical file/table catalogue, full hash verification for the selected originals; scientific fields parsed with explicit allowlists. Only released institutional/organization measures are validated. Personal or director records are excluded.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/01ad6a0d-3db4-42a8-8501-7af1d597335d",
+          "datasetId": "01ad6a0d-3db4-42a8-8501-7af1d597335d",
+          "artifactVersion": 1,
+          "responseSha256": "385253824e574aaf3a12300ccf6ffe52b1dd3c7784a820d6654af5e85f658f57",
+          "httpStatus": 200
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C045",
+          "datasetId": "01ad6a0d-3db4-42a8-8501-7af1d597335d",
+          "filename": "research_infosource_2025_top_40_hospitals_browser.csv",
+          "sha256": "51f31d1deb49a0743caad501d0c5b17b48542687ac01162be76a54976853bf97",
+          "originalFileIds": [
+            "463c0c2b-04ad-49e6-bb42-55ecaa9df140"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/manual_reports/research_infosource_2025_top_40_hospitals_browser.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c045_c5236fe5c93f_zip_data_c045__35",
+              "rows": 40,
+              "parquetSha256": "6a5b63b37341efe447a17162dd5cb23816a96095e68346c2398b7395d6ac3c1d",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C045",
+          "datasetId": "01ad6a0d-3db4-42a8-8501-7af1d597335d",
+          "filename": "research_infosource_2025_top_50_universities_browser.csv",
+          "sha256": "7fca8ed5a823409b3d418f148cbc505abb22c2fe3991ce544ac8344b7870e951",
+          "originalFileIds": [
+            "e7ca9f2e-ac4e-4125-887c-aee2cc068215"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/manual_reports/research_infosource_2025_top_50_universities_browser.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c045_c5236fe5c93f_zip_data_c045__36",
+              "rows": 50,
+              "parquetSha256": "d8e85af2cac59bb62cb0fc1b7a0aa08f118cce32f19bea6092d8353af17ed3fc",
+              "worksheet": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionId": "DATA-C043",
+      "datasetId": "b839ab83-e3a5-4f73-8b4c-84ac1de47829",
+      "status": "candidate",
+      "summary": "Three safe non-director originals fully hash-verified. Eight exact university legal entities join by BN; source definitions correct compact label errors, but UNBC reported amount scale prevents a validated broad monetary release.",
+      "mapConnection": "Exact BN/legal-entity/FPE observation, distinct from university research/campus scope.",
+      "needs": [
+        "Resolve original filing currency/unit practice for UNBC through the filed return/audited accounts; confirm all-activity legal-entity scope. Directors remain excluded."
+      ],
+      "cannot": [
+        "No implicit x1000 correction, no research-only interpretation or campus allocation of whole-charity finance."
+      ],
+      "views": [],
+      "inspectionScope": "Fresh authorized dataset endpoint and canonical file/table catalogue, full hash verification for the selected originals; scientific fields parsed with explicit allowlists. Only released institutional/organization measures are validated. Personal or director records are excluded.",
+      "evidence": [
+        {
+          "kind": "dataset-api",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/b839ab83-e3a5-4f73-8b4c-84ac1de47829",
+          "datasetId": "b839ab83-e3a5-4f73-8b4c-84ac1de47829",
+          "artifactVersion": 1,
+          "responseSha256": "a5912a234d91bd6a80ce043f5d84c959b98b1244c180cca319a4c14edaecabcc",
+          "httpStatus": 200
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C043",
+          "datasetId": "b839ab83-e3a5-4f73-8b4c-84ac1de47829",
+          "filename": "cra_t3010_2023_financial_d_and_schedule_6_updated.csv",
+          "sha256": "2080c6479f0c1b060e23c4aafc95a5beac65943460b0644479558be947ed96e2",
+          "originalFileIds": [
+            "40ff07b0-a7be-4325-996b-81f9c88926a5"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/cra_t3010/cra_t3010_2023_financial_d_and_schedule_6_updated.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c043_7644c105ae61_zip_data_c043__4",
+              "rows": 83812,
+              "parquetSha256": "9fac2445faa35cadcfac6e61a799479f8c4e4a214400fbac2d62edf980ed0320",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C043",
+          "datasetId": "b839ab83-e3a5-4f73-8b4c-84ac1de47829",
+          "filename": "cra_t3010_2023_financial_section_a_b_c.csv",
+          "sha256": "aebc4c2105d4c651eb9c95431451fe225fee1b48da89bf474d4bd5014c43c81d",
+          "originalFileIds": [
+            "c9c28087-d710-4ac1-8360-89bd14609364"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/cra_t3010/cra_t3010_2023_financial_section_a_b_c.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c043_7644c105ae61_zip_data_c043__5",
+              "rows": 84155,
+              "parquetSha256": "2d5b20e76b553ee948099713bf26806400c257c88bcd366135aac1884e557fa4",
+              "worksheet": ""
+            }
+          ]
+        },
+        {
+          "kind": "hash-verified-original",
+          "collectionId": "DATA-C043",
+          "datasetId": "b839ab83-e3a5-4f73-8b4c-84ac1de47829",
+          "filename": "cra_t3010_2023_ident_update.csv",
+          "sha256": "d67096e499eac2d483e42207183eb6ca358aceb1631a6bca6e23ca0e699783ac",
+          "originalFileIds": [
+            "85d42f22-4e69-4596-83cc-a5be6a0ce37c"
+          ],
+          "sourceRelativePath": "Data Research/Data/raw/cra_t3010/cra_t3010_2023_ident_update.csv",
+          "tables": [
+            {
+              "tableName": "nhhr_data_c043_7644c105ae61_zip_data_c043__6",
+              "rows": 83969,
+              "parquetSha256": "9ea92acdf505a02fceb9e03b4c872a8df59b332c096ccdb5aa0050abce2e59ec",
+              "worksheet": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "craReview": {
+    "status": "blocked",
+    "originalSourceCodeDefinitions": {
+      "4200": "Total assets",
+      "4350": "Total liabilities",
+      "4700": "Total revenue",
+      "4950": "Total expenditures"
+    },
+    "guideUrl": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/t4033/t4033-completing-registered-charity-information-return-23.html",
+    "roundingDefinition": "The CRA 2023 guide requires amounts rounded to single Canadian dollars.",
+    "compactError": "C017 compact labels 4500 as total assets, 4700 as total liabilities and 4950 as total revenue. Original CRA codes instead use 4200,4350,4700,4950; the compact labels are not authoritative.",
+    "institutionEvidence": [
+      {
+        "legalName": "THE GOVERNORS OF THE UNIVERSITY OF CALGARY",
+        "bn": "108102864RR0001",
+        "fiscalPeriodEnd": "2023-03-31",
+        "sourceSection": "6",
+        "originalReportedFields": {
+          "4200": "4713076941",
+          "4350": "2730900966",
+          "4700": "1533775422",
+          "4950": "1506416179"
+        },
+        "financialAmountsReleased": false
+      },
+      {
+        "legalName": "UNIVERSITY OF BRITISH COLUMBIA",
+        "bn": "108161779RR0001",
+        "fiscalPeriodEnd": "2023-03-31",
+        "sourceSection": "6",
+        "originalReportedFields": {
+          "4200": "7964193716",
+          "4350": "5413407672",
+          "4700": "3440896945",
+          "4950": "3307255442"
+        },
+        "financialAmountsReleased": false
+      },
+      {
+        "legalName": "UNIVERSITY OF SASKATCHEWAN",
+        "bn": "119279313RR0001",
+        "fiscalPeriodEnd": "2023-04-30",
+        "sourceSection": "6",
+        "originalReportedFields": {
+          "4200": "2834746769",
+          "4350": "341021492",
+          "4700": "1123382071",
+          "4950": "1121363193"
+        },
+        "financialAmountsReleased": false
+      },
+      {
+        "legalName": "DALHOUSIE UNIVERSITY",
+        "bn": "886806561RR0001",
+        "fiscalPeriodEnd": "2023-03-31",
+        "sourceSection": "6",
+        "originalReportedFields": {
+          "4200": "2659365000",
+          "4350": "1072711000",
+          "4700": "901619001",
+          "4950": "824693850"
+        },
+        "financialAmountsReleased": false
+      },
+      {
+        "legalName": "MCMASTER UNIVERSITY",
+        "bn": "119035988RR0001",
+        "fiscalPeriodEnd": "2023-04-30",
+        "sourceSection": "6",
+        "originalReportedFields": {
+          "4200": "3846262000",
+          "4350": "1929279000",
+          "4700": "1405729000",
+          "4950": "1255999689"
+        },
+        "financialAmountsReleased": false
+      },
+      {
+        "legalName": "UNIVERSITY OF NORTHERN BRITISH COLUMBIA",
+        "bn": "121627350RR0001",
+        "fiscalPeriodEnd": "2023-03-31",
+        "sourceSection": "6",
+        "originalReportedFields": {
+          "4200": "393273",
+          "4350": "233650",
+          "4700": "137631",
+          "4950": "132365"
+        },
+        "financialAmountsReleased": false
+      },
+      {
+        "legalName": "LAKEHEAD UNIVERSITY",
+        "bn": "119002681RR0001",
+        "fiscalPeriodEnd": "2023-04-30",
+        "sourceSection": "6",
+        "originalReportedFields": {
+          "4200": "332257000",
+          "4350": "228276000",
+          "4700": "216813000",
+          "4950": "213167061"
+        },
+        "financialAmountsReleased": false
+      },
+      {
+        "legalName": "Northern Ontario School of Medicine University / Université de l'École de médecine du Nord de l'Ontario",
+        "bn": "864660352RR0001",
+        "fiscalPeriodEnd": "2023-04-30",
+        "sourceSection": "6",
+        "originalReportedFields": {
+          "4200": "59858000",
+          "4350": "59858000",
+          "4700": "84274431",
+          "4950": "80417431"
+        },
+        "financialAmountsReleased": false
+      }
+    ],
+    "reason": "The UNBC return reports 137631 at revenue line4700 and 132365 at expenditure line4950. The numerical scale may reflect a thousand-dollar filing convention, but no validated conversion is supplied by this original. No blanket monetary view or silent x1000 correction is released. Registered-charity accounts also include all activities and are not research-only finance."
+  },
+  "nsercWithheldPeriods": [],
+  "nsercCollectedSourceGaps": [
+    {
+      "sourceFiscalYear": "2011",
+      "filename": "063_2011_Awards.csv",
+      "originalSha256": "7727ed429892003ffdd6186988b7331cf5b7e19e5176fec0c48d5f85e0d709ce",
+      "sourceRows": 14576,
+      "lastSourceCsvRow": 14577,
+      "missingScientificFields": [
+        "Partie",
+        "Nb_Partie"
+      ],
+      "allMissingSourceColumns": [
+        "ResearchSubjectCode",
+        "ResearchSubjectGroupEN",
+        "ResearchSubjectGroupFR",
+        "ResearchSubjectEN",
+        "ResearchSubjectFR",
+        "Partie",
+        "Nb_Partie",
+        "ApplicationTitle",
+        "Keyword",
+        "ApplicationSummary"
+      ],
+      "fileEndsWithNewline": false,
+      "reason": "Collected original ends mid-record and omits later records. It remains excluded from scientific totals; fiscal 2011 is independently recovered from the complete official publisher export."
+    }
+  ],
+  "nserc2011Recovery": {
+    "origin": "Official NSERC publisher recovery",
+    "resourceId": "22fcf163-1846-4f37-b5ef-0dab0acc5fed",
+    "url": "https://www.nserc-crsng.gc.ca/opendata/nserc_grt_fyr2011_award.csv",
+    "filename": "nserc_grt_fyr2011_award.csv",
+    "sha256": "bcce99ac5e8640acfd7c0b422c0f5b37fd2f6c85e719529e12caf86d0a5f2e16",
+    "bytes": 36390655,
+    "csvRows": 23312,
+    "completeScientificRows": 23265,
+    "whollyEmptyDelimiterRows": 47,
+    "excludedBlankSourceCsvRows": [
+      23265,
+      23266,
+      23267,
+      23268,
+      23269,
+      23270,
+      23271,
+      23272,
+      23273,
+      23274,
+      23275,
+      23276,
+      23277,
+      23278,
+      23279,
+      23280,
+      23281,
+      23282,
+      23283,
+      23284,
+      23285,
+      23286,
+      23287,
+      23288,
+      23289,
+      23290,
+      23291,
+      23292,
+      23293,
+      23294,
+      23295,
+      23296,
+      23297,
+      23298,
+      23299,
+      23300,
+      23301,
+      23302,
+      23303,
+      23304,
+      23305,
+      23306,
+      23307,
+      23308,
+      23309,
+      23310,
+      23311
+    ],
+    "fileEndsWithNewline": true,
+    "scientificColumnCount": 35,
+    "bytePrefixMatch": true,
+    "matchingCompleteCollectedRows": 14575,
+    "truncatedFinalRowCompleted": true,
+    "dictionaryHashMatchesCollected": true,
+    "independentRetrieval": "Uninterrupted HTTP 200 GET and nonoverlapping HTTP 206 byte-range reconstruction yielded the identical pinned SHA256 and byte length.",
+    "originalTruncatedCapture": {
+      "sourceFiscalYear": "2011",
+      "filename": "063_2011_Awards.csv",
+      "originalSha256": "7727ed429892003ffdd6186988b7331cf5b7e19e5176fec0c48d5f85e0d709ce",
+      "sourceRows": 14576,
+      "lastSourceCsvRow": 14577,
+      "missingScientificFields": [
+        "Partie",
+        "Nb_Partie"
+      ],
+      "allMissingSourceColumns": [
+        "ResearchSubjectCode",
+        "ResearchSubjectGroupEN",
+        "ResearchSubjectGroupFR",
+        "ResearchSubjectEN",
+        "ResearchSubjectFR",
+        "Partie",
+        "Nb_Partie",
+        "ApplicationTitle",
+        "Keyword",
+        "ApplicationSummary"
+      ],
+      "fileEndsWithNewline": false,
+      "reason": "Collected original ends mid-record and omits later records. It remains excluded from scientific totals; fiscal 2011 is independently recovered from the complete official publisher export."
+    },
+    "licence": "Open Government Licence - Canada",
+    "licenceUrl": "https://open.canada.ca/en/open-government-licence-canada",
+    "retrievalEvidence": {
+      "fullGetHttpStatus": 200,
+      "rangeHttpStatus": 206,
+      "rangeParts": 37,
+      "checkedContentLength": 36390655,
+      "publisherLastModified": "Thu, 02 Jun 2022 14:47:31 GMT",
+      "identicalFullAndRangeSha256": "bcce99ac5e8640acfd7c0b422c0f5b37fd2f6c85e719529e12caf86d0a5f2e16"
+    }
+  }
+}

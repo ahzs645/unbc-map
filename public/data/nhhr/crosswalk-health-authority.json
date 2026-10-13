@@ -1,0 +1,27 @@
+[
+  {
+    "source_region": "Interior Health (B.C.)",
+    "bc_ha_code": "1",
+    "bc_ha_name": "Interior"
+  },
+  {
+    "source_region": "Fraser Health (B.C.)",
+    "bc_ha_code": "2",
+    "bc_ha_name": "Fraser"
+  },
+  {
+    "source_region": "Vancouver Coastal Health (B.C.)",
+    "bc_ha_code": "3",
+    "bc_ha_name": "Vancouver Coastal"
+  },
+  {
+    "source_region": "Island Health (B.C.)",
+    "bc_ha_code": "4",
+    "bc_ha_name": "Vancouver Island"
+  },
+  {
+    "source_region": "Northern Health (B.C.)",
+    "bc_ha_code": "5",
+    "bc_ha_name": "Northern"
+  }
+]

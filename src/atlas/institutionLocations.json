@@ -1,0 +1,128 @@
+[
+  {
+    "code": "calgary",
+    "comparator": "Calgary / Calgary",
+    "name": "University of Calgary",
+    "city": "Calgary",
+    "site": "Main campus · 2500 University Drive NW",
+    "coordinates": [
+      -114.13881,
+      51.07505
+    ],
+    "sourceUrl": "https://www.ucalgary.ca/cted/popup/maincampus.html",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/way/4814074",
+    "locationNote": "Representative point for the mapped Calgary main campus. Institution-wide source totals may include other campuses and affiliated research sites; they are not allocated to this point."
+  },
+  {
+    "code": "dalhousie",
+    "comparator": "Dalhousie / Halifax",
+    "name": "Dalhousie University",
+    "city": "Halifax",
+    "site": "Studley campus, Halifax",
+    "coordinates": [
+      -63.592,
+      44.6362
+    ],
+    "sourceUrl": "https://www.dal.ca/faculty/arts/news-events/news0/newsletter/2025_08_20__2025_09_30.html",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/relation/17335000",
+    "locationNote": "Representative mapped university point at the Studley campus in Halifax. Dalhousie has several campuses; institution-wide source totals are not allocated to this campus or to individual award sites."
+  },
+  {
+    "code": "lakehead",
+    "comparator": "Lakehead / Thunder Bay",
+    "name": "Lakehead University",
+    "city": "Thunder Bay",
+    "site": "Thunder Bay campus · 955 Oliver Road",
+    "coordinates": [
+      -89.26234,
+      48.42031
+    ],
+    "sourceUrl": "https://www.lakeheadu.ca/about/thunder-bay-campus/tb-maps",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/way/369361463",
+    "locationNote": "Representative point for the mapped Thunder Bay campus. Lakehead also has an Orillia campus; institution-wide source totals are not allocated to Thunder Bay or to individual award sites."
+  },
+  {
+    "code": "ubc",
+    "comparator": "UBC / Vancouver",
+    "name": "The University of British Columbia",
+    "city": "Vancouver",
+    "site": "Vancouver (Point Grey) campus lands",
+    "coordinates": [
+      -123.24298,
+      49.25789
+    ],
+    "sourceUrl": "https://www.ubc.ca/about/maps.html",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/relation/11678160",
+    "locationNote": "Representative OpenStreetMap point for the Point Grey campus lands. Vancouver is the source comparator and mailing label; the campus lies in Electoral Area A outside municipal Vancouver. Institution-wide source totals may include other campuses and affiliated sites and are not allocated to this point."
+  },
+  {
+    "code": "unbc",
+    "comparator": "UNBC / Prince George",
+    "name": "University of Northern British Columbia",
+    "city": "Prince George",
+    "site": "Prince George campus · 3333 University Way",
+    "coordinates": [
+      -122.81472,
+      53.89257
+    ],
+    "sourceUrl": "https://www.unbc.ca/about-unbc/contact",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/way/446564130",
+    "locationNote": "Representative point for the mapped Prince George campus. UNBC has regional campuses and research facilities; source totals are institution-wide and do not identify a future NHHR building, participant location, or individual award site."
+  },
+  {
+    "code": "usask",
+    "comparator": "USask / Saskatoon",
+    "name": "University of Saskatchewan",
+    "city": "Saskatoon",
+    "site": "Saskatoon campus",
+    "coordinates": [
+      -106.62778,
+      52.13442
+    ],
+    "sourceUrl": "https://maps.usask.ca/",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/relation/13754325",
+    "locationNote": "Representative point for the mapped Saskatoon university campus. Institution-wide source totals may include other locations, field facilities and affiliated research sites; they are not allocated to this point."
+  },
+  {
+    "code": "nosm",
+    "comparator": "NOSM / Thunder Bay",
+    "name": "NOSM University",
+    "city": "Thunder Bay",
+    "site": "Thunder Bay campus · 955 Oliver Road",
+    "coordinates": [
+      -89.25987,
+      48.42189
+    ],
+    "sourceUrl": "https://www.nosm.ca/faculty/medical-sciences/contact-us/",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/way/198506186",
+    "locationNote": "Point for the mapped Northern Ontario School of Medicine building at the Thunder Bay campus. NOSM University is distributed across Thunder Bay, Sudbury and partner communities. The source comparator labels Thunder Bay; institution-wide totals are not exclusively allocated to this campus."
+  },
+  {
+    "code": "bc-cancer",
+    "comparator": "BC Cancer / Vancouver",
+    "name": "BC Cancer",
+    "city": "Vancouver",
+    "site": "BC Cancer Research Centre · 675 West 10th Avenue",
+    "coordinates": [
+      -123.11935,
+      49.26259
+    ],
+    "sourceUrl": "https://www.bccrc.ca/dept/ora/grants-administration/contact-us",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/way/135497923",
+    "locationNote": "Representative Vancouver research and administration site; OpenStreetMap names this building Leon Judah Blackmore Cancer Research Centre. BC Cancer operates across BC. Institution-wide source totals are not allocated to this building, Vancouver patients, or an individual clinical or award site."
+  },
+  {
+    "code": "mcmaster",
+    "comparator": "McMaster / Hamilton",
+    "name": "McMaster University",
+    "city": "Hamilton",
+    "site": "Main campus · 1280 Main Street West",
+    "coordinates": [
+      -79.91783,
+      43.26394
+    ],
+    "sourceUrl": "https://nuclear.mcmaster.ca/nuclear-resonance/getting-to-campus/",
+    "coordinateSourceUrl": "https://www.openstreetmap.org/way/23122301",
+    "locationNote": "Representative point inside the verified Hamilton main-campus feature. McMaster operates additional campuses and affiliated research sites. Institution-wide source totals are not allocated to this campus, its buildings, residents or individual projects."
+  }
+]

@@ -1,0 +1,2312 @@
+[
+  {
+    "chsa_code": "1110",
+    "chsa_name": "Fernie",
+    "lha_code": "111",
+    "lha_name": "Fernie",
+    "hsda_code": "11",
+    "hsda_name": "East Kootenay",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1120",
+    "chsa_name": "Cranbrook",
+    "lha_code": "112",
+    "lha_name": "Cranbrook",
+    "hsda_code": "11",
+    "hsda_name": "East Kootenay",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1130",
+    "chsa_name": "Kimberley",
+    "lha_code": "113",
+    "lha_name": "Kimberley",
+    "hsda_code": "11",
+    "hsda_name": "East Kootenay",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1140",
+    "chsa_name": "Windermere",
+    "lha_code": "114",
+    "lha_name": "Windermere",
+    "hsda_code": "11",
+    "hsda_name": "East Kootenay",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1150",
+    "chsa_name": "Creston",
+    "lha_code": "115",
+    "lha_name": "Creston",
+    "hsda_code": "11",
+    "hsda_name": "East Kootenay",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1160",
+    "chsa_name": "Golden",
+    "lha_code": "116",
+    "lha_name": "Golden",
+    "hsda_code": "11",
+    "hsda_name": "East Kootenay",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1210",
+    "chsa_name": "Kootenay Lake",
+    "lha_code": "121",
+    "lha_name": "Kootenay Lake",
+    "hsda_code": "12",
+    "hsda_name": "Kootenay Boundary",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1220",
+    "chsa_name": "Nelson",
+    "lha_code": "122",
+    "lha_name": "Nelson",
+    "hsda_code": "12",
+    "hsda_name": "Kootenay Boundary",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1230",
+    "chsa_name": "Castlegar",
+    "lha_code": "123",
+    "lha_name": "Castlegar",
+    "hsda_code": "12",
+    "hsda_name": "Kootenay Boundary",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1240",
+    "chsa_name": "Arrow Lakes",
+    "lha_code": "124",
+    "lha_name": "Arrow Lakes",
+    "hsda_code": "12",
+    "hsda_name": "Kootenay Boundary",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1250",
+    "chsa_name": "Trail",
+    "lha_code": "125",
+    "lha_name": "Trail",
+    "hsda_code": "12",
+    "hsda_name": "Kootenay Boundary",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1260",
+    "chsa_name": "Grand Forks",
+    "lha_code": "126",
+    "lha_name": "Grand Forks",
+    "hsda_code": "12",
+    "hsda_name": "Kootenay Boundary",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1270",
+    "chsa_name": "Kettle Valley",
+    "lha_code": "127",
+    "lha_name": "Kettle Valley",
+    "hsda_code": "12",
+    "hsda_name": "Kootenay Boundary",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1310",
+    "chsa_name": "Southern Okanagan",
+    "lha_code": "131",
+    "lha_name": "Southern Okanagan",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1320",
+    "chsa_name": "Penticton",
+    "lha_code": "132",
+    "lha_name": "Penticton",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1330",
+    "chsa_name": "Keremeos",
+    "lha_code": "133",
+    "lha_name": "Keremeos",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1340",
+    "chsa_name": "Princeton",
+    "lha_code": "134",
+    "lha_name": "Princeton",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1350",
+    "chsa_name": "Armstrong/Spallumcheen",
+    "lha_code": "135",
+    "lha_name": "Armstrong/Spallumcheen",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1361",
+    "chsa_name": "Vernon Centre/Coldstream",
+    "lha_code": "136",
+    "lha_name": "Vernon",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1362",
+    "chsa_name": "North Okanagan/Lumby",
+    "lha_code": "136",
+    "lha_name": "Vernon",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1371",
+    "chsa_name": "Central Okanagan Rural West",
+    "lha_code": "137",
+    "lha_name": "Central Okanagan",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1372",
+    "chsa_name": "West Kelowna",
+    "lha_code": "137",
+    "lha_name": "Central Okanagan",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1373",
+    "chsa_name": "Lake Country",
+    "lha_code": "137",
+    "lha_name": "Central Okanagan",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1374",
+    "chsa_name": "Glenmore",
+    "lha_code": "137",
+    "lha_name": "Central Okanagan",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1375",
+    "chsa_name": "Downtown Kelowna",
+    "lha_code": "137",
+    "lha_name": "Central Okanagan",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1376",
+    "chsa_name": "Rutland",
+    "lha_code": "137",
+    "lha_name": "Central Okanagan",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1377",
+    "chsa_name": "Okanagan Mission",
+    "lha_code": "137",
+    "lha_name": "Central Okanagan",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1378",
+    "chsa_name": "Central Okanagan Rural East",
+    "lha_code": "137",
+    "lha_name": "Central Okanagan",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1380",
+    "chsa_name": "Summerland",
+    "lha_code": "138",
+    "lha_name": "Summerland",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1390",
+    "chsa_name": "Enderby",
+    "lha_code": "139",
+    "lha_name": "Enderby",
+    "hsda_code": "13",
+    "hsda_name": "Okanagan",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1410",
+    "chsa_name": "Revelstoke",
+    "lha_code": "141",
+    "lha_name": "Revelstoke",
+    "hsda_code": "14",
+    "hsda_name": "Thompson Cariboo Shuswap",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1420",
+    "chsa_name": "Salmon Arm",
+    "lha_code": "142",
+    "lha_name": "Salmon Arm",
+    "hsda_code": "14",
+    "hsda_name": "Thompson Cariboo Shuswap",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1431",
+    "chsa_name": "Kamloops Centre North",
+    "lha_code": "143",
+    "lha_name": "Kamloops",
+    "hsda_code": "14",
+    "hsda_name": "Thompson Cariboo Shuswap",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1432",
+    "chsa_name": "Kamloops Centre South",
+    "lha_code": "143",
+    "lha_name": "Kamloops",
+    "hsda_code": "14",
+    "hsda_name": "Thompson Cariboo Shuswap",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1433",
+    "chsa_name": "Lower Thompson",
+    "lha_code": "143",
+    "lha_name": "Kamloops",
+    "hsda_code": "14",
+    "hsda_name": "Thompson Cariboo Shuswap",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1440",
+    "chsa_name": "100 Mile House",
+    "lha_code": "144",
+    "lha_name": "100 Mile House",
+    "hsda_code": "14",
+    "hsda_name": "Thompson Cariboo Shuswap",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1450",
+    "chsa_name": "North Thompson",
+    "lha_code": "145",
+    "lha_name": "North Thompson",
+    "hsda_code": "14",
+    "hsda_name": "Thompson Cariboo Shuswap",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1461",
+    "chsa_name": "West Cariboo",
+    "lha_code": "146",
+    "lha_name": "Cariboo/Chilcotin",
+    "hsda_code": "14",
+    "hsda_name": "Thompson Cariboo Shuswap",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1462",
+    "chsa_name": "Williams Lake/East Cariboo",
+    "lha_code": "146",
+    "lha_name": "Cariboo/Chilcotin",
+    "hsda_code": "14",
+    "hsda_name": "Thompson Cariboo Shuswap",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1470",
+    "chsa_name": "Lillooet",
+    "lha_code": "147",
+    "lha_name": "Lillooet",
+    "hsda_code": "14",
+    "hsda_name": "Thompson Cariboo Shuswap",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1480",
+    "chsa_name": "South Cariboo",
+    "lha_code": "148",
+    "lha_name": "South Cariboo",
+    "hsda_code": "14",
+    "hsda_name": "Thompson Cariboo Shuswap",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "1490",
+    "chsa_name": "Merritt",
+    "lha_code": "149",
+    "lha_name": "Merritt",
+    "hsda_code": "14",
+    "hsda_name": "Thompson Cariboo Shuswap",
+    "health_authority_code": "1",
+    "health_authority_name": "Interior"
+  },
+  {
+    "chsa_code": "2110",
+    "chsa_name": "Hope",
+    "lha_code": "211",
+    "lha_name": "Hope",
+    "hsda_code": "21",
+    "hsda_name": "Fraser East",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2121",
+    "chsa_name": "South Chilliwack",
+    "lha_code": "212",
+    "lha_name": "Chilliwack",
+    "hsda_code": "21",
+    "hsda_name": "Fraser East",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2122",
+    "chsa_name": "North Chilliwack",
+    "lha_code": "212",
+    "lha_name": "Chilliwack",
+    "hsda_code": "21",
+    "hsda_name": "Fraser East",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2131",
+    "chsa_name": "Central Abbotsford",
+    "lha_code": "213",
+    "lha_name": "Abbotsford",
+    "hsda_code": "21",
+    "hsda_name": "Fraser East",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2132",
+    "chsa_name": "East Abbotsford",
+    "lha_code": "213",
+    "lha_name": "Abbotsford",
+    "hsda_code": "21",
+    "hsda_name": "Fraser East",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2133",
+    "chsa_name": "West Abbotsford",
+    "lha_code": "213",
+    "lha_name": "Abbotsford",
+    "hsda_code": "21",
+    "hsda_name": "Fraser East",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2134",
+    "chsa_name": "Abbotsford Rural",
+    "lha_code": "213",
+    "lha_name": "Abbotsford",
+    "hsda_code": "21",
+    "hsda_name": "Fraser East",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2141",
+    "chsa_name": "South Mission",
+    "lha_code": "214",
+    "lha_name": "Mission",
+    "hsda_code": "21",
+    "hsda_name": "Fraser East",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2142",
+    "chsa_name": "North Mission",
+    "lha_code": "214",
+    "lha_name": "Mission",
+    "hsda_code": "21",
+    "hsda_name": "Fraser East",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2150",
+    "chsa_name": "Agassiz/Harrison",
+    "lha_code": "215",
+    "lha_name": "Agassiz/Harrison",
+    "hsda_code": "21",
+    "hsda_name": "Fraser East",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2211",
+    "chsa_name": "New Westminster - East",
+    "lha_code": "221",
+    "lha_name": "New Westminster",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2212",
+    "chsa_name": "New Westminster - Central",
+    "lha_code": "221",
+    "lha_name": "New Westminster",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2213",
+    "chsa_name": "New Westminster - Downtown",
+    "lha_code": "221",
+    "lha_name": "New Westminster",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2214",
+    "chsa_name": "New Westminster - West/Queensborough",
+    "lha_code": "221",
+    "lha_name": "New Westminster",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2221",
+    "chsa_name": "Burnaby Heights/Capital Hill",
+    "lha_code": "222",
+    "lha_name": "Burnaby",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2222",
+    "chsa_name": "Brentwood/Willingdon/Parkcrest",
+    "lha_code": "222",
+    "lha_name": "Burnaby",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2223",
+    "chsa_name": "Westridge/Sperling/Gov't Road",
+    "lha_code": "222",
+    "lha_name": "Burnaby",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2224",
+    "chsa_name": "Burnaby Mountain/Lougheed",
+    "lha_code": "222",
+    "lha_name": "Burnaby",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2225",
+    "chsa_name": "Garden Village/Cascade/Douglas/Gilpin",
+    "lha_code": "222",
+    "lha_name": "Burnaby",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2226",
+    "chsa_name": "Metrotown/Marlborough/Windsor",
+    "lha_code": "222",
+    "lha_name": "Burnaby",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2227",
+    "chsa_name": "South Slope/Big Bend",
+    "lha_code": "222",
+    "lha_name": "Burnaby",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2228",
+    "chsa_name": "Buckingham/Lakeview/Cariboo/Second Street",
+    "lha_code": "222",
+    "lha_name": "Burnaby",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2229",
+    "chsa_name": "Kingsway/Edmonds",
+    "lha_code": "222",
+    "lha_name": "Burnaby",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2231",
+    "chsa_name": "Haney",
+    "lha_code": "223",
+    "lha_name": "Maple Ridge/Pitt Meadows",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2232",
+    "chsa_name": "Pitt Meadows",
+    "lha_code": "223",
+    "lha_name": "Maple Ridge/Pitt Meadows",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2233",
+    "chsa_name": "Maple Ridge Rural",
+    "lha_code": "223",
+    "lha_name": "Maple Ridge/Pitt Meadows",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2241",
+    "chsa_name": "North Coquitlam",
+    "lha_code": "224",
+    "lha_name": "Tri-Cities",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2242",
+    "chsa_name": "Southwest Coquitlam",
+    "lha_code": "224",
+    "lha_name": "Tri-Cities",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2243",
+    "chsa_name": "Southeast Coquitlam",
+    "lha_code": "224",
+    "lha_name": "Tri-Cities",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2244",
+    "chsa_name": "Port Coquitlam",
+    "lha_code": "224",
+    "lha_name": "Tri-Cities",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2245",
+    "chsa_name": "Port Moody South",
+    "lha_code": "224",
+    "lha_name": "Tri-Cities",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2246",
+    "chsa_name": "Port Moody North/Anmore/Belcarra",
+    "lha_code": "224",
+    "lha_name": "Tri-Cities",
+    "hsda_code": "22",
+    "hsda_name": "Fraser North",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2311",
+    "chsa_name": "City of Langley",
+    "lha_code": "231",
+    "lha_name": "Langley",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2312",
+    "chsa_name": "Walnut Grove/Fort Langley",
+    "lha_code": "231",
+    "lha_name": "Langley",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2313",
+    "chsa_name": "Willoughby",
+    "lha_code": "231",
+    "lha_name": "Langley",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2314",
+    "chsa_name": "Brookswood/Murrayville",
+    "lha_code": "231",
+    "lha_name": "Langley",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2315",
+    "chsa_name": "Aldergrove/Otter",
+    "lha_code": "231",
+    "lha_name": "Langley",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2316",
+    "chsa_name": "North Langley Township",
+    "lha_code": "231",
+    "lha_name": "Langley",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2317",
+    "chsa_name": "South Langley Township",
+    "lha_code": "231",
+    "lha_name": "Langley",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2321",
+    "chsa_name": "North Delta",
+    "lha_code": "232",
+    "lha_name": "Delta",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2322",
+    "chsa_name": "Ladner",
+    "lha_code": "232",
+    "lha_name": "Delta",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2323",
+    "chsa_name": "Tsawwassen",
+    "lha_code": "232",
+    "lha_name": "Delta",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2331",
+    "chsa_name": "Whalley",
+    "lha_code": "233",
+    "lha_name": "Surrey",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2332",
+    "chsa_name": "North Surrey",
+    "lha_code": "233",
+    "lha_name": "Surrey",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2333",
+    "chsa_name": "Cloverdale",
+    "lha_code": "233",
+    "lha_name": "Surrey",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2334",
+    "chsa_name": "Panorama",
+    "lha_code": "233",
+    "lha_name": "Surrey",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2335",
+    "chsa_name": "East Newton",
+    "lha_code": "233",
+    "lha_name": "Surrey",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2336",
+    "chsa_name": "Fleetwood",
+    "lha_code": "233",
+    "lha_name": "Surrey",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2337",
+    "chsa_name": "Guildford",
+    "lha_code": "233",
+    "lha_name": "Surrey",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2338",
+    "chsa_name": "West Newton",
+    "lha_code": "233",
+    "lha_name": "Surrey",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2341",
+    "chsa_name": "South Surrey West",
+    "lha_code": "234",
+    "lha_name": "South Surrey/White Rock",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2342",
+    "chsa_name": "White Rock",
+    "lha_code": "234",
+    "lha_name": "South Surrey/White Rock",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "2343",
+    "chsa_name": "South Surrey East",
+    "lha_code": "234",
+    "lha_name": "South Surrey/White Rock",
+    "hsda_code": "23",
+    "hsda_name": "Fraser South",
+    "health_authority_code": "2",
+    "health_authority_name": "Fraser"
+  },
+  {
+    "chsa_code": "3111",
+    "chsa_name": "Richmond City Centre",
+    "lha_code": "311",
+    "lha_name": "Richmond",
+    "hsda_code": "31",
+    "hsda_name": "Richmond",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3112",
+    "chsa_name": "Blundell",
+    "lha_code": "311",
+    "lha_name": "Richmond",
+    "hsda_code": "31",
+    "hsda_name": "Richmond",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3113",
+    "chsa_name": "Broadmoor",
+    "lha_code": "311",
+    "lha_name": "Richmond",
+    "hsda_code": "31",
+    "hsda_name": "Richmond",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3114",
+    "chsa_name": "Thompson/Seafair",
+    "lha_code": "311",
+    "lha_name": "Richmond",
+    "hsda_code": "31",
+    "hsda_name": "Richmond",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3115",
+    "chsa_name": "Steveston",
+    "lha_code": "311",
+    "lha_name": "Richmond",
+    "hsda_code": "31",
+    "hsda_name": "Richmond",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3116",
+    "chsa_name": "East and West Cambie/Bridgeport",
+    "lha_code": "311",
+    "lha_name": "Richmond",
+    "hsda_code": "31",
+    "hsda_name": "Richmond",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3117",
+    "chsa_name": "Gilmore/Shellmont/East/Hamilton",
+    "lha_code": "311",
+    "lha_name": "Richmond",
+    "hsda_code": "31",
+    "hsda_name": "Richmond",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3211",
+    "chsa_name": "Downtown Vancouver",
+    "lha_code": "321",
+    "lha_name": "Vancouver - City Centre",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3212",
+    "chsa_name": "West End",
+    "lha_code": "321",
+    "lha_name": "Vancouver - City Centre",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3213",
+    "chsa_name": "Fairview",
+    "lha_code": "321",
+    "lha_name": "Vancouver - City Centre",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3221",
+    "chsa_name": "Downtown Eastside",
+    "lha_code": "322",
+    "lha_name": "Vancouver - Centre North",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3222",
+    "chsa_name": "Northeast False Creek",
+    "lha_code": "322",
+    "lha_name": "Vancouver - Centre North",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3223",
+    "chsa_name": "Grandview-Woodland",
+    "lha_code": "322",
+    "lha_name": "Vancouver - Centre North",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3231",
+    "chsa_name": "Cedar Cottage",
+    "lha_code": "323",
+    "lha_name": "Vancouver - Northeast",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3232",
+    "chsa_name": "Hastings-Sunrise",
+    "lha_code": "323",
+    "lha_name": "Vancouver - Northeast",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3233",
+    "chsa_name": "Renfrew-Collingwood",
+    "lha_code": "323",
+    "lha_name": "Vancouver - Northeast",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3241",
+    "chsa_name": "Shaughnessy/Arbutus Ridge/Kerrisdale",
+    "lha_code": "324",
+    "lha_name": "Vancouver - Westside",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3242",
+    "chsa_name": "West Point Grey/Dunbar-Southlands",
+    "lha_code": "324",
+    "lha_name": "Vancouver - Westside",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3243",
+    "chsa_name": "University of British Columbia",
+    "lha_code": "324",
+    "lha_name": "Vancouver - Westside",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3244",
+    "chsa_name": "Kitsilano",
+    "lha_code": "324",
+    "lha_name": "Vancouver - Westside",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3251",
+    "chsa_name": "Kensington",
+    "lha_code": "325",
+    "lha_name": "Vancouver - Midtown",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3252",
+    "chsa_name": "Mount Pleasant",
+    "lha_code": "325",
+    "lha_name": "Vancouver - Midtown",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3253",
+    "chsa_name": "South Cambie/Riley Park",
+    "lha_code": "325",
+    "lha_name": "Vancouver - Midtown",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3261",
+    "chsa_name": "Killarney",
+    "lha_code": "326",
+    "lha_name": "Vancouver - South",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3262",
+    "chsa_name": "Oakridge/Marpole",
+    "lha_code": "326",
+    "lha_name": "Vancouver - South",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3263",
+    "chsa_name": "Sunset",
+    "lha_code": "326",
+    "lha_name": "Vancouver - South",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3264",
+    "chsa_name": "Victoria-Fraserview",
+    "lha_code": "326",
+    "lha_name": "Vancouver - South",
+    "hsda_code": "32",
+    "hsda_name": "Vancouver",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3311",
+    "chsa_name": "North Vancouver City - East",
+    "lha_code": "331",
+    "lha_name": "North Vancouver",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3312",
+    "chsa_name": "North Vancouver City - West",
+    "lha_code": "331",
+    "lha_name": "North Vancouver",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3313",
+    "chsa_name": "North Vancouver DM - Central",
+    "lha_code": "331",
+    "lha_name": "North Vancouver",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3314",
+    "chsa_name": "North Vancouver DM - East",
+    "lha_code": "331",
+    "lha_name": "North Vancouver",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3315",
+    "chsa_name": "North Vancouver DM - West",
+    "lha_code": "331",
+    "lha_name": "North Vancouver",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3321",
+    "chsa_name": "West Vancouver - Lower",
+    "lha_code": "332",
+    "lha_name": "West Vancouver/Bowen Island",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3322",
+    "chsa_name": "West Vancouver - Upper",
+    "lha_code": "332",
+    "lha_name": "West Vancouver/Bowen Island",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3323",
+    "chsa_name": "Bowen Island/Lions Bay",
+    "lha_code": "332",
+    "lha_name": "West Vancouver/Bowen Island",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3331",
+    "chsa_name": "Gibsons",
+    "lha_code": "333",
+    "lha_name": "Sunshine Coast",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3332",
+    "chsa_name": "Sechelt",
+    "lha_code": "333",
+    "lha_name": "Sunshine Coast",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3333",
+    "chsa_name": "Sunshine Coast Rural",
+    "lha_code": "333",
+    "lha_name": "Sunshine Coast",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3341",
+    "chsa_name": "Powell River City",
+    "lha_code": "334",
+    "lha_name": "Powell River",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3342",
+    "chsa_name": "qathet Rural",
+    "lha_code": "334",
+    "lha_name": "Powell River",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3351",
+    "chsa_name": "Squamish",
+    "lha_code": "335",
+    "lha_name": "Howe Sound",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3352",
+    "chsa_name": "Whistler",
+    "lha_code": "335",
+    "lha_name": "Howe Sound",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3353",
+    "chsa_name": "Pemberton",
+    "lha_code": "335",
+    "lha_name": "Howe Sound",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3360",
+    "chsa_name": "Bella Coola Valley",
+    "lha_code": "336",
+    "lha_name": "Bella Coola Valley",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "3370",
+    "chsa_name": "Central Coast",
+    "lha_code": "337",
+    "lha_name": "Central Coast",
+    "hsda_code": "33",
+    "hsda_name": "North Shore/Coast Garibaldi",
+    "health_authority_code": "3",
+    "health_authority_name": "Vancouver Coastal"
+  },
+  {
+    "chsa_code": "4111",
+    "chsa_name": "Downtown Victoria/Vic West",
+    "lha_code": "411",
+    "lha_name": "Greater Victoria",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4112",
+    "chsa_name": "James Bay/Fairfield",
+    "lha_code": "411",
+    "lha_name": "Greater Victoria",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4113",
+    "chsa_name": "Oaklands/Fernwood",
+    "lha_code": "411",
+    "lha_name": "Greater Victoria",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4114",
+    "chsa_name": "Oak Bay",
+    "lha_code": "411",
+    "lha_name": "Greater Victoria",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4115",
+    "chsa_name": "Gordon Head/Shelbourne",
+    "lha_code": "411",
+    "lha_name": "Greater Victoria",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4116",
+    "chsa_name": "Quadra/Swan Lake",
+    "lha_code": "411",
+    "lha_name": "Greater Victoria",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4117",
+    "chsa_name": "Interurban/Tillicum",
+    "lha_code": "411",
+    "lha_name": "Greater Victoria",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4118",
+    "chsa_name": "View Royal",
+    "lha_code": "411",
+    "lha_name": "Greater Victoria",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4119",
+    "chsa_name": "Esquimalt",
+    "lha_code": "411",
+    "lha_name": "Greater Victoria",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4121",
+    "chsa_name": "Colwood",
+    "lha_code": "412",
+    "lha_name": "Western Communities",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4122",
+    "chsa_name": "Metchosin",
+    "lha_code": "412",
+    "lha_name": "Western Communities",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4123",
+    "chsa_name": "Langford North/Highlands",
+    "lha_code": "412",
+    "lha_name": "Western Communities",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4124",
+    "chsa_name": "Sooke",
+    "lha_code": "412",
+    "lha_name": "Western Communities",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4125",
+    "chsa_name": "Juan de Fuca Coast",
+    "lha_code": "412",
+    "lha_name": "Western Communities",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4126",
+    "chsa_name": "Langford South",
+    "lha_code": "412",
+    "lha_name": "Western Communities",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4131",
+    "chsa_name": "Royal Oak/Cordova Bay/Prospect",
+    "lha_code": "413",
+    "lha_name": "Saanich Peninsula",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4132",
+    "chsa_name": "Central Saanich",
+    "lha_code": "413",
+    "lha_name": "Saanich Peninsula",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4133",
+    "chsa_name": "North Saanich",
+    "lha_code": "413",
+    "lha_name": "Saanich Peninsula",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4134",
+    "chsa_name": "Sidney",
+    "lha_code": "413",
+    "lha_name": "Saanich Peninsula",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4141",
+    "chsa_name": "Salt Spring Island",
+    "lha_code": "414",
+    "lha_name": "Southern Gulf Islands",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4142",
+    "chsa_name": "Pender/Galiano/Saturna/Mayne",
+    "lha_code": "414",
+    "lha_name": "Southern Gulf Islands",
+    "hsda_code": "41",
+    "hsda_name": "South Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4211",
+    "chsa_name": "South Cowichan",
+    "lha_code": "421",
+    "lha_name": "Cowichan Valley South",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4212",
+    "chsa_name": "Central Cowichan",
+    "lha_code": "421",
+    "lha_name": "Cowichan Valley South",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4220",
+    "chsa_name": "Cowichan Valley West",
+    "lha_code": "422",
+    "lha_name": "Cowichan Valley West",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4231",
+    "chsa_name": "Ladysmith",
+    "lha_code": "423",
+    "lha_name": "Cowichan Valley North",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4232",
+    "chsa_name": "Ladysmith Rural",
+    "lha_code": "423",
+    "lha_name": "Cowichan Valley North",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4233",
+    "chsa_name": "Chemainus",
+    "lha_code": "423",
+    "lha_name": "Cowichan Valley North",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4234",
+    "chsa_name": "Penelakut and Thetis Islands",
+    "lha_code": "423",
+    "lha_name": "Cowichan Valley North",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4241",
+    "chsa_name": "Downtown Nanaimo",
+    "lha_code": "424",
+    "lha_name": "Greater Nanaimo",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4242",
+    "chsa_name": "Departure Bay",
+    "lha_code": "424",
+    "lha_name": "Greater Nanaimo",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4243",
+    "chsa_name": "Nanaimo North/Lantzville",
+    "lha_code": "424",
+    "lha_name": "Greater Nanaimo",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4244",
+    "chsa_name": "Nanaimo South",
+    "lha_code": "424",
+    "lha_name": "Greater Nanaimo",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4245",
+    "chsa_name": "Nanaimo West/Rural",
+    "lha_code": "424",
+    "lha_name": "Greater Nanaimo",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4246",
+    "chsa_name": "Cedar/Wellington",
+    "lha_code": "424",
+    "lha_name": "Greater Nanaimo",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4247",
+    "chsa_name": "Gabriola Island",
+    "lha_code": "424",
+    "lha_name": "Greater Nanaimo",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4251",
+    "chsa_name": "Parksville",
+    "lha_code": "425",
+    "lha_name": "Oceanside",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4252",
+    "chsa_name": "Qualicum Beach",
+    "lha_code": "425",
+    "lha_name": "Oceanside",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4253",
+    "chsa_name": "Oceanside Rural",
+    "lha_code": "425",
+    "lha_name": "Oceanside",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4261",
+    "chsa_name": "Port Alberni",
+    "lha_code": "426",
+    "lha_name": "Alberni/Clayoquot",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4262",
+    "chsa_name": "Alberni Valley/Bamfield",
+    "lha_code": "426",
+    "lha_name": "Alberni/Clayoquot",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4263",
+    "chsa_name": "West Coast",
+    "lha_code": "426",
+    "lha_name": "Alberni/Clayoquot",
+    "hsda_code": "42",
+    "hsda_name": "Central Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4311",
+    "chsa_name": "Comox",
+    "lha_code": "431",
+    "lha_name": "Comox Valley",
+    "hsda_code": "43",
+    "hsda_name": "North Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4312",
+    "chsa_name": "Comox Valley Rural",
+    "lha_code": "431",
+    "lha_name": "Comox Valley",
+    "hsda_code": "43",
+    "hsda_name": "North Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4313",
+    "chsa_name": "Courtenay",
+    "lha_code": "431",
+    "lha_name": "Comox Valley",
+    "hsda_code": "43",
+    "hsda_name": "North Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4321",
+    "chsa_name": "Campbell River",
+    "lha_code": "432",
+    "lha_name": "Greater Campbell River",
+    "hsda_code": "43",
+    "hsda_name": "North Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4322",
+    "chsa_name": "Campbell River Rural",
+    "lha_code": "432",
+    "lha_name": "Greater Campbell River",
+    "hsda_code": "43",
+    "hsda_name": "North Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4330",
+    "chsa_name": "Vancouver Island West",
+    "lha_code": "433",
+    "lha_name": "Vancouver Island West",
+    "hsda_code": "43",
+    "hsda_name": "North Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4341",
+    "chsa_name": "Port Hardy/Port Alice",
+    "lha_code": "434",
+    "lha_name": "Vancouver Island North",
+    "hsda_code": "43",
+    "hsda_name": "North Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4342",
+    "chsa_name": "Port McNeill/Sointula",
+    "lha_code": "434",
+    "lha_name": "Vancouver Island North",
+    "hsda_code": "43",
+    "hsda_name": "North Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "4343",
+    "chsa_name": "Vancouver Island North Remote",
+    "lha_code": "434",
+    "lha_name": "Vancouver Island North",
+    "hsda_code": "43",
+    "hsda_name": "North Vancouver Island",
+    "health_authority_code": "4",
+    "health_authority_name": "Vancouver Island"
+  },
+  {
+    "chsa_code": "5101",
+    "chsa_name": "Haida Gwaii South",
+    "lha_code": "510",
+    "lha_name": "Haida Gwaii",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5102",
+    "chsa_name": "Haida Gwaii North",
+    "lha_code": "510",
+    "lha_name": "Haida Gwaii",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5110",
+    "chsa_name": "Snow Country",
+    "lha_code": "511",
+    "lha_name": "Snow Country",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5121",
+    "chsa_name": "Prince Rupert City Centre",
+    "lha_code": "512",
+    "lha_name": "Prince Rupert",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5122",
+    "chsa_name": "Prince Rupert Rural",
+    "lha_code": "512",
+    "lha_name": "Prince Rupert",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5130",
+    "chsa_name": "Upper Skeena",
+    "lha_code": "513",
+    "lha_name": "Upper Skeena",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5141",
+    "chsa_name": "Smithers Town Centre",
+    "lha_code": "514",
+    "lha_name": "Smithers",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5142",
+    "chsa_name": "Smithers Rural",
+    "lha_code": "514",
+    "lha_name": "Smithers",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5143",
+    "chsa_name": "Houston",
+    "lha_code": "514",
+    "lha_name": "Smithers",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5150",
+    "chsa_name": "Kitimat",
+    "lha_code": "515",
+    "lha_name": "Kitimat",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5160",
+    "chsa_name": "Stikine",
+    "lha_code": "516",
+    "lha_name": "Stikine",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5171",
+    "chsa_name": "Terrace City Centre",
+    "lha_code": "517",
+    "lha_name": "Terrace",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5172",
+    "chsa_name": "Terrace Rural",
+    "lha_code": "517",
+    "lha_name": "Terrace",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5180",
+    "chsa_name": "Nisga'a",
+    "lha_code": "518",
+    "lha_name": "Nisga'a",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5190",
+    "chsa_name": "Telegraph Creek",
+    "lha_code": "519",
+    "lha_name": "Telegraph Creek",
+    "hsda_code": "51",
+    "hsda_name": "Northwest",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5211",
+    "chsa_name": "Quesnel City Centre",
+    "lha_code": "521",
+    "lha_name": "Quesnel",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5212",
+    "chsa_name": "Quesnel Rural",
+    "lha_code": "521",
+    "lha_name": "Quesnel",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5221",
+    "chsa_name": "Burns Lake Town Centre",
+    "lha_code": "522",
+    "lha_name": "Burns Lake",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5222",
+    "chsa_name": "Burns Lake South",
+    "lha_code": "522",
+    "lha_name": "Burns Lake",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5223",
+    "chsa_name": "Burns Lake North",
+    "lha_code": "522",
+    "lha_name": "Burns Lake",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5231",
+    "chsa_name": "Vanderhoof",
+    "lha_code": "523",
+    "lha_name": "Nechako",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5232",
+    "chsa_name": "Vanderhoof Rural",
+    "lha_code": "523",
+    "lha_name": "Nechako",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5233",
+    "chsa_name": "Fort St. James North",
+    "lha_code": "523",
+    "lha_name": "Nechako",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5234",
+    "chsa_name": "Fraser Lake",
+    "lha_code": "523",
+    "lha_name": "Nechako",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5241",
+    "chsa_name": "Prince George City - North",
+    "lha_code": "524",
+    "lha_name": "Prince George",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5242",
+    "chsa_name": "Prince George City - Central",
+    "lha_code": "524",
+    "lha_name": "Prince George",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5243",
+    "chsa_name": "Prince George City - Southwest",
+    "lha_code": "524",
+    "lha_name": "Prince George",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5244",
+    "chsa_name": "Prince George Southwest Rural",
+    "lha_code": "524",
+    "lha_name": "Prince George",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5245",
+    "chsa_name": "Prince George North Fraser Rural",
+    "lha_code": "524",
+    "lha_name": "Prince George",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5246",
+    "chsa_name": "McBride",
+    "lha_code": "524",
+    "lha_name": "Prince George",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5247",
+    "chsa_name": "Mackenzie",
+    "lha_code": "524",
+    "lha_name": "Prince George",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5248",
+    "chsa_name": "Valemount",
+    "lha_code": "524",
+    "lha_name": "Prince George",
+    "hsda_code": "52",
+    "hsda_name": "Northern Interior",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5311",
+    "chsa_name": "Dawson Creek",
+    "lha_code": "531",
+    "lha_name": "Peace River South",
+    "hsda_code": "53",
+    "hsda_name": "Northeast",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5312",
+    "chsa_name": "Chetwynd",
+    "lha_code": "531",
+    "lha_name": "Peace River South",
+    "hsda_code": "53",
+    "hsda_name": "Northeast",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5313",
+    "chsa_name": "Tumbler Ridge",
+    "lha_code": "531",
+    "lha_name": "Peace River South",
+    "hsda_code": "53",
+    "hsda_name": "Northeast",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5314",
+    "chsa_name": "Peace River South Rural",
+    "lha_code": "531",
+    "lha_name": "Peace River South",
+    "hsda_code": "53",
+    "hsda_name": "Northeast",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5321",
+    "chsa_name": "Fort St John",
+    "lha_code": "532",
+    "lha_name": "Peace River North",
+    "hsda_code": "53",
+    "hsda_name": "Northeast",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5322",
+    "chsa_name": "Hudson's Hope",
+    "lha_code": "532",
+    "lha_name": "Peace River North",
+    "hsda_code": "53",
+    "hsda_name": "Northeast",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5323",
+    "chsa_name": "Peace River North Rural",
+    "lha_code": "532",
+    "lha_name": "Peace River North",
+    "hsda_code": "53",
+    "hsda_name": "Northeast",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5331",
+    "chsa_name": "Fort Nelson Population Centre",
+    "lha_code": "533",
+    "lha_name": "Fort Nelson",
+    "hsda_code": "53",
+    "hsda_name": "Northeast",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  },
+  {
+    "chsa_code": "5332",
+    "chsa_name": "Northern Boreal",
+    "lha_code": "533",
+    "lha_name": "Fort Nelson",
+    "hsda_code": "53",
+    "hsda_name": "Northeast",
+    "health_authority_code": "5",
+    "health_authority_name": "Northern"
+  }
+]

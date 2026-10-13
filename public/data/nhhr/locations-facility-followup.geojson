@@ -1,0 +1,593 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "hospital-bulkley-valley-district-hospital",
+        "name": "Bulkley Valley District Hospital",
+        "site": "3950 8th Ave",
+        "city": "Smithers",
+        "province": "BC",
+        "site_grain": "Current reviewed facility reporting context",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/bulkley-valley-district-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/606031382",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. This point is reused exactly for historical capital reporting context, not historical asset positioning.",
+        "location_precision": "Representative current facility point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.1630575,
+          54.7850432
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "hospital-dawson-creek-and-district-hospital",
+        "name": "Dawson Creek and District Hospital",
+        "site": "11100 13 St",
+        "city": "Dawson Creek",
+        "province": "BC",
+        "site_grain": "Current reviewed facility reporting context",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/dawson-creek-and-district-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/184193563",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. This point is reused exactly for historical capital reporting context, not historical asset positioning.",
+        "location_precision": "Representative current facility point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.2357253,
+          55.7496945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "hospital-fort-st-john-hospital",
+        "name": "Fort St. John Hospital",
+        "site": "8407 112 Ave",
+        "city": "Fort St. John",
+        "province": "BC",
+        "site_grain": "Current reviewed facility reporting context",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/fort-st-john-hospital-peace-villa",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/258499176",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. This point is reused exactly for historical capital reporting context, not historical asset positioning.",
+        "location_precision": "Representative current facility point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.8173821,
+          56.2557049
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "hospital-g-r-baker-memorial-hospital",
+        "name": "G.R. Baker Memorial Hospital",
+        "site": "543 Front St",
+        "city": "Quesnel",
+        "province": "BC",
+        "site_grain": "Current reviewed facility reporting context",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/gr-baker-memorial-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/354698177",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. This point is reused exactly for historical capital reporting context, not historical asset positioning.",
+        "location_precision": "Representative current facility point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4995825,
+          52.9811553
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "hospital-kitimat-general-hospital-and-health-centre",
+        "name": "Kitimat General Hospital and Health Centre",
+        "site": "920 S Lahakas Blvd",
+        "city": "Kitimat",
+        "province": "BC",
+        "site_grain": "Current reviewed facility reporting context",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/kitimat-general-hospital-and-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/93844827",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. This point is reused exactly for historical capital reporting context, not historical asset positioning.",
+        "location_precision": "Representative current facility point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.6469428,
+          54.0505162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "hospital-mcbride-and-district-hospital",
+        "name": "McBride and District Hospital",
+        "site": "1136 5th Ave",
+        "city": "McBride",
+        "province": "BC",
+        "site_grain": "Current reviewed facility reporting context",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/mcbride-and-district-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/1290124439",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. This point is reused exactly for historical capital reporting context, not historical asset positioning.",
+        "location_precision": "Representative current facility point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.1608881,
+          53.3013759
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "hospital-northern-haida-gwaii-hospital-and-health-centre",
+        "name": "Northern Haida Gwaii Hospital and Health Centre",
+        "site": "2520 Harrison Ave",
+        "city": "Masset",
+        "province": "BC",
+        "site_grain": "Current reviewed facility reporting context",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/northern-haida-gwaii-hospital-and-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/node/2972398342",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. This point is reused exactly for historical capital reporting context, not historical asset positioning.",
+        "location_precision": "Representative current facility point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.1573868,
+          54.0204029
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "hospital-prince-rupert-regional-hospital",
+        "name": "Prince Rupert Regional Hospital",
+        "site": "1305 Summit Ave",
+        "city": "Prince Rupert",
+        "province": "BC",
+        "site_grain": "Current reviewed facility reporting context",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/prince-rupert-regional-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/992672370",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. This point is reused exactly for historical capital reporting context, not historical asset positioning.",
+        "location_precision": "Representative current facility point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.330281,
+          54.3048398
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "hospital-saint-john-hospital",
+        "name": "Saint John Hospital",
+        "site": "3255 Hospital Rd",
+        "city": "Vanderhoof",
+        "province": "BC",
+        "site_grain": "Current reviewed facility reporting context",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/st-john-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/480751591",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. This point is reused exactly for historical capital reporting context, not historical asset positioning.",
+        "location_precision": "Representative current facility point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.010696,
+          54.0287925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "hospital-university-hospital-of-northern-british-columbia",
+        "name": "University Hospital of Northern British Columbia",
+        "site": "1475 Edmonton St",
+        "city": "Prince George",
+        "province": "BC",
+        "site_grain": "Current reviewed facility reporting context",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/university-hospital-northern-british-columbia-uhnbc",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/445255625",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. This point is reused exactly for historical capital reporting context, not historical asset positioning.",
+        "location_precision": "Representative current facility point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7650194,
+          53.9128015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "hospital-wrinch-memorial-hospital",
+        "name": "Wrinch Memorial Hospital",
+        "site": "2510 Hwy 62",
+        "city": "Hazelton",
+        "province": "BC",
+        "site_grain": "Current reviewed facility reporting context",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/wrinch-memorial-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/992113143",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. This point is reused exactly for historical capital reporting context, not historical asset positioning.",
+        "location_precision": "Representative current facility point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.6511776,
+          55.2597004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "capital-context-gateway",
+        "name": "Gateway Lodge",
+        "site": "1488 20th Avenue",
+        "city": "Prince George",
+        "province": "BC",
+        "site_grain": "Reporting-site address parcel",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/long-term-care/gateway-lodge-long-term-care",
+        "coordinate_source_url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=1488+20th+Avenue+Prince+George+BC&maxResults=1",
+        "location_note": "July 2015 operator directory and current operator page agree on the long-term-care address. The adjacent assisted-living address 1462 is not substituted. A named OSM campus has a conflicting street-address tag, so its centroid is not selected. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+        "location_precision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+        "source_period": "Original report period(s); operator address corroboration noted",
+        "historical_source_url": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/long-term-care-by-community.pdf#page=2",
+        "coordinate_base_data_date": "2026-07-07T20:10:43Z",
+        "coordinate_query_date": "2026-10-12T22:14:06",
+        "coordinate_license_url": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7534096,
+          53.905646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "capital-context-houston",
+        "name": "Houston Health Centre",
+        "site": "3202 14th Street West",
+        "city": "Houston",
+        "province": "BC",
+        "site_grain": "Reporting-site address parcel",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/health-units/houston-health-centre",
+        "coordinate_source_url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=3202+14th+Street+Houston+BC&maxResults=1",
+        "location_note": "January 2022 operator directory and current operator page agree on 3202 14th Street. The BC geocoder resolves the official West street-name alias with CIVIC_NUMBER precision and score 99. Street-only Nominatim candidates were rejected. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+        "location_precision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+        "source_period": "Original report period(s); operator address corroboration noted",
+        "historical_source_url": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/health-offices-by-community.pdf#page=2",
+        "coordinate_base_data_date": "2026-07-07T20:10:43Z",
+        "coordinate_query_date": "2026-10-12T22:14:08",
+        "coordinate_license_url": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.6524369,
+          54.3961409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "capital-context-rotary",
+        "name": "Rotary Manor",
+        "site": "1121 90th Avenue",
+        "city": "Dawson Creek",
+        "province": "BC",
+        "site_grain": "Reporting-site address parcel",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/long-term-care/rotary-manor",
+        "coordinate_source_url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=1121+90th+Avenue+Dawson+Creek+BC&maxResults=1",
+        "location_note": "July 2015 operator directory and current operator page agree on 1121 90th Avenue. This parcel reference is separate from Northview at 1125 and does not assert a particular wing or equipment location. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+        "location_precision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+        "source_period": "Original report period(s); operator address corroboration noted",
+        "historical_source_url": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/long-term-care-by-community.pdf#page=1",
+        "coordinate_base_data_date": "2026-07-07T20:10:43Z",
+        "coordinate_query_date": "2026-10-12T22:14:09",
+        "coordinate_license_url": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.2357358,
+          55.77296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "capital-context-tumbler",
+        "name": "Tumbler Ridge Health Centre",
+        "site": "220 Front Street",
+        "city": "Tumbler Ridge",
+        "province": "BC",
+        "site_grain": "Reporting-site address parcel",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/health-units/tumbler-ridge-health-centre",
+        "coordinate_source_url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=220+Front+Street+Tumbler+Ridge+BC&maxResults=1",
+        "location_note": "The operator historical health-information directory (PDF metadata created December 2021) and current health-centre page identify 220 Front Street. OSM calls a building at this shared address Primary Care Clinic; no service-to-building allocation is inferred. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+        "location_precision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+        "source_period": "Original report period(s); operator address corroboration noted",
+        "historical_source_url": "https://www.northernhealth.ca/sites/northern_health/files/services/digital-health/documents/nh-healthelife-health-info-by-city.pdf#page=4",
+        "coordinate_base_data_date": "2026-07-07T20:10:43Z",
+        "coordinate_query_date": "2026-10-12T22:14:11",
+        "coordinate_license_url": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.0001636,
+          55.1244002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "capital-context-stikine-historical",
+        "name": "Stikine Regional Health Centre",
+        "site": "7171 Highway 37",
+        "city": "Dease Lake",
+        "province": "BC",
+        "site_grain": "Historical address parcel",
+        "source_url": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/health-offices-by-community.pdf",
+        "coordinate_source_url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=7171+Highway+37+Dease+Lake+BC&maxResults=1",
+        "location_note": "The January 2022 operator directory identifies Stikine Health Centre at 7171 Highway 37. The BC geocoder resolves that highway alias to 7171 Stikine Health Ctr, with CIVIC_NUMBER precision and score 100. The current operator page instead says 48875 Highway 37; its BLOCK-only result is rejected. The point retains the original-period address parcel and does not claim that addresses are interchangeable. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+        "location_precision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+        "source_period": "Original report period(s); operator address corroboration noted",
+        "historical_source_url": "https://www.northernhealth.ca/sites/northern_health/files/services/home-community-care/documents/health-offices-by-community.pdf#page=1",
+        "coordinate_base_data_date": "2026-07-07T20:10:43Z",
+        "coordinate_query_date": "2026-10-12T22:15:40",
+        "coordinate_license_url": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -129.9920508,
+          58.4417797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "capital-context-mills-historical",
+        "name": "Mills Memorial Hospital — historical address parcel",
+        "site": "4720 Haugland Avenue",
+        "city": "Terrace",
+        "province": "BC",
+        "site_grain": "Historical address parcel",
+        "source_url": "https://www.northernhealth.ca/sites/northern_health/files/services/digital-health/documents/nh-healthelife-health-info-by-city.pdf",
+        "coordinate_source_url": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=4720+Haugland+Avenue+Terrace+BC&maxResults=1",
+        "location_note": "The operator health-information directory, whose PDF metadata was created December 2021, identifies Mills Memorial Hospital at 4720 Haugland Avenue. This is an original-address parcel reference for the 2020–2022 equipment rows only. It is not the demolished hospital building centroid, the present Ksyen building, an equipment position or the replacement-project site. The parcel point is a current geocoder representation of the historical address, not historical parcel geometry. The reference gives reporting context only; it does not locate historical equipment or establish completion, current service availability or clinical capacity.",
+        "location_precision": "CIVIC_NUMBER parcelPoint; representative address parcel, not a building centroid",
+        "source_period": "2020-2022 only",
+        "historical_source_url": "https://www.northernhealth.ca/sites/northern_health/files/services/digital-health/documents/nh-healthelife-health-info-by-city.pdf#page=4",
+        "coordinate_base_data_date": "2026-07-07T20:10:43Z",
+        "coordinate_query_date": "2026-10-12T22:15:40",
+        "coordinate_license_url": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.5961926,
+          54.5113996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "facility-followup-vgh-blackmore",
+        "name": "Vancouver General Hospital — Leon Judah Blackmore Pavilion",
+        "site": "855 West 12th Avenue",
+        "city": "Vancouver",
+        "province": "BC",
+        "site_grain": "Named building on Vancouver General Hospital campus",
+        "source_url": "https://www.vch.ca/sites/default/files/2025-08/vgh-maps-and-directory-tc.pdf",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/88316966",
+        "location_note": "Operator campus plan names Blackmore Pavilion at 855 West 12th Avenue and locates it beside Jim Pattison. The named OSM building-centre point is used. Its address tag 818 West 10th Avenue conflicts with the operator; that address is not adopted or used as an alias. The point is a representative building location, not an entrance or additional independent hospital.",
+        "location_precision": "Representative named building/campus point",
+        "source_location_id": "17649184"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1229419,
+          49.2611648
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "facility-followup-vgh-banfield",
+        "name": "Vancouver General Hospital — Banfield Pavilion",
+        "site": "2785 Ash Street",
+        "city": "Vancouver",
+        "province": "BC",
+        "site_grain": "Named long-term-care building on Vancouver General Hospital campus",
+        "source_url": "https://www.vch.ca/en/vancouver-general-hospital-vgh/banfield-pavilion",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/88316962",
+        "location_note": "Operator names Banfield Pavilion at 2785 Ash Street and identifies it as long-term care on the VGH campus. The returned named OSM building at the same address provides the representative centre point. It is not an additional independent acute hospital.",
+        "location_precision": "Representative named building/campus point",
+        "source_location_id": "17649018"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1184615,
+          49.2611517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "facility-followup-vgh-diamond",
+        "name": "Vancouver General Hospital — Gordon and Leslie Diamond Health Care Centre",
+        "site": "2775 Laurel Street",
+        "city": "Vancouver",
+        "province": "BC",
+        "site_grain": "Named outpatient building beside Vancouver General Hospital campus",
+        "source_url": "https://www.vch.ca/sites/default/files/2025-08/vgh-maps-and-directory-tc.pdf",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/88316995",
+        "location_note": "Operator campus plan and published clinical-location address confirm 2775 Laurel Street. Returned named OSM building at that address supplies the representative point. Outpatient building presence does not establish beds or service capacity.",
+        "location_precision": "Representative named building/campus point",
+        "source_location_id": "17648972"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1260002,
+          49.2611461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "facility-followup-vgh-willow",
+        "name": "Vancouver General Hospital — Willow Pavilion",
+        "site": "805 West 12th Avenue",
+        "city": "Vancouver",
+        "province": "BC",
+        "site_grain": "Named building on Vancouver General Hospital campus",
+        "source_url": "https://www.vch.ca/sites/default/files/2025-08/vgh-maps-and-directory-tc.pdf",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/88316968",
+        "location_note": "Operator campus plan confirms Willow Pavilion at 805 West 12th Avenue; the named OSM building provides a representative centre point. The map does not identify individual wards, entrances, service availability or an independent hospital.",
+        "location_precision": "Representative named building/campus point",
+        "source_location_id": "17650165"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.122311,
+          49.2610005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "facility-followup-ubc-detwiller",
+        "name": "UBC Hospital — Detwiller Pavilion",
+        "site": "2255 Wesbrook Mall",
+        "city": "Vancouver",
+        "province": "BC",
+        "site_grain": "Named building on UBC Hospital campus",
+        "source_url": "https://www.vch.ca/sites/default/files/2023-11/UBC-Hospital-Site-map.pdf",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/99136522",
+        "location_note": "Operator campus plan distinguishes Detwiller at 2255 Wesbrook Mall from Koerner and Purdy. Returned named OSM building gives the representative centre point. The original directory point is near another part of the campus and is not reused for this separate building.",
+        "location_precision": "Representative named building/campus point",
+        "source_location_id": "17649316"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.2441555,
+          49.2635731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "facility-followup-ubc-purdy",
+        "name": "UBC Hospital — Purdy Pavilion",
+        "site": "2221 Wesbrook Mall",
+        "city": "Vancouver",
+        "province": "BC",
+        "site_grain": "Named building on UBC Hospital campus",
+        "source_url": "https://www.vch.ca/sites/default/files/2023-11/UBC-Hospital-Site-map.pdf",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/99136523",
+        "location_note": "Operator campus plan distinguishes Purdy at 2221 Wesbrook Mall from Koerner and Detwiller. Returned named OSM building gives the representative centre point. Source directory coordinates are not treated as a shared building point or artificially separated.",
+        "location_precision": "Representative named building/campus point",
+        "source_location_id": "17649076"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.2458694,
+          49.2632866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "facility-followup-whitehorse-general",
+        "name": "Whitehorse General Hospital",
+        "site": "5 Hospital Road",
+        "city": "Whitehorse",
+        "province": "YT",
+        "site_grain": "Hospital campus, represented at the main hospital building",
+        "source_url": "https://yukon.ca/en/places/whitehorse-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/239353105",
+        "location_note": "Yukon government and operator confirm 5 Hospital Road. OSM returns two named buildings on the same hospital campus; one representative main-building point is used, not two hospitals. Original source province YT is retained despite the BC filename. This is a directory location, not a service-area allocation.",
+        "location_precision": "Representative named building/campus point",
+        "source_location_id": "58358925"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -135.0437694,
+          60.7181137
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "facility-followup-holy-family",
+        "name": "Holy Family Hospital",
+        "site": "7801 Argyle Street",
+        "city": "Vancouver",
+        "province": "BC",
+        "site_grain": "Hospital and rehabilitation campus",
+        "source_url": "https://www.vch.ca/en/location/holy-family-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/node/8583937606",
+        "location_note": "Health authority location page and Providence operator publications confirm 7801 Argyle Street in Vancouver. Returned named OSM node at that address provides a representative location. This is the Vancouver site, not same-named hospitals elsewhere.",
+        "location_precision": "Representative named building/campus point",
+        "source_location_id": "17654610"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0730841,
+          49.2128237
+        ]
+      }
+    }
+  ]
+}

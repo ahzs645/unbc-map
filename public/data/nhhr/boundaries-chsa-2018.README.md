@@ -1,0 +1,13 @@
+# Northern CHSA display boundaries · version 2018
+
+These 40 Northern context polygons retain the 2018 Community Health Service Area configuration attributed to the BC Ministry of Health (April 2019). The measurements cover 29 publicly listed Northern CHSAs; unlisted or unreleased areas have no assigned health values.
+
+Geometry was retrieved on 12 October 2026 from the [Community Map of Canada ArcGIS mirror](https://services1.arcgis.com/B6yKvIZqzuOr0jBR/arcgis/rest/services/BC_Community_Health_Service_Areas/FeatureServer/0), item `8e08f4f3c0974c31a3fc28e4cb8d1a75`, owner `kpetrasek_exchange`. The item attributes the geometry to BC Ministry of Health and links the [Open Government Licence — British Columbia](https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61). Its scope is mapping and visualization only; do not use this display file for spatial analysis.
+
+The historical official DataBC ZIP returned HTTP 404. The current official catalogue provides 2022 geometry. This release does not claim a fresh verified official ZIP, and it does not attach 2018 rates to PGMaps current equal-numbered polygons. For example, `5246` retains McBride/Valemount as one historical area; a later `5248` Valemount polygon is not added or allocated a fraction of that source rate.
+
+All 29 public source names and identifiers match the archived geometry exactly, with native LHA/HSDA/HA hierarchy. PHSA profile introductions explicitly name boundary version 2018. The archived areas for Prince George City–Central and McBride/Valemount agree with the primary profiles’ rounded descriptions, and their source map images retain the same historical extents.
+
+The entire adjacent Northern layer was simplified together in BC Albers (EPSG:3005), using Mapshaper 0.6.113 shared topology, Douglas–Peucker interval 50 m, shape preservation and topology cleaning. The browser file is WGS84 (EPSG:4326), rounded to six decimal places. Forty valid polygons remain, with no overlap pairs above 0.01 m²; maximum area change is 0.3074%. The display contains 75 shared-boundary pairs. These are geometry quality checks, with no health-rate weighting or case-count inference.
+
+The raw source geometry, byte hashes, query, source-era verification, validation receipt and limitations are documented in [CHSA provenance](chsa-connections-provenance.json). Native codes are listed in [the boundary index](chsa-boundary-index.json). Reproduction uses `scripts/prepare-nhhr-chsa-connections.py --input <private-review-directory> --check`; refresh retrieves public PHSA measurements and the separately attributed archived mirror, then validates pinned source hashes and display output.

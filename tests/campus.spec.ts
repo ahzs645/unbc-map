@@ -68,7 +68,7 @@ test("production assets and campus geography load from the Pages subpath", async
 test("filters synchronize search results and map markers, with an empty state", async ({
   page,
 }, testInfo) => {
-  await page.goto("./");
+  await page.goto("./campus");
   if (testInfo.project.name === "mobile")
     await page.getByRole("button", { name: "Show panel" }).click();
   await page.getByRole("button", { name: "Getting here", exact: true }).click();
@@ -94,7 +94,7 @@ test("filters synchronize search results and map markers, with an empty state", 
 test("selected places survive reloads, styles switch, and home clears selection", async ({
   page,
 }, testInfo) => {
-  await page.goto("./#place=library");
+  await page.goto("./campus#place=library");
   await expect(
     page.getByRole("article", { name: "About Geoffrey R. Weller Library" }),
   ).toBeVisible();
@@ -136,7 +136,7 @@ test("selected places survive reloads, styles switch, and home clears selection"
 test("source notes open accessibly and close with Escape", async ({
   page,
 }, testInfo) => {
-  await page.goto("./");
+  await page.goto("./campus");
   if (testInfo.project.name === "mobile")
     await page.getByRole("button", { name: "Menu", exact: true }).click();
   await page.getByRole("link", { name: "About this map" }).first().click();
@@ -152,17 +152,17 @@ test("source notes open accessibly and close with Escape", async ({
 test("UNBC Chrome header and footer render, and header search opens a place", async ({
   page,
 }, testInfo) => {
-  await page.goto("./");
+  await page.goto("./campus");
   const logo = page.locator(".unbc-logo--header");
   await expect(logo).toBeVisible();
   await expect(logo).toHaveAttribute(
     "aria-label",
-    "University of Northern British Columbia Northern Analytical Laboratory Services",
+    "University of Northern British Columbia Northern Hub for Health Research",
   );
   // The department line wraps exactly as the UNBC logo kit locks it.
   await expect(logo.locator("text")).toHaveText([
-    "Northern Analytical",
-    "Laboratory Services",
+    "Northern Hub for",
+    "Health Research",
   ]);
   await expect(page.locator(".unbc-footer__land")).toContainText(
     "traditional territories",
@@ -203,7 +203,7 @@ test("UNBC Chrome header and footer render, and header search opens a place", as
   await search.fill("mccaffray");
   await search.press("Enter");
   await expect(page).toHaveURL(/#place=/);
-  await expect(page).toHaveURL(/unbc-map\//);
+  await expect(page).toHaveURL(/\/campus/);
   await expect(toggle).toHaveAttribute("aria-expanded", "false");
 
   if (testInfo.project.name === "mobile") {

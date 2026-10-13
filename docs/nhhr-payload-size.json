@@ -1,0 +1,203 @@
+{
+  "measuredAt": "2026-10-12",
+  "explorerViews": 71,
+  "loadedRows": 10382,
+  "snapshotBytes": 10244718,
+  "snapshotGzipBytes": 321092,
+  "geometryBytes": 19504891,
+  "geometryGzipBytes": 4662820,
+  "nhhrPublicBytes": 39396687,
+  "buildBytes": 51876383,
+  "bundles": [
+    {
+      "file": "dist/assets/App-BZx3FMFv.js",
+      "bytes": 96182,
+      "gzipBytes": 29712
+    },
+    {
+      "file": "dist/assets/index-lRFAapEz.js",
+      "bytes": 9126462,
+      "gzipBytes": 756285
+    }
+  ],
+  "snapshots": [
+    {
+      "file": "public/data/nhhr/atlas-snapshot.json",
+      "bytes": 119410,
+      "gzipBytes": 18117
+    },
+    {
+      "file": "public/data/nhhr/additional-evidence.json",
+      "bytes": 78155,
+      "gzipBytes": 6475
+    },
+    {
+      "file": "public/data/nhhr/population-ages.json",
+      "bytes": 39162,
+      "gzipBytes": 4706
+    },
+    {
+      "file": "public/data/nhhr/research-income.json",
+      "bytes": 12989,
+      "gzipBytes": 2274
+    },
+    {
+      "file": "public/data/nhhr/nursing-workforce.json",
+      "bytes": 68555,
+      "gzipBytes": 4831
+    },
+    {
+      "file": "public/data/nhhr/trial-sites.json",
+      "bytes": 27290,
+      "gzipBytes": 4088
+    },
+    {
+      "file": "public/data/nhhr/hospital-facilities.json",
+      "bytes": 436731,
+      "gzipBytes": 17063
+    },
+    {
+      "file": "public/data/nhhr/travel-network.json",
+      "bytes": 321506,
+      "gzipBytes": 14900
+    },
+    {
+      "file": "public/data/nhhr/clinical-condition-mix.json",
+      "bytes": 35658,
+      "gzipBytes": 3773
+    },
+    {
+      "file": "public/data/nhhr/trial-facility-conditions.json",
+      "bytes": 87677,
+      "gzipBytes": 7767
+    },
+    {
+      "file": "public/data/nhhr/public-expansion.json",
+      "bytes": 586124,
+      "gzipBytes": 29849
+    },
+    {
+      "file": "public/data/nhhr/research-expansion.json",
+      "bytes": 113437,
+      "gzipBytes": 10940
+    },
+    {
+      "file": "public/data/nhhr/regional-expansion.json",
+      "bytes": 474763,
+      "gzipBytes": 28695
+    },
+    {
+      "file": "public/data/nhhr/service-expansion.json",
+      "bytes": 189090,
+      "gzipBytes": 15486
+    },
+    {
+      "file": "public/data/nhhr/research-followup.json",
+      "bytes": 142901,
+      "gzipBytes": 12685
+    },
+    {
+      "file": "public/data/nhhr/community-followup.json",
+      "bytes": 1017240,
+      "gzipBytes": 29286
+    },
+    {
+      "file": "public/data/nhhr/facility-followup.json",
+      "bytes": 148216,
+      "gzipBytes": 13670
+    },
+    {
+      "file": "public/data/nhhr/chsa-connections.json",
+      "bytes": 6345814,
+      "gzipBytes": 96487
+    }
+  ],
+  "geometry": [
+    {
+      "file": "public/data/nhhr/boundaries-cd.geojson",
+      "bytes": 3630785,
+      "gzipBytes": 1128940
+    },
+    {
+      "file": "public/data/nhhr/boundaries-er.geojson",
+      "bytes": 411405,
+      "gzipBytes": 153830
+    },
+    {
+      "file": "public/data/nhhr/boundaries-lfs-er-2021.geojson",
+      "bytes": 1127565,
+      "gzipBytes": 154693
+    },
+    {
+      "file": "public/data/nhhr/boundaries-hr2015.geojson",
+      "bytes": 1333421,
+      "gzipBytes": 234614
+    },
+    {
+      "file": "public/data/nhhr/boundaries-csd.geojson",
+      "bytes": 28036,
+      "gzipBytes": 9027
+    },
+    {
+      "file": "public/data/nhhr/boundaries-hsda.geojson",
+      "bytes": 2306170,
+      "gzipBytes": 740274
+    },
+    {
+      "file": "public/data/nhhr/locations-clinical-cities.geojson",
+      "bytes": 8003,
+      "gzipBytes": 1813
+    },
+    {
+      "file": "public/data/nhhr/locations-trial-sites.geojson",
+      "bytes": 3396,
+      "gzipBytes": 1147
+    },
+    {
+      "file": "public/data/nhhr/travel-route-connections.geojson",
+      "bytes": 53536,
+      "gzipBytes": 4031
+    },
+    {
+      "file": "public/data/nhhr/locations-travel-stops.geojson",
+      "bytes": 84212,
+      "gzipBytes": 4959
+    },
+    {
+      "file": "public/data/nhhr/locations-hospitals.geojson",
+      "bytes": 81546,
+      "gzipBytes": 7920
+    },
+    {
+      "file": "public/data/nhhr/boundaries-lha.geojson",
+      "bytes": 3912805,
+      "gzipBytes": 1215540
+    },
+    {
+      "file": "public/data/nhhr/boundaries-chsa-2018.geojson",
+      "bytes": 4886155,
+      "gzipBytes": 485839
+    },
+    {
+      "file": "public/data/nhhr/locations-facility-followup.geojson",
+      "bytes": 31839,
+      "gzipBytes": 4416
+    },
+    {
+      "file": "public/data/nhhr/locations-institutions.geojson",
+      "bytes": 7274,
+      "gzipBytes": 1746
+    },
+    {
+      "file": "public/data/nhhr/locations-comparator-trial-sites.geojson",
+      "bytes": 27320,
+      "gzipBytes": 4082
+    },
+    {
+      "file": "public/data/nhhr/boundaries-ha.geojson",
+      "bytes": 1571423,
+      "gzipBytes": 509949
+    }
+  ],
+  "scope": "Current published extracts, display geometry and optional production build. Raw/private source caches are excluded. Bytes use decimal units. Gzip bytes are computed examples, not an observed server transfer. The build also includes fonts and campus assets; map geometry is requested on demand. Snapshot JSON is currently bundled in the initial app script and also supplied as downloadable files."
+}

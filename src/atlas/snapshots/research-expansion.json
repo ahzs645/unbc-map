@@ -1,0 +1,2826 @@
+{
+  "datasets": [
+    {
+      "id": "cfi-projects-by-year",
+      "title": "CFI infrastructure decisions by institution and year",
+      "description": "Recorded lead-institution project rows and contributions, with the publisher medical/health/life-sciences subset.",
+      "topic": "Research context",
+      "geography": "institution",
+      "status": "observed",
+      "timeLabel": "Decision years 1998–2025 · workbook dated 13 March 2026",
+      "sourceName": "CFI infrastructure decisions by institution and year",
+      "sourceUrl": "https://www.innovation.ca/projects-results/funded-projects-dashboard",
+      "datasetId": "48f45689-ac76-4d21-927a-c07f55936d5c",
+      "tableName": "nhhr_data_c039_76ba4aac51b4_zip_data_c039_cfi_fu",
+      "notes": [
+        "Source is the complete collected CFI funded-project workbook dated 13 March 2026: 14,038 source rows plus one header. Only exact lead-institution matches enter these seven comparator extracts; collaborators are not assigned a share of the lead contribution.",
+        "CFI contribution is the recorded infrastructure contribution, grouped by decision year. It is not total project cost, annual cash paid, institutional research income or an NHHR benefit. Values are nominal Canadian dollars; the source workbook has no separate currency field, and CFI Canadian-dollar reporting context is documented in the cited policy guide.",
+        "Project records count original source rows. The workbook supplies no stable project-ID column; no assertion of unique underlying grants is made, and similarly named records are not collapsed or silently deduplicated.",
+        "The medical subset uses the publisher exact division label Medical, health and life sciences. It includes life sciences and is not an independently adjudicated clinical/health-only portfolio.",
+        "Unobserved institution/year combinations are not synthesized as zero rows. No NOSM lead-institution record is added. All seven source institutions, including McMaster, have reviewed representative campus points. These points do not locate individual projects or equipment.",
+        "Reviewed campus points locate whole-institution records for context. No amount, work count or infrastructure project is allocated to that campus, nearby residents, a health area, a future NHHR building or a specific facility."
+      ],
+      "columns": [
+        {
+          "key": "comparator",
+          "label": "Institution / city",
+          "type": "text"
+        },
+        {
+          "key": "source_lead_institution",
+          "label": "Source lead institution",
+          "type": "text"
+        },
+        {
+          "key": "decision_year",
+          "label": "Decision year",
+          "type": "text"
+        },
+        {
+          "key": "project_records",
+          "label": "Source project records",
+          "type": "number",
+          "unit": "records"
+        },
+        {
+          "key": "cfi_contribution_cad",
+          "label": "CFI infrastructure contribution",
+          "type": "number",
+          "unit": "CAD"
+        },
+        {
+          "key": "medical_health_life_project_records",
+          "label": "Medical, health and life sciences project records",
+          "type": "number",
+          "unit": "records"
+        },
+        {
+          "key": "medical_health_life_contribution_cad",
+          "label": "Medical, health and life sciences contribution",
+          "type": "number",
+          "unit": "CAD"
+        }
+      ],
+      "rows": [
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "1998",
+          "project_records": 6,
+          "cfi_contribution_cad": 949174,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 336454
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "1999",
+          "project_records": 10,
+          "cfi_contribution_cad": 3896787,
+          "medical_health_life_project_records": 6,
+          "medical_health_life_contribution_cad": 376243
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2000",
+          "project_records": 11,
+          "cfi_contribution_cad": 5936981,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 221280
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2001",
+          "project_records": 11,
+          "cfi_contribution_cad": 1646811,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 834434
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2002",
+          "project_records": 22,
+          "cfi_contribution_cad": 4684668,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 376881
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2003",
+          "project_records": 25,
+          "cfi_contribution_cad": 4264698,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 455684
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2004",
+          "project_records": 17,
+          "cfi_contribution_cad": 5988981,
+          "medical_health_life_project_records": 6,
+          "medical_health_life_contribution_cad": 4322068
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2005",
+          "project_records": 14,
+          "cfi_contribution_cad": 2394845,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 1151742
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2006",
+          "project_records": 21,
+          "cfi_contribution_cad": 8239413,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 6063272
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2007",
+          "project_records": 23,
+          "cfi_contribution_cad": 37831611,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 621209
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2008",
+          "project_records": 8,
+          "cfi_contribution_cad": 1007942,
+          "medical_health_life_project_records": 4,
+          "medical_health_life_contribution_cad": 525163
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2009",
+          "project_records": 7,
+          "cfi_contribution_cad": 1412979,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 123372
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2010",
+          "project_records": 16,
+          "cfi_contribution_cad": 1921686,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 587994
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2011",
+          "project_records": 10,
+          "cfi_contribution_cad": 3420684,
+          "medical_health_life_project_records": 4,
+          "medical_health_life_contribution_cad": 499870
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2012",
+          "project_records": 7,
+          "cfi_contribution_cad": 872854,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 249059
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2013",
+          "project_records": 13,
+          "cfi_contribution_cad": 2283167,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 616242
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2014",
+          "project_records": 13,
+          "cfi_contribution_cad": 2169395,
+          "medical_health_life_project_records": 7,
+          "medical_health_life_contribution_cad": 859863
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2015",
+          "project_records": 9,
+          "cfi_contribution_cad": 1073431,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 356839
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2016",
+          "project_records": 15,
+          "cfi_contribution_cad": 30346500,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 125000
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2017",
+          "project_records": 10,
+          "cfi_contribution_cad": 7145175,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 82563
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2018",
+          "project_records": 7,
+          "cfi_contribution_cad": 733818,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 121438
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2019",
+          "project_records": 15,
+          "cfi_contribution_cad": 2682990,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 628394
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2020",
+          "project_records": 16,
+          "cfi_contribution_cad": 16165468,
+          "medical_health_life_project_records": 4,
+          "medical_health_life_contribution_cad": 3725247
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2021",
+          "project_records": 15,
+          "cfi_contribution_cad": 2466189,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 375334
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2022",
+          "project_records": 9,
+          "cfi_contribution_cad": 40229404,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 250000
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2023",
+          "project_records": 21,
+          "cfi_contribution_cad": 12808644,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 555003
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2024",
+          "project_records": 5,
+          "cfi_contribution_cad": 771395,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 525000
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "decision_year": "2025",
+          "project_records": 17,
+          "cfi_contribution_cad": 9011690,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 163749
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "1998",
+          "project_records": 4,
+          "cfi_contribution_cad": 446559,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "1999",
+          "project_records": 10,
+          "cfi_contribution_cad": 1380117,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2001",
+          "project_records": 5,
+          "cfi_contribution_cad": 692607,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2002",
+          "project_records": 2,
+          "cfi_contribution_cad": 146108,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 71108
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2003",
+          "project_records": 4,
+          "cfi_contribution_cad": 316549,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2004",
+          "project_records": 4,
+          "cfi_contribution_cad": 2730290,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 2000101
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2005",
+          "project_records": 5,
+          "cfi_contribution_cad": 505574,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2006",
+          "project_records": 2,
+          "cfi_contribution_cad": 206769,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2007",
+          "project_records": 2,
+          "cfi_contribution_cad": 179026,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2008",
+          "project_records": 2,
+          "cfi_contribution_cad": 314830,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2009",
+          "project_records": 1,
+          "cfi_contribution_cad": 171621,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 171621
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2010",
+          "project_records": 2,
+          "cfi_contribution_cad": 337811,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2011",
+          "project_records": 2,
+          "cfi_contribution_cad": 306451,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2012",
+          "project_records": 2,
+          "cfi_contribution_cad": 229269,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2013",
+          "project_records": 2,
+          "cfi_contribution_cad": 157607,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2014",
+          "project_records": 4,
+          "cfi_contribution_cad": 386753,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2015",
+          "project_records": 1,
+          "cfi_contribution_cad": 59539,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2016",
+          "project_records": 2,
+          "cfi_contribution_cad": 92042,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2017",
+          "project_records": 2,
+          "cfi_contribution_cad": 207114,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2018",
+          "project_records": 1,
+          "cfi_contribution_cad": 515535,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2019",
+          "project_records": 2,
+          "cfi_contribution_cad": 140707,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2020",
+          "project_records": 3,
+          "cfi_contribution_cad": 294141,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2021",
+          "project_records": 3,
+          "cfi_contribution_cad": 251784,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 49033
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2023",
+          "project_records": 6,
+          "cfi_contribution_cad": 811056,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2024",
+          "project_records": 1,
+          "cfi_contribution_cad": 39019,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "decision_year": "2025",
+          "project_records": 1,
+          "cfi_contribution_cad": 176000,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "1998",
+          "project_records": 9,
+          "cfi_contribution_cad": 1241712,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 534639
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "1999",
+          "project_records": 11,
+          "cfi_contribution_cad": 12241384,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 4185030
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2000",
+          "project_records": 16,
+          "cfi_contribution_cad": 19970969,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 1057411
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2001",
+          "project_records": 33,
+          "cfi_contribution_cad": 6298155,
+          "medical_health_life_project_records": 9,
+          "medical_health_life_contribution_cad": 1305787
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2002",
+          "project_records": 34,
+          "cfi_contribution_cad": 27680108,
+          "medical_health_life_project_records": 7,
+          "medical_health_life_contribution_cad": 1137569
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2003",
+          "project_records": 28,
+          "cfi_contribution_cad": 4902359,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 955638
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2004",
+          "project_records": 31,
+          "cfi_contribution_cad": 15773607,
+          "medical_health_life_project_records": 4,
+          "medical_health_life_contribution_cad": 388037
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2005",
+          "project_records": 8,
+          "cfi_contribution_cad": 815510,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 266892
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2006",
+          "project_records": 17,
+          "cfi_contribution_cad": 19068996,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 2187176
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2007",
+          "project_records": 12,
+          "cfi_contribution_cad": 2027878,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 410927
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2008",
+          "project_records": 14,
+          "cfi_contribution_cad": 2821662,
+          "medical_health_life_project_records": 6,
+          "medical_health_life_contribution_cad": 1668310
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2009",
+          "project_records": 20,
+          "cfi_contribution_cad": 38303102,
+          "medical_health_life_project_records": 7,
+          "medical_health_life_contribution_cad": 13837594
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2010",
+          "project_records": 10,
+          "cfi_contribution_cad": 3135351,
+          "medical_health_life_project_records": 4,
+          "medical_health_life_contribution_cad": 854380
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2011",
+          "project_records": 16,
+          "cfi_contribution_cad": 5199772,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 2240095
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2012",
+          "project_records": 16,
+          "cfi_contribution_cad": 6231018,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 831040
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2013",
+          "project_records": 21,
+          "cfi_contribution_cad": 3767414,
+          "medical_health_life_project_records": 6,
+          "medical_health_life_contribution_cad": 1229204
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2014",
+          "project_records": 20,
+          "cfi_contribution_cad": 4433213,
+          "medical_health_life_project_records": 6,
+          "medical_health_life_contribution_cad": 873658
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2015",
+          "project_records": 15,
+          "cfi_contribution_cad": 4832398,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 300000
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2016",
+          "project_records": 13,
+          "cfi_contribution_cad": 16050777,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 256145
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2017",
+          "project_records": 9,
+          "cfi_contribution_cad": 11607799,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 800000
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2018",
+          "project_records": 13,
+          "cfi_contribution_cad": 2484514,
+          "medical_health_life_project_records": 6,
+          "medical_health_life_contribution_cad": 1314514
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2019",
+          "project_records": 10,
+          "cfi_contribution_cad": 2903489,
+          "medical_health_life_project_records": 4,
+          "medical_health_life_contribution_cad": 1138195
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2020",
+          "project_records": 20,
+          "cfi_contribution_cad": 42179747,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 10778643
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2021",
+          "project_records": 11,
+          "cfi_contribution_cad": 2596207,
+          "medical_health_life_project_records": 7,
+          "medical_health_life_contribution_cad": 1813414
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2022",
+          "project_records": 10,
+          "cfi_contribution_cad": 28195988,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 502514
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2023",
+          "project_records": 16,
+          "cfi_contribution_cad": 4181781,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 1123628
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2024",
+          "project_records": 11,
+          "cfi_contribution_cad": 3329758,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 978972
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "decision_year": "2025",
+          "project_records": 14,
+          "cfi_contribution_cad": 38972955,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 211754
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "1998",
+          "project_records": 28,
+          "cfi_contribution_cad": 3529460,
+          "medical_health_life_project_records": 10,
+          "medical_health_life_contribution_cad": 1269999
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "1999",
+          "project_records": 10,
+          "cfi_contribution_cad": 20305521,
+          "medical_health_life_project_records": 4,
+          "medical_health_life_contribution_cad": 7967550
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2000",
+          "project_records": 32,
+          "cfi_contribution_cad": 42977595,
+          "medical_health_life_project_records": 12,
+          "medical_health_life_contribution_cad": 14922690
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2001",
+          "project_records": 46,
+          "cfi_contribution_cad": 6492158,
+          "medical_health_life_project_records": 15,
+          "medical_health_life_contribution_cad": 2000821
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2002",
+          "project_records": 51,
+          "cfi_contribution_cad": 80460023,
+          "medical_health_life_project_records": 11,
+          "medical_health_life_contribution_cad": 26319584
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2003",
+          "project_records": 48,
+          "cfi_contribution_cad": 6986725,
+          "medical_health_life_project_records": 11,
+          "medical_health_life_contribution_cad": 1915087
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2004",
+          "project_records": 68,
+          "cfi_contribution_cad": 74996436,
+          "medical_health_life_project_records": 23,
+          "medical_health_life_contribution_cad": 46473619
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2005",
+          "project_records": 29,
+          "cfi_contribution_cad": 2902932,
+          "medical_health_life_project_records": 4,
+          "medical_health_life_contribution_cad": 380438
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2006",
+          "project_records": 41,
+          "cfi_contribution_cad": 30540871,
+          "medical_health_life_project_records": 16,
+          "medical_health_life_contribution_cad": 19350276
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2007",
+          "project_records": 26,
+          "cfi_contribution_cad": 3415816,
+          "medical_health_life_project_records": 7,
+          "medical_health_life_contribution_cad": 859803
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2008",
+          "project_records": 58,
+          "cfi_contribution_cad": 10706880,
+          "medical_health_life_project_records": 15,
+          "medical_health_life_contribution_cad": 1803702
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2009",
+          "project_records": 57,
+          "cfi_contribution_cad": 44268340,
+          "medical_health_life_project_records": 13,
+          "medical_health_life_contribution_cad": 10363494
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2010",
+          "project_records": 36,
+          "cfi_contribution_cad": 5113745,
+          "medical_health_life_project_records": 12,
+          "medical_health_life_contribution_cad": 2098317
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2011",
+          "project_records": 27,
+          "cfi_contribution_cad": 4086914,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 858874
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2012",
+          "project_records": 53,
+          "cfi_contribution_cad": 28453619,
+          "medical_health_life_project_records": 19,
+          "medical_health_life_contribution_cad": 9668762
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2013",
+          "project_records": 34,
+          "cfi_contribution_cad": 3430121,
+          "medical_health_life_project_records": 12,
+          "medical_health_life_contribution_cad": 1272797
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2014",
+          "project_records": 51,
+          "cfi_contribution_cad": 6013248,
+          "medical_health_life_project_records": 21,
+          "medical_health_life_contribution_cad": 2520168
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2015",
+          "project_records": 39,
+          "cfi_contribution_cad": 39207086,
+          "medical_health_life_project_records": 16,
+          "medical_health_life_contribution_cad": 7976786
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2016",
+          "project_records": 47,
+          "cfi_contribution_cad": 7956129,
+          "medical_health_life_project_records": 15,
+          "medical_health_life_contribution_cad": 1932319
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2017",
+          "project_records": 39,
+          "cfi_contribution_cad": 57922279,
+          "medical_health_life_project_records": 11,
+          "medical_health_life_contribution_cad": 32211627
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2018",
+          "project_records": 28,
+          "cfi_contribution_cad": 4794512,
+          "medical_health_life_project_records": 4,
+          "medical_health_life_contribution_cad": 426085
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2019",
+          "project_records": 57,
+          "cfi_contribution_cad": 12673168,
+          "medical_health_life_project_records": 13,
+          "medical_health_life_contribution_cad": 3115904
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2020",
+          "project_records": 49,
+          "cfi_contribution_cad": 38751047,
+          "medical_health_life_project_records": 10,
+          "medical_health_life_contribution_cad": 6205037
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2021",
+          "project_records": 58,
+          "cfi_contribution_cad": 8489516,
+          "medical_health_life_project_records": 18,
+          "medical_health_life_contribution_cad": 2618567
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2022",
+          "project_records": 45,
+          "cfi_contribution_cad": 15116957,
+          "medical_health_life_project_records": 9,
+          "medical_health_life_contribution_cad": 2584240
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2023",
+          "project_records": 45,
+          "cfi_contribution_cad": 43396996,
+          "medical_health_life_project_records": 12,
+          "medical_health_life_contribution_cad": 17146784
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2024",
+          "project_records": 36,
+          "cfi_contribution_cad": 77723912,
+          "medical_health_life_project_records": 8,
+          "medical_health_life_contribution_cad": 43161323
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "decision_year": "2025",
+          "project_records": 42,
+          "cfi_contribution_cad": 56085356,
+          "medical_health_life_project_records": 8,
+          "medical_health_life_contribution_cad": 5005354
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "1998",
+          "project_records": 13,
+          "cfi_contribution_cad": 2835613,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 478500
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "1999",
+          "project_records": 8,
+          "cfi_contribution_cad": 7530291,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 4997897
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2000",
+          "project_records": 16,
+          "cfi_contribution_cad": 6081909,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 3798366
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2001",
+          "project_records": 29,
+          "cfi_contribution_cad": 4188336,
+          "medical_health_life_project_records": 9,
+          "medical_health_life_contribution_cad": 1347723
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2002",
+          "project_records": 35,
+          "cfi_contribution_cad": 34051588,
+          "medical_health_life_project_records": 9,
+          "medical_health_life_contribution_cad": 14279790
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2003",
+          "project_records": 18,
+          "cfi_contribution_cad": 3826844,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 403531
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2004",
+          "project_records": 21,
+          "cfi_contribution_cad": 20759847,
+          "medical_health_life_project_records": 6,
+          "medical_health_life_contribution_cad": 18218218
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2005",
+          "project_records": 19,
+          "cfi_contribution_cad": 4671323,
+          "medical_health_life_project_records": 6,
+          "medical_health_life_contribution_cad": 1109895
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2006",
+          "project_records": 14,
+          "cfi_contribution_cad": 22319569,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 85885
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2007",
+          "project_records": 10,
+          "cfi_contribution_cad": 2195376,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 791312
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2008",
+          "project_records": 11,
+          "cfi_contribution_cad": 3406579,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 751027
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2009",
+          "project_records": 17,
+          "cfi_contribution_cad": 16514316,
+          "medical_health_life_project_records": 6,
+          "medical_health_life_contribution_cad": 2981287
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2010",
+          "project_records": 10,
+          "cfi_contribution_cad": 2518526,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 1390306
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2011",
+          "project_records": 11,
+          "cfi_contribution_cad": 2356033,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 300971
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2012",
+          "project_records": 14,
+          "cfi_contribution_cad": 7880121,
+          "medical_health_life_project_records": 6,
+          "medical_health_life_contribution_cad": 6106512
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2013",
+          "project_records": 17,
+          "cfi_contribution_cad": 3870052,
+          "medical_health_life_project_records": 4,
+          "medical_health_life_contribution_cad": 828026
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2014",
+          "project_records": 17,
+          "cfi_contribution_cad": 3742885,
+          "medical_health_life_project_records": 7,
+          "medical_health_life_contribution_cad": 1617345
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2015",
+          "project_records": 15,
+          "cfi_contribution_cad": 11822708,
+          "medical_health_life_project_records": 4,
+          "medical_health_life_contribution_cad": 800489
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2016",
+          "project_records": 6,
+          "cfi_contribution_cad": 1571792,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 334882
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2017",
+          "project_records": 15,
+          "cfi_contribution_cad": 24256146,
+          "medical_health_life_project_records": 6,
+          "medical_health_life_contribution_cad": 9880474
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2018",
+          "project_records": 13,
+          "cfi_contribution_cad": 5135351,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 420000
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2019",
+          "project_records": 19,
+          "cfi_contribution_cad": 4367107,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 1486308
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2020",
+          "project_records": 15,
+          "cfi_contribution_cad": 21451772,
+          "medical_health_life_project_records": 6,
+          "medical_health_life_contribution_cad": 11628604
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2021",
+          "project_records": 16,
+          "cfi_contribution_cad": 2733137,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 1304098
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2022",
+          "project_records": 22,
+          "cfi_contribution_cad": 13956183,
+          "medical_health_life_project_records": 11,
+          "medical_health_life_contribution_cad": 11860687
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2023",
+          "project_records": 21,
+          "cfi_contribution_cad": 35191421,
+          "medical_health_life_project_records": 8,
+          "medical_health_life_contribution_cad": 17541386
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2024",
+          "project_records": 26,
+          "cfi_contribution_cad": 6409634,
+          "medical_health_life_project_records": 11,
+          "medical_health_life_contribution_cad": 3454211
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "decision_year": "2025",
+          "project_records": 8,
+          "cfi_contribution_cad": 15585623,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 4324113
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "1999",
+          "project_records": 4,
+          "cfi_contribution_cad": 1122046,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2000",
+          "project_records": 1,
+          "cfi_contribution_cad": 164814,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2001",
+          "project_records": 2,
+          "cfi_contribution_cad": 293267,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2002",
+          "project_records": 1,
+          "cfi_contribution_cad": 322837,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2003",
+          "project_records": 4,
+          "cfi_contribution_cad": 492999,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 80878
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2004",
+          "project_records": 4,
+          "cfi_contribution_cad": 1248676,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2005",
+          "project_records": 4,
+          "cfi_contribution_cad": 401009,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 128382
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2009",
+          "project_records": 5,
+          "cfi_contribution_cad": 406162,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 158091
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2010",
+          "project_records": 3,
+          "cfi_contribution_cad": 68979,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2011",
+          "project_records": 2,
+          "cfi_contribution_cad": 125801,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2012",
+          "project_records": 2,
+          "cfi_contribution_cad": 197404,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 76368
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2013",
+          "project_records": 1,
+          "cfi_contribution_cad": 240000,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2014",
+          "project_records": 1,
+          "cfi_contribution_cad": 189964,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2015",
+          "project_records": 1,
+          "cfi_contribution_cad": 389908,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2017",
+          "project_records": 2,
+          "cfi_contribution_cad": 963303,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2020",
+          "project_records": 1,
+          "cfi_contribution_cad": 199630,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2021",
+          "project_records": 4,
+          "cfi_contribution_cad": 396557,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2024",
+          "project_records": 1,
+          "cfi_contribution_cad": 124954,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "decision_year": "2025",
+          "project_records": 2,
+          "cfi_contribution_cad": 194174,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "1998",
+          "project_records": 2,
+          "cfi_contribution_cad": 289128,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "1999",
+          "project_records": 6,
+          "cfi_contribution_cad": 64235186,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 117800
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2000",
+          "project_records": 7,
+          "cfi_contribution_cad": 8698866,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 6663343
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2001",
+          "project_records": 18,
+          "cfi_contribution_cad": 3085347,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 285600
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2002",
+          "project_records": 24,
+          "cfi_contribution_cad": 8585407,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 513038
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2003",
+          "project_records": 19,
+          "cfi_contribution_cad": 1928318,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 209000
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2004",
+          "project_records": 23,
+          "cfi_contribution_cad": 41377886,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 32672596
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2005",
+          "project_records": 10,
+          "cfi_contribution_cad": 1125756,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 68000
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2006",
+          "project_records": 14,
+          "cfi_contribution_cad": 22724532,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2007",
+          "project_records": 15,
+          "cfi_contribution_cad": 968320,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 202865
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2008",
+          "project_records": 17,
+          "cfi_contribution_cad": 1031553,
+          "medical_health_life_project_records": 8,
+          "medical_health_life_contribution_cad": 541126
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2009",
+          "project_records": 24,
+          "cfi_contribution_cad": 2475233,
+          "medical_health_life_project_records": 9,
+          "medical_health_life_contribution_cad": 1003495
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2010",
+          "project_records": 18,
+          "cfi_contribution_cad": 2014223,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 311773
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2011",
+          "project_records": 21,
+          "cfi_contribution_cad": 2668467,
+          "medical_health_life_project_records": 7,
+          "medical_health_life_contribution_cad": 905860
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2012",
+          "project_records": 16,
+          "cfi_contribution_cad": 61403362,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 589500
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2013",
+          "project_records": 18,
+          "cfi_contribution_cad": 3959993,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2014",
+          "project_records": 10,
+          "cfi_contribution_cad": 1863060,
+          "medical_health_life_project_records": 3,
+          "medical_health_life_contribution_cad": 785205
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2015",
+          "project_records": 6,
+          "cfi_contribution_cad": 4453776,
+          "medical_health_life_project_records": 1,
+          "medical_health_life_contribution_cad": 64197
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2016",
+          "project_records": 8,
+          "cfi_contribution_cad": 178561494,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 37698166
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2017",
+          "project_records": 4,
+          "cfi_contribution_cad": 631027,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2018",
+          "project_records": 3,
+          "cfi_contribution_cad": 574119,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2019",
+          "project_records": 11,
+          "cfi_contribution_cad": 1681010,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 282702
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2020",
+          "project_records": 14,
+          "cfi_contribution_cad": 12215106,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 379749
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2021",
+          "project_records": 5,
+          "cfi_contribution_cad": 15665200,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2022",
+          "project_records": 9,
+          "cfi_contribution_cad": 179430788,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 62441371
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2023",
+          "project_records": 5,
+          "cfi_contribution_cad": 19477249,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2024",
+          "project_records": 4,
+          "cfi_contribution_cad": 1947322,
+          "medical_health_life_project_records": 0,
+          "medical_health_life_contribution_cad": 0
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "decision_year": "2025",
+          "project_records": 5,
+          "cfi_contribution_cad": 9989621,
+          "medical_health_life_project_records": 2,
+          "medical_health_life_contribution_cad": 584538
+        }
+      ],
+      "defaultMetric": "cfi_contribution_cad",
+      "entityField": "comparator",
+      "timeField": "decision_year"
+    },
+    {
+      "id": "cfi-projects-total",
+      "title": "Collected CFI lead-institution portfolio totals",
+      "description": "Whole collected infrastructure portfolios, including the publisher medical/health/life-sciences division.",
+      "topic": "Research context",
+      "geography": "institution",
+      "status": "observed",
+      "timeLabel": "Cumulative collected decisions 1998–2025",
+      "sourceName": "Collected CFI lead-institution portfolio totals",
+      "sourceUrl": "https://www.innovation.ca/projects-results/funded-projects-dashboard",
+      "datasetId": "48f45689-ac76-4d21-927a-c07f55936d5c",
+      "tableName": "nhhr_data_c039_76ba4aac51b4_zip_data_c039_cfi_fu",
+      "notes": [
+        "Source is the complete collected CFI funded-project workbook dated 13 March 2026: 14,038 source rows plus one header. Only exact lead-institution matches enter these seven comparator extracts; collaborators are not assigned a share of the lead contribution.",
+        "CFI contribution is the recorded infrastructure contribution, grouped by decision year. It is not total project cost, annual cash paid, institutional research income or an NHHR benefit. Values are nominal Canadian dollars; the source workbook has no separate currency field, and CFI Canadian-dollar reporting context is documented in the cited policy guide.",
+        "Project records count original source rows. The workbook supplies no stable project-ID column; no assertion of unique underlying grants is made, and similarly named records are not collapsed or silently deduplicated.",
+        "The medical subset uses the publisher exact division label Medical, health and life sciences. It includes life sciences and is not an independently adjudicated clinical/health-only portfolio.",
+        "Unobserved institution/year combinations are not synthesized as zero rows. No NOSM lead-institution record is added. All seven source institutions, including McMaster, have reviewed representative campus points. These points do not locate individual projects or equipment.",
+        "Reviewed campus points locate whole-institution records for context. No amount, work count or infrastructure project is allocated to that campus, nearby residents, a health area, a future NHHR building or a specific facility."
+      ],
+      "columns": [
+        {
+          "key": "comparator",
+          "label": "Institution / city",
+          "type": "text"
+        },
+        {
+          "key": "source_lead_institution",
+          "label": "Source lead institution",
+          "type": "text"
+        },
+        {
+          "key": "project_records",
+          "label": "Source project records",
+          "type": "number",
+          "unit": "records"
+        },
+        {
+          "key": "cfi_contribution_cad",
+          "label": "CFI infrastructure contribution",
+          "type": "number",
+          "unit": "CAD"
+        },
+        {
+          "key": "medical_health_life_project_records",
+          "label": "Medical, health and life sciences project records",
+          "type": "number",
+          "unit": "records"
+        },
+        {
+          "key": "medical_health_life_contribution_cad",
+          "label": "Medical, health and life sciences contribution",
+          "type": "number",
+          "unit": "CAD"
+        },
+        {
+          "key": "first_decision_year",
+          "label": "First recorded decision year",
+          "type": "text"
+        },
+        {
+          "key": "latest_decision_year",
+          "label": "Latest recorded decision year",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_lead_institution": "Dalhousie University",
+          "project_records": 373,
+          "cfi_contribution_cad": 212357380,
+          "medical_health_life_project_records": 94,
+          "medical_health_life_contribution_cad": 25129397,
+          "first_decision_year": "1998",
+          "latest_decision_year": "2025"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_lead_institution": "Lakehead University",
+          "project_records": 75,
+          "cfi_contribution_cad": 11094878,
+          "medical_health_life_project_records": 4,
+          "medical_health_life_contribution_cad": 2291863,
+          "first_decision_year": "1998",
+          "latest_decision_year": "2025"
+        },
+        {
+          "comparator": "McMaster / Hamilton",
+          "source_lead_institution": "McMaster University",
+          "project_records": 458,
+          "cfi_contribution_cad": 331247623,
+          "medical_health_life_project_records": 119,
+          "medical_health_life_contribution_cad": 53181166,
+          "first_decision_year": "1998",
+          "latest_decision_year": "2025"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_lead_institution": "The University of British Columbia",
+          "project_records": 1180,
+          "cfi_contribution_cad": 736797362,
+          "medical_health_life_project_records": 334,
+          "medical_health_life_contribution_cad": 272430007,
+          "first_decision_year": "1998",
+          "latest_decision_year": "2025"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_lead_institution": "University of Calgary",
+          "project_records": 456,
+          "cfi_contribution_cad": 291230082,
+          "medical_health_life_project_records": 137,
+          "medical_health_life_contribution_cad": 122521843,
+          "first_decision_year": "1998",
+          "latest_decision_year": "2025"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_lead_institution": "University of Northern British Columbia",
+          "project_records": 45,
+          "cfi_contribution_cad": 7542484,
+          "medical_health_life_project_records": 5,
+          "medical_health_life_contribution_cad": 443719,
+          "first_decision_year": "1999",
+          "latest_decision_year": "2025"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_lead_institution": "University of Saskatchewan",
+          "project_records": 336,
+          "cfi_contribution_cad": 653061349,
+          "medical_health_life_project_records": 60,
+          "medical_health_life_contribution_cad": 146319924,
+          "first_decision_year": "1998",
+          "latest_decision_year": "2025"
+        }
+      ],
+      "defaultMetric": "cfi_contribution_cad",
+      "entityField": "comparator"
+    },
+    {
+      "id": "sshrc-payments",
+      "title": "SSHRC administered payments by institution",
+      "description": "Exact-institution aggregate of recorded source FY2024 payments, keeping source fiscal scope and valid split administration.",
+      "topic": "Research context",
+      "geography": "institution",
+      "status": "observed",
+      "timeLabel": "Source fiscal code 2024 · off-period 2022 rows excluded",
+      "sourceName": "SSHRC administered payments by institution",
+      "sourceUrl": "https://open.canada.ca/data/en/dataset/b4e2b302-9bc6-4b33-b880-6496f8cef0f1",
+      "datasetId": "15e93e14-a3b8-4cfd-9fa1-7bf2a458d3dd",
+      "tableName": "nhhr_data_c057_bd5c39fcfedf_zip_data_c057_sshrc_",
+      "notes": [
+        "SSHRC publisher describes all grants and scholarships/fellowships paid in a fiscal year and the institution where money is administered. These are institutional administered payments, not award commitments, researcher salaries, NHHR income or health-only research.",
+        "The source fiscal code 2024 is retained exactly. The source file also contains 15 rows tagged 2022; they are excluded. Calendar or fiscal start/end dates are not inferred beyond the publisher April 1–March 31 definition.",
+        "Seven source funding files split payments between institutions. Original institution-specific amounts are retained; deduplicating globally by file number would discard valid allocations. No personal applicant fields enter the released aggregate.",
+        "Only six exact reviewed institution names have records in this source slice. No absent NOSM or other comparator is created as a zero.",
+        "Payment records and distinct funding files describe different grains. Nominal source CAD amounts are summed only within one administration institution/source fiscal code; they are not added to award commitments or CAUBO income.",
+        "Reviewed campus points locate whole-institution records for context. No amount, work count or infrastructure project is allocated to that campus, nearby residents, a health area, a future NHHR building or a specific facility."
+      ],
+      "columns": [
+        {
+          "key": "comparator",
+          "label": "Institution / city",
+          "type": "text"
+        },
+        {
+          "key": "source_institution_name",
+          "label": "Source administration institution",
+          "type": "text"
+        },
+        {
+          "key": "source_fiscal_year",
+          "label": "Source fiscal-year code",
+          "type": "text"
+        },
+        {
+          "key": "payment_records",
+          "label": "Source payment records",
+          "type": "number",
+          "unit": "records"
+        },
+        {
+          "key": "distinct_funding_files",
+          "label": "Distinct funding files at institution",
+          "type": "number",
+          "unit": "files"
+        },
+        {
+          "key": "paid_amount_cad",
+          "label": "SSHRC administered payments",
+          "type": "number",
+          "unit": "CAD"
+        }
+      ],
+      "rows": [
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_institution_name": "Dalhousie University",
+          "source_fiscal_year": "2024",
+          "payment_records": 170,
+          "distinct_funding_files": 170,
+          "paid_amount_cad": 26436981.47
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_institution_name": "Lakehead University",
+          "source_fiscal_year": "2024",
+          "payment_records": 50,
+          "distinct_funding_files": 50,
+          "paid_amount_cad": 4947544.65
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_institution_name": "The University of British Columbia",
+          "source_fiscal_year": "2024",
+          "payment_records": 790,
+          "distinct_funding_files": 790,
+          "paid_amount_cad": 94014214
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_institution_name": "University of Calgary",
+          "source_fiscal_year": "2024",
+          "payment_records": 342,
+          "distinct_funding_files": 342,
+          "paid_amount_cad": 42012086.12
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_institution_name": "University of Northern British Columbia",
+          "source_fiscal_year": "2024",
+          "payment_records": 20,
+          "distinct_funding_files": 20,
+          "paid_amount_cad": 3525824.33
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_institution_name": "University of Saskatchewan",
+          "source_fiscal_year": "2024",
+          "payment_records": 140,
+          "distinct_funding_files": 140,
+          "paid_amount_cad": 18301624.98
+        }
+      ],
+      "defaultMetric": "paid_amount_cad",
+      "entityField": "comparator",
+      "timeField": "source_fiscal_year"
+    },
+    {
+      "id": "pubmed-affiliation-counts",
+      "title": "Recorded PubMed affiliation-query matches",
+      "description": "Seven saved affiliation-search counts with exact query definitions and explicit sample/date limitations.",
+      "topic": "Research context",
+      "geography": "institution",
+      "status": "observed",
+      "timeLabel": "Saved all-index affiliation queries · capture date unrecorded",
+      "sourceName": "Recorded PubMed affiliation-query matches",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/",
+      "datasetId": "439beff1-5c30-4965-9ad7-eb074d7a0fe5",
+      "tableName": "nhhr_data_c050_d8e66fe66c4c_zip_data_c050__8; nhhr_data_c050_d8e66fe66c4c_zip_data_c050__9; nhhr_data_c050_d8e66fe66c4c_zip_data_c050__10; nhhr_data_c050_d8e66fe66c4c_zip_data_c050__11; nhhr_data_c050_d8e66fe66c4c_zip_data_c050__12; nhhr_data_c050_d8e66fe66c4c_zip_data_c050__13; nhhr_data_c050_d8e66fe66c4c_zip_data_c050__14",
+      "notes": [
+        "Each value is the count returned by one recorded PubMed affiliation query. Full query definitions are retained. They use different institution names and abbreviation alternatives; counts are query matches, not individually validated institutional publication totals.",
+        "The response includes 20 returned IDs for each institution while its count records all query matches. The 20-ID article samples are not the denominator and are not represented as the full bibliography.",
+        "These queries have no publication-year filter and no capture timestamp in the saved response. They are historical collected all-index query counts, not an annual series or a live current count; no capture date is invented.",
+        "Affiliation searches may match coauthors and abbreviation variants; one article can match several institutions. Counts must not be added into a distinct national publication total or used as a measure of impact, care quality or local enrollment.",
+        "PubMed covers a different index and scope from OpenAlex. Counts are not directly merged, summed or converted into an institutional biomedical share without an independently matched article-level denominator.",
+        "Reviewed campus points locate whole-institution records for context. No amount, work count or infrastructure project is allocated to that campus, nearby residents, a health area, a future NHHR building or a specific facility."
+      ],
+      "columns": [
+        {
+          "key": "comparator",
+          "label": "Institution / city",
+          "type": "text"
+        },
+        {
+          "key": "pubmed_query_matches",
+          "label": "Recorded PubMed query matches",
+          "type": "number",
+          "unit": "matches"
+        },
+        {
+          "key": "recorded_query",
+          "label": "Recorded PubMed affiliation query",
+          "type": "text"
+        },
+        {
+          "key": "returned_id_sample_size",
+          "label": "Returned ID sample size · metadata",
+          "type": "text"
+        },
+        {
+          "key": "query_url",
+          "label": "Open recorded query",
+          "type": "text"
+        },
+        {
+          "key": "source_table",
+          "label": "Exact query source table",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "comparator": "Dalhousie / Halifax",
+          "pubmed_query_matches": 35855,
+          "recorded_query": "\"Dalhousie University\"[Affiliation]",
+          "returned_id_sample_size": 20,
+          "query_url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Dalhousie%20University%22%5BAffiliation%5D",
+          "source_table": "nhhr_data_c050_d8e66fe66c4c_zip_data_c050__8"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "pubmed_query_matches": 2529,
+          "recorded_query": "\"Lakehead University\"[Affiliation]",
+          "returned_id_sample_size": 20,
+          "query_url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Lakehead%20University%22%5BAffiliation%5D",
+          "source_table": "nhhr_data_c050_d8e66fe66c4c_zip_data_c050__9"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "pubmed_query_matches": 2605,
+          "recorded_query": "\"Northern Ontario School of Medicine\"[Affiliation] OR \"NOSM University\"[Affiliation] OR \"NOSM\"[Affiliation]",
+          "returned_id_sample_size": 20,
+          "query_url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Northern%20Ontario%20School%20of%20Medicine%22%5BAffiliation%5D%20OR%20%22NOSM%20University%22%5BAffiliation%5D%20OR%20%22NOSM%22%5BAffiliation%5D",
+          "source_table": "nhhr_data_c050_d8e66fe66c4c_zip_data_c050__10"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "pubmed_query_matches": 114912,
+          "recorded_query": "\"University of British Columbia\"[Affiliation] OR \"UBC\"[Affiliation]",
+          "returned_id_sample_size": 20,
+          "query_url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22University%20of%20British%20Columbia%22%5BAffiliation%5D%20OR%20%22UBC%22%5BAffiliation%5D",
+          "source_table": "nhhr_data_c050_d8e66fe66c4c_zip_data_c050__11"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "pubmed_query_matches": 68876,
+          "recorded_query": "\"University of Calgary\"[Affiliation] OR \"UCalgary\"[Affiliation]",
+          "returned_id_sample_size": 20,
+          "query_url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22University%20of%20Calgary%22%5BAffiliation%5D%20OR%20%22UCalgary%22%5BAffiliation%5D",
+          "source_table": "nhhr_data_c050_d8e66fe66c4c_zip_data_c050__12"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "pubmed_query_matches": 1466,
+          "recorded_query": "\"University of Northern British Columbia\"[Affiliation] OR \"UNBC\"[Affiliation]",
+          "returned_id_sample_size": 20,
+          "query_url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22University%20of%20Northern%20British%20Columbia%22%5BAffiliation%5D%20OR%20%22UNBC%22%5BAffiliation%5D",
+          "source_table": "nhhr_data_c050_d8e66fe66c4c_zip_data_c050__13"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "pubmed_query_matches": 27914,
+          "recorded_query": "\"University of Saskatchewan\"[Affiliation] OR \"USask\"[Affiliation]",
+          "returned_id_sample_size": 20,
+          "query_url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22University%20of%20Saskatchewan%22%5BAffiliation%5D%20OR%20%22USask%22%5BAffiliation%5D",
+          "source_table": "nhhr_data_c050_d8e66fe66c4c_zip_data_c050__14"
+        }
+      ],
+      "defaultMetric": "pubmed_query_matches",
+      "entityField": "comparator"
+    },
+    {
+      "id": "research-expenditures",
+      "title": "CAUBO sponsored-research expenditures",
+      "description": "Original seven-institution sponsored-research expenditure totals for two recorded fiscal periods.",
+      "topic": "Research context",
+      "geography": "institution",
+      "status": "observed",
+      "timeLabel": "Fiscal 2022–2023 and 2023–2024 · source thousand-dollar precision",
+      "sourceName": "CAUBO sponsored-research expenditures",
+      "sourceUrl": "https://www.caubo.ca/knowledge-centre/surveys-reports/fiuc-reports/",
+      "datasetId": "6eb40441-1a52-4331-8512-66e09ee2c11d",
+      "tableName": "nhhr_data_c017_efb036e5cd0b_zip_data_c017_caubo_; nhhr_data_c017_efb036e5cd0b_zip_data_c017__2; nhhr_data_c017_efb036e5cd0b_zip_data_c017__3",
+      "notes": [
+        "CAUBO Table 2 Expenditures, line L24 Total, fund C05 Total sponsored research. Source thousand-dollar values multiply by 1,000 for display CAD while original reported tokens remain. This does not increase reporting precision; values are nominal.",
+        "The selected subtotal combines consolidated and non-consolidated sponsored-research components C03/C04; they reconcile to the published C05 total. Components or other funds are not added to the subtotal.",
+        "Only the two source fiscal periods 2022–2023 and 2023–2024 are released. These are whole-institution research expenditures across fields, not personal remuneration, health-only costs, NHHR budget or a causal saving.",
+        "Expenditures have a different accounting meaning from sponsored-research income, grant payments and award commitments. The existing income view overlaps in fiscal coverage and must not be combined into one funding total.",
+        "Reviewed campus points locate whole-institution records for context. No amount, work count or infrastructure project is allocated to that campus, nearby residents, a health area, a future NHHR building or a specific facility."
+      ],
+      "columns": [
+        {
+          "key": "comparator",
+          "label": "Institution / city",
+          "type": "text"
+        },
+        {
+          "key": "source_institution_name",
+          "label": "Source institution",
+          "type": "text"
+        },
+        {
+          "key": "caubo_institution_code",
+          "label": "CAUBO institution code",
+          "type": "text"
+        },
+        {
+          "key": "fiscal_year",
+          "label": "Fiscal year",
+          "type": "text"
+        },
+        {
+          "key": "sponsored_research_expenditures_cad",
+          "label": "Sponsored-research expenditures",
+          "type": "number",
+          "unit": "CAD"
+        },
+        {
+          "key": "source_total_thousands_cad",
+          "label": "Source total · thousands of CAD",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "comparator": "Calgary / Calgary",
+          "source_institution_name": "UNIVERSITY OF CALGARY",
+          "caubo_institution_code": "830",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_expenditures_cad": 499175000,
+          "source_total_thousands_cad": "499175"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_institution_name": "Dalhousie University",
+          "caubo_institution_code": "232",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_expenditures_cad": 195239000,
+          "source_total_thousands_cad": "195239"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_institution_name": "Lakehead University",
+          "caubo_institution_code": "538",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_expenditures_cad": 26709000,
+          "source_total_thousands_cad": "26709"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "source_institution_name": "Northern Ontario School of Medicine",
+          "caubo_institution_code": "546",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_expenditures_cad": 1319000,
+          "source_total_thousands_cad": "1319"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_institution_name": "The University of British Columbia",
+          "caubo_institution_code": "918",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_expenditures_cad": 665366000,
+          "source_total_thousands_cad": "665366"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_institution_name": "University of Northern British Columbia",
+          "caubo_institution_code": "996",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_expenditures_cad": 15430000,
+          "source_total_thousands_cad": "15430"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_institution_name": "University of Saskatchewan",
+          "caubo_institution_code": "766",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_expenditures_cad": 199760000,
+          "source_total_thousands_cad": "199760"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "source_institution_name": "University of Calgary",
+          "caubo_institution_code": "830",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_expenditures_cad": 576899000,
+          "source_total_thousands_cad": "576899"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "source_institution_name": "Dalhousie University",
+          "caubo_institution_code": "232",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_expenditures_cad": 198909000,
+          "source_total_thousands_cad": "198909"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "source_institution_name": "Lakehead University",
+          "caubo_institution_code": "538",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_expenditures_cad": 29677000,
+          "source_total_thousands_cad": "29677"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "source_institution_name": "Northern Ontario School of Medicine",
+          "caubo_institution_code": "546",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_expenditures_cad": 1873000,
+          "source_total_thousands_cad": "1873"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "source_institution_name": "The University of British Columbia",
+          "caubo_institution_code": "918",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_expenditures_cad": 684450000,
+          "source_total_thousands_cad": "684450"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "source_institution_name": "University of Northern British Columbia",
+          "caubo_institution_code": "996",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_expenditures_cad": 17941000,
+          "source_total_thousands_cad": "17941"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "source_institution_name": "University of Saskatchewan",
+          "caubo_institution_code": "766",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_expenditures_cad": 192139000,
+          "source_total_thousands_cad": "192139"
+        }
+      ],
+      "defaultMetric": "sponsored_research_expenditures_cad",
+      "entityField": "comparator",
+      "timeField": "fiscal_year"
+    },
+    {
+      "id": "publications-history",
+      "title": "OpenAlex institutional works over a decade",
+      "description": "Ten recorded years for seven verified Canadian institutions, extending and reconciling the existing five-year view.",
+      "topic": "Research context",
+      "geography": "institution",
+      "status": "observed",
+      "timeLabel": "Indexed publication years 2016–2025",
+      "sourceName": "OpenAlex institutional works over a decade",
+      "sourceUrl": "https://openalex.org/",
+      "datasetId": "75bb40c3-48ba-4bb8-98f0-e018b20211b5",
+      "tableName": "nhhr_data_c047_089865d008ed_zip_data_c047__15; nhhr_data_c047_089865d008ed_zip_data_c047__17; nhhr_data_c047_089865d008ed_zip_data_c047__19; nhhr_data_c047_089865d008ed_zip_data_c047__21; nhhr_data_c047_089865d008ed_zip_data_c047__23; nhhr_data_c047_089865d008ed_zip_data_c047__25; nhhr_data_c047_089865d008ed_zip_data_c047__27",
+      "notes": [
+        "Recorded OpenAlex institution-linked work counts for 2016–2025. All seven exact institution IDs independently resolve to Canadian institutions in the retained search responses.",
+        "The 2021–2025 rows exactly reconcile to the existing publications dataset for these seven institutions. This view adds earlier years; overlapping observations are not additional independent works or an additional funding measure.",
+        "OpenAlex counts all indexed work types linked to the source institution, not only biomedical or clinical papers, validated peer-reviewed articles or NHHR output. Repository/indexing practices and institution scope affect counts.",
+        "The original all-year responses also include partial 2026 and future-dated indexed records; these are outside this bounded historical view. No unobserved year is created as a zero.",
+        "BC Cancer has no matching all-year C047 feed in this extract; its existing 2021–2025 view remains separate. The C056 file named Northern Health resolves to Northern Norway Regional Health Authority (NO), not Northern Health BC, and is explicitly rejected.",
+        "Reviewed campus points locate whole-institution records for context. No amount, work count or infrastructure project is allocated to that campus, nearby residents, a health area, a future NHHR building or a specific facility."
+      ],
+      "columns": [
+        {
+          "key": "comparator",
+          "label": "Institution / city",
+          "type": "text"
+        },
+        {
+          "key": "publication_year",
+          "label": "Publication year",
+          "type": "text"
+        },
+        {
+          "key": "works",
+          "label": "Institution-linked indexed works",
+          "type": "number",
+          "unit": "works"
+        },
+        {
+          "key": "display_name",
+          "label": "OpenAlex institution name",
+          "type": "text"
+        },
+        {
+          "key": "openalex_id",
+          "label": "Reviewed OpenAlex institution ID",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2016",
+          "works": 6766,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2016",
+          "works": 3437,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2016",
+          "works": 575,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2016",
+          "works": 164,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2016",
+          "works": 11297,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2016",
+          "works": 308,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2016",
+          "works": 2929,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2017",
+          "works": 7271,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2017",
+          "works": 3488,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2017",
+          "works": 638,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2017",
+          "works": 189,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2017",
+          "works": 12366,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2017",
+          "works": 465,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2017",
+          "works": 3185,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2018",
+          "works": 9308,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2018",
+          "works": 4075,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2018",
+          "works": 687,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2018",
+          "works": 201,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2018",
+          "works": 12946,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2018",
+          "works": 401,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2018",
+          "works": 3486,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2019",
+          "works": 8478,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2019",
+          "works": 4365,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2019",
+          "works": 700,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2019",
+          "works": 297,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2019",
+          "works": 14053,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2019",
+          "works": 401,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2019",
+          "works": 3618,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2020",
+          "works": 9282,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2020",
+          "works": 4675,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2020",
+          "works": 966,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2020",
+          "works": 276,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2020",
+          "works": 15566,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2020",
+          "works": 456,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2020",
+          "works": 4063,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2021",
+          "works": 9795,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2021",
+          "works": 4915,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2021",
+          "works": 829,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2021",
+          "works": 332,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2021",
+          "works": 16609,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2021",
+          "works": 496,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2021",
+          "works": 4206,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2022",
+          "works": 9023,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2022",
+          "works": 4951,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2022",
+          "works": 908,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2022",
+          "works": 322,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2022",
+          "works": 15453,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2022",
+          "works": 487,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2022",
+          "works": 3957,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2023",
+          "works": 9474,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2023",
+          "works": 4915,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2023",
+          "works": 841,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2023",
+          "works": 326,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2023",
+          "works": 15941,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2023",
+          "works": 535,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2023",
+          "works": 3883,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2024",
+          "works": 9174,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2024",
+          "works": 4966,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2024",
+          "works": 768,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2024",
+          "works": 313,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2024",
+          "works": 15284,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2024",
+          "works": 469,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2024",
+          "works": 3840,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "publication_year": "2025",
+          "works": 9398,
+          "display_name": "University of Calgary",
+          "openalex_id": "I168635309"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "publication_year": "2025",
+          "works": 5064,
+          "display_name": "Dalhousie University",
+          "openalex_id": "I129902397"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "publication_year": "2025",
+          "works": 815,
+          "display_name": "Lakehead University",
+          "openalex_id": "I72541430"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "publication_year": "2025",
+          "works": 368,
+          "display_name": "NOSM University",
+          "openalex_id": "I7899908"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "publication_year": "2025",
+          "works": 15060,
+          "display_name": "University of British Columbia",
+          "openalex_id": "I141945490"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "publication_year": "2025",
+          "works": 523,
+          "display_name": "University of Northern British Columbia",
+          "openalex_id": "I151934421"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "publication_year": "2025",
+          "works": 3878,
+          "display_name": "University of Saskatchewan",
+          "openalex_id": "I32625721"
+        }
+      ],
+      "defaultMetric": "works",
+      "entityField": "comparator",
+      "timeField": "publication_year"
+    }
+  ],
+  "snapshot": {
+    "datasets": 6,
+    "releasedRows": 289,
+    "rowsByDataset": {
+      "cfi-projects-by-year": 185,
+      "cfi-projects-total": 7,
+      "sshrc-payments": 6,
+      "pubmed-affiliation-counts": 7,
+      "research-expenditures": 14,
+      "publications-history": 70
+    }
+  }
+}

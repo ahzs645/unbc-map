@@ -1,0 +1,1900 @@
+{
+  "type": "FeatureCollection",
+  "name": "NHHR verified hospital display sites",
+  "attribution": "© OpenStreetMap contributors",
+  "license_url": "https://www.openstreetmap.org/copyright",
+  "verified_at": "2026-10-12",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.2915924,
+          51.6383599
+        ]
+      },
+      "properties": {
+        "code": "hospital-100-mile-district-general-hospital",
+        "name": "100 Mile District general hospital",
+        "site": "555 cedar ave. 100 mile house bc v0k 2e0",
+        "city": "100 Mile House",
+        "source_url": "https://www.interiorhealth.ca/locations/100-mile-district-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/1469034158",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "100 Mile District General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3133171,
+          49.0367325
+        ]
+      },
+      "properties": {
+        "code": "hospital-abbotsford-regional-hospital-cancer-centre",
+        "name": "Abbotsford Regional Hospital & Cancer Centre",
+        "site": "32900 Marshall Rd",
+        "city": "Abbotsford",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Abbotsford/abbotsford-regional-hospital-and-cancer-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/293945054",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Abbotsford Regional Hospital And Cancer Centre",
+          "Abbotsford Regional Hospital and Cancer Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.794981,
+          50.238755
+        ]
+      },
+      "properties": {
+        "code": "hospital-arrow-lakes-hospital",
+        "name": "Arrow Lakes Hospital",
+        "site": "97 1st Ave NE",
+        "city": "Nakusp",
+        "source_url": "https://www.interiorhealth.ca/locations/arrow-lakes-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/node/4858168655",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Arrow Lakes Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1253746,
+          49.2445028
+        ]
+      },
+      "properties": {
+        "code": "hospital-bc-children-s-hospital",
+        "name": "BC Children's Hospital",
+        "site": "4500 Oak St",
+        "city": "Vancouver",
+        "source_url": "https://www.bcchildrens.ca/",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/36893897",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. The named OSM hospital building is addressed 4480 Oak Street on the BC Children’s campus; the shared campus/mailing address is 4500 Oak Street.",
+        "source_aliases": [
+          "B.C. Children's Hospital"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1248203,
+          49.2437725
+        ]
+      },
+      "properties": {
+        "code": "hospital-bc-women-s-hospital-health-centre",
+        "name": "BC Women's Hospital + Health Centre",
+        "site": "4500 Oak St",
+        "city": "Vancouver",
+        "source_url": "https://www.bcwomens.ca/about/contact",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/527856758",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "B.C. Women's Hospital"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.7572797,
+          52.3734927
+        ]
+      },
+      "properties": {
+        "code": "hospital-bella-coola-general-hospital",
+        "name": "Bella Coola General Hospital",
+        "site": "1025 Elcho St",
+        "city": "Bella Coola",
+        "source_url": "https://www.vch.ca/en/location/bella-coola-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/420654453",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Bella Coola General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.4685673,
+          49.0298789
+        ]
+      },
+      "properties": {
+        "code": "hospital-boundary-hospital",
+        "name": "Boundary Hospital",
+        "site": "7649 22 Street",
+        "city": "Grand Forks",
+        "source_url": "https://www.interiorhealth.ca/locations/boundary-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/330174593",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Boundary District Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.1630575,
+          54.7850432
+        ]
+      },
+      "properties": {
+        "code": "hospital-bulkley-valley-district-hospital",
+        "name": "Bulkley Valley District Hospital",
+        "site": "3950 8th Ave",
+        "city": "Smithers",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/bulkley-valley-district-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/606031382",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Bulkley Valley District Hospital",
+          "Bulkley Valley District Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0154533,
+          49.2496569
+        ]
+      },
+      "properties": {
+        "code": "hospital-burnaby-hospital",
+        "name": "Burnaby Hospital",
+        "site": "3935 Kincaid St",
+        "city": "Burnaby",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/41839791",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Burnaby Hospital",
+          "Burnaby Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1442557,
+          52.137438
+        ]
+      },
+      "properties": {
+        "code": "hospital-cariboo-memorial-hospital",
+        "name": "Cariboo Memorial Hospital",
+        "site": "517 6th Ave N",
+        "city": "Williams Lake",
+        "source_url": "https://www.interiorhealth.ca/locations/cariboo-memorial-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/961058486",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Cariboo Memorial Hospital",
+          "Cariboo Memorial Hospital and Health Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.9683596,
+          49.1826255
+        ]
+      },
+      "properties": {
+        "code": "hospital-centre-island-surgical-centre",
+        "name": "Centre Island Surgical Centre",
+        "site": "1179 Seafield Cres",
+        "city": "Nanaimo",
+        "source_url": "https://www.islandhealth.ca/our-locations/ambulatory-day-surgery-locations/centre-island-surgical-centre-cisc",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/671804456",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. Coordinate is the returned exact-address building point for the official surgical centre address, not a named surgical-centre OSM object.",
+        "source_aliases": [
+          "Centre Island Surgical Centre"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.6442067,
+          55.6963359
+        ]
+      },
+      "properties": {
+        "code": "hospital-chetwynd-hospital",
+        "name": "Chetwynd Hospital",
+        "site": "5500 Hospital Road",
+        "city": "Chetwynd",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/chetwynd-hospital-and-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/node/2923666090",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Chetwynd Hospital and Health Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.9648572,
+          49.1673065
+        ]
+      },
+      "properties": {
+        "code": "hospital-chilliwack-general-hospital",
+        "name": "Chilliwack General Hospital",
+        "site": "45600 Menholm Rd",
+        "city": "Chilliwack",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Chilliwack/chilliwack-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/25207131",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Chilliwack General Hospital",
+          "Chilliwack General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.9428009,
+          50.5937952
+        ]
+      },
+      "properties": {
+        "code": "hospital-cormorant-island-health-centre",
+        "name": "Cormorant Island Health Centre",
+        "site": "49 School Rd",
+        "city": "Alert Bay",
+        "source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/cormorant-island-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/970434087",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Cormorant Island Health Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.7222211,
+          48.7861809
+        ]
+      },
+      "properties": {
+        "code": "hospital-cowichan-district-hospital",
+        "name": "Cowichan District Hospital",
+        "site": "3045 Gibbins Rd",
+        "city": "Duncan",
+        "source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/cowichan-district-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/1126960983",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Cowichan District Hospital",
+          "Cowichan District Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.5076179,
+          49.0983476
+        ]
+      },
+      "properties": {
+        "code": "hospital-creston-valley-hospital-health-centre",
+        "name": "Creston Valley Hospital & Health Centre",
+        "site": "312 15th Ave N",
+        "city": "Creston",
+        "source_url": "https://www.interiorhealth.ca/locations/creston-valley-hospital-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/888625615",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Creston Valley Hospital",
+          "Creston Valley Hospital and Health Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.2357253,
+          55.7496945
+        ]
+      },
+      "properties": {
+        "code": "hospital-dawson-creek-and-district-hospital",
+        "name": "Dawson Creek and District Hospital",
+        "site": "11100 13 St",
+        "city": "Dawson Creek",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/dawson-creek-and-district-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/184193563",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Dawson Creek And District Hospital",
+          "Dawson Creek and District Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0620077,
+          49.0862837
+        ]
+      },
+      "properties": {
+        "code": "hospital-delta-hospital",
+        "name": "Delta Hospital",
+        "site": "5800 Mountain View Blvd",
+        "city": "Delta",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Delta/delta-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/902491360",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Delta Hospital",
+          "Delta Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.017682,
+          51.6453573
+        ]
+      },
+      "properties": {
+        "code": "hospital-dr-helmcken-memorial-hospital",
+        "name": "Dr. Helmcken Memorial Hospital",
+        "site": "640 Park Dr",
+        "city": "Clearwater",
+        "source_url": "https://www.interiorhealth.ca/locations/dr-helmcken-memorial-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/406228670",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Dr. Helmcken Memorial Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8243236,
+          49.2851874
+        ]
+      },
+      "properties": {
+        "code": "hospital-eagle-ridge-hospital",
+        "name": "Eagle Ridge Hospital",
+        "site": "475 Guildford Way",
+        "city": "Port Moody",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Port-Moody/eagle-ridge-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/41770711",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Eagle Ridge Hospital",
+          "Eagle Ridge Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.7501355,
+          49.5124925
+        ]
+      },
+      "properties": {
+        "code": "hospital-east-kootenay-regional-hospital",
+        "name": "East Kootenay Regional Hospital",
+        "site": "13 24th Ave N",
+        "city": "Cranbrook",
+        "source_url": "https://www.interiorhealth.ca/locations/east-kootenay-regional-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/851965703",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "East Kootenay Regional Hospital",
+          "East Kootenay Regional Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.0563542,
+          49.5135975
+        ]
+      },
+      "properties": {
+        "code": "hospital-elk-valley-hospital",
+        "name": "Elk Valley Hospital",
+        "site": "1501 5th Ave",
+        "city": "Fernie",
+        "source_url": "https://www.interiorhealth.ca/locations/elk-valley-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/102179690",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Elk Valley Hospital",
+          "Elk Valley Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7047605,
+          58.8089544
+        ]
+      },
+      "properties": {
+        "code": "hospital-fort-nelson-general-hospital",
+        "name": "Fort Nelson General Hospital",
+        "site": "5315 Liard St",
+        "city": "Fort Nelson",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/fort-nelson-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/1472772876",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Fort Nelson General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.8173821,
+          56.2557049
+        ]
+      },
+      "properties": {
+        "code": "hospital-fort-st-john-hospital",
+        "name": "Fort St. John Hospital",
+        "site": "8407 112 Ave",
+        "city": "Fort St. John",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/fort-st-john-hospital-peace-villa",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/258499176",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Fort St John General Hospital",
+          "Fort St. John Hospital and Health Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.4241976,
+          49.3769037
+        ]
+      },
+      "properties": {
+        "code": "hospital-fraser-canyon-hospital",
+        "name": "Fraser Canyon Hospital",
+        "site": "1275 7th Ave",
+        "city": "Hope",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Hope/fraser-canyon-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/902487947",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Fraser Canyon Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4995825,
+          52.9811553
+        ]
+      },
+      "properties": {
+        "code": "hospital-g-r-baker-memorial-hospital",
+        "name": "G.R. Baker Memorial Hospital",
+        "site": "543 Front St",
+        "city": "Quesnel",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/gr-baker-memorial-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/354698177",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "G. R. Baker Memorial Hospital (B.C.)",
+          "G.R. Baker Memorial Hospital"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.9672644,
+          51.2970397
+        ]
+      },
+      "properties": {
+        "code": "hospital-golden-and-district-hospital",
+        "name": "Golden and District Hospital",
+        "site": "835 9th Ave S",
+        "city": "Golden",
+        "source_url": "https://www.interiorhealth.ca/locations/golden-district-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/222375116",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Golden And District General Hospital",
+          "Golden and District General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.0701972,
+          53.2549193
+        ]
+      },
+      "properties": {
+        "code": "hospital-haida-gwaii-hospital-and-health-centre",
+        "name": "Haida Gwaii Hospital and Health Centre",
+        "site": "3209 Oceanview Drive",
+        "city": "Daajing Giids",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/haida-gwaii-hospital-and-health-centre-xaayda-gwaay-ngaaysdll-naay",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/188008270",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Haida Gwaii Hospital and Health Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.1433196,
+          52.1612112
+        ]
+      },
+      "properties": {
+        "code": "hospital-heiltsuk-hospital",
+        "name": "Heiltsuk Hospital",
+        "site": "88 Waglisla Street",
+        "city": "Bella Bella",
+        "source_url": "https://www.vch.ca/en/location/bella-bella-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/744734229",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Heiltsuk Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.0333258,
+          50.5065349
+        ]
+      },
+      "properties": {
+        "code": "hospital-invermere-and-district-hospital",
+        "name": "Invermere and District Hospital",
+        "site": "850 10th Ave",
+        "city": "Invermere",
+        "source_url": "https://www.interiorhealth.ca/locations/invermere-district-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/222828095",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Invermere and District Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8332202,
+          49.1793874
+        ]
+      },
+      "properties": {
+        "code": "hospital-jim-pattison-outpatient-care-and-surgery-centre",
+        "name": "Jim Pattison Outpatient Care and Surgery Centre",
+        "site": "9750 140 St",
+        "city": "Surrey",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Surrey/jim-pattison-outpatient-care-and-surgery-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/138669627",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Pattison Outpatient Centre"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.4932694,
+          49.874053
+        ]
+      },
+      "properties": {
+        "code": "hospital-kelowna-general-hospital",
+        "name": "Kelowna General Hospital",
+        "site": "2268 Pandosy St",
+        "city": "Kelowna",
+        "source_url": "https://www.interiorhealth.ca/locations/kelowna-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/100584338",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Kelowna General Hospital",
+          "Kelowna General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.6469428,
+          54.0505162
+        ]
+      },
+      "properties": {
+        "code": "hospital-kitimat-general-hospital-and-health-centre",
+        "name": "Kitimat General Hospital and Health Centre",
+        "site": "920 S Lahakas Blvd",
+        "city": "Kitimat",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/kitimat-general-hospital-and-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/93844827",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Kitimat General Hospital",
+          "Kitimat Hospital and Health Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.7015004,
+          49.1033049
+        ]
+      },
+      "properties": {
+        "code": "hospital-kootenay-boundary-regional-hospital",
+        "name": "Kootenay Boundary Regional Hospital",
+        "site": "1200 Hospital Bench Rd",
+        "city": "Trail",
+        "source_url": "https://www.interiorhealth.ca/locations/kootenay-boundary-regional-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/1442213136",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Kootenay Boundary Regional Hospital",
+          "Kootenay Boundary Regional Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.2850813,
+          49.4949888
+        ]
+      },
+      "properties": {
+        "code": "hospital-kootenay-lake-hospital",
+        "name": "Kootenay Lake Hospital",
+        "site": "3 View St",
+        "city": "Nelson",
+        "source_url": "https://www.interiorhealth.ca/locations/kootenay-lake-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/278139080",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Kootenay Lake Hospital",
+          "Kootenay Lake Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.596408,
+          54.5119429
+        ]
+      },
+      "properties": {
+        "code": "hospital-ksyen-regional-hospital",
+        "name": "Ksyen Regional Hospital",
+        "site": "2800 Tetrault St",
+        "city": "Terrace",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/ksyen-regional-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/1415671343",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. This is the current Ksyen hospital site. Older fiscal observations retain the source’s reporting label and are not assigned to an inferred historical building.",
+        "source_aliases": [
+          "Ksyen Regional Hospital",
+          "Ksyen Regional Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.5079282,
+          48.862411
+        ]
+      },
+      "properties": {
+        "code": "hospital-lady-minto-hospital",
+        "name": "Lady Minto Hospital",
+        "site": "135 crofton rd. salt spring island bc v8k 1t1",
+        "city": "Salt Spring Island",
+        "source_url": "https://medicalstaff.islandhealth.ca/saltspring-lmh",
+        "coordinate_source_url": "https://www.openstreetmap.org/relation/5851879",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. Official address is 135 Crofton Road; OSM attaches a Kings Lane address and a different postal label to the named hospital-campus object. The named campus is used for display, not a surveyed address point.",
+        "source_aliases": [
+          "Lady Minto Gulf Islands Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.761231,
+          54.2356084
+        ]
+      },
+      "properties": {
+        "code": "hospital-lakes-district-hospital-and-health-centre",
+        "name": "Lakes District Hospital and Health Centre",
+        "site": "741 centre st. burns lake bc v0j 1e0",
+        "city": "Burns Lake",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/lakes-district-hospital-and-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/991903216",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Lakes District Hospital and Health Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.611567,
+          49.0943147
+        ]
+      },
+      "properties": {
+        "code": "hospital-langley-memorial-hospital",
+        "name": "Langley Memorial Hospital",
+        "site": "22051 Fraser Hwy",
+        "city": "Township of Langley",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Langley/langley-memorial-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/233309999",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Langley Memorial Hospital",
+          "Langley Memorial Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.939356,
+          50.689299
+        ]
+      },
+      "properties": {
+        "code": "hospital-lillooet-hospital-and-health-centre",
+        "name": "Lillooet Hospital and Health Centre",
+        "site": "951 Murray St",
+        "city": "Lillooet",
+        "source_url": "https://www.interiorhealth.ca/locations/lillooet-hospital-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/545720213",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Lillooet Hospital and Health Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0676719,
+          49.3209784
+        ]
+      },
+      "properties": {
+        "code": "hospital-lions-gate-hospital",
+        "name": "Lions Gate Hospital",
+        "site": "231 E 15th St",
+        "city": "North Vancouver",
+        "source_url": "https://www.vch.ca/en/location/lions-gate-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/23811142",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Lions Gate Hospital",
+          "Lions Gate Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1005717,
+          55.3374716
+        ]
+      },
+      "properties": {
+        "code": "hospital-mackenzie-and-district-hospital",
+        "name": "Mackenzie and District Hospital",
+        "site": "45 centennial dr. mackenzie bc v0j 2c0",
+        "city": "Mackenzie",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/mackenzie-and-district-hospital-and-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/98095449",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Mackenzie and District Hospital and Health Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.1608881,
+          53.3013759
+        ]
+      },
+      "properties": {
+        "code": "hospital-mcbride-and-district-hospital",
+        "name": "McBride and District Hospital",
+        "site": "1136 5th Ave",
+        "city": "McBride",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/mcbride-and-district-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/1290124439",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "McBride and District Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.331169,
+          49.1351369
+        ]
+      },
+      "properties": {
+        "code": "hospital-mission-memorial-hospital",
+        "name": "Mission Memorial Hospital",
+        "site": "7324 Hurd St",
+        "city": "Mission",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Mission/mission-memorial-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/396326194",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Mission Memorial Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0953324,
+          49.2583187
+        ]
+      },
+      "properties": {
+        "code": "hospital-mount-saint-joseph-hospital",
+        "name": "Mount Saint Joseph Hospital",
+        "site": "3080 Prince Edward St",
+        "city": "Vancouver",
+        "source_url": "https://www.providencehealthcare.org/en/locations/mount-saint-joseph-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/292380824",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Mount Saint Joseph Hospital"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.9698448,
+          49.1848266
+        ]
+      },
+      "properties": {
+        "code": "hospital-nanaimo-regional-general-hospital",
+        "name": "Nanaimo Regional General Hospital",
+        "site": "1200 Dufferin Cres",
+        "city": "Nanaimo",
+        "source_url": "https://www.islandhealth.ca/care-locations/hospitals-health-centre-locations/nanaimo-regional-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/relation/2694349",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Nanaimo Regional General Hospital",
+          "Nanaimo Regional General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.2420489,
+          54.4396377
+        ]
+      },
+      "properties": {
+        "code": "hospital-natsoojeh-hospital-and-health-centre",
+        "name": "Nats’oojeh Hospital and Health Centre",
+        "site": "606 Stuart Drive East",
+        "city": "Fort St. James",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/natsoojeh-hospital-and-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/534618461",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. The current Nats’oojeh hospital at 606 Stuart Drive East is selected; PGMaps’ older Stuart Lake candidate address is not reused. The replacement hospital opened 14 January 2025. CIHI uses the Nats’oojeh reporting label for all five source fiscal years, including years before opening and the fiscal year that crosses opening. This current point represents the continuing hospital reporting unit for display; those periods are not historical geolocations of the former Stuart Lake building. No former-building coordinates are inferred.",
+        "source_aliases": [
+          "Nats’oojeh Hospital and Health Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.7732492,
+          50.1218751
+        ]
+      },
+      "properties": {
+        "code": "hospital-nicola-valley-hospital-and-health-centre",
+        "name": "Nicola Valley Hospital and Health Centre",
+        "site": "3451 Voght St",
+        "city": "Merritt",
+        "source_url": "https://www.interiorhealth.ca/locations/nicola-valley-hospital-and-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/1471108233",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Nicola Valley Health Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.2429273,
+          50.009452
+        ]
+      },
+      "properties": {
+        "code": "hospital-north-island-hospital-campbell-river-district",
+        "name": "North Island Hospital - Campbell River & District",
+        "site": "375 2nd Ave",
+        "city": "Campbell River",
+        "source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/north-island-hospital-campbell-river-district",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/571903758",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Campbell River And District General Hospital",
+          "The North Island Hospital Campbell River and District Campus (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.9698737,
+          49.7122479
+        ]
+      },
+      "properties": {
+        "code": "hospital-north-island-hospital-comox-valley",
+        "name": "North Island Hospital - Comox Valley",
+        "site": "101 Lerwick Rd",
+        "city": "Courtenay",
+        "source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/north-island-hospital-comox-valley",
+        "coordinate_source_url": "https://www.openstreetmap.org/relation/9631896",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Comox Valley Hospital",
+          "The North Island Hospital Comox Valley Campus (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.1573868,
+          54.0204029
+        ]
+      },
+      "properties": {
+        "code": "hospital-northern-haida-gwaii-hospital-and-health-centre",
+        "name": "Northern Haida Gwaii Hospital and Health Centre",
+        "site": "2520 Harrison Ave",
+        "city": "Masset",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/northern-haida-gwaii-hospital-and-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/node/2972398342",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Northern Haida Gwaii Hospital and Health Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7923187,
+          49.0303878
+        ]
+      },
+      "properties": {
+        "code": "hospital-peace-arch-hospital",
+        "name": "Peace Arch Hospital",
+        "site": "15521 Russell Ave",
+        "city": "White Rock",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/White-Rock/peace-arch-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/476150022",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Peace Arch Hospital",
+          "Peace Arch Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.5773374,
+          49.481665
+        ]
+      },
+      "properties": {
+        "code": "hospital-penticton-regional-hospital",
+        "name": "Penticton Regional Hospital",
+        "site": "550 Carmi Ave",
+        "city": "Penticton",
+        "source_url": "https://www.interiorhealth.ca/locations/penticton-regional-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/363169810",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Penticton Regional Hospital",
+          "Penticton Regional Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.2106487,
+          50.439988
+        ]
+      },
+      "properties": {
+        "code": "hospital-pleasant-valley-health-centre",
+        "name": "Pleasant Valley Health Centre",
+        "site": "3800 Patten Drive",
+        "city": "Armstrong",
+        "source_url": "https://www.interiorhealth.ca/locations/pleasant-valley-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/1447877589",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Pleasant Valley Health Centre"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.502822,
+          50.7205746
+        ]
+      },
+      "properties": {
+        "code": "hospital-port-hardy-hospital",
+        "name": "Port Hardy Hospital",
+        "site": "9120 Granville St",
+        "city": "Port Hardy",
+        "source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/port-hardy-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/1478447653",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Port Hardy Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.0668711,
+          50.5815495
+        ]
+      },
+      "properties": {
+        "code": "hospital-port-mcneill-hospital",
+        "name": "Port McNeill Hospital",
+        "site": "2750 kingcome place port mcneill bc v0n 2r0",
+        "city": "Port Mcneill",
+        "source_url": "https://www.islandhealth.ca/locations/hospitals-health-centre-locations/port-mcneill-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/595793357",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Port McNeill and District Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.330281,
+          54.3048398
+        ]
+      },
+      "properties": {
+        "code": "hospital-prince-rupert-regional-hospital",
+        "name": "Prince Rupert Regional Hospital",
+        "site": "1305 Summit Ave",
+        "city": "Prince Rupert",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/prince-rupert-regional-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/992672370",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Prince Rupert Regional Hospital",
+          "Prince Rupert Regional Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.5265608,
+          49.4544631
+        ]
+      },
+      "properties": {
+        "code": "hospital-princeton-general-hospital",
+        "name": "Princeton General Hospital",
+        "site": "98 Ridgewood Dr",
+        "city": "Princeton",
+        "source_url": "https://www.interiorhealth.ca/locations/princeton-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/368030604",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Princeton General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.5183265,
+          49.850865
+        ]
+      },
+      "properties": {
+        "code": "hospital-qathet-general-hospital",
+        "name": "qathet General Hospital",
+        "site": "5000 Joyce Ave",
+        "city": "Powell River",
+        "source_url": "https://www.vch.ca/en/location/qathet-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/579986274",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Qathet General Hospital",
+          "qathet General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.9027882,
+          49.2168658
+        ]
+      },
+      "properties": {
+        "code": "hospital-queen-s-park-care-centre",
+        "name": "Queen's Park Care Centre",
+        "site": "315 McBride Boulevard",
+        "city": "New Westminster",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/New-Westminster/queens-park-care-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/relation/14661169",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Queen’s Park Care Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.1909434,
+          50.9773902
+        ]
+      },
+      "properties": {
+        "code": "hospital-queen-victoria-hospital-and-health-centre",
+        "name": "Queen Victoria Hospital and Health Centre",
+        "site": "1200 Newlands Rd",
+        "city": "Revelstoke",
+        "source_url": "https://www.interiorhealth.ca/locations/queen-victoria-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/1435555664",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Queen Victoria Hospital",
+          "Queen Victoria Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1465888,
+          49.1688999
+        ]
+      },
+      "properties": {
+        "code": "hospital-richmond-hospital",
+        "name": "Richmond Hospital",
+        "site": "7000 Westminster Hwy",
+        "city": "Richmond",
+        "source_url": "https://www.vch.ca/en/location/richmond-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/relation/1731032",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Richmond Hospital",
+          "The Richmond Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.6294712,
+          49.2154757
+        ]
+      },
+      "properties": {
+        "code": "hospital-ridge-meadows-hospital",
+        "name": "Ridge Meadows Hospital",
+        "site": "11666 Laity St",
+        "city": "Maple Ridge",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Maple-Ridge---Pitt-Meadows/ridge-meadows-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/902053499",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Ridge Meadows Hospital",
+          "Ridge Meadows Hospital and Health Care Centre (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.8914604,
+          49.2271562
+        ]
+      },
+      "properties": {
+        "code": "hospital-royal-columbian-hospital",
+        "name": "Royal Columbian Hospital",
+        "site": "330 E Columbia St",
+        "city": "New Westminster",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/New-Westminster/royal-columbian-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/41879302",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Royal Columbian Hospital",
+          "Royal Columbian Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.3344289,
+          50.6694781
+        ]
+      },
+      "properties": {
+        "code": "hospital-royal-inland-hospital",
+        "name": "Royal Inland Hospital",
+        "site": "311 Columbia St",
+        "city": "Kamloops",
+        "source_url": "https://www.interiorhealth.ca/locations/royal-inland-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/222534272",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Royal Inland Hospital",
+          "Royal Inland Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.326678,
+          48.4326448
+        ]
+      },
+      "properties": {
+        "code": "hospital-royal-jubilee-hospital",
+        "name": "Royal Jubilee Hospital",
+        "site": "1952 Bay St",
+        "city": "Victoria",
+        "source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/royal-jubilee-hospital-rjh",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/4766901",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Royal Jubilee Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.409674,
+          48.5963986
+        ]
+      },
+      "properties": {
+        "code": "hospital-saanich-peninsula-hospital",
+        "name": "Saanich Peninsula Hospital",
+        "site": "2166 Mt Newton Cross Rd",
+        "city": "Central Saanich",
+        "source_url": "https://www.islandhealth.ca/care-locations/hospitals-health-centre-locations/saanich-peninsula-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/800032613",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Saanich Peninsula Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.010696,
+          54.0287925
+        ]
+      },
+      "properties": {
+        "code": "hospital-saint-john-hospital",
+        "name": "Saint John Hospital",
+        "site": "3255 Hospital Rd",
+        "city": "Vanderhoof",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/st-john-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/480751591",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "St. John Hospital",
+          "St. John Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.7494412,
+          49.4757225
+        ]
+      },
+      "properties": {
+        "code": "hospital-sechelt-hospital",
+        "name": "Sechelt Hospital",
+        "site": "5544 Sunshine Coast Hwy",
+        "city": "Sechelt",
+        "source_url": "https://www.vch.ca/en/location/sechelt-shishalh-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/298029407",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Sechelt Hospital",
+          "St. Mary’s Hospital (Sechelt) (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.2744055,
+          50.7042416
+        ]
+      },
+      "properties": {
+        "code": "hospital-shuswap-lake-general-hospital",
+        "name": "Shuswap Lake General Hospital",
+        "site": "601 10 St NE",
+        "city": "Salmon Arm",
+        "source_url": "https://www.interiorhealth.ca/locations/shuswap-lake-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/144825870",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Shuswap Lake General Hospital",
+          "Shuswap Lake General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.428526,
+          48.4670984
+        ]
+      },
+      "properties": {
+        "code": "hospital-south-island-surgical-centre",
+        "name": "South Island Surgical Centre",
+        "site": "29 Helmcken Rd",
+        "city": "View Royal",
+        "source_url": "https://www.islandhealth.ca/our-locations/ambulatory-day-surgery-locations/south-island-surgical-centre-sisc",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/397887755",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. Coordinate is the returned exact-address building point for the official surgical centre address, not a named surgical-centre OSM object.",
+        "source_aliases": [
+          "South Island Surgical Centre"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.5389704,
+          49.1834929
+        ]
+      },
+      "properties": {
+        "code": "hospital-south-okanagan-general-hospital",
+        "name": "South Okanagan General Hospital",
+        "site": "911 McKinney Rd",
+        "city": "Oliver",
+        "source_url": "https://www.interiorhealth.ca/locations/south-okanagan-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/819314272",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "South Okanagan General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1409236,
+          49.6980368
+        ]
+      },
+      "properties": {
+        "code": "hospital-squamish-general-hospital",
+        "name": "Squamish General Hospital",
+        "site": "38140 Behrner Dr",
+        "city": "Squamish",
+        "source_url": "https://www.vch.ca/en/location/squamish-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/1190276710",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Squamish General Hospital",
+          "Squamish General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.128928,
+          49.2806187
+        ]
+      },
+      "properties": {
+        "code": "hospital-st-paul-s-hospital",
+        "name": "St. Paul's Hospital",
+        "site": "1081 Burrard St",
+        "city": "Vancouver",
+        "source_url": "https://www.providencehealthcare.org/en/locations/st-pauls-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/51185697",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. The operating Burrard Street hospital is selected; the separate new St. Paul’s construction site is not used.",
+        "source_aliases": [
+          "St. Paul's Hospital"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.6688852,
+          49.6011564
+        ]
+      },
+      "properties": {
+        "code": "hospital-summerland-community-health-centre",
+        "name": "Summerland Community Health Centre",
+        "site": "12815 Atkinson Rd",
+        "city": "Summerland",
+        "source_url": "https://www.interiorhealth.ca/locations/summerland-community-health-centre",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/611078054",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Summerland Memorial Health Centre"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.842818,
+          49.1761946
+        ]
+      },
+      "properties": {
+        "code": "hospital-surrey-memorial-hospital",
+        "name": "Surrey Memorial Hospital",
+        "site": "13750 96 Ave",
+        "city": "Surrey",
+        "source_url": "https://www.fraserhealth.ca/Service-Directory/Locations/Surrey/surrey-memorial-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/relation/1280789",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Surrey Memorial Hospital",
+          "Surrey Memorial Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.9088525,
+          49.1511504
+        ]
+      },
+      "properties": {
+        "code": "hospital-tofino-general-hospital",
+        "name": "Tofino General Hospital",
+        "site": "261 Neill St",
+        "city": "Tofino",
+        "source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/tofino-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/1160911664",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Tofino General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.245747,
+          49.2641866
+        ]
+      },
+      "properties": {
+        "code": "hospital-ubc-hospital",
+        "name": "UBC Hospital",
+        "site": "2211 Wesbrook Mall",
+        "city": "Vancouver / UBC campus lands",
+        "source_url": "https://www.vch.ca/en/location/ubc-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/node/8508184533",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim. UBC campus lands are in Electoral Area A, outside municipal Vancouver; the official location uses a Vancouver mailing label.",
+        "source_aliases": [
+          "UBC Health Sciences Centre"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.7650194,
+          53.9128015
+        ]
+      },
+      "properties": {
+        "code": "hospital-university-hospital-of-northern-british-columbia",
+        "name": "University Hospital of Northern British Columbia",
+        "site": "1475 Edmonton St",
+        "city": "Prince George",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/university-hospital-northern-british-columbia-uhnbc",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/445255625",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "The University Hospital Of Northern British Columbia",
+          "University Hospital of Northern British Columbia (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.1226691,
+          49.2618427
+        ]
+      },
+      "properties": {
+        "code": "hospital-vancouver-general-hospital",
+        "name": "Vancouver General Hospital",
+        "site": "899 W 12th Ave",
+        "city": "Vancouver",
+        "source_url": "https://www.vch.ca/en/location/vancouver-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/relation/17286359",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Vancouver General Hospital"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.271329,
+          50.2565004
+        ]
+      },
+      "properties": {
+        "code": "hospital-vernon-jubilee-hospital",
+        "name": "Vernon Jubilee Hospital",
+        "site": "2101 32 St",
+        "city": "Vernon",
+        "source_url": "https://www.interiorhealth.ca/locations/vernon-jubilee-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/696495495",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Vernon Jubilee Hospital",
+          "Vernon Jubilee Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4322551,
+          48.4665512
+        ]
+      },
+      "properties": {
+        "code": "hospital-victoria-general-hospital",
+        "name": "Victoria General Hospital",
+        "site": "1 Hospital Way",
+        "city": "View Royal",
+        "source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/victoria-general-hospital-vgh",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/565659424",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Victoria General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.7821689,
+          49.2485048
+        ]
+      },
+      "properties": {
+        "code": "hospital-west-coast-general-hospital",
+        "name": "West Coast General Hospital",
+        "site": "3949 Port Alberni Hwy",
+        "city": "Port Alberni",
+        "source_url": "https://www.islandhealth.ca/our-locations/hospitals-health-centre-locations/west-coast-general-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/318779187",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "West Coast General Hospital",
+          "West Coast General Hospital (B.C.)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.6511776,
+          55.2597004
+        ]
+      },
+      "properties": {
+        "code": "hospital-wrinch-memorial-hospital",
+        "name": "Wrinch Memorial Hospital",
+        "site": "2510 Hwy 62",
+        "city": "Hazelton",
+        "source_url": "https://www.northernhealth.ca/find-a-facility/hospitals/wrinch-memorial-hospital",
+        "coordinate_source_url": "https://www.openstreetmap.org/way/992113143",
+        "location_note": "Verified current physical display site. The point provides hospital reporting context; historical cost values are not allocated to this building or campus footprint. It is not a catchment, entrance, participant location or live service-availability claim.",
+        "source_aliases": [
+          "Wrinch Memorial Hospital",
+          "Wrinch Memorial Hospital (B.C.)"
+        ]
+      }
+    }
+  ]
+}

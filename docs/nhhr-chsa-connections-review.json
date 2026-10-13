@@ -1,0 +1,1185 @@
+{
+  "reviewedAt": "2026-10-12",
+  "scope": "Supplementary primary public CHSA scientific measurements; original Zoer metadata lineage remains distinct.",
+  "releaseUrl": "/data/nhhr/chsa-connections.json",
+  "provenanceUrl": "/data/nhhr/chsa-connections-provenance.json",
+  "geometryUrl": "/data/nhhr/boundaries-chsa-2018.geojson",
+  "boundaryIndexUrl": "/data/nhhr/chsa-boundary-index.json",
+  "pipeline": "scripts/prepare-nhhr-chsa-connections.py",
+  "supplementalReviews": [
+    {
+      "datasetId": "CDR2022",
+      "sourceOrigin": "supplemental",
+      "sourceName": "PHSA public source CDR2022",
+      "sourceUrl": "https://communityhealth.phsa.ca/GetTheData/SearchByLocation",
+      "status": "connected",
+      "summary": "Two supplementary views contain 4,453 directly downloaded historical Northern CHSA registry rates and six explicit unreleased latest-period profile cells. All rates retain their native 2018 areas, Total sex category, original fiscal periods, 2011 Canadian Census age standardization and four separate disease definitions.",
+      "mapConnection": "Forty archived Northern CHSA v2018 polygons provide context for 29 publicly listed measured CHSAs, using exact identifiers and names. Geometry is explicitly retrieved from the Community Map of Canada mirror attributed to BC Ministry of Health April 2019, rather than the unavailable historical official ZIP or the current PGMaps v2022 layer. McBride/Valemount remains one historical area. No health-authority values are allocated downward.",
+      "needs": [
+        "A fresh direct official v2018 geometry archive would strengthen geometry provenance; its historical DataBC ZIP currently returns HTTP 404.",
+        "Current CHSA observations would require independently reviewed periods, definitions and matching modern geometry.",
+        "Confidence intervals and condition-specific non-release reasons are not provided by these downloads."
+      ],
+      "cannot": [
+        "Sum standardized rates across CHSAs or conditions, infer raw case counts from population projections, or interpret them as crude resident percentages.",
+        "Assign a 2018 McBride/Valemount rate to later McBride and Valemount polygons separately.",
+        "Treat 29 publicly listed CHSAs as complete Northern population coverage or assign unlisted communities zero.",
+        "Fill absent historical cells with zero or reconstruct unreleased values.",
+        "Claim a transient per-request API topic/indicator GUID is a permanent source dataset ID. CDR2022 is the actual stable source key in the PHSA query contract.",
+        "Use the licensed display mirror for downstream spatial analysis or area-weighted allocation.",
+        "Describe FY2001–2002 to FY2020–2021 as current because retrieval occurred in October 2026.",
+        "Infer trial eligibility, current demand, causality or NHHR impact from these aggregate rates."
+      ],
+      "evidence": [
+        {
+          "kind": "primary-metadata-receipt",
+          "filename": "locations.json",
+          "reviewedRawSha256": "cbfea4108380d52197e504b459eafd9e9a388f9a5269a83e65ab208ca16cf2d7",
+          "semanticSha256": null,
+          "scope": "Direct PHSA public indicator/location metadata"
+        },
+        {
+          "kind": "primary-metadata-receipt",
+          "filename": "topics.json",
+          "reviewedRawSha256": "774a2535478f590e588ec413ce3da251b1b10bb3e0712655524b2b0d95935918",
+          "semanticSha256": "6257e7902085063a4047aa881de20cacf2c062e620e53696ed772d54e8067b5c",
+          "scope": "Direct PHSA public indicator/location metadata"
+        },
+        {
+          "kind": "primary-metadata-receipt",
+          "filename": "general-health-indicators.json",
+          "reviewedRawSha256": "943959bde6ad3d52456dd471bc747d9cd74e7f8baef7262110f47d3715ed2502",
+          "semanticSha256": "8df2badc3cfa7a6be6fd91dd92da20060e18fb8cbd681567b04df13a454dd491",
+          "scope": "Direct PHSA public indicator/location metadata"
+        },
+        {
+          "kind": "primary-metadata-receipt",
+          "filename": "5242-profile.html",
+          "reviewedRawSha256": "d3a55313bae7705b13242c13efcf0b2f8b4dac8f1e5ac0a5ed41ef52360f078f",
+          "semanticSha256": null,
+          "scope": "Source-era profile and geometry verification"
+        },
+        {
+          "kind": "primary-metadata-receipt",
+          "filename": "5246-profile.html",
+          "reviewedRawSha256": "2deda2529f5acd92e4c0be2920f6aa69cd088ccd1fcc957650fc1895813f11a1",
+          "semanticSha256": null,
+          "scope": "Source-era profile and geometry verification"
+        },
+        {
+          "kind": "primary-metadata-receipt",
+          "filename": "chsa-2018-layer.json",
+          "reviewedRawSha256": "259100a7ab31e001784bdd032296b9b2f2a4963fd2ac46f877ff7cd031ce744d",
+          "semanticSha256": null,
+          "scope": "Source-era profile and geometry verification"
+        },
+        {
+          "kind": "primary-metadata-receipt",
+          "filename": "arcgis-item.json",
+          "reviewedRawSha256": "5012716b45c485ea757b9f4fb8552aaa2751f9f964750392868920d6db087458",
+          "semanticSha256": "2208649f03ed553594560a738966e3182cc52ad979c27d113d83994b4c47da05",
+          "scope": "Source-era profile and geometry verification"
+        },
+        {
+          "kind": "primary-metadata-receipt",
+          "filename": "chsa-2018-northern.geojson",
+          "reviewedRawSha256": "1e1eeb46c5a96baa5e3d4615264430a2814c122b8b6f6aa193c891bda531b11e",
+          "semanticSha256": null,
+          "scope": "Source-era profile and geometry verification"
+        },
+        {
+          "kind": "primary-metadata-receipt",
+          "filename": "chsa-2018-northern-display.geojson",
+          "reviewedRawSha256": "d0059321baad18e4def49f8af09186136497365e87f2d707b5cc85b714418c20",
+          "semanticSha256": null,
+          "scope": "Source-era profile and geometry verification"
+        },
+        {
+          "kind": "primary-metadata-receipt",
+          "filename": "geometry-quality.json",
+          "reviewedRawSha256": "4e05f73fe2db4aeb7cdbc599095b72b9ce8cdf72e53d3da02cbab609252ac7e3",
+          "semanticSha256": null,
+          "scope": "Source-era profile and geometry verification"
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5223",
+          "name": "Burns Lake North",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5223",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5223-general-health.csv",
+          "sha256": "3e5ad5806c68dda76b93f9f4baa7ac1e73fe20e0acc169795dc4009db554ab02",
+          "scientificRows": 159,
+          "profileSource": {
+            "code": "5223",
+            "name": "Burns Lake North",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Burns%20Lake%20North.csv",
+            "filename": "5223-profile.csv",
+            "sha256": "833781d264a1f2700c8f68a85b2735c5c69dc0460a64b53dd47c2dc7cadc1cfe"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5222",
+          "name": "Burns Lake South",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5222",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5222-general-health.csv",
+          "sha256": "61f9e7e13a06b44d87c3a8b5c952150386a80f884b0ed0d6fd31c08f7f54f999",
+          "scientificRows": 108,
+          "profileSource": {
+            "code": "5222",
+            "name": "Burns Lake South",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Burns%20Lake%20South.csv",
+            "filename": "5222-profile.csv",
+            "sha256": "389031054cb1684a71c811a432004f754f16fc5d1ff5bbae055e0093e8b0879c"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5312",
+          "name": "Chetwynd",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5312",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5312-general-health.csv",
+          "sha256": "8c3a2e67bf2b87de42b08697f49e56af53325d97a9c9e7a00b7d9b71f877f61e",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5312",
+            "name": "Chetwynd",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Chetwynd.csv",
+            "filename": "5312-profile.csv",
+            "sha256": "f6db653552537800230068d1ec39789595c7603a36719a16723fd5637a421abf"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5311",
+          "name": "Dawson Creek",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5311",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5311-general-health.csv",
+          "sha256": "c5cdf043addacc8667820ca633ab7705c2f92ddb137e642b322b2879a6ab210f",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5311",
+            "name": "Dawson Creek",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Dawson%20Creek.csv",
+            "filename": "5311-profile.csv",
+            "sha256": "d7ac0925aca0ee4580f7de07ab04b0320f2619ac234cbfcf37756cd9c87d6ede"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5331",
+          "name": "Fort Nelson Population Centre",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5331",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5331-general-health.csv",
+          "sha256": "16c5864947ef07e2c794c1d7916fbca1cc1c0ebeeca22b1f8d5e3711f3af73f8",
+          "scientificRows": 159,
+          "profileSource": {
+            "code": "5331",
+            "name": "Fort Nelson Population Centre",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Fort%20Nelson%20Population%20Centre.csv",
+            "filename": "5331-profile.csv",
+            "sha256": "a9a49712a33a07155e31b7060cdf459200f97c95be4c33242a01850aeff8421f"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5321",
+          "name": "Fort St John",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5321",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5321-general-health.csv",
+          "sha256": "c918f4fcdfd6f45f8fc0dd485c9bee79ea32eab80515388cf1c4029a83679695",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5321",
+            "name": "Fort St John",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Fort%20St%20John.csv",
+            "filename": "5321-profile.csv",
+            "sha256": "0b631f608febf1a6f3e41fecfbe798468d78e91ac0d034514a3e37c96a458422"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5234",
+          "name": "Fraser Lake",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5234",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5234-general-health.csv",
+          "sha256": "5f7b1aee645f8843612a1b0e94b4afb9af432bcaff766afdd156be97f9b1788c",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5234",
+            "name": "Fraser Lake",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Fraser%20Lake.csv",
+            "filename": "5234-profile.csv",
+            "sha256": "347db789f3eff0662a359167dbcd4a5008864970df00ce35c96ca8f05ddb9f2d"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5143",
+          "name": "Houston",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5143",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5143-general-health.csv",
+          "sha256": "b7d21edb8b284bd2a0b8f7b9a676a6475fc7bbd51f47ea321fe5daab6dbbc697",
+          "scientificRows": 158,
+          "profileSource": {
+            "code": "5143",
+            "name": "Houston",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Houston.csv",
+            "filename": "5143-profile.csv",
+            "sha256": "d6192797f18c28e033758535cf90c0bfa2ca61915a093ddb28f637b9d1667740"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5322",
+          "name": "Hudson's Hope",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5322",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5322-general-health.csv",
+          "sha256": "64401f21dee891c3c0d35027960a3aa69be170474d946066011484e4b4c2f001",
+          "scientificRows": 129,
+          "profileSource": {
+            "code": "5322",
+            "name": "Hudson's Hope",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Hudson%27s%20Hope.csv",
+            "filename": "5322-profile.csv",
+            "sha256": "901699376581fdd6b68a2076168bff5e80c723f1b28df9a740fac0f1576b5346"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5150",
+          "name": "Kitimat",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5150",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5150-general-health.csv",
+          "sha256": "914594bd72ba6eb1eab5ee42d6261b09b4190296e5bac600af7214164fde4533",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5150",
+            "name": "Kitimat",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Kitimat.csv",
+            "filename": "5150-profile.csv",
+            "sha256": "e571b2d454b39842f7aff8a4b24b483beb761a2cbce258f9cffa3894e7ab89f2"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5247",
+          "name": "Mackenzie",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5247",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5247-general-health.csv",
+          "sha256": "a9672f6799d12c70e453e2f11c4b5108e71ceff9a428c76d2cf6f978ccb343d0",
+          "scientificRows": 159,
+          "profileSource": {
+            "code": "5247",
+            "name": "Mackenzie",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Mackenzie.csv",
+            "filename": "5247-profile.csv",
+            "sha256": "48f0b4bf382b76e56fbb91d2b3dcb9e572e9eeafa10a8985001ce545df7e3d12"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5246",
+          "name": "McBride/Valemount",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5246",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5246-general-health.csv",
+          "sha256": "2e0a274b3e9726edbe2cf1a7f3da4af6231387411cddbdc48c9195ccea0286a9",
+          "scientificRows": 159,
+          "profileSource": {
+            "code": "5246",
+            "name": "McBride/Valemount",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/McBride_Valemount.csv",
+            "filename": "5246-profile.csv",
+            "sha256": "8499a61987fa150c61cd4ea6f2c7b89d8fb1581088c0e6b11290efe8acc8a070"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5323",
+          "name": "Peace River North Rural",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5323",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5323-general-health.csv",
+          "sha256": "677b509ee98b6d799a538bc8f14c273296a2468a8df6edac749d673c5e23429e",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5323",
+            "name": "Peace River North Rural",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Peace%20River%20North%20Rural.csv",
+            "filename": "5323-profile.csv",
+            "sha256": "f2340bf226f3a67b006c4dfe9c712aec6faab616969386be50fd9d43db825c1f"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5314",
+          "name": "Peace River South Rural",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5314",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5314-general-health.csv",
+          "sha256": "ecc1e48d2c87cab1d9485e4dcafebb6304db82eae4e4d3d3e6542ef78bcb0393",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5314",
+            "name": "Peace River South Rural",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Peace%20River%20South%20Rural.csv",
+            "filename": "5314-profile.csv",
+            "sha256": "e3201e6bb8a5194731231f96913cc7620d3d988efe862b3af3af5fcbe9ebe6c3"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5242",
+          "name": "Prince George City - Central",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5242",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5242-general-health.csv",
+          "sha256": "d80b9fb5ea0773d4daf08078a733ca3f02dfd0ea1b82a323e1ecfda2608f3f11",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5242",
+            "name": "Prince George City - Central",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Prince%20George%20City%20-%20Central.csv",
+            "filename": "5242-profile.csv",
+            "sha256": "e39cfe04d02bb34ae542bcfcb7db49f8d14ec05bb594febcf30d055912e642a7"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5241",
+          "name": "Prince George City - North",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5241",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5241-general-health.csv",
+          "sha256": "0c53488c02b37a5fbe0b6ef793e0903162db396b7ebbdffeda875b0daaad5c61",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5241",
+            "name": "Prince George City - North",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Prince%20George%20City%20-%20North.csv",
+            "filename": "5241-profile.csv",
+            "sha256": "6f0a9f11fa5243801ce9731d09cee33f143a26783d3c39f15cfb82c8371a527c"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5243",
+          "name": "Prince George City - Southwest",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5243",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5243-general-health.csv",
+          "sha256": "b4c1b1963dda133335dc4c28706eee7a494e49626bc3de01f07b046da05019e6",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5243",
+            "name": "Prince George City - Southwest",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Prince%20George%20City%20-%20Southwest.csv",
+            "filename": "5243-profile.csv",
+            "sha256": "0b0497e09af06155e70731b15e80f9593f5c6d8498a9ce473c685e80990bd357"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5245",
+          "name": "Prince George North Fraser Rural",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5245",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5245-general-health.csv",
+          "sha256": "dfb023e6c3f52ee2118fe06e7c61cc315fa01ced216bd95151116dbe6323862d",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5245",
+            "name": "Prince George North Fraser Rural",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Prince%20George%20North%20Fraser%20Rural.csv",
+            "filename": "5245-profile.csv",
+            "sha256": "a5f8f62b0b9454065ba9f08f5da94f96be65f6f737526832a6643b2facf9d052"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5244",
+          "name": "Prince George Southwest Rural",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5244",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5244-general-health.csv",
+          "sha256": "bf35277a358996832eb065d64c9e4cf51a686c80b604bbf03e57f53f8cb9ec35",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5244",
+            "name": "Prince George Southwest Rural",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Prince%20George%20Southwest%20Rural.csv",
+            "filename": "5244-profile.csv",
+            "sha256": "8c44b1750832802b3f8778d794b5bc6166a60befadc12180424a1443912eba0d"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5211",
+          "name": "Quesnel City Centre",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5211",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5211-general-health.csv",
+          "sha256": "621688544dc35a9dec7b6bb156900870d4a4e15be891d93b51f1e186a44cb2e7",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5211",
+            "name": "Quesnel City Centre",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Quesnel%20City%20Centre.csv",
+            "filename": "5211-profile.csv",
+            "sha256": "de6f6a185e03f4a3fa4968991e2eaff06b543215ea9ae83d28d83de32c4ed8a6"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5212",
+          "name": "Quesnel Rural",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5212",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5212-general-health.csv",
+          "sha256": "570487725bf0bf02c7b70680465f6070cbb6743fe96a9cd0fbb1d3ca05aeda1b",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5212",
+            "name": "Quesnel Rural",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Quesnel%20Rural.csv",
+            "filename": "5212-profile.csv",
+            "sha256": "e409b82c36c624a2f4d52b8777fd8f0f2d2f9929ecf339818d72a48073ac479f"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5142",
+          "name": "Smithers Rural",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5142",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5142-general-health.csv",
+          "sha256": "57f48652c145c04127d257ea9e1c70cb97b3a37fbdab89a24812e4a9efe03fe5",
+          "scientificRows": 158,
+          "profileSource": {
+            "code": "5142",
+            "name": "Smithers Rural",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Smithers%20Rural.csv",
+            "filename": "5142-profile.csv",
+            "sha256": "bacdbe5211dc079476b31cfa20d488c210b368b9e8687b4865634e93b7dcdb33"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5141",
+          "name": "Smithers Town Centre",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5141",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5141-general-health.csv",
+          "sha256": "2cb95c234b33656cfdfffe56cd7e08097a5a8f4e0c9ff29622c7147421efd4df",
+          "scientificRows": 159,
+          "profileSource": {
+            "code": "5141",
+            "name": "Smithers Town Centre",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Smithers%20Town%20Centre.csv",
+            "filename": "5141-profile.csv",
+            "sha256": "1ffe1d38c1a7f053ce8f1ab56481c16ddb4057eaefc763f5841f1dec13be538c"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5110",
+          "name": "Snow Country",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5110",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5110-general-health.csv",
+          "sha256": "e51cf65bfeb9f6680cdc85c1fdfb9fa25d0454133f28cb923f2fb5216ad80c0a",
+          "scientificRows": 110,
+          "profileSource": {
+            "code": "5110",
+            "name": "Snow Country",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Snow%20Country.csv",
+            "filename": "5110-profile.csv",
+            "sha256": "5cffc2384f34e70352ecd72ac955ee1fd42b958de76d429eadc30149bdc0d8da"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5171",
+          "name": "Terrace City Centre",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5171",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5171-general-health.csv",
+          "sha256": "166f19eea3d7c6ff0381e2ab972b095d27e2c0c0f1748e2f0fecf1a4398645c5",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5171",
+            "name": "Terrace City Centre",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Terrace%20City%20Centre.csv",
+            "filename": "5171-profile.csv",
+            "sha256": "09f74de2a7af3db88c957f1ed682e4cc3db4fb5e93ddd2925483da092e70427a"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5172",
+          "name": "Terrace Rural",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5172",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5172-general-health.csv",
+          "sha256": "9448cfb5acd5cbff0361ad7608359627000b0f56e3116c1bbb3432ba073ee5a0",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5172",
+            "name": "Terrace Rural",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Terrace%20Rural.csv",
+            "filename": "5172-profile.csv",
+            "sha256": "470051670087d955dcf5f75c7761305cde24ea65b95ec5c714b5222a163ddd60"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5313",
+          "name": "Tumbler Ridge",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5313",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5313-general-health.csv",
+          "sha256": "b6a18ac507ef77a8d376cd2f465580da856b9a4d02ccdea65c416069332e8041",
+          "scientificRows": 158,
+          "profileSource": {
+            "code": "5313",
+            "name": "Tumbler Ridge",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Tumbler%20Ridge.csv",
+            "filename": "5313-profile.csv",
+            "sha256": "2417ad67bcfc18637ab2db381a6af705615ca83c3fef1769866e8c5a07c961c5"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5231",
+          "name": "Vanderhoof",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5231",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5231-general-health.csv",
+          "sha256": "7d41ed546b32e636fa4d381126bb3b509488c247dc726cf171a775a6c2c481a2",
+          "scientificRows": 160,
+          "profileSource": {
+            "code": "5231",
+            "name": "Vanderhoof",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Vanderhoof.csv",
+            "filename": "5231-profile.csv",
+            "sha256": "b5fb5c2106b4c5b66af299b277a0a087df074c0cc5fcf0a3d6cf6696e3e01ab1"
+          }
+        },
+        {
+          "kind": "primary-scientific-download",
+          "code": "5232",
+          "name": "Vanderhoof Rural",
+          "queryEndpoint": "https://communityhealth.phsa.ca/GetTheData/SearchByLocationDownload",
+          "query": {
+            "GeoLevel": "CHSA",
+            "Location": "5232",
+            "Topic": "General Health",
+            "ListSubIndicatorName": [
+              "Asthma age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Asthma age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized incidence rate per 1000 population (35+ yrs).CDR2022",
+              "Chronic Obstructive Pulmonary Disease (COPD) age-standardized lifetime prevalence rate per 1000 population (35+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized incidence rate per 1000 population (1+ yrs).CDR2022",
+              "Diabetes Mellitus age-standardized lifetime prevalence rate per 1000 population (1+ yrs).CDR2022",
+              "Hypertension age-standardized incidence rate per 1000 population (20+ yrs).CDR2022",
+              "Hypertension age-standardized lifetime prevalence rate per 1000 population (20+ yrs).CDR2022"
+            ],
+            "IsMostRecentYear": "False",
+            "SubmitType": "Download"
+          },
+          "filename": "5232-general-health.csv",
+          "sha256": "46252fc588c4e04061011a1e25bc5a1d3419f173eabe4a7f955cdca62ec10aeb",
+          "scientificRows": 117,
+          "profileSource": {
+            "code": "5232",
+            "name": "Vanderhoof Rural",
+            "url": "https://communityhealth.phsa.ca/Content/chsa_healthprofiledownloadcsv/Vanderhoof%20Rural.csv",
+            "filename": "5232-profile.csv",
+            "sha256": "6cfb5a9ab64de30f289d069021a3a66218656acf416401e421f5ba0eafcfcdc0"
+          }
+        }
+      ],
+      "views": [
+        "northern-chsa-incidence",
+        "northern-chsa-prevalence"
+      ],
+      "inspectionScope": "Actual PHSA public API location/topic/indicator metadata; 29 location-specific scientific CSV downloads; 29 source-profile CSVs; primary v2018 profiles and map images for 5242/5246; archived 40-polygon Northern display geometry and current PGMaps v2022 comparison. No restricted CHSAs, individual cases or patient records were queried.",
+      "reviewDetails": {
+        "nativeGrain": "CHSA × original indicator × fiscal period × Total",
+        "indicatorCount": 8,
+        "publicNorthernCHSAs": 29,
+        "contextGeometryCount": 40,
+        "originalFiscalPeriods": "FY 2001.2002 through FY 2020.2021",
+        "displayFiscalPeriods": "2001–2002 through 2020–2021",
+        "unit": "Per 1000 population",
+        "standardization": "2011 Canadian Census population",
+        "reportedApiRows": 4453,
+        "explicitLatestDashes": 6,
+        "missingPotentialCells": 187,
+        "historicalAbsentCellsRemaining": 181,
+        "reportedZeros": 0,
+        "latestNumericRates": 226,
+        "profileNumericReconciliations": 226,
+        "profilePrecisionMethod": "Source database one-decimal rates agree with higher-precision profile values within 0.05001; profile numbers are verification evidence and do not replace the source series.",
+        "publicOmissions": "The portal excludes publicly identifiable Indigenous CHSAs. Source CSV omissions remain absent; six latest source profile dashes are retained as null without assigning an unstated suppression reason.",
+        "identifierMethod": "CDR2022 is the stable PHSA source string used in exact download values. Returned topic/indicator GUIDs change per request; semantic metadata checks exclude them but retain original byte receipts.",
+        "geometry": {
+          "sourceUrl": "https://services1.arcgis.com/B6yKvIZqzuOr0jBR/arcgis/rest/services/BC_Community_Health_Service_Areas/FeatureServer/0",
+          "sourceItemId": "8e08f4f3c0974c31a3fc28e4cb8d1a75",
+          "owner": "kpetrasek_exchange",
+          "organization": "Community Map of Canada",
+          "attributedSource": "BC Ministry of Health, April 2019",
+          "boundaryVintage": "2018",
+          "sourceQuery": "https://services1.arcgis.com/B6yKvIZqzuOr0jBR/arcgis/rest/services/BC_Community_Health_Service_Areas/FeatureServer/0/query?where=HA_CD%3D%275%27&outFields=CHSA_CD%2CCHSA_Name%2CLHA_CD%2CLHA_Name%2CHSDA_CD%2CHSDA_Name%2CHA_CD%2CHA_Name&returnGeometry=true&outSR=4326&f=geojson",
+          "licenseUrl": "https://www2.gov.bc.ca/gov/content?id=A519A56BC2BF44E4A008B33FCF527F61",
+          "licenseScope": "Mapping and visualization only. No downstream spatial analysis, area-weighted allocation or population inference.",
+          "legacyOfficialZipStatus": "HTTP 404; not used as verified source",
+          "profileEraVerification": [
+            "All 29 public IDs/names/native hierarchy match the archived Northern geometry.",
+            "PHSA 5242 and 5246 introductions and map images explicitly identify v2018; archive area checks agree with rounded primary descriptions.",
+            "McBride/Valemount code 5246 retains the combined historical area; no later 5248 polygon is added."
+          ],
+          "validation": {
+            "geometryCount": 40,
+            "rawInvalidCount": 0,
+            "displayInvalidCount": 0,
+            "maxAreaChangePct": 0.3074035409445216,
+            "maxAreaChangeCode": "5331",
+            "overlapPairsAbovePoint01Sqm": [],
+            "source5242AreaKm2": 80.30091951131583,
+            "display5242AreaKm2": 80.41372304506423,
+            "sourceBytes": 10550780,
+            "displayBytes": 1364629,
+            "displayGzipBytes": 429851,
+            "sharedBoundaryPairs": 75
+          }
+        }
+      },
+      "relatedZoerDatasetIds": [
+        "b4d850b9-494b-4de6-96c3-2951defae583"
+      ],
+      "reuse": {
+        "portalDataGuidance": "https://communityhealth.phsa.ca/GetTheData",
+        "termsUrl": "https://www.phsa.ca/terms-of-use",
+        "reviewedAt": "2026-10-12",
+        "scope": "The portal provides customizable CSV downloads for users’ own reports and planning. PHSA general terms permit copying/distribution for personal and non-commercial health-care purposes with source/copyright notices, and restrict modification of copied documents/graphics. This release retains numerical facts and source literals, references primary definitions, includes source attribution/URLs in records and exports, and reproduces no portal graphics. Long definition prose is normalized once per indicator, with primary links; no open-government license is claimed for the PHSA text. Geometry has a separate OGL-BC and display-only limitation."
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "collectionId": "DATA-C016",
+      "datasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+      "status": "connected",
+      "summary": "The original collected C016 CSV still contains Northern HA/BC scientific values, with no CHSA observations. Its location catalogue provides related metadata only. The newly retrieved external PHSA CDR2022 measurements are separate supplementary sources, not a recovered Zoer scientific table. Existing disease-rate and research-chair releases retain their own original provenance.",
+      "mapConnection": "Existing collected Northern HA values retain their optional contextual HA join without down-allocation. Related supplementary views independently retrieve native CHSA v2018 measurements and use an explicitly attributed historical display geometry; the C016 location catalogue is not their measurement provenance.",
+      "needs": [
+        "Keep all earlier sibling-source review limits and existing releases; this update only explains the new external CHSA connection."
+      ],
+      "cannot": [
+        "Assign newly retrieved PHSA CHSA measurements to the C016 location catalogue or claim they were scientific rows already collected in Zoer.",
+        "Allocate the original HA measures into CHSA polygons."
+      ],
+      "evidence": [
+        {
+          "file": "fresh-zoer-manifest.json",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/projects/acdd692f-a188-4f85-bb5a-83c48d5c7e82/database/data-spaces/de1fe530-a762-52fa-ba11-d01cc5b344df/manifest",
+          "httpStatus": 200,
+          "sha256": "20db19d165e3e0e9432ab7faa4d9199c8344c9a5366e4d10b9aa4cc675191f9b"
+        },
+        {
+          "file": "fresh-C016.json",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/b4d850b9-494b-4de6-96c3-2951defae583",
+          "httpStatus": 200,
+          "sha256": "2693fb5cf115aa51721b55dadc71dc9cc175e4a608e569d1e8d4fecd43fafa7a"
+        },
+        {
+          "file": "fresh-C049.json",
+          "url": "https://zoer.k8s.overtheedgepaper.ca/api/datasets/91de0066-9343-4d0f-9138-03766520ddc0",
+          "httpStatus": 200,
+          "sha256": "c9426cdc90045fdca5e3bcc41ba9e587b5b711fdf7a9861914c03e958e49212a"
+        },
+        {
+          "kind": "locked-original",
+          "originalFileId": "24577601-3509-4120-bf81-f2984294a632",
+          "tableName": "nhhr_data_c016_be21dde25cba_zip_data_c016__3",
+          "sha256": "5d94d79209f28905f5052d1e326a87dd7dd884dca5404e2954e22870cf87d0d3",
+          "scope": "653 original collected scientific rows reviewed previously; CHSA scientific observations absent."
+        }
+      ],
+      "views": [
+        "northern-chsa-incidence",
+        "northern-chsa-prevalence"
+      ],
+      "inspectionScope": "Fresh authorized Zoer manifest revision 93 and actual C016/C049 dataset APIs; original C016 file/table inventory and previously hash-verified scientific CSV, compared with separately retrieved public PHSA downloads. C049 has no community-health scientific table in its actual API inventory."
+    }
+  ],
+  "checks": [
+    "Offline hash-locked preparation and module/public mirror check passed.",
+    "Fresh public PHSA metadata and all 58 original measurement/profile downloads passed --refresh --check.",
+    "Transient per-request topic/indicator GUIDs and ArcGIS lastViewed are excluded from metadata semantic locks; scientific byte locks remain strict.",
+    "Pinned Mapshaper 0.6.113 reconstruction exactly reproduced the archived 50 m display geometry.",
+    "Independent original/display geometry audit: valid 40/40; zero overlap pairs >0.01 m²; maximum area change 0.3074%; 75 shared-boundary pairs.",
+    "Six focused tests are provided for desktop/mobile central UI verification."
+  ]
+}

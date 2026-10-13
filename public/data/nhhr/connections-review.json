@@ -1,0 +1,1696 @@
+{
+  "reviewedAt": "2026-10-12",
+  "manifestRevision": 93,
+  "scope": "Source connection review for the NHHR Atlas: authorized manifest-led reads, original-file hash checks, bounded public aggregate/relationship releases and independently reviewed geographic identity. Scientific rows come from the listed originals, not the manifest. Directory, cost, site-summary and schedule-event grains overlap; loaded record counts are not independent people, trials or journeys.",
+  "sources": {
+    "prince_george_exact_site_whitelist.csv": {
+      "collectionId": "DATA-C010",
+      "datasetId": "d85b189f-9d24-421c-883c-6b759f081900",
+      "originalFileId": "b1cbb418-b55d-4745-b56d-f9905f36c2d3",
+      "sha256": "8a73850827226665484d5ccccd0354065d4c8d637ffca5ed5647bb3ab0d7b765",
+      "downloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/b1cbb418-b55d-4745-b56d-f9905f36c2d3/download",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c010_9e6f293c5f27_zip_data_c010__3",
+          "sourceRows": 10,
+          "worksheet": "",
+          "sqliteTable": ""
+        }
+      ]
+    },
+    "prince_george_final_validated_whitelist.csv": {
+      "collectionId": "DATA-C010",
+      "datasetId": "d85b189f-9d24-421c-883c-6b759f081900",
+      "originalFileId": "72546d16-6f7b-4e1f-a3c8-9f966bd5fa04",
+      "sha256": "f8f079ecca4997571004f2afb8c907375e592ed5305701600c5fcaa509f0aafa",
+      "downloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/72546d16-6f7b-4e1f-a3c8-9f966bd5fa04/download",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c010_9e6f293c5f27_zip_data_c010__4",
+          "sourceRows": 10,
+          "worksheet": "",
+          "sqliteTable": ""
+        }
+      ]
+    },
+    "facilities.csv": {
+      "collectionId": "DATA-C072",
+      "datasetId": "a2987ed6-8b5d-4548-aab0-10f962545539",
+      "originalFileId": "e81873f1-8e9f-4b87-8cac-99eb080d0d53",
+      "sha256": "4408d8cf9f5b03d279f58f463df63a920d2611325a438b9925835ef3dceccf4a",
+      "downloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/e81873f1-8e9f-4b87-8cac-99eb080d0d53/download",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c072_8ecfe860a47c_zip_data_c072__16",
+          "sourceRows": 61,
+          "worksheet": "",
+          "sqliteTable": ""
+        }
+      ]
+    },
+    "health_authority_wait_times.csv": {
+      "collectionId": "DATA-C072",
+      "datasetId": "a2987ed6-8b5d-4548-aab0-10f962545539",
+      "originalFileId": "d09fd7d5-d771-41df-984d-9873e97f1628",
+      "sha256": "4378bc2a00e7a01aa7612d09a5157aafc7a497b5109c3e0ca69dec371c6b7140",
+      "downloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/d09fd7d5-d771-41df-984d-9873e97f1628/download",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c072_8ecfe860a47c_zip_data_c072_health",
+          "sourceRows": 1483,
+          "worksheet": "",
+          "sqliteTable": ""
+        }
+      ]
+    },
+    "bc_patient_travel.db": {
+      "collectionId": "DATA-C069",
+      "datasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "originalFileId": "935d03b3-f4e1-47da-bcb3-eaefaa288be7",
+      "sha256": "67fa1a28f8ea4228369194d76aa34d12dd7adc324c68a0d19ec5aea8f4e01674",
+      "downloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/935d03b3-f4e1-47da-bcb3-eaefaa288be7/download",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_bc_pat",
+          "sourceRows": 286,
+          "worksheet": "",
+          "sqliteTable": "nh_connections_schedule"
+        },
+        {
+          "tableName": "nhhr_data_c069_cd7719dbe25d_zip_data_c069__2",
+          "sourceRows": 5,
+          "worksheet": "",
+          "sqliteTable": "travel_cost_benchmarks"
+        }
+      ]
+    },
+    "health-workforce-canada-2020-2024-overview-data-tables-en.xlsx": {
+      "collectionId": "DATA-C040",
+      "datasetId": "50a3dad1-f1e4-413d-9519-356f1089c53f",
+      "originalFileId": "d6f3ff54-a38e-4ce0-a855-e36f874fda46",
+      "sha256": "14b57157647e5171971e53777020a617450a5922be6fb46eb39f3fb1234f7bcf",
+      "downloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/d6f3ff54-a38e-4ce0-a855-e36f874fda46/download",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c040_1500a4a87266_zip_data_c040__52",
+          "sourceRows": 55,
+          "worksheet": "Table 1",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_1500a4a87266_zip_data_c040__53",
+          "sourceRows": 202,
+          "worksheet": "Table 2",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_1500a4a87266_zip_data_c040__54",
+          "sourceRows": 203,
+          "worksheet": "Table 3",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_1500a4a87266_zip_data_c040__55",
+          "sourceRows": 17762,
+          "worksheet": "Table 4",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_1500a4a87266_zip_data_c040__56",
+          "sourceRows": 203,
+          "worksheet": "Table 5",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_1500a4a87266_zip_data_c040__57",
+          "sourceRows": 204,
+          "worksheet": "Table 6",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_1500a4a87266_zip_data_c040__58",
+          "sourceRows": 202,
+          "worksheet": "Table 7",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_44e1fe2852a7_zip_data_c040_health",
+          "sourceRows": 202,
+          "worksheet": "Table 8",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_44e1fe2852a7_zip_data_c040__2",
+          "sourceRows": 203,
+          "worksheet": "Table 9",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_44e1fe2852a7_zip_data_c040__3",
+          "sourceRows": 203,
+          "worksheet": "Table 10",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_44e1fe2852a7_zip_data_c040__4",
+          "sourceRows": 203,
+          "worksheet": "Table 11",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_44e1fe2852a7_zip_data_c040__5",
+          "sourceRows": 204,
+          "worksheet": "Table 12",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_44e1fe2852a7_zip_data_c040__6",
+          "sourceRows": 206,
+          "worksheet": "Table 13",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_44e1fe2852a7_zip_data_c040__7",
+          "sourceRows": 206,
+          "worksheet": "Table 14",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_44e1fe2852a7_zip_data_c040__8",
+          "sourceRows": 16466,
+          "worksheet": "Table 15",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_44e1fe2852a7_zip_data_c040__9",
+          "sourceRows": 83,
+          "worksheet": "Table 16",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_44e1fe2852a7_zip_data_c040__10",
+          "sourceRows": 222,
+          "worksheet": "Table 17",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_44e1fe2852a7_zip_data_c040__11",
+          "sourceRows": 17,
+          "worksheet": "Methodology notes",
+          "sqliteTable": ""
+        }
+      ]
+    },
+    "comparator_clinical_condition_domain_summary.csv": {
+      "collectionId": "DATA-C037",
+      "datasetId": "a308df09-ac89-4591-980f-624a4908a9b6",
+      "originalFileId": "ac6c958e-45ff-4dc1-828a-3ac2bd3cc04a",
+      "sha256": "c53a2738c462388d5b76453f9951bac3825adfd2df180f266f1b1d3b555d9674",
+      "downloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/ac6c958e-45ff-4dc1-828a-3ac2bd3cc04a/download",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c037_69b3f9e8dcdc_zip_data_c037_compar",
+          "sourceRows": 77,
+          "worksheet": "",
+          "sqliteTable": ""
+        }
+      ]
+    },
+    "clinicaltrials_v2_studies_sample_city_prince_george.json": {
+      "collectionId": "DATA-C042",
+      "datasetId": "570ebb49-f165-4d5a-89e8-78e1122ab485",
+      "originalFileId": "2abf3657-bc8c-45af-ace4-9fbd5fc0e59d",
+      "sha256": "7eb9bf9d61e02e6634a30f6f108e74e6f86dccd408b32a0ce8300376ff22423e",
+      "downloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/2abf3657-bc8c-45af-ace4-9fbd5fc0e59d/download",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c042_9a0d86bdb6f3_zip_data_c042__9",
+          "sourceRows": 25,
+          "worksheet": "",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c042_9a0d86bdb6f3_zip_data_c042__10",
+          "sourceRows": 1,
+          "worksheet": "",
+          "sqliteTable": ""
+        }
+      ]
+    },
+    "nursing-in-canada-2015-2024-data-tables-en.xlsx": {
+      "collectionId": "DATA-C040",
+      "datasetId": "50a3dad1-f1e4-413d-9519-356f1089c53f",
+      "originalFileId": "e397fa11-b96a-454e-b640-0be14dbdc269",
+      "sha256": "a734d082d9ad06235b1dc000aa791054eec1ed7919a96eb01be197a3b01d1386",
+      "downloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/e397fa11-b96a-454e-b640-0be14dbdc269/download",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__24",
+          "sourceRows": 91,
+          "worksheet": "Table 1",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__25",
+          "sourceRows": 101,
+          "worksheet": "Table 2",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__26",
+          "sourceRows": 43787,
+          "worksheet": "Table 3",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__27",
+          "sourceRows": 1331,
+          "worksheet": "Table 4",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__28",
+          "sourceRows": 56,
+          "worksheet": "Table 5",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__29",
+          "sourceRows": 52,
+          "worksheet": "Table 6",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__30",
+          "sourceRows": 52,
+          "worksheet": "Table 7",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__31",
+          "sourceRows": 53,
+          "worksheet": "Table 8",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__32",
+          "sourceRows": 57,
+          "worksheet": "Table 9",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__33",
+          "sourceRows": 22120,
+          "worksheet": "Table 10",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__34",
+          "sourceRows": 349,
+          "worksheet": "Table 11",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__35",
+          "sourceRows": 346,
+          "worksheet": "Table 12",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__36",
+          "sourceRows": 69,
+          "worksheet": "Table 13",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__37",
+          "sourceRows": 47,
+          "worksheet": "Table 14",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__38",
+          "sourceRows": 64,
+          "worksheet": "Table 15",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__39",
+          "sourceRows": 33,
+          "worksheet": "Table 16",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__40",
+          "sourceRows": 23,
+          "worksheet": "Table 17",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__41",
+          "sourceRows": 100,
+          "worksheet": "Table 18",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__42",
+          "sourceRows": 88195,
+          "worksheet": "Definitions",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__43",
+          "sourceRows": 26262,
+          "worksheet": "Definitions",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__44",
+          "sourceRows": 65790,
+          "worksheet": "Definitions",
+          "sqliteTable": ""
+        },
+        {
+          "tableName": "nhhr_data_c040_0efa8996e66d_zip_data_c040__45",
+          "sourceRows": 13,
+          "worksheet": "Contact info",
+          "sqliteTable": ""
+        }
+      ]
+    },
+    "local-health-area-population.csv": {
+      "collectionId": "DATA-C051",
+      "datasetId": "f7b55b36-aa3e-4279-82ce-c0c1c2198f7e",
+      "originalFileId": "3c77000a-c5f3-402b-b49d-6297bec87680",
+      "sha256": "6f4f632fbda6bc9fd1fae9885e1efec8a81d390a3e04050028249c0d92b1fd41",
+      "downloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/3c77000a-c5f3-402b-b49d-6297bec87680/download",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c051_dbaa1911251e_zip_data_c051_local_",
+          "sourceRows": 17010,
+          "worksheet": ""
+        }
+      ]
+    },
+    "cihi_cshs_bc_2026-05.xlsx": {
+      "collectionId": "DATA-C073",
+      "datasetId": "8502dc29-352e-4bb5-80a4-1d7b14cd843d",
+      "originalFileId": "d8140f05-d1fb-4f9e-84c2-d8e14d110324",
+      "sha256": "7caa4b328a8cd82447bbfce62f7ffa447d54e5a73284be0ab477fa780c768953",
+      "downloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/d8140f05-d1fb-4f9e-84c2-d8e14d110324/download",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c073_2b844a747e06_zip_data_c073__2",
+          "sourceRows": 418,
+          "worksheet": "Sheet1",
+          "sqliteTable": ""
+        }
+      ]
+    },
+    "prince_george_clinical_trials_coded.csv": {
+      "collectionId": "DATA-C019",
+      "datasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "originalFileId": "0681a2cb-fb75-4a25-b75f-65302f729518",
+      "sha256": "c062d1f662c498b3e4712b801ce34106b9b94bae2a86d9ef1d9f1849981c1290",
+      "downloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/0681a2cb-fb75-4a25-b75f-65302f729518/download",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c019_abdefd338a78_zip_data_c019_prince",
+          "sourceRows": 10,
+          "worksheet": "",
+          "sqliteTable": ""
+        }
+      ]
+    },
+    "nh_connections_schedule.csv": {
+      "collectionId": "DATA-C069",
+      "datasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "originalFileId": "67188a5a-5c39-43bf-8ad9-ac8a21ca1201",
+      "sha256": "16cfbf195d21100219bc7244f501dc4cfbda0c103a06bdcf82eec47b5fe1a07b",
+      "downloadUrl": "https://zoer.k8s.overtheedgepaper.ca/api/files/67188a5a-5c39-43bf-8ad9-ac8a21ca1201/download",
+      "tables": [
+        {
+          "tableName": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_nh_con",
+          "sourceRows": 286,
+          "worksheet": "",
+          "sqliteTable": ""
+        }
+      ]
+    }
+  },
+  "boundaryEvidence": [
+    {
+      "path": "PGMaps/public/data/boundaries/BCMoH/health_authorities.json",
+      "featureCount": 5,
+      "capturedAt": "2025-10-19T01:39:59.240Z",
+      "propertyFields": [
+        "FEATURE_AREA_SQM",
+        "FEATURE_CODE",
+        "FEATURE_LENGTH_M",
+        "HLTH_AUTHORITY_CODE",
+        "HLTH_AUTHORITY_ID",
+        "HLTH_AUTHORITY_NAME",
+        "HLTH_HAB_SYSID",
+        "OBJECTID",
+        "SE_ANNO_CAD_DATA"
+      ],
+      "sha256": "c1f6e7f95f1690d3eb7b40efee9dbeb22cffd71c7a3097f1967d6dfa9d1f78f6",
+      "note": "Capture timestamp is not an asserted boundary effective date"
+    },
+    {
+      "path": "PGMaps/public/data/boundaries/BCMoH/health_service_delivery_areas.json",
+      "featureCount": 16,
+      "capturedAt": "2025-10-19T01:40:01.939Z",
+      "propertyFields": [
+        "FEATURE_AREA_SQM",
+        "FEATURE_CODE",
+        "FEATURE_LENGTH_M",
+        "HLTH_AUTHORITY_CODE",
+        "HLTH_AUTHORITY_ID",
+        "HLTH_AUTHORITY_NAME",
+        "HLTH_HSDA_SYSID",
+        "HLTH_SERVICE_DLVR_AREA_CODE",
+        "HLTH_SERVICE_DLVR_AREA_ID",
+        "HLTH_SERVICE_DLVR_AREA_NAME",
+        "OBJECTID",
+        "SE_ANNO_CAD_DATA"
+      ],
+      "sha256": "9c94cbb48847dd6ca63226aa56af8c8ff9c71af6fb2236bd4dff6362f99f05e7",
+      "note": "Capture timestamp is not an asserted boundary effective date"
+    },
+    {
+      "path": "PGMaps/public/data/boundaries/BCMoH/local_health_areas.json",
+      "featureCount": 89,
+      "capturedAt": "2025-10-19T01:40:05.398Z",
+      "propertyFields": [
+        "FEATURE_AREA_SQM",
+        "FEATURE_CODE",
+        "FEATURE_LENGTH_M",
+        "HISTORICAL_LOCAL_HLTH_AREA",
+        "HLTH_AUTHORITY_CODE",
+        "HLTH_AUTHORITY_ID",
+        "HLTH_AUTHORITY_NAME",
+        "HLTH_LHA_SYSID",
+        "HLTH_SERVICE_DLVR_AREA_CODE",
+        "HLTH_SERVICE_DLVR_AREA_ID",
+        "HLTH_SERVICE_DLVR_AREA_NAME",
+        "LOCAL_HLTH_AREA_CODE",
+        "LOCAL_HLTH_AREA_NAME",
+        "OBJECTID",
+        "SE_ANNO_CAD_DATA"
+      ],
+      "sha256": "6f0938af3151d2c2ae27ce1f6f0cf7145e618d89be45c8f3f8826a664a943330",
+      "note": "Capture timestamp is not an asserted boundary effective date"
+    },
+    {
+      "path": "PGMaps/public/data/boundaries/BCMoH/community_health_service_areas.json",
+      "featureCount": 231,
+      "capturedAt": "2025-10-19T01:40:08.354Z",
+      "propertyFields": [
+        "CHSA_POPULATION_CENSUS",
+        "CHSA_URBAN_RURAL_CLASS",
+        "CMNTY_HLTH_SERV_AREA_CODE",
+        "CMNTY_HLTH_SERV_AREA_NAME",
+        "FEATURE_AREA_SQM",
+        "FEATURE_LENGTH_M",
+        "HLTH_AUTHORITY_CODE",
+        "HLTH_AUTHORITY_ID",
+        "HLTH_AUTHORITY_NAME",
+        "HLTH_CHSA_SYSID",
+        "HLTH_SERVICE_DLVR_AREA_CODE",
+        "HLTH_SERVICE_DLVR_AREA_ID",
+        "HLTH_SERVICE_DLVR_AREA_NAME",
+        "LOCAL_HLTH_AREA_CODE",
+        "LOCAL_HLTH_AREA_NAME",
+        "OBJECTID",
+        "SE_ANNO_CAD_DATA"
+      ],
+      "sha256": "3d885de1acdf1dcdd002918d0db040afdbb69398abafbe27c09c44514e551586",
+      "note": "Capture timestamp is not an asserted boundary effective date"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "hospital-place-map",
+      "title": "Verified hospital directory and facility-cost reporting context",
+      "sourceFiles": [
+        "facilities.csv",
+        "cihi_cshs_bc_2026-05.xlsx"
+      ],
+      "grain": "57 alias-collapsed directory entries retaining 61 original IDs; separate 363 original reporting-entity/fiscal-year cost observations.",
+      "fields": [
+        "facility_name",
+        "source_facility_names",
+        "source_facility_ids",
+        "location_code",
+        "site_count",
+        "source_facility_name",
+        "fiscal_year",
+        "cost_per_weighted_case",
+        "source_cost_raw",
+        "cost_status",
+        "location_note"
+      ],
+      "join": "Exact reviewed directory/cost aliases to independently verified physical display sites. Directory: 54 physical entries and 3 unlocated descriptions. Union registry: 84 physical display points. No clinical values are combined.",
+      "view": "Hospital directory presence map/table and facility/fiscal-year cost map/chart/table; historic values keep source reporting identity and period.",
+      "readiness": "Implemented 57 directory rows and 363 facility-cost rows after checks of original hashes, source cells, aliases, official identities/addresses and returned OSM evidence. All 61 directory IDs remain; 32 Suppressed costs remain null; FY2024–2025 has 72 source rows.",
+      "risks": [
+        "Greater Victoria Hospitals is an aggregate group, while Surgery Centre and B.C. Cancer Agency do not independently establish a unique physical site in this source; all three stay unlocated.",
+        "PGMaps registry candidates require independent official identity/address and returned-coordinate evidence; normalized aliases alone are not coordinate proof.",
+        "A current display point provides hospital reporting context, not a historical building or catchment. Nats’oojeh replacement opened 14 January 2025; source fiscal periods before and across opening remain reporting-unit observations, without geolocating costs at the replacement building.",
+        "32 source Suppressed values remain numeric nulls. Missing fiscal records are not created as zero. Costs are not summed or averaged; weighted-case denominators are unavailable for a new aggregate.",
+        "The separate Northern authority wait data uses one complete source run; repeated scrape runs are not added and percentiles are not averaged."
+      ],
+      "status": "implemented_with_unresolved_labels",
+      "releaseFiles": [
+        "hospital-facilities.json",
+        "hospital-facilities-provenance.json",
+        "locations-hospitals.geojson",
+        "locations-hospitals.README.md"
+      ],
+      "unreleasedOpportunity": "Facility-specific procedure/wait maps require actual compatible facility/procedure observations. The released Northern procedure table is an authority aggregate; its percentiles cannot be attached to individual hospitals."
+    },
+    {
+      "id": "ha-hierarchy",
+      "title": "Health-authority drill-down and consistent boundary joins",
+      "sourceFiles": [
+        "health_authority_wait_times.csv",
+        "local-health-area-population.csv"
+      ],
+      "grain": "HA/HSDA/LHA/CHSA boundary code",
+      "fields": [
+        "HLTH_AUTHORITY_CODE",
+        "HLTH_SERVICE_DLVR_AREA_CODE",
+        "LOCAL_HLTH_AREA_CODE",
+        "CMNTY_HLTH_SERV_AREA_CODE"
+      ],
+      "join": "PGMaps explicit hierarchical code properties;5HA polygons,16HSDA,89LHA,231CHSA",
+      "view": "Select authority and highlight its child regions; preserve source level when switching layers",
+      "readiness": "All geometry and code hierarchy verified locally; current atlas already has5HA assets",
+      "risks": [
+        "Do not downscale authority-level cost or waiting-time values to LHAs/CHSAs.",
+        "Northern Health source label matches polygonNorthern code5. Island/VancouverIsland aliases need explicit mapping.",
+        "Geometry capture dates2025-10-19 are not confirmed effective dates."
+      ]
+    },
+    {
+      "id": "population-age-structure",
+      "title": "Northern LHA age structure",
+      "sourceFiles": [
+        "local-health-area-population.csv"
+      ],
+      "grain": "17NorthernLHAs×years2020–2025, oneGender=T totalrow per area/year",
+      "fields": [
+        "Region",
+        "Region.Name",
+        "Year",
+        "Type",
+        "Gender",
+        "Total",
+        "0..89",
+        "90+"
+      ],
+      "join": "SourceRegion 3digitcode→existing vetted LHA code; direct source-age partitions, not population summaryDATA-C031",
+      "view": "LHA age structure maps, paired age65+share and count maps with separate scales and synchronized camera, and trends.",
+      "readiness": "Implemented after validating all102 exact age partitions, names/types/totals and source/public mirrors; full manifest-linked refresh check passed.",
+      "risks": [
+        "2025TypeProjection must remain visible.",
+        "Gender=T already totals the population; F+M+T duplicates it.",
+        "Older population share is demographic context, not inferred utilization or disease prevalence."
+      ]
+    },
+    {
+      "id": "regional-nursing",
+      "title": "Nursing workforce alongside physician supply",
+      "sourceFiles": [
+        "nursing-in-canada-2015-2024-data-tables-en.xlsx"
+      ],
+      "grain": "Professional type×healthregion×year2015–2024",
+      "fields": [
+        "Table11:type of professional,province/territory,healthregion,2015..2024",
+        "Table12:direct-care professionals per10,000"
+      ],
+      "join": "BC HSDA names→reviewed16HSDA code map; source hasNorthernInterior/Northeast/Northwest, not numeric codes",
+      "view": "HSDA direct-care nursing maps, profession selector, regional trend lines; compare with physician supply in separate measures",
+      "readiness": "Implemented120rows after independent verification of all240 numeric cells. One type/year is selected for mapping; publisher rates are not recalculated.",
+      "risks": [
+        "Suppressions,missing indicators and footnotes must remain missing, not zero.",
+        "Direct-care nurse measure differs from licensed nurse supply and physician headcounts.",
+        "Nursing source rates are per10,000; physician rates per100,000.",
+        "Avoid adding national/provincial totals to regional childrows.",
+        "Publisher source terms require attribution."
+      ]
+    },
+    {
+      "id": "provincial-professions",
+      "title": "BC profession mix and workforce age profile",
+      "sourceFiles": [
+        "health-workforce-canada-2020-2024-overview-data-tables-en.xlsx"
+      ],
+      "grain": "ProvinceBC×professionaltype×year2020–2024",
+      "fields": [
+        "Table11:Typeofprofessional,Year,Count,Per100000,Female%,Age<30%,Age30–59%,Age60+%"
+      ],
+      "join": "ProvinceBC only; institution/HA/HSDA matches are not supplied by this workbook",
+      "view": "Workforce profession comparison and age-profile smallmultiples alongside northern physician/nurse panels",
+      "readiness": "Actual table11 headers and data verified; exampleaudiologists2024count332,rate5.8per100000",
+      "risks": [
+        "NoNorthern/HSDA rows in this overview workbook; do not create northern maps from provincial values.",
+        "Some sourceprofession/year valuesareem-dash missing; do notreplacewith0.",
+        "Supply countsare not researchstaff,FTE,vacancyorretentioneffects."
+      ]
+    },
+    {
+      "id": "clinical-condition-mix",
+      "title": "Comparator trial condition mix",
+      "sourceFiles": [
+        "comparator_clinical_condition_domain_summary.csv"
+      ],
+      "grain": "7comparatorcities×codedconditiondomain:77rows",
+      "fields": [
+        "query_city",
+        "condition_domain",
+        "studies",
+        "recruiting_now"
+      ],
+      "join": "Exact query_city→existing clinical-city dataset/entity crosswalk; no polygon or institution catchment inference",
+      "view": "Condition composition charts and one-domain reviewed city point maps, with source count/share selectors and CSV.",
+      "readiness": "Implemented 77 original rows across 7 cities and 13 exact codes after original hash and full-city reconciliation checks. Shares retain the full city denominator and historical status labels.",
+      "risks": [
+        "Study site may occurinmultiplecities; never suminto uniquenationaltrialcount.",
+        "Domaincoding isNHHR-derived and must retaincoder/sourceprovenance.",
+        "Recruitingstatusdescribeshistoricalsnapshot,notcurrentavailability.",
+        "RestrictedC037sourcepackage requires explicit-column release of this aggregate only."
+      ]
+    },
+    {
+      "id": "clinical-facility-crosswalk",
+      "title": "Verified Prince George study sites and original NCT relationships",
+      "sourceFiles": [
+        "prince_george_exact_site_whitelist.csv",
+        "prince_george_final_validated_whitelist.csv",
+        "prince_george_clinical_trials_coded.csv",
+        "clinicaltrials_v2_studies_sample_city_prince_george.json"
+      ],
+      "grain": "4 site/category summaries and 10 deduplicated original NCT/site-category pairs, covering the same selected historical portfolio.",
+      "fields": [
+        "nct_id",
+        "source_facility_name",
+        "facility_name",
+        "location_code",
+        "source_validation_tier",
+        "overall_status",
+        "condition_domain",
+        "snapshot_date",
+        "registry_url",
+        "distinct_studies",
+        "recruiting_snapshot_studies",
+        "unknown_status_studies"
+      ],
+      "join": "Exact original NCT IDs reconcile C010 exact/final whitelists to C019 coded study records; reviewed BC Cancer/BCCA aliases collapse to one independently verified Prince George facility. No trial/patient counts are allocated to health-area polygons.",
+      "view": "Three physical facility points with distinct-source-study counts and original study-site evidence table; one exact broad regional description stays unassigned.",
+      "readiness": "Implemented 3 physical sites: 9 original study-site pairs, plus 1 unlocated regional pair. BC Cancer has 7 studies (5 historical RECRUITING and 2 ACTIVE_NOT_RECRUITING), YMCA has 1 RECRUITING, Surgery has 1 UNKNOWN, and the regional record has 1 UNKNOWN. Status snapshot: 29 April 2026.",
+      "risks": [
+        "C042 contains 25 sampled study records, with only 3 whitelist NCT IDs; its larger query total and continuation token do not define a loaded portfolio.",
+        "All 3 reviewed Prince George raw geoPoints reuse latitude 53.9166, longitude -122.75301. Those city-centroid points are rejected as facility coordinates.",
+        "The broad 13 individual First Nations source description retains null location_code, no point, an explicit reason and its NCT04105088 link; no communities or boundaries are inferred.",
+        "The Vancouver B.C. Cancer Agency PGMaps record is a different site and is never substituted for Prince George aliases.",
+        "Overall study status is a historical source field, not verified local recruitment, current availability, enrollment, eligibility or capacity.",
+        "Summary and relationship rows cover the same NCT IDs and must not be summed together; personal contact/participant/investigator fields are excluded."
+      ],
+      "status": "implemented_with_unlocated_regional_record",
+      "releaseFiles": [
+        "trial-sites.json",
+        "trial-sites-provenance.json",
+        "locations-trial-sites.geojson",
+        "locations-trial-sites.README.md"
+      ]
+    },
+    {
+      "id": "patient-travel-routes",
+      "title": "Reviewed schedule stop references and schematic source connections",
+      "sourceFiles": [
+        "bc_patient_travel.db",
+        "nh_connections_schedule.csv"
+      ],
+      "grain": "286 original route/service-day/sequence stop events; separate 58 reference-location groups preserve the same source event totals.",
+      "fields": [
+        "route_slug",
+        "service_day",
+        "sequence",
+        "source_leg",
+        "stop_event",
+        "stop_time",
+        "event_id",
+        "event_count",
+        "location_code",
+        "location_precision",
+        "unmatched_reason",
+        "source_url",
+        "captured_at"
+      ],
+      "join": "Exact reviewed source stop-label aliases to 56 public reference points. Preserve 184 town references, 96 facility/address references and 6 unresolved event references; lines follow source order and split at unresolved events.",
+      "view": "Source-pattern map with route/service-day filters, town/facility precision and the original event table; 58 location groups and 28 schematic segments across 26 recorded legs.",
+      "readiness": "Implemented 286 source events, exactly reconciled between original CSV and read-only SQLite table: 280 located and 6 unresolved. The 56 reference points and 28 schematic segments retain source order, collapse adjacent repeated coordinates and require all segment events to remain visible.",
+      "risks": [
+        "Town representatives are not boarding addresses; facility/address references do not establish exact boarding doors or historical pickup positions.",
+        "Bundled UHNBC/KL and Terrace hospital/medical-centre source labels receive town context only, not an assumed single facility.",
+        "Mackenzie Junction and Small River (Rest Area) remain unlocated, accounting for 6 original events.",
+        "Source direction strings encode service-day text, including asterisks. Sequence resets preserve source legs; arrival/departure rows remain separate events.",
+        "Connections are schematic source-order links, not actual road routes, distances, speeds or measured journey times.",
+        "Source event counts are not passengers, unique trips, bus departures or service frequency; no observed NHHR travel benefit is inferred.",
+        "A filtered segment is retained only when all its event_ids remain visible; summaries and underlying event records overlap."
+      ],
+      "status": "implemented_with_town_precision_and_unresolved_stops",
+      "releaseFiles": [
+        "travel-network.json",
+        "travel-network-provenance.json",
+        "locations-travel-stops.geojson",
+        "travel-route-connections.geojson",
+        "locations-travel-stops.README.md"
+      ]
+    },
+    {
+      "id": "local-transit-access",
+      "title": "Local transit context around validated care/research sites",
+      "sourceFiles": [
+        "facilities.csv"
+      ],
+      "grain": "PGMapsGTFSstop/service-dateandroute-shape×verifiedhospitalpoint",
+      "fields": [
+        "PGMapscitypg/transit_bus_stops.geojson:StopID,geometry",
+        "GTFSsummary:stopId,weekdayTrips,serviceSpanHours",
+        "GTFSroutes:routeId,shapeId,geometry"
+      ],
+      "join": "CitystopStopID→GTFSsummary stopId;spatialwalk-accessfromverifiedhospital/sitepointusingexistingPGMapstravelmodel",
+      "view": "LocalPGbusstop/routeoverlay,walk-to-stopcontext,andservicepatternstovettedresearchfacilities",
+      "readiness": "PGMapsassets/modelavailable;53route/shapefeaturesverified. RequireschosenGTFSreference-dateandvalidatedfacilitypoints.",
+      "risks": [
+        "BCTransitlocalserviceisnotNorthernHealthConnections;no sharedstopIDswithC069.",
+        "ScheduledGTFSreference-dateisnotlivefrequency orpatientusage.",
+        "Walking/routingmodelcoverage/isolatednetworkconditionsmust bepreserved."
+      ]
+    }
+  ],
+  "implemented": [
+    {
+      "datasetId": "clinical-city",
+      "geography": "city",
+      "join": "Exact query_city to seven verified OSM representative place points",
+      "pointRegistry": "locations-clinical-cities.geojson",
+      "records": 7,
+      "release": "atlas-snapshot.json",
+      "releaseUrl": "atlas-snapshot.json",
+      "provenance": "source-provenance.json",
+      "provenanceUrl": "source-provenance.json",
+      "sourceDatasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "sourceTable": "nhhr_data_c019_abdefd338a78_zip_data_c019_compar"
+    },
+    {
+      "datasetId": "hospital-stay-costs",
+      "geography": "ha",
+      "join": "Exact source_region labels to five territorial HA polygon codes; province and PHSA remain unmatched",
+      "crosswalk": "crosswalk-health-authority.json",
+      "records": 34,
+      "release": "additional-evidence.json",
+      "releaseUrl": "additional-evidence.json",
+      "provenance": "additional-evidence-provenance.json",
+      "provenanceUrl": "additional-evidence-provenance.json",
+      "sourceDatasetId": "8502dc29-352e-4bb5-80a4-1d7b14cd843d",
+      "sourceTable": "nhhr_recovered_data_c073_20261007_zip_cihi_2"
+    },
+    {
+      "datasetId": "research-income",
+      "geography": "institution",
+      "join": "Verified CAUBO institution code to exact comparator and representative campus point",
+      "provenance": "research-income-provenance.json",
+      "records": 28,
+      "release": "research-income.json",
+      "releaseUrl": "research-income.json",
+      "provenanceUrl": "research-income-provenance.json",
+      "sourceDatasetId": "a90c9d46-801e-4a6d-9b04-b3835def053a",
+      "sourceTable": "nhhr_recovered_data_c052_20261007_zip_caubo_avai"
+    },
+    {
+      "datasetId": "population-lha-ages",
+      "geography": "lha",
+      "join": "Original three-digit LHA code; original ages0–89 plus90+ partition once with Gender=T",
+      "provenance": "population-ages-provenance.json",
+      "records": 102,
+      "release": "population-ages.json",
+      "releaseUrl": "population-ages.json",
+      "provenanceUrl": "population-ages-provenance.json",
+      "sourceDatasetId": "f7b55b36-aa3e-4279-82ce-c0c1c2198f7e",
+      "sourceTable": "nhhr_data_c051_dbaa1911251e_zip_data_c051_local_",
+      "pairedMap": "Same source LHA/year rows in share_65_plus (%) and population_65_plus (people); separate scales, synchronized camera; PGMaps original LHA codes retained."
+    },
+    {
+      "datasetId": "nursing-workforce-northern",
+      "geography": "hsda",
+      "join": "Exact source region/type/year join between count and rate worksheets, then explicit reviewed native HSDA code",
+      "provenance": "nursing-workforce-provenance.json",
+      "records": 120,
+      "release": "nursing-workforce.json",
+      "releaseUrl": "nursing-workforce.json",
+      "provenanceUrl": "nursing-workforce-provenance.json",
+      "sourceDatasetId": "50a3dad1-f1e4-413d-9519-356f1089c53f",
+      "sourceTable": "nhhr_data_c040_0efa8996e66d_zip_data_c040__34 + nhhr_data_c040_0efa8996e66d_zip_data_c040__35"
+    },
+    {
+      "datasetId": "hospital-facilities",
+      "geography": "facility",
+      "join": "Exact reviewed source aliases collapse 61 original directory IDs to 57 entries: 54 verified physical entries and 3 unlocated descriptions.",
+      "records": 57,
+      "release": "hospital-facilities.json",
+      "releaseUrl": "hospital-facilities.json",
+      "provenance": "hospital-facilities-provenance.json",
+      "provenanceUrl": "hospital-facilities-provenance.json",
+      "sourceDatasetId": "a2987ed6-8b5d-4548-aab0-10f962545539",
+      "sourceTable": "nhhr_data_c072_8ecfe860a47c_zip_data_c072__16",
+      "pointRegistry": "locations-hospitals.geojson"
+    },
+    {
+      "datasetId": "hospital-facility-costs",
+      "geography": "facility",
+      "join": "Original reporting entity/fiscal year to reviewed current display-site code; cost values remain separate and historical site limits explicit.",
+      "records": 363,
+      "release": "hospital-facilities.json",
+      "releaseUrl": "hospital-facilities.json",
+      "provenance": "hospital-facilities-provenance.json",
+      "provenanceUrl": "hospital-facilities-provenance.json",
+      "sourceDatasetId": "8502dc29-352e-4bb5-80a4-1d7b14cd843d",
+      "sourceTable": "nhhr_data_c073_2b844a747e06_zip_data_c073__2",
+      "pointRegistry": "locations-hospitals.geojson"
+    },
+    {
+      "datasetId": "trial-sites",
+      "geography": "facility",
+      "join": "Exact physical-site aliases join 3 independently verified points; one broad regional source description stays unlocated.",
+      "records": 4,
+      "release": "trial-sites.json",
+      "releaseUrl": "trial-sites.json",
+      "provenance": "trial-sites-provenance.json",
+      "provenanceUrl": "trial-sites-provenance.json",
+      "sourceDatasetId": "d85b189f-9d24-421c-883c-6b759f081900",
+      "sourceTable": "nhhr_data_c010_9e6f293c5f27_zip_data_c010__4",
+      "pointRegistry": "locations-trial-sites.geojson"
+    },
+    {
+      "datasetId": "trial-site-evidence",
+      "geography": "none",
+      "join": "Original NCT ID and source site-category pair; no separate runtime geographic aggregation.",
+      "records": 10,
+      "release": "trial-sites.json",
+      "releaseUrl": "trial-sites.json",
+      "provenance": "trial-sites-provenance.json",
+      "provenanceUrl": "trial-sites-provenance.json",
+      "sourceDatasetId": "d85b189f-9d24-421c-883c-6b759f081900",
+      "sourceTable": "nhhr_data_c010_9e6f293c5f27_zip_data_c010__4"
+    },
+    {
+      "datasetId": "travel-stop-events",
+      "geography": "route",
+      "join": "Exact reviewed stop labels and source event order; opt-in sum of event_count only at reference points; connections schematic.",
+      "records": 286,
+      "release": "travel-network.json",
+      "releaseUrl": "travel-network.json",
+      "provenance": "travel-network-provenance.json",
+      "provenanceUrl": "travel-network-provenance.json",
+      "sourceDatasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "sourceTable": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_nh_con",
+      "pointRegistry": "locations-travel-stops.geojson",
+      "schematicConnections": "travel-route-connections.geojson"
+    },
+    {
+      "datasetId": "travel-stop-locations",
+      "geography": "stop",
+      "join": "Reviewed reference-location groups preserve the same 286 source event records; town/facility precision is retained.",
+      "records": 58,
+      "release": "travel-network.json",
+      "releaseUrl": "travel-network.json",
+      "provenance": "travel-network-provenance.json",
+      "provenanceUrl": "travel-network-provenance.json",
+      "sourceDatasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "sourceTable": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_nh_con",
+      "pointRegistry": "locations-travel-stops.geojson"
+    },
+    {
+      "datasetId": "clinical-condition-mix",
+      "geography": "city",
+      "join": "Exact source city/domain with full-city fixed denominator; reviewed city point for one selected domain. Original77ragged rows/13labels retained.",
+      "pointRegistry": "locations-clinical-cities.geojson",
+      "records": 77,
+      "release": "clinical-condition-mix.json",
+      "releaseUrl": "clinical-condition-mix.json",
+      "provenance": "clinical-condition-mix-provenance.json",
+      "provenanceUrl": "clinical-condition-mix-provenance.json",
+      "sourceDatasetId": "a308df09-ac89-4591-980f-624a4908a9b6",
+      "sourceTable": "nhhr_data_c037_69b3f9e8dcdc_zip_data_c037_compar"
+    },
+    {
+      "datasetId": "trial-facility-conditions",
+      "geography": "facility",
+      "join": "Exact city/NCT + reviewed physical-site alias + original NHHR condition code; full reviewed facility denominator.",
+      "records": 171,
+      "release": "trial-facility-conditions.json",
+      "releaseUrl": "trial-facility-conditions.json",
+      "provenance": "trial-facility-conditions-provenance.json",
+      "provenanceUrl": "trial-facility-conditions-provenance.json",
+      "sourceDatasetId": "a308df09-ac89-4591-980f-624a4908a9b6",
+      "sourceTable": "nhhr_data_c037_69b3f9e8dcdc_zip_data_c037__17",
+      "pointRegistry": "locations-comparator-trial-sites.geojson"
+    },
+    {
+      "datasetId": "trial-facility-coverage",
+      "geography": "city",
+      "join": "Same original city/NCT cohort; count at least one verified site separately from no verified site and partial named-site coverage.",
+      "records": 7,
+      "release": "trial-facility-conditions.json",
+      "releaseUrl": "trial-facility-conditions.json",
+      "provenance": "trial-facility-conditions-provenance.json",
+      "provenanceUrl": "trial-facility-conditions-provenance.json",
+      "sourceDatasetId": "a308df09-ac89-4591-980f-624a4908a9b6",
+      "sourceTable": "nhhr_data_c037_69b3f9e8dcdc_zip_data_c037__17",
+      "pointRegistry": "locations-clinical-cities.geojson"
+    },
+    {
+      "datasetId": "publications",
+      "geography": "institution",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 40,
+      "release": "atlas-snapshot.json",
+      "releaseUrl": "atlas-snapshot.json",
+      "provenance": "source-provenance.json",
+      "provenanceUrl": "source-provenance.json",
+      "sourceDatasetId": "f2e77e60-9bc1-439a-80c1-d169e07caa97",
+      "sourceTable": "nhhr_data_c030_1cbe254422d8_zip_data_c030_moneti"
+    },
+    {
+      "datasetId": "cihr-payments",
+      "geography": "institution",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 39,
+      "release": "atlas-snapshot.json",
+      "releaseUrl": "atlas-snapshot.json",
+      "provenance": "source-provenance.json",
+      "provenanceUrl": "source-provenance.json",
+      "sourceDatasetId": "ef462b97-d355-49b8-be02-a742c86d5101",
+      "sourceTable": "nhhr_data_c025_75f1ce919e34_zip_data_c025_moneti"
+    },
+    {
+      "datasetId": "nserc-awards",
+      "geography": "institution",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 36,
+      "release": "atlas-snapshot.json",
+      "releaseUrl": "atlas-snapshot.json",
+      "provenance": "source-provenance.json",
+      "provenanceUrl": "source-provenance.json",
+      "sourceDatasetId": "2ab4d668-f4f7-4179-8718-7344d5f6337f",
+      "sourceTable": "nhhr_data_c029_a4ff9b067490_zip_data_c029_moneti"
+    },
+    {
+      "datasetId": "clinical-pg",
+      "geography": "city",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 10,
+      "release": "atlas-snapshot.json",
+      "releaseUrl": "atlas-snapshot.json",
+      "provenance": "source-provenance.json",
+      "provenanceUrl": "source-provenance.json",
+      "sourceDatasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "sourceTable": "nhhr_data_c019_abdefd338a78_zip_data_c019_prince"
+    },
+    {
+      "datasetId": "physicians-hsda",
+      "geography": "hsda",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 16,
+      "release": "atlas-snapshot.json",
+      "releaseUrl": "atlas-snapshot.json",
+      "provenance": "source-provenance.json",
+      "provenanceUrl": "source-provenance.json",
+      "sourceDatasetId": "a308df09-ac89-4591-980f-624a4908a9b6",
+      "sourceTable": "nhhr_data_c037_69b3f9e8dcdc_zip_data_c037_bc_hea"
+    },
+    {
+      "datasetId": "population-lha",
+      "geography": "lha",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 102,
+      "release": "atlas-snapshot.json",
+      "releaseUrl": "atlas-snapshot.json",
+      "provenance": "source-provenance.json",
+      "provenanceUrl": "source-provenance.json",
+      "sourceDatasetId": "f7b55b36-aa3e-4279-82ce-c0c1c2198f7e",
+      "sourceTable": "nhhr_data_c051_dbaa1911251e_zip_data_c051_local_"
+    },
+    {
+      "datasetId": "travel-schedule",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 18,
+      "release": "atlas-snapshot.json",
+      "releaseUrl": "atlas-snapshot.json",
+      "provenance": "source-provenance.json",
+      "provenanceUrl": "source-provenance.json",
+      "sourceDatasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "sourceTable": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_nh_con"
+    },
+    {
+      "datasetId": "travel-benchmarks",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 5,
+      "release": "atlas-snapshot.json",
+      "releaseUrl": "atlas-snapshot.json",
+      "provenance": "source-provenance.json",
+      "provenanceUrl": "source-provenance.json",
+      "sourceDatasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "sourceTable": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_travel"
+    },
+    {
+      "datasetId": "travel-scenarios",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 3,
+      "release": "atlas-snapshot.json",
+      "releaseUrl": "atlas-snapshot.json",
+      "provenance": "source-provenance.json",
+      "provenanceUrl": "source-provenance.json",
+      "sourceDatasetId": "eb3407f1-61f3-4902-9828-3533cd3933fa",
+      "sourceTable": "nhhr_data_c032_19eddbcc0199_zip_data_c032_moneti"
+    },
+    {
+      "datasetId": "evidence-gaps",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 13,
+      "release": "atlas-snapshot.json",
+      "releaseUrl": "atlas-snapshot.json",
+      "provenance": "source-provenance.json",
+      "provenanceUrl": "source-provenance.json",
+      "sourceDatasetId": "960a9b75-413f-4f1c-9fc6-19e11fe04707",
+      "sourceTable": "nhhr_data_c019_abdefd338a78_zip_data_c019_valida"
+    },
+    {
+      "datasetId": "population-review",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 5,
+      "release": "atlas-snapshot.json",
+      "releaseUrl": "atlas-snapshot.json",
+      "provenance": "source-provenance.json",
+      "provenanceUrl": "source-provenance.json",
+      "sourceDatasetId": "361da856-2537-4052-93e6-3c962ba4fa8e",
+      "sourceTable": "nhhr_data_c024_a23bd96e4c11_zip_data_c024_moneti"
+    },
+    {
+      "datasetId": "surgical-waits-northern",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 99,
+      "release": "additional-evidence.json",
+      "releaseUrl": "additional-evidence.json",
+      "provenance": "additional-evidence-provenance.json",
+      "provenanceUrl": "additional-evidence-provenance.json",
+      "sourceDatasetId": "a2987ed6-8b5d-4548-aab0-10f962545539",
+      "sourceTable": "nhhr_data_c072_8ecfe860a47c_zip_data_c072_health"
+    },
+    {
+      "datasetId": "historical-cancer-incidence",
+      "geography": "hr2015",
+      "join": "Exact original 2015 DGUID/HR_UID pair → official December 2015 Northern health-region polygon; BC benchmark remains unallocated.",
+      "records": 572,
+      "release": "public-expansion.json",
+      "releaseUrl": "public-expansion.json",
+      "provenance": "public-expansion-provenance.json",
+      "provenanceUrl": "public-expansion-provenance.json",
+      "sourceDatasetId": "91de0066-9343-4d0f-9138-03766520ddc0",
+      "sourceTable": "nhhr_data_c049_5712d9e6c720_zip_data_c049_statca ; nhhr_data_c049_5712d9e6c720_zip_data_c049__24 ; nhhr_data_c049_5712d9e6c720_zip_data_c049__25 ; nhhr_data_c049_5712d9e6c720_zip_data_c049__26 ; nhhr_data_c049_5712d9e6c720_zip_data_c049__27 ; nhhr_data_c049_5712d9e6c720_zip_data_c049__28"
+    },
+    {
+      "datasetId": "research-chairs",
+      "geography": "institution",
+      "join": "Exact institution identity → reviewed representative campus point, including verified McMaster main campus; institution-wide values are not allocated to campus projects.",
+      "records": 8,
+      "release": "public-expansion.json",
+      "releaseUrl": "public-expansion.json",
+      "provenance": "public-expansion-provenance.json",
+      "provenanceUrl": "public-expansion-provenance.json",
+      "sourceDatasetId": "b4d850b9-494b-4de6-96c3-2951defae583",
+      "sourceTable": "nhhr_data_c016_be21dde25cba_zip_data_c016_canada ; nhhr_data_c016_be21dde25cba_zip_data_c016__9"
+    },
+    {
+      "datasetId": "cfi-projects-by-year",
+      "geography": "institution",
+      "join": "Exact institution identity → reviewed representative campus point, including verified McMaster main campus; institution-wide values are not allocated to campus projects.",
+      "records": 185,
+      "release": "research-expansion.json",
+      "releaseUrl": "research-expansion.json",
+      "provenance": "research-expansion-provenance.json",
+      "provenanceUrl": "research-expansion-provenance.json",
+      "sourceDatasetId": "48f45689-ac76-4d21-927a-c07f55936d5c",
+      "sourceTable": "nhhr_data_c039_76ba4aac51b4_zip_data_c039_cfi_fu"
+    },
+    {
+      "datasetId": "cfi-projects-total",
+      "geography": "institution",
+      "join": "Exact institution identity → reviewed representative campus point, including verified McMaster main campus; institution-wide values are not allocated to campus projects.",
+      "records": 7,
+      "release": "research-expansion.json",
+      "releaseUrl": "research-expansion.json",
+      "provenance": "research-expansion-provenance.json",
+      "provenanceUrl": "research-expansion-provenance.json",
+      "sourceDatasetId": "48f45689-ac76-4d21-927a-c07f55936d5c",
+      "sourceTable": "nhhr_data_c039_76ba4aac51b4_zip_data_c039_cfi_fu"
+    },
+    {
+      "datasetId": "sshrc-payments",
+      "geography": "institution",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 6,
+      "release": "research-expansion.json",
+      "releaseUrl": "research-expansion.json",
+      "provenance": "research-expansion-provenance.json",
+      "provenanceUrl": "research-expansion-provenance.json",
+      "sourceDatasetId": "15e93e14-a3b8-4cfd-9fa1-7bf2a458d3dd",
+      "sourceTable": "nhhr_data_c057_bd5c39fcfedf_zip_data_c057_sshrc_"
+    },
+    {
+      "datasetId": "pubmed-affiliation-counts",
+      "geography": "institution",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 7,
+      "release": "research-expansion.json",
+      "releaseUrl": "research-expansion.json",
+      "provenance": "research-expansion-provenance.json",
+      "provenanceUrl": "research-expansion-provenance.json",
+      "sourceDatasetId": "439beff1-5c30-4965-9ad7-eb074d7a0fe5",
+      "sourceTable": "nhhr_data_c050_d8e66fe66c4c_zip_data_c050__8; nhhr_data_c050_d8e66fe66c4c_zip_data_c050__9; nhhr_data_c050_d8e66fe66c4c_zip_data_c050__10; nhhr_data_c050_d8e66fe66c4c_zip_data_c050__11; nhhr_data_c050_d8e66fe66c4c_zip_data_c050__12; nhhr_data_c050_d8e66fe66c4c_zip_data_c050__13; nhhr_data_c050_d8e66fe66c4c_zip_data_c050__14"
+    },
+    {
+      "datasetId": "research-expenditures",
+      "geography": "institution",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 14,
+      "release": "research-expansion.json",
+      "releaseUrl": "research-expansion.json",
+      "provenance": "research-expansion-provenance.json",
+      "provenanceUrl": "research-expansion-provenance.json",
+      "sourceDatasetId": "6eb40441-1a52-4331-8512-66e09ee2c11d",
+      "sourceTable": "nhhr_data_c017_efb036e5cd0b_zip_data_c017_caubo_; nhhr_data_c017_efb036e5cd0b_zip_data_c017__2; nhhr_data_c017_efb036e5cd0b_zip_data_c017__3"
+    },
+    {
+      "datasetId": "publications-history",
+      "geography": "institution",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 70,
+      "release": "research-expansion.json",
+      "releaseUrl": "research-expansion.json",
+      "provenance": "research-expansion-provenance.json",
+      "provenanceUrl": "research-expansion-provenance.json",
+      "sourceDatasetId": "75bb40c3-48ba-4bb8-98f0-e018b20211b5",
+      "sourceTable": "nhhr_data_c047_089865d008ed_zip_data_c047__15; nhhr_data_c047_089865d008ed_zip_data_c047__17; nhhr_data_c047_089865d008ed_zip_data_c047__19; nhhr_data_c047_089865d008ed_zip_data_c047__21; nhhr_data_c047_089865d008ed_zip_data_c047__23; nhhr_data_c047_089865d008ed_zip_data_c047__25; nhhr_data_c047_089865d008ed_zip_data_c047__27"
+    },
+    {
+      "datasetId": "census-housing-cd",
+      "geography": "cd",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 29,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "47c4df52-1822-4901-8c8e-79b393df33a2",
+      "sourceTable": "nhhr_data_c058_04_380b82eac47e_zip_data_c058_sta"
+    },
+    {
+      "datasetId": "census-housing-csd",
+      "geography": "csd",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 7,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "47c4df52-1822-4901-8c8e-79b393df33a2",
+      "sourceTable": "nhhr_data_c058_04_380b82eac47e_zip_data_c0_16"
+    },
+    {
+      "datasetId": "municipal-population",
+      "geography": "csd",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 105,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "4493b28c-a2cb-4f43-acb0-af8e41c78655",
+      "sourceTable": "nhhr_data_c038_b55c49f75219_zip_data_c038__8"
+    },
+    {
+      "datasetId": "regional-employment-annual",
+      "geography": "er",
+      "join": "Six exact native 2021 ER identifiers plus one verified union of North Coast 5960 and Nechako 5970; original blank identifiers retained and display key explicitly derived.",
+      "records": 126,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "dd9af696-6c3c-4ca9-8422-81b6f7dafa04",
+      "sourceTable": "nhhr_data_c058_02_a4ad33cce41f_zip_data_c058_sta"
+    },
+    {
+      "datasetId": "regional-labour-monthly",
+      "geography": "er",
+      "join": "Six exact native 2021 ER identifiers plus one verified union of North Coast 5960 and Nechako 5970; original blank identifiers retained and display key explicitly derived.",
+      "records": 189,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "9b51fa8b-718c-46e0-adf0-2db6e5146493",
+      "sourceTable": "nhhr_data_c006_650184c7c02d_zip_data_c006__28"
+    },
+    {
+      "datasetId": "regional-labour-archived",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 15,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "d9fbd74a-c144-4159-a7c8-cd391f6892d0",
+      "sourceTable": "nhhr_data_c064_90f41f1a12d3_zip_data_c064__5"
+    },
+    {
+      "datasetId": "municipal-business-locations",
+      "geography": "csd",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 19,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "fac35376-dd9b-4da6-b116-15a7cccca987",
+      "sourceTable": "nhhr_data_c058_0b4bd09657e5_zip_data_c058__9"
+    },
+    {
+      "datasetId": "bc-business-locations",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 27,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "e81d39fa-0062-4d02-998e-6838f8f8a7d2",
+      "sourceTable": "nhhr_data_c058_05_7352dcd19b88_zip_data_c058_sta"
+    },
+    {
+      "datasetId": "bc-hourly-wages",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 36,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "3931c38d-6b56-4e32-aceb-ba75aa36eefb",
+      "sourceTable": "nhhr_data_c062_f960fd46c107_zip_data_c062__12"
+    },
+    {
+      "datasetId": "canada-retirement-age",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 11,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "221dfa8d-f503-497d-9145-6029e6262c4d",
+      "sourceTable": "nhhr_data_c060_b401325c1311_zip_data_c060__2"
+    },
+    {
+      "datasetId": "bc-interprovincial-migration",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 10,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "f63c0663-2cf5-4fa9-ac73-106deff517f7",
+      "sourceTable": "nhhr_data_c066_4c41a9b8318d_zip_data_c066__2"
+    },
+    {
+      "datasetId": "bc-graduate-income",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 64,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "b8042ed8-330f-4801-afa7-7aaf3a19b534",
+      "sourceTable": "nhhr_data_c076_69668490d1c5_zip_data_c076_educat"
+    },
+    {
+      "datasetId": "bc-export-destinations",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 10,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "6878b326-4a1b-4b62-afd1-c5aa4f67aa1c",
+      "sourceTable": "nhhr_data_c003_b415c809039a_zip_data_c003_exp_to"
+    },
+    {
+      "datasetId": "bc-housing-starts",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 4,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "04cd612c-106a-414f-8623-c71df1177b49",
+      "sourceTable": "nhhr_data_c004_199a7618814b_zip_data_c004__4"
+    },
+    {
+      "datasetId": "bc-housing-benchmarks",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 22,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "4282a002-97e3-4788-b2c1-684526f83f28",
+      "sourceTable": "nhhr_data_c005_95c506c57a9d_zip_data_c005__2"
+    },
+    {
+      "datasetId": "vancouver-construction-index",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 36,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "28a8d35a-8ac3-4f99-9eb7-fe94123d0dcb",
+      "sourceTable": "nhhr_data_c058_03_8625f832904c_zip_data_c058_sta"
+    },
+    {
+      "datasetId": "canada-output-coefficients",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 15,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "82004dc5-379b-4338-91ed-c8dc922c93d5",
+      "sourceTable": "nhhr_data_c058_06_950fa56a48b6_zip_data_c0_3"
+    },
+    {
+      "datasetId": "bc-output-coefficients",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 30,
+      "release": "regional-expansion.json",
+      "releaseUrl": "regional-expansion.json",
+      "provenance": "regional-expansion-provenance.json",
+      "provenanceUrl": "regional-expansion-provenance.json",
+      "sourceDatasetId": "f9e22a7a-3e25-4e65-9d72-63d0c024fc5e",
+      "sourceTable": "nhhr_data_c058_07_1eb20f312715_zip_data_c0_30"
+    },
+    {
+      "datasetId": "allied-health-northern",
+      "geography": "hsda",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 90,
+      "release": "service-expansion.json",
+      "releaseUrl": "service-expansion.json",
+      "provenance": "service-expansion-provenance.json",
+      "provenanceUrl": "service-expansion-provenance.json",
+      "sourceDatasetId": "0c0cb2db-d9ab-43bf-8e1b-e023141f493f",
+      "sourceTable": "nhhr_data_c053_c7f8384ce39d_zip_data_c053__31; nhhr_data_c053_c7f8384ce39d_zip_data_c053__32; nhhr_data_c053_c7f8384ce39d_zip_data_c053__52; nhhr_data_c053_c7f8384ce39d_zip_data_c053__53; nhhr_data_c053_a67f59c1bbfe_zip_data_c053__13; nhhr_data_c053_a67f59c1bbfe_zip_data_c053__14"
+    },
+    {
+      "datasetId": "health-occupation-wages",
+      "geography": "er",
+      "join": "Exact reviewed source identity/native code; source units, periods and missing values retained. See collection review for compatibility and scope.",
+      "records": 30,
+      "release": "service-expansion.json",
+      "releaseUrl": "service-expansion.json",
+      "provenance": "service-expansion-provenance.json",
+      "provenanceUrl": "service-expansion-provenance.json",
+      "sourceDatasetId": "79b129e1-414b-4b85-9d63-66ab334081fc",
+      "sourceTable": "nhhr_data_c044_aea184fa6a6c_zip_data_c044_jobban; nhhr_data_c044_aea184fa6a6c_zip_data_c044__2"
+    },
+    {
+      "datasetId": "bc-hospital-staffing",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 35,
+      "release": "service-expansion.json",
+      "releaseUrl": "service-expansion.json",
+      "provenance": "service-expansion-provenance.json",
+      "provenanceUrl": "service-expansion-provenance.json",
+      "sourceDatasetId": "0c0cb2db-d9ab-43bf-8e1b-e023141f493f",
+      "sourceTable": "nhhr_data_c053_1a1ed09f34ea_zip_data_c053__44"
+    },
+    {
+      "datasetId": "bc-health-occupation-vacancies",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 120,
+      "release": "service-expansion.json",
+      "releaseUrl": "service-expansion.json",
+      "provenance": "service-expansion-provenance.json",
+      "provenanceUrl": "service-expansion-provenance.json",
+      "sourceDatasetId": "0c0cb2db-d9ab-43bf-8e1b-e023141f493f",
+      "sourceTable": "nhhr_data_c053_1a1ed09f34ea_zip_data_c053__47"
+    },
+    {
+      "datasetId": "bc-sector-wages",
+      "geography": "none",
+      "join": "Charts and records at original source grain; no compatible point/polygon allocation.",
+      "records": 58,
+      "release": "service-expansion.json",
+      "releaseUrl": "service-expansion.json",
+      "provenance": "service-expansion-provenance.json",
+      "provenanceUrl": "service-expansion-provenance.json",
+      "sourceDatasetId": "bc5f8ecd-98b3-4185-ada5-ceb71adcbf00",
+      "sourceTable": "nhhr_data_c059_f19e4b04bb77_zip_data_c059__5"
+    }
+  ],
+  "releaseCoverage": {
+    "datasetCount": 57,
+    "boundedSourceRows": 3667,
+    "shortEvidenceStories": 30,
+    "guidedStoryRoutes": 7,
+    "guidedChapters": 47,
+    "interpretation": "Overlapping source grains; do not add supporting records and summaries as independent people, trials or journeys.",
+    "snapshots": [
+      {
+        "file": "atlas-snapshot.json",
+        "releaseUrl": "atlas-snapshot.json",
+        "datasets": 12,
+        "sourceRows": 294
+      },
+      {
+        "file": "additional-evidence.json",
+        "releaseUrl": "additional-evidence.json",
+        "datasets": 2,
+        "sourceRows": 133
+      },
+      {
+        "file": "population-ages.json",
+        "releaseUrl": "population-ages.json",
+        "datasets": 1,
+        "sourceRows": 102
+      },
+      {
+        "file": "research-income.json",
+        "releaseUrl": "research-income.json",
+        "datasets": 1,
+        "sourceRows": 28
+      },
+      {
+        "file": "nursing-workforce.json",
+        "releaseUrl": "nursing-workforce.json",
+        "datasets": 1,
+        "sourceRows": 120
+      },
+      {
+        "file": "trial-sites.json",
+        "releaseUrl": "trial-sites.json",
+        "datasets": 2,
+        "sourceRows": 14
+      },
+      {
+        "file": "hospital-facilities.json",
+        "releaseUrl": "hospital-facilities.json",
+        "datasets": 2,
+        "sourceRows": 420
+      },
+      {
+        "file": "travel-network.json",
+        "releaseUrl": "travel-network.json",
+        "datasets": 2,
+        "sourceRows": 344
+      },
+      {
+        "file": "clinical-condition-mix.json",
+        "releaseUrl": "clinical-condition-mix.json",
+        "datasets": 1,
+        "sourceRows": 77
+      },
+      {
+        "file": "trial-facility-conditions.json",
+        "releaseUrl": "trial-facility-conditions.json",
+        "datasets": 2,
+        "sourceRows": 178
+      },
+      {
+        "file": "public-expansion.json",
+        "releaseUrl": "public-expansion.json",
+        "datasets": 2,
+        "sourceRows": 580
+      },
+      {
+        "file": "research-expansion.json",
+        "releaseUrl": "research-expansion.json",
+        "datasets": 6,
+        "sourceRows": 289
+      },
+      {
+        "file": "regional-expansion.json",
+        "releaseUrl": "regional-expansion.json",
+        "datasets": 18,
+        "sourceRows": 755
+      },
+      {
+        "file": "service-expansion.json",
+        "releaseUrl": "service-expansion.json",
+        "datasets": 5,
+        "sourceRows": 333
+      }
+    ]
+  },
+  "basemaps": {
+    "atlas": {
+      "default": "streets",
+      "options": [
+        "streets",
+        "dark"
+      ],
+      "format": "vector",
+      "rasterSources": 0
+    },
+    "campus": "Original imagery options retained."
+  },
+  "locationCoverage": {
+    "hospital": {
+      "originalDirectoryIds": 61,
+      "releasedDirectoryEntries": 57,
+      "retainedDirectoryIds": 61,
+      "verifiedDirectoryEntries": 54,
+      "unmappedDirectoryEntries": 3,
+      "facilityCostRows": 363,
+      "sourceFacilityCostEntities": 73,
+      "mappedCostRows": 363,
+      "unmappedCostRows": 0,
+      "suppressedCostValues": 32,
+      "physicalRegistryPoints": 84
+    },
+    "trial": {
+      "whitelistedDistinctStudies": 10,
+      "physicalFacilities": 3,
+      "locatedStudySitePairs": 9,
+      "unlocatedStudySitePairs": 1,
+      "sourceSiteCategories": 4,
+      "summaryValues": [
+        7,
+        1,
+        1,
+        1
+      ],
+      "historicalRecruitingStudyCounts": [
+        5,
+        1,
+        0,
+        0
+      ],
+      "unknownStudyStatuses": 2
+    },
+    "travel": {
+      "sourceEvents": 286,
+      "sourceRoutes": 12,
+      "sourcePatterns": 18,
+      "sourceLegs": 26,
+      "mappedEvents": 280,
+      "unmappedEvents": 6,
+      "eventPrecision": {
+        "town": 184,
+        "facility": 96,
+        "unmatched": 6
+      },
+      "reviewedReferencePoints": 56,
+      "drawnSchematicSegments": 28,
+      "unmatchedStopLabels": [
+        "Mackenzie Junction",
+        "Small River (Rest Area)"
+      ]
+    },
+    "comparatorTrialFacilities": {
+      "verifiedPhysicalPoints": 25,
+      "outsidePrinceGeorge": 22,
+      "acceptedStudySiteRelationships": 4401,
+      "sourceCityStudyRecords": 15028,
+      "recordsWithVerifiedFacility": 4208,
+      "noVerifiedFacilityRecords": 10820,
+      "partlyLocatedRecords": 200,
+      "scope": "Finite reviewed aliases; physical-site counts are not additive across cities/facilities. Locations describe named representative facilities, not study rooms or every historical visit."
+    }
+  },
+  "publicReviewReferences": [
+    "healthAreas",
+    "hospitalFacilities",
+    "trialSites",
+    "travelReferences",
+    "comparatorTrialFacilities",
+    "pgmapsAudit",
+    "catalogue-review.md",
+    "catalogue-review.json",
+    "catalogue-review-evidence.json",
+    "regional-boundaries-provenance.json",
+    "public-expansion-provenance.json",
+    "research-expansion-provenance.json",
+    "regional-expansion-provenance.json",
+    "service-expansion-provenance.json",
+    "mapping-connections-provenance.json"
+  ],
+  "catalogueReview": {
+    "collections": 85,
+    "sourceCollectionsWithViews": 41,
+    "sourceViews": 57,
+    "review": "catalogue-review.json",
+    "evidence": "catalogue-review-evidence.json",
+    "boundaryProposals": "catalogue-review.md"
+  },
+  "mappingFollowup": {
+    "reviewedAt": "2026-10-12",
+    "receipt": "mapping-connections-provenance.json",
+    "historicalNorthernHealthPolygons": 3,
+    "lfsReportingPolygons": 7,
+    "representativeInstitutionPoints": 9,
+    "remaining": "Native CHSA measurement values/periods/codes; older 2016 labour geography remains chart-only."
+  }
+}

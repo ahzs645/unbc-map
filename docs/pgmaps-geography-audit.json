@@ -1,0 +1,2074 @@
+{
+  "schema": "pgmaps-nhhr-geography-audit-v1",
+  "reviewedAt": "2026-10-12",
+  "readOnlySourceRoot": "/Users/ahmadjalil/github/PGMaps",
+  "scope": "Local read-only geography/demographic/Indigenous/geocoding audit. No source edits, refreshes, publication, contacts or participant data. Environmental and clinical/infrastructure families are covered by parallel fragments.",
+  "statusDefinitions": {
+    "used": "Actually consumed in Atlas",
+    "partial": "Some hierarchy or method is used, remainder is not",
+    "unused": "Local data/geometry exists but Atlas does not load it",
+    "source-only": "Metadata/candidates/pilots/experimental or unreviewed derivations; not an Atlas-ready analytical release",
+    "unavailable": "Genuine expected geometry/data absent in inspected release"
+  },
+  "summary": {
+    "recordCount": 30,
+    "byStatus": {
+      "used": 3,
+      "partial": 2,
+      "unused": 15,
+      "source-only": 8,
+      "unavailable": 2
+    },
+    "keyFindings": [
+      "Atlas HA/HSDA/LHA copies preserve all5/16/89 source geometries and hashes.",
+      "CHSA hierarchy is used but231 CHSA polygons lack Atlas geography support.",
+      "Bridge retains533 unresolved DBs/78,916 residents; resident shares cannot allocate arbitrary indicators.",
+      "Existing province parents match all28 CT/13 CSD attribute IDs; city-only assets cover23/1.",
+      "BC DB chunk manifest absent; compact DB population/dwelling file is7077/7077 null.",
+      "Official ecumene uses ECUID, notDAUID.",
+      "FPCC/Native Land existence is not permission or governance authority."
+    ]
+  },
+  "nhhrComparedEvidence": [
+    "src/atlas/geography.ts",
+    "src/atlas/types.ts",
+    "src/atlas/snapshots",
+    "public/data/nhhr/boundaries-provenance.json",
+    "public/data/nhhr/crosswalk-health-hierarchy.json",
+    "public/data/nhhr/population-ages-provenance.json",
+    "public/data/nhhr/travel-network-provenance.json",
+    "public/data/nhhr/hospital-facilities-provenance.json"
+  ],
+  "records": [
+    {
+      "id": "bc-health-ha",
+      "label": "Health authorities",
+      "family": "health boundaries",
+      "status": "used",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/simplified/health_authorities.json",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/health_authorities.json"
+      ],
+      "availability": {
+        "local": true,
+        "actualFeatures": 5,
+        "verified": "All NHHR geometry/code sets equal PGMaps source; hashes match Atlas provenance"
+      },
+      "grain": "One territorial health area",
+      "geometry": "Polygon/MultiPolygon with original Ministry string code",
+      "vintage": "Captured October 2025; boundary effective vintage unestablished. Historical observations use contextual polygons.",
+      "licensing": "Atlas provenance records Open Government Licence – British Columbia.",
+      "nhhrUsage": {
+        "datasets": [
+          "hospital-stay-costs"
+        ],
+        "assets": [
+          "public/data/nhhr/boundaries-ha.geojson"
+        ]
+      },
+      "canMapNow": true,
+      "missing": {
+        "vintage": [
+          "Dated historical concordance needed for harmonized comparisons"
+        ]
+      },
+      "cannotInfer": [
+        "Not a practice location, catchment or measure of service availability.",
+        "PHSA/province totals cannot be allocated to territorial HA polygons."
+      ],
+      "priority": "maintain",
+      "nextConcreteAdapter": "Keep existing hash-locked native-code adapters; version observation periods separately from geometry."
+    },
+    {
+      "id": "bc-health-hsda",
+      "label": "Health service delivery areas",
+      "family": "health boundaries",
+      "status": "used",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/simplified/health_service_delivery_areas.json",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/health_service_delivery_areas.json"
+      ],
+      "availability": {
+        "local": true,
+        "actualFeatures": 16,
+        "verified": "All NHHR geometry/code sets equal PGMaps source; hashes match Atlas provenance"
+      },
+      "grain": "One territorial health area",
+      "geometry": "Polygon/MultiPolygon with original Ministry string code",
+      "vintage": "Captured October 2025; boundary effective vintage unestablished. Historical observations use contextual polygons.",
+      "licensing": "Atlas provenance records Open Government Licence – British Columbia.",
+      "nhhrUsage": {
+        "datasets": [
+          "physicians-hsda",
+          "nursing-workforce-northern"
+        ],
+        "assets": [
+          "public/data/nhhr/boundaries-hsda.geojson"
+        ]
+      },
+      "canMapNow": true,
+      "missing": {
+        "vintage": [
+          "Dated historical concordance needed for harmonized comparisons"
+        ]
+      },
+      "cannotInfer": [
+        "Not a practice location, catchment or measure of service availability.",
+        "PHSA/province totals cannot be allocated to territorial HA polygons."
+      ],
+      "priority": "maintain",
+      "nextConcreteAdapter": "Keep existing hash-locked native-code adapters; version observation periods separately from geometry."
+    },
+    {
+      "id": "bc-health-lha",
+      "label": "Local health areas",
+      "family": "health boundaries",
+      "status": "used",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/simplified/local_health_areas.json",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/local_health_areas.json"
+      ],
+      "availability": {
+        "local": true,
+        "actualFeatures": 89,
+        "verified": "All NHHR geometry/code sets equal PGMaps source; hashes match Atlas provenance"
+      },
+      "grain": "One territorial health area",
+      "geometry": "Polygon/MultiPolygon with original Ministry string code",
+      "vintage": "Captured October 2025; boundary effective vintage unestablished. Historical observations use contextual polygons.",
+      "licensing": "Atlas provenance records Open Government Licence – British Columbia.",
+      "nhhrUsage": {
+        "datasets": [
+          "population-lha",
+          "population-lha-ages"
+        ],
+        "assets": [
+          "public/data/nhhr/boundaries-lha.geojson"
+        ]
+      },
+      "canMapNow": true,
+      "missing": {
+        "vintage": [
+          "Dated historical concordance needed for harmonized comparisons"
+        ]
+      },
+      "cannotInfer": [
+        "Not a practice location, catchment or measure of service availability.",
+        "PHSA/province totals cannot be allocated to territorial HA polygons."
+      ],
+      "priority": "maintain",
+      "nextConcreteAdapter": "Keep existing hash-locked native-code adapters; version observation periods separately from geometry."
+    },
+    {
+      "id": "bc-health-chsa",
+      "label": "Community health service areas",
+      "family": "health boundaries",
+      "status": "partial",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/simplified/community_health_service_areas.json",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/index.json"
+      ],
+      "availability": {
+        "local": true,
+        "actualFeatures": 231,
+        "atlasHierarchyRows": 231
+      },
+      "grain": "One CHSA; explicit LHA/HSDA/HA parents",
+      "geometry": "Polygon/MultiPolygon keyed CMNTY_HLTH_SERV_AREA_CODE",
+      "vintage": "Boundary vintage and CHSA_POPULATION_CENSUS year unestablished.",
+      "licensing": "BC Ministry source; verify specific publisher metadata for a new export.",
+      "nhhrUsage": {
+        "used": "Hierarchy exported; CHSA geometry not loaded"
+      },
+      "canMapNow": false,
+      "missing": {
+        "data": [
+          "Select a real CHSA measure; boundary population field is not NHHR's 2025 projection"
+        ],
+        "appMethod": [
+          "Add chsa geometry/index/selector"
+        ],
+        "join": [
+          "Native CHSA IDs; preserve bridge code-set differences"
+        ]
+      },
+      "cannotInfer": [
+        "CHSA is not an Indigenous territory or facility catchment."
+      ],
+      "priority": "high",
+      "nextConcreteAdapter": "Export unchanged simplified CHSA geometry and native ID index, then add source-backed CHSA observations; retain 2210/changed-code diagnostics."
+    },
+    {
+      "id": "bc-geography-bridge",
+      "label": "2021 census–health–economic bridge",
+      "family": "crosswalks",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/geography-bridge/README.md",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/GeographyBridge/manifest.json",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/GeographyBridge/blocks.json.gz",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/GeographyBridge/relationships.json.gz",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/GeographyBridge/economic-region-profiles.json"
+      ],
+      "availability": {
+        "local": true,
+        "actualBlocks": 52387,
+        "uniqueDBUIDs": 52387,
+        "coveredPopulation": 5000874,
+        "unresolvedHealthBlocks": 533,
+        "unresolvedHealthPopulation": 78916,
+        "relationshipRows": 4226,
+        "comparisonFamilies": 12
+      },
+      "grain": "One 2021 DB membership; pair relationships repeat counts across 12 comparison families",
+      "geometry": "No new geometry; explicit DB→DA/CSD/CD/ER and DB→CHSA/LHA/HSDA/HA identifiers",
+      "vintage": "2021 block universe; current health index vintage unestablished. CHSA2210 unresolved; 14 current index codes absent from block crosswalk.",
+      "licensing": "Ministry/BCCDC and Statistics Canada inputs; source-specific redistribution review needed.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Dated official concordance before repairing missing health parents"
+        ],
+        "data": [
+          "Retain excluded 36 extra population DBs and unresolved groups"
+        ],
+        "appMethod": [
+          "Bridge drilldown/ER profiles adapter"
+        ],
+        "join": [
+          "Filter one censusLevel/healthLevel before sums; shares are fractions 0–1, unlike Atlas percentage points"
+        ]
+      },
+      "cannotInfer": [
+        "Covered residents are not a new official province estimate.",
+        "Resident shares are not universal allocation weights for jobs, costs, trials or capacity.",
+        "No universal DA→CT hierarchy; source contains pseudo-tract codes."
+      ],
+      "priority": "high",
+      "nextConcreteAdapter": "Expose eight ER profiles and membership diagnostics. Compatible covered-universe counts can map through existing HA/LHA/HSDA adapters, retaining the unresolved group; never allocate arbitrary NHHR indicators through resident weights."
+    },
+    {
+      "id": "bc-economic-regions-2021",
+      "label": "BC economic regions and census hierarchy",
+      "family": "administrative boundaries",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/ECONOMIC-REGIONS.md",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_economic_regions_2021.geojson.gz",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_economic_regions_2021.hierarchy.json",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_economic_regions_2021.manifest.json"
+      ],
+      "availability": {
+        "local": true,
+        "regions": 8,
+        "officialCDMemberships": 29,
+        "officialCSDMemberships": 751
+      },
+      "grain": "2021 ER with official census memberships",
+      "geometry": "ERUID polygons; shared-topology 50m derivative",
+      "vintage": "2021; do not apply this hierarchy to 2025 CSDs without concordance.",
+      "licensing": "Manifest: Statistics Canada Open Licence.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "data": [
+          "ER-grained measure or covered-universe profile"
+        ],
+        "appMethod": [
+          "Economic-region geometry adapter"
+        ],
+        "join": [
+          "Exact ERUID; combined North Coast/Nechako remains one group observation"
+        ]
+      },
+      "cannotInfer": [
+        "ERs are not governments or NDIT service regions.",
+        "No universal Northern BC polygon applies to every table."
+      ],
+      "priority": "high",
+      "nextConcreteAdapter": "Normalize ERUID to feature code; introduce ER/group adapter with a labelled group union and one retained source value."
+    },
+    {
+      "id": "bc-legal-municipalities-rds",
+      "label": "BC municipalities and regional districts",
+      "family": "administrative boundaries",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BC/municipalities.geojson",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BC/regional_districts.geojson"
+      ],
+      "availability": {
+        "local": true,
+        "actualMunicipalities": 160,
+        "actualRegionalDistricts": 28
+      },
+      "grain": "Legal administrative area",
+      "geometry": "Polygon/MultiPolygon keyed boundaryCode/LGL_ADMIN_AREA_ID",
+      "vintage": "Effective date absent from inspected metadata.",
+      "licensing": "BC Geographic Warehouse; inspected outputs lack explicit licence field.",
+      "nhhrUsage": {
+        "used": false,
+        "existingCityGrain": "Atlas city-query counts remain city points"
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Confirm effective date/licence"
+        ],
+        "data": [
+          "True municipal/RD observations"
+        ],
+        "appMethod": [
+          "Municipal/RD geometry adapter"
+        ],
+        "join": [
+          "Reviewed legal-area ID concordance, not mailing-city name matching"
+        ]
+      },
+      "cannotInfer": [
+        "Institution totals and city-tagged trials do not establish resident polygon coverage.",
+        "UBC's Vancouver mailing address does not put its campus in Vancouver municipality."
+      ],
+      "priority": "medium",
+      "nextConcreteAdapter": "Offer optional legal context boundaries; permit choropleths only for compatible official source IDs and geography."
+    },
+    {
+      "id": "census-2021-boundaries",
+      "label": "2021 census boundary foundation",
+      "family": "census",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/census/README.md",
+        "vendor/bcdatamapper/datascrapers/census/output/bc-da-simplified/manifest.json",
+        "vendor/bcdatamapper/datascrapers/census/output/bc-da-simplified/parents/cd.geojson",
+        "vendor/bcdatamapper/datascrapers/census/output/bc-da-simplified/parents/csd.geojson",
+        "vendor/bcdatamapper/datascrapers/census/output/bc-da-simplified/parents/ct.geojson",
+        "vendor/bcdatamapper/datascrapers/census/output/canada-csd/provinces/59.geojson.gz"
+      ],
+      "availability": {
+        "local": true,
+        "actualUniqueBCOverviewDAs": 7848,
+        "overviewChunksExisting": 21,
+        "mediumChunksExisting": 21,
+        "BCParentCDs": 29,
+        "BCParentCSDs": 751,
+        "BCParentCTs": 844,
+        "actualBCCSDChunk": 751
+      },
+      "grain": "2021 DA/CT/CSD/CD; tract coverage is not universal",
+      "geometry": "Chunked shared-topology polygons and province parent polygons keyed explicit id",
+      "vintage": "2021, separate from current 2025 CSD product.",
+      "licensing": "Statistics Canada source; carry source terms and attribution.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "data": [
+          "BC geometry is complete but current compact demographic metrics are local subsets"
+        ],
+        "appMethod": [
+          "Census enums/native IDs and viewport chunk loader"
+        ],
+        "join": [
+          "Same-vintage IDs; retain statistical-equivalent type"
+        ]
+      },
+      "cannotInfer": [
+        "A CSD is not always a municipality; a CD is not always government.",
+        "Geometry availability does not imply observation availability."
+      ],
+      "priority": "high",
+      "nextConcreteAdapter": "Start with the 135-DA reviewed local subset; use existing province parents for all 28 CT/13 CSD source rows."
+    },
+    {
+      "id": "current-canada-admin",
+      "label": "Current Canada administrative reference layers",
+      "family": "administrative boundaries",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/canada/admin-geographies/README.md",
+        "vendor/bcdatamapper/datascrapers/canada/admin-geographies/output/manifest.json",
+        "vendor/bcdatamapper/datascrapers/canada/admin-geographies/output/overview/census-subdivisions-2025.geojson",
+        "vendor/bcdatamapper/datascrapers/canada/admin-geographies/output/overview/census-divisions-2021.geojson",
+        "vendor/bcdatamapper/datascrapers/canada/admin-geographies/output/r2/pmtiles-catalog.json"
+      ],
+      "availability": {
+        "local": true,
+        "actualCSD2025Features": 5054,
+        "actualCD2021Features": 293,
+        "localOverviews": true,
+        "remotePMTiles": "Listed in catalogue; remote availability not network-verified"
+      },
+      "grain": "Current statistical administrative equivalents and separate 2021 comparisons",
+      "geometry": "GeoJSON/advertised vector PMTiles with referenceDate and representationRole",
+      "vintage": "CSD effective 2025-01-01; CD comparison 2021; derived 2025 CDs dissolve current CSD parents.",
+      "licensing": "Manifest records Statistics Canada Open Licence / Open Government Licence – Canada by product.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "data": [
+          "Matching current-CSD observations absent in selected Atlas data"
+        ],
+        "appMethod": [
+          "Generic vector/PMTiles adapter"
+        ],
+        "join": [
+          "Dated concordance needed for 2021 measures on 2025 boundaries"
+        ]
+      },
+      "cannotInfer": [
+        "Do not relabel every CSD/CD as government.",
+        "Current boundaries do not harmonize history."
+      ],
+      "priority": "medium",
+      "nextConcreteAdapter": "Add separate current-context boundary mode; keep analytical 2021 census joins on 2021 shapes."
+    },
+    {
+      "id": "postal-census-fsa",
+      "label": "BC census postal areas",
+      "family": "postal",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/STATCAN-FSA.md",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_fsa_2021.geojson.gz",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_fsa_2021.manifest.json",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_postal_prefix2_2021.geojson.gz"
+      ],
+      "availability": {
+        "local": true,
+        "actualFSAs": 191,
+        "actualPrefix2Groups": 10,
+        "derivedRegion": "V",
+        "missingExamples": [
+          "V7X",
+          "V7Y"
+        ]
+      },
+      "grain": "Census-reported three-character FSA; derived prefix unions",
+      "geometry": "CFSAUID polygons; PGMaps-defined V0–V9 unions may be disconnected",
+      "vintage": "2021; 25m display simplification.",
+      "licensing": "Statistics Canada source; carry manifest terms.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "data": [
+          "Actual FSA-grained measure"
+        ],
+        "appMethod": [
+          "Postal geometry adapter"
+        ],
+        "join": [
+          "Same-vintage CFSAUID; six-character delivery polygons unavailable"
+        ]
+      },
+      "cannotInfer": [
+        "Not Canada Post six-character delivery boundaries.",
+        "Individual patient postal addresses are outside this task."
+      ],
+      "priority": "medium",
+      "nextConcreteAdapter": "Support reviewed FSA observations and explicit unmatched prefixes; do not fabricate finer postal polygons."
+    },
+    {
+      "id": "pg-census-da-variables",
+      "label": "Prince George Census demographic vectors",
+      "family": "census demographics",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/census/output/variables/catalog.json",
+        "vendor/bcdatamapper/datascrapers/census/output/variables/da/age.json",
+        "vendor/bcdatamapper/datascrapers/census/output/variables/da/population_dwellings.json",
+        "vendor/bcdatamapper/datascrapers/census/output/prince_george_da.geo.json",
+        "vendor/bcdatamapper/datascrapers/census/build-census-variables.py"
+      ],
+      "availability": {
+        "local": true,
+        "catalogVectors": 7555,
+        "topics": 19,
+        "actualDARows": 135,
+        "ageVectors": 426,
+        "exactGeometryMatches": 135
+      },
+      "grain": "One GeoUID×vector; sex and overlapping age/category universes",
+      "geometry": "135 DA polygons keyed id matching source GeoUID",
+      "vintage": "CA21; income year, 100%/25% universe and denominator vary by vector.",
+      "licensing": "Underlying Statistics Canada/CensusMapper feed; compact catalogue lacks complete rights/quality ledger.",
+      "nhhrUsage": {
+        "used": false,
+        "separateAtlasSource": "BC Stats LHA estimates/projection, not these census vectors"
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Review source/vector universes and quality notes"
+        ],
+        "data": [
+          "Builder collapses blank/x/F/unparseable to null and rounds numeric decimals to two places; retain original statuses"
+        ],
+        "appMethod": [
+          "Vector→AtlasDataset and DA renderer"
+        ],
+        "join": [
+          "Total sex once; never sum sex or overlapping hierarchical vectors"
+        ]
+      },
+      "cannotInfer": [
+        "One DA population vector449 differs from age total450; do not force agreement.",
+        "Indigenous identity/ancestry is not Nation citizenship, title, consent or governance.",
+        "Demographics are not disease prevalence or trial eligibility."
+      ],
+      "priority": "high",
+      "nextConcreteAdapter": "Release a small reviewed total-sex age/housing vector selection for 135 DAs with original statuses, units, denominators and exact IDs."
+    },
+    {
+      "id": "pg-census-parent-variables",
+      "label": "Census parent attributes and wider boundary coverage",
+      "family": "census demographics",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/census/output/variables/ct/population_dwellings.json",
+        "vendor/bcdatamapper/datascrapers/census/output/variables/csd/population_dwellings.json",
+        "vendor/bcdatamapper/datascrapers/census/output/variables/cd/population_dwellings.json",
+        "vendor/bcdatamapper/datascrapers/census/output/prince_george_ct.geo.json",
+        "vendor/bcdatamapper/datascrapers/census/output/prince_george_csd.geo.json",
+        "vendor/bcdatamapper/datascrapers/census/output/bc-da-simplified/parents/ct.geojson",
+        "vendor/bcdatamapper/datascrapers/census/output/bc-da-simplified/parents/csd.geojson"
+      ],
+      "availability": {
+        "local": true,
+        "attributeRows": {
+          "CT": 28,
+          "CSD": 13,
+          "CD": 1
+        },
+        "cityGeometryRows": {
+          "CT": 23,
+          "CSD": 1,
+          "CD": 1
+        },
+        "verifiedProvinceMatches": {
+          "CT": 28,
+          "CSD": 13
+        },
+        "cityMissingCTIDs": [
+          "9700100.00",
+          "9700101.00",
+          "9700102.00",
+          "9700103.01",
+          "9700103.02"
+        ]
+      },
+      "grain": "2021 CT/CSD/CD source variable",
+      "geometry": "Province parent geometries already cover all wider source IDs",
+      "vintage": "2021; source coverage extends beyond the city-only subset.",
+      "licensing": "Same census-feed rights review needed.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "appMethod": [
+          "Census-level loader/asset packaging"
+        ],
+        "join": [
+          "Use explicit province parent id; do not truncate wider source rows"
+        ]
+      },
+      "cannotInfer": [
+        "13 CSDs are not 13 Prince George neighbourhoods.",
+        "Outside-city tracts must not be substituted with city shapes."
+      ],
+      "priority": "high",
+      "nextConcreteAdapter": "Filter province parent geometry by all 28 CT/13 CSD source IDs. This is a packaging/renderer gap, not missing source geometry."
+    },
+    {
+      "id": "pg-census-db-values",
+      "label": "Prince George DB boundaries with empty compact vectors",
+      "family": "census demographics",
+      "status": "source-only",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/census/output/prince_george_db.geo.json",
+        "vendor/bcdatamapper/datascrapers/census/output/prince_george_db_data.json",
+        "vendor/bcdatamapper/datascrapers/census/output/variables/db/population_dwellings.json"
+      ],
+      "availability": {
+        "local": true,
+        "actualDBGeometry": 1011,
+        "compactDBRows": 1011,
+        "populationDwellingCells": 7077,
+        "nullCells": 7077
+      },
+      "grain": "DB record; inspected compact file has no numeric population/dwelling values",
+      "geometry": "1011 DB polygons available",
+      "vintage": "2021; raw legacy attributes need separate verification.",
+      "licensing": "Verify original source terms/universe.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Authoritative DB counts/universe"
+        ],
+        "data": [
+          "Seven compact vectors all null"
+        ],
+        "appMethod": [
+          "Geometry may render; meaningful choropleth cannot use these null vectors"
+        ],
+        "join": [
+          "Reconcile with distinct 52,387-block bridge universe"
+        ]
+      },
+      "cannotInfer": [
+        "Missing is not zero.",
+        "DA demographics cannot become measured DB demographics."
+      ],
+      "priority": "medium",
+      "nextConcreteAdapter": "Use independently verified same-universe DB counts or label DB shapes as context only."
+    },
+    {
+      "id": "bc-db-chunks-missing",
+      "label": "Province-wide DB geometry chunk release",
+      "family": "census",
+      "status": "unavailable",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/census/README.md",
+        "vendor/bcdatamapper/datascrapers/census/output/bc_db_population_chsa_crosswalk.json"
+      ],
+      "availability": {
+        "local": false,
+        "expectedManifestExists": false,
+        "expectedManifest": "vendor/bcdatamapper/datascrapers/census/output/bc-db-chunks/manifest.json",
+        "availableCrosswalkRows": 52387
+      },
+      "grain": "BC 2021 DB",
+      "geometry": "Builder described; expected local geometry manifest/chunks absent",
+      "vintage": "2021 source package; no successful local release inspected.",
+      "licensing": "Source archive/rights/deployment path need review.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Original BCCDC db21 raw archive"
+        ],
+        "data": [
+          "Boundary manifest/chunks absent"
+        ],
+        "appMethod": [
+          "Viewport LOD/chunk deployment loader"
+        ],
+        "join": [
+          "Validate boundary DBUID universe equals intended crosswalk"
+        ]
+      },
+      "cannotInfer": [
+        "52,387 crosswalk records do not prove available DB polygons."
+      ],
+      "priority": "medium",
+      "nextConcreteAdapter": "Build/validate existing chunk pipeline after input availability and rights are confirmed; keep unavailable status visible meanwhile."
+    },
+    {
+      "id": "derived-lha-socioeconomic-2016",
+      "label": "2016 Census DA→current-LHA socioeconomic derivation",
+      "family": "census demographics",
+      "status": "source-only",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/census/output/bcenviroscreen-census-lha/manifest.json",
+        "vendor/bcdatamapper/datascrapers/census/output/bcenviroscreen-census-lha/2016/da-to-lha-crosswalk.json",
+        "vendor/bcdatamapper/datascrapers/census/output/bcenviroscreen-census-lha/2016/lha-socioeconomic.json"
+      ],
+      "availability": {
+        "local": true,
+        "actualLHARows": 89,
+        "sourceDARows": 7617,
+        "assignedDAFeatures": 7616,
+        "missingDAFeature": 1,
+        "allNullMetric": "low_income_all_percent (89/89 null)"
+      },
+      "grain": "Derived LHA rollup via DA representative point against current boundaries",
+      "geometry": "Existing Atlas LHA geometry can draw values, but spatial method is approximate",
+      "vintage": "2016 Census/2015 income context; current LHA vintage unspecified.",
+      "licensing": "Statistics Canada inputs; preserve derivation and source terms.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Official dated concordance preferable"
+        ],
+        "data": [
+          "Metric-specific numerator/denominator, coverage and null review"
+        ],
+        "appMethod": [
+          "Existing LHA renderer reusable after validated adapter"
+        ],
+        "join": [
+          "Exact LHA code does not validate representative-point allocation"
+        ]
+      },
+      "cannotInfer": [
+        "Unweighted mean of DA percentages is not whole-LHA rate.",
+        "Not a harmonized 2025 measure.",
+        "Do not expose all alternative numeric columns blindly."
+      ],
+      "priority": "high",
+      "nextConcreteAdapter": "Whitelist reviewed ratios from compatible numerators/denominators, with coverage threshold and derived-geography label; retain missing DA and original nulls."
+    },
+    {
+      "id": "official-population-ecumene",
+      "label": "Official 2021 population ecumene",
+      "family": "population display",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/census/ecumene/README.md",
+        "vendor/bcdatamapper/datascrapers/census/output/ecumene/statcan-bc-population-ecumene-2021.manifest.json",
+        "vendor/bcdatamapper/datascrapers/census/output/ecumene/statcan-bc-population-ecumene-2021.geojson.gz"
+      ],
+      "availability": {
+        "local": true,
+        "actualFeatures": 219,
+        "sourceOverlapPairs": 1,
+        "overlapAreaKm2": 4.467895
+      },
+      "grain": "ECUID ecumene feature, not demographic row",
+      "geometry": "ECUID/ECUMENE polygon properties; no DAUID",
+      "vintage": "2021; released 2022-02-09.",
+      "licensing": "Manifest: Open Government Licence – Canada.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "data": [
+          "No embedded demographic values"
+        ],
+        "appMethod": [
+          "Optional context mask/intersection display"
+        ],
+        "join": [
+          "Cannot directly join DAUID; union overlapping ECUIDs for binary mask"
+        ]
+      },
+      "cannotInfer": [
+        "Ecumene is not participant, precise residence or catchment.",
+        "Clipping display does not allocate whole-DA totals."
+      ],
+      "priority": "medium",
+      "nextConcreteAdapter": "Add optional inhabited-area background; preserve original DA IDs and totals in any derived display mask."
+    },
+    {
+      "id": "ghsl-pg-ecumene",
+      "label": "Experimental Prince George inhabited-area pilot",
+      "family": "population display",
+      "status": "source-only",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/census/ecumene/README.md",
+        "vendor/bcdatamapper/datascrapers/census/output/ecumene/prince-george-city-ghsl-ecumene-pilot.geojson.gz",
+        "vendor/bcdatamapper/datascrapers/census/output/ecumene/prince-george-city-ghsl-ecumene-pilot.evaluation.json"
+      ],
+      "availability": {
+        "local": true,
+        "actualDAFeatures": 135,
+        "status": "experimental"
+      },
+      "grain": "Alternative display geometry per 2021 DA",
+      "geometry": "DAUID polygons; same-vintage DA values can join",
+      "vintage": "2018 GHSL input; 2021 DA/DB framework; inferred parameters and approximate smoothing.",
+      "licensing": "Verify GHSL/Census rights; evaluation baseline is not generation input.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "appMethod": [
+          "Opt-in alternative DA display"
+        ],
+        "data": [
+          "Experimental method/status label"
+        ],
+        "join": [
+          "Same 135 DAUIDs; preserve canonical analytical geography"
+        ]
+      },
+      "cannotInfer": [
+        "Reported fidelity does not validate health effects or household locations.",
+        "Not canonical census geography."
+      ],
+      "priority": "low",
+      "nextConcreteAdapter": "Keep opt-in experimental label and original-DA comparison; do not replace default population geography."
+    },
+    {
+      "id": "sgc-north-south",
+      "label": "Statistics Canada North/South classification",
+      "family": "regional definitions",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/census/README.md",
+        "vendor/bcdatamapper/datascrapers/census/output/canada-csd/north-south.json",
+        "vendor/bcdatamapper/datascrapers/census/output/canada-csd/provinces/59.geojson.gz"
+      ],
+      "availability": {
+        "local": true,
+        "classificationRows": 5161,
+        "matchingBCGeometry": 751,
+        "classificationContainsGeometry": false
+      },
+      "grain": "2021 CSD classification",
+      "geometry": "Exact CSDUID join to separate 2021 geometry",
+      "vintage": "SGC2021 variant.",
+      "licensing": "Statistics Canada classification; carry attribution.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "appMethod": [
+          "CSD categorical context"
+        ],
+        "join": [
+          "Same-vintage CSDUID, not unchanged 2025 codes"
+        ]
+      },
+      "cannotInfer": [
+        "StatCan North is not Northern Health, NDIT or clinical catchment."
+      ],
+      "priority": "medium",
+      "nextConcreteAdapter": "Add a compare-definitions view keeping each Northern-region definition explicit."
+    },
+    {
+      "id": "state-north-pilots",
+      "label": "State of the North source pilots",
+      "family": "regional economy/demographics",
+      "status": "source-only",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/bc/state-of-north/README.md",
+        "vendor/bcdatamapper/datascrapers/bc/state-of-north/output/inventory.json",
+        "vendor/bcdatamapper/datascrapers/bc/state-of-north/output/jobvacancy_bygeo.json.gz",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/GeographyBridge/job-vacancies-linked.json.gz"
+      ],
+      "availability": {
+        "local": true,
+        "pages": 25,
+        "referencedEntities": 41,
+        "pilotRows": {
+          "mines": 25,
+          "IPPs": 850,
+          "capacity": 11,
+          "housing": 5000,
+          "ferries": 402,
+          "tourism": 687,
+          "vacancies": 866
+        },
+        "housingCapped": true,
+        "vacancyStatuses": {
+          "province": 126,
+          "economicRegion": 247,
+          "regionGroup": 123,
+          "definitionUnverified": 370
+        }
+      },
+      "grain": "Table-specific project/city-market/route/MRDT/ER/group/province observation",
+      "geometry": "Mines/housing candidate coordinates; vacancy explicit geography object",
+      "vintage": "Model refreshed 2026-04-30; actual observation dates remain distinct.",
+      "licensing": "README documents research reuse; source-specific redistribution still needs review.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Primary feeds and table-specific grouping methodology"
+        ],
+        "data": [
+          "Complete capped housing; validate mine locations/status; retain 370 unresolved Northern BC rows"
+        ],
+        "appMethod": [
+          "ER/group/city/route adapter"
+        ],
+        "join": [
+          "Table-specific reviewed aliases; combined group retained once"
+        ]
+      },
+      "cannotInfer": [
+        "Pilots do not reproduce DAX measures/dashboard filters.",
+        "Nearest town is not jurisdiction; city point is not market coverage; route name is not line geometry."
+      ],
+      "priority": "high",
+      "nextConcreteAdapter": "Start with vacancy ER/group records using explicit join objects; preserve provincial/unverified records and never duplicate a group value across member polygons."
+    },
+    {
+      "id": "state-north-population-schema",
+      "label": "State of the North population/age/income schema",
+      "family": "regional economy/demographics",
+      "status": "source-only",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/bc/state-of-north/output/inventory.json",
+        "vendor/bcdatamapper/datascrapers/bc/boundaries/output/GeographyBridge/dashboard-registry.json"
+      ],
+      "availability": {
+        "local": true,
+        "schemaAvailable": true,
+        "scientificPopulationRowsExtracted": false,
+        "examples": [
+          "PopulationEstimates_AgeGroup_Annually",
+          "PopulationHistorical_AgeGroup_Annually",
+          "PopulationForecastHistory_Annually_ByGEO",
+          "PopulationHistorical_ByGEO",
+          "Income",
+          "LowIncome"
+        ]
+      },
+      "grain": "Schema only; not scientific observations",
+      "geometry": "No quantitative join from schema alone",
+      "vintage": "Model 2026-04-30; reference periods and forecast status need actual rows.",
+      "licensing": "Research reuse noted; individual source terms need review.",
+      "nhhrUsage": {
+        "used": false,
+        "atlasPopulationSource": "Separate DATA-C051 BC Stats original"
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Bounded primary/dashboard extraction and methodology"
+        ],
+        "data": [
+          "Actual observation rows absent in inspected pilots"
+        ],
+        "appMethod": [
+          "Geography-specific adapter after row inspection"
+        ],
+        "join": [
+          "ER/NDIT/CD/city/province IDs and definitions"
+        ]
+      },
+      "cannotInfer": [
+        "41 model entities are not 41 independent scientific datasets.",
+        "Inventory schemas cannot supply plotted values."
+      ],
+      "priority": "medium",
+      "nextConcreteAdapter": "Acquire one named population table with original age/year/geography/forecast fields before selecting geometry."
+    },
+    {
+      "id": "manual-indicators",
+      "label": "Manual Index Lab indicator catalogue",
+      "family": "indicator metadata",
+      "status": "source-only",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/manual/output/indicators/README.md",
+        "vendor/bcdatamapper/datascrapers/manual/output/indicators/indicator-catalog.json"
+      ],
+      "availability": {
+        "local": true,
+        "definitions": 34,
+        "embeddedObservations": false
+      },
+      "grain": "Indicator definition, not observation",
+      "geometry": "References candidate points/grids/DA/DB/postal/catchment sources",
+      "vintage": "Mixed latest/desired reference years; no common period.",
+      "licensing": "Mixed public/licensed/future sources; metadata is not a data licence.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Verify each actual upstream acquisition"
+        ],
+        "data": [
+          "Measures/denominators/coverage/statuses"
+        ],
+        "appMethod": [
+          "Source-specific adapters, not unvalidated composite"
+        ],
+        "join": [
+          "Each native geography separately"
+        ]
+      },
+      "cannotInfer": [
+        "34 definitions do not prove 34 available datasets.",
+        "Proxy/identity/exposure definitions do not diagnose individuals or establish governance."
+      ],
+      "priority": "medium",
+      "nextConcreteAdapter": "Whitelist actually acquired source-backed indicators; environmental availability is covered by the parallel environmental audit."
+    },
+    {
+      "id": "native-land",
+      "label": "Native Land Digital territories/languages/treaties",
+      "family": "Indigenous context",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/native-land/snapshot/manifest.json",
+        "vendor/bcdatamapper/datascrapers/native-land/snapshot/territories.geojson",
+        "vendor/bcdatamapper/datascrapers/native-land/snapshot/languages.geojson",
+        "vendor/bcdatamapper/datascrapers/native-land/snapshot/treaties.geojson",
+        "src/pages/dev-acknowledgement/data.ts"
+      ],
+      "availability": {
+        "local": true,
+        "actualFeatures": {
+          "territories": 2057,
+          "languages": 1473,
+          "treaties": 833
+        },
+        "globalCoverage": true
+      },
+      "grain": "Overlapping educational context feature",
+      "geometry": "Global MultiPolygons; id/Slug/Name; longitude extents may cross 180°",
+      "vintage": "Snapshot 2026-06-17; per-feature effective date unestablished.",
+      "licensing": "Manifest explicitly requires confirming redistribution permission outside approved uses and links Data Sovereignty Treaty.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "rights": [
+          "Confirm approved redistribution scope"
+        ],
+        "appMethod": [
+          "Optional educational overlap context/evidence layer"
+        ],
+        "join": [
+          "Overlap/name/nearest is not Nation-governance assignment"
+        ]
+      },
+      "cannotInfer": [
+        "Not authoritative title/territory, consent, study permission, catchment or acknowledgement authority.",
+        "Language/treaty names are distinct from Nations."
+      ],
+      "priority": "conditional",
+      "nextConcreteAdapter": "After documented reuse permission, expose educational context with source links; never allocate NHHR clinical/population values to territory polygons."
+    },
+    {
+      "id": "fpcc-context",
+      "label": "FPCC language/community/place context",
+      "family": "Indigenous context",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/fpcc/output/manifest.json",
+        "vendor/bcdatamapper/datascrapers/fpcc/output/language-geo.geojson",
+        "vendor/bcdatamapper/datascrapers/fpcc/output/community-geo.geojson",
+        "vendor/bcdatamapper/datascrapers/fpcc/output/placename-geo.geojson",
+        "vendor/bcdatamapper/datascrapers/bc/indigenous/snapshot/manifest.json"
+      ],
+      "availability": {
+        "local": true,
+        "actualLanguagePolygons": 39,
+        "actualCommunityPoints": 205,
+        "actualPlaceFeatures": 419,
+        "placeGeometryTypes": {
+          "Point": 403,
+          "LineString": 14,
+          "Polygon": 2
+        },
+        "manifestSearchPlaceRecords": 420
+      },
+      "grain": "Community-contributed language area, community reference or named place",
+      "geometry": "Language polygons/community points/mixed place geometry",
+      "vintage": "Fetched 2026-06-18; not population/service-area vintage.",
+      "licensing": "Indigenous manifest marks FPCC permission_required and requests permission before automation; FPCC snapshot has no explicit redistribution licence.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "rights": [
+          "Resolve documented permission before new automation/public redistribution"
+        ],
+        "data": [
+          "Only approved public context; exclude arts/grant/person/contact records"
+        ],
+        "appMethod": [
+          "Mixed-geometry context renderer"
+        ],
+        "join": [
+          "Names/language areas do not define Nation governance"
+        ]
+      },
+      "cannotInfer": [
+        "Language areas do not establish Nation territory/citizenship/consent.",
+        "Community reference is not catchment or verified physical service location."
+      ],
+      "priority": "conditional",
+      "nextConcreteAdapter": "Record approved FPCC public reuse, then display only permitted language/community/place context with separate legend and publisher links."
+    },
+    {
+      "id": "bc-official-indigenous",
+      "label": "Official treaty/reserve/community reference layers",
+      "family": "Indigenous context",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/bc/indigenous/snapshot/manifest.json",
+        "vendor/bcdatamapper/datascrapers/bc/indigenous/snapshot/first_nations_treaty_areas.geojson",
+        "vendor/bcdatamapper/datascrapers/bc/indigenous/snapshot/first_nations_treaty_lands.geojson",
+        "vendor/bcdatamapper/datascrapers/bc/indigenous/snapshot/cad_pip_layer_382_indian_reserves_band_names.geojson",
+        "vendor/bcdatamapper/datascrapers/bc/indigenous/snapshot/first_nation_community_locations.geojson"
+      ],
+      "availability": {
+        "local": true,
+        "actualTreatyAreas": 69,
+        "actualTreatyLands": 148,
+        "actualReserveBandNameFeatures": 1687,
+        "actualBCCommunityPoints": 208,
+        "nationalCommunityManifest": 638,
+        "reserveAliasFiles": "Two 1687-feature reserve files; not two independent populations"
+      },
+      "grain": "Legal/admin feature or approximate community/office reference",
+      "geometry": "Native legal IDs, AREA_TYPE/LAND_TYPE/TREATY/EFFECTIVE_DATE, overlapping polygons and points",
+      "vintage": "Feature effective dates vary; no single date in manifest.",
+      "licensing": "BC/Canada publisher-specific terms; no blanket licence inferred.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Review individual licence/effective date"
+        ],
+        "data": [
+          "Strip address/contact fields from optional context release"
+        ],
+        "appMethod": [
+          "Separate legal/context layer"
+        ],
+        "join": [
+          "Native feature IDs and legal types; no automatic population allocation"
+        ]
+      },
+      "cannotInfer": [
+        "Reserve is not traditional territory.",
+        "Nearest office is not territory/acknowledgement authority.",
+        "Treaty geometry alone is not research approval."
+      ],
+      "priority": "medium",
+      "nextConcreteAdapter": "Add minimal public legal/context overlays with exact types and links; keep quantitative observations at source geography."
+    },
+    {
+      "id": "clss-lands",
+      "label": "Canada Lands Survey System legal distribution areas",
+      "family": "Indigenous context",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/canada/admin-geographies/README.md",
+        "vendor/bcdatamapper/datascrapers/canada/admin-geographies/output/overview/indigenous-lands-clss.geojson",
+        "vendor/bcdatamapper/datascrapers/canada/admin-geographies/output/manifest.json"
+      ],
+      "availability": {
+        "local": true,
+        "actualFeatures": 3372
+      },
+      "grain": "Legal distribution area, with distinct reserve/settlement types",
+      "geometry": "Polygon/MultiPolygon keyed adminAreaId/representationRole",
+      "vintage": "No single effective date in inspected manifest.",
+      "licensing": "Manifest: Open Government Licence – Canada.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "appMethod": [
+          "Type-preserving context adapter"
+        ],
+        "data": [
+          "No NHHR measures at CLSS grain"
+        ],
+        "join": [
+          "Exact legal feature IDs; no Nation/health-area equivalence"
+        ]
+      },
+      "cannotInfer": [
+        "Do not collapse reserves, Inuit Owned Lands, Yukon settlement lands and Tlicho Lands into one category.",
+        "Not all traditional territories or governance relationships."
+      ],
+      "priority": "low",
+      "nextConcreteAdapter": "Use separately labelled legal context only; retain distribution types and no quantitative allocation."
+    },
+    {
+      "id": "cad-pip-unavailable",
+      "label": "CAD/PIP consultation-area geometry",
+      "family": "Indigenous context",
+      "status": "unavailable",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/bc/indigenous/snapshot/manifest.json",
+        "src/pages/dev-acknowledgement/data.ts"
+      ],
+      "availability": {
+        "local": true,
+        "localGeometry": false,
+        "catalogueAccess": "Access Only",
+        "availableWorkflow": "Interactive preliminary report",
+        "layer382": "Indian reserve/band-name geography, not consultation area"
+      },
+      "grain": "Manual consultation report context",
+      "geometry": "No downloadable consultation-area polygons inspected",
+      "vintage": "Catalogue modified 2025-06-10; no geometry release.",
+      "licensing": "Access Only; does not authorize harvesting report contacts.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Authorized workflow/data access needed"
+        ],
+        "data": [
+          "Actual consultation geometry unavailable"
+        ],
+        "appMethod": [
+          "Linkout, not fabricated layer"
+        ],
+        "join": [
+          "Never relabel layer382 reserves as consultation areas"
+        ]
+      },
+      "cannotInfer": [
+        "Preliminary reports are not final consultation obligations or research consent.",
+        "Native Land overlap/nearest community is not substitute."
+      ],
+      "priority": "conditional",
+      "nextConcreteAdapter": "Keep explicit unavailable status; link official workflow where relevant, without scraping contacts or manufacturing territories."
+    },
+    {
+      "id": "curated-relationships",
+      "label": "Curated acknowledgement relationships",
+      "family": "Indigenous context",
+      "status": "source-only",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/manual/output/acknowledgement/nation-registry.json",
+        "vendor/bcdatamapper/datascrapers/manual/output/acknowledgement/relationship-graph.json",
+        "vendor/bcdatamapper/datascrapers/manual/output/acknowledgement/fpcc-language-map.json"
+      ],
+      "availability": {
+        "local": true,
+        "nationRegistryRecords": 85,
+        "notBoundaryDataset": true
+      },
+      "grain": "Reviewed relationship fact for named institution/place",
+      "geometry": "No authoritative territorial geometry; broad matchRegion is address guard",
+      "vintage": "Curated June–September 2026; evidence dates vary.",
+      "licensing": "Graph notes require wording review before publication; linked source terms remain distinct.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Local relationship/wording review"
+        ],
+        "appMethod": [
+          "Evidence card rather than choropleth"
+        ],
+        "join": [
+          "Exact named place/institution context only"
+        ]
+      },
+      "cannotInfer": [
+        "85 records are not complete BC Nation coverage.",
+        "Generated wording is not research-governance approval."
+      ],
+      "priority": "low",
+      "nextConcreteAdapter": "Use reviewed source links for a named-site context, preserving Nation/language/territory distinctions."
+    },
+    {
+      "id": "cached-geocodes",
+      "label": "Cached food/water geocoding candidates",
+      "family": "geocoding",
+      "status": "source-only",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/food-health/output/geocoding/geocoded_locations.json",
+        "vendor/bcdatamapper/datascrapers/food-health/output/geocoding/geocode_location_overrides.json"
+      ],
+      "availability": {
+        "local": true,
+        "actualRecords": 3592,
+        "withCoordinates": 3592,
+        "partialMatches": 1031,
+        "manualOverrides": 5
+      },
+      "grain": "Source-record geocoding result; repeated measurements may share place",
+      "geometry": "Candidate coordinates with precision/quality/fault/expected-city fields",
+      "vintage": "Per-record geocoding dates and source periods vary.",
+      "licensing": "Google-derived outputs require provider-specific reuse review; not open rights by existence.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Official identity/address and provider-rights verification"
+        ],
+        "data": [
+          "Retain quality and partial matches; collapse reviewed aliases, not equal coordinates"
+        ],
+        "appMethod": [
+          "Review queue→accepted point registry"
+        ],
+        "join": [
+          "Exact identity/address evidence; no fuzzy automatic join"
+        ]
+      },
+      "cannotInfer": [
+        "3592 geocoded records are not3592 verified physical sites.",
+        "City centroid/partial result is not boarding door or clinic."
+      ],
+      "priority": "medium",
+      "nextConcreteAdapter": "Reuse only as candidate evidence; independently verify physical locations, retaining null map keys and unresolved reasons."
+    },
+    {
+      "id": "bc-geocoder-method",
+      "label": "BC Address Geocoder review method",
+      "family": "geocoding",
+      "status": "partial",
+      "sourcePaths": [
+        "src/pages/dev-acknowledgement/geocode.ts",
+        "vendor/bcdatamapper/datascrapers/manual/output/acknowledgement/relationship-graph.json"
+      ],
+      "availability": {
+        "local": true,
+        "localMethod": true,
+        "fields": [
+          "score",
+          "matchPrecision",
+          "precisionPoints",
+          "faults",
+          "baseDataDate",
+          "searchTimestamp"
+        ],
+        "notScientificDataset": true
+      },
+      "grain": "Address-query candidate or explicitly dropped map point",
+      "geometry": "WGS84 point; arbitrary drop separately labelled",
+      "vintage": "Returned base-data/search timestamps, not historical identity verification.",
+      "licensing": "Official provider terms/attribution; do not publish private queries.",
+      "nhhrUsage": {
+        "used": "Some Atlas travel references independently use BC Geocoder; PGMaps UI module itself is not imported",
+        "evidence": [
+          "public/data/nhhr/travel-network-provenance.json",
+          "public/data/nhhr/locations-travel-stops.README.md"
+        ]
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Verify public source identity/address"
+        ],
+        "data": [
+          "maxResults=1 is not automatic exact match"
+        ],
+        "appMethod": [
+          "Existing Atlas registry accepts reviewed points"
+        ],
+        "join": [
+          "Exact evidence crosswalk; distinguish locality vs physical address"
+        ]
+      },
+      "cannotInfer": [
+        "Score is not facility/boarding-door/historical-site proof.",
+        "Dropped point is not verified geocode."
+      ],
+      "priority": "medium",
+      "nextConcreteAdapter": "Retain candidate faults/precision, verify identity independently, then export only reviewed public location codes and evidence."
+    },
+    {
+      "id": "laep-economics",
+      "label": "BC Stats Local Area Economic Profiles",
+      "family": "regional economics",
+      "status": "unused",
+      "sourcePaths": [
+        "vendor/bcdatamapper/datascrapers/bc/laep/README.md",
+        "vendor/bcdatamapper/datascrapers/bc/laep/output/audit.json",
+        "vendor/bcdatamapper/datascrapers/bc/laep/output/area-indicators.json.gz",
+        "vendor/bcdatamapper/datascrapers/bc/laep/output/regional-districts.json",
+        "vendor/bcdatamapper/datascrapers/bc/laep/source/manifest.json"
+      ],
+      "availability": {
+        "local": true,
+        "publishedRecords": 399,
+        "areaComposition": "103 EDAs,29 RDs,BC ×3 periods",
+        "mappedCDIDs": 29,
+        "cleanedInputNumericRows": 425,
+        "identical2010And2015InputRows": 425,
+        "usesCleanedCensusInputs": false
+      },
+      "grain": "Historical modelled area×period measure; RD and EDA grains distinct",
+      "geometry": "29 CD-keyed summaries reuse existing2021CD shapes; EDAs tabular pending geography review",
+      "vintage": "2025 release, reference2010/2015/2020; employment relates to following census year; nominal money.",
+      "licensing": "README: Open Government Licence – BC; census boundaries retain Statistics Canada attribution.",
+      "nhhrUsage": {
+        "used": false
+      },
+      "canMapNow": false,
+      "missing": {
+        "source": [
+          "Resolve duplicated cleaned inputs before model reconstruction"
+        ],
+        "data": [
+          "Preserve F/x/-/blank statuses and metric definitions"
+        ],
+        "appMethod": [
+          "CD adapter can map published RD outputs"
+        ],
+        "join": [
+          "EDA concordance conflict: Moricetown1 5949830 vs2021CSD5949817; no silent replacement"
+        ]
+      },
+      "cannotInfer": [
+        "Basic/external-income dependency % is not job share or all household income.",
+        "Relative forest vulnerability is not loss probability; no mixed RD/EDA ranking.",
+        "Published-table consistency does not reproduce model."
+      ],
+      "priority": "medium",
+      "nextConcreteAdapter": "Expose reviewed published RD indicators with native CD IDs and historical units; retain EDAs as table until concordance dispute and geography are resolved."
+    }
+  ],
+  "pgMapsCommit": "bbf7e5861d9cb76ab7c44ba0a0b71954b9d6bbcd",
+  "bcDataMapperCommit": "da85fa7b6b786386e41758cb51a20312a19e90b8",
+  "inspectedFileEvidence": [
+    {
+      "path": "src/pages/dev-acknowledgement/data.ts",
+      "bytes": 14970,
+      "sha256": "5bdc8c5377b786947c0f48ac9899d4b2f1295693850a247eb5f48bdaeabdf802"
+    },
+    {
+      "path": "src/pages/dev-acknowledgement/geocode.ts",
+      "bytes": 2087,
+      "sha256": "adc3ac9b7170df55b986dcf8760dd210179c2a774cc89fea5b2db6c7a2aad739"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/ECONOMIC-REGIONS.md",
+      "bytes": 4082,
+      "sha256": "dbebbd69d7f156d6537eb1eed01d67588f4ffe658cbcc68a859100f943cdf709"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/STATCAN-FSA.md",
+      "bytes": 2484,
+      "sha256": "085bec3c9aa532678d7b4bc7fe3c45639c31085b1f042e3a87f8bd720dde7f77"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/geography-bridge/README.md",
+      "bytes": 8278,
+      "sha256": "2acb8021b473470357fc2bdb2e687690e77b33038ee45e5b2f85d9c142b8f126"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BC/municipalities.geojson",
+      "bytes": 905961,
+      "sha256": "18ac00efe80a2d9614575a13600771038278cc890205fb7300da096ce0457e2d"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BC/regional_districts.geojson",
+      "bytes": 2316778,
+      "sha256": "44b547119c52740e99737c50abfa78169a0ca41cdec57cc5876cdaac2d6f19bb"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/health_authorities.json",
+      "bytes": 19073347,
+      "sha256": "c1f6e7f95f1690d3eb7b40efee9dbeb22cffd71c7a3097f1967d6dfa9d1f78f6"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/health_service_delivery_areas.json",
+      "bytes": 20569499,
+      "sha256": "9c94cbb48847dd6ca63226aa56af8c8ff9c71af6fb2236bd4dff6362f99f05e7"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/index.json",
+      "bytes": 103811,
+      "sha256": "e8b59c71eaa92911733f1af092b89ad1cf693bc6707199eebe4fe03925f377de"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/local_health_areas.json",
+      "bytes": 24018552,
+      "sha256": "6f0938af3151d2c2ae27ce1f6f0cf7145e618d89be45c8f3f8826a664a943330"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/simplified/community_health_service_areas.json",
+      "bytes": 6905206,
+      "sha256": "9914f2333ccdeae3e792536b18509596ae051db6039b9c4d9f3b5bed8b485f8e"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/simplified/health_authorities.json",
+      "bytes": 1571652,
+      "sha256": "f130f4dad389a9a0bf724fbeb69a7d068df74d78e52d72d9612d3b220f10cdcb"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/simplified/health_service_delivery_areas.json",
+      "bytes": 2310204,
+      "sha256": "8f69b0f5a88fb49bded0c6a7ab703158685b97cf36f00a5cf85f4a9647d0ecb4"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/BCMoH/simplified/local_health_areas.json",
+      "bytes": 3947089,
+      "sha256": "e0a30bb70cf4e149d9d859eb18f0df1f58c661ecb1c25b048aee21b2118184c8"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/GeographyBridge/blocks.json.gz",
+      "bytes": 545068,
+      "sha256": "5f35db7777a212bcc3d72157faa1fafb5c8dec43d325a130833ec1e4f3960dbe"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/GeographyBridge/dashboard-registry.json",
+      "bytes": 51047,
+      "sha256": "b886bdb6d9aae0f3c9d833d67579ff0af1e60645673bc4f92908f1a6bc10abfe"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/GeographyBridge/economic-region-profiles.json",
+      "bytes": 4393,
+      "sha256": "c559ab32f9b553b4b3dc54e2dcddf73557ea1e62b62d2ebd123afb46adec53d1"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/GeographyBridge/job-vacancies-linked.json.gz",
+      "bytes": 6279,
+      "sha256": "901e8ff4f90bcf53cad9134c12feff0b9c3a249b531916393e7efa7ba8d63b12"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/GeographyBridge/manifest.json",
+      "bytes": 3898,
+      "sha256": "3160ba4a595ddc979e2bcda8cd8a85a349ab9fa0001e900d569cf3d835599a98"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/GeographyBridge/relationships.json.gz",
+      "bytes": 102995,
+      "sha256": "79b85024fd9e8ac229d9e5ab9f2071f6336802fb4c661629511c683cb67908d0"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_economic_regions_2021.geojson.gz",
+      "bytes": 154692,
+      "sha256": "feb193fbc3d06e421a331f80eccde1dc0a2ed5e67e4184c6b947ab88bd4b709f"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_economic_regions_2021.hierarchy.json",
+      "bytes": 246730,
+      "sha256": "e0019c1c18b29b5d2cc6fd333fc60420d8949c5b7a534abb24d34487929c38c8"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_economic_regions_2021.manifest.json",
+      "bytes": 1557,
+      "sha256": "9da98cf930d1c7864986a7d4330d8c7025dff9bb8874a76c0b5120ea5245c3a7"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_fsa_2021.geojson.gz",
+      "bytes": 2726346,
+      "sha256": "2bb201ed818b89768b4040f5d5e06a89de4b5aba16d650b3ad0babe47f227318"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_fsa_2021.manifest.json",
+      "bytes": 1453,
+      "sha256": "3a4cd25dfe1d38fea0c49dd597120b95af1845a481ce2fe9af04513fe53546db"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/boundaries/output/StatCan/bc_postal_prefix2_2021.geojson.gz",
+      "bytes": 2490146,
+      "sha256": "97670d0d4612cf2666b599ee1aa27461a7c7f0ad3e4b7653f275bdcdeebf20b0"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/indigenous/snapshot/cad_pip_layer_382_indian_reserves_band_names.geojson",
+      "bytes": 1638596,
+      "sha256": "cb525f5f50705144f4f2df1c97f772146b9dc3e17fd51e3eabd1a65925a2972e"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/indigenous/snapshot/first_nation_community_locations.geojson",
+      "bytes": 301836,
+      "sha256": "8a74915e7001ceea27a9bdd99bee947b2d478141ee6037ac7e1bc465924a3928"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/indigenous/snapshot/first_nations_treaty_areas.geojson",
+      "bytes": 1925129,
+      "sha256": "46240be7cd502cc99e18ea87fa527a222769e5d027d58805247129339b1bbc02"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/indigenous/snapshot/first_nations_treaty_lands.geojson",
+      "bytes": 349336,
+      "sha256": "c1773c302fbc4abebef3bf7bbeeca9b836623b6c6f97e64a1c8af33ff9c4f858"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/indigenous/snapshot/manifest.json",
+      "bytes": 8929,
+      "sha256": "2bc12f05cc03f6ae2c456ec5a90e8fec5219e10a845d7c659e5c315481bf35b8"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/laep/README.md",
+      "bytes": 4495,
+      "sha256": "fe58ede0200d9262504a463fd37ee72275e43b297aae786bcdb5b951780ca944"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/laep/output/area-indicators.json.gz",
+      "bytes": 21097,
+      "sha256": "b11613394dc9d6bb4380d71f51b006c5977952bbb416fbf571d0adbb34e6cb06"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/laep/output/audit.json",
+      "bytes": 430,
+      "sha256": "014548df12e99362758b7543abbc6e4913a2b0b29cfc4890d95ff539d71fcb7c"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/laep/output/regional-districts.json",
+      "bytes": 91866,
+      "sha256": "51b2ffd9accf624a1a69d9f6564d4c6dba2f5375af67cda23c21ab41d89ef19d"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/laep/source/manifest.json",
+      "bytes": 4285,
+      "sha256": "4a1ea47bd4c12800e3ba146a2387823749634753d93854f155941b4b4ebf96d8"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/state-of-north/README.md",
+      "bytes": 5408,
+      "sha256": "f7a8009299c114980c3d0fd1408ef07640e7452c623f52ab58c72d3f98755c59"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/state-of-north/output/inventory.json",
+      "bytes": 129103,
+      "sha256": "7df9b45f97d866c6a110536703672f93ccf5873fd9fccd900e03120207fedd50"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/bc/state-of-north/output/jobvacancy_bygeo.json.gz",
+      "bytes": 5975,
+      "sha256": "30fd70fc6c9aaa128000967e112889360ef617ca0d9d3c4de2a911c6a65284a2"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/canada/admin-geographies/README.md",
+      "bytes": 3232,
+      "sha256": "38c0b0f74d7d00ee3c6173f05557a252983f90d6fa06b282add5c9c1b88ebf3d"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/canada/admin-geographies/output/manifest.json",
+      "bytes": 18471,
+      "sha256": "5d1b29298d3847746c2dca432f5c7baa56c1bb5cc1b3b9e2707a857102e2f5f8"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/canada/admin-geographies/output/overview/census-divisions-2021.geojson",
+      "bytes": 3411701,
+      "sha256": "6674196e1464818a0009a409347bbb0d0f4d207227cc28042376fc26efd5bc14"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/canada/admin-geographies/output/overview/census-subdivisions-2025.geojson",
+      "bytes": 7101120,
+      "sha256": "53ef78252e57a41134c1dd357cd3c3e7fe870babc9963041d650c41b08b1ffe1"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/canada/admin-geographies/output/overview/indigenous-lands-clss.geojson",
+      "bytes": 11779878,
+      "sha256": "37b23421c3731777023a7250b89af783f9b38d10aa08c27a4559a46fde7a5b8e"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/canada/admin-geographies/output/r2/pmtiles-catalog.json",
+      "bytes": 11566,
+      "sha256": "6b31ad1e9e0cfdfc80c74992b5d155d87cf58a18bfbac3ffc76505c14fac2f17"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/README.md",
+      "bytes": 3611,
+      "sha256": "ed4aee502b826da3423ea4d6325a1642b22634553de1846657d79e2a4302a328"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/build-census-variables.py",
+      "bytes": 13671,
+      "sha256": "7eb79a5b01fd798ce6e0988ecc2b28c3d167faa0a3855f8d61bd4ea46a0d1f8f"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/ecumene/README.md",
+      "bytes": 4627,
+      "sha256": "f358014ee866fb6f94ac3c01ae31202cda6b6afc35fa01dee4a9cc4333aa8233"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/bc-da-simplified/manifest.json",
+      "bytes": 21014,
+      "sha256": "020651c8f7dc891e4e5151686a34339b3489afeca5faa8ab78220133dcd2cb07"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/bc-da-simplified/parents/cd.geojson",
+      "bytes": 3632313,
+      "sha256": "4006a04102b3be2c74264334dcbfd1ea2bc39f81bc986f2e7ee37d189591b86b"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/bc-da-simplified/parents/csd.geojson",
+      "bytes": 5064890,
+      "sha256": "aa0e85e0e1f452bdfd518183793c3161919e703da481e1567092793c7dbb50a6"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/bc-da-simplified/parents/ct.geojson",
+      "bytes": 1017420,
+      "sha256": "c97e67237354b71f32f3139274d477ea955d5cd648d9febbe32a1481d7ae8311"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/bc_db_population_chsa_crosswalk.json",
+      "bytes": 32711989,
+      "sha256": "fe2346a406fe61d268a36d96d2b8ec6544a1a32a7b9db7f596afbb5f4769c8e4"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/bcenviroscreen-census-lha/2016/da-to-lha-crosswalk.json",
+      "bytes": 1661871,
+      "sha256": "cef8b80734c9a3494a7b180c78823e517ce613afb63ec79808aa24ee553abad4"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/bcenviroscreen-census-lha/2016/lha-socioeconomic.json",
+      "bytes": 353900,
+      "sha256": "368029bf7c32fc4f9b5f138d4f96a9fe47bb4a25e473af21169f39016f906a5f"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/bcenviroscreen-census-lha/manifest.json",
+      "bytes": 5321,
+      "sha256": "01eb6542457dd0bb61634d49fc16ca3c3584200609ef8751e08e1a742259cc25"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/canada-csd/north-south.json",
+      "bytes": 124208,
+      "sha256": "aeaca3298111b0fdb9275106a35ce706ef943d2afef90a66234e8b7430c38014"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/canada-csd/provinces/59.geojson.gz",
+      "bytes": 24164001,
+      "sha256": "2535e23347fff7520fb14fd69788688dee6080b43e6d047c7dc5025df480b1d9"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/ecumene/prince-george-city-ghsl-ecumene-pilot.evaluation.json",
+      "bytes": 3784,
+      "sha256": "fed147b3f953d098b7a1ce290cfcf9398e1cc387c85beae0dbdef8c4ea06915d"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/ecumene/prince-george-city-ghsl-ecumene-pilot.geojson.gz",
+      "bytes": 187337,
+      "sha256": "bb623ac30b61d2726c3cafe38c6010b2264401c20bf84e53d9b7a26af99c6ec8"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/ecumene/statcan-bc-population-ecumene-2021.geojson.gz",
+      "bytes": 3686661,
+      "sha256": "0b9d70c4a6f551fd04ba71500b6c45928375cc30af490e071ccc369dc0b33f70"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/ecumene/statcan-bc-population-ecumene-2021.manifest.json",
+      "bytes": 1167,
+      "sha256": "9390d42dc1018f8c86087955dc918f7ab195457fa32431ca51b1a6e9380ce28b"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/prince_george_csd.geo.json",
+      "bytes": 20396,
+      "sha256": "5d3b63a9a66b7f8134b31e0a311081a001fc730f6271801abf00a4da0c2394f7"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/prince_george_ct.geo.json",
+      "bytes": 194286,
+      "sha256": "a5a91292b25c119748845a6d480333df886be3a56054d244ddf3e6b956f96888"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/prince_george_da.geo.json",
+      "bytes": 447972,
+      "sha256": "bf646ac2e24ccdab785c6f60ca5214bcf5d19885d99a8bcc7897d7d7722c63a2"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/prince_george_db.geo.json",
+      "bytes": 1284819,
+      "sha256": "2467b9d053678915b0578ef351288aecc1d97b0ac203fa25c13c208f510b6349"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/prince_george_db_data.json",
+      "bytes": 762707,
+      "sha256": "dca5c654edcbbd86eee8d10f14778a951caa02becf5aa034c7cb4302aa0e798c"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/variables/catalog.json",
+      "bytes": 921209,
+      "sha256": "4672cafdf1fd593efe981e4f29cde450428f05fa4dba0f1aa75dc9099252f6b1"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/variables/cd/population_dwellings.json",
+      "bytes": 149,
+      "sha256": "0d17d97dbf9fda62b84f34cf194febc64000eea39b84a85f3e8d2df6959e5aab"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/variables/csd/population_dwellings.json",
+      "bytes": 686,
+      "sha256": "94eba056b4d5d392807f976bd7776520e919f420defb3bacfc203975fc4ae19b"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/variables/ct/population_dwellings.json",
+      "bytes": 1471,
+      "sha256": "a98c08c28d571d43a8ad70c2aa30dcfbb3df6964af66124f5908815eb2eb33c8"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/variables/da/age.json",
+      "bytes": 142782,
+      "sha256": "7367a7ca62c53d5820f398bdcb9baec9ea3a617aada2ac49aeec9a114a349160"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/variables/da/population_dwellings.json",
+      "bytes": 6374,
+      "sha256": "1290ce806400ffbe036ef27bc0ae5ea9d101e2fd852d006ca92505f6d2161673"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/census/output/variables/db/population_dwellings.json",
+      "bytes": 51660,
+      "sha256": "8d326c076a1db9cd9d79e2cd1e57fef85436a27a6a62022acd40ef2ba2908642"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/food-health/output/geocoding/geocode_location_overrides.json",
+      "bytes": 3193,
+      "sha256": "9046c4000906ce79c53dd9c1a9d98391b3218b5fcdb04d17f41f3cd5d7a9767b"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/food-health/output/geocoding/geocoded_locations.json",
+      "bytes": 4707434,
+      "sha256": "837160e171e0ae31cea0159de97c085e41ebb7155037357e0c9aed1c85f0e7dd"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/fpcc/output/community-geo.geojson",
+      "bytes": 37741,
+      "sha256": "3770af5bece3b9a2a6da39007544e3afe7ddfea530178106b41fa574622114d2"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/fpcc/output/language-geo.geojson",
+      "bytes": 200756,
+      "sha256": "99965e8c34108f356ba67b54af6854ceaef9c6adf50675f5da97051ae6689ca1"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/fpcc/output/manifest.json",
+      "bytes": 3702,
+      "sha256": "2a23649a2b881d214fd5b7faf8cb1f13d3217160b732cc90868546f40c538268"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/fpcc/output/placename-geo.geojson",
+      "bytes": 119092,
+      "sha256": "0989e827891391534a08b8a5165d62f866575aee52e75bd20fe6128a637c1b5d"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/manual/output/acknowledgement/fpcc-language-map.json",
+      "bytes": 1654,
+      "sha256": "9f1b084d86ebcc8db27fa004f4213a84e3d8564bc99ba5891e2e9d7adafd7da2"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/manual/output/acknowledgement/nation-registry.json",
+      "bytes": 9273,
+      "sha256": "195a8f8cbf99de81ae480dca65b17dc2b33779ad0730785d0d7db0b859da0847"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/manual/output/acknowledgement/relationship-graph.json",
+      "bytes": 32997,
+      "sha256": "fc1204f4ac7d93f2b87e5122ea0527de7b9c37d1f45b8d50af365cb71f66797f"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/manual/output/indicators/README.md",
+      "bytes": 681,
+      "sha256": "464521b207eb0ebdcce53c808b528bc6c955693a6b5d872529ff34e5b14fd77d"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/manual/output/indicators/indicator-catalog.json",
+      "bytes": 36345,
+      "sha256": "fee629e6a83bf8c2422aaf60b599c621b3ddf222870fad2d1d85ba3d4048d4fe"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/native-land/snapshot/languages.geojson",
+      "bytes": 1560685,
+      "sha256": "ef526ea1939b83bff17f1f40d6e94c396a9e71fd4ab9bdd83be534b54d373307"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/native-land/snapshot/manifest.json",
+      "bytes": 4483,
+      "sha256": "0b7279a4b4f9cfaa774e64eef5733e2e4f463789952ba512f013c867073604f0"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/native-land/snapshot/territories.geojson",
+      "bytes": 3086640,
+      "sha256": "544554b3d96cefc38d37b64d24018aa78d20964a789b70baf220b6d07bc3f785"
+    },
+    {
+      "path": "vendor/bcdatamapper/datascrapers/native-land/snapshot/treaties.geojson",
+      "bytes": 869866,
+      "sha256": "0081f136b649b5f65500aca2e9984fe07778f6e67aa36cc54e21b8ae38aa4abc"
+    }
+  ],
+  "nhhrDatasetCoverageAtReview": [
+    {
+      "id": "surgical-waits-northern",
+      "geography": "none",
+      "rows": 99,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/additional-evidence.json"
+    },
+    {
+      "id": "hospital-stay-costs",
+      "geography": "ha",
+      "rows": 34,
+      "boundaryKeyField": "source_region",
+      "snapshotPath": "src/atlas/snapshots/additional-evidence.json"
+    },
+    {
+      "id": "publications",
+      "geography": "institution",
+      "rows": 40,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/atlas-snapshot.json"
+    },
+    {
+      "id": "cihr-payments",
+      "geography": "institution",
+      "rows": 39,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/atlas-snapshot.json"
+    },
+    {
+      "id": "nserc-awards",
+      "geography": "institution",
+      "rows": 36,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/atlas-snapshot.json"
+    },
+    {
+      "id": "clinical-city",
+      "geography": "city",
+      "rows": 7,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/atlas-snapshot.json"
+    },
+    {
+      "id": "clinical-pg",
+      "geography": "city",
+      "rows": 10,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/atlas-snapshot.json"
+    },
+    {
+      "id": "physicians-hsda",
+      "geography": "hsda",
+      "rows": 16,
+      "boundaryKeyField": "health_region_code",
+      "snapshotPath": "src/atlas/snapshots/atlas-snapshot.json"
+    },
+    {
+      "id": "population-lha",
+      "geography": "lha",
+      "rows": 102,
+      "boundaryKeyField": "lha_code",
+      "snapshotPath": "src/atlas/snapshots/atlas-snapshot.json"
+    },
+    {
+      "id": "travel-schedule",
+      "geography": "none",
+      "rows": 18,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/atlas-snapshot.json"
+    },
+    {
+      "id": "travel-benchmarks",
+      "geography": "none",
+      "rows": 5,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/atlas-snapshot.json"
+    },
+    {
+      "id": "travel-scenarios",
+      "geography": "none",
+      "rows": 3,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/atlas-snapshot.json"
+    },
+    {
+      "id": "evidence-gaps",
+      "geography": "none",
+      "rows": 13,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/atlas-snapshot.json"
+    },
+    {
+      "id": "population-review",
+      "geography": "none",
+      "rows": 5,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/atlas-snapshot.json"
+    },
+    {
+      "id": "clinical-condition-mix",
+      "geography": "city",
+      "rows": 77,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/clinical-condition-mix.json"
+    },
+    {
+      "id": "hospital-facilities",
+      "geography": "facility",
+      "rows": 57,
+      "boundaryKeyField": "location_code",
+      "snapshotPath": "src/atlas/snapshots/hospital-facilities.json"
+    },
+    {
+      "id": "hospital-facility-costs",
+      "geography": "facility",
+      "rows": 363,
+      "boundaryKeyField": "location_code",
+      "snapshotPath": "src/atlas/snapshots/hospital-facilities.json"
+    },
+    {
+      "id": "nursing-workforce-northern",
+      "geography": "hsda",
+      "rows": 120,
+      "boundaryKeyField": "hsda_code",
+      "snapshotPath": "src/atlas/snapshots/nursing-workforce.json"
+    },
+    {
+      "id": "population-lha-ages",
+      "geography": "lha",
+      "rows": 102,
+      "boundaryKeyField": "lha_code",
+      "snapshotPath": "src/atlas/snapshots/population-ages.json"
+    },
+    {
+      "id": "research-income",
+      "geography": "institution",
+      "rows": 28,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/research-income.json"
+    },
+    {
+      "id": "travel-stop-events",
+      "geography": "route",
+      "rows": 286,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/travel-network.json"
+    },
+    {
+      "id": "travel-stop-locations",
+      "geography": "stop",
+      "rows": 58,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/travel-network.json"
+    },
+    {
+      "id": "trial-facility-conditions",
+      "geography": "facility",
+      "rows": 171,
+      "boundaryKeyField": "location_code",
+      "snapshotPath": "src/atlas/snapshots/trial-facility-conditions.json"
+    },
+    {
+      "id": "trial-facility-coverage",
+      "geography": "city",
+      "rows": 7,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/trial-facility-conditions.json"
+    },
+    {
+      "id": "trial-sites",
+      "geography": "facility",
+      "rows": 4,
+      "boundaryKeyField": "location_code",
+      "snapshotPath": "src/atlas/snapshots/trial-sites.json"
+    },
+    {
+      "id": "trial-site-evidence",
+      "geography": "none",
+      "rows": 10,
+      "boundaryKeyField": null,
+      "snapshotPath": "src/atlas/snapshots/trial-sites.json"
+    }
+  ]
+}

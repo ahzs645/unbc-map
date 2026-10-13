@@ -1,0 +1,290 @@
+{
+  "reviewedAt": "2026-10-12",
+  "sourceVersion": "NHHR manifest revision 93; CAUBO annual recovery 2026-10-07",
+  "datasets": [
+    {
+      "id": "research-income",
+      "title": "CAUBO sponsored research income",
+      "description": "Published sponsored-research income subtotals for seven reviewed institutional comparators over four fiscal years, converted from source thousands of dollars to CAD.",
+      "topic": "Funding",
+      "geography": "institution",
+      "status": "observed",
+      "timeLabel": "FY2020–2021 to FY2023–2024 · four annual source workbooks",
+      "sourceName": "CAUBO · Financial Information of Universities and Colleges",
+      "sourceUrl": "https://www.caubo.ca/knowledge-centre/analytics-and-reports/",
+      "datasetId": "a90c9d46-801e-4a6d-9b04-b3835def053a",
+      "tableName": "nhhr_recovered_data_c052_20261007_zip_caubo_avai",
+      "notes": [
+        "Each value is Table 1 Income, line L25 Total, fund column C05 Sponsored research subtotal. Only this subtotal is released; component fund columns, total funds, expenditures, and net assets are not added to it.",
+        "The original cover page in every annual workbook states that amounts are in thousands of dollars. Values are multiplied by 1,000 for the CAD display, while the original source subtotal is retained. This conversion does not increase the source's thousand-dollar reporting precision. Values are nominal, without an inflation adjustment.",
+        "The subtotal combines reported sponsored research in consolidated and non-consolidated affiliated entities. It covers external research support across fields, including grants and contracts. It is not health-research-only income, NHHR revenue, or an estimate of research impact.",
+        "CAUBO institution-reported income has a different accounting scope from CIHR annual payment records and NSERC award amounts. Fiscal labels, affiliation reporting, and financial reporting boundaries can differ; these measures should not be merged or added together as a common funding total.",
+        "Exact CAUBO institution codes select the comparator records. Published institution names are retained, including Northern Ontario School of Medicine for code 546 under the NOSM comparator. This series preserves source identities and does not assert harmonized corporate scope across institutional changes.",
+        "All seven selected institutions have four source fiscal periods. BC Cancer has no matching university record in this source and is omitted without inventing zero income. The unavailable 2001–2024 historical master is not used; coverage is limited to the four recovered annual workbooks.",
+        "Representative campus map points locate institution-level records for context. They do not allocate income to that campus, surrounding residents, health areas, or individual award sites. Multi-campus and affiliated research activity remains in the source institution total."
+      ],
+      "columns": [
+        {
+          "key": "comparator",
+          "label": "Institution / city",
+          "type": "text"
+        },
+        {
+          "key": "caubo_institution_code",
+          "label": "CAUBO institution code",
+          "type": "text"
+        },
+        {
+          "key": "source_institution_name",
+          "label": "Published institution name",
+          "type": "text"
+        },
+        {
+          "key": "fiscal_year",
+          "label": "Fiscal year",
+          "type": "text"
+        },
+        {
+          "key": "sponsored_research_income_cad",
+          "label": "Sponsored research income",
+          "type": "number",
+          "unit": "CAD"
+        },
+        {
+          "key": "source_subtotal_thousands_cad",
+          "label": "Source subtotal · thousands of CAD",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "comparator": "Calgary / Calgary",
+          "caubo_institution_code": "830",
+          "source_institution_name": "University of Calgary",
+          "fiscal_year": "2020-2021",
+          "sponsored_research_income_cad": 504480000,
+          "source_subtotal_thousands_cad": "504480"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "caubo_institution_code": "232",
+          "source_institution_name": "Dalhousie University",
+          "fiscal_year": "2020-2021",
+          "sponsored_research_income_cad": 183606000,
+          "source_subtotal_thousands_cad": "183606"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "caubo_institution_code": "538",
+          "source_institution_name": "Lakehead University",
+          "fiscal_year": "2020-2021",
+          "sponsored_research_income_cad": 23370000,
+          "source_subtotal_thousands_cad": "23370"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "caubo_institution_code": "546",
+          "source_institution_name": "Northern Ontario School of Medicine",
+          "fiscal_year": "2020-2021",
+          "sponsored_research_income_cad": 2032000,
+          "source_subtotal_thousands_cad": "2032"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "caubo_institution_code": "918",
+          "source_institution_name": "The University of British Columbia",
+          "fiscal_year": "2020-2021",
+          "sponsored_research_income_cad": 726838000,
+          "source_subtotal_thousands_cad": "726838"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "caubo_institution_code": "996",
+          "source_institution_name": "University of Northern British Columbia",
+          "fiscal_year": "2020-2021",
+          "sponsored_research_income_cad": 15153000,
+          "source_subtotal_thousands_cad": "15153"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "caubo_institution_code": "766",
+          "source_institution_name": "University of Saskatchewan",
+          "fiscal_year": "2020-2021",
+          "sponsored_research_income_cad": 285434000,
+          "source_subtotal_thousands_cad": "285434"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "caubo_institution_code": "830",
+          "source_institution_name": "University of Calgary",
+          "fiscal_year": "2021-2022",
+          "sponsored_research_income_cad": 506139000,
+          "source_subtotal_thousands_cad": "506139"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "caubo_institution_code": "232",
+          "source_institution_name": "Dalhousie University",
+          "fiscal_year": "2021-2022",
+          "sponsored_research_income_cad": 190636000,
+          "source_subtotal_thousands_cad": "190636"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "caubo_institution_code": "538",
+          "source_institution_name": "Lakehead University",
+          "fiscal_year": "2021-2022",
+          "sponsored_research_income_cad": 23131000,
+          "source_subtotal_thousands_cad": "23131"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "caubo_institution_code": "546",
+          "source_institution_name": "Northern Ontario School of Medicine",
+          "fiscal_year": "2021-2022",
+          "sponsored_research_income_cad": 1511000,
+          "source_subtotal_thousands_cad": "1511"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "caubo_institution_code": "918",
+          "source_institution_name": "The University of British Columbia",
+          "fiscal_year": "2021-2022",
+          "sponsored_research_income_cad": 737129000,
+          "source_subtotal_thousands_cad": "737129"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "caubo_institution_code": "996",
+          "source_institution_name": "University of Northern British Columbia",
+          "fiscal_year": "2021-2022",
+          "sponsored_research_income_cad": 17718000,
+          "source_subtotal_thousands_cad": "17718"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "caubo_institution_code": "766",
+          "source_institution_name": "University of Saskatchewan",
+          "fiscal_year": "2021-2022",
+          "sponsored_research_income_cad": 239652000,
+          "source_subtotal_thousands_cad": "239652"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "caubo_institution_code": "830",
+          "source_institution_name": "UNIVERSITY OF CALGARY",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_income_cad": 545339000,
+          "source_subtotal_thousands_cad": "545339"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "caubo_institution_code": "232",
+          "source_institution_name": "Dalhousie University",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_income_cad": 188614000,
+          "source_subtotal_thousands_cad": "188614"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "caubo_institution_code": "538",
+          "source_institution_name": "Lakehead University",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_income_cad": 27002000,
+          "source_subtotal_thousands_cad": "27002"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "caubo_institution_code": "546",
+          "source_institution_name": "Northern Ontario School of Medicine",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_income_cad": 1933000,
+          "source_subtotal_thousands_cad": "1933"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "caubo_institution_code": "918",
+          "source_institution_name": "The University of British Columbia",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_income_cad": 712601000,
+          "source_subtotal_thousands_cad": "712601"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "caubo_institution_code": "996",
+          "source_institution_name": "University of Northern British Columbia",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_income_cad": 17710000,
+          "source_subtotal_thousands_cad": "17710"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "caubo_institution_code": "766",
+          "source_institution_name": "University of Saskatchewan",
+          "fiscal_year": "2022-2023",
+          "sponsored_research_income_cad": 229900000,
+          "source_subtotal_thousands_cad": "229900"
+        },
+        {
+          "comparator": "Calgary / Calgary",
+          "caubo_institution_code": "830",
+          "source_institution_name": "University of Calgary",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_income_cad": 588483000,
+          "source_subtotal_thousands_cad": "588483"
+        },
+        {
+          "comparator": "Dalhousie / Halifax",
+          "caubo_institution_code": "232",
+          "source_institution_name": "Dalhousie University",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_income_cad": 213072000,
+          "source_subtotal_thousands_cad": "213072"
+        },
+        {
+          "comparator": "Lakehead / Thunder Bay",
+          "caubo_institution_code": "538",
+          "source_institution_name": "Lakehead University",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_income_cad": 28118000,
+          "source_subtotal_thousands_cad": "28118"
+        },
+        {
+          "comparator": "NOSM / Thunder Bay",
+          "caubo_institution_code": "546",
+          "source_institution_name": "Northern Ontario School of Medicine",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_income_cad": 2308000,
+          "source_subtotal_thousands_cad": "2308"
+        },
+        {
+          "comparator": "UBC / Vancouver",
+          "caubo_institution_code": "918",
+          "source_institution_name": "The University of British Columbia",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_income_cad": 739668000,
+          "source_subtotal_thousands_cad": "739668"
+        },
+        {
+          "comparator": "UNBC / Prince George",
+          "caubo_institution_code": "996",
+          "source_institution_name": "University of Northern British Columbia",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_income_cad": 19612000,
+          "source_subtotal_thousands_cad": "19612"
+        },
+        {
+          "comparator": "USask / Saskatoon",
+          "caubo_institution_code": "766",
+          "source_institution_name": "University of Saskatchewan",
+          "fiscal_year": "2023-2024",
+          "sponsored_research_income_cad": 309403000,
+          "source_subtotal_thousands_cad": "309403"
+        }
+      ],
+      "defaultMetric": "sponsored_research_income_cad",
+      "entityField": "comparator",
+      "timeField": "fiscal_year"
+    }
+  ]
+}

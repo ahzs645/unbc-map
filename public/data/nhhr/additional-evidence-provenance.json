@@ -1,0 +1,105 @@
+{
+  "reviewedAt": "2026-10-12",
+  "manifestUrl": "https://zoer.k8s.overtheedgepaper.ca/api/projects/acdd692f-a188-4f85-bb5a-83c48d5c7e82/database/data-spaces/de1fe530-a762-52fa-ba11-d01cc5b344df/manifest",
+  "manifestRevision": 93,
+  "sourceVersion": "NHHR manifest revision 93; source catalogue recovery 2026-10-07",
+  "releaseScope": "Bounded public secondary aggregates only; no participant, consent, contact, or ethics-draft records.",
+  "sources": {
+    "waits": {
+      "collectionId": "DATA-C072",
+      "datasetId": "a2987ed6-8b5d-4548-aab0-10f962545539",
+      "filename": "health_authority_wait_times.csv",
+      "originalFileId": "d09fd7d5-d771-41df-984d-9873e97f1628",
+      "sha256": "4378bc2a00e7a01aa7612d09a5157aafc7a497b5109c3e0ca69dec371c6b7140",
+      "tableName": "nhhr_data_c072_8ecfe860a47c_zip_data_c072_health",
+      "sourceRelativePath": "outputs/theo_cba_full_data_package_20260831/converted_csv/DATA-C072/health_authority_wait_times.csv",
+      "sourceRowCount": 1483
+    },
+    "procedures": {
+      "collectionId": "DATA-C072",
+      "datasetId": "a2987ed6-8b5d-4548-aab0-10f962545539",
+      "filename": "procedures.csv",
+      "originalFileId": "0978a0a9-04f5-4b60-9901-957dae624290",
+      "sha256": "ed0904be958977b318a00a65dea14becd6e3bae83947c854cd2ca619e4bae0c3",
+      "tableName": "nhhr_data_c072_8ecfe860a47c_zip_data_c072__13",
+      "sourceRelativePath": "outputs/theo_cba_full_data_package_20260831/converted_csv/DATA-C072/procedures.csv",
+      "sourceRowCount": 156
+    },
+    "periods": {
+      "collectionId": "DATA-C072",
+      "datasetId": "a2987ed6-8b5d-4548-aab0-10f962545539",
+      "filename": "procedure_summaries.csv",
+      "originalFileId": "3e267868-b81e-4a46-83c8-f4d970964acf",
+      "sha256": "72c14599d022573dabb636ebde5a4ee3c7304f4c049f3c14759bbacda4ca7779",
+      "tableName": "nhhr_data_c072_8ecfe860a47c_zip_data_c072__17",
+      "sourceRelativePath": "outputs/theo_cba_full_data_package_20260831/converted_csv/DATA-C072/procedure_summaries.csv",
+      "sourceRowCount": 321,
+      "releasedFields": [
+        "procedure_key",
+        "run_id",
+        "report_as_of",
+        "period_start",
+        "period_end"
+      ],
+      "excludedFields": [
+        "p50_weeks",
+        "p90_weeks",
+        "cases_waiting",
+        "cases_waiting_raw"
+      ]
+    },
+    "costs": {
+      "collectionId": "DATA-C073",
+      "datasetId": "8502dc29-352e-4bb5-80a4-1d7b14cd843d",
+      "filename": "CIHI_cshs_BC_Sheet1.csv",
+      "originalFileId": "48d6a3e1-45c9-4c89-82f7-e1923a0a4a47",
+      "sha256": "9372e92ede277c93448bc7b51a56bed9e92106a7b4ad971a37524b09c1ce737a",
+      "tableName": "nhhr_recovered_data_c073_20261007_zip_cihi_2",
+      "sourceRelativePath": "Generated derivative: CIHI_cshs_BC_Sheet1.csv",
+      "sourceRowCount": 417,
+      "sourceStatus": "verified-generated-derivative; original workbook separately retained",
+      "originalWorkbook": {
+        "originalFileId": "d8140f05-d1fb-4f9e-84c2-d8e14d110324",
+        "sha256": "7caa4b328a8cd82447bbfce62f7ffa447d54e5a73284be0ab477fa780c768953",
+        "tableName": "nhhr_data_c073_2b844a747e06_zip_data_c073__2",
+        "sourceRelativePath": "Data Research/healthdata/cihi_cshs/source/cihi_cshs_bc_2026-05.xlsx",
+        "worksheet": "Sheet1"
+      }
+    }
+  },
+  "releases": {
+    "surgical-waits-northern": {
+      "rows": 99,
+      "sourceKeys": [
+        "waits",
+        "procedures",
+        "periods"
+      ],
+      "selection": "run_id=5 and health_authority=Northern Health; periods and labels joined by source keys",
+      "uniqueness": "procedure_key",
+      "suppressedWaitingCounts": 40,
+      "unreportedP90Values": 39
+    },
+    "hospital-stay-costs": {
+      "rows": 34,
+      "sourceKeys": [
+        "costs"
+      ],
+      "selection": "BC worksheet Reporting level in Province/territory or Health region",
+      "uniqueness": "reporting_level + place_or_organization + fiscal_year",
+      "excluded": "Facility and corporation rows; overlapping Canada export"
+    }
+  },
+  "qualityFindings": [
+    "Latest surgical run 5 repeats run 1, which is not appended.",
+    "Procedure-summary p50 equals cases_waiting in 265 of 321 source records; 235 p50 values exceed p90. Those numeric columns are excluded rather than repaired by guessing.",
+    "Northern health-authority percentile pairs satisfy p50<=p90; suppressed and missing measurements stay null.",
+    "BC cost records have one observation per reporting level, entity, and fiscal year; the source's absent PHSA FY2020–2021 is not created as a zero.",
+    "Five exact source reporting labels map to BC territorial HA identifiers; province and PHSA rows deliberately have no polygon. See crosswalk-health-authority.json and its README for the reviewed identity lookup."
+  ],
+  "methodReferences": [
+    "https://swt.hlth.gov.bc.ca/swt/WaitTimeDefinitions.xhtml",
+    "https://www.cihi.ca/en/indicators/cost-of-a-standard-hospital-stay-cshs"
+  ],
+  "rightsNote": "Original publisher terms and attribution apply. The source catalogue's sharing classification is not blanket permission for unrelated or participant-level content."
+}

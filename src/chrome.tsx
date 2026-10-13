@@ -31,6 +31,18 @@ export interface ChromeActions {
   onAbout: () => void;
 }
 
+export interface ChromeSearchItem {
+  id: string;
+  name: string;
+  searchText?: string;
+}
+
+export interface ChromeSearch {
+  label: string;
+  items: ChromeSearchItem[];
+  onSelect: (item: ChromeSearchItem) => void;
+}
+
 /** Catches clicks on the chrome's links that belong to the map. */
 function useMapLinks(
   ref: React.RefObject<HTMLDivElement | null>,
@@ -70,16 +82,27 @@ export function ChromeHeader({
   onHome,
   onAbout,
   onSelectPlace,
-}: ChromeActions & { onSelectPlace: (place: Place) => void }) {
+  search,
+}: ChromeActions & { onSelectPlace?: (place: Place) => void; search?: ChromeSearch }) {
+  const config = useMemo(() => search ? resolveConfig({
+    ...brand,
+    search: { ...brand.search, placeholder: search.label },
+    skipLink: { label: "Skip to NHHR content", target: "#atlas-main" },
+  }) : chromeConfig, [search?.label]);
   const html = useMemo(
-    () => renderHeader(chromeConfig, { base, currentPath: "/" }),
-    [],
+    () => renderHeader(config, { base, currentPath: search ? "/dev/projects" : "/" }),
+    [config],
   );
   const ref = useRef<HTMLDivElement>(null);
   const [slot, setSlot] = useState<HTMLElement | null>(null);
   const [term, setTerm] = useState("");
   const select = useRef(onSelectPlace);
   select.current = onSelectPlace;
+  const searchRef = useRef(search);
+  searchRef.current = search;
+  const matches = (query: string): ChromeSearchItem[] => searchRef.current
+    ? searchRef.current.items.filter(item => `${item.name} ${item.searchText ?? ""}`.toLowerCase().includes(query.trim().toLowerCase()))
+    : matchesFor(query);
   useMapLinks(ref, { onHome, onAbout });
 
   useEffect(() => {
@@ -96,7 +119,7 @@ export function ChromeHeader({
     const onInput = () => setTerm(input.value);
     const onSearch = (event: CustomEvent<{ query: string }>) => {
       event.preventDefault();
-      const first = matchesFor(event.detail.query)[0];
+      const first = matches(event.detail.query)[0];
       if (first) choose(first);
     };
     const onToggle = (event: CustomEvent<{ part: string; open: boolean }>) => {
@@ -114,15 +137,19 @@ export function ChromeHeader({
       root.removeEventListener("unbc-chrome:toggle", onToggle as EventListener);
       results.remove();
     };
-  }, []);
+  }, [html]);
 
-  function choose(place: Place) {
+  function choose(item: ChromeSearchItem) {
     window.UNBCChrome?.closeSearch();
     window.UNBCChrome?.closeMenu();
-    select.current(place);
+    if (searchRef.current) searchRef.current.onSelect(item);
+    else {
+      const place = places.find(place => place.id === item.id);
+      if (place) select.current?.(place);
+    }
   }
 
-  const matches = matchesFor(term);
+  const results = term.trim() ? matches(term) : [];
   return (
     <>
       <div
@@ -133,15 +160,15 @@ export function ChromeHeader({
       {slot &&
         term.trim() !== "" &&
         createPortal(
-          <div role="group" aria-label="Campus places">
-            {matches.slice(0, 8).map((place) => (
+          <div role="group" aria-label={search ? "NHHR datasets" : "Campus places"}>
+            {results.slice(0, 8).map((place) => (
               <button key={place.id} type="button" onClick={() => choose(place)}>
                 <span>{place.name}</span>
                 <ChevronRight size={16} aria-hidden="true" />
               </button>
             ))}
-            {matches.length === 0 && (
-              <p>No campus places match. Try a building name or number.</p>
+            {results.length === 0 && (
+              <p>{search ? "No datasets match. Try a research topic or dataset name." : "No campus places match. Try a building name or number."}</p>
             )}
           </div>,
           slot,
@@ -165,11 +192,11 @@ export function ChromeFooter(actions: ChromeActions) {
 }
 
 /** UNBC › Prince George campus › Campus Explorer. */
-export function ChromeBreadcrumbs() {
+export function ChromeBreadcrumbs({ section }: { section?: string } = {}) {
   const html = useMemo(
     () =>
       renderBreadcrumbs(
-        [
+        section ? [{ label: "NHHR Atlas", url: "/dev/projects" }, { label: section }] : [
           {
             label: "Prince George campus",
             url: "https://www.unbc.ca/about-unbc/campus-location-details",
@@ -179,7 +206,7 @@ export function ChromeBreadcrumbs() {
         { ...chromeConfig, home: "https://www.unbc.ca/", breadcrumbs: { homeLabel: "UNBC" } },
         { base },
       ),
-    [],
+    [section],
   );
   return <div className="context-bar" dangerouslySetInnerHTML={{ __html: html }} />;
 }

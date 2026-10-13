@@ -1,0 +1,1763 @@
+{
+  "reviewedAt": "2026-10-12",
+  "manifestUrl": "https://zoer.k8s.overtheedgepaper.ca/api/projects/acdd692f-a188-4f85-bb5a-83c48d5c7e82/database/data-spaces/de1fe530-a762-52fa-ba11-d01cc5b344df/manifest",
+  "reviewFile": "scripts/nhhr-travel-stop-review.json",
+  "reviewSha256": "bc4895bccfac1ca39ec4ab6c13c952921952f7d395e08d6f54767cb9c27a0654",
+  "originalSources": [
+    {
+      "collectionId": "DATA-C069",
+      "datasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "filename": "bc_patient_travel.db",
+      "originalFileId": "935d03b3-f4e1-47da-bcb3-eaefaa288be7",
+      "sha256": "67fa1a28f8ea4228369194d76aa34d12dd7adc324c68a0d19ec5aea8f4e01674",
+      "tableName": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_bc_pat",
+      "sqliteTable": "nh_connections_schedule",
+      "sourceRowCount": 286
+    },
+    {
+      "collectionId": "DATA-C069",
+      "datasetId": "977fa723-d63f-4115-bb6a-3b34a3fbc36c",
+      "filename": "nh_connections_schedule.csv",
+      "originalFileId": "67188a5a-5c39-43bf-8ad9-ac8a21ca1201",
+      "sha256": "16cfbf195d21100219bc7244f501dc4cfbda0c103a06bdcf82eec47b5fe1a07b",
+      "tableName": "nhhr_data_c069_cd7719dbe25d_zip_data_c069_nh_con",
+      "sqliteTable": "",
+      "sourceRowCount": 286
+    }
+  ],
+  "originalComparison": "All 286 CSV rows exactly match the original read-only SQLite nh_connections_schedule table, including event IDs, service-day strings, sequence, text and capture timestamps.",
+  "pgmapsRegistrySource": "vendor/bcdatamapper/data-sources/healthdata/health_place_registry/health_place_registry.csv",
+  "pgmapsRegistrySha256": "5485a4788943578831a54f5c57b8e1cdace7c6de26e4594eb959400b1ebae789",
+  "coordinateMethods": [
+    "BC Address Geocoder official LOCALITY/CIVIC_NUMBER returned points",
+    "OSM returned hospital nodes or feature centres; attribution required"
+  ],
+  "coordinateEvidence": {
+    "nhc-facility-kordyban": {
+      "method": "Source public address independently returned by BC Address Geocoder",
+      "fullAddress": "1100 Alward St, Prince George, BC",
+      "matchPrecision": "CIVIC_NUMBER",
+      "score": 100,
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=1100+Alward+St%2C+Prince+George%2C+BC&maxResults=1&outputSRS=4326",
+      "returnedCoordinates": [
+        -122.7661656,
+        53.9142322
+      ]
+    },
+    "nhc-facility-pacific-central": {
+      "method": "Source public address independently returned by BC Address Geocoder",
+      "fullAddress": "1150 Station St, Vancouver, BC",
+      "matchPrecision": "CIVIC_NUMBER",
+      "score": 100,
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=1150+Station+St%2C+Vancouver%2C+BC&maxResults=1&outputSRS=4326",
+      "returnedCoordinates": [
+        -123.0979677,
+        49.2737513
+      ]
+    },
+    "nhc-town-100-mile-house": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "100 Mile House",
+      "fullAddress": "100 Mile House, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=100+Mile+House%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -121.2955556,
+        51.6427778
+      ]
+    },
+    "nhc-town-108-mile-house": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "108 Mile House",
+      "fullAddress": "108 Mile House, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=108+Mile+House%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -121.327582,
+        51.7949647
+      ]
+    },
+    "nhc-town-150-mile-house": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "150 Mile House",
+      "fullAddress": "150 Mile House, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=150+Mile+House%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -121.9277778,
+        52.1055556
+      ]
+    },
+    "nhc-town-70-mile-house": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "70 Mile House",
+      "fullAddress": "70 Mile House, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=70+Mile+House%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -121.3963888,
+        51.3038889
+      ]
+    },
+    "nhc-facility-abbotsford-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 293945054,
+      "osmName": "Abbotsford Regional Hospital & Cancer Centre",
+      "sourceReturnedCentre": {
+        "lat": 49.03684,
+        "lon": -122.3134181
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "32900 Marshall Rd",
+      "officialFacilityPage": "https://www.fraserhealth.ca/Service-Directory/Locations/Abbotsford/abbotsford-regional-hospital-and-cancer-centre",
+      "officialAddressTokensPresent": true,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/293945054",
+      "returnedCoordinates": [
+        -122.3134181,
+        49.03684
+      ]
+    },
+    "nhc-town-avola": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Avola",
+      "fullAddress": "Avola, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Avola%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -119.3236111,
+        51.7852778
+      ]
+    },
+    "nhc-town-barriere": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Barriere",
+      "fullAddress": "Barriere, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Barriere%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -120.1236112,
+        51.1797222
+      ]
+    },
+    "nhc-town-blue-river": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Blue River",
+      "fullAddress": "Blue River, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Blue+River%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -119.3047222,
+        52.1075
+      ]
+    },
+    "nhc-town-burns-lake": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Burns Lake",
+      "fullAddress": "Burns Lake, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Burns+Lake%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -125.7644445,
+        54.2302778
+      ]
+    },
+    "nhc-town-cache-creek": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Cache Creek",
+      "fullAddress": "Cache Creek, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Cache+Creek%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -121.3233333,
+        50.8119444
+      ]
+    },
+    "nhc-town-chetwynd": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Chetwynd",
+      "fullAddress": "Chetwynd, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Chetwynd%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -121.6383334,
+        55.6958333
+      ]
+    },
+    "nhc-town-chilliwack": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Chilliwack",
+      "fullAddress": "Chilliwack, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Chilliwack%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -121.9508334,
+        49.1577778
+      ]
+    },
+    "nhc-town-clearwater": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Clearwater",
+      "fullAddress": "Clearwater, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Clearwater%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -120.0325,
+        51.6455556
+      ]
+    },
+    "nhc-town-clinton": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Clinton",
+      "fullAddress": "Clinton, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Clinton%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -121.5866666,
+        51.0916667
+      ]
+    },
+    "nhc-town-crescent-spur": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Crescent Spur",
+      "fullAddress": "Crescent Spur, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Crescent+Spur%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -120.6847222,
+        53.5830555
+      ]
+    },
+    "nhc-facility-dawson-creek-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 184193563,
+      "osmName": "Dawson Creek and District Hospital",
+      "sourceReturnedCentre": {
+        "lat": 55.7496995,
+        "lon": -120.2355971
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "11100 13 St",
+      "officialFacilityPage": "https://www.northernhealth.ca/find-a-facility/hospitals/dawson-creek-and-district-hospital",
+      "officialAddressTokensPresent": false,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/184193563",
+      "returnedCoordinates": [
+        -120.2355971,
+        55.7496995
+      ]
+    },
+    "nhc-town-dome-creek": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Dome Creek",
+      "fullAddress": "Dome Creek, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Dome+Creek%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -121.0247223,
+        53.7469444
+      ]
+    },
+    "nhc-town-dunster": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Dunster",
+      "fullAddress": "Dunster, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Dunster%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -119.8377778,
+        53.1241666
+      ]
+    },
+    "nhc-town-fort-fraser": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Fort Fraser",
+      "fullAddress": "Fort Fraser, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Fort+Fraser%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -124.5525001,
+        54.0619445
+      ]
+    },
+    "nhc-facility-fort-nelson-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 1472772876,
+      "osmName": "Fort Nelson General Hospital",
+      "sourceReturnedCentre": {
+        "lat": 58.8089047,
+        "lon": -122.7046247
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "5315 Liard St",
+      "officialFacilityPage": "https://www.northernhealth.ca/find-a-facility/hospitals/fort-nelson-general-hospital",
+      "officialAddressTokensPresent": true,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/1472772876",
+      "returnedCoordinates": [
+        -122.7046247,
+        58.8089047
+      ]
+    },
+    "nhc-facility-fort-st-james-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 534618461,
+      "osmName": "Nats’oojeh Hospital and Health Centre",
+      "sourceReturnedCentre": {
+        "lat": 54.440048,
+        "lon": -124.2420302
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "606 Stuart Dr E",
+      "officialFacilityPage": "https://www.northernhealth.ca/find-a-facility/hospitals/natsoojeh-hospital-and-health-centre",
+      "officialAddressTokensPresent": true,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/534618461",
+      "returnedCoordinates": [
+        -124.2420302,
+        54.440048
+      ]
+    },
+    "nhc-facility-fort-st-john-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 258499176,
+      "osmName": "Fort St. John Hospital",
+      "sourceReturnedCentre": {
+        "lat": 56.255584,
+        "lon": -120.8156753
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "8407 112 Ave",
+      "officialFacilityPage": "https://www.northernhealth.ca/find-a-facility/hospitals/fort-st-john-hospital-peace-villa",
+      "officialAddressTokensPresent": true,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/258499176",
+      "returnedCoordinates": [
+        -120.8156753,
+        56.255584
+      ]
+    },
+    "nhc-town-fraser-lake": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Fraser Lake",
+      "fullAddress": "Fraser Lake, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Fraser+Lake%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -124.8438888,
+        54.0602778
+      ]
+    },
+    "nhc-town-gitsegukla": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Gitsegukla",
+      "fullAddress": "Gitsegukla, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Gitsegukla%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -127.8195252,
+        55.1003055
+      ]
+    },
+    "nhc-facility-hazelton-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 992113143,
+      "osmName": "Wrinch Memorial Hospital",
+      "sourceReturnedCentre": {
+        "lat": 55.2596586,
+        "lon": -127.651183
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "2510 Hwy 62",
+      "officialFacilityPage": "https://www.northernhealth.ca/find-a-facility/hospitals/wrinch-memorial-hospital",
+      "officialAddressTokensPresent": false,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/992113143",
+      "returnedCoordinates": [
+        -127.651183,
+        55.2596586
+      ]
+    },
+    "nhc-town-hixon": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Hixon",
+      "fullAddress": "Hixon, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Hixon%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -122.5827777,
+        53.4169444
+      ]
+    },
+    "nhc-town-hope": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Hope",
+      "fullAddress": "Hope, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Hope%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -121.4413888,
+        49.38
+      ]
+    },
+    "nhc-town-houston": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Houston",
+      "fullAddress": "Houston, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Houston%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -126.6483333,
+        54.3983333
+      ]
+    },
+    "nhc-facility-kamloops-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 222534272,
+      "osmName": "Royal Inland Hospital",
+      "sourceReturnedCentre": {
+        "lat": 50.6694997,
+        "lon": -120.3343465
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "311 Columbia St",
+      "officialFacilityPage": "https://www.interiorhealth.ca/locations/royal-inland-hospital",
+      "officialAddressTokensPresent": true,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/222534272",
+      "returnedCoordinates": [
+        -120.3343465,
+        50.6694997
+      ]
+    },
+    "nhc-facility-kelowna-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 100584338,
+      "osmName": "Kelowna General Hospital",
+      "sourceReturnedCentre": {
+        "lat": 49.8738661,
+        "lon": -119.4934868
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "2268 Pandosy St",
+      "officialFacilityPage": "https://www.interiorhealth.ca/locations/kelowna-general-hospital",
+      "officialAddressTokensPresent": true,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/100584338",
+      "returnedCoordinates": [
+        -119.4934868,
+        49.8738661
+      ]
+    },
+    "nhc-town-kersley": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Kersley",
+      "fullAddress": "Kersley, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Kersley%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -122.418889,
+        52.8186111
+      ]
+    },
+    "nhc-town-kitwanga": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Kitwanga",
+      "fullAddress": "Kitwanga, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Kitwanga%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -128.0525335,
+        55.1938759
+      ]
+    },
+    "nhc-town-little-fort": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Little Fort",
+      "fullAddress": "Little Fort, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Little+Fort%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -120.2055556,
+        51.4238889
+      ]
+    },
+    "nhc-facility-mackenzie-hospital": {
+      "method": "Official facility page address independently returned by BC Address Geocoder",
+      "address": "45 Centennial Dr",
+      "fullAddress": "45 Centennial Dr, Mackenzie, BC",
+      "matchPrecision": "CIVIC_NUMBER",
+      "score": 100,
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=45+Centennial+Dr%2C+Mackenzie%2C+BC&maxResults=1&outputSRS=4326",
+      "returnedCoordinates": [
+        -123.1013184,
+        55.3379008
+      ]
+    },
+    "nhc-facility-mcbride-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 1290124439,
+      "osmName": "McBride and District Hospital",
+      "sourceReturnedCentre": {
+        "lat": 53.3010251,
+        "lon": -120.1613856
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "1136 5th Ave",
+      "officialFacilityPage": "https://www.northernhealth.ca/find-a-facility/hospitals/mcbride-and-district-hospital",
+      "officialAddressTokensPresent": true,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/1290124439",
+      "returnedCoordinates": [
+        -120.1613856,
+        53.3010251
+      ]
+    },
+    "nhc-town-mcleod-lake": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "McLeod Lake",
+      "fullAddress": "McLeod Lake, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=McLeod+Lake%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -123.0330556,
+        54.9869445
+      ]
+    },
+    "nhc-town-mclure": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "McLure",
+      "fullAddress": "McLure, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=McLure%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -120.2269445,
+        51.0322222
+      ]
+    },
+    "nhc-town-port-edward": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Port Edward",
+      "fullAddress": "Port Edward, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Port+Edward%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -130.2894444,
+        54.2205556
+      ]
+    },
+    "nhc-facility-prince-george-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 445255625,
+      "osmName": "University Hospital of Northern British Columbia",
+      "sourceReturnedCentre": {
+        "lat": 53.913002,
+        "lon": -122.764458
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "1475 Edmonton St",
+      "officialFacilityPage": "https://www.northernhealth.ca/find-a-facility/hospitals/university-hospital-northern-british-columbia-uhnbc",
+      "officialAddressTokensPresent": true,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/445255625",
+      "returnedCoordinates": [
+        -122.764458,
+        53.913002
+      ]
+    },
+    "nhc-town-prince-george": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Prince George",
+      "fullAddress": "Prince George, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Prince+George%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -122.7452777,
+        53.9130555
+      ]
+    },
+    "nhc-facility-prince-rupert-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 992672370,
+      "osmName": "Prince Rupert Regional Hospital",
+      "sourceReturnedCentre": {
+        "lat": 54.3047714,
+        "lon": -130.329985
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "1305 Summit Ave",
+      "officialFacilityPage": "https://www.northernhealth.ca/find-a-facility/hospitals/prince-rupert-regional-hospital",
+      "officialAddressTokensPresent": true,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/992672370",
+      "returnedCoordinates": [
+        -130.329985,
+        54.3047714
+      ]
+    },
+    "nhc-facility-quesnel-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 354698177,
+      "osmName": "G.R. Baker Memorial Hospital",
+      "sourceReturnedCentre": {
+        "lat": 52.9811026,
+        "lon": -122.4996364
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "543 Front St",
+      "officialFacilityPage": "https://www.northernhealth.ca/find-a-facility/hospitals/gr-baker-memorial-hospital",
+      "officialAddressTokensPresent": true,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/354698177",
+      "returnedCoordinates": [
+        -122.4996364,
+        52.9811026
+      ]
+    },
+    "nhc-facility-smithers-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 606031382,
+      "osmName": "Bulkley Valley District Hospital",
+      "sourceReturnedCentre": {
+        "lat": 54.7848854,
+        "lon": -127.16306
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "3950 8th Ave",
+      "officialFacilityPage": "https://www.northernhealth.ca/find-a-facility/hospitals/bulkley-valley-district-hospital",
+      "officialAddressTokensPresent": true,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/606031382",
+      "returnedCoordinates": [
+        -127.16306,
+        54.7848854
+      ]
+    },
+    "nhc-town-taylor": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Taylor",
+      "fullAddress": "Taylor, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Taylor%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -120.6866666,
+        56.1591667
+      ]
+    },
+    "nhc-town-telkwa": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Telkwa",
+      "fullAddress": "Telkwa, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Telkwa%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -127.0508333,
+        54.6966666
+      ]
+    },
+    "nhc-town-terrace": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Terrace",
+      "fullAddress": "Terrace, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Terrace%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -128.5997222,
+        54.5175
+      ]
+    },
+    "nhc-town-tete-jaune-cache": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Tete Jaune Cache",
+      "fullAddress": "Tête Jaune Cache in Tete Jaune, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 67,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [
+        {
+          "value": "TETE JAUNE CACHE",
+          "element": "LOCALITY",
+          "fault": "partialMatch",
+          "penalty": 1
+        }
+      ],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Tete+Jaune+Cache%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -119.4302777,
+        52.9694444
+      ]
+    },
+    "nhc-town-topley": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Topley",
+      "fullAddress": "Topley, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Topley%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -126.2977777,
+        54.5044444
+      ]
+    },
+    "nhc-town-valemount": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Valemount",
+      "fullAddress": "Valemount, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Valemount%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -119.2733334,
+        52.8286112
+      ]
+    },
+    "nhc-facility-vanderhoof-hospital": {
+      "method": "Official facility page address independently returned by BC Address Geocoder",
+      "address": "3255 Hospital Rd",
+      "fullAddress": "3255 Hospital Rd, Vanderhoof, BC",
+      "matchPrecision": "CIVIC_NUMBER",
+      "score": 100,
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=3255+Hospital+Rd%2C+Vanderhoof%2C+BC&maxResults=1&outputSRS=4326",
+      "returnedCoordinates": [
+        -124.0110024,
+        54.0285233
+      ]
+    },
+    "nhc-town-vavenby": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Vavenby",
+      "fullAddress": "Vavenby, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Vavenby%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -119.7280556,
+        51.5855556
+      ]
+    },
+    "nhc-facility-vernon-hospital": {
+      "method": "OSM returned hospital feature centre",
+      "osmType": "way",
+      "osmId": 696495495,
+      "osmName": "Vernon Jubilee Hospital",
+      "sourceReturnedCentre": {
+        "lat": 50.2566885,
+        "lon": -119.2711548
+      },
+      "sourceReturnedPoint": null,
+      "addressEvidence": "2101 32 St",
+      "officialFacilityPage": "https://www.interiorhealth.ca/locations/vernon-jubilee-hospital",
+      "officialAddressTokensPresent": false,
+      "coordinateSourceUrl": "https://www.openstreetmap.org/way/696495495",
+      "returnedCoordinates": [
+        -119.2711548,
+        50.2566885
+      ]
+    },
+    "nhc-town-williams-lake": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Williams Lake",
+      "fullAddress": "Williams Lake, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Williams+Lake%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -122.14,
+        52.1291667
+      ]
+    },
+    "nhc-town-witset": {
+      "method": "BC Address Geocoder returned LOCALITY Point; required province BC and exact reviewed community alias",
+      "query": "Witset",
+      "fullAddress": "Witset, BC",
+      "matchPrecision": "LOCALITY",
+      "score": 68,
+      "locationDescriptor": "localityPoint",
+      "positionalAccuracy": "coarse",
+      "isOfficial": "true",
+      "geocoderFaults": [],
+      "coordinateSourceUrl": "https://geocoder.api.gov.bc.ca/addresses.geojson?addressString=Witset%2C+BC&maxResults=1&outputSRS=4326&matchPrecision=LOCALITY",
+      "returnedCoordinates": [
+        -127.3276735,
+        55.0208022
+      ]
+    }
+  },
+  "sourceLabelAliases": {
+    "100 mile (canco)": {
+      "sourceStopLabel": "100 Mile (Canco)",
+      "stopName": "100 Mile (Canco)",
+      "city": "100 Mile House",
+      "locationCode": "nhc-town-100-mile-house",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "100 mile (visitor info)": {
+      "sourceStopLabel": "100 Mile (Visitor Info)",
+      "stopName": "100 Mile (Visitor Info)",
+      "city": "100 Mile House",
+      "locationCode": "nhc-town-100-mile-house",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "100 mile house (visitor info)": {
+      "sourceStopLabel": "100 Mile House (Visitor info)",
+      "stopName": "100 Mile House (Visitor info)",
+      "city": "100 Mile House",
+      "locationCode": "nhc-town-100-mile-house",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "108 mile (service station)": {
+      "sourceStopLabel": "108 Mile (Service Station)",
+      "stopName": "108 Mile (Service Station)",
+      "city": "108 Mile House",
+      "locationCode": "nhc-town-108-mile-house",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "108 mile (visitor info)": {
+      "sourceStopLabel": "108 Mile (Visitor Info)",
+      "stopName": "108 Mile (Visitor Info)",
+      "city": "108 Mile House",
+      "locationCode": "nhc-town-108-mile-house",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "108 mile house (visitor info)": {
+      "sourceStopLabel": "108 Mile House (Visitor info)",
+      "stopName": "108 Mile House (Visitor info)",
+      "city": "108 Mile House",
+      "locationCode": "nhc-town-108-mile-house",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "150 mile (husky)": {
+      "sourceStopLabel": "150 Mile (Husky)",
+      "stopName": "150 Mile (Husky)",
+      "city": "150 Mile House",
+      "locationCode": "nhc-town-150-mile-house",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "150 mile house (husky)": {
+      "sourceStopLabel": "150 Mile House (Husky)",
+      "stopName": "150 Mile House (Husky)",
+      "city": "150 Mile House",
+      "locationCode": "nhc-town-150-mile-house",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "70 mile house (general store)": {
+      "sourceStopLabel": "70 Mile House (General store)",
+      "stopName": "70 Mile House (General store)",
+      "city": "70 Mile House",
+      "locationCode": "nhc-town-70-mile-house",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "abbotsford (hospital emergency)": {
+      "sourceStopLabel": "Abbotsford (Hospital Emergency)",
+      "stopName": "Abbotsford (Hospital Emergency)",
+      "city": "Abbotsford",
+      "locationCode": "nhc-facility-abbotsford-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "avola (gas station)": {
+      "sourceStopLabel": "Avola (Gas station)",
+      "stopName": "Avola (Gas station)",
+      "city": "Avola",
+      "locationCode": "nhc-town-avola",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "barrier (health centre)": {
+      "sourceStopLabel": "Barrier (Health Centre)",
+      "stopName": "Barrier (Health Centre)",
+      "city": "Barriere",
+      "locationCode": "nhc-town-barriere",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": "Explicit source spelling Barrier resolves to Barriere; BC geocoder reports a spelling fault."
+    },
+    "blue river (med outpost)": {
+      "sourceStopLabel": "Blue River (Med Outpost)",
+      "stopName": "Blue River (Med Outpost)",
+      "city": "Blue River",
+      "locationCode": "nhc-town-blue-river",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "burns lake (husky co-op)": {
+      "sourceStopLabel": "Burns Lake (Husky CO-OP)",
+      "stopName": "Burns Lake (Husky CO-OP)",
+      "city": "Burns Lake",
+      "locationCode": "nhc-town-burns-lake",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "cache creek (husky)": {
+      "sourceStopLabel": "Cache Creek (Husky)",
+      "stopName": "Cache Creek (Husky)",
+      "city": "Cache Creek",
+      "locationCode": "nhc-town-cache-creek",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "chetwynd (petro canada)": {
+      "sourceStopLabel": "Chetwynd (Petro Canada)",
+      "stopName": "Chetwynd (Petro Canada)",
+      "city": "Chetwynd",
+      "locationCode": "nhc-town-chetwynd",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "chilliwack (husky station)": {
+      "sourceStopLabel": "Chilliwack (Husky Station)",
+      "stopName": "Chilliwack (Husky Station)",
+      "city": "Chilliwack",
+      "locationCode": "nhc-town-chilliwack",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "clearwater (hspt)": {
+      "sourceStopLabel": "Clearwater (HSPT)",
+      "stopName": "Clearwater (HSPT)",
+      "city": "Clearwater",
+      "locationCode": "nhc-town-clearwater",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "clinton (cariboo lodge)": {
+      "sourceStopLabel": "Clinton (Cariboo Lodge)",
+      "stopName": "Clinton (Cariboo Lodge)",
+      "city": "Clinton",
+      "locationCode": "nhc-town-clinton",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "crescent spur (loos street)": {
+      "sourceStopLabel": "Crescent Spur (Loos Street)",
+      "stopName": "Crescent Spur (Loos Street)",
+      "city": "Crescent Spur",
+      "locationCode": "nhc-town-crescent-spur",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "dawson creek (hospital)": {
+      "sourceStopLabel": "Dawson Creek (Hospital)",
+      "stopName": "Dawson Creek (Hospital)",
+      "city": "Dawson Creek",
+      "locationCode": "nhc-facility-dawson-creek-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "dome creek (diner)": {
+      "sourceStopLabel": "Dome Creek (Diner)",
+      "stopName": "Dome Creek (Diner)",
+      "city": "Dome Creek",
+      "locationCode": "nhc-town-dome-creek",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "dunster (hall parking lot)": {
+      "sourceStopLabel": "Dunster (Hall parking lot)",
+      "stopName": "Dunster (Hall parking lot)",
+      "city": "Dunster",
+      "locationCode": "nhc-town-dunster",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "fort fraser (petrocan)": {
+      "sourceStopLabel": "Fort Fraser (Petrocan)",
+      "stopName": "Fort Fraser (Petrocan)",
+      "city": "Fort Fraser",
+      "locationCode": "nhc-town-fort-fraser",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "fort nelson (hospital)": {
+      "sourceStopLabel": "Fort Nelson (Hospital)",
+      "stopName": "Fort Nelson (Hospital)",
+      "city": "Fort Nelson",
+      "locationCode": "nhc-facility-fort-nelson-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "fort st. james (hospital)": {
+      "sourceStopLabel": "Fort St. James (Hospital)",
+      "stopName": "Fort St. James (Hospital)",
+      "city": "Fort St. James",
+      "locationCode": "nhc-facility-fort-st-james-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "fort st. john (hospital)": {
+      "sourceStopLabel": "Fort St. John (Hospital)",
+      "stopName": "Fort St. John (Hospital)",
+      "city": "Fort St. John",
+      "locationCode": "nhc-facility-fort-st-john-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "fraser lake (clinic)": {
+      "sourceStopLabel": "Fraser Lake (Clinic)",
+      "stopName": "Fraser Lake (Clinic)",
+      "city": "Fraser Lake",
+      "locationCode": "nhc-town-fraser-lake",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "gitsegukla": {
+      "sourceStopLabel": "Gitsegukla",
+      "stopName": "Gitsegukla",
+      "city": "Gitsegukla",
+      "locationCode": "nhc-town-gitsegukla",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "hazelton (hospital)": {
+      "sourceStopLabel": "Hazelton (Hospital)",
+      "stopName": "Hazelton (Hospital)",
+      "city": "Hazelton",
+      "locationCode": "nhc-facility-hazelton-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "hixon (race trac gas)": {
+      "sourceStopLabel": "Hixon (Race Trac Gas)",
+      "stopName": "Hixon (Race Trac Gas)",
+      "city": "Hixon",
+      "locationCode": "nhc-town-hixon",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "hixon race trac gas": {
+      "sourceStopLabel": "Hixon Race Trac Gas",
+      "stopName": "Hixon Race Trac Gas",
+      "city": "Hixon",
+      "locationCode": "nhc-town-hixon",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "hope (mcdonalds)": {
+      "sourceStopLabel": "Hope (McDonalds)",
+      "stopName": "Hope (McDonalds)",
+      "city": "Hope",
+      "locationCode": "nhc-town-hope",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "houston (health centre)": {
+      "sourceStopLabel": "Houston (Health Centre)",
+      "stopName": "Houston (Health Centre)",
+      "city": "Houston",
+      "locationCode": "nhc-town-houston",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "kamloops (hospital)": {
+      "sourceStopLabel": "Kamloops (Hospital)",
+      "stopName": "Kamloops (Hospital)",
+      "city": "Kamloops",
+      "locationCode": "nhc-facility-kamloops-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "kamloops (rih hospital - columbia street)": {
+      "sourceStopLabel": "Kamloops (RIH Hospital - Columbia Street)",
+      "stopName": "Kamloops (RIH Hospital - Columbia Street)",
+      "city": "Kamloops",
+      "locationCode": "nhc-facility-kamloops-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "kelowna (hospital)": {
+      "sourceStopLabel": "Kelowna (Hospital)",
+      "stopName": "Kelowna (Hospital)",
+      "city": "Kelowna",
+      "locationCode": "nhc-facility-kelowna-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "kersley (alamo grill)": {
+      "sourceStopLabel": "Kersley (Alamo Grill)",
+      "stopName": "Kersley (Alamo Grill)",
+      "city": "Kersley",
+      "locationCode": "nhc-town-kersley",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "kitwanga (petro)": {
+      "sourceStopLabel": "Kitwanga (Petro)",
+      "stopName": "Kitwanga (Petro)",
+      "city": "Kitwanga",
+      "locationCode": "nhc-town-kitwanga",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "kordyban lodge": {
+      "sourceStopLabel": "Kordyban Lodge",
+      "stopName": "Kordyban Lodge",
+      "city": "Prince George",
+      "locationCode": "nhc-facility-kordyban",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "little fort (general store)": {
+      "sourceStopLabel": "Little Fort (General Store)",
+      "stopName": "Little Fort (General Store)",
+      "city": "Little Fort",
+      "locationCode": "nhc-town-little-fort",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "mackenzie (hospital)": {
+      "sourceStopLabel": "Mackenzie (Hospital)",
+      "stopName": "Mackenzie (Hospital)",
+      "city": "Mackenzie",
+      "locationCode": "nhc-facility-mackenzie-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "mackenzie junction": {
+      "sourceStopLabel": "Mackenzie Junction",
+      "stopName": "Mackenzie Junction",
+      "city": null,
+      "locationCode": null,
+      "locationPrecision": "unmatched",
+      "unmatchedReason": "Road-junction stop, not the town of Mackenzie. No independently verified source pickup coordinate; BC locality lookup returned no match.",
+      "aliasNote": ""
+    },
+    "mcbride (hospital)": {
+      "sourceStopLabel": "McBride (Hospital)",
+      "stopName": "McBride (Hospital)",
+      "city": "McBride",
+      "locationCode": "nhc-facility-mcbride-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "mcleod lake (general store)": {
+      "sourceStopLabel": "McLeod Lake (General Store)",
+      "stopName": "McLeod Lake (General Store)",
+      "city": "McLeod Lake",
+      "locationCode": "nhc-town-mcleod-lake",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "mclure (fire hall)": {
+      "sourceStopLabel": "McLure (Fire Hall)",
+      "stopName": "McLure (Fire Hall)",
+      "city": "McLure",
+      "locationCode": "nhc-town-mclure",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "port edwards (rest stop)": {
+      "sourceStopLabel": "Port Edwards (Rest stop)",
+      "stopName": "Port Edwards (Rest stop)",
+      "city": "Port Edward",
+      "locationCode": "nhc-town-port-edward",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": "Explicit source spelling Port Edwards resolves to Port Edward; BC geocoder reports a spelling fault, not a different locality."
+    },
+    "prince george (uhnbc)": {
+      "sourceStopLabel": "Prince George (UHNBC)",
+      "stopName": "Prince George (UHNBC)",
+      "city": "Prince George",
+      "locationCode": "nhc-facility-prince-george-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "prince george (uhnbc/kl)": {
+      "sourceStopLabel": "Prince George (UHNBC/KL)",
+      "stopName": "Prince George (UHNBC/KL)",
+      "city": "Prince George",
+      "locationCode": "nhc-town-prince-george",
+      "locationPrecision": "town",
+      "unmatchedReason": "Source label bundles multiple facilities. No single pickup-site coordinate is assigned; map shows the verified town representative only.",
+      "aliasNote": ""
+    },
+    "prince rupert (hospital)": {
+      "sourceStopLabel": "Prince Rupert (Hospital)",
+      "stopName": "Prince Rupert (Hospital)",
+      "city": "Prince Rupert",
+      "locationCode": "nhc-facility-prince-rupert-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "quesnel (hospital parking)": {
+      "sourceStopLabel": "Quesnel (Hospital parking)",
+      "stopName": "Quesnel (Hospital parking)",
+      "city": "Quesnel",
+      "locationCode": "nhc-facility-quesnel-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "small river (rest area)": {
+      "sourceStopLabel": "Small River (Rest Area)",
+      "stopName": "Small River (Rest Area)",
+      "city": null,
+      "locationCode": null,
+      "locationPrecision": "unmatched",
+      "unmatchedReason": "Rest-area label does not establish a locality or exact address. Geocoder returned an unrelated River Jordan locality, which was rejected.",
+      "aliasNote": ""
+    },
+    "smithers (hospital)": {
+      "sourceStopLabel": "Smithers (Hospital)",
+      "stopName": "Smithers (Hospital)",
+      "city": "Smithers",
+      "locationCode": "nhc-facility-smithers-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "taylor (esso)": {
+      "sourceStopLabel": "Taylor (Esso)",
+      "stopName": "Taylor (Esso)",
+      "city": "Taylor",
+      "locationCode": "nhc-town-taylor",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "telkwa (race trac gas)": {
+      "sourceStopLabel": "Telkwa (Race Trac Gas)",
+      "stopName": "Telkwa (Race Trac Gas)",
+      "city": "Telkwa",
+      "locationCode": "nhc-town-telkwa",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "terrace (hospital, park avenue medical centre)": {
+      "sourceStopLabel": "Terrace (Hospital, Park Avenue Medical Centre)",
+      "stopName": "Terrace (Hospital, Park Avenue Medical Centre)",
+      "city": "Terrace",
+      "locationCode": "nhc-town-terrace",
+      "locationPrecision": "town",
+      "unmatchedReason": "Source label bundles multiple facilities. No single pickup-site coordinate is assigned; map shows the verified town representative only.",
+      "aliasNote": ""
+    },
+    "terrace hospital, 2800 tetrault street/park avenue medical centre": {
+      "sourceStopLabel": "Terrace Hospital, 2800 Tetrault Street/Park Avenue Medical Centre",
+      "stopName": "Terrace Hospital, 2800 Tetrault Street/Park Avenue Medical Centre",
+      "city": "Terrace",
+      "locationCode": "nhc-town-terrace",
+      "locationPrecision": "town",
+      "unmatchedReason": "Source label bundles multiple facilities. No single pickup-site coordinate is assigned; map shows the verified town representative only.",
+      "aliasNote": ""
+    },
+    "tete jaune (gas station)": {
+      "sourceStopLabel": "Tete Jaune (Gas Station)",
+      "stopName": "Tete Jaune (Gas Station)",
+      "city": "Tete Jaune Cache",
+      "locationCode": "nhc-town-tete-jaune-cache",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "topley (country grill)": {
+      "sourceStopLabel": "Topley (Country Grill)",
+      "stopName": "Topley (Country Grill)",
+      "city": "Topley",
+      "locationCode": "nhc-town-topley",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "valemount (clinic)": {
+      "sourceStopLabel": "Valemount (Clinic)",
+      "stopName": "Valemount (Clinic)",
+      "city": "Valemount",
+      "locationCode": "nhc-town-valemount",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "vancouver (pacific central station - 1150 station st)": {
+      "sourceStopLabel": "Vancouver (Pacific Central Station - 1150 Station St)",
+      "stopName": "Vancouver (Pacific Central Station - 1150 Station St)",
+      "city": "Vancouver",
+      "locationCode": "nhc-facility-pacific-central",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "vanderhoof (hospital)": {
+      "sourceStopLabel": "Vanderhoof (Hospital)",
+      "stopName": "Vanderhoof (Hospital)",
+      "city": "Vanderhoof",
+      "locationCode": "nhc-facility-vanderhoof-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "vavenby (general store)": {
+      "sourceStopLabel": "Vavenby (General Store)",
+      "stopName": "Vavenby (General Store)",
+      "city": "Vavenby",
+      "locationCode": "nhc-town-vavenby",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "vernon (hospital)": {
+      "sourceStopLabel": "Vernon (Hospital)",
+      "stopName": "Vernon (Hospital)",
+      "city": "Vernon",
+      "locationCode": "nhc-facility-vernon-hospital",
+      "locationPrecision": "facility",
+      "unmatchedReason": null,
+      "aliasNote": ""
+    },
+    "williams lake (mcdonalds)": {
+      "sourceStopLabel": "Williams Lake (McDonalds)",
+      "stopName": "Williams Lake (McDonalds)",
+      "city": "Williams Lake",
+      "locationCode": "nhc-town-williams-lake",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "williams lake (tim horton's)": {
+      "sourceStopLabel": "Williams Lake (Tim Horton's)",
+      "stopName": "Williams Lake (Tim Horton's)",
+      "city": "Williams Lake",
+      "locationCode": "nhc-town-williams-lake",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "williams lake (tim hortons)": {
+      "sourceStopLabel": "Williams Lake (Tim Hortons)",
+      "stopName": "Williams Lake (Tim Hortons)",
+      "city": "Williams Lake",
+      "locationCode": "nhc-town-williams-lake",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    },
+    "witset (gas bar)": {
+      "sourceStopLabel": "Witset (Gas Bar)",
+      "stopName": "Witset (Gas Bar)",
+      "city": "Witset",
+      "locationCode": "nhc-town-witset",
+      "locationPrecision": "town",
+      "unmatchedReason": "Exact source boarding address not verified; mapped only to a coarse, verified town representative.",
+      "aliasNote": ""
+    }
+  },
+  "coverage": {
+    "sourceEvents": 286,
+    "sourceRoutes": 12,
+    "sourcePatterns": 18,
+    "sourceLegs": 26,
+    "mappedEvents": 280,
+    "unmappedEvents": 6,
+    "eventPrecision": {
+      "town": 184,
+      "facility": 96,
+      "unmatched": 6
+    },
+    "reviewedReferencePoints": 56,
+    "drawnSchematicSegments": 28,
+    "unmatchedStopLabels": [
+      "Mackenzie Junction",
+      "Small River (Rest Area)"
+    ],
+    "patterns": [
+      {
+        "route_slug": "burns-lake-prince-george-burns-lake",
+        "service_day": "Tuesday",
+        "source_events": 14,
+        "source_legs": 2,
+        "located_events": 14,
+        "unmatched_events": 0,
+        "drawn_segments": 2
+      },
+      {
+        "route_slug": "burns-lake-prince-george-burns-lake",
+        "service_day": "Wednesday",
+        "source_events": 18,
+        "source_legs": 2,
+        "located_events": 18,
+        "unmatched_events": 0,
+        "drawn_segments": 2
+      },
+      {
+        "route_slug": "burns-lake-terrace-burns-lake",
+        "service_day": "Thursday",
+        "source_events": 22,
+        "source_legs": 2,
+        "located_events": 22,
+        "unmatched_events": 0,
+        "drawn_segments": 2
+      },
+      {
+        "route_slug": "dawson-creek-fort-nelson-dawson-creek",
+        "service_day": "Thursday",
+        "source_events": 4,
+        "source_legs": 1,
+        "located_events": 4,
+        "unmatched_events": 0,
+        "drawn_segments": 1
+      },
+      {
+        "route_slug": "dawson-creek-fort-nelson-dawson-creek",
+        "service_day": "Tuesday",
+        "source_events": 4,
+        "source_legs": 1,
+        "located_events": 4,
+        "unmatched_events": 0,
+        "drawn_segments": 1
+      },
+      {
+        "route_slug": "dawson-creek-fort-st-john-dawson-creek",
+        "service_day": "Monday, Tuesday, Wednesday, Thursday & Friday",
+        "source_events": 3,
+        "source_legs": 1,
+        "located_events": 3,
+        "unmatched_events": 0,
+        "drawn_segments": 1
+      },
+      {
+        "route_slug": "dawson-creek-fort-st-john-dawson-creek",
+        "service_day": "Monday, Tuesday, Wednesday, Thursday & Friday",
+        "source_events": 3,
+        "source_legs": 1,
+        "located_events": 3,
+        "unmatched_events": 0,
+        "drawn_segments": 1
+      },
+      {
+        "route_slug": "mackenzie-prince-george-mackenzie",
+        "service_day": "Wednesday",
+        "source_events": 8,
+        "source_legs": 2,
+        "located_events": 6,
+        "unmatched_events": 2,
+        "drawn_segments": 2
+      },
+      {
+        "route_slug": "mcbride-kamloops-mcbride",
+        "service_day": "Thursday",
+        "source_events": 28,
+        "source_legs": 2,
+        "located_events": 28,
+        "unmatched_events": 0,
+        "drawn_segments": 2
+      },
+      {
+        "route_slug": "prince-george-fort-st-john-prince-george",
+        "service_day": "Sunday* & Thursday",
+        "source_events": 10,
+        "source_legs": 1,
+        "located_events": 9,
+        "unmatched_events": 1,
+        "drawn_segments": 1
+      },
+      {
+        "route_slug": "prince-george-fort-st-john-prince-george",
+        "service_day": "Tuesday & Saturday*",
+        "source_events": 10,
+        "source_legs": 1,
+        "located_events": 9,
+        "unmatched_events": 1,
+        "drawn_segments": 1
+      },
+      {
+        "route_slug": "prince-george-kelowna-prince-george",
+        "service_day": "Tuesday & Thursday",
+        "source_events": 47,
+        "source_legs": 2,
+        "located_events": 47,
+        "unmatched_events": 0,
+        "drawn_segments": 2
+      },
+      {
+        "route_slug": "prince-george-prince-rupert-prince-george",
+        "service_day": "Monday*, Wednesday*, Thursday & Saturday*",
+        "source_events": 22,
+        "source_legs": 1,
+        "located_events": 22,
+        "unmatched_events": 0,
+        "drawn_segments": 1
+      },
+      {
+        "route_slug": "prince-george-prince-rupert-prince-george",
+        "service_day": "Sunday*, Monday, Wednesday* & Friday*",
+        "source_events": 22,
+        "source_legs": 1,
+        "located_events": 22,
+        "unmatched_events": 0,
+        "drawn_segments": 1
+      },
+      {
+        "route_slug": "prince-george-vancouver-prince-george",
+        "service_day": "Sunday, Tuesday & Thursday",
+        "source_events": 23,
+        "source_legs": 1,
+        "located_events": 23,
+        "unmatched_events": 0,
+        "drawn_segments": 1
+      },
+      {
+        "route_slug": "prince-george-vancouver-prince-george",
+        "service_day": "Tuesday, Thursday & Saturday",
+        "source_events": 24,
+        "source_legs": 1,
+        "located_events": 24,
+        "unmatched_events": 0,
+        "drawn_segments": 1
+      },
+      {
+        "route_slug": "quesnel-prince-george-quesnel",
+        "service_day": "Tuesday",
+        "source_events": 6,
+        "source_legs": 2,
+        "located_events": 6,
+        "unmatched_events": 0,
+        "drawn_segments": 2
+      },
+      {
+        "route_slug": "valemount-prince-george-valemount",
+        "service_day": "Tuesday",
+        "source_events": 18,
+        "source_legs": 2,
+        "located_events": 16,
+        "unmatched_events": 2,
+        "drawn_segments": 4
+      }
+    ]
+  },
+  "attribution": "Contains BC Address Geocoder public location references and OpenStreetMap contributor hospital features; retain original citations and OpenStreetMap attribution.",
+  "privacy": "Only public transport schedules and public place references. No participant, contact, consent, remuneration or patient records."
+}
