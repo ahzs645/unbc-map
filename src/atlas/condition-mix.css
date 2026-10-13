@@ -15,7 +15,7 @@
 }
 .condition-mix-heading p,
 .condition-mix-note {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
   color: var(--atlas-muted, #525154);
   margin: 0;
@@ -36,12 +36,12 @@
   min-width: 0;
 }
 .condition-mix-city-label strong {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.4;
   font-weight: 600;
 }
 .condition-mix-city-label > span {
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.45;
   color: var(--atlas-muted, #525154);
   font-variant-numeric: tabular-nums;
@@ -70,13 +70,13 @@
   box-shadow: inset -1px 0 #ffffff90;
   cursor: pointer;
   font: inherit;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1;
 }
 .condition-mix-segment > span {
   background: var(--mix-color);
   padding: 2px;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1;
   font-weight: 600;
 }
@@ -96,14 +96,14 @@
   margin-top: -8px;
   padding-top: 5px;
   border-top: 1px solid #b9beb7;
-  font-size: 11px;
+  font-size: 13px;
   color: var(--atlas-muted, #525154);
   font-variant-numeric: tabular-nums;
 }
 .condition-mix-shown,
 .condition-mix-row-note {
   display: block;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.5;
   margin: 4px 0 0;
   color: var(--atlas-muted, #525154);
@@ -114,7 +114,7 @@
 .condition-mix-key summary,
 .condition-mix-values summary {
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   color: var(--atlas-green, #035642);
   padding: 4px 0;
@@ -137,7 +137,7 @@
   display: flex;
   align-items: flex-start;
   gap: 7px;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.5;
   min-width: 0;
 }
@@ -148,7 +148,7 @@
   flex: 0 0 24px;
   width: 24px;
   height: 19px;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1;
   border: 1px solid #29292a40;
   font-weight: 600;
@@ -174,7 +174,7 @@
   min-width: 700px;
   border-collapse: collapse;
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
 }
 .condition-mix-values caption {
@@ -225,7 +225,7 @@
   border: 1px solid #cdcfc4;
   box-shadow: 0 4px 20px #29292a26;
   font-family: "bcsans-regular", "BC Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   pointer-events: none;
 }
@@ -233,7 +233,7 @@
   font-weight: 600;
 }
 .condition-mix-tooltip small {
-  font-size: 11px;
+  font-size: 13px;
   color: #525154;
 }
 .condition-mix-chart.is-compact .condition-mix-heading {
@@ -241,7 +241,7 @@
 }
 .condition-mix-chart.is-compact .condition-mix-heading p,
 .condition-mix-chart.is-compact .condition-mix-note {
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.45;
 }
 .condition-mix-chart.is-compact .condition-mix-bars {
@@ -258,7 +258,7 @@
 }
 .condition-mix-chart.is-compact .condition-mix-key summary,
 .condition-mix-chart.is-compact .condition-mix-values summary {
-  font-size: 11px;
+  font-size: 13px;
 }
 .condition-mix-chart.is-compact .condition-mix-legend {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -297,7 +297,7 @@
     grid-template-columns: 1fr;
   }
   .condition-mix-chart.is-compact .condition-mix-city-label strong {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

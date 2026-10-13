@@ -12,7 +12,7 @@
   border: 1px solid #cdcfc4;
   border-radius: 2px;
   color: #035642;
-  font-size: 11px;
+  font-size: 13px;
   box-shadow: 0 1px 4px #0001;
 }
 .atlas-app .atlas-basemap-picker select {
@@ -35,11 +35,11 @@
   background: #fff;
   border: 1px solid #cdcfc4;
   color: #525154;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.4;
 }
 .atlas-map-panel .maplibregl-ctrl-attrib {
-  font-size: 10px;
+  font-size: 12px;
 }
 .atlas-map-panel .maplibregl-ctrl-bottom-right {
   bottom: 0 !important;
@@ -57,7 +57,7 @@
   box-shadow: 0 1px 4px #0002;
 }
 .atlas-point-legend {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
 }
 .atlas-point-legend > strong {
@@ -70,12 +70,12 @@
   overflow: visible;
 }
 .atlas-point-legend svg text {
-  font-size: 9px;
+  font-size: 12px;
   fill: #29292a;
 }
 .atlas-app .atlas-point-legend p,
 .atlas-app .atlas-institution-scope {
-  font-size: 12px;
+  font-size: 14px;
   color: #525154;
   line-height: 1.6;
   margin: 6px 0;
@@ -83,7 +83,7 @@
 .atlas-location-detail {
   display: block;
   margin-top: 6px;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.4;
 }
 .atlas-location-detail > span {
@@ -94,7 +94,7 @@
   width: 210px;
 }
 .atlas-map-compact .atlas-point-legend p {
-  font-size: 10px;
+  font-size: 12px;
 }
 @media (max-width: 700px) {
   .atlas-map-panel.atlas-map-points .atlas-basemap-picker {
@@ -106,7 +106,7 @@
     top: 5px;
     padding: 3px 5px;
     gap: 4px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .atlas-app .atlas-basemap-picker select {
     width: 78px;
@@ -114,7 +114,7 @@
   .atlas-map-panel .atlas-basemap-notice {
     left: 5px;
     top: 38px;
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 

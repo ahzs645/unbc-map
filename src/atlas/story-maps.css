@@ -9,8 +9,8 @@
   margin: auto;
   padding-bottom: 24px;
 }
-.atlas-storymap-intro h1 {
-  margin: 14px 0;
+.atlas-storymap-intro .atlas-lead {
+  margin-top: 8px;
 }
 .atlas-storymap-intro > p:not(.atlas-eyebrow) {
   max-width: 850px;
@@ -23,7 +23,7 @@
   align-items: center;
   gap: 16px;
   margin-top: 20px;
-  font-size: 13px;
+  font-size: 15px;
 }
 .atlas-storymap-actions > span {
   margin-right: auto;
@@ -43,10 +43,10 @@
   --editorial-top: 56px;
   height: min(840px, calc(100dvh - 40px));
   min-height: 540px;
-  border: 1px solid #eae7e5;
+  border: 2px solid #eae7e5;
   font-family: inherit;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.6;
   overscroll-behavior-y: contain;
   scrollbar-gutter: stable;
 }
@@ -63,7 +63,7 @@
   color: #035642;
   border: 0;
   padding: 10px 0;
-  font-size: 12px;
+  font-size: 14px;
 }
 .atlas-story-reader .editorial-nav-next {
   right: 0;
@@ -105,7 +105,7 @@
   min-height: 0;
 }
 .atlas-story-reader .atlas-text-button {
-  font-size: 13px;
+  font-size: 15px;
   color: #035642;
 }
 .atlas-chapter-takeaway {
@@ -121,12 +121,12 @@
   color: #035642;
 }
 .atlas-chapter-takeaway span {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5;
 }
 .atlas-chapter-values {
   margin-top: 18px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .atlas-chapter-values summary {
   color: #035642;
@@ -162,10 +162,10 @@
   display: grid;
   gap: 4px;
   line-height: 1.4;
-  font-size: 14px;
+  font-size: 16px;
 }
 .atlas-chapter-evidence-heading span {
-  font-size: 12px;
+  font-size: 14px;
   color: #525154;
 }
 .atlas-chapter-viz {
@@ -186,7 +186,7 @@
 .atlas-chapter-viz .atlas-chart-heading p,
 .atlas-chapter-viz .atlas-chart-help,
 .atlas-chapter-viz .atlas-chart-footnote {
-  font-size: 11px;
+  font-size: 13px;
 }
 .atlas-chapter-viz .atlas-bar-row {
   grid-template-columns: minmax(90px, 1.3fr) minmax(65px, 1fr) auto;
@@ -194,10 +194,10 @@
 }
 .atlas-chapter-viz .atlas-bar-label,
 .atlas-chapter-viz .atlas-bar-value {
-  font-size: 11px;
+  font-size: 13px;
 }
 .atlas-story-reader .atlas-chapter-source {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.5;
   margin: 0 132px 0 0;
   color: #525154;
@@ -228,7 +228,7 @@
   border-radius: 0 !important;
 }
 .atlas-map-compact .atlas-map-legend {
-  font-size: 11px;
+  font-size: 13px;
   padding: 6px 8px;
   gap: 6px !important;
   line-height: 1.5;
@@ -240,7 +240,7 @@
   left: 8px !important;
   bottom: 8px !important;
   max-width: min(260px, calc(100% - 50px)) !important;
-  font-size: 11px;
+  font-size: 13px;
   padding: 8px 10px !important;
   line-height: 1.5;
 }
@@ -249,14 +249,14 @@
   display: flex;
   flex-direction: column;
   min-height: 0;
-  font-size: 12px;
+  font-size: 14px;
 }
 .atlas-comparison-labels {
   display: flex;
   justify-content: space-between;
   gap: 10px;
   padding: 8px;
-  font-size: 11px;
+  font-size: 13px;
 }
 .atlas-comparison-stage {
   position: relative;
@@ -295,7 +295,7 @@
 }
 .atlas-map-comparison > p {
   margin: 4px 10px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .atlas-comparison-values {
   margin: 4px 10px 8px;
@@ -307,7 +307,7 @@
 .atlas-comparison-values table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 11px;
+  font-size: 13px;
 }
 .atlas-comparison-values td,
 .atlas-comparison-values th {
@@ -320,11 +320,11 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  border: 1px solid #eae7e5;
+  border: 2px solid #eae7e5;
   border-top: 0;
   padding: 12px 16px;
   background: #f4f4f4;
-  font-size: 12px;
+  font-size: 14px;
 }
 .atlas-storymap-progress button {
   display: flex;
@@ -341,7 +341,7 @@
 .atlas-storymap-sources {
   max-width: 1140px;
   margin: 32px auto 0;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.7;
 }
 .atlas-storymap-sources details {
@@ -368,7 +368,7 @@
 .atlas-scenario-lab {
   container: scenario / inline-size;
   padding: 20px;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.6;
 }
 .atlas-scenario-label {
@@ -440,13 +440,13 @@
 }
 .atlas-scenario-result small,
 .atlas-scenario-caveat {
-  font-size: 11px;
+  font-size: 13px;
 }
 .atlas-storymap-collection {
   margin: 0 0 30px;
 }
 .atlas-storymap-collection > p {
-  font-size: 14px;
+  font-size: 16px;
   color: #525154;
   margin: 12px 0 20px;
 }
@@ -478,7 +478,7 @@
 .atlas-storymap-card p {
   margin: 0;
   line-height: 1.6;
-  font-size: 14px;
+  font-size: 16px;
   color: #525154;
 }
 .atlas-storymap-card > span {
@@ -486,7 +486,7 @@
   align-items: center;
   gap: 7px;
   color: #035642;
-  font-size: 12px;
+  font-size: 14px;
 }
 @media (max-width: 1000px) and (min-width: 701px) {
   .atlas-story-reader .editorial-immersive {
@@ -500,16 +500,22 @@
   .atlas-storymap {
     padding: 24px 16px 32px;
   }
+  /* On phones the reader fills the screen once it is reached, gives the
+     evidence about half of it, and hands the scroll back to the page at
+     either end rather than trapping it. */
   .atlas-story-reader.editorial-story {
-    min-height: 570px;
+    height: calc(100dvh - 60px);
+    min-height: 540px;
+    overscroll-behavior-y: auto;
     --editorial-nav: 56px;
     --editorial-top: 56px;
+    --atlas-media: clamp(300px, calc(var(--editorial-viewport, 640px) * 0.55), 440px);
   }
   .atlas-story-reader .editorial-immersive {
     display: block;
   }
   .atlas-story-reader .editorial-immersive-media {
-    height: 320px;
+    height: var(--atlas-media);
     min-height: 0;
     top: 56px;
     border-left: 0;
@@ -521,9 +527,9 @@
     z-index: 2;
   }
   .atlas-story-reader .editorial-slide {
-    min-height: calc(var(--editorial-viewport) - 376px);
-    padding: 28px 20px;
-    scroll-margin-top: 376px;
+    min-height: calc(var(--editorial-viewport) - var(--editorial-nav) - var(--atlas-media));
+    padding: 24px var(--unbc-gutter, 15px) 32px;
+    scroll-margin-top: calc(var(--editorial-nav) + var(--atlas-media));
   }
   .atlas-story-reader .editorial-slide-copy {
     margin: 0;
@@ -543,11 +549,23 @@
     gap: 6px;
   }
   .atlas-chapter-evidence-heading {
-    font-size: 12px;
-    gap: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    min-width: 0;
+  }
+  .atlas-chapter-evidence-heading strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
   }
   .atlas-chapter-evidence-heading span {
-    font-size: 10px;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
   }
   .atlas-chapter-viz .atlas-chart-embedded {
     padding: 8px;
@@ -557,11 +575,11 @@
     gap: 6px;
   }
   .atlas-chapter-viz .atlas-chart-embedded .atlas-chart-heading h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
   .atlas-chart-embedded .atlas-chart-heading p {
     margin-top: 2px;
-    font-size: 9px;
+    font-size: 12px;
     line-height: 1.3;
   }
   .atlas-chart-embedded .atlas-chart-mode,
@@ -569,19 +587,45 @@
     display: none;
   }
   .atlas-story-reader .atlas-chapter-source {
-    font-size: 9px;
-    margin-right: 132px;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-right: 0;
+  }
+  /* Expand sits beside the dataset title so the source line gets the
+     full width and the map keeps more of the panel. */
+  .atlas-story-reader .atlas-chapter-evidence-heading {
+    padding-right: 112px;
+    min-height: 36px;
+  }
+  .atlas-story-reader .editorial-immersive-media .editorial-expand {
+    top: 6px;
+    bottom: auto;
+    right: 8px;
+    min-height: 36px;
+    padding: 6px 10px;
+    font-size: 13px !important;
   }
   .atlas-map-compact .atlas-map-legend {
-    font-size: 9px;
+    flex-wrap: nowrap !important;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 12px !important;
+  }
+  .atlas-map-compact .atlas-map-legend strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+  .atlas-map-compact .atlas-map-legend {
+    font-size: 12px;
     padding: 3px;
   }
   .atlas-map-compact .atlas-point-legend {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.35;
   }
   .atlas-map-compact .atlas-point-legend p {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.35;
     margin: 4px 0;
   }
@@ -602,33 +646,39 @@
     min-height: 70px !important;
   }
   .atlas-comparison-labels {
-    font-size: 9px !important;
+    font-size: 12px !important;
     padding: 3px !important;
   }
   .atlas-comparison-control {
-    font-size: 10px !important;
+    font-size: 12px !important;
     padding: 2px 8px !important;
     gap: 4px !important;
   }
   .atlas-comparison-values {
-    font-size: 10px !important;
+    font-size: 12px !important;
     margin: 2px 8px;
     padding: 0 !important;
   }
   .atlas-map-comparison > p {
     display: none;
   }
+  /* One short line, so it stays on screen under the full-height reader. */
   .atlas-storymap-progress {
     gap: 8px;
-    padding: 10px 8px;
-    font-size: 10px;
+    min-height: 60px;
+    padding: 8px;
+    font-size: 14px;
+  }
+  .atlas-progress-more {
+    display: none;
   }
   .atlas-storymap-progress > span {
     text-align: center;
   }
   .atlas-storymap-progress button {
-    padding: 6px 4px;
-    font-size: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    min-height: 44px;
   }
   .atlas-storymap-progress svg {
     flex-shrink: 0;
