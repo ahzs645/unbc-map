@@ -380,7 +380,7 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
 
   useEffect(() => {
     const map = mapRef.current;
-    if (!map || !ready || !camera || sameCamera(readCamera(map), camera)) return;
+    if (!map || !ready || !camera || map.isMoving() || sameCamera(readCamera(map), camera)) return;
     applyingCamera.current = true;
     map.jumpTo({ center: camera.center, zoom: camera.zoom, bearing: camera.bearing, pitch: camera.pitch });
     applyingCamera.current = false;
