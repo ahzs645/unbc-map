@@ -157,7 +157,10 @@ test("released data preserves population corrections and boundary crosswalk inte
 test("Atlas controls and record tables stay inside narrow viewports", async ({ page }) => {
   await page.goto("dev/projects");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
-  await page.getByRole("button", { name: "Data explorer", exact: true }).click();
+  // Wide screens reach the explorer from the UNBC menu; phones keep the section tabs.
+  const tab = page.getByRole("button", { name: "Data explorer", exact: true });
+  if (await tab.isVisible()) await tab.click();
+  else await page.getByRole("navigation", { name: "Main" }).getByRole("link", { name: "Data explorer", exact: true }).click();
   await page.getByRole("tab", { name: "Table", exact: true }).click();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await expect(page.getByRole("button", { name: "CSV", exact: true })).toBeVisible();

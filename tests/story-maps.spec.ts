@@ -26,7 +26,8 @@ test("reading changes the focused map without replacing its canvas, and shares t
   await expect(state).toHaveAttribute("data-rendered-features", /^[1-9]\d*$/);
   const canvas = await page.locator(".atlas-map-canvas canvas").elementHandle();
   await page.getByRole("button", { name: "Begin reading", exact: true }).click();
-  await expect.poll(() => page.getByTestId("story-reader").evaluate(element => Math.abs(element.getBoundingClientRect().top))).toBeLessThan(3);
+  // The full-page reader scrolls past its cover to the first chapter.
+  await expect.poll(() => page.getByTestId("story-reader").evaluate(root => root.querySelector(".atlas-story-cover")!.getBoundingClientRect().bottom - root.getBoundingClientRect().top)).toBeLessThan(1);
   const readerBox = await page.getByTestId("story-reader").boundingBox();
   // Scroll by chapter 2's measured offset so its heading lands well inside the
   // reading line on both layouts, whatever chapter 1's rendered text height.

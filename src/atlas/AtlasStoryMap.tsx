@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { ArrowUpRight, ChevronLeft, ChevronRight, ExternalLink, Link2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, ChevronLeft, ChevronRight, ExternalLink, Link2 } from "lucide-react";
 import { StoryChapterNavigation, StorySidecar, useReadingSection } from "@pgmaps/geo-toolkit/stories/components";
 import useStoryChapterUrl from "./useStoryChapterUrl";
 import { atlasDatasets } from "./data";
@@ -80,7 +80,7 @@ function ChapterEvidence({ chapter }: { chapter: StoryMapChapter }) {
   </div>;
 }
 
-export default function AtlasStoryMap({ story, onExplore, onCopy }: { story: StoryDefinition; onExplore: (chapter: StoryMapChapter) => void; onCopy: () => void }) {
+export default function AtlasStoryMap({ story, onExplore, onCopy, onBack }: { story: StoryDefinition; onExplore: (chapter: StoryMapChapter) => void; onCopy: () => void; onBack: () => void }) {
   const scrollRoot = useRef<HTMLDivElement>(null);
   const panels = useRef<Array<HTMLElement | null>>([]);
   const active = useReadingSection(scrollRoot, panels, story.chapters.length);
@@ -106,16 +106,31 @@ export default function AtlasStoryMap({ story, onExplore, onCopy }: { story: Sto
     const mobile = window.matchMedia("(max-width: 700px)").matches;
     const media = root.querySelector<HTMLElement>(".editorial-immersive-media");
     const offset = mobile ? 64 + (media?.clientHeight ?? 260) : 64;
-    root.scrollTo({ top: root.scrollTop + panel.getBoundingClientRect().top - root.getBoundingClientRect().top - offset, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    const coverEnd = root.querySelector<HTMLElement>(".atlas-story-cover")?.offsetHeight ?? 0;
+    root.scrollTo({ top: Math.max(coverEnd, root.scrollTop + panel.getBoundingClientRect().top - root.getBoundingClientRect().top - offset), behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  };
+  // Begin reading lands the chapter navigation at the top of the reader.
+  const begin = () => {
+    const root = scrollRoot.current, cover = root?.querySelector<HTMLElement>(".atlas-story-cover");
+    if (!root || !cover) return;
+    // Phones scroll the page to the reader first; wider screens lock it in place.
+    if (window.matchMedia("(max-width: 700px)").matches) root.scrollIntoView({ block: "start", behavior: "auto" });
+    root.scrollTo({ top: cover.offsetHeight, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    root.focus({ preventScroll: true });
   };
   const sources = [...new Set(story.chapters.map(chapter => chapter.evidence.datasetId))].map(id => atlasDatasets.find(item => item.id === id)!);
+  const storiesUrl = `${import.meta.env.BASE_URL}dev/projects`;
+  // The story fills the window below the UNBC header, as a PGMaps project
+  // story does: a slim toolbar, then one reader that scrolls from the cover
+  // through the chapters to the sources.
   return <article className="atlas-storymap">
-    <div className="atlas-storymap-intro"><p className="atlas-eyebrow">Guided story map · {story.topic}</p><p className="atlas-lead">{story.summary}</p><div className="atlas-storymap-actions"><span>{story.chapters.length} chapters · Scroll to read, or choose a chapter</span><button className="atlas-text-button" onClick={onCopy}><Link2 size={15} /> Copy story link</button><button className="atlas-primary" onClick={() => { scrollRoot.current?.scrollIntoView({ block: "start", behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); scrollRoot.current?.focus({ preventScroll: true }); }}>Begin reading <ChevronRight size={16} /></button></div></div>
+    <div className="atlas-story-toolbar"><a className="atlas-story-back" href={storiesUrl} onClick={event => { if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) { event.preventDefault(); onBack(); } }}><ArrowLeft size={16} aria-hidden="true" />All stories</a><span className="atlas-story-toolbar-title" aria-hidden="true">{story.title}</span><button className="atlas-text-button" onClick={onCopy}><Link2 size={15} aria-hidden="true" /> Copy story link</button></div>
+    <div className="atlas-storymap-progress" role="group" aria-label="Story progress"><button aria-label="Previous chapter" disabled={active === 0} onClick={() => select(active - 1)}><ChevronLeft size={17} aria-hidden="true" /> Previous<span className="atlas-progress-more"> chapter</span></button><span aria-live="polite">{active + 1} / {story.chapters.length}<span className="atlas-progress-more"> · {story.chapters[active]?.title}</span></span><button aria-label="Next chapter" disabled={active === story.chapters.length - 1} onClick={() => select(active + 1)}>Next<span className="atlas-progress-more"> chapter</span> <ChevronRight size={17} aria-hidden="true" /></button></div>
     <div ref={scrollRoot} className="editorial-story atlas-story-reader" data-theme="light" tabIndex={0} role="region" aria-label="Guided story reader" data-testid="story-reader" data-active-chapter={story.chapters[active]?.id}>
+      <header className="atlas-story-cover"><div className="atlas-story-cover-copy"><p className="atlas-eyebrow">Guided story map · {story.topic}</p><h1>{story.title}</h1><p>{story.summary}</p><button className="atlas-primary" onClick={begin}>Begin reading <ChevronRight size={16} aria-hidden="true" /></button></div><nav className="atlas-story-contents" aria-label="Chapters"><p>{story.chapters.length} chapters</p><ol>{story.chapters.map((chapter, index) => <li key={chapter.id}><button onClick={() => select(index)}>{chapter.title}</button></li>)}</ol></nav></header>
       <StoryChapterNavigation chapters={story.chapters.map((chapter, index) => ({ id: chapter.id, label: `${index + 1}. ${chapter.title}` }))} active={story.chapters[active]?.id} onSelect={id => select(story.chapters.findIndex(chapter => chapter.id === id))} />
       <StorySidecar id={`storymap-${story.id}`} scrollRoot={scrollRoot} slides={story.chapters.map((chapter, index) => ({ id: chapter.id, media: <ChapterEvidence chapter={chapter} />, content: <div ref={element => { panels.current[index] = element?.closest<HTMLElement>(".editorial-slide") ?? null; }}><p className="atlas-eyebrow">Chapter {index + 1} / {story.chapters.length}</p><h2>{chapter.title}</h2>{chapter.takeaway && <div className="atlas-chapter-takeaway"><strong>{chapter.takeaway.value}</strong><span>{chapter.takeaway.label}</span></div>}{chapter.paragraphs.map((paragraph, p) => <p key={p}>{paragraph}</p>)}<button className="atlas-text-button" onClick={() => onExplore(chapter)}>Explore the source data <ArrowUpRight size={16} /></button><ChapterValues chapter={chapter} /></div> }))} />
+      <div className="atlas-storymap-sources"><h2>Sources</h2><p>Each source keeps its original period. Projections and scenarios are labelled where they appear.</p>{sources.map(dataset => <details key={dataset.id}><summary>{dataset.title} · {dataset.timeLabel}</summary><div><p>{dataset.description}</p><ul>{dataset.notes.map((note, index) => <li key={index}>{note}</li>)}</ul><p>Zoer dataset: <code>{dataset.datasetId}</code><br />Source table: <code>{dataset.tableName}</code></p><a href={dataset.sourceUrl} target="_blank" rel="noreferrer">Open source reference <ExternalLink size={14} /></a></div></details>)}<a className="atlas-story-back" href={storiesUrl} onClick={event => { if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) { event.preventDefault(); onBack(); } }}><ArrowLeft size={16} aria-hidden="true" />Back to all stories</a></div>
     </div>
-    <div className="atlas-storymap-progress" role="group" aria-label="Story progress"><button aria-label="Previous chapter" disabled={active === 0} onClick={() => select(active - 1)}><ChevronLeft size={17} aria-hidden="true" /> Previous<span className="atlas-progress-more"> chapter</span></button><span aria-live="polite">{active + 1} / {story.chapters.length}<span className="atlas-progress-more"> · {story.chapters[active]?.title}</span></span><button aria-label="Next chapter" disabled={active === story.chapters.length - 1} onClick={() => select(active + 1)}>Next<span className="atlas-progress-more"> chapter</span> <ChevronRight size={17} aria-hidden="true" /></button></div>
-    <div className="atlas-storymap-sources"><h2>Read the sources</h2><p>These chapters use the reviewed NHHR collection. A source snapshot keeps its original period; projections and scenarios are labelled where they appear.</p>{sources.map(dataset => <details key={dataset.id}><summary>{dataset.title} · {dataset.timeLabel}</summary><div><p>{dataset.description}</p><ul>{dataset.notes.map((note, index) => <li key={index}>{note}</li>)}</ul><p>Zoer dataset: <code>{dataset.datasetId}</code><br />Source table: <code>{dataset.tableName}</code></p><a href={dataset.sourceUrl} target="_blank" rel="noreferrer">Open source reference <ExternalLink size={14} /></a></div></details>)}</div>
   </article>;
 }

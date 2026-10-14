@@ -24,9 +24,9 @@ const connections = [
 ] as const;
 
 export default function AtlasConnections({ onExplore }: { onExplore: (dataset: AtlasDataset) => void }) {
-  return <section className="atlas-connections" aria-label="Dataset connections">
+  return <section className="atlas-connections" id="atlas-connections" aria-label="Dataset connections">
     <div className="atlas-section-heading"><div><p className="atlas-eyebrow">Reviewed 12 October 2026</p><h2>How the data connects.</h2></div></div>
-    <p>These views use explicit identifiers and reviewed place identities. Each connection retains the source observation and reporting period.</p>
+    <p>Each view joins to a place through an explicit source identifier and keeps the original observation and period.</p>
     <div className="atlas-data-table"><div className="atlas-table-scroll" tabIndex={0} role="region" aria-label="Dataset connections; scroll horizontally to see all columns"><table><thead><tr><th scope="col">Dataset</th><th scope="col">Connection</th><th scope="col">Scope of the view</th></tr></thead><tbody>{connections.map(([id, join, scope]) => {
       const dataset = atlasDatasets.find(item => item.id === id)!;
       return <tr key={id}><th scope="row"><button className="atlas-text-button" onClick={() => onExplore(dataset)}>{dataset.title}</button></th><td>{join}</td><td>{scope}</td></tr>;

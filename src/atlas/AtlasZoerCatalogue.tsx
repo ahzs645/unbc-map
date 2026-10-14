@@ -34,7 +34,7 @@ export default function AtlasZoerCatalogue({ onExplore }: { onExplore: (dataset:
     return search.trim().toLowerCase().split(/\s+/).every(word => text.includes(word));
   });
 
-  return <><section className="atlas-connections" aria-label="NHHR Zoer datasets">
+  return <><section className="atlas-connections" id="atlas-zoer" aria-label="NHHR Zoer datasets">
     <div className="atlas-section-heading"><div><p className="atlas-eyebrow">NHHR Data Space</p><h2>NHHR datasets in Zoer.</h2></div></div>
     <p>Browse the NHHR collections listed in Zoer. {connected} collections supply the {primaryViews} reviewed explorer views.{supplements.length > 0 && <> {supplements.length} supplementary views use separately attributed publisher data to fill mapping gaps.</>} A connected view uses selected records from its source collection; it does not load every table in that collection.</p>
     <p>All {reviewDocument.collectionCount} catalogue entries have a connection review. Open a row’s review to see its source grain, mapping method, remaining needs and limits. Only selected measures are validated and loaded; the review distinguishes inventories and supporting copies from additional observations.</p>

@@ -4,35 +4,6 @@
   margin: auto;
   padding: 28px 24px 44px;
 }
-.atlas-storymap-intro {
-  max-width: 1140px;
-  margin: auto;
-  padding-bottom: 24px;
-}
-.atlas-storymap-intro .atlas-lead {
-  margin-top: 8px;
-}
-.atlas-storymap-intro > p:not(.atlas-eyebrow) {
-  max-width: 850px;
-  color: #525154;
-  line-height: 1.7;
-}
-.atlas-storymap-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 16px;
-  margin-top: 20px;
-  font-size: 15px;
-}
-.atlas-storymap-actions > span {
-  margin-right: auto;
-}
-.atlas-storymap-actions .atlas-primary {
-  display: inline-flex;
-  gap: 6px;
-  align-items: center;
-}
 .atlas-story-reader.editorial-story {
   --editorial-bg: #fff;
   --editorial-fg: #29292a;
