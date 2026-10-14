@@ -66,12 +66,16 @@ test("physician comparison renders two maps with one scale and synchronized came
   await expect(later).toHaveAttribute("data-rendered-features", /^[1-9]\d*$/);
   await expect.poll(async () => (await earlier.getAttribute("data-camera")) === (await later.getAttribute("data-camera"))).toBe(true);
   const before = await earlier.getAttribute("data-camera");
-  await page.locator(".atlas-comparison-map-earlier .maplibregl-ctrl-zoom-in").click();
+  // Phones hide the zoom buttons in stories (pinch zooms), so zoom from the keyboard there.
+  const zoomIn = page.locator(".atlas-comparison-map-earlier .maplibregl-ctrl-zoom-in");
+  if (await zoomIn.isVisible()) await zoomIn.click();
+  else { await page.locator(".atlas-comparison-map-earlier .maplibregl-canvas").focus(); await page.keyboard.press("Equal"); }
   await expect(page.getByTestId("story-reader")).toHaveAttribute("data-active-chapter", "counts-over-time");
   await expect.poll(() => earlier.getAttribute("data-camera")).not.toBe(before);
   await expect.poll(async () => (await earlier.getAttribute("data-camera")) === (await later.getAttribute("data-camera"))).toBe(true);
-  const reveal = page.getByRole("slider", { name: "Reveal later-year map" });
-  await reveal.focus(); await reveal.press("End");
+  // The divider handle is a slider for the earlier-year share; Home shows all of the later year.
+  const reveal = page.getByRole("slider", { name: "Year divider" });
+  await reveal.focus(); await reveal.press("Home");
   await expect(page.getByTestId("atlas-map-comparison")).toHaveAttribute("data-reveal", "100");
   await page.getByText("Compare every region’s values", { exact: true }).click();
   await expect(page.locator(".atlas-comparison-values tbody")).toContainText("Northeast HSDA");

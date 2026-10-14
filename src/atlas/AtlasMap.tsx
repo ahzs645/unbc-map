@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import * as maplibregl from 'maplibre-gl';
 import type { GeoJSONSource, ExpressionSpecification, Map as MapLibreMap } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import { Layers } from 'lucide-react';
 import type { FeatureCollection, Geometry } from 'geojson';
 import type { AtlasDataset, AtlasRow } from './types';
 import { allowsMapAggregation, boundaryAssetUrl, boundaryCaption, canMapDataset, canMapMetric, getBoundaryJoin, mapGroupValue } from './geography';
@@ -410,7 +411,7 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
     </div>}
     <div className="atlas-map-viewport" style={{ position: 'relative', ...(compact ? { flex: 1, minHeight: 180 } : {}) }}>
       <div ref={container} className="atlas-map-canvas" role="img" aria-label={`${metricColumn?.label || metric} by ${isPoint ? pointNoun : geographyNoun} on a vector basemap; use ${compact ? 'the accompanying table' : 'the selector or table'} for accessible values`} style={{ height: compact ? '100%' : 470, minHeight: compact ? 180 : 320, width: '100%', borderRadius: compact ? 0 : 16, overflow: 'hidden' }} />
-      {interactive && <label className="atlas-basemap-picker">Basemap<select aria-label="Basemap" value={basemap} onChange={event => { const value = event.target.value as AtlasBasemap; if (onBasemapChange) onBasemapChange(value); else setLocalBasemap(value); }}>
+      {interactive && <label className="atlas-basemap-picker"><Layers className="atlas-basemap-icon" size={16} aria-hidden="true" /><span className="atlas-basemap-label">Basemap</span><select aria-label="Basemap" value={basemap} onChange={event => { const value = event.target.value as AtlasBasemap; if (onBasemapChange) onBasemapChange(value); else setLocalBasemap(value); }}>
         {atlasBasemaps.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}
       </select></label>}
       {basemapStatus === 'unavailable' && <p className="atlas-basemap-notice" data-testid="basemap-notice" role="status">Basemap unavailable. {isPoint ? `${pointLabel} locations` : 'Geographic data'} remain visible.</p>}

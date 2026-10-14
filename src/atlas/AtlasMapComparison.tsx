@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useLayoutEffect, useMemo, useRef, useState, type KeyboardEvent, type PointerEvent } from 'react';
 import AtlasMap, { type AtlasMapCamera } from './AtlasMap';
 import type { AtlasDataset, AtlasRow } from './types';
 import type { AtlasBasemap } from './basemaps';
@@ -20,6 +20,39 @@ function valueLabel(value: unknown, unit?: string) {
 /** Both full-size maps share a camera and scale. Only the later map is clipped. */
 export default function AtlasMapComparison({ dataset, rows, metric, comparisonMetric, focusRegions, scaleDomain }: AtlasMapComparisonProps) {
   const [reveal, setReveal] = useState(50);
+  const stage = useRef<HTMLDivElement>(null);
+  // The divider spans the map canvas only, not the legend beneath it.
+  const [canvasBox, setCanvasBox] = useState<{ top: number; height: number }>();
+  useLayoutEffect(() => {
+    const root = stage.current;
+    if (!root) return;
+    const measure = () => {
+      const canvas = root.querySelector<HTMLElement>('.atlas-comparison-map-earlier .atlas-map-canvas');
+      if (!canvas) return;
+      const outer = root.getBoundingClientRect(), inner = canvas.getBoundingClientRect();
+      setCanvasBox({ top: inner.top - outer.top, height: inner.height });
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(root);
+    const canvas = root.querySelector<HTMLElement>('.atlas-comparison-map-earlier .atlas-map-canvas');
+    if (canvas) observer.observe(canvas);
+    return () => observer.disconnect();
+  }, []);
+  // The handle's value is the divider's position from the left: the share of
+  // the earlier-year map in view. The later-year map fills the rest.
+  const position = 100 - reveal;
+  const moveTo = (value: number) => setReveal(100 - Math.round(Math.min(100, Math.max(0, value))));
+  const drag = (event: PointerEvent<HTMLDivElement>) => {
+    const bounds = stage.current?.getBoundingClientRect();
+    if (bounds?.width) moveTo((event.clientX - bounds.left) / bounds.width * 100);
+  };
+  const step = (event: KeyboardEvent<HTMLDivElement>) => {
+    const next = { ArrowLeft: position - 5, ArrowDown: position - 5, ArrowRight: position + 5, ArrowUp: position + 5, PageDown: position - 25, PageUp: position + 25, Home: 0, End: 100 }[event.key];
+    if (next === undefined) return;
+    event.preventDefault();
+    moveTo(next);
+  };
   const [camera, setCamera] = useState<AtlasMapCamera>();
   const [basemap, setBasemap] = useState<AtlasBasemap>('streets');
   const earlierColumn = dataset.columns.find(column => column.key === metric);
@@ -40,7 +73,7 @@ export default function AtlasMapComparison({ dataset, rows, metric, comparisonMe
     <div className="atlas-comparison-labels" style={{ display: 'flex', justifyContent: 'space-between', gap: 16, padding: '8px 12px', fontSize: 12 }}>
       <strong>{earlierLabel}</strong><strong>{laterLabel}</strong>
     </div>
-    <div className="atlas-comparison-stage" data-testid="atlas-map-comparison" data-reveal={reveal}
+    <div ref={stage} className="atlas-comparison-stage" data-testid="atlas-map-comparison" data-reveal={reveal}
       data-scale-domain={JSON.stringify(domain)} style={{ position: 'relative', flex: 1, minHeight: 180, overflow: 'hidden' }}>
       <div className="atlas-comparison-map atlas-comparison-map-earlier" style={{ position: 'absolute', inset: 0 }}>
         <AtlasMap dataset={dataset} rows={rows} metric={metric} compact focusRegions={focusRegions} scaleDomain={domain} onCameraChange={setCamera} basemap={basemap} onBasemapChange={setBasemap} />
@@ -49,14 +82,16 @@ export default function AtlasMapComparison({ dataset, rows, metric, comparisonMe
         style={{ position: 'absolute', inset: 0, pointerEvents: 'none', clipPath: `inset(0 0 0 ${100 - reveal}%)` }}>
         <AtlasMap dataset={dataset} rows={rows} metric={comparisonMetric} compact focusRegions={focusRegions} scaleDomain={domain} camera={camera} interactive={false} basemap={basemap} />
       </div>
-      <div className="atlas-comparison-divider" aria-hidden="true" style={{ position: 'absolute', top: 0, bottom: 0, left: `${100 - reveal}%`, width: 2, background: '#035642', pointerEvents: 'none' }} />
+      <div className="atlas-comparison-swipe" style={{ left: `${position}%`, top: canvasBox?.top ?? 0, height: canvasBox?.height ?? '100%' }}
+        onPointerDown={event => { event.currentTarget.setPointerCapture(event.pointerId); drag(event); }}
+        onPointerMove={event => { if (event.currentTarget.hasPointerCapture(event.pointerId)) drag(event); }}>
+        <span className="atlas-comparison-divider" aria-hidden="true" />
+        <div className="atlas-comparison-handle" role="slider" tabIndex={0} aria-label="Year divider" aria-orientation="horizontal"
+          aria-valuemin={0} aria-valuemax={100} aria-valuenow={position} aria-valuetext={`${position}% ${earlierLabel}, ${reveal}% ${laterLabel}`} onKeyDown={step}>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+        </div>
+      </div>
     </div>
-    <label className="atlas-comparison-control" style={{ display: 'flex', gap: 12, alignItems: 'center', padding: '8px 12px', fontSize: 12 }}>
-      Reveal later-year map
-      <input type="range" min={0} max={100} value={reveal} aria-label="Reveal later-year map" aria-valuetext={`${reveal}% of the later-year map is visible`}
-        onChange={event => setReveal(Number(event.target.value))} style={{ flex: 1, minWidth: 50 }} />
-      <output>{reveal}%</output>
-    </label>
     <details className="atlas-comparison-values" style={{ flex: '0 0 auto', padding: '0 12px 8px', fontSize: 12 }}>
       <summary>Compare every region’s values</summary>
       <div className="atlas-comparison-table-scroll" style={{ maxHeight: 220, overflow: 'auto' }}>

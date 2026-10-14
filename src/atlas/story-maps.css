@@ -247,22 +247,43 @@
 .atlas-comparison-map-later [data-testid="atlas-map-state"] {
   visibility: hidden;
 }
+/* Swipe: drag the divider (or its handle) across the map; the handle is
+   also a keyboard slider. The hit strip is wider than the line. */
+.atlas-comparison-swipe {
+  position: absolute;
+  z-index: 4;
+  width: 32px;
+  margin-left: -16px;
+  cursor: ew-resize;
+  touch-action: none;
+}
 .atlas-comparison-divider {
   position: absolute;
   top: 0;
-  bottom: 38px;
+  bottom: 0;
+  left: 15px;
   width: 2px;
-  background: #29292a;
+  background: #035642;
   pointer-events: none;
 }
-.atlas-comparison-slider {
-  padding: 6px 10px;
+.atlas-comparison-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: grid;
-  gap: 2px;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #035642;
+  border-radius: 50%;
+  background: #fff;
+  color: #035642;
+  box-shadow: 0 1px 4px #0004;
+  transform: translate(-50%, -50%);
 }
-.atlas-comparison-slider input {
-  width: 100%;
-  accent-color: #035642;
+.atlas-comparison-handle:focus-visible {
+  outline: 3px solid #977000;
+  outline-offset: 2px;
 }
 .atlas-map-comparison > p {
   margin: 4px 10px;
@@ -620,11 +641,6 @@
     font-size: 12px !important;
     padding: 3px !important;
   }
-  .atlas-comparison-control {
-    font-size: 12px !important;
-    padding: 2px 8px !important;
-    gap: 4px !important;
-  }
   .atlas-comparison-values {
     font-size: 12px !important;
     margin: 2px 8px;
@@ -662,5 +678,80 @@
 @media (prefers-reduced-motion: reduce) {
   .atlas-story-reader {
     scroll-behavior: auto;
+  }
+}
+
+/* ---- Phone story maps: give the map the room ------------------------------
+   Pinch zooms, so the zoom buttons go; the source caption stays in the
+   Sources list and the expanded view; the basemap picker and the expand
+   control shrink to icons in the map's corners. */
+.atlas-basemap-icon {
+  display: none;
+}
+@media (max-width: 700px) {
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .maplibregl-ctrl-top-right .maplibregl-ctrl-group,
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-chapter-source {
+    display: none;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-basemap-picker {
+    left: 8px;
+    right: auto;
+    top: 8px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    justify-content: center;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-basemap-icon {
+    display: block;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-basemap-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  /* The native select stays on top, invisible, so a tap opens the picker. */
+  .atlas-app .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-basemap-picker select {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .atlas-story-reader .editorial-immersive-media .editorial-expand[aria-expanded="false"] {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    min-height: 36px;
+    padding: 0;
+    background: #fff;
+    font-size: 0 !important;
+  }
+  .atlas-story-reader .editorial-immersive-media .editorial-expand[aria-expanded="false"]::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+  /* On a map the expand icon takes the zoom buttons' corner. */
+  .atlas-story-reader .editorial-immersive-media:has(.atlas-chapter-viz.is-map) .editorial-expand[aria-expanded="false"] {
+    top: 58px;
+    right: 16px;
+  }
+  .atlas-story-reader .editorial-immersive-media:has(.atlas-chapter-viz.is-comparison) .editorial-expand[aria-expanded="false"] {
+    top: 83px;
+    right: 16px;
+  }
+  /* Charts and the paired maps, which carry their own controls, keep the
+     icon in the heading row; leave it room. */
+  .atlas-story-reader .editorial-immersive-media:not(:has(.atlas-chapter-viz.is-map, .atlas-chapter-viz.is-comparison)) .atlas-chapter-evidence-heading {
+    padding-right: 44px;
   }
 }
