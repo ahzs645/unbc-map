@@ -55,6 +55,42 @@
   position: relative;
 }
 
+/* Masthead logo, from 1200px: centred on the full height of the green band
+   instead of pinned to www.unbc.ca's 38.7px wordmark top, so a one-, two- or
+   three-line department lockup sits in the middle either way. The top row
+   and the menu row share one grid cell; the menu keeps its 100px drop and
+   the band grows if a lockup is ever taller than it. Below 1200px the menu
+   runs under the logo, so the chrome's own placement stays. */
+@media (min-width: 1200px) {
+  .unbc-chrome .unbc-header {
+    display: grid;
+    padding: 0;
+  }
+  .unbc-chrome .unbc-header > .unbc-header__top,
+  .unbc-chrome .unbc-header > .unbc-header__bottom {
+    grid-area: 1 / 1;
+  }
+  .unbc-chrome .unbc-header > .unbc-header__top {
+    align-items: center;
+    box-sizing: border-box;
+    height: auto;
+    padding-block: 15px;
+    pointer-events: none;
+    width: 100%;
+  }
+  .unbc-chrome .unbc-header__top > * {
+    pointer-events: auto;
+  }
+  .unbc-chrome .unbc-header .unbc-logo--header {
+    margin-top: 0;
+  }
+  .unbc-chrome .unbc-header > .unbc-header__bottom {
+    align-self: end;
+    margin-top: 0;
+    padding: 100px 0 15px;
+  }
+}
+
 /* Breadcrumbs bar; the chrome's "Information For" tabs hang over its right
    end from the masthead. */
 .context-bar {
