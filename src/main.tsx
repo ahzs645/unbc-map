@@ -6,13 +6,13 @@ import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 
 setWorkerUrl(workerUrl);
 const CampusApp = lazy(() => import("./App"));
-// The site opens on the Atlas's research stories; the campus map lives at
-// /campus. Old shared place links (/#place=…) still land on the map.
-if (location.pathname.replace(/\/$/, "") === import.meta.env.BASE_URL.replace(/\/$/, "")) {
-  const path = /(?:^#|&)place=/.test(location.hash) ? "campus" : "dev/projects";
-  history.replaceState(history.state, "", `${import.meta.env.BASE_URL}${path}${location.search}${location.hash}`);
-}
-const atlas = /\/dev\/projects(?:\/|$)/.test(location.pathname);
+// The public NHHR Atlas is the site's home page; /dev/projects is the same
+// Atlas with its Zoer workspace details. The campus map lives at /campus, and
+// old shared place links (/#place=…) still land on it.
+const base = import.meta.env.BASE_URL;
+const atRoot = location.pathname.replace(/\/$/, "") === base.replace(/\/$/, "");
+if (atRoot && /(?:^#|&)place=/.test(location.hash)) history.replaceState(history.state, "", `${base}campus${location.search}${location.hash}`);
+const atlas = location.pathname.replace(/\/$/, "") !== `${base}campus`;
 if (!atlas) document.title = "UNBC Campus Explorer";
 createRoot(document.getElementById("root")!).render(
   !atlas ? (

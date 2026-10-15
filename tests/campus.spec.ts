@@ -133,20 +133,12 @@ test("selected places survive reloads, styles switch, and home clears selection"
   await expect(page.locator(".campus-marker.is-selected")).toHaveCount(0);
 });
 
-test("source notes open accessibly and close with Escape", async ({
-  page,
-}, testInfo) => {
+test("the campus map has no about panel or about links", async ({ page }) => {
   await page.goto("./campus");
-  if (testInfo.project.name === "mobile")
-    await page.getByRole("button", { name: "Menu", exact: true }).click();
-  await page.getByRole("link", { name: "About this map" }).first().click();
-  await expect(page.getByRole("dialog")).toBeVisible();
-  await expect(page.getByText("Map sources", { exact: true })).toBeVisible();
-  await page.keyboard.press("Escape");
+  await expect(page.getByTestId("map-state")).toHaveAttribute("data-ready", "true");
+  await expect(page.locator('.unbc-chrome a[href="#about"]')).toHaveCount(0);
+  await expect(page.getByRole("link", { name: "About this map" })).toHaveCount(0);
   await expect(page.getByRole("dialog")).toHaveCount(0);
-  await expect(
-    page.locator('.unbc-chrome a[href="#about"]:visible').first(),
-  ).toBeFocused();
 });
 
 test("UNBC Chrome header and footer render, and header search opens a place", async ({

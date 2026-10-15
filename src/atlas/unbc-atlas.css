@@ -360,6 +360,7 @@
 .atlas-app .atlas-pagination button,
 .atlas-app .atlas-storymap-progress button,
 .atlas-app .editorial-expand,
+.atlas-app .atlas-expand-media,
 .atlas-app .atlas-scenario-presets button,
 .atlas-app .atlas-map-toolbar button {
   border: 0 !important;
@@ -377,6 +378,7 @@
 .atlas-app .atlas-pagination button:hover:not(:disabled),
 .atlas-app .atlas-storymap-progress button:hover:not(:disabled),
 .atlas-app .editorial-expand:hover,
+.atlas-app .atlas-expand-media:hover,
 .atlas-app .atlas-scenario-presets button:hover,
 .atlas-app .atlas-map-toolbar button:hover {
   background: var(--unbc-warm-hover) !important;

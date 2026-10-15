@@ -548,56 +548,6 @@ a:hover {
 .skip-link:focus {
   top: 10px;
 }
-.about-dialog {
-  padding: 0;
-  width: min(560px, calc(100% - 30px));
-  max-height: 85dvh;
-  border: 0;
-  border-top: 5px solid #b79527;
-  color: #4f6355;
-  background: #fcfbf8;
-  box-shadow: 0 20px 80px #001b15aa;
-}
-.about-dialog::backdrop {
-  background: #023d2f90;
-  backdrop-filter: blur(3px);
-}
-.about-content {
-  padding: 35px;
-  position: relative;
-}
-.about-close {
-  position: absolute;
-  right: 13px;
-  top: 13px;
-}
-.about-content > .eyebrow {
-  color: #977000;
-}
-.about-content h2 {
-  font-size: 32px;
-  font-family: Arial, sans-serif;
-  font-weight: 800;
-  letter-spacing: -1px;
-  line-height: 1.1;
-  color: #035642;
-  margin: 15px 0 20px;
-}
-.about-content h3 {
-  font-size: 13px;
-  color: #035642;
-  margin: 22px 0 8px;
-}
-.about-content p {
-  font-size: 12px;
-  line-height: 1.85;
-}
-.about-content p a {
-  text-decoration: underline;
-}
-.about-content .primary-link {
-  margin-top: 23px;
-}
 .maplibregl-ctrl-attrib {
   font-size: 9px !important;
   background: #fffef7eb !important;
@@ -712,12 +662,6 @@ a:hover {
   }
   .maplibregl-ctrl-bottom-right {
     bottom: 70px !important;
-  }
-  .about-content {
-    padding: 27px;
-  }
-  .about-content h2 {
-    font-size: 28px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -313,7 +313,6 @@ export default function App() {
   const [outlines, setOutlines] = useState(true);
   const [homeKey, setHomeKey] = useState(0);
   const [focusKey, setFocusKey] = useState(0);
-  const [about, setAbout] = useState(false);
   const [shareStatus, setShareStatus] = useState("");
   const [mapReady, setMapReady] = useState(false);
   useEffect(() => {
@@ -503,7 +502,6 @@ export default function App() {
       <div className="map-stage">
         <ChromeHeader
           onHome={reset}
-          onAbout={() => setAbout(true)}
           onSelectPlace={(place) => {
             filter("all", "");
             select(place);
@@ -666,110 +664,7 @@ export default function App() {
           </WorkspaceProvider>
         </main>
       </div>
-      <ChromeFooter onHome={reset} onAbout={() => setAbout(true)} />
-      {about && <About onClose={() => setAbout(false)} />}
+      <ChromeFooter onHome={reset} />
     </div>
-  );
-}
-
-function About({ onClose }: { onClose: () => void }) {
-  useEffect(() => {
-    const previous = document.activeElement as HTMLElement | null;
-    const dialog = document.querySelector<HTMLDialogElement>("#about-map")!;
-    dialog.showModal();
-    return () => {
-      dialog.close();
-      previous?.focus();
-    };
-  }, []);
-  return (
-    <dialog
-      id="about-map"
-      className="about-dialog"
-      onCancel={onClose}
-      onClick={(event) => {
-        if (event.target === event.currentTarget) onClose();
-      }}
-    >
-      <div className="about-content">
-        <button
-          autoFocus
-          className="icon-button about-close"
-          aria-label="Close about map"
-          onClick={onClose}
-        >
-          <X size={20} />
-        </button>
-        <span className="eyebrow">THE MAP BEHIND THE PLACES</span>
-        <h2>A northern point of view.</h2>
-        <p>
-          A campus explorer made with the{" "}
-          <a
-            href="https://github.com/ahzs645/geo-toolkit"
-            target="_blank"
-            rel="noreferrer"
-          >
-            PGMaps GeoToolkit
-          </a>
-          . The header, footer and breadcrumbs are UNBC Chrome from the{" "}
-          <a
-            href="https://github.com/ahzs645/nals-wp"
-            target="_blank"
-            rel="noreferrer"
-          >
-            NALS WordPress theme
-          </a>
-          : the www.unbc.ca header and footer, in BC Sans, with the NALS lockup
-          drawn by the{" "}
-          <a
-            href="https://github.com/ahzs645/unbc-logo"
-            target="_blank"
-            rel="noreferrer"
-          >
-            UNBC logo kit
-          </a>
-          .
-        </p>
-        <h3>Map sources</h3>
-        <p>
-          Building names and numbers follow{" "}
-          <a href={officialMap} target="_blank" rel="noreferrer">
-            UNBC’s campus maps
-          </a>{" "}
-          (overview: March 2026; directory: April 2026). Places, building
-          outlines, parking areas, and paths use a local{" "}
-          <a
-            href="https://www.openstreetmap.org/copyright"
-            target="_blank"
-            rel="noreferrer"
-          >
-            OpenStreetMap
-          </a>{" "}
-          snapshot retrieved October 10, 2026, under the ODbL. Campus and dark
-          basemaps use CARTO; satellite imagery uses Esri.
-        </p>
-        <h3>Using this explorer</h3>
-        <p>
-          Search a place, choose a category, or select a marker. Switch map
-          styles, toggle campus detail, return to the full campus, or copy a
-          link to a selected place.
-        </p>
-        <p>
-          Locations mark approximate building or area centres. Use UNBC’s
-          official directory for entrances, rooms, accessibility, and current
-          services. This independent design concept is not an official
-          university map.
-        </p>
-        <a
-          className="primary-link"
-          href="https://www.unbc.ca/about-unbc/contact"
-          target="_blank"
-          rel="noreferrer"
-        >
-          UNBC campus information
-          <ExternalLink size={15} />
-        </a>
-      </div>
-    </dialog>
   );
 }

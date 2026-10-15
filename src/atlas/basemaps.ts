@@ -10,6 +10,13 @@ export const atlasBackgroundStyle: StyleSpecification = {
   version: 8, sources: {}, layers: [{ id: 'background', type: 'background', paint: { 'background-color': '#f0f5f6' } }],
 };
 const styles = new Map<AtlasBasemap, Promise<StyleSpecification>>();
+const resolved = new Map<AtlasBasemap, StyleSpecification>();
+
+/** A basemap already loaded in this page, so a new map can start on it directly. */
+export function cachedAtlasBasemap(id: AtlasBasemap): StyleSpecification | undefined {
+  const style = resolved.get(id);
+  return style && structuredClone(style);
+}
 
 /** Basemaps and analytical overlays remain vector geometry at every zoom. */
 export async function loadAtlasBasemap(id: AtlasBasemap): Promise<StyleSpecification> {
@@ -25,6 +32,7 @@ export async function loadAtlasBasemap(id: AtlasBasemap): Promise<StyleSpecifica
       }
       if (Object.values(style.sources).some(source => source.type === 'raster' || source.type === 'raster-dem') || style.layers.some(layer => layer.type === 'raster' || layer.type === 'hillshade')) throw new Error('This basemap does not provide the required vector geometry.');
       for (const layer of style.layers) if (layer.type === 'symbol' && layer['source-layer'] === 'place' && /place_(city|town)/.test(layer.id)) layer.minzoom = Math.min(layer.minzoom ?? 0, /city/.test(layer.id) ? 3 : 5);
+      resolved.set(id, style);
       return style;
     })();
     styles.set(id, pending);

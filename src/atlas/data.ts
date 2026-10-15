@@ -19,9 +19,10 @@ import facilityFollowup from "./snapshots/facility-followup.json";
 import chsaConnections from "./snapshots/chsa-connections.json";
 import { followupStories } from './followupStories';
 import type { AtlasDataset, AtlasStory } from "./types";
+import { scrubZoer } from "./mode";
 
 /** Reviewed, bounded source snapshots. Refreshes happen in the preparation script. */
-export const atlasDatasets = [...release.datasets, ...additional.datasets, ...ages.datasets, ...income.datasets, ...nursing.datasets, ...trialSites.datasets, ...hospitals.datasets, ...travel.datasets, ...conditionMix.datasets, ...trialConditions.datasets, ...publicExpansion.datasets, ...serviceExpansion.datasets, ...researchExpansion.datasets, ...regionalExpansion.datasets, ...researchFollowup.datasets, ...communityFollowup.datasets, ...facilityFollowup.datasets, ...chsaConnections.datasets] as AtlasDataset[];
+export const atlasDatasets = scrubZoer([...release.datasets, ...additional.datasets, ...ages.datasets, ...income.datasets, ...nursing.datasets, ...trialSites.datasets, ...hospitals.datasets, ...travel.datasets, ...conditionMix.datasets, ...trialConditions.datasets, ...publicExpansion.datasets, ...serviceExpansion.datasets, ...researchExpansion.datasets, ...regionalExpansion.datasets, ...researchFollowup.datasets, ...communityFollowup.datasets, ...facilityFollowup.datasets, ...chsaConnections.datasets] as AtlasDataset[]);
 const serviceStories: AtlasStory[] = [
   { id: 'trial-conditions-at-facilities', title: 'From city portfolios to verified trial facilities', kicker: 'Facility condition maps', summary: 'Explore coded trial conditions at reviewed hospitals and centres across seven comparator cities, with the mapping gaps visible.', datasetId: 'trial-facility-conditions', metric: 'distinct_studies', body: [
     'A city portfolio does not reveal which named facilities appear in its records. This view follows the original study ID and exact-city facility names to individually reviewed hospitals, cancer centres and community sites. It extends the existing Prince George review to named facilities in Vancouver, Calgary, Halifax, Saskatoon, Sudbury and Thunder Bay.',
@@ -174,7 +175,7 @@ const expansionStories: AtlasStory[] = [
     'A historical listing is useful context for a research network, but does not measure current filled allocations, vacancies, available staff, collaboration or local clinical capacity. Institution-wide counts stay separate from the physical facilities and populations around the displayed campus.',
   ] },
 ];
-export const atlasStories = [...release.stories, ...serviceStories, ...connectionStories, ...siteStories, ...comparisonStories, ...expansionStories, ...followupStories] as AtlasStory[];
+export const atlasStories = scrubZoer([...release.stories, ...serviceStories, ...connectionStories, ...siteStories, ...comparisonStories, ...expansionStories, ...followupStories] as AtlasStory[]);
 export const atlasSnapshot = release.snapshot;
 /** Catalogue metadata only: these are not additional loaded explorer rows. */
 export const atlasInventory = inventory;

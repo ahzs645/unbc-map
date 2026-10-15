@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 import { ArrowLeft, ArrowUpRight, ChevronLeft, ChevronRight, ExternalLink, Link2 } from "lucide-react";
 import { StoryChapterNavigation, StorySidecar, useReadingSection } from "@pgmaps/geo-toolkit/stories/components";
 import useStoryChapterUrl from "./useStoryChapterUrl";
@@ -10,7 +10,9 @@ import AtlasMapComparison from "./AtlasMapComparison";
 import AtlasPairedAgeMaps from "./AtlasPairedAgeMaps";
 import AtlasConditionMix from "./AtlasConditionMix";
 import AtlasChart, { formatValue } from "./AtlasChart";
+import AtlasEstimateTrends from "./AtlasEstimateTrends";
 import { allowsMapAggregation, boundaryCaption, getBoundaryJoin, mapGroupValue } from './geography';
+import { atlasDev, atlasHome, isZoerUrl } from "./mode";
 import "@pgmaps/geo-toolkit/stories/styles.css";
 
 export function chapterRows(dataset: AtlasDataset, chapter: StoryMapChapter): AtlasRow[] {
@@ -59,6 +61,28 @@ function ScenarioLab({ dataset }: { dataset: AtlasDataset }) {
   </div>;
 }
 
+/**
+ * The reader's "Expand media" control, placed beside the chapter's legend.
+ * It drives the story frame's own toggle, which closes the expanded view and
+ * owns its dialog behaviour; focus returns here when the view closes.
+ */
+function ExpandMediaButton() {
+  const expand = (event: ReactMouseEvent<HTMLButtonElement>) => {
+    const button = event.currentTarget;
+    const frame = button.closest<HTMLElement>(".editorial-expandable");
+    const toggle = frame?.querySelector<HTMLButtonElement>(":scope > .editorial-expand");
+    if (!frame || !toggle) return;
+    const observer = new MutationObserver(() => {
+      if (frame.classList.contains("is-expanded")) return;
+      observer.disconnect();
+      if (button.isConnected) button.focus();
+    });
+    observer.observe(frame, { attributes: true, attributeFilter: ["class"] });
+    toggle.click();
+  };
+  return <button type="button" className="atlas-expand-media" onClick={expand}>Expand media ↗</button>;
+}
+
 function ChapterEvidence({ chapter }: { chapter: StoryMapChapter }) {
   const dataset = atlasDatasets.find(item => item.id === chapter.evidence.datasetId)!;
   const rows = useMemo(() => chapterRows(dataset, chapter), [dataset, chapter]);
@@ -70,13 +94,15 @@ function ChapterEvidence({ chapter }: { chapter: StoryMapChapter }) {
   return <div className="atlas-chapter-evidence" data-testid="story-evidence" data-chapter={chapter.id} data-dataset={dataset.id} data-metric={evidence.metric} data-period={evidence.year ?? "all"}>
     <div className="atlas-chapter-evidence-heading"><strong>{dataset.title}</strong><span>{evidence.year ? `${evidence.year}${periodTypes.length ? ` · ${periodTypes.join(", ")}` : ""}` : dataset.timeLabel}{evidence.filters ? ` · ${Object.entries(evidence.filters).map(([key, value]) => key === "route_slug" ? rows[0]?.route_label ?? value : value).join(" · ")}` : ""}</span></div>
     <div className={`atlas-chapter-viz is-${evidence.kind}`}>
-      {isMap && <AtlasMap dataset={dataset} metric={evidence.metric} rows={rows} compact focusRegions={evidence.focusRegions} scaleDomain={evidence.scaleDomain} selectedRegion={selectedRegion} onSelectRegion={setSelectedRegion} />}
+      {isMap && <AtlasMap dataset={dataset} metric={evidence.metric} rows={rows} compact focusRegions={evidence.focusRegions} scaleDomain={evidence.scaleDomain} selectedRegion={selectedRegion} onSelectRegion={setSelectedRegion} legendAction={<ExpandMediaButton />} />}
       {evidence.kind === "comparison" && <AtlasMapComparison dataset={dataset} rows={rows} metric={evidence.metric} comparisonMetric={evidence.comparisonMetric!} focusRegions={evidence.focusRegions} scaleDomain={evidence.scaleDomain} />}
       {evidence.kind === "paired" && <AtlasPairedAgeMaps dataset={dataset} rows={rows} compact focusRegions={evidence.focusRegions} selectedRegion={selectedRegion || undefined} onSelectRegion={setSelectedRegion} />}
       {evidence.kind === "chart" && (dataset.id === "clinical-condition-mix" ? <AtlasConditionMix dataset={dataset} rows={rows} metric={evidence.metric} compact /> : <AtlasChart dataset={dataset} rows={rows} metric={evidence.metric} embedded />)}
+      {evidence.kind === "trends" && <AtlasEstimateTrends dataset={dataset} rows={rows} metric={evidence.metric} totalLabel="All Northern LHAs" />}
       {evidence.kind === "scenario" && <ScenarioLab dataset={dataset} />}
     </div>
-    <p className="atlas-chapter-source">{rows.length} source records · <a href={dataset.sourceUrl} target="_blank" rel="noreferrer">{dataset.geography === "route" || dataset.geography === "stop" ? "NH Connections source" : dataset.geography === "facility" ? "Facility source" : dataset.geography === "chsa" ? "PHSA / BCCDC registry" : dataset.sourceName} <ExternalLink size={11} /></a>{isMap || evidence.kind === "comparison" || evidence.kind === "paired" ? <span>{dataset.geography === "institution" ? "Campus points © OpenStreetMap. Totals describe whole institutions." : dataset.geography === "city" ? "City points © OpenStreetMap. Counts describe city-tagged studies, not facilities or enrollment." : dataset.geography === 'facility' ? 'Reviewed current facility display points © OpenStreetMap; historical reporting scope retained.' : dataset.geography === 'route' || dataset.geography === 'stop' ? 'Facility/town references © BC & OpenStreetMap; schematic schedule connections.' : dataset.geography === 'chsa' ? '2018 CHSA boundaries © BC Ministry of Health via Community Map of Canada · display use only.' : boundaryCaption(dataset)}</span> : null}</p>
+    <p className="atlas-chapter-source">{rows.length} source records · {atlasDev || !isZoerUrl(dataset.sourceUrl) ? <a href={dataset.sourceUrl} target="_blank" rel="noreferrer">{dataset.geography === "route" || dataset.geography === "stop" ? "NH Connections source" : dataset.geography === "facility" ? "Facility source" : dataset.geography === "chsa" ? "PHSA / BCCDC registry" : dataset.sourceName} <ExternalLink size={11} /></a> : <>{dataset.geography === "route" || dataset.geography === "stop" ? "NH Connections source" : dataset.geography === "facility" ? "Facility source" : dataset.geography === "chsa" ? "PHSA / BCCDC registry" : dataset.sourceName}</>}{isMap || evidence.kind === "comparison" || evidence.kind === "paired" ? <span>{dataset.geography === "institution" ? "Campus points © OpenStreetMap. Totals describe whole institutions." : dataset.geography === "city" ? "City points © OpenStreetMap. Counts describe city-tagged studies, not facilities or enrollment." : dataset.geography === 'facility' ? 'Reviewed current facility display points © OpenStreetMap; historical reporting scope retained.' : dataset.geography === 'route' || dataset.geography === 'stop' ? 'Facility/town references © BC & OpenStreetMap; schematic schedule connections.' : dataset.geography === 'chsa' ? '2018 CHSA boundaries © BC Ministry of Health via Community Map of Canada · display use only.' : boundaryCaption(dataset)}</span> : null}</p>
+    {!isMap && <div className="atlas-chapter-actions"><ExpandMediaButton /></div>}
   </div>;
 }
 
@@ -119,7 +145,7 @@ export default function AtlasStoryMap({ story, onExplore, onCopy, onBack }: { st
     root.focus({ preventScroll: true });
   };
   const sources = [...new Set(story.chapters.map(chapter => chapter.evidence.datasetId))].map(id => atlasDatasets.find(item => item.id === id)!);
-  const storiesUrl = `${import.meta.env.BASE_URL}dev/projects`;
+  const storiesUrl = atlasHome;
   // The story fills the window below the UNBC header, as a PGMaps project
   // story does: a slim toolbar, then one reader that scrolls from the cover
   // through the chapters to the sources.
@@ -130,7 +156,7 @@ export default function AtlasStoryMap({ story, onExplore, onCopy, onBack }: { st
       <header className="atlas-story-cover"><div className="atlas-story-cover-copy"><p className="atlas-eyebrow">Guided story map · {story.topic}</p><h1>{story.title}</h1><p>{story.summary}</p><button className="atlas-primary" onClick={begin}>Begin reading <ChevronRight size={16} aria-hidden="true" /></button></div><nav className="atlas-story-contents" aria-label="Chapters"><p>{story.chapters.length} chapters</p><ol>{story.chapters.map((chapter, index) => <li key={chapter.id}><button onClick={() => select(index)}>{chapter.title}</button></li>)}</ol></nav></header>
       <StoryChapterNavigation chapters={story.chapters.map((chapter, index) => ({ id: chapter.id, label: `${index + 1}. ${chapter.title}` }))} active={story.chapters[active]?.id} onSelect={id => select(story.chapters.findIndex(chapter => chapter.id === id))} />
       <StorySidecar id={`storymap-${story.id}`} scrollRoot={scrollRoot} slides={story.chapters.map((chapter, index) => ({ id: chapter.id, media: <ChapterEvidence chapter={chapter} />, content: <div ref={element => { panels.current[index] = element?.closest<HTMLElement>(".editorial-slide") ?? null; }}><p className="atlas-eyebrow">Chapter {index + 1} / {story.chapters.length}</p><h2>{chapter.title}</h2>{chapter.takeaway && <div className="atlas-chapter-takeaway"><strong>{chapter.takeaway.value}</strong><span>{chapter.takeaway.label}</span></div>}{chapter.paragraphs.map((paragraph, p) => <p key={p}>{paragraph}</p>)}<button className="atlas-text-button" onClick={() => onExplore(chapter)}>Explore the source data <ArrowUpRight size={16} /></button><ChapterValues chapter={chapter} /></div> }))} />
-      <div className="atlas-storymap-sources"><h2>Sources</h2><p>Each source keeps its original period. Projections and scenarios are labelled where they appear.</p>{sources.map(dataset => <details key={dataset.id}><summary>{dataset.title} · {dataset.timeLabel}</summary><div><p>{dataset.description}</p><ul>{dataset.notes.map((note, index) => <li key={index}>{note}</li>)}</ul><p>Zoer dataset: <code>{dataset.datasetId}</code><br />Source table: <code>{dataset.tableName}</code></p><a href={dataset.sourceUrl} target="_blank" rel="noreferrer">Open source reference <ExternalLink size={14} /></a></div></details>)}<a className="atlas-story-back" href={storiesUrl} onClick={event => { if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) { event.preventDefault(); onBack(); } }}><ArrowLeft size={16} aria-hidden="true" />Back to all stories</a></div>
+      <div className="atlas-storymap-sources"><h2>Sources</h2><p>Each source keeps its original period. Projections and scenarios are labelled where they appear.</p>{sources.map(dataset => <details key={dataset.id}><summary>{dataset.title} · {dataset.timeLabel}</summary><div><p>{dataset.description}</p><ul>{dataset.notes.map((note, index) => <li key={index}>{note}</li>)}</ul>{atlasDev && <p>Zoer dataset: <code>{dataset.datasetId}</code><br />Source table: <code>{dataset.tableName}</code></p>}{(atlasDev || !isZoerUrl(dataset.sourceUrl)) && <a href={dataset.sourceUrl} target="_blank" rel="noreferrer">Open source reference <ExternalLink size={14} /></a>}</div></details>)}<a className="atlas-story-back" href={storiesUrl} onClick={event => { if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) { event.preventDefault(); onBack(); } }}><ArrowLeft size={16} aria-hidden="true" />Back to all stories</a></div>
     </div>
   </article>;
 }

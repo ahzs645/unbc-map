@@ -1,17 +1,16 @@
 {
 	"$schema": "./vendor/unbc-chrome/chrome/brand.schema.json",
-	"_comment": "UNBC Chrome settings for the campus map. Everything not set here is www.unbc.ca's own header and footer (vendor/unbc-chrome/chrome/defaults.json). '/campus' is the map itself; '#about' opens the map notes.",
+	"_comment": "UNBC Chrome settings for the campus map. Everything not set here is www.unbc.ca's own header and footer (vendor/unbc-chrome/chrome/defaults.json). '/campus' is the map itself.",
 	"logo": {
 		"department": "Northern Hub for\nHealth Research"
 	},
 	"skipLink": { "label": "Skip to campus explorer", "target": "#campus-search" },
 	"menu": [
 		{ "label": "Campus map", "url": "/campus" },
-		{ "label": "Research stories", "url": "/dev/projects" },
-		{ "label": "Data explorer", "url": "/dev/projects?view=explore" },
+		{ "label": "Research stories", "url": "/" },
+		{ "label": "Data explorer", "url": "/?view=explore" },
 		{ "label": "Building directory", "url": "https://www.unbc.ca/about-unbc/campus-maps" },
-		{ "label": "Visit UNBC", "url": "https://www.unbc.ca/" },
-		{ "label": "About this map", "url": "#about" }
+		{ "label": "Visit UNBC", "url": "https://www.unbc.ca/" }
 	],
 	"audience": {
 		"label": "Campus links",
@@ -33,8 +32,7 @@
 			{ "label": "Contact UNBC", "url": "https://www.unbc.ca/about-unbc/contact" },
 			{ "label": "Building directory", "url": "https://www.unbc.ca/about-unbc/campus-maps" },
 			{ "label": "NHHR website", "url": "https://www.unbc.ca/office-research-and-innovation/northern-hub-health-research" },
-			{ "label": "PGMaps GeoToolkit", "url": "https://github.com/ahzs645/geo-toolkit" },
-			{ "label": "Sources & map notes", "url": "#about" }
+			{ "label": "PGMaps GeoToolkit", "url": "https://github.com/ahzs645/geo-toolkit" }
 		]
 	},
 	"subfooter": {

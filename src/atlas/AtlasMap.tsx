@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import * as maplibregl from 'maplibre-gl';
 import type { GeoJSONSource, ExpressionSpecification, Map as MapLibreMap } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -6,7 +6,7 @@ import { Layers } from 'lucide-react';
 import type { FeatureCollection, Geometry } from 'geojson';
 import type { AtlasDataset, AtlasRow } from './types';
 import { allowsMapAggregation, boundaryAssetUrl, boundaryCaption, canMapDataset, canMapMetric, getBoundaryJoin, mapGroupValue } from './geography';
-import { atlasBackgroundStyle, atlasBasemaps, loadAtlasBasemap, type AtlasBasemap } from './basemaps';
+import { atlasBackgroundStyle, atlasBasemaps, cachedAtlasBasemap, loadAtlasBasemap, type AtlasBasemap } from './basemaps';
 import './basemap.css';
 import { pointScale } from './pointScale';
 
@@ -31,12 +31,56 @@ interface AtlasMapProps {
   onCameraChange?: (camera: AtlasMapCamera) => void;
   basemap?: AtlasBasemap;
   onBasemapChange?: (basemap: AtlasBasemap) => void;
+  /** A control shown at the right end of a compact map's legend row. */
+  legendAction?: ReactNode;
 }
 type BoundaryProperties = { code: string; name: string; site?: string; city?: string; source_url?: string; coordinate_source_url?: string; location_note?: string; location_precision?: string; health_authority_code?: string; value?: number | null; radius?: number; selected?: boolean; focused?: boolean };
 type BoundaryCollection = FeatureCollection<Geometry, BoundaryProperties>;
 type ConnectionCollection = FeatureCollection<Geometry, { segment_id: string; event_ids: string[]; route_slug: string; service_day: string }>;
 const BC_BOUNDS: [[number, number], [number, number]] = [[-139.1, 48.1], [-114.0, 60.2]];
 const MISSING_COLOR = '#d8e1e4';
+
+// Story chapters and explorer views often share one boundary file. Each file
+// is fetched and normalized once per page, so moving between them reuses it.
+const boundaryCache = new Map<string, Promise<BoundaryCollection>>();
+function loadBoundaries(asset: string, facility: boolean): Promise<BoundaryCollection> {
+  const key = `${asset}|${facility}`;
+  let pending = boundaryCache.get(key);
+  if (!pending) {
+    pending = fetch(boundaryAssetUrl(asset))
+      .then(response => { if (!response.ok) throw new Error(`Boundary snapshot unavailable (${response.status})`); return response.json(); })
+      .then((data: BoundaryCollection) => {
+        if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error('Location snapshot is invalid');
+        // Reviewed registries retain their original property naming. Normalize
+        // evidence fields once so every point can expose its source and caveats.
+        return { ...data, features: data.features.map(feature => {
+          const properties = feature.properties as BoundaryProperties & Record<string, unknown>;
+          return { ...feature, properties: { ...properties,
+            source_url: properties.source_url ?? properties.sourceUrl,
+            coordinate_source_url: properties.coordinate_source_url ?? properties.coordinateSourceUrl,
+            location_note: properties.location_note ?? properties.locationNote,
+            location_precision: properties.location_precision ?? properties.locationPrecision ?? (facility ? 'Representative facility/building point' : undefined),
+          } as BoundaryProperties };
+        }) };
+      });
+    boundaryCache.set(key, pending);
+    pending.catch(() => { if (boundaryCache.get(key) === pending) boundaryCache.delete(key); });
+  }
+  return pending;
+}
+const connectionCache = new Map<string, Promise<ConnectionCollection>>();
+function loadConnections(asset: string): Promise<ConnectionCollection> {
+  let pending = connectionCache.get(asset);
+  if (!pending) {
+    pending = fetch(boundaryAssetUrl(asset)).then(response => { if (!response.ok) throw new Error('Schedule connections unavailable'); return response.json(); }).then((data: ConnectionCollection) => {
+      if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error('Invalid schedule connections');
+      return data;
+    });
+    connectionCache.set(asset, pending);
+    pending.catch(() => { if (connectionCache.get(asset) === pending) connectionCache.delete(asset); });
+  }
+  return pending;
+}
 
 function numeric(value: unknown): number | null {
   return typeof value === 'number' && Number.isFinite(value) ? value : null;
@@ -79,7 +123,7 @@ function motionDuration(duration: number) {
 }
 
 export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSelectRegion, compact = false,
-  focusRegions, scaleDomain, interactive = true, camera, onCameraChange, basemap: controlledBasemap, onBasemapChange }: AtlasMapProps) {
+  focusRegions, scaleDomain, interactive = true, camera, onCameraChange, basemap: controlledBasemap, onBasemapChange, legendAction }: AtlasMapProps) {
   const container = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
   const popupRef = useRef<maplibregl.Popup | null>(null);
@@ -87,8 +131,8 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
   const applyingCamera = useRef(false);
   const fitted = useRef(false);
   const previousFocus = useRef('');
-  const [boundaries, setBoundaries] = useState<BoundaryCollection | null>(null);
-  const [connections, setConnections] = useState<ConnectionCollection | null>(null);
+  const [loadedBoundaries, setLoadedBoundaries] = useState<{ key: string; data: BoundaryCollection } | null>(null);
+  const [loadedConnections, setLoadedConnections] = useState<{ key: string; data: ConnectionCollection } | null>(null);
   const [connectionError, setConnectionError] = useState(false);
   const [renderedConnections, setRenderedConnections] = useState(0);
   const [ready, setReady] = useState(false);
@@ -103,6 +147,9 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
   const [rasterSources, setRasterSources] = useState(0);
   const [basemapError, setBasemapError] = useState('');
   const [styleRevision, setStyleRevision] = useState(0);
+  const [mapRevision, setMapRevision] = useState(0);
+  const appliedBasemap = useRef<AtlasBasemap | null>(null);
+  const previousDataset = useRef('');
   const basemapApplied = useRef(false);
   const basemapReady = useRef(false);
   const latest = useRef({ dataset, metric, rows, onSelectRegion, interactive, camera, onCameraChange });
@@ -120,6 +167,14 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
   const geographyNoun = dataset.geography === 'hr2015' ? 'December 2015 health region' : dataset.mapLocationsAsset === 'boundaries-lfs-er-2021.geojson' ? 'LFS reporting area' : dataset.geography.toUpperCase();
   const aggregate = allowsMapAggregation(dataset, metric);
   const locationsAsset = dataset.mapLocationsAsset ?? (isCity ? 'locations-clinical-cities.geojson' : isInstitution ? 'locations-institutions.geojson' : `boundaries-${dataset.geography}.geojson`);
+  const boundaryKey = `${locationsAsset}|${isFacility}`;
+  const mapsMetric = canMapMetric(dataset, metric);
+  // Boundaries stay in place while a new view uses the same file.
+  const boundaries = mapsMetric && loadedBoundaries?.key === boundaryKey ? loadedBoundaries.data : null;
+  const connectionsAsset = dataset.mapConnectionsAsset && /^[a-z0-9-]+\.geojson$/.test(dataset.mapConnectionsAsset) ? dataset.mapConnectionsAsset : '';
+  const connections = connectionsAsset && loadedConnections?.key === connectionsAsset ? loadedConnections.data : null;
+  const attributionText = isPoint ? isFacility || isStop ? 'Reviewed locations © Province of British Columbia and OpenStreetMap contributors' : `${pointLabel} locations © OpenStreetMap contributors` : 'Health areas © Province of British Columbia';
+  const canMap = canMapDataset(dataset);
   const statCanGeometry = ['hr2015', 'cd', 'csd', 'er'].includes(dataset.geography);
   const boundaryProofAsset = dataset.geography === 'hr2015' || locationsAsset === 'boundaries-lfs-er-2021.geojson' ? 'mapping-connections-provenance.json' : 'regional-boundaries-provenance.json';
   const locationScope = isCity ? dataset.id === 'clinical-condition-mix' ? 'Points locate exact source city-query labels. Values describe one selected condition within each historical city portfolio, retaining the full city denominator. They do not locate facilities or describe disease prevalence, enrollment, current recruitment or health-area catchments. A multi-site study can appear in several cities.' : 'Points locate queried city labels, not trial facilities or service catchments. Counts describe registered study city-site matches, not enrollment or current trial availability. A multi-site study can appear in several cities.' : isStop ? 'Points identify verified sites or explicitly labelled representative towns. Recorded stop-event counts include arrivals, departures and breaks; they are not passengers, journeys or service frequency. Dashed connections follow recorded order and are schematic, not road routes or measured travel times.' : isFacility ? 'Points show independently reviewed sites or explicitly labelled address-parcel references. Grouped or uncertain locations remain unassigned. Facility measures retain their source definitions and period; coordinates do not establish a catchment, current service availability or a historical site location.' : 'Points identify representative campuses or research sites. Amounts and counts describe the institution as a whole, and are not allocated to this point or its surrounding city.';
@@ -189,53 +244,41 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
   };
 
   useEffect(() => {
-    setBoundaries(null); setError(null);
-    if (!canMapMetric(dataset, metric)) return;
-    const abort = new AbortController();
-    fetch(boundaryAssetUrl(locationsAsset), { signal: abort.signal })
-      .then(response => { if (!response.ok) throw new Error(`Boundary snapshot unavailable (${response.status})`); return response.json(); })
-      .then((data: BoundaryCollection) => {
-        if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error('Location snapshot is invalid');
-        // Reviewed registries retain their original property naming. Normalize
-        // evidence fields once so every point can expose its source and caveats.
-        setBoundaries({ ...data, features: data.features.map(feature => {
-          const properties = feature.properties as BoundaryProperties & Record<string, unknown>;
-          return { ...feature, properties: { ...properties,
-            source_url: properties.source_url ?? properties.sourceUrl,
-            coordinate_source_url: properties.coordinate_source_url ?? properties.coordinateSourceUrl,
-            location_note: properties.location_note ?? properties.locationNote,
-            location_precision: properties.location_precision ?? properties.locationPrecision ?? (dataset.geography === 'facility' ? 'Representative facility/building point' : undefined),
-          } as BoundaryProperties };
-        }) });
-      })
-      .catch(reason => { if (!abort.signal.aborted) setError(reason instanceof Error ? reason.message : 'Boundary snapshot unavailable'); });
-    return () => abort.abort();
-  }, [dataset.geography, dataset.id, locationsAsset]);
+    setError(null);
+    if (!mapsMetric) return;
+    let live = true;
+    loadBoundaries(locationsAsset, isFacility)
+      .then(data => { if (live) setLoadedBoundaries({ key: boundaryKey, data }); })
+      .catch(reason => { if (live) setError(reason instanceof Error ? reason.message : 'Boundary snapshot unavailable'); });
+    return () => { live = false; };
+  }, [boundaryKey, mapsMetric]);
 
   useEffect(() => {
-    setConnections(null); setConnectionError(false);
-    if (!dataset.mapConnectionsAsset || !/^[a-z0-9-]+\.geojson$/.test(dataset.mapConnectionsAsset)) return;
-    const abort = new AbortController();
-    fetch(boundaryAssetUrl(dataset.mapConnectionsAsset), { signal: abort.signal }).then(response => { if (!response.ok) throw new Error('Schedule connections unavailable'); return response.json(); }).then((data: ConnectionCollection) => {
-      if (data.type !== 'FeatureCollection' || !Array.isArray(data.features)) throw new Error('Invalid schedule connections');
-      setConnections(data);
-    }).catch(() => { if (!abort.signal.aborted) setConnectionError(true); });
-    return () => abort.abort();
-  }, [dataset.mapConnectionsAsset, dataset.id]);
+    setConnectionError(false);
+    if (!connectionsAsset) return;
+    let live = true;
+    loadConnections(connectionsAsset).then(data => { if (live) setLoadedConnections({ key: connectionsAsset, data }); }).catch(() => { if (live) setConnectionError(true); });
+    return () => { live = false; };
+  }, [connectionsAsset]);
 
   useEffect(() => {
-    if (!container.current || !canMapDataset(dataset)) return;
+    if (!container.current || !canMap) return;
     setReady(false); setRenderedCount(0); setRenderedPoints([]); setActualCamera(null); fitted.current = false;
+    // Start on the basemap when this page has already loaded it, rather than
+    // on a blank background that the basemap then replaces.
+    const initialStyle = cachedAtlasBasemap(basemap);
+    appliedBasemap.current = initialStyle ? basemap : null;
+    basemapApplied.current = !!initialStyle;
     let map: MapLibreMap;
     try {
       map = new maplibregl.Map({ container: container.current, center: latest.current.camera?.center || [-125.8, 54.1], zoom: latest.current.camera?.zoom ?? 4,
         bearing: latest.current.camera?.bearing ?? 0, pitch: latest.current.camera?.pitch ?? 0, interactive: latest.current.interactive,
-        style: structuredClone(atlasBackgroundStyle),
+        style: initialStyle ?? structuredClone(atlasBackgroundStyle),
         attributionControl: false, maxZoom: isPoint ? 18 : 11, minZoom: compact || isPoint ? 0.5 : 2, renderWorldCopies: false,
       });
     } catch (reason) { setError(`Map rendering unavailable: ${reason instanceof Error ? reason.message : 'WebGL could not start'}. The chart and table remain available.`); return; }
     mapRef.current = map;
-    map.addControl(new maplibregl.AttributionControl({ compact: true, customAttribution: isPoint ? isFacility || isStop ? 'Reviewed locations © Province of British Columbia and OpenStreetMap contributors' : `${pointLabel} locations © OpenStreetMap contributors` : 'Health areas © Province of British Columbia' }), 'bottom-right');
+    map.addControl(new maplibregl.AttributionControl({ compact: true, customAttribution: attributionText }), 'bottom-right');
     if (latest.current.interactive) map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
     if (!latest.current.camera && !isPoint) map.fitBounds(BC_BOUNDS, { padding: 28, duration: 0 });
     map.on('style.load', () => {
@@ -309,26 +352,35 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
     });
     map.on('mouseleave', hitLayer, () => { map.getCanvas().style.cursor = ''; popupRef.current?.remove(); });
     const resize = new ResizeObserver(() => map.resize()); resize.observe(container.current);
+    setMapRevision(revision => revision + 1);
     return () => { resize.disconnect(); popupRef.current?.remove(); labelMarkers.current.forEach(({ marker }) => marker.remove()); labelMarkers.current = []; map.remove(); mapRef.current = null; };
-  }, [dataset.id]);
+    // One map serves every view with the same kind of layers; a new dataset
+    // updates its data and colours in place instead of rebuilding the map.
+  }, [canMap, isPoint, isRoute, attributionText]);
 
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;
     let cancelled = false;
-    basemapApplied.current = false;
     basemapReady.current = false;
     setBasemapStatus('loading'); setBasemapFeatures(0); setBasemapError('');
     const timeout = window.setTimeout(() => { if (!cancelled && !basemapReady.current) setBasemapStatus('unavailable'); }, 15000);
+    if (appliedBasemap.current === basemap) {
+      basemapApplied.current = true;
+      map.triggerRepaint();
+      return () => { cancelled = true; window.clearTimeout(timeout); };
+    }
+    basemapApplied.current = false;
     loadAtlasBasemap(basemap).then(style => {
       if (cancelled) return;
       setReady(false);
       basemapApplied.current = true;
+      appliedBasemap.current = basemap;
       // Layer order needs a full style replacement; the map and camera persist.
       map.setStyle(style, { diff: false });
     }).catch(reason => { if (!cancelled) { setBasemapError(reason instanceof Error ? reason.message : 'Basemap unavailable'); setBasemapStatus('unavailable'); } });
     return () => { cancelled = true; window.clearTimeout(timeout); };
-  }, [basemap, dataset.id]);
+  }, [basemap, mapRevision]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -369,15 +421,16 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
   }, [ready, styleRevision, filteredConnections]);
 
   useEffect(() => {
-    if (!boundaries || !ready || latest.current.camera || (fitted.current && focusedCodeKey === previousFocus.current)) return;
+    if (!boundaries || !ready || latest.current.camera || (fitted.current && focusedCodeKey === previousFocus.current && dataset.id === previousDataset.current)) return;
     const ids = focusedCodes.size ? focusedCodes : new Set(grouped.keys());
     const viewport = mapRef.current?.getContainer().getBoundingClientRect();
     const smallPadding = Math.max(12, Math.min(42, Math.floor(Math.min(viewport?.width ?? 300, viewport?.height ?? 300) * 0.14)));
     const padding = isPoint ? { left: Math.min(48, (viewport?.width ?? 400) * 0.12), right: Math.min(48, (viewport?.width ?? 400) * 0.12), top: Math.min(48, (viewport?.height ?? 300) * 0.16), bottom: compact ? 16 : 48 } : compact ? smallPadding : 35;
-    mapRef.current?.fitBounds(collectionBounds(boundaries, ids) || BC_BOUNDS, { padding, maxZoom: isPoint ? 14 : 11, duration: fitted.current && focusRegions?.length ? motionDuration(550) : 0 });
+    mapRef.current?.fitBounds(collectionBounds(boundaries, ids) || BC_BOUNDS, { padding, maxZoom: isPoint ? 14 : 11, duration: fitted.current && (focusRegions?.length || compact) ? motionDuration(550) : 0 });
     fitted.current = true;
     previousFocus.current = focusedCodeKey;
-  }, [boundaries, ready, focusedCodeKey]);
+    previousDataset.current = dataset.id;
+  }, [boundaries, ready, focusedCodeKey, dataset.id]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -430,7 +483,7 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
       data-metric={metric} data-focus-regions={focusKey} data-focus-count={focusedCodes.size} data-scale-domain={JSON.stringify([min, max])} data-camera={actualCamera ? JSON.stringify(actualCamera) : ''}
       data-basemap={basemap} data-basemap-format="vector" data-raster-sources={rasterSources} data-basemap-status={basemapStatus} data-basemap-features={basemapFeatures} data-basemap-error={basemapError} data-geometry={isPoint ? 'points' : 'polygons'} data-bubble-scale-max={isPoint ? scale.maximum : undefined}
       data-rendered-points={isPoint ? JSON.stringify(renderedPoints) : undefined} data-connections={isRoute ? filteredConnections.features.length : undefined} data-rendered-connections={isRoute ? renderedConnections : undefined} data-map-aggregation={aggregate ? 'sum' : 'none'}
-      style={{ marginTop: compact ? 8 : 14, ...(compact ? { padding: '0 12px 8px', flex: '0 0 auto' } : {}) }}>
+      style={{ marginTop: compact ? 8 : 14, ...(compact ? { padding: '0 12px 8px', flex: '0 0 auto' } : {}), ...(legendAction ? { display: 'flex', alignItems: 'center', gap: 12 } : {}) }}>
       {isPoint ? <div className="atlas-point-legend" aria-label="Proportional dot legend">
         <strong>{metricColumn?.label || metric}{metricColumn?.unit ? ` (${metricColumn.unit})` : ''}</strong>
         {values.length > 0 && scale.maximum > 0 ? compact ? <p>Circle area ∝ source value · scale maximum {format(scale.maximum, metricColumn?.unit)}{aggregate ? ' events at a stop' : ''}.</p> : <svg viewBox="0 0 290 96" role="img" aria-label={`Circle area is proportional to the source value, with a maximum reference value of ${format(scale.maximum, metricColumn?.unit)}`}>
@@ -445,6 +498,7 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
         <span>{format(values.length || validDomain ? max : null, metricColumn?.unit)}</span>
         <span><i aria-hidden="true" style={{ display: 'inline-block', width: 10, height: 10, background: MISSING_COLOR, marginRight: 5 }} />No data</span>
       </div>}
+      {legendAction}
       {!compact && <><p className="atlas-map-join-note" style={{ fontSize: 14, marginBottom: 8 }}>{join.matched} {isStop ? 'source rows with reviewed stop references' : `exact ${isPoint ? `${pointNoun} location matches` : 'boundary joins'}`} · {join.unmatched} unmatched rows · {join.missing} missing values{join.ambiguous > 0 ? ` · ${join.ambiguous} ambiguous rows withheld (filter to one observation per ${isPoint ? pointNoun : 'region'})` : ''}.</p>
       {isPoint ? <p className="atlas-institution-scope">{locationScope} <a href={boundaryAssetUrl(locationsAsset.replace('.geojson', '.README.md'))} target="_blank" rel="noreferrer">Location sources & caveats</a> · <a href={boundaryAssetUrl(locationsAsset)} download>Location GeoJSON</a>{isRoute && dataset.mapConnectionsAsset && <> · <a href={boundaryAssetUrl(dataset.mapConnectionsAsset)} download>Schematic connections GeoJSON</a></>}</p> : dataset.geography === 'chsa' ? <p style={{ fontSize: 12, color: '#61747e', lineHeight: 1.6 }}>{boundaryCaption(dataset)} <a href={boundaryAssetUrl(locationsAsset)} download>Boundary GeoJSON</a> · <a href={boundaryAssetUrl('chsa-connections-provenance.json')} download>Source and boundary provenance</a> · <a href={boundaryAssetUrl('boundaries-chsa-2018.README.md')} target="_blank" rel="noreferrer">Boundary scope and licence</a></p> : statCanGeometry ? <p style={{ fontSize: 12, color: '#61747e', lineHeight: 1.6 }}>{boundaryCaption(dataset)} <a href={boundaryAssetUrl(locationsAsset)} download>Boundary GeoJSON</a> · <a href={boundaryAssetUrl(boundaryProofAsset)} download>Boundary provenance</a> · <a href="https://www.statcan.gc.ca/en/reference/licence" target="_blank" rel="noreferrer">Statistics Canada licence</a></p> : <p style={{ fontSize: 12, color: '#61747e', lineHeight: 1.6 }}>BC Ministry of Health polygons via PGMaps. Boundary vintage is unestablished; the snapshot provides geographic context for the source period.
         {dataset.geography === 'ha' && dataset.id.startsWith('community-disease-') && <><br />Historical Northern HA age-standardized registry rates, shown on the current PGMaps HA polygon as context. Historical boundary vintage is unverified; HA values are not allocated to CHSAs, communities or facilities. </>}{dataset.geography === 'ha' && !dataset.id.startsWith('community-disease-') && <><br />Province and PHSA reporting units have no territorial polygon; they remain in charts and records. Costs describe reporting organizations, not residents’ bills or utilization. <a href={boundaryAssetUrl('crosswalk-health-authority.README.md')} target="_blank" rel="noreferrer">Health-authority crosswalk & scope</a> · <a href={boundaryAssetUrl('crosswalk-health-authority.json')} download>Crosswalk JSON</a> · </>}{' '}<a href={boundaryAssetUrl('crosswalk-hsda.csv')} download>HSDA crosswalk</a> · <a href={boundaryAssetUrl('crosswalk-health-hierarchy.csv')} download>Health-area hierarchy</a> · <a href={boundaryAssetUrl('boundaries-provenance.json')} download>Provenance</a> · <a href="https://www2.gov.bc.ca/gov/content/data/open-data/open-government-licence-bc" target="_blank" rel="noreferrer">BC open licence</a>

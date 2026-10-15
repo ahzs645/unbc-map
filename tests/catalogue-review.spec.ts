@@ -152,8 +152,9 @@ for(const story of expansionStoryMaps) for(const chapter of story.chapters) {
     if(evidence.kind==='map') {
       const state=source.getByTestId('atlas-map-state');await expect(state).toHaveAttribute('data-ready','true');await expect(state).toHaveAttribute('data-matched-count',String(mappedCounts[chapter.id]));// Context polygons without values remain rendered. Small municipal polygons
       // also differ by the fixed desktop/phone viewport; join counts stay exact.
-      // Full-page story maps leave phones and desktop the same polygon counts.
-      const rendered = dataset.geography==='institution' ? mappedCounts[chapter.id] : dataset.geography==='hsda' ? 9 : dataset.geography==='er' ? dataset.mapLocationsAsset==='boundaries-lfs-er-2021.geojson' ? 7 : 8 : dataset.geography==='hr2015' ? 3 : 7;
+      // The desktop story map, without its title and source line, is taller
+      // and fits the three Northern HSDAs closer, so fewer neighbours show.
+      const rendered = dataset.geography==='institution' ? mappedCounts[chapter.id] : dataset.geography==='hsda' ? (testInfo.project.name==='mobile' ? 9 : 7) : dataset.geography==='er' ? dataset.mapLocationsAsset==='boundaries-lfs-er-2021.geojson' ? 7 : 8 : dataset.geography==='hr2015' ? 3 : 7;
       await expect(state).toHaveAttribute('data-rendered-features',String(rendered));await expect(state).toHaveAttribute('data-basemap-format','vector');await expect(state).toHaveAttribute('data-raster-sources','0');
       if(evidence.scaleDomain) await expect(state).toHaveAttribute('data-scale-domain',JSON.stringify(evidence.scaleDomain));
     } else await expect(source.getByTestId('atlas-map-state')).toHaveCount(0);

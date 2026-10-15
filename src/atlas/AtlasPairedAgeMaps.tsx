@@ -120,7 +120,8 @@ function PairedAgeWorkspace({ dataset, rows, compact = false, focusRegions, sele
         <option value="">All shown regions</option>{entities.map(entity => <option key={entity}>{entity}</option>)}
       </select></label>
       <button type="button" aria-label="Fit both maps" onClick={fit}>{compact ? 'Fit' : 'Fit both maps'}</button>
-      <button type="button" aria-label="Expand maps" onClick={() => setExpanded(true)}>{compact ? 'Expand' : 'Expand maps'}</button>
+      {/* In a story the reader's own Expand media control enlarges the pair. */}
+      {!compact && <button type="button" aria-label="Expand maps" onClick={() => setExpanded(true)}>Expand maps</button>}
     </div>
     {narrow && <div className="atlas-age-map-tabs" role="tablist" aria-label="Age map measure">
       {views.map((view, index) => <button key={view.id} id={`${labelId}-${view.id}-tab`} type="button" role="tab" aria-selected={activeView === view.id}

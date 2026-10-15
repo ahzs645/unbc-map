@@ -156,8 +156,7 @@
 /* ---- Map panels in the UNBC type and neutrals ---------------------------- */
 .campus-sidebar-title,
 .sidebar-heading,
-.place-detail h2,
-.about-content h2 {
+.place-detail h2 {
   font-family: "helvetica-black", "Helvetica Neue", Arial, sans-serif;
   font-weight: 400 !important;
   letter-spacing: 0;

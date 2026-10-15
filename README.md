@@ -2,13 +2,13 @@
 
 The Northern Hub for Health Research Atlas brings collected NHHR evidence into one place: editorial evidence stories, a general data explorer, and regional maps when a dataset has a verified geographic join. It is an independent research interface for the NHHR feasibility work, built with React, MapLibre and the PGMaps GeoToolkit.
 
-The site opens on the NHHR Atlas research stories: `/` forwards to `/dev/projects`, where the stories and the data explorer live. The original UNBC Campus Explorer is at `/campus` (older `/#place=…` links still open it). Atlas pages sit inside the same UNBC header, breadcrumbs, typography and footer. The logo department text reads “Northern Hub for / Health Research”. Atlas pages follow the www.unbc.ca page anatomy: the header menu lists the Atlas sections (Research stories, Data explorer, Sources & methods, Campus map), each page opens with a gold Helvetica Black title over a 6px warm rule with breadcrumbs beneath, and UNBC-style tabs switch sections in place. Body copy, links, buttons, cards, tables and form controls use the unbc.ca type scale and colours (`src/atlas/unbc-atlas.css`). On phones the dataset list folds into a section menu, topic filters scroll sideways, and a guided story fills the screen with its chapter controls in view.
+The site opens on the public NHHR Atlas: research stories at `/`, the data explorer at `/?view=explore`, sources at `/?view=sources` and guided story maps at `/<story>` (for example `/northern-communities`). `/dev/projects` serves the same Atlas with its Zoer workspace details: the NHHR datasets in Zoer catalogue, Zoer dataset IDs and source tables, and links into Zoer. Public pages name the NHHR Data Space instead and leave those out (`src/atlas/mode.ts`). The original UNBC Campus Explorer is at `/campus` (older `/#place=…` links still open it). Atlas pages sit inside the same UNBC header, breadcrumbs, typography and footer. The logo department text reads “Northern Hub for / Health Research”. Atlas pages follow the www.unbc.ca page anatomy: the header menu lists the Atlas sections (Research stories, Data explorer, Sources & methods, Campus map), each page opens with a gold Helvetica Black title over a 6px warm rule with breadcrumbs beneath, and UNBC-style tabs switch sections in place. Body copy, links, buttons, cards, tables and form controls use the unbc.ca type scale and colours (`src/atlas/unbc-atlas.css`). On phones the dataset list folds into a section menu, topic filters scroll sideways, and a guided story fills the screen with its chapter controls in view.
 
 ## Guided story maps
 
 Nine guided stories contain fifty-nine source-backed chapters, using the PGMaps GeoToolkit's reusable sidecar, chapter navigation and reading-section components:
 
-| Route under `/dev/projects/` | Story | Interaction |
+| Route under `/` (or `/dev/projects/`) | Story | Interaction |
 | --- | --- | --- |
 | `northern-communities` | One North, many communities | Scroll from the Northern LHAs to Prince George, the Northwest and Northeast; inspect estimates and projections |
 | `physician-supply` | How physician supply varies across the North | Focus regional rates and reveal synchronized 2020/2024 specialist-count maps with a shared colour domain |
@@ -90,7 +90,7 @@ npm run build
 npm test
 ```
 
-The build emits direct entry pages for `dev/projects`, each of the nine guided story routes, and `campus`, plus a `404.html` SPA fallback. Assets use the configured absolute base. GitHub Pages CI reads the configured site base path and uses it for both the build and browser checks before deploying. The configured repository currently serves `/unbc-map/`.
+The build emits direct entry pages for `dev/projects`, each of the nine guided story routes (at the root and under `dev/projects`), and `campus`, plus a `404.html` SPA fallback. Assets use the configured absolute base. GitHub Pages CI reads the configured site base path and uses it for both the build and browser checks before deploying. The configured repository currently serves `/unbc-map/`.
 
 The browser checks cover the evidence explorer, URL state, filters and exports, live WebGL boundary rendering and source joins, responsive layouts, and the retained campus explorer. Local map geometry works without a remote basemap. Data snapshots are deliberately static: opening the application does not refresh Zoer or claim that an old source extraction is current.
 

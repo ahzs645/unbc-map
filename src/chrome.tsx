@@ -6,7 +6,7 @@
  * - the header search lists matching campus places as you type, and
  *   submitting selects the first one, instead of searching unbc.ca;
  * - "Campus map" (the map's own address) resets the map in place;
- * - links to #about open the map notes.
+ * - links to #about open the page's notes, where it has them.
  */
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
@@ -29,7 +29,7 @@ const home = new URL(`${base}campus`, location.href).href;
 
 export interface ChromeActions {
   onHome: () => void;
-  onAbout: () => void;
+  onAbout?: () => void;
   /** Handles a click on another chrome link in place; true if it did. */
   onLink?: (link: HTMLAnchorElement) => boolean;
 }
@@ -61,7 +61,7 @@ function useMapLinks(
       if (!link || event.metaKey || event.ctrlKey || event.shiftKey) return;
       if (link.getAttribute("href") === "#about") {
         event.preventDefault();
-        actions.current.onAbout();
+        actions.current.onAbout?.();
       } else if (link.href === home) {
         event.preventDefault();
         window.UNBCChrome?.closeMenu();
@@ -226,11 +226,11 @@ export function ChromeFooter(actions: ChromeActions) {
  * UNBC › Prince George campus › Campus Explorer, in the bar under the map's
  * header; or UNBC › NHHR Atlas › section, under an Atlas page title.
  */
-export function ChromeBreadcrumbs({ section, className = "context-bar" }: { section?: string; className?: string } = {}) {
+export function ChromeBreadcrumbs({ section, className = "context-bar", atlasUrl = "/" }: { section?: string; className?: string; atlasUrl?: string } = {}) {
   const html = useMemo(
     () =>
       renderBreadcrumbs(
-        section ? [{ label: "NHHR Atlas", url: "/dev/projects" }, { label: section }] : [
+        section ? [{ label: "NHHR Atlas", url: atlasUrl }, { label: section }] : [
           {
             label: "Prince George campus",
             url: "https://www.unbc.ca/about-unbc/campus-location-details",

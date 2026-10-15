@@ -1,5 +1,6 @@
 import { atlasDatasets } from "./data";
 import type { AtlasRow } from "./types";
+import { scrubZoer } from "./mode";
 import { expansionStoryMaps } from './expansionStoryMaps';
 import { followupStoryMaps } from './followupStoryMaps';
 
@@ -8,7 +9,7 @@ export interface StoryMapChapter {
   title: string;
   paragraphs: string[];
   evidence: {
-    kind: "map" | "chart" | "comparison" | "paired" | "scenario";
+    kind: "map" | "chart" | "trends" | "comparison" | "paired" | "scenario";
     datasetId: string;
     metric: string;
     year?: string;
@@ -135,7 +136,7 @@ const verifiedTrialSites = rows('trial-sites').filter(row => row.location_code);
 const travelEvents = rows('travel-stop-events');
 const locatedTravelEvents = travelEvents.filter(row => row.location_code);
 
-export const atlasStoryMaps: AtlasStoryMap[] = [
+export const atlasStoryMaps: AtlasStoryMap[] = scrubZoer([
   {
     id: "northern-communities",
     title: "One North, many communities",
@@ -221,7 +222,7 @@ export const atlasStoryMaps: AtlasStoryMap[] = [
           "The Atlas selects one Gender=T total per area and year. Earlier derived summaries added female, male, and total rows together, doubling the population; those summaries are kept in the audit rather than used in this story.",
         ],
         evidence: {
-          kind: "chart", datasetId: "population-lha", metric: "population",
+          kind: "trends", datasetId: "population-lha", metric: "population",
           entities: ["Prince George", "Peace River North", "Terrace", "Prince Rupert"],
         },
         takeaway: { value: "2025", label: "Projection · 2020–2024 points are source estimates" },
@@ -529,4 +530,4 @@ export const atlasStoryMaps: AtlasStoryMap[] = [
   },
   ...expansionStoryMaps,
   ...followupStoryMaps,
-];
+]);

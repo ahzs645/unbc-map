@@ -8,7 +8,7 @@ const explorer = "dev/projects?view=explore";
 
 test("the site opens on research stories, and clicking a field shows no focus ring", async ({ page }) => {
   await page.goto("./");
-  await expect(page).toHaveURL(/\/dev\/projects$/);
+  await expect(page).not.toHaveURL(/dev\/projects/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Research stories");
   const search = page.getByRole("textbox", { name: "Search stories" });
   await search.click();

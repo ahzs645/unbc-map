@@ -284,15 +284,25 @@ test('age stories preserve 2025 projections and compact readers offer accessible
     await expect(pair).toHaveAttribute('data-active-view', 'count'); await readyMaps(pair, 1);
     await expect(pair.getByTestId('atlas-map-state')).toHaveAttribute('data-metric', 'population_65_plus');
   } else await readyMaps(pair);
-  await pair.getByRole('button', { name: 'Expand maps', exact: true }).click();
-  const dialog = page.getByRole('dialog', { name: 'Expanded paired age maps', exact: true });
-  await expect(dialog).toBeVisible(); await readyMaps(dialog);
-  await dialog.getByLabel('Select expanded paired age map region').selectOption('Telegraph Creek');
-  await expect(dialog.locator('.atlas-age-map-count .atlas-map-detail')).toContainText('245');
-  await expect(dialog.locator('.atlas-age-map-share .atlas-map-detail')).toContainText('30.9%');
-  await dialog.getByRole('button', { name: 'Close expanded maps', exact: true }).click();
-  await expect(dialog).not.toBeVisible();
-  await expect(pair.getByLabel('Select paired age map region')).toHaveValue('Telegraph Creek');
+  // The story reader's own Expand media enlarges the pair; its caption and
+  // value table belong to that expanded view.
+  await expect(pair.getByRole('button', { name: 'Expand maps', exact: true })).toHaveCount(0);
+  await expect(pair.locator('.atlas-age-map-caption')).toBeHidden();
+  await page.getByRole('button', { name: 'Expand media ↗', exact: true }).click();
+  const expanded = page.getByRole('dialog', { name: 'Expanded story media', exact: true });
+  await expect(expanded).toBeVisible();
+  await expect(expanded.locator('.atlas-chapter-evidence-heading')).toContainText('2025 · Projection');
+  await expect(expanded.locator('.atlas-age-map-caption')).toBeVisible();
+  await expect(expanded.getByText('Read both values for every local health area', { exact: true })).toBeVisible();
+  // Phones show one measure at a time and select a region on the map itself.
+  if (testInfo.project.name !== 'mobile') {
+    await expanded.getByLabel('Select paired age map region').selectOption('Telegraph Creek');
+    await expect(expanded.locator('.atlas-age-map-count .atlas-map-detail')).toContainText('245');
+    await expect(expanded.locator('.atlas-age-map-share .atlas-map-detail')).toContainText('30.9%');
+  }
+  await page.getByRole('button', { name: 'Close media ×', exact: true }).click();
+  await expect(expanded).toHaveCount(0);
+  if (testInfo.project.name !== 'mobile') await expect(pair.getByLabel('Select paired age map region')).toHaveValue('Telegraph Creek');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
