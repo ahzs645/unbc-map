@@ -90,7 +90,7 @@ npm run build
 npm test
 ```
 
-The build emits direct entry pages for `dev/projects`, each of the nine guided story routes (at the root and under `dev/projects`), and `campus`, plus a `404.html` SPA fallback. Assets use the configured absolute base. GitHub Pages CI reads the configured site base path and uses it for both the build and browser checks before deploying. The configured repository currently serves `/unbc-map/`.
+The build emits direct entry pages for `dev/projects`, each of the nine guided story routes (at the root and under `dev/projects`), and `campus`, plus a `404.html` SPA fallback. Assets use the configured absolute base. Pushes to `main` build with the configured Pages base path and deploy in about two minutes (`.github/workflows/pages.yml`). The browser checks run separately on every push, under the same `/<repository>/` subpath and split across four runners (`.github/workflows/tests.yml`); a failure marks the commit but does not hold or undo the deploy. Run `npm test` locally before pushing. The configured repository currently serves `/unbc-map/`.
 
 The browser checks cover the evidence explorer, URL state, filters and exports, live WebGL boundary rendering and source joins, responsive layouts, and the retained campus explorer. Local map geometry works without a remote basemap. Data snapshots are deliberately static: opening the application does not refresh Zoer or claim that an old source extraction is current.
 
