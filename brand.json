@@ -1,12 +1,12 @@
 {
 	"$schema": "./vendor/unbc-chrome/chrome/brand.schema.json",
-	"_comment": "UNBC Chrome settings for the campus map. Everything not set here is www.unbc.ca's own header and footer (vendor/unbc-chrome/chrome/defaults.json). '/' is the map itself; '#about' opens the map notes.",
+	"_comment": "UNBC Chrome settings for the campus map. Everything not set here is www.unbc.ca's own header and footer (vendor/unbc-chrome/chrome/defaults.json). '/campus' is the map itself; '#about' opens the map notes.",
 	"logo": {
 		"department": "Northern Hub for\nHealth Research"
 	},
 	"skipLink": { "label": "Skip to campus explorer", "target": "#campus-search" },
 	"menu": [
-		{ "label": "Campus map", "url": "/" },
+		{ "label": "Campus map", "url": "/campus" },
 		{ "label": "Research stories", "url": "/dev/projects" },
 		{ "label": "Data explorer", "url": "/dev/projects?view=explore" },
 		{ "label": "Building directory", "url": "https://www.unbc.ca/about-unbc/campus-maps" },

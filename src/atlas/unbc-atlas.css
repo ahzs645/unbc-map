@@ -55,12 +55,6 @@
   font-size: 22px;
   line-height: 1.2;
 }
-.atlas-app .atlas-lead {
-  font-size: var(--unbc-lead);
-  line-height: 1.6;
-  color: #29292a;
-  max-width: 900px;
-}
 .atlas-app .atlas-eyebrow {
   color: #525154;
   font-family: var(--unbc-bold);
@@ -71,7 +65,7 @@
 .atlas-app button:focus-visible,
 .atlas-app a:focus-visible,
 .atlas-app select:focus-visible,
-.atlas-app input:focus-visible,
+.atlas-app input[type="checkbox"]:focus-visible,
 .atlas-app summary:focus-visible,
 .atlas-app [tabindex]:focus-visible {
   outline: 3px solid #b79527;
@@ -114,8 +108,7 @@
 .atlas-app .atlas-story-detail,
 .atlas-app .atlas-about,
 .atlas-app .atlas-explorer,
-.atlas-app .atlas-storymap,
-.atlas-page-heading {
+.atlas-app .atlas-storymap {
   box-sizing: border-box;
   width: 100%;
   max-width: 1170px;
@@ -197,16 +190,12 @@
   .atlas-app .atlas-story-detail,
   .atlas-app .atlas-about,
   .atlas-app .atlas-explorer,
-  .atlas-app .atlas-storymap,
-  .atlas-page-heading {
+  .atlas-app .atlas-storymap {
     max-width: 1560px;
   }
 }
 
 /* ---- Stories landing ---------------------------------------------------- */
-.atlas-page-heading {
-  padding-top: 32px;
-}
 .atlas-app .atlas-stories-section {
   padding-top: 48px;
   padding-bottom: 48px;
@@ -744,9 +733,6 @@
 }
 
 /* ---- Sources ------------------------------------------------------------ */
-.atlas-app .atlas-about-lead {
-  margin-bottom: 32px;
-}
 .atlas-app .atlas-about-principles {
   border-top: 2px solid var(--unbc-warm);
 }

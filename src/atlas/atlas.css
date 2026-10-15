@@ -42,7 +42,7 @@ body {
 .atlas-app button:focus-visible,
 .atlas-app a:focus-visible,
 .atlas-app select:focus-visible,
-.atlas-app input:focus-visible,
+.atlas-app input[type="checkbox"]:focus-visible,
 .atlas-app [tabindex]:focus-visible {
   outline: 3px solid #e4a647;
   outline-offset: 4px;
@@ -1053,12 +1053,6 @@ body {
   line-height: 1.1;
   margin: 20px 0;
 }
-.atlas-about-lead {
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--atlas-muted);
-  max-width: 730px;
-}
 .atlas-about-principles {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1518,9 +1512,6 @@ body {
   }
   .atlas-about > h1 {
     font-size: 43px;
-  }
-  .atlas-about-lead {
-    font-size: 16px;
   }
   .atlas-about-principles {
     grid-template-columns: 1fr;

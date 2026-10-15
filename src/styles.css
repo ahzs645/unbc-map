@@ -31,9 +31,15 @@ a {
 }
 button:focus-visible,
 a:focus-visible,
-input:focus-visible {
+input[type="checkbox"]:focus-visible,
+input[type="radio"]:focus-visible {
   outline: 3px solid #b79527;
   outline-offset: 3px;
+}
+/* Text fields show their caret when clicked, not a focus ring. */
+input:not([type="checkbox"]):not([type="radio"]):focus,
+textarea:focus {
+  outline: none;
 }
 button {
   border: 0;
@@ -129,10 +135,6 @@ a:hover {
   color: #344d41;
   background: transparent;
   outline: none;
-}
-.search-box:focus-within {
-  outline: 2px solid #977000;
-  outline-offset: 2px;
 }
 .category-filters {
   display: flex;

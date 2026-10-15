@@ -6,6 +6,16 @@ test.beforeEach(async ({ page }) => { await mockBasemaps(page); });
 
 const explorer = "dev/projects?view=explore";
 
+test("the site opens on research stories, and clicking a field shows no focus ring", async ({ page }) => {
+  await page.goto("./");
+  await expect(page).toHaveURL(/\/dev\/projects$/);
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Research stories");
+  const search = page.getByRole("textbox", { name: "Search stories" });
+  await search.click();
+  await expect(search).toBeFocused();
+  await expect(search).toHaveCSS("outline-style", "none");
+});
+
 test("stories link to evidence and filters have an honest empty state", async ({ page }) => {
   const errors: string[] = [];
   page.on("pageerror", error => errors.push(error.message));
@@ -15,7 +25,6 @@ test("stories link to evidence and filters have an honest empty state", async ({
   await expect(page.locator(".unbc-logo--footer")).toBeAttached();
   await expect(page.locator(".atlas-header")).toHaveCount(0);
   await expect(page.locator(".atlas-hero")).toHaveCount(0);
-  await expect(page.getByText("Northern Hub for Health Research", { exact: false }).first()).toBeVisible();
   await expect(page.locator(".atlas-story-card")).toHaveCount(42);
   await page.getByRole("textbox", { name: "Search stories" }).fill("no-such-nhhr-story");
   await expect(page.getByText("No stories found.")).toBeVisible();

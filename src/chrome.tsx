@@ -25,7 +25,7 @@ import { places, type Place } from "./data";
 
 export const chromeConfig = resolveConfig(brand);
 const base = import.meta.env.BASE_URL;
-const home = new URL(base, location.href).href;
+const home = new URL(`${base}campus`, location.href).href;
 
 export interface ChromeActions {
   onHome: () => void;
@@ -106,7 +106,7 @@ export function ChromeHeader({
     search: { ...brand.search, placeholder: search.label },
   }) : chromeConfig, [search?.label, site]);
   const html = useMemo(
-    () => renderHeader(config, { base, currentPath: activeUrl === undefined ? (search ? "/dev/projects" : "/") : null }),
+    () => renderHeader(config, { base, currentPath: activeUrl === undefined ? (search ? "/dev/projects" : "/campus") : null }),
     [config, activeUrl === undefined],
   );
   const ref = useRef<HTMLDivElement>(null);

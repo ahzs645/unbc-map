@@ -26,7 +26,7 @@ test("production assets and campus geography load from the Pages subpath", async
 }) => {
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
-  await page.goto("./");
+  await page.goto("./campus");
   await expect(page.getByTestId("map-state")).toHaveAttribute(
     "data-ready",
     "true",
