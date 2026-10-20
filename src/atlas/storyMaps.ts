@@ -1,3 +1,4 @@
+import { formatMeasure } from "@pgmaps/geo-toolkit/format";
 import { atlasDatasets } from "./data";
 import type { AtlasRow } from "./types";
 import { scrubZoer } from "./mode";
@@ -50,12 +51,11 @@ function sum(records: AtlasRow[], metric: string): number | undefined {
 }
 
 function format(value: number | undefined, decimals = 0): string {
-  return value === undefined
-    ? "Not available"
-    : new Intl.NumberFormat("en-CA", {
-        minimumFractionDigits: decimals,
-        maximumFractionDigits: decimals,
-      }).format(value);
+  return formatMeasure(value, undefined, {
+    fallback: "Not available",
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
 }
 
 function cad(value: number | undefined): string {

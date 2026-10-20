@@ -1,13 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { formatMeasure } from "@pgmaps/geo-toolkit/format";
 import type { AtlasDataset, AtlasRow } from "./types";
 
 export function formatValue(value: unknown, unit?: string): string {
   if (value === null || value === undefined || value === "") return "Not reported";
   if (typeof value !== "number") return String(value);
-  const number = new Intl.NumberFormat("en-CA", { maximumFractionDigits: 2 }).format(value);
-  if (unit === "%" || unit === "percent") return `${number}%`;
-  if (unit && /^(CAD|\$|CAD\s*\$)$/i.test(unit)) return `$${number}`;
-  return unit ? `${number} ${unit}` : number;
+  return formatMeasure(value, unit, { fallback: "Not reported", maximumFractionDigits: 2 });
 }
 
 export function rowLabel(dataset: AtlasDataset, row: AtlasRow): string {

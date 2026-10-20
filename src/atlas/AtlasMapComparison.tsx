@@ -2,6 +2,7 @@ import { useLayoutEffect, useMemo, useRef, useState, type KeyboardEvent, type Po
 import AtlasMap, { type AtlasMapCamera } from './AtlasMap';
 import type { AtlasDataset, AtlasRow } from './types';
 import type { AtlasBasemap } from './basemaps';
+import { formatMeasure } from '@pgmaps/geo-toolkit/format';
 
 interface AtlasMapComparisonProps {
   dataset: AtlasDataset;
@@ -15,8 +16,7 @@ interface AtlasMapComparisonProps {
 }
 
 function valueLabel(value: unknown, unit?: string) {
-  if (typeof value !== 'number' || !Number.isFinite(value)) return 'No value';
-  return new Intl.NumberFormat('en-CA', { maximumFractionDigits: 1 }).format(value) + (unit === '%' ? '%' : '');
+  return formatMeasure(typeof value === 'number' ? value : null, unit === '%' ? '%' : undefined);
 }
 
 /** Both full-size maps share a camera and scale. Only the later map is clipped. */

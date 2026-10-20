@@ -1,5 +1,6 @@
 import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { createPortal } from "react-dom";
+import { formatMeasure } from "@pgmaps/geo-toolkit/format";
 import type { AtlasDataset, AtlasRow } from "./types";
 import "./condition-mix.css";
 
@@ -40,10 +41,9 @@ function number(value: unknown): number | null {
   return Number.isFinite(parsed) ? parsed : null;
 }
 function exact(value: number | null, percent = false): string {
-  if (value === null) return "Not reported";
   // Display the reviewed source precision, rather than rounding small domains
   // to zero. The share fields are supplied by the reviewed release.
-  return new Intl.NumberFormat("en-CA", { maximumFractionDigits: 12 }).format(value) + (percent ? "%" : "");
+  return formatMeasure(value, percent ? "%" : undefined, { fallback: "Not reported", maximumFractionDigits: 12 });
 }
 function rowKey(row: AtlasRow): string {
   return JSON.stringify([row.query_city, row.condition_domain, row.snapshot_date]);

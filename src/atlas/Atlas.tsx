@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { ArrowDown, ArrowRight, ArrowUp, ArrowUpDown, ArrowUpRight, BarChart3, Check, ChevronLeft, ChevronRight, Database, Download, ExternalLink, Info, Layers, Link2, Map as MapIcon, Search, Table2, X } from "lucide-react";
 import { atlasDatasets, atlasStories, atlasInventory } from "./data";
 import type { AtlasDataset, AtlasRow, AtlasStory } from "./types";
+import { downloadText, toCsv } from "@pgmaps/geo-toolkit/export";
+import { formatNumber } from "@pgmaps/geo-toolkit/format";
 import AtlasChart, { formatValue } from "./AtlasChart";
 import AtlasMap from "./AtlasMap";
 import AtlasPairedAgeMaps from "./AtlasPairedAgeMaps";
@@ -331,10 +333,9 @@ export default function Atlas() {
   const hasFilters = !!(state.year || state.entity || state.entities.length || state.search || Object.values(state.filters).some(Boolean));
   const copyLink = async () => { try { await navigator.clipboard.writeText(window.location.href); setNotice(FLAGS.explore.filters ? "Link copied. It includes the current view and filters." : "Link copied."); } catch { setNotice("Link could not be copied. Copy the address from your browser to share this view."); } };
   const download = () => {
-    const escape = (value: unknown) => { let text = value == null ? "" : String(value); if (/^[=+@\t\r]/.test(text) || (/^-/.test(text) && typeof value !== "number")) text = `'${text}`; return `"${text.replace(/"/g, '""')}"`; };
-    const content = [dataset.columns.map(column => escape(column.key)).join(","), ...filteredRows.map(row => dataset.columns.map(column => escape(row[column.key])).join(","))].join("\r\n");
-    const url = URL.createObjectURL(new Blob(["\uFEFF", content], { type: "text/csv;charset=utf-8;" }));
-    const anchor = document.createElement("a"); anchor.href = url; anchor.download = FLAGS.explore.filters ? `nhhr-${dataset.id}-filtered.csv` : `nhhr-${dataset.id}.csv`; document.body.appendChild(anchor); anchor.click(); anchor.remove(); window.setTimeout(() => URL.revokeObjectURL(url), 1000); setNotice(`Downloaded ${filteredRows.length.toLocaleString()} ${FLAGS.explore.filters ? "filtered " : ""}source records. Missing values are empty CSV cells.`);
+    const content = toCsv(dataset.columns.map(column => column.key), filteredRows, { bom: true });
+    downloadText(content, FLAGS.explore.filters ? `nhhr-${dataset.id}-filtered.csv` : `nhhr-${dataset.id}.csv`, "text/csv;charset=utf-8;");
+    setNotice(`Downloaded ${formatNumber(filteredRows.length)} ${FLAGS.explore.filters ? "filtered " : ""}source records. Missing values are empty CSV cells.`);
   };
 
   const pageTitle = state.section === "home" ? "NHHR Atlas" : state.section === "explore" ? "Data explorer" : state.section === "sources" ? "Sources and methods" : storyMap?.title ?? story?.title ?? (state.story ? "Story not found" : "Research stories");
