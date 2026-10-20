@@ -9,6 +9,7 @@ import { allowsMapAggregation, boundaryAssetUrl, boundaryCaption, canMapDataset,
 import { atlasBackgroundStyle, atlasBasemapBackground, atlasBasemaps, cachedAtlasBasemap, loadAtlasBasemap, type AtlasBasemap } from './basemaps';
 import './basemap.css';
 import { pointScale } from './pointScale';
+import { formatMeasure } from '@pgmaps/geo-toolkit/format';
 
 export interface AtlasMapCamera {
   center: [number, number];
@@ -96,12 +97,11 @@ function loadConnections(asset: string): Promise<ConnectionCollection> {
 function numeric(value: unknown): number | null {
   return typeof value === 'number' && Number.isFinite(value) ? value : null;
 }
+// Counts read as bare numbers on map labels; the legend names what is counted.
+const COUNT_UNITS = ['people', 'studies', 'awards', 'rows', 'events', 'records', 'cases', 'files', 'works', 'chairholders'];
 function format(value: number | null, unit?: string) {
-  if (value === null) return 'No value';
-  if (unit === 'CAD' || unit === 'CAD nominal') return new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD', minimumFractionDigits: 0, maximumFractionDigits: 2 }).format(value);
-  if (unit?.startsWith('CAD/')) return `${new Intl.NumberFormat('en-CA', { maximumFractionDigits: 2 }).format(value)} ${unit}`;
-  const suffix = unit === '%' ? '%' : unit && !['people', 'studies', 'awards', 'rows', 'events', 'records', 'cases', 'files', 'works', 'chairholders'].includes(unit) ? ` ${unit}` : '';
-  return new Intl.NumberFormat('en-CA', { maximumFractionDigits: 1 }).format(value) + suffix;
+  const currency = unit === 'CAD' || unit === 'CAD nominal';
+  return formatMeasure(value, currency ? 'CAD' : unit && COUNT_UNITS.includes(unit) ? undefined : unit, { maximumFractionDigits: currency || unit?.startsWith('CAD/') ? 2 : 1 });
 }
 function collectionBounds(collection: BoundaryCollection, ids?: Set<string>): [[number, number], [number, number]] | null {
   let west = Infinity, south = Infinity, east = -Infinity, north = -Infinity;

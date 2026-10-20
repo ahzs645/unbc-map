@@ -3,6 +3,7 @@ import AtlasMap, { type AtlasMapCamera } from './AtlasMap';
 import type { AtlasDataset, AtlasRow } from './types';
 import type { AtlasBasemap } from './basemaps';
 import { getBoundaryJoin } from './geography';
+import { formatMeasure } from '@pgmaps/geo-toolkit/format';
 import './paired-age-maps.css';
 
 interface Props {
@@ -22,9 +23,7 @@ const views = [
 ];
 
 function exactValue(value: unknown, percentage = false) {
-  return typeof value === 'number' && Number.isFinite(value)
-    ? new Intl.NumberFormat('en-CA', { maximumFractionDigits: percentage ? 6 : 0 }).format(value) + (percentage ? '%' : '')
-    : 'No value';
+  return formatMeasure(typeof value === 'number' ? value : null, percentage ? '%' : undefined, { maximumFractionDigits: percentage ? 6 : 0 });
 }
 function sameCamera(a: AtlasMapCamera | undefined, b: AtlasMapCamera) {
   return !!a && [...a.center, a.zoom, a.bearing, a.pitch].every((value, i) => Math.abs(value - [...b.center, b.zoom, b.bearing, b.pitch][i]) < 0.000001);
