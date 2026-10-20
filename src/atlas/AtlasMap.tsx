@@ -3,6 +3,7 @@ import * as maplibregl from 'maplibre-gl';
 import type { GeoJSONSource, ExpressionSpecification, Map as MapLibreMap } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { Layers } from 'lucide-react';
+import { groupByJoin, joinDiagnostics } from '@pgmaps/geo-toolkit/calculations';
 import type { FeatureCollection, Geometry } from 'geojson';
 import type { AtlasDataset, AtlasRow } from './types';
 import { allowsMapAggregation, boundaryAssetUrl, boundaryCaption, canMapDataset, canMapMetric, getBoundaryJoin, mapGroupValue } from './geography';
@@ -195,22 +196,13 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
   const scale = useMemo(() => pointScale(dataset, rows, metric), [dataset, rows, metric]);
   const dataLayer = isPoint ? 'nhhr-institution-bubble' : 'nhhr-region-fill';
   const hitLayer = isPoint ? 'nhhr-institution-hit' : 'nhhr-region-fill';
-  const grouped = useMemo(() => {
-    const groups = new Map<string, AtlasRow[]>();
-    rows.forEach(row => { const code = getBoundaryJoin(dataset, row); if (code) groups.set(code, [...(groups.get(code) || []), row]); });
-    return groups;
-  }, [dataset, rows]);
-  const join = useMemo(() => {
-    const available = new Set(boundaries?.features.map(feature => feature.properties.code) || []);
-    let matched = 0, missing = 0, unmatched = 0, ambiguous = 0;
-    rows.forEach(row => {
-      const code = getBoundaryJoin(dataset, row);
-      if (!code || (boundaries && !available.has(code))) unmatched++;
-      else if ((grouped.get(code)?.length || 0) > 1 && !aggregate) ambiguous++;
-      else { matched++; if (numeric(row[metric]) === null) missing++; }
-    });
-    return { matched, missing, unmatched, ambiguous };
-  }, [boundaries, dataset, rows, grouped, metric, aggregate]);
+  const grouped = useMemo(() => groupByJoin(rows, row => getBoundaryJoin(dataset, row)), [dataset, rows]);
+  const join = useMemo(() => joinDiagnostics(rows, {
+    joinOf: row => getBoundaryJoin(dataset, row),
+    valueOf: row => row[metric],
+    available: boundaries && new Set(boundaries.features.map(feature => feature.properties.code)),
+    allowsSum: aggregate,
+  }), [boundaries, dataset, rows, metric, aggregate]);
   const values = useMemo(() => [...grouped.values()].map(group => mapGroupValue(dataset, group, metric)).filter((v): v is number => v !== null), [dataset, grouped, metric]);
   const filteredConnections = useMemo<ConnectionCollection>(() => {
     const eventIds = new Set(rows.map(row => String(row.event_id ?? '')));
