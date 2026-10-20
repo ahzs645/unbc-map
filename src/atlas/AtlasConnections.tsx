@@ -23,13 +23,14 @@ const connections = [
   ['historical-cancer-incidence', 'Original 2015 health-region DGUID → official December 2015 polygon', '572 rows reconcile to the archived original. Three Northern HSDAs use verified December 2015 polygons; the BC benchmark stays unallocated; confidence intervals, source symbols and overlapping windows remain explicit.'],
 ] as const;
 
-export default function AtlasConnections({ onExplore }: { onExplore: (dataset: AtlasDataset) => void }) {
+export default function AtlasConnections({ onExplore }: { onExplore?: (dataset: AtlasDataset) => void }) {
+  if (!connections.some(([id]) => atlasDatasets.some(dataset => dataset.id === id))) return null;
   return <section className="atlas-connections" id="atlas-connections" aria-label="Dataset connections">
     <div className="atlas-section-heading"><div><p className="atlas-eyebrow">Reviewed 12 October 2026</p><h2>How the data connects.</h2></div></div>
     <p>Each view joins to a place through an explicit source identifier and keeps the original observation and period.</p>
-    <div className="atlas-data-table"><div className="atlas-table-scroll" tabIndex={0} role="region" aria-label="Dataset connections; scroll horizontally to see all columns"><table><thead><tr><th scope="col">Dataset</th><th scope="col">Connection</th><th scope="col">Scope of the view</th></tr></thead><tbody>{connections.map(([id, join, scope]) => {
+    <div className="atlas-data-table"><div className="atlas-table-scroll" tabIndex={0} role="region" aria-label="Dataset connections; scroll horizontally to see all columns"><table><thead><tr><th scope="col">Dataset</th><th scope="col">Connection</th><th scope="col">Scope of the view</th></tr></thead><tbody>{connections.filter(([id]) => atlasDatasets.some(dataset => dataset.id === id)).map(([id, join, scope]) => {
       const dataset = atlasDatasets.find(item => item.id === id)!;
-      return <tr key={id}><th scope="row"><button className="atlas-text-button" onClick={() => onExplore(dataset)}>{dataset.title}</button></th><td>{join}</td><td>{scope}</td></tr>;
+      return <tr key={id}><th scope="row">{onExplore ? <button className="atlas-text-button" onClick={() => onExplore(dataset)}>{dataset.title}</button> : dataset.title}</th><td>{join}</td><td>{scope}</td></tr>;
     })}</tbody></table></div></div>
     <p>Hospital, trial and travel points link to reviewed source evidence and location caveats. Broad descriptions remain unassigned. Town references do not establish boarding addresses, and the collected travel tables do not contain road-route geometry. Streets and Dark basemaps use vector layers.</p>
     <p><a href={boundaryAssetUrl('connections-review.md')} target="_blank" rel="noreferrer">Read the connection review</a> · <a href={boundaryAssetUrl('connections-review.json')} download>Source IDs, join checks and remaining gaps</a></p>

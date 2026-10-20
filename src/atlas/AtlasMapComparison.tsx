@@ -10,6 +10,8 @@ interface AtlasMapComparisonProps {
   comparisonMetric: string;
   focusRegions?: string[];
   scaleDomain?: [number, number];
+  /** Kept mounted but hidden in a story reader. */
+  dormant?: boolean;
 }
 
 function valueLabel(value: unknown, unit?: string) {
@@ -18,7 +20,7 @@ function valueLabel(value: unknown, unit?: string) {
 }
 
 /** Both full-size maps share a camera and scale. Only the later map is clipped. */
-export default function AtlasMapComparison({ dataset, rows, metric, comparisonMetric, focusRegions, scaleDomain }: AtlasMapComparisonProps) {
+export default function AtlasMapComparison({ dataset, rows, metric, comparisonMetric, focusRegions, scaleDomain, dormant = false }: AtlasMapComparisonProps) {
   const [reveal, setReveal] = useState(50);
   const stage = useRef<HTMLDivElement>(null);
   // The divider spans the map canvas only, not the legend beneath it.
@@ -73,14 +75,14 @@ export default function AtlasMapComparison({ dataset, rows, metric, comparisonMe
     <div className="atlas-comparison-labels" style={{ display: 'flex', justifyContent: 'space-between', gap: 16, padding: '8px 12px', fontSize: 12 }}>
       <strong>{earlierLabel}</strong><strong>{laterLabel}</strong>
     </div>
-    <div ref={stage} className="atlas-comparison-stage" data-testid="atlas-map-comparison" data-reveal={reveal}
+    <div ref={stage} className="atlas-comparison-stage" data-testid={dormant ? undefined : "atlas-map-comparison"} data-reveal={reveal}
       data-scale-domain={JSON.stringify(domain)} style={{ position: 'relative', flex: 1, minHeight: 180, overflow: 'hidden' }}>
       <div className="atlas-comparison-map atlas-comparison-map-earlier" style={{ position: 'absolute', inset: 0 }}>
-        <AtlasMap dataset={dataset} rows={rows} metric={metric} compact focusRegions={focusRegions} scaleDomain={domain} onCameraChange={setCamera} basemap={basemap} onBasemapChange={setBasemap} />
+        <AtlasMap dataset={dataset} rows={rows} metric={metric} compact focusRegions={focusRegions} scaleDomain={domain} onCameraChange={setCamera} basemap={basemap} onBasemapChange={setBasemap} dormant={dormant} />
       </div>
       <div className="atlas-comparison-map atlas-comparison-map-later" aria-hidden="true"
         style={{ position: 'absolute', inset: 0, pointerEvents: 'none', clipPath: `inset(0 0 0 ${100 - reveal}%)` }}>
-        <AtlasMap dataset={dataset} rows={rows} metric={comparisonMetric} compact focusRegions={focusRegions} scaleDomain={domain} camera={camera} interactive={false} basemap={basemap} />
+        <AtlasMap dataset={dataset} rows={rows} metric={comparisonMetric} compact focusRegions={focusRegions} scaleDomain={domain} camera={camera} interactive={false} basemap={basemap} dormant={dormant} />
       </div>
       <div className="atlas-comparison-swipe" style={{ left: `${position}%`, top: canvasBox?.top ?? 0, height: canvasBox?.height ?? '100%' }}
         onPointerDown={event => { event.currentTarget.setPointerCapture(event.pointerId); drag(event); }}

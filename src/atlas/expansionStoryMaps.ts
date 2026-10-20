@@ -2,9 +2,10 @@ import { atlasDatasets } from './data';
 import type { AtlasStoryMap } from './storyMaps';
 import { researchFollowupChapters } from './followupStoryMaps';
 
-const dataset = (id: string) => atlasDatasets.find(item => item.id === id)!;
+// A switched-off story map's dataset may be absent from the build (manifest/).
+const dataset = (id: string) => atlasDatasets.find(item => item.id === id);
 const housing = dataset('census-housing-csd');
-const needMaximum = Math.max(0, ...housing.rows.flatMap(row => [row.tenant_core_need_pct, row.owner_core_need_pct]).filter((value): value is number => typeof value === 'number' && Number.isFinite(value)));
+const needMaximum = Math.max(0, ...(housing?.rows ?? []).flatMap(row => [row.tenant_core_need_pct, row.owner_core_need_pct]).filter((value): value is number => typeof value === 'number' && Number.isFinite(value)));
 
 export const expansionStoryMaps: AtlasStoryMap[] = [
   {

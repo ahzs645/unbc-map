@@ -37,7 +37,6 @@ export default function AtlasEstimateTrends({ dataset, rows, metric, totalLabel 
       <span><i className="is-projection" aria-hidden="true" />Projection</span>
     </div>
     <ul>{panels.map(panel => <TrendPanel key={panel.name} panel={panel} unit={column?.unit} />)}</ul>
-    <p className="atlas-trend-note">Each panel has its own scale, so year-to-year change is visible in every area. Compare sizes using the figures, not the height of the lines.</p>
   </div>;
 }
 
@@ -69,7 +68,7 @@ function TrendPanel({ panel, unit }: { panel: Panel; unit?: string }) {
     </svg>
     <dl>
       {first && last && <div><dt>Estimates {first.year}→{last.year}</dt><dd><span>{percent(estimateChange)}</span>{formatValue(first.value)} → {formatValue(last.value)}</dd></div>}
-      {projection && <div className="is-projection"><dt>{projection.year} projection vs {last?.year}</dt><dd><span>{percent(projectionChange)}</span>{formatValue(projection.value)}</dd></div>}
+      {projection && <div className="is-projection"><dt>{last ? <>Projection {last.year}→{projection.year}</> : <>{projection.year} projection</>}</dt><dd><span>{percent(projectionChange)}</span>{formatValue(projection.value)}</dd></div>}
     </dl>
   </li>;
 }

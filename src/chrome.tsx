@@ -19,11 +19,17 @@ import {
   resolveConfig,
 } from "../vendor/unbc-chrome/chrome/render.mjs";
 import "../vendor/unbc-chrome/chrome/css/unbc-chrome.css";
+import "./chrome-fixes.css";
 import "../vendor/unbc-chrome/chrome/unbc-chrome.js";
 import brand from "../brand.json";
 import { places, type Place } from "./data";
 
-export const chromeConfig = resolveConfig(brand);
+// The campus page links into the Atlas only where manifest/ publishes it.
+const campusMenu = brand.menu.flatMap(item =>
+  item.url === "/" ? (FLAGS.projects.atlas ? [{ ...item, url: FLAGS.pages.home ? "/stories" : "/" }] : [])
+  : item.url === "/?view=explore" ? (FLAGS.projects.atlas && FLAGS.pages.explore ? [item] : [])
+  : [item]);
+export const chromeConfig = resolveConfig({ ...brand, menu: campusMenu });
 const base = import.meta.env.BASE_URL;
 const home = new URL(`${base}campus`, location.href).href;
 
@@ -44,6 +50,9 @@ export interface ChromeSearch {
   label: string;
   items: ChromeSearchItem[];
   onSelect: (item: ChromeSearchItem) => void;
+  /** Names the results group; "NHHR datasets" unless set. */
+  resultsLabel?: string;
+  emptyText?: string;
 }
 
 /** Catches clicks on the chrome's links that belong to the map. */
@@ -100,10 +109,10 @@ export function ChromeHeader({
   /** The menu URL to mark as the current page, when the path alone is ambiguous. */
   activeUrl?: string;
 }) {
-  const config = useMemo(() => search ? resolveConfig({
+  const config = useMemo(() => search || site ? resolveConfig({
     ...brand,
     ...site,
-    search: { ...brand.search, placeholder: search.label },
+    search: { ...brand.search, placeholder: search?.label ?? brand.search.placeholder },
   }) : chromeConfig, [search?.label, site]);
   const html = useMemo(
     () => renderHeader(config, { base, currentPath: activeUrl === undefined ? (search ? "/dev/projects" : "/campus") : null }),
@@ -191,7 +200,7 @@ export function ChromeHeader({
       {slot &&
         term.trim() !== "" &&
         createPortal(
-          <div role="group" aria-label={search ? "NHHR datasets" : "Campus places"}>
+          <div role="group" aria-label={search ? search.resultsLabel ?? "NHHR datasets" : "Campus places"}>
             {results.slice(0, 8).map((place) => (
               <button key={place.id} type="button" onClick={() => choose(place)}>
                 <span>{place.name}</span>
@@ -199,7 +208,7 @@ export function ChromeHeader({
               </button>
             ))}
             {results.length === 0 && (
-              <p>{search ? "No datasets match. Try a research topic or dataset name." : "No campus places match. Try a building name or number."}</p>
+              <p>{search ? search.emptyText ?? "No datasets match. Try a research topic or dataset name." : "No campus places match. Try a building name or number."}</p>
             )}
           </div>,
           slot,
@@ -226,6 +235,7 @@ export function ChromeFooter(actions: ChromeActions) {
  * UNBC › Prince George campus › Campus Explorer, in the bar under the map's
  * header; or UNBC › NHHR Atlas › section, under an Atlas page title.
  */
+const homeIcon = '<svg class="unbc-breadcrumb__home" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.3 2.3a1 1 0 0 1 1.4 0l9 8.6a1 1 0 0 1-.7 1.7H20V21a1 1 0 0 1-1 1h-4.5v-6.5h-5V22H5a1 1 0 0 1-1-1v-8.4H3a1 1 0 0 1-.7-1.7z"/></svg>';
 export function ChromeBreadcrumbs({ section, className = "context-bar", atlasUrl = "/" }: { section?: string; className?: string; atlasUrl?: string } = {}) {
   const html = useMemo(
     () =>
@@ -239,7 +249,8 @@ export function ChromeBreadcrumbs({ section, className = "context-bar", atlasUrl
         ],
         { ...chromeConfig, home: "https://www.unbc.ca/", breadcrumbs: { homeLabel: "UNBC" } },
         { base },
-      ),
+      // As on www.unbc.ca, the first crumb is a home icon; its name stays for screen readers.
+      ).replace(">UNBC</a>", `>${homeIcon}<span class="unbc-sr-only">UNBC</span></a>`),
     [section],
   );
   return <div className={className} dangerouslySetInnerHTML={{ __html: html }} />;

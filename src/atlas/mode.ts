@@ -6,14 +6,20 @@
 const base = import.meta.env.BASE_URL;
 const devHome = `${base}dev/projects`;
 
-export const atlasDev = location.pathname === devHome || location.pathname.startsWith(`${devHome}/`);
+export const atlasDev = FLAGS.projects.workspace && (location.pathname === devHome || location.pathname.startsWith(`${devHome}/`));
 /** The Atlas home page, as a path on this site. */
 export const atlasHome = atlasDev ? devHome : base;
+/** With the home page on, the public story catalogue has its own page; the workspace keeps its address. */
+export const atlasStoriesHome = FLAGS.pages.home && !atlasDev ? `${base}stories` : atlasHome;
 /** Prefix for story-map pages: `${atlasRoot}/<story>`. */
 export const atlasRoot = atlasHome.replace(/\/$/, "");
 /** The Atlas home as a site-relative chrome menu URL ("/" is the site base). */
 export const atlasMenuHome = atlasDev ? "/dev/projects" : "/";
-export const atlasMenuUrl = (view?: "explore" | "sources") => view ? `${atlasMenuHome}?view=${view}` : atlasMenuHome;
+export type AtlasView = "home" | "stories" | "explore" | "sources";
+export const atlasMenuUrl = (view: AtlasView = "stories") =>
+  view === "stories" ? (atlasStoriesHome === atlasHome ? atlasMenuHome : "/stories")
+  : view === "home" ? (atlasDev ? `${atlasMenuHome}?view=home` : atlasMenuHome)
+  : `${atlasMenuHome}?view=${view}`;
 export const atlasViewHref = (query = "") => `${atlasHome}${query}`;
 
 export const isZoerUrl = (url: string | undefined) => !!url && /^https?:\/\/zoer\./i.test(url);

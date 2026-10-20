@@ -6,8 +6,8 @@ test.beforeEach(async ({ page }) => { await mockBasemaps(page); });
 
 const explorer = "dev/projects?view=explore";
 
-test("the site opens on research stories, and clicking a field shows no focus ring", async ({ page }) => {
-  await page.goto("./");
+test("the stories page opens its catalogue, and clicking a field shows no focus ring", async ({ page }) => {
+  await page.goto("./stories");
   await expect(page).not.toHaveURL(/dev\/projects/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Research stories");
   const search = page.getByRole("textbox", { name: "Search stories" });
@@ -166,10 +166,10 @@ test("released data preserves population corrections and boundary crosswalk inte
 test("Atlas controls and record tables stay inside narrow viewports", async ({ page }) => {
   await page.goto("dev/projects");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
-  // Wide screens reach the explorer from the UNBC menu; phones keep the section tabs.
-  const tab = page.getByRole("button", { name: "Data explorer", exact: true });
-  if (await tab.isVisible()) await tab.click();
-  else await page.getByRole("navigation", { name: "Main" }).getByRole("link", { name: "Data explorer", exact: true }).click();
+  // The UNBC menu reaches the explorer; on phones it opens from the menu button first.
+  const link = page.getByRole("navigation", { name: "Main" }).getByRole("link", { name: "Data explorer", exact: true });
+  if (!(await link.first().isVisible())) await page.getByRole("button", { name: "Menu", exact: true }).click();
+  await link.locator("visible=true").first().click();
   await page.getByRole("tab", { name: "Table", exact: true }).click();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await expect(page.getByRole("button", { name: "CSV", exact: true })).toBeVisible();

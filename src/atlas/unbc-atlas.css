@@ -103,7 +103,6 @@
 
 /* ---- Page frame: title, breadcrumbs, section tabs ------------------------ */
 .atlas-title,
-.atlas-section-nav,
 .atlas-app .atlas-stories-section,
 .atlas-app .atlas-story-detail,
 .atlas-app .atlas-about,
@@ -134,50 +133,6 @@
 .atlas-app .atlas-breadcrumbs a {
   color: var(--unbc-teal);
 }
-.atlas-section-nav {
-  margin-top: 24px;
-}
-.atlas-section-nav ul {
-  display: flex;
-  gap: 4px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border-bottom: 2px solid var(--unbc-warm);
-}
-/* UNBC's tab component: warm inactive tabs; the current one is white with a
-   grey top stripe and opens into the content below. */
-.atlas-section-nav button {
-  position: relative;
-  top: 2px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 4px;
-  padding: 8px 14px;
-  border: 2px solid var(--unbc-warm);
-  border-radius: 2px 2px 0 0;
-  background: var(--unbc-warm);
-  color: #29292a;
-  font-family: var(--unbc-display);
-  font-size: 16px;
-  line-height: 1.4;
-  white-space: nowrap;
-}
-.atlas-section-nav button:hover {
-  background: #fff;
-}
-.atlas-section-nav button[aria-current="page"] {
-  margin-top: 0;
-  padding-top: 6px;
-  border-top: 6px solid var(--unbc-soft);
-  border-bottom-color: #fff;
-  background: #fff;
-  cursor: default;
-}
-.atlas-section-nav svg {
-  color: var(--atlas-green);
-}
 @media (min-width: 768px) {
   .atlas-title {
     padding-top: 64px;
@@ -185,7 +140,6 @@
 }
 @media (min-width: 1590px) {
   .atlas-title,
-  .atlas-section-nav,
   .atlas-app .atlas-stories-section,
   .atlas-app .atlas-story-detail,
   .atlas-app .atlas-about,
@@ -340,13 +294,14 @@
 .atlas-app .atlas-primary {
   gap: 10px;
   min-height: 46px;
-  padding: 12px 18px;
+  /* www.unbc.ca's .btn--cta: 18px bold, 1px tracking, 12px padding. */
+  padding: 12px;
   border: 0;
   border-radius: 3px;
   background: var(--atlas-green);
   font-family: var(--unbc-bold);
   font-weight: 700;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 22px;
   letter-spacing: 1px;
   transition: background-color 0.2s ease-in-out;
@@ -358,7 +313,6 @@
 .atlas-app .atlas-export-actions button,
 .atlas-app .atlas-chart-mode button,
 .atlas-app .atlas-pagination button,
-.atlas-app .atlas-storymap-progress button,
 .atlas-app .editorial-expand,
 .atlas-app .atlas-expand-media,
 .atlas-app .atlas-scenario-presets button,
@@ -376,7 +330,6 @@
 .atlas-app .atlas-export-actions button:hover,
 .atlas-app .atlas-chart-mode button:hover,
 .atlas-app .atlas-pagination button:hover:not(:disabled),
-.atlas-app .atlas-storymap-progress button:hover:not(:disabled),
 .atlas-app .editorial-expand:hover,
 .atlas-app .atlas-expand-media:hover,
 .atlas-app .atlas-scenario-presets button:hover,
@@ -434,24 +387,6 @@
   background: none;
   border: 0;
 }
-.atlas-app .atlas-sidebar-heading {
-  margin: 0 0 12px;
-  padding: 12px 18px;
-  background: var(--unbc-warm);
-}
-.atlas-app .atlas-sidebar-heading h2 {
-  font-family: var(--unbc-display);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-}
-.atlas-app .atlas-sidebar-heading > span {
-  border: 0;
-  background: #fff;
-  font-family: var(--unbc-bold);
-  font-weight: 700;
-  font-size: 13px;
-}
 .atlas-app .atlas-dataset-sidebar > .atlas-search {
   margin-bottom: 12px;
 }
@@ -495,13 +430,6 @@
 .atlas-app .atlas-dataset-detail {
   font-size: 13px;
   color: #525154;
-}
-.atlas-app .atlas-sidebar-note {
-  margin-top: 24px;
-  padding: 24px;
-  border: 2px solid var(--unbc-warm);
-  font-size: 14px;
-  line-height: 1.6;
 }
 .atlas-app .atlas-explorer-workspace {
   border: 0;
@@ -831,9 +759,6 @@
   .atlas-app .atlas-dataset-sidebar {
     display: block;
   }
-  .atlas-app .atlas-sidebar-heading {
-    display: none;
-  }
   .atlas-app .atlas-dataset-toggle {
     display: flex;
     align-items: center;
@@ -895,27 +820,8 @@
   .atlas-app .atlas-dataset-list > button:last-child.is-active {
     border-bottom: 0;
   }
-  .atlas-app .atlas-sidebar-note {
-    margin-top: 12px;
-    padding: 16px;
-  }
 }
 @media (max-width: 767.98px) {
-  .atlas-section-nav ul {
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .atlas-section-nav ul::-webkit-scrollbar {
-    display: none;
-  }
-  .atlas-section-nav button {
-    padding: 8px 10px;
-    font-size: 14px;
-  }
-  .atlas-section-nav svg,
-  .atlas-tab-more {
-    display: none;
-  }
   .atlas-app .atlas-catalogue-tools > .atlas-search {
     max-width: none;
   }
@@ -987,25 +893,127 @@
     justify-content: flex-start;
     gap: 24px;
   }
-  /* The UNBC menu above already lists these sections. */
-  .atlas-section-nav {
-    display: none;
-  }
 }
 
 /* ---- Full-page story maps ------------------------------------------------
    An open story map takes the window below the UNBC header, like a PGMaps
-   project story: a slim toolbar, one reader that scrolls from the cover
-   through the chapters to the sources, and the chapter controls below. */
+   project story: one slim bar (back, the chapter rail between its previous
+   and next steps, the story link), then one reader that scrolls from the
+   cover through the chapters to the sources. */
 .atlas-story-toolbar {
+  --atlas-story-bar: 52px;
+  container-type: inline-size;
   display: flex;
   flex: none;
   align-items: center;
-  gap: 16px;
-  min-height: 48px;
-  padding: 4px var(--unbc-gutter, 15px);
+  gap: 8px;
+  height: var(--atlas-story-bar);
+  padding: 0 var(--unbc-gutter, 15px);
   border-bottom: 1px solid #eae7e5;
   background: #fff;
+}
+.atlas-story-toolbar > * {
+  flex: none;
+}
+/* The current chapter stays in the middle; neighbours fade out at the edges
+   and the rail scrolls sideways to reach them. */
+.atlas-app .atlas-story-chapters {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+  height: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 56px, #000 calc(100% - 56px), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 56px, #000 calc(100% - 56px), transparent);
+}
+.atlas-story-chapters::-webkit-scrollbar {
+  display: none;
+}
+/* Room either side, so the first and last chapters can also sit in the middle. */
+.atlas-story-chapters::before,
+.atlas-story-chapters::after {
+  content: "";
+  flex: 0 0 50%;
+}
+.atlas-app .atlas-story-chapters button {
+  position: relative;
+  flex: none;
+  height: 100%;
+  padding: 0 2px;
+  border: 0;
+  background: none;
+  color: var(--atlas-muted, #525154);
+  font-family: var(--unbc-bold);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.atlas-app .atlas-story-chapters button:hover {
+  color: var(--unbc-teal);
+}
+.atlas-app .atlas-story-chapters button[aria-current="location"] {
+  color: var(--atlas-green);
+}
+.atlas-app .atlas-story-chapters button[aria-current="location"]::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--atlas-green);
+}
+.atlas-app .atlas-story-step,
+.atlas-app .atlas-story-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 2px;
+  background: var(--unbc-warm);
+  color: #29292a;
+  font-family: var(--unbc-bold);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.atlas-app .atlas-story-step:hover:not(:disabled),
+.atlas-app .atlas-story-copy:hover {
+  background: var(--unbc-warm-hover);
+}
+.atlas-app .atlas-story-step:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.atlas-app .atlas-story-copy {
+  margin-left: 4px;
+  color: var(--unbc-teal);
+}
+/* Without the room, "Copy story link" and "All stories" become their icons. */
+@container (max-width: 820px) {
+  .atlas-story-copy .atlas-story-bar-label {
+    display: none;
+  }
+}
+@container (max-width: 520px) {
+  .atlas-story-back .atlas-story-bar-label {
+    display: none;
+  }
+  .atlas-app .atlas-story-chapters {
+    gap: 14px;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
+  }
 }
 .atlas-app .atlas-story-back {
   display: inline-flex;
@@ -1017,33 +1025,18 @@
   font-weight: 700;
   white-space: nowrap;
 }
-.atlas-story-toolbar-title {
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
-  color: #29292a;
-  font-size: 15px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 .is-story-full .atlas-app .atlas-storymap {
   display: flex;
   flex-direction: column;
   max-width: none;
   padding: 0;
 }
-.is-story-full .atlas-story-reader.editorial-story,
-.is-story-full .atlas-storymap-progress {
+.is-story-full .atlas-story-reader.editorial-story {
   border: 0;
 }
 /* Phones size the reader by its height (story-maps.css), not by flex. */
 .is-story-full .atlas-story-reader.editorial-story {
   flex: none;
-}
-.is-story-full .atlas-storymap-progress {
-  flex: none;
-  order: 1;
-  border-top: 1px solid #eae7e5;
 }
 /* From 701px the story is locked to the window. Phones keep the page scroll:
    the header scrolls away and the reader fills the screen, so the evidence
@@ -1073,12 +1066,12 @@
     flex-direction: column;
     min-height: 0;
   }
-  /* The chapter controls share the toolbar row, leaving the reader the rest
+  /* The toolbar row holds the chapter controls, leaving the reader the rest
      of the window. */
   .is-story-full .atlas-app .atlas-storymap {
     display: grid;
     flex: 1;
-    grid-template: "bar progress" auto "reader reader" minmax(0, 1fr) / minmax(0, 1fr) auto;
+    grid-template: "bar" auto "reader" minmax(0, 1fr) / minmax(0, 1fr);
     min-height: 0;
   }
   .is-story-full .atlas-story-toolbar {
@@ -1086,22 +1079,6 @@
   }
   .is-story-full .atlas-story-reader {
     grid-area: reader;
-  }
-  .is-story-full .atlas-app .atlas-storymap-progress {
-    grid-area: progress;
-    gap: 12px;
-    padding: 4px var(--unbc-gutter, 15px) 4px 0;
-    border-top: 0;
-    border-bottom: 1px solid #eae7e5;
-    background: #fff;
-    white-space: nowrap;
-  }
-  .is-story-full .atlas-storymap-progress .atlas-progress-more {
-    display: none;
-  }
-  .is-story-full .atlas-app .atlas-storymap-progress button {
-    min-height: 36px;
-    padding: 4px 10px;
   }
   .is-story-full .atlas-story-reader.editorial-story {
     flex: 1;
@@ -1203,12 +1180,6 @@
     border-left: 0;
     border-top: 2px solid #ffffff55;
   }
-  .atlas-story-toolbar {
-    justify-content: space-between;
-  }
-  .atlas-story-toolbar-title {
-    display: none;
-  }
 }
 
 /* ---- Sources: jump links ------------------------------------------------- */
@@ -1243,4 +1214,22 @@
 }
 .atlas-about [id] {
   scroll-margin-top: 24px;
+}
+
+/* Every Atlas page starts its content the same distance below the breadcrumbs. */
+#atlas-main > :is(.atlas-home, .atlas-stories-section, .atlas-explorer, .atlas-about, .atlas-story-detail, .atlas-empty) {
+  padding-top: 24px;
+}
+#atlas-main > .atlas-stories-section > .atlas-catalogue-tools {
+  padding-top: 0;
+}
+
+/* Phones scroll the page, so the story toolbar sticks to the top above the
+   full-screen reader and the chapter controls stay in reach. */
+@media (max-width: 700px) {
+  .is-story-full .atlas-story-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
 }

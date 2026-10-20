@@ -487,23 +487,6 @@ body {
 .atlas-dataset-sidebar {
   min-width: 0;
 }
-.atlas-sidebar-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 14px;
-}
-.atlas-sidebar-heading h2 {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-}
-.atlas-sidebar-heading > span {
-  font-size: 13px;
-  border: 1px solid var(--atlas-line);
-  padding: 2px 7px;
-  border-radius: 12px;
-}
 .atlas-dataset-sidebar > .atlas-search {
   width: 100%;
   margin-bottom: 15px;
@@ -551,7 +534,11 @@ body {
   font-weight: 500;
   line-height: 1.4;
 }
+/* One line; the full text is in the title tooltip. */
 .atlas-dataset-detail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 13px;
   color: var(--atlas-muted);
 }
@@ -562,7 +549,6 @@ body {
   width: 100%;
   margin-top: 3px;
 }
-.atlas-sidebar-note,
 .atlas-sidebar-empty {
   font-size: 13px;
   color: var(--atlas-muted);
@@ -925,21 +911,43 @@ body {
   text-align: left;
   z-index: 1;
 }
+/* Name and unit wrap together on the left; the sort icon sits centred beside them. */
 .atlas-data-table th button {
   padding: 12px 14px;
   border: 0;
   background: none;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  min-width: max-content;
   text-align: left;
-  white-space: nowrap;
   font-size: 13px;
   font-weight: 600;
 }
+.atlas-data-table th .atlas-th-label {
+  max-width: 13em;
+  min-width: 0;
+  white-space: normal;
+  line-height: 1.35;
+}
 .atlas-data-table th small {
   display: block;
+  margin-top: 2px;
   font-size: 13px;
   color: var(--atlas-muted);
   font-weight: 400;
+}
+.atlas-data-table .atlas-sort-icon {
+  flex: none;
+  color: var(--atlas-muted);
+  opacity: 0.5;
+}
+.atlas-data-table th button:hover .atlas-sort-icon,
+.atlas-data-table th[aria-sort="ascending"] .atlas-sort-icon,
+.atlas-data-table th[aria-sort="descending"] .atlas-sort-icon {
+  opacity: 1;
+  color: var(--atlas-green, #035642);
 }
 .atlas-data-table td {
   border-bottom: 1px solid var(--atlas-line);
@@ -1237,9 +1245,6 @@ body {
     grid-template-columns: 1fr 240px;
     gap: 12px;
   }
-  .atlas-sidebar-heading {
-    margin: 0;
-  }
   .atlas-dataset-sidebar > .atlas-search {
     margin: 0;
   }
@@ -1268,11 +1273,6 @@ body {
   }
   .atlas-dataset-list > button:last-child.is-active {
     border-bottom-color: var(--atlas-green);
-  }
-  .atlas-sidebar-note {
-    grid-column: 1 / -1;
-    padding: 0;
-    font-size: 13px;
   }
   .atlas-story-sidecar {
     grid-template-columns: 1fr;

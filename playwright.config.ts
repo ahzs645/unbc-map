@@ -1,9 +1,13 @@
 import { defineConfig, devices } from "@playwright/test";
 
 const base = process.env.ATLAS_BASE_PATH || "/";
+// The main suite drives every feature, so it needs a `npm run build:all` site.
+// `npm run test:production` checks a plain `npm run build` against manifest/.
+const production = process.env.ATLAS_TEST_PROFILE === "production";
 
 export default defineConfig({
-  testDir: "./tests",
+  testDir: production ? "./tests/production" : "./tests",
+  testIgnore: production ? undefined : "production/**",
   timeout: 30000,
   use: {
     launchOptions: {

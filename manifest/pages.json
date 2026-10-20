@@ -1,0 +1,25 @@
+{
+  "home": { "enabled": true },
+  "stories": {
+    "enabled": true,
+    "options": {
+      "storyCardMeta": false,
+      "storyMapCardMeta": false,
+      "storyByline": false,
+      "storyScopeNote": false,
+      "storyMapValues": false
+    }
+  },
+  "explore": {
+    "enabled": true,
+    "options": {
+      "filters": false,
+      "chart": false,
+      "map": false,
+      "pairedMaps": false,
+      "datasetDetails": false,
+      "mapIcons": false
+    }
+  },
+  "sources": { "enabled": false }
+}

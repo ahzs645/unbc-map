@@ -10,8 +10,14 @@
   --editorial-muted: #525154;
   --editorial-border: #eae7e5;
   --editorial-surface: #f4f4f4;
-  --editorial-nav: 56px;
-  --editorial-top: 56px;
+  /* The chapter rail sits in the story toolbar, above the reader. 1px, not 0:
+     the toolkit's reading line treats a zero offset as unset. */
+  --editorial-nav: 1px;
+  --editorial-top: 1px;
+  /* Nothing sticks over the top of the reader any more, so clicks on controls
+     at the top of the sticky media must not scroll it to "uncover" them: that
+     drift moved the reading line onto the previous chapter. */
+  scroll-padding-top: 0;
   height: min(840px, calc(100dvh - 40px));
   min-height: 540px;
   border: 2px solid #eae7e5;
@@ -20,26 +26,6 @@
   line-height: 1.6;
   overscroll-behavior-y: contain;
   scrollbar-gutter: stable;
-}
-.atlas-story-reader .editorial-nav-shell {
-  padding: 0 40px 0 0;
-  border-bottom: 1px solid #eae7e5;
-}
-.atlas-story-reader .editorial-chapters {
-  padding: 0 20px;
-  gap: 20px;
-}
-.atlas-story-reader .editorial-chapters button {
-  background: #fff;
-  color: #035642;
-  border: 0;
-  padding: 10px 0;
-  font-size: 14px;
-}
-.atlas-story-reader .editorial-nav-next {
-  right: 0;
-  border: 0;
-  color: #035642;
 }
 .atlas-story-reader .editorial-immersive {
   margin: 0;
@@ -147,6 +133,22 @@
 }
 .atlas-chapter-viz.is-map {
   overflow: hidden;
+}
+/* The current view lays out as before; a kept one waits underneath, hidden,
+   at the same size, so revealing it needs no resize. */
+.atlas-chapter-viz {
+  position: relative;
+}
+.atlas-chapter-view {
+  display: contents;
+}
+.atlas-chapter-view.is-dormant {
+  display: block;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
 }
 .atlas-chapter-viz .atlas-chart {
   padding: 18px;
@@ -306,29 +308,6 @@
   padding: 6px;
   border-bottom: 1px solid #eae7e5;
   text-align: left;
-}
-.atlas-storymap-progress {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  border: 2px solid #eae7e5;
-  border-top: 0;
-  padding: 12px 16px;
-  background: #f4f4f4;
-  font-size: 14px;
-}
-.atlas-storymap-progress button {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: #035642;
-  background: #fff;
-  border: 1px solid #cdcfc4;
-  padding: 8px;
-}
-.atlas-storymap-progress button:disabled {
-  opacity: 0.45;
 }
 .atlas-storymap-sources {
   max-width: 1140px;
@@ -496,11 +475,13 @@
      evidence about half of it, and hands the scroll back to the page at
      either end rather than trapping it. */
   .atlas-story-reader.editorial-story {
-    height: calc(100dvh - 60px);
+    /* The full screen below the sticky story toolbar. */
+    height: calc(100dvh - var(--atlas-story-bar, 52px));
     min-height: 540px;
     overscroll-behavior-y: auto;
-    --editorial-nav: 56px;
-    --editorial-top: 56px;
+    scroll-margin-top: var(--atlas-story-bar, 52px);
+    --editorial-nav: 1px;
+    --editorial-top: 1px;
     --atlas-media: clamp(300px, calc(var(--editorial-viewport, 640px) * 0.55), 440px);
   }
   .atlas-story-reader .editorial-immersive {
@@ -509,7 +490,7 @@
   .atlas-story-reader .editorial-immersive-media {
     height: var(--atlas-media);
     min-height: 0;
-    top: 56px;
+    top: 0;
     border-left: 0;
     border-bottom: 1px solid #eae7e5;
     z-index: 4;
@@ -528,13 +509,6 @@
   }
   .atlas-story-reader .editorial-slide:first-child {
     padding-top: 28px;
-  }
-  .atlas-story-reader .editorial-nav-shell {
-    padding-left: 0;
-  }
-  .atlas-story-reader .editorial-chapters {
-    gap: 16px;
-    padding: 0 12px;
   }
   .atlas-chapter-evidence {
     padding: 8px;
@@ -648,28 +622,6 @@
   }
   .atlas-map-comparison > p {
     display: none;
-  }
-  /* One short line, so it stays on screen under the full-height reader. */
-  .atlas-storymap-progress {
-    gap: 8px;
-    min-height: 60px;
-    padding: 8px;
-    font-size: 14px;
-  }
-  .atlas-progress-more {
-    display: none;
-  }
-  .atlas-storymap-progress > span {
-    text-align: center;
-  }
-  .atlas-storymap-progress button {
-    padding: 6px 12px;
-    font-size: 14px;
-    min-height: 44px;
-  }
-  .atlas-storymap-progress svg {
-    flex-shrink: 0;
-    width: 12px;
   }
   .atlas-storymap-grid {
     grid-template-columns: 1fr;
@@ -801,7 +753,14 @@
 }
 
 /* ---- Estimates and a projection, one area per panel ----------------------- */
+/* The trends take their own height, so the source line follows them rather
+   than a stretch of empty panel. Columns follow the panel's width, not the
+   window's: two across in a story, four in the wide expanded view. */
+.atlas-chapter-viz.is-trends {
+  flex: 0 1 auto;
+}
 .atlas-trend-multiples {
+  container-type: inline-size;
   padding: 14px 18px;
   display: grid;
   gap: 10px;
@@ -840,8 +799,31 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
+}
+@container (min-width: 460px) {
+  .atlas-trend-multiples ul {
+    gap: 14px;
+  }
+  .atlas-trend-panel {
+    padding: 10px 14px 12px;
+    gap: 6px;
+  }
+  .atlas-app .atlas-trend-heading h4 {
+    font-size: 15px;
+  }
+  .atlas-trend-panel dl {
+    font-size: 13px;
+  }
+  .atlas-trend-panel dd span {
+    font-size: 20px;
+  }
+}
+@container (min-width: 900px) {
+  .atlas-trend-multiples ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 .atlas-trend-panel {
   border: 1px solid #e3e0dc;
@@ -919,8 +901,12 @@
   font-size: 12px;
   line-height: 1.3;
 }
+/* One line each, matching "Estimates 2020→2024" with "Projection 2024→2025". */
 .atlas-trend-panel dt {
+  overflow: hidden;
   color: #525154;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .atlas-trend-panel dd {
   margin: 0;
@@ -941,11 +927,6 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 16px;
 }
-.atlas-trend-note {
-  font-size: 12px;
-  color: #525154;
-  margin: 0;
-}
 @media (max-width: 700px) {
   .atlas-trend-multiples {
     padding: 8px;
@@ -955,7 +936,6 @@
     padding-right: 44px;
   }
   .atlas-trend-multiples ul {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
   }
   .atlas-trend-panel.is-total {
@@ -968,4 +948,16 @@
 /* Expanded on a phone, the paired maps' value table still comes along. */
 .atlas-story-reader .editorial-expandable.is-expanded .atlas-age-map-pair.is-narrow > .atlas-age-map-values {
   display: block;
+}
+
+/* In a story chapter the two map cards are the whole view: no region and
+   Fit row (the expanded view keeps it) and no white holder around them. */
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-age-map-pair.is-compact > .atlas-age-map-controls {
+  display: none;
+}
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-chapter-viz.is-paired {
+  background: transparent;
+}
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-age-map-pair.is-compact {
+  padding: 0;
 }

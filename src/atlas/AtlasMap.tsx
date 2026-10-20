@@ -6,7 +6,7 @@ import { Layers } from 'lucide-react';
 import type { FeatureCollection, Geometry } from 'geojson';
 import type { AtlasDataset, AtlasRow } from './types';
 import { allowsMapAggregation, boundaryAssetUrl, boundaryCaption, canMapDataset, canMapMetric, getBoundaryJoin, mapGroupValue } from './geography';
-import { atlasBackgroundStyle, atlasBasemaps, cachedAtlasBasemap, loadAtlasBasemap, type AtlasBasemap } from './basemaps';
+import { atlasBackgroundStyle, atlasBasemapBackground, atlasBasemaps, cachedAtlasBasemap, loadAtlasBasemap, type AtlasBasemap } from './basemaps';
 import './basemap.css';
 import { pointScale } from './pointScale';
 
@@ -27,6 +27,10 @@ interface AtlasMapProps {
   focusRegions?: string[];
   scaleDomain?: [number, number];
   interactive?: boolean;
+  /** The basemap picker and zoom buttons; off where a map is too small for them. */
+  controls?: boolean;
+  /** Kept mounted but hidden (a story view waiting to be shown again): no state marker. */
+  dormant?: boolean;
   camera?: AtlasMapCamera;
   onCameraChange?: (camera: AtlasMapCamera) => void;
   basemap?: AtlasBasemap;
@@ -43,6 +47,10 @@ const MISSING_COLOR = '#d8e1e4';
 // Story chapters and explorer views often share one boundary file. Each file
 // is fetched and normalized once per page, so moving between them reuses it.
 const boundaryCache = new Map<string, Promise<BoundaryCollection>>();
+// Files that have finished loading, readable during render: a map that opens
+// on an already-loaded file (the next story chapter) starts with its regions
+// instead of a frame of "Loading…" and an empty basemap.
+const resolvedBoundaries = new Map<string, BoundaryCollection>();
 function loadBoundaries(asset: string, facility: boolean): Promise<BoundaryCollection> {
   const key = `${asset}|${facility}`;
   let pending = boundaryCache.get(key);
@@ -64,7 +72,7 @@ function loadBoundaries(asset: string, facility: boolean): Promise<BoundaryColle
         }) };
       });
     boundaryCache.set(key, pending);
-    pending.catch(() => { if (boundaryCache.get(key) === pending) boundaryCache.delete(key); });
+    pending.then(data => { resolvedBoundaries.set(key, data); }, () => { if (boundaryCache.get(key) === pending) boundaryCache.delete(key); });
   }
   return pending;
 }
@@ -123,7 +131,7 @@ function motionDuration(duration: number) {
 }
 
 export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSelectRegion, compact = false,
-  focusRegions, scaleDomain, interactive = true, camera, onCameraChange, basemap: controlledBasemap, onBasemapChange, legendAction }: AtlasMapProps) {
+  focusRegions, scaleDomain, interactive = true, controls = true, dormant = false, camera, onCameraChange, basemap: controlledBasemap, onBasemapChange, legendAction }: AtlasMapProps) {
   const container = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
   const popupRef = useRef<maplibregl.Popup | null>(null);
@@ -152,8 +160,8 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
   const previousDataset = useRef('');
   const basemapApplied = useRef(false);
   const basemapReady = useRef(false);
-  const latest = useRef({ dataset, metric, rows, onSelectRegion, interactive, camera, onCameraChange });
-  latest.current = { dataset, metric, rows, onSelectRegion, interactive, camera, onCameraChange };
+  const latest = useRef({ dataset, metric, rows, onSelectRegion, interactive, controls, camera, onCameraChange });
+  latest.current = { dataset, metric, rows, onSelectRegion, interactive, controls, camera, onCameraChange };
   const metricColumn = dataset.columns.find(column => column.key === metric);
   const isInstitution = dataset.geography === 'institution';
   const isCity = dataset.geography === 'city';
@@ -170,7 +178,7 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
   const boundaryKey = `${locationsAsset}|${isFacility}`;
   const mapsMetric = canMapMetric(dataset, metric);
   // Boundaries stay in place while a new view uses the same file.
-  const boundaries = mapsMetric && loadedBoundaries?.key === boundaryKey ? loadedBoundaries.data : null;
+  const boundaries = !mapsMetric ? null : loadedBoundaries?.key === boundaryKey ? loadedBoundaries.data : resolvedBoundaries.get(boundaryKey) ?? null;
   const connectionsAsset = dataset.mapConnectionsAsset && /^[a-z0-9-]+\.geojson$/.test(dataset.mapConnectionsAsset) ? dataset.mapConnectionsAsset : '';
   const connections = connectionsAsset && loadedConnections?.key === connectionsAsset ? loadedConnections.data : null;
   const attributionText = isPoint ? isFacility || isStop ? 'Reviewed locations © Province of British Columbia and OpenStreetMap contributors' : `${pointLabel} locations © OpenStreetMap contributors` : 'Health areas © Province of British Columbia';
@@ -279,7 +287,7 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
     } catch (reason) { setError(`Map rendering unavailable: ${reason instanceof Error ? reason.message : 'WebGL could not start'}. The chart and table remain available.`); return; }
     mapRef.current = map;
     map.addControl(new maplibregl.AttributionControl({ compact: true, customAttribution: attributionText }), 'bottom-right');
-    if (latest.current.interactive) map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
+    if (latest.current.interactive && latest.current.controls) map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
     if (!latest.current.camera && !isPoint) map.fitBounds(BC_BOUNDS, { padding: 28, duration: 0 });
     map.on('style.load', () => {
       // Compact attribution starts collapsed on these bounded map panels;
@@ -343,12 +351,17 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
       map.getCanvas().style.cursor = 'pointer';
       const properties = event.features?.[0]?.properties;
       if (!properties) return;
-      const node = document.createElement('div');
+      // The place in bold, then the measure and its value, in the UNBC card style (basemap.css).
       const current = latest.current;
-      const unit = current.dataset.columns.find(column => column.key === current.metric)?.unit;
-      node.textContent = `${properties.name}: ${format(numeric(properties.value), unit)}`;
+      const column = current.dataset.columns.find(item => item.key === current.metric);
+      const node = document.createElement('div');
+      node.className = 'atlas-map-tip';
+      const place = document.createElement('strong'); place.textContent = String(properties.name ?? '');
+      const measure = document.createElement('span'); measure.className = 'atlas-map-tip-measure'; measure.textContent = column?.label ?? current.metric;
+      const value = document.createElement('span'); value.className = 'atlas-map-tip-value'; value.textContent = format(numeric(properties.value), column?.unit);
+      node.append(place, measure, value);
       popupRef.current?.remove();
-      popupRef.current = new maplibregl.Popup({ closeButton: false, closeOnClick: false }).setLngLat(event.lngLat).setDOMContent(node).addTo(map);
+      popupRef.current = new maplibregl.Popup({ closeButton: false, closeOnClick: false, className: 'atlas-map-popup', offset: 10, maxWidth: '260px' }).setLngLat(event.lngLat).setDOMContent(node).addTo(map);
     });
     map.on('mouseleave', hitLayer, () => { map.getCanvas().style.cursor = ''; popupRef.current?.remove(); });
     const resize = new ResizeObserver(() => map.resize()); resize.observe(container.current);
@@ -463,8 +476,8 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
       <button type="button" onClick={() => { if (boundaries) mapRef.current?.fitBounds(collectionBounds(boundaries, new Set(grouped.keys())) || BC_BOUNDS, { padding: 45, maxZoom: isPoint ? 16 : 10, duration: motionDuration(300) }); }}>{isPoint ? `Fit ${pointPlural}` : 'Fit data regions'}</button>
     </div>}
     <div className="atlas-map-viewport" style={{ position: 'relative', ...(compact ? { flex: 1, minHeight: 180 } : {}) }}>
-      <div ref={container} className="atlas-map-canvas" role="img" aria-label={`${metricColumn?.label || metric} by ${isPoint ? pointNoun : geographyNoun} on a vector basemap; use ${compact ? 'the accompanying table' : 'the selector or table'} for accessible values`} style={{ height: compact ? '100%' : 470, minHeight: compact ? 180 : 320, width: '100%', borderRadius: compact ? 0 : 16, overflow: 'hidden' }} />
-      {interactive && <label className="atlas-basemap-picker"><Layers className="atlas-basemap-icon" size={16} aria-hidden="true" /><span className="atlas-basemap-label">Basemap</span><select aria-label="Basemap" value={basemap} onChange={event => { const value = event.target.value as AtlasBasemap; if (onBasemapChange) onBasemapChange(value); else setLocalBasemap(value); }}>
+      <div ref={container} className="atlas-map-canvas" role="img" aria-label={`${metricColumn?.label || metric} by ${isPoint ? pointNoun : geographyNoun} on a vector basemap; ${compact ? FLAGS.stories.storyMapValues ? 'use the accompanying table for accessible values' : 'the chapter text describes the values' : 'use the selector or table for accessible values'}`} style={{ height: compact ? '100%' : 470, minHeight: compact ? 180 : 320, width: '100%', borderRadius: compact ? 0 : 16, overflow: 'hidden', background: atlasBasemapBackground(basemap) }} />
+      {interactive && controls && <label className="atlas-basemap-picker"><Layers className="atlas-basemap-icon" size={16} aria-hidden="true" /><span className="atlas-basemap-label">Basemap</span><select aria-label="Basemap" value={basemap} onChange={event => { const value = event.target.value as AtlasBasemap; if (onBasemapChange) onBasemapChange(value); else setLocalBasemap(value); }}>
         {atlasBasemaps.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}
       </select></label>}
       {basemapStatus === 'unavailable' && <p className="atlas-basemap-notice" data-testid="basemap-notice" role="status">Basemap unavailable. {isPoint ? `${pointLabel} locations` : 'Geographic data'} remain visible.</p>}
@@ -479,7 +492,7 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
         {selectedLocation && <small className="atlas-location-detail"><span>{selectedLocation.site || selectedLocation.name}</span>{selectedLocation.source_url && <a href={selectedLocation.source_url} target="_blank" rel="noreferrer">{pointLabel} location</a>}{selectedLocation.coordinate_source_url && <> · <a href={selectedLocation.coordinate_source_url} target="_blank" rel="noreferrer">Mapped point</a></>}{selectedLocation.location_precision && <span>Location: {selectedLocation.location_precision}</span>}{!compact && selectedLocation.location_note && <span>{selectedLocation.location_note}</span>}</small>}
       </div>}
     </div>
-    <div data-testid="atlas-map-state" data-ready={ready && !!boundaries} data-feature-count={boundaries?.features.length || 0} data-matched-count={join.matched} data-rendered-features={renderedCount}
+    <div data-testid={dormant ? undefined : "atlas-map-state"} data-ready={ready && !!boundaries} data-feature-count={boundaries?.features.length || 0} data-matched-count={join.matched} data-rendered-features={renderedCount}
       data-metric={metric} data-focus-regions={focusKey} data-focus-count={focusedCodes.size} data-scale-domain={JSON.stringify([min, max])} data-camera={actualCamera ? JSON.stringify(actualCamera) : ''}
       data-basemap={basemap} data-basemap-format="vector" data-raster-sources={rasterSources} data-basemap-status={basemapStatus} data-basemap-features={basemapFeatures} data-basemap-error={basemapError} data-geometry={isPoint ? 'points' : 'polygons'} data-bubble-scale-max={isPoint ? scale.maximum : undefined}
       data-rendered-points={isPoint ? JSON.stringify(renderedPoints) : undefined} data-connections={isRoute ? filteredConnections.features.length : undefined} data-rendered-connections={isRoute ? renderedConnections : undefined} data-map-aggregation={aggregate ? 'sum' : 'none'}

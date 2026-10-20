@@ -46,7 +46,8 @@ export default function useStoryChapterUrl(rootRef: RefObject<HTMLDivElement>, c
       const position = () => {
         root.scrollIntoView({ block: "start", behavior: "instant" });
         const media = root.querySelector<HTMLElement>(".editorial-immersive-media");
-        const top = parseFloat(getComputedStyle(root).getPropertyValue("--editorial-top")) || 56;
+        const declared = parseFloat(getComputedStyle(root).getPropertyValue("--editorial-top"));
+        const top = Number.isFinite(declared) ? declared : 56;
         const offset = top + (window.matchMedia("(max-width: 700px)").matches ? media?.clientHeight ?? 0 : 0) + 24;
         // A chapter never leaves part of the story cover above the navigation.
         const coverEnd = root.querySelector<HTMLElement>(".atlas-story-cover")?.offsetHeight ?? 0;

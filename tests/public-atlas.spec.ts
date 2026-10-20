@@ -32,7 +32,7 @@ test("public story maps stay on public addresses, and the campus map has its own
   await page.goto("./northern-communities");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("One North, many communities");
   const back = page.locator(".atlas-story-toolbar .atlas-story-back");
-  expect(new URL(await back.evaluate(link => (link as HTMLAnchorElement).href)).pathname).toBe(new URL(page.url()).pathname.replace(/northern-communities$/, ""));
+  expect(new URL(await back.evaluate(link => (link as HTMLAnchorElement).href)).pathname).toBe(new URL(page.url()).pathname.replace(/northern-communities$/, "stories"));
   await back.click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Research stories");
   await expect(page).not.toHaveURL(/dev\/projects/);

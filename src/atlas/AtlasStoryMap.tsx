@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 import { ArrowLeft, ArrowUpRight, ChevronLeft, ChevronRight, ExternalLink, Link2 } from "lucide-react";
-import { StoryChapterNavigation, StorySidecar, useReadingSection } from "@pgmaps/geo-toolkit/stories/components";
+import { StorySidecar, useReadingSection } from "@pgmaps/geo-toolkit/stories/components";
 import useStoryChapterUrl from "./useStoryChapterUrl";
 import { atlasDatasets } from "./data";
 import type { AtlasStoryMap as StoryDefinition, StoryMapChapter } from "./storyMaps";
@@ -12,7 +12,7 @@ import AtlasConditionMix from "./AtlasConditionMix";
 import AtlasChart, { formatValue } from "./AtlasChart";
 import AtlasEstimateTrends from "./AtlasEstimateTrends";
 import { allowsMapAggregation, boundaryCaption, getBoundaryJoin, mapGroupValue } from './geography';
-import { atlasDev, atlasHome, isZoerUrl } from "./mode";
+import { atlasDev, atlasStoriesHome, isZoerUrl } from "./mode";
 import "@pgmaps/geo-toolkit/stories/styles.css";
 
 export function chapterRows(dataset: AtlasDataset, chapter: StoryMapChapter): AtlasRow[] {
@@ -83,6 +83,26 @@ function ExpandMediaButton() {
   return <button type="button" className="atlas-expand-media" onClick={expand}>Expand media ↗</button>;
 }
 
+// Map views stay mounted once a chapter has shown them. Moving between, say, a
+// single map and the paired maps then reveals an already-drawn view instead of
+// starting new maps that paint their basemap and regions from blank.
+const keptKinds = ["map", "comparison", "paired"] as const;
+type KeptKind = typeof keptKinds[number];
+const isKept = (kind: string): kind is KeptKind => (keptKinds as readonly string[]).includes(kind);
+
+function KeptView({ kind, chapter, dormant, selectedRegion, onSelectRegion }: { kind: KeptKind; chapter: StoryMapChapter; dormant: boolean; selectedRegion: string | null; onSelectRegion: (value: string | null) => void }) {
+  const dataset = atlasDatasets.find(item => item.id === chapter.evidence.datasetId)!;
+  const rows = useMemo(() => chapterRows(dataset, chapter), [dataset, chapter]);
+  const evidence = chapter.evidence;
+  // A hidden view keeps its last chapter, stays out of the accessibility tree and takes no input.
+  const hidden = dormant ? { "aria-hidden": true, inert: "" } as Record<string, unknown> : {};
+  return <div className={`atlas-chapter-view${dormant ? " is-dormant" : ""}`} {...hidden}>
+    {kind === "map" && <AtlasMap dataset={dataset} metric={evidence.metric} rows={rows} compact focusRegions={evidence.focusRegions} scaleDomain={evidence.scaleDomain} selectedRegion={dormant ? null : selectedRegion} onSelectRegion={onSelectRegion} legendAction={<ExpandMediaButton />} dormant={dormant} />}
+    {kind === "comparison" && <AtlasMapComparison dataset={dataset} rows={rows} metric={evidence.metric} comparisonMetric={evidence.comparisonMetric!} focusRegions={evidence.focusRegions} scaleDomain={evidence.scaleDomain} dormant={dormant} />}
+    {kind === "paired" && <AtlasPairedAgeMaps dataset={dataset} rows={rows} compact focusRegions={evidence.focusRegions} selectedRegion={dormant ? undefined : selectedRegion || undefined} onSelectRegion={onSelectRegion} dormant={dormant} />}
+  </div>;
+}
+
 function ChapterEvidence({ chapter }: { chapter: StoryMapChapter }) {
   const dataset = atlasDatasets.find(item => item.id === chapter.evidence.datasetId)!;
   const rows = useMemo(() => chapterRows(dataset, chapter), [dataset, chapter]);
@@ -90,13 +110,13 @@ function ChapterEvidence({ chapter }: { chapter: StoryMapChapter }) {
   useEffect(() => setSelectedRegion(null), [chapter.id]);
   const evidence = chapter.evidence;
   const isMap = evidence.kind === "map";
+  const kept = useRef<Partial<Record<KeptKind, StoryMapChapter>>>({});
+  if (isKept(evidence.kind)) kept.current[evidence.kind] = chapter;
   const periodTypes = [...new Set(rows.map(row => row.population_type).filter(Boolean))];
   return <div className="atlas-chapter-evidence" data-testid="story-evidence" data-chapter={chapter.id} data-dataset={dataset.id} data-metric={evidence.metric} data-period={evidence.year ?? "all"}>
     <div className="atlas-chapter-evidence-heading"><strong>{dataset.title}</strong><span>{evidence.year ? `${evidence.year}${periodTypes.length ? ` · ${periodTypes.join(", ")}` : ""}` : dataset.timeLabel}{evidence.filters ? ` · ${Object.entries(evidence.filters).map(([key, value]) => key === "route_slug" ? rows[0]?.route_label ?? value : value).join(" · ")}` : ""}</span></div>
     <div className={`atlas-chapter-viz is-${evidence.kind}`}>
-      {isMap && <AtlasMap dataset={dataset} metric={evidence.metric} rows={rows} compact focusRegions={evidence.focusRegions} scaleDomain={evidence.scaleDomain} selectedRegion={selectedRegion} onSelectRegion={setSelectedRegion} legendAction={<ExpandMediaButton />} />}
-      {evidence.kind === "comparison" && <AtlasMapComparison dataset={dataset} rows={rows} metric={evidence.metric} comparisonMetric={evidence.comparisonMetric!} focusRegions={evidence.focusRegions} scaleDomain={evidence.scaleDomain} />}
-      {evidence.kind === "paired" && <AtlasPairedAgeMaps dataset={dataset} rows={rows} compact focusRegions={evidence.focusRegions} selectedRegion={selectedRegion || undefined} onSelectRegion={setSelectedRegion} />}
+      {keptKinds.map(kind => kept.current[kind] && <KeptView key={kind} kind={kind} chapter={kept.current[kind]!} dormant={kind !== evidence.kind} selectedRegion={selectedRegion} onSelectRegion={setSelectedRegion} />)}
       {evidence.kind === "chart" && (dataset.id === "clinical-condition-mix" ? <AtlasConditionMix dataset={dataset} rows={rows} metric={evidence.metric} compact /> : <AtlasChart dataset={dataset} rows={rows} metric={evidence.metric} embedded />)}
       {evidence.kind === "trends" && <AtlasEstimateTrends dataset={dataset} rows={rows} metric={evidence.metric} totalLabel="All Northern LHAs" />}
       {evidence.kind === "scenario" && <ScenarioLab dataset={dataset} />}
@@ -106,18 +126,31 @@ function ChapterEvidence({ chapter }: { chapter: StoryMapChapter }) {
   </div>;
 }
 
-export default function AtlasStoryMap({ story, onExplore, onCopy, onBack }: { story: StoryDefinition; onExplore: (chapter: StoryMapChapter) => void; onCopy: () => void; onBack: () => void }) {
+export default function AtlasStoryMap({ story, onExplore, onCopy, onBack }: { story: StoryDefinition; onExplore?: (chapter: StoryMapChapter) => void; onCopy: () => void; onBack: () => void }) {
   const scrollRoot = useRef<HTMLDivElement>(null);
+  const chapterRail = useRef<HTMLElement>(null);
   const panels = useRef<Array<HTMLElement | null>>([]);
   const active = useReadingSection(scrollRoot, panels, story.chapters.length);
   useStoryChapterUrl(scrollRoot, story.chapters.map(chapter => chapter.id));
-  useEffect(() => {
-    const nav = scrollRoot.current?.querySelector<HTMLElement>('[data-testid="editorial-nav"]');
+  // The current chapter sits in the middle of the rail; the others fade out at
+  // its edges. It is centred on opening and on resize too, without animation.
+  const centreChapter = (smooth: boolean) => {
+    const nav = chapterRail.current;
     const button = nav?.querySelector<HTMLElement>('[aria-current="location"]');
     if (!nav || !button) return;
     const navBounds = nav.getBoundingClientRect(), buttonBounds = button.getBoundingClientRect();
-    nav.scrollTo({ left: nav.scrollLeft + buttonBounds.left - navBounds.left - (nav.clientWidth - button.clientWidth) / 2, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
-  }, [active]);
+    nav.scrollTo({ left: nav.scrollLeft + buttonBounds.left - navBounds.left - (nav.clientWidth - button.clientWidth) / 2, behavior: smooth && !window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "smooth" : "auto" });
+  };
+  const centred = useRef(false);
+  useEffect(() => { centreChapter(centred.current); centred.current = true; }, [active]);
+  useEffect(() => {
+    const nav = chapterRail.current;
+    if (!nav) return;
+    const observer = new ResizeObserver(() => centreChapter(false));
+    observer.observe(nav);
+    document.fonts?.ready.then(() => centreChapter(false));
+    return () => observer.disconnect();
+  }, []);
   useLayoutEffect(() => {
     const root = scrollRoot.current;
     if (!root) return;
@@ -131,7 +164,7 @@ export default function AtlasStoryMap({ story, onExplore, onCopy, onBack }: { st
     if (!root || !panel) return;
     const mobile = window.matchMedia("(max-width: 700px)").matches;
     const media = root.querySelector<HTMLElement>(".editorial-immersive-media");
-    const offset = mobile ? 64 + (media?.clientHeight ?? 260) : 64;
+    const offset = mobile ? 8 + (media?.clientHeight ?? 260) : 8;
     const coverEnd = root.querySelector<HTMLElement>(".atlas-story-cover")?.offsetHeight ?? 0;
     root.scrollTo({ top: Math.max(coverEnd, root.scrollTop + panel.getBoundingClientRect().top - root.getBoundingClientRect().top - offset), behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
   };
@@ -145,17 +178,23 @@ export default function AtlasStoryMap({ story, onExplore, onCopy, onBack }: { st
     root.focus({ preventScroll: true });
   };
   const sources = [...new Set(story.chapters.map(chapter => chapter.evidence.datasetId))].map(id => atlasDatasets.find(item => item.id === id)!);
-  const storiesUrl = atlasHome;
+  const storiesUrl = atlasStoriesHome;
   // The story fills the window below the UNBC header, as a PGMaps project
-  // story does: a slim toolbar, then one reader that scrolls from the cover
-  // through the chapters to the sources.
+  // story does: one slim bar (back, the chapter rail between its previous and
+  // next steps, and the story link), then one reader that scrolls from the
+  // cover through the chapters to the sources.
   return <article className="atlas-storymap">
-    <div className="atlas-story-toolbar"><a className="atlas-story-back" href={storiesUrl} onClick={event => { if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) { event.preventDefault(); onBack(); } }}><ArrowLeft size={16} aria-hidden="true" />All stories</a><span className="atlas-story-toolbar-title" aria-hidden="true">{story.title}</span><button className="atlas-text-button" onClick={onCopy}><Link2 size={15} aria-hidden="true" /> Copy story link</button></div>
-    <div className="atlas-storymap-progress" role="group" aria-label="Story progress"><button aria-label="Previous chapter" disabled={active === 0} onClick={() => select(active - 1)}><ChevronLeft size={17} aria-hidden="true" /> Previous<span className="atlas-progress-more"> chapter</span></button><span aria-live="polite">{active + 1} / {story.chapters.length}<span className="atlas-progress-more"> · {story.chapters[active]?.title}</span></span><button aria-label="Next chapter" disabled={active === story.chapters.length - 1} onClick={() => select(active + 1)}>Next<span className="atlas-progress-more"> chapter</span> <ChevronRight size={17} aria-hidden="true" /></button></div>
+    <div className="atlas-story-toolbar">
+      <a className="atlas-story-back" href={storiesUrl} aria-label="All stories" onClick={event => { if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) { event.preventDefault(); onBack(); } }}><ArrowLeft size={16} aria-hidden="true" /><span className="atlas-story-bar-label">All stories</span></a>
+      <button className="atlas-story-step" aria-label="Previous chapter" disabled={active === 0} onClick={() => select(active - 1)}><ChevronLeft size={18} aria-hidden="true" /></button>
+      <nav ref={chapterRail} className="atlas-story-chapters" data-testid="editorial-nav" aria-label="Story chapters">{story.chapters.map((chapter, index) => <button key={chapter.id} type="button" aria-current={index === active ? "location" : undefined} onClick={() => select(index)}>{index + 1}. {chapter.title}</button>)}</nav>
+      <button className="atlas-story-step" aria-label="Next chapter" disabled={active === story.chapters.length - 1} onClick={() => select(active + 1)}><ChevronRight size={18} aria-hidden="true" /></button>
+      <span className="unbc-sr-only" aria-live="polite">Chapter {active + 1} of {story.chapters.length}: {story.chapters[active]?.title}</span>
+      <button className="atlas-story-copy" aria-label="Copy story link" title="Copy story link" onClick={onCopy}><Link2 size={16} aria-hidden="true" /><span className="atlas-story-bar-label">Copy story link</span></button>
+    </div>
     <div ref={scrollRoot} className="editorial-story atlas-story-reader" data-theme="light" tabIndex={0} role="region" aria-label="Guided story reader" data-testid="story-reader" data-active-chapter={story.chapters[active]?.id}>
       <header className="atlas-story-cover"><div className="atlas-story-cover-copy"><p className="atlas-eyebrow">Guided story map · {story.topic}</p><h1>{story.title}</h1><p>{story.summary}</p><button className="atlas-primary" onClick={begin}>Begin reading <ChevronRight size={16} aria-hidden="true" /></button></div><nav className="atlas-story-contents" aria-label="Chapters"><p>{story.chapters.length} chapters</p><ol>{story.chapters.map((chapter, index) => <li key={chapter.id}><button onClick={() => select(index)}>{chapter.title}</button></li>)}</ol></nav></header>
-      <StoryChapterNavigation chapters={story.chapters.map((chapter, index) => ({ id: chapter.id, label: `${index + 1}. ${chapter.title}` }))} active={story.chapters[active]?.id} onSelect={id => select(story.chapters.findIndex(chapter => chapter.id === id))} />
-      <StorySidecar id={`storymap-${story.id}`} scrollRoot={scrollRoot} slides={story.chapters.map((chapter, index) => ({ id: chapter.id, media: <ChapterEvidence chapter={chapter} />, content: <div ref={element => { panels.current[index] = element?.closest<HTMLElement>(".editorial-slide") ?? null; }}><p className="atlas-eyebrow">Chapter {index + 1} / {story.chapters.length}</p><h2>{chapter.title}</h2>{chapter.takeaway && <div className="atlas-chapter-takeaway"><strong>{chapter.takeaway.value}</strong><span>{chapter.takeaway.label}</span></div>}{chapter.paragraphs.map((paragraph, p) => <p key={p}>{paragraph}</p>)}<button className="atlas-text-button" onClick={() => onExplore(chapter)}>Explore the source data <ArrowUpRight size={16} /></button><ChapterValues chapter={chapter} /></div> }))} />
+      <StorySidecar id={`storymap-${story.id}`} scrollRoot={scrollRoot} slides={story.chapters.map((chapter, index) => ({ id: chapter.id, media: <ChapterEvidence chapter={chapter} />, content: <div ref={element => { panels.current[index] = element?.closest<HTMLElement>(".editorial-slide") ?? null; }}><p className="atlas-eyebrow">Chapter {index + 1} / {story.chapters.length}</p><h2>{chapter.title}</h2>{chapter.takeaway && <div className="atlas-chapter-takeaway"><strong>{chapter.takeaway.value}</strong><span>{chapter.takeaway.label}</span></div>}{chapter.paragraphs.map((paragraph, p) => <p key={p}>{paragraph}</p>)}{onExplore && <button className="atlas-text-button" onClick={() => onExplore(chapter)}>Explore the source data <ArrowUpRight size={16} /></button>}{FLAGS.stories.storyMapValues && <ChapterValues chapter={chapter} />}</div> }))} />
       <div className="atlas-storymap-sources"><h2>Sources</h2><p>Each source keeps its original period. Projections and scenarios are labelled where they appear.</p>{sources.map(dataset => <details key={dataset.id}><summary>{dataset.title} · {dataset.timeLabel}</summary><div><p>{dataset.description}</p><ul>{dataset.notes.map((note, index) => <li key={index}>{note}</li>)}</ul>{atlasDev && <p>Zoer dataset: <code>{dataset.datasetId}</code><br />Source table: <code>{dataset.tableName}</code></p>}{(atlasDev || !isZoerUrl(dataset.sourceUrl)) && <a href={dataset.sourceUrl} target="_blank" rel="noreferrer">Open source reference <ExternalLink size={14} /></a>}</div></details>)}<a className="atlas-story-back" href={storiesUrl} onClick={event => { if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) { event.preventDefault(); onBack(); } }}><ArrowLeft size={16} aria-hidden="true" />Back to all stories</a></div>
     </div>
   </article>;

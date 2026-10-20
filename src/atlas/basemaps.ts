@@ -18,6 +18,16 @@ export function cachedAtlasBasemap(id: AtlasBasemap): StyleSpecification | undef
   return style && structuredClone(style);
 }
 
+/**
+ * The colour a basemap paints first, for the map container behind a canvas
+ * that has not drawn yet, so a new map does not flash white.
+ */
+export function atlasBasemapBackground(id: AtlasBasemap): string {
+  const layer = resolved.get(id)?.layers.find(item => item.type === 'background');
+  const colour = layer?.paint && (layer.paint as Record<string, unknown>)['background-color'];
+  return typeof colour === 'string' ? colour : id === 'dark' ? '#0e0e0e' : '#f0f5f6';
+}
+
 /** Basemaps and analytical overlays remain vector geometry at every zoom. */
 export async function loadAtlasBasemap(id: AtlasBasemap): Promise<StyleSpecification> {
   let pending = styles.get(id);

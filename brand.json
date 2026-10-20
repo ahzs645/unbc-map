@@ -31,11 +31,7 @@
 		"menu": [
 			{ "label": "Contact UNBC", "url": "https://www.unbc.ca/about-unbc/contact" },
 			{ "label": "Building directory", "url": "https://www.unbc.ca/about-unbc/campus-maps" },
-			{ "label": "NHHR website", "url": "https://www.unbc.ca/office-research-and-innovation/northern-hub-health-research" },
-			{ "label": "PGMaps GeoToolkit", "url": "https://github.com/ahzs645/geo-toolkit" }
+			{ "label": "NHHR website", "url": "https://www.unbc.ca/office-research-and-innovation/northern-hub-health-research" }
 		]
-	},
-	"subfooter": {
-		"copyright": "University of Northern British Columbia · Independent campus map concept"
 	}
 }

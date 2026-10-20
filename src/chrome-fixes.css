@@ -1,0 +1,29 @@
+/* Local corrections to the vendored UNBC Chrome (vendor/ is replaced by
+   `npm run chrome:sync`, so they live here). */
+
+/* www.unbc.ca lets the Cookie Settings button grow when its label wraps in a
+   narrow footer row; a fixed 46px height let the second line spill out. */
+.unbc-chrome .unbc-subfooter__cookie {
+  height: auto;
+  min-height: 46px;
+  line-height: 22px;
+}
+
+/* www.unbc.ca's breadcrumb: a home icon first, chevrons between crumbs. */
+.unbc-breadcrumb__home {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: -3px;
+}
+.unbc-breadcrumb li + li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 2px;
+  vertical-align: -5px;
+  background-color: #999;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9.25 14l3.5-4-3.5-4'/%3E%3C/svg%3E") center / 20px 20px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9.25 14l3.5-4-3.5-4'/%3E%3C/svg%3E") center / 20px 20px no-repeat;
+}

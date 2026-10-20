@@ -10,7 +10,7 @@ const reviewLabels: Record<string, string> = {
 };
 const reviewById = new Map(reviewDocument.reviews.map(review => [review.datasetId, review]));
 
-export default function AtlasZoerCatalogue({ onExplore }: { onExplore: (dataset: AtlasDataset) => void }) {
+export default function AtlasZoerCatalogue({ onExplore }: { onExplore?: (dataset: AtlasDataset) => void }) {
   const [search, setSearch] = useState('');
   const [usage, setUsage] = useState('all');
   const [result, setResult] = useState('all');
@@ -60,7 +60,7 @@ export default function AtlasZoerCatalogue({ onExplore }: { onExplore: (dataset:
           <td>{collection.sourceName || 'NHHR reviewed source package'}</td>
           <td>{collection.tableCount === null ? <p>Restricted source package</p> : <p>{collection.tableCount.toLocaleString()} tables · {collection.catalogueRows?.toLocaleString()} row references</p>}
             {collection.datasetUrl && <a href={collection.datasetUrl} target="_blank" rel="noreferrer">Zoer dataset details</a>}</td>
-          <td>{collection.views.length ? collection.views.map(view => <p key={view.id}><button className="atlas-text-button" onClick={() => onExplore(view)}>{view.title}</button>{view.sourceOrigin === 'mixed' && <small> · Includes a verified publisher recovery; see source notes.</small>}</p>) : <p>No primary explorer extract</p>}
+          <td>{collection.views.length ? collection.views.map(view => <p key={view.id}>{onExplore ? <button className="atlas-text-button" onClick={() => onExplore(view)}>{view.title}</button> : view.title}{view.sourceOrigin === 'mixed' && <small> · Includes a verified publisher recovery; see source notes.</small>}</p>) : <p>No primary explorer extract</p>}
             {collection.review && <details><summary>{reviewLabels[collection.review.status] ?? collection.review.status} · review</summary>
               <p>{collection.review.summary}</p><p><strong>Geographic connection: </strong>{collection.review.mapConnection}</p>
               {collection.review.needs.length > 0 && <><strong>Needed next</strong><ul>{collection.review.needs.map((item, index) => <li key={index}>{item}</li>)}</ul></>}
@@ -81,7 +81,7 @@ export default function AtlasZoerCatalogue({ onExplore }: { onExplore: (dataset:
       <p>These measurements were retrieved from the named publisher. They are separate from the 85 NHHR Zoer catalogue entries; source notes retain reporting periods, geographic scope and verification limits.</p>
       <div className="atlas-data-table"><div className="atlas-table-scroll" tabIndex={0} role="region" aria-label="Publisher supplements; scroll horizontally to see all columns"><table>
         <thead><tr><th scope="col">Reviewed view</th><th scope="col">Publisher and period</th><th scope="col">Source and scope</th></tr></thead>
-        <tbody>{supplements.map(view => <tr key={view.id}><th scope="row"><button className="atlas-text-button" onClick={() => onExplore(view)}>{view.title}</button></th><td>{view.sourceName}<p>{view.timeLabel}</p></td><td><a href={view.sourceUrl} target="_blank" rel="noreferrer">Publisher source</a><details><summary>Source, geography and limits</summary><ul>{view.notes.map((note, index) => <li key={index}>{note}</li>)}</ul></details></td></tr>)}</tbody>
+        <tbody>{supplements.map(view => <tr key={view.id}><th scope="row">{onExplore ? <button className="atlas-text-button" onClick={() => onExplore(view)}>{view.title}</button> : view.title}</th><td>{view.sourceName}<p>{view.timeLabel}</p></td><td><a href={view.sourceUrl} target="_blank" rel="noreferrer">Publisher source</a><details><summary>Source, geography and limits</summary><ul>{view.notes.map((note, index) => <li key={index}>{note}</li>)}</ul></details></td></tr>)}</tbody>
       </table></div></div>
     </section>}
   </>;

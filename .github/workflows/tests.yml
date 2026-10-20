@@ -1,6 +1,8 @@
 name: Browser tests
 # Checks every push without blocking the deploy. The tests drive WebGL maps
-# in software rendering, so they are split across four runners at once.
+# in software rendering, so they are split across four runners at once. They
+# run on a build with every manifest switch on; the production job checks the
+# site manifest/ actually publishes.
 on:
   push:
   workflow_dispatch:
@@ -26,7 +28,8 @@ jobs:
           cache: npm
       - run: npm install --global npm@11.19.0
       - run: npm ci
-      - run: npm run build
+      # Every manifest switch on, so the suite can reach every feature.
+      - run: npm run build:all
       - uses: actions/upload-artifact@v4
         with:
           name: site
@@ -59,5 +62,26 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-results-${{ matrix.shard }}
+          path: test-results
+          retention-days: 7
+  production:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm install --global npm@11.19.0
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:production
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-production
           path: test-results
           retention-days: 7

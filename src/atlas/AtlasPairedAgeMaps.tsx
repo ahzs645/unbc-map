@@ -12,6 +12,8 @@ interface Props {
   focusRegions?: string[];
   selectedRegion?: string;
   onSelectRegion?: (value: string | null) => void;
+  /** Kept mounted but hidden in a story reader. */
+  dormant?: boolean;
 }
 type AgeView = 'share' | 'count';
 const views = [
@@ -39,7 +41,7 @@ export default function AtlasPairedAgeMaps(props: Props) {
   return <PairedAgeWorkspace key={geographicContext} {...props} />;
 }
 
-function PairedAgeWorkspace({ dataset, rows, compact = false, focusRegions, selectedRegion, onSelectRegion }: Props) {
+function PairedAgeWorkspace({ dataset, rows, compact = false, focusRegions, selectedRegion, onSelectRegion, dormant = false }: Props) {
   const host = useRef<HTMLElement>(null);
   const dialog = useRef<HTMLDialogElement>(null);
   const [width, setWidth] = useState(0);
@@ -96,7 +98,8 @@ function PairedAgeWorkspace({ dataset, rows, compact = false, focusRegions, sele
       <div className="atlas-age-map-stage"><AtlasMap key={`${fitRevision}-${inDialog ? 'expanded' : 'inline'}-${view.id}`}
         dataset={dataset} rows={rows} metric={view.metric} compact focusRegions={focusRegions}
         selectedRegion={selection} onSelectRegion={select} camera={camera} onCameraChange={next => publishCamera(next, view.id, inDialog)}
-        basemap={basemap} onBasemapChange={setBasemap} interactive />
+        // A story chapter's pair has no room for map controls; its expanded view does.
+        basemap={basemap} onBasemapChange={setBasemap} interactive controls={inDialog || !compact} dormant={dormant} />
       </div>
     </section>)}
   </div>;
@@ -113,7 +116,7 @@ function PairedAgeWorkspace({ dataset, rows, compact = false, focusRegions, sele
     </table></div>
   </details>;
 
-  return <section ref={host} className={`atlas-age-map-pair${compact ? ' is-compact' : ''}${narrow ? ' is-narrow' : ''}`} data-testid="age-map-pair"
+  return <section ref={host} className={`atlas-age-map-pair${compact ? ' is-compact' : ''}${narrow ? ' is-narrow' : ''}`} data-testid={dormant ? undefined : "age-map-pair"}
     data-active-view={narrow ? activeView : 'both'} data-period={periods.length === 1 ? periods[0] : 'all'} aria-labelledby={labelId}>
     <div className="atlas-age-map-controls"><strong id={labelId}>Older-person share and count</strong>
       <label>Region<select aria-label="Select paired age map region" value={selection ?? ''} onChange={event => select(event.target.value || null)}>
@@ -137,7 +140,8 @@ function PairedAgeWorkspace({ dataset, rows, compact = false, focusRegions, sele
       {maps()}
     </div>
     <p className="atlas-age-map-caption">{currentCoverage} of {coverage} source LHAs · {periodCaption}. {compact ? 'Separate scales.' : 'Separate colour scales; share and count use different units.'} {multiplePeriods && <strong>Choose one year to map values. Multiple observations per LHA are withheld; the table retains every year.</strong>}</p>
-    {values}
+    {/* In a story the value table follows manifest pages.stories.storyMapValues. */}
+    {(!compact || FLAGS.stories.storyMapValues) && values}
     {!compact && <p className="atlas-age-map-source"><a href={dataset.sourceUrl} target="_blank" rel="noreferrer">{dataset.sourceName}</a>. Age 65+ includes the source’s terminal 90+ category, using Gender=T once. The 2025 values are projections. BC Ministry of Health polygons via PGMaps provide context; boundary vintage is unestablished. These values do not measure care demand or participants.</p>}
     <dialog ref={dialog} className="atlas-age-map-dialog" aria-label="Expanded paired age maps" onClose={() => setExpanded(false)}>
       <div className="atlas-age-map-dialog-heading"><h2>Older-person share and count</h2><button type="button" onClick={() => setExpanded(false)}>Close expanded maps</button></div>

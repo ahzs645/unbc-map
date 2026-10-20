@@ -1,0 +1,43 @@
+{
+  "eyebrow": "Northern Hub for Health Research",
+  "heading": [
+    "Northern health.",
+    "A shared view of the evidence."
+  ],
+  "lead": "Explore the communities, health services and research capacity that shape Northern British Columbia.",
+  "body": [
+    "The NHHR Atlas brings collected research evidence together through stories, maps and data. Start with a question, follow a story, or look closely at the records behind it."
+  ],
+  "primaryAction": "Discover the stories",
+  "context": {
+    "eyebrow": "Place. People. Research.",
+    "heading": "Understanding the North starts with context.",
+    "body": "This release covers {topics}. Each view keeps its source, period and geographic scope in sight.",
+    "link": "How to read the evidence"
+  },
+  "destinations": {
+    "eyebrow": "Find your starting point",
+    "heading": "Explore the Atlas"
+  },
+  "cards": {
+    "stories": {
+      "title": "Research stories",
+      "description": "Follow guided maps and short stories connecting communities, health services and research across Northern BC.",
+      "detail": "{storyMaps:guided map|guided maps} · {stories:short story|short stories}",
+      "action": "Browse research stories"
+    },
+    "explore": {
+      "title": "Data explorer",
+      "description": "Browse and download the source records behind the stories.",
+      "detail": "{datasets:reviewed dataset view|reviewed dataset views}",
+      "action": "Explore the data"
+    },
+    "sources": {
+      "title": "Sources and methods",
+      "description": "Understand where the evidence comes from, how the geography connects and what each measure can tell you.",
+      "detail": "Source definitions, methods and limitations",
+      "action": "Read sources and methods"
+    }
+  },
+  "note": "An independent research interface for the NHHR feasibility work. Source periods and coverage vary; projections and hypothetical scenarios are labelled in each view."
+}

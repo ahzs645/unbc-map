@@ -9,9 +9,13 @@
   "scripts": {
     "toolkit:build": "node scripts/build-toolkit.mjs",
     "dev": "vite --host 127.0.0.1",
+    "dev:all": "ATLAS_MANIFEST=all vite --host 127.0.0.1",
     "build": "npm run toolkit:build && tsc --noEmit && vite build && node scripts/prepare-spa-pages.mjs",
+    "build:all": "ATLAS_MANIFEST=all npm run build",
     "preview": "vite preview --host 127.0.0.1",
     "test": "playwright test",
+    "test:production": "ATLAS_TEST_PROFILE=production playwright test",
+    "manifest:password": "node scripts/set-password.mjs",
     "data:prepare": "python3 scripts/prepare-nhhr-data.py",
     "data:boundaries": "node scripts/prepare-nhhr-boundaries.mjs",
     "chrome:sync": "node scripts/sync-chrome.mjs"
