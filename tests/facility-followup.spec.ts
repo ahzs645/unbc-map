@@ -240,9 +240,10 @@ test('historical Mills map detail identifies a parcel reference and preserves tw
   await expect(detail).toContainText('not a building centroid');
   await expect(detail).toContainText('not historical parcel geometry');
   await expect(detail.getByRole('link', { name: 'Mapped point', exact: true })).toHaveAttribute('href', /^https:\/\/geocoder.api.gov.bc.ca\/addresses.geojson\?/);
-  const values = JSON.parse(await state.getAttribute('data-rendered-points') || '[]') as { code: string; value: number }[];
-  expect(values.find(p => p.code === 'capital-context-mills-historical')?.value).toBe(2);
-  expect(values.some(p => p.code === 'hospital-ksyen-regional-hospital')).toBe(false);
+  // The map reports its rendered points once it is idle; wait for that report.
+  const renderedPoints = async () => JSON.parse(await state.getAttribute('data-rendered-points') || '[]') as { code: string; value: number }[];
+  await expect.poll(async () => (await renderedPoints()).find(p => p.code === 'capital-context-mills-historical')?.value).toBe(2);
+  expect((await renderedPoints()).some(p => p.code === 'hospital-ksyen-regional-hospital')).toBe(false);
   await page.getByTestId('entity-select').selectOption(historic);
   await page.getByRole('tab', { name: 'Table', exact: true }).click();
   await expect(page.locator('.atlas-data-table tbody tr')).toHaveCount(1);
