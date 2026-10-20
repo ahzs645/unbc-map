@@ -1,3 +1,4 @@
+import { canEncodeAsArea, crosswalkResolver, groupValue } from '@pgmaps/geo-toolkit/calculations';
 import hsdaCrosswalk from './hsdaCrosswalk.json';
 import boundaryIndex from './boundaryIndex.json';
 import institutions from './institutionLocations.json';
@@ -8,13 +9,21 @@ import mappingBoundaryIndex from './mappingBoundaryIndex.json';
 import chsaBoundaryIndex from './chsaBoundaryIndex.json';
 import type { AtlasDataset, AtlasRow } from './types';
 
-const hsdaLinks = new Map(hsdaCrosswalk.map(row => [row.health_region_code, row.bc_hsda_code]));
-const nativeHsdaIds = new Set(hsdaCrosswalk.map(row => row.bc_hsda_code));
-const nativeLhaIds = new Set(boundaryIndex.lha);
 const institutionLinks = new Map(institutions.map(item => [item.comparator, item.code]));
 const cityLinks = new Map(cities.map(item => [item.query_city, item.code]));
 const healthAuthorityLinks = new Map(healthAuthorities.map(item => [item.source_region, item.bc_ha_code]));
 const sourceBoundaryIndexes: Record<string, string[]> = { ...mappingBoundaryIndex, ...chsaBoundaryIndex };
+const resolvers = {
+  institution: crosswalkResolver({ links: institutionLinks }),
+  city: crosswalkResolver({ links: cityLinks }),
+  ha: crosswalkResolver({ links: healthAuthorityLinks, native: boundaryIndex.ha }),
+  hsda: crosswalkResolver({ links: hsdaCrosswalk.map(row => [row.health_region_code, row.bc_hsda_code] as const), native: hsdaCrosswalk.map(row => row.bc_hsda_code) }),
+  lha: crosswalkResolver({ native: boundaryIndex.lha }),
+  cd: crosswalkResolver({ native: regionalBoundaryIndex.cd }),
+  csd: crosswalkResolver({ native: regionalBoundaryIndex.csd }),
+  er: crosswalkResolver({ native: regionalBoundaryIndex.er }),
+};
+const reviewedResolvers = new Map(Object.entries(sourceBoundaryIndexes).map(([asset, codes]) => [asset, crosswalkResolver({ native: codes })]));
 
 export function boundaryAssetUrl(file: string): string {
   return `${import.meta.env.BASE_URL}data/nhhr/${file}`;
@@ -46,7 +55,7 @@ export function canMapDataset(dataset: AtlasDataset): boolean {
 export function canMapMetric(dataset: AtlasDataset, metric: string): boolean {
   if (!canMapDataset(dataset)) return false;
   if (!['institution', 'city', 'facility', 'stop', 'route'].includes(dataset.geography)) return true;
-  return !dataset.rows.some(row => typeof row[metric] === 'number' && Number(row[metric]) < 0);
+  return canEncodeAsArea(dataset.rows.map(row => row[metric]));
 }
 
 /** Polygon joins use source codes; point joins use the reviewed exact comparator crosswalk. */
@@ -55,38 +64,18 @@ export function getBoundaryJoin(dataset: AtlasDataset, row: AtlasRow): string | 
     const code = row[dataset.boundaryKeyField ?? 'location_code'];
     return typeof code === 'string' && code.trim() ? code : null;
   }
-  if (dataset.geography === 'institution') return institutionLinks.get(String(row[dataset.entityField])) ?? null;
-  if (dataset.geography === 'city') return cityLinks.get(String(row[dataset.entityField])) ?? null;
+  if (dataset.geography === 'institution' || dataset.geography === 'city') return resolvers[dataset.geography](row[dataset.entityField]);
   if (!canMapDataset(dataset) || !dataset.boundaryKeyField) return null;
   const value = row[dataset.boundaryKeyField];
-  if (value === null || value === undefined || value === '') return null;
-  const code = String(value);
-  const reviewedCodes = dataset.mapLocationsAsset && sourceBoundaryIndexes[dataset.mapLocationsAsset];
-  if (reviewedCodes) return reviewedCodes.includes(code) ? code : null;
-  if (dataset.geography === 'cd' || dataset.geography === 'csd' || dataset.geography === 'er') {
-    const codes: string[] = regionalBoundaryIndex[dataset.geography];
-    return codes.includes(code) ? code : null;
-  }
-  if (dataset.geography === 'ha') return healthAuthorityLinks.get(code) || (boundaryIndex.ha.includes(code) ? code : null);
-  if (dataset.geography === 'hsda') return hsdaLinks.get(code) || (nativeHsdaIds.has(code) ? code : null);
-  return nativeLhaIds.has(code) ? code : null;
+  const reviewed = dataset.mapLocationsAsset && reviewedResolvers.get(dataset.mapLocationsAsset);
+  if (reviewed) return reviewed(value);
+  const geography = dataset.geography === 'ha' || dataset.geography === 'hsda' || dataset.geography === 'cd' || dataset.geography === 'csd' || dataset.geography === 'er' ? dataset.geography : 'lha';
+  return resolvers[geography](value);
 }
 
 /** Aggregation is opt-in for a declared additive source metric, never percentiles. */
 export function mapGroupValue(dataset: AtlasDataset, rows: AtlasRow[] | undefined, metric: string): number | null {
-  if (!rows?.length) return null;
-  const values = rows.map(row => row[metric]);
-  if (!values.every((value): value is number => typeof value === 'number' && Number.isFinite(value))) return null;
-  return rows.length === 1 ? values[0] : dataset.mapAggregation?.method === 'sum' && dataset.mapAggregation.metric === metric ? values.reduce((total, value) => total + value, 0) : null;
+  return groupValue(rows?.map(row => row[metric]) ?? [], { allowsSum: allowsMapAggregation(dataset, metric) });
 }
 
 export function allowsMapAggregation(dataset: AtlasDataset, metric: string) { return dataset.mapAggregation?.method === 'sum' && dataset.mapAggregation.metric === metric; }
-
-export function getJoinDiagnostics(dataset: AtlasDataset, rows: AtlasRow[]) {
-  const ids = rows.map(row => getBoundaryJoin(dataset, row));
-  const counts = new Map<string, number>();
-  for (const id of ids) if (id) counts.set(id, (counts.get(id) || 0) + 1);
-  return { total: rows.length, matched: ids.filter(id => id && counts.get(id) === 1).length, unmatched: ids.filter(id => !id).length,
-    ambiguous: [...counts.values()].filter(count => count > 1).reduce((sum, count) => sum + count, 0),
-  };
-}
