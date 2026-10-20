@@ -92,6 +92,16 @@ npm run test:production
 
 `npm test` runs the full suite and needs the complete build from `npm run build:all`.
 
+### The password gate
+
+Projects marked `"password": true` in `manifest/projects.json` (currently `/dev/projects`) ask for a password, and an unlock lasts four hours in that browser. The repository is public, so `manifest/access.json` stores only the password's SHA-256, which the built site carries anyway; the password itself is never committed. Share it with collaborators directly. To change it, then rebuild and push:
+
+```sh
+npm run manifest:password -- <new password>
+```
+
+The gate is a safeguard against casual visitors, not security: everything behind it still ships in the public JavaScript. See [manifest/README.md](manifest/README.md#accessjson-the-password).
+
 The build emits direct entry pages for `stories`, `dev/projects`, each switched-on guided story route (at the root and under `dev/projects`), and `campus`, as `manifest/` publishes them, plus a `404.html` SPA fallback. Assets use the configured absolute base. Pushes to `main` build with the configured Pages base path and deploy in about two minutes (`.github/workflows/pages.yml`). The browser checks run separately on every push, under the same `/<repository>/` subpath and split across four runners (`.github/workflows/tests.yml`); a failure marks the commit but does not hold or undo the deploy. That suite runs on a build with every manifest switch on, and a separate job checks the published manifest. Before pushing, run `npm run build:all && npm test`, then `npm run build && npm run test:production`. The configured repository currently serves `/unbc-map/`.
 
 The browser checks cover the evidence explorer, URL state, filters and exports, live WebGL boundary rendering and source joins, responsive layouts, and the retained campus explorer. Local map geometry works without a remote basemap. Data snapshots are deliberately static: opening the application does not refresh Zoer or claim that an old source extraction is current.
