@@ -66,7 +66,7 @@
   flex: 0 0 auto;
   margin: 0;
   padding: 7px 10px;
-  background: #f4f4f4;
+  background: #fff;
   font-size: 15px;
   line-height: 1.25;
   font-weight: 600;
@@ -226,7 +226,15 @@
   overflow: auto;
 }
 .atlas-age-map-grid.is-tabbed {
+  position: relative;
   grid-template-columns: minmax(0, 1fr);
+}
+/* The other tab's map waits underneath at the same size, already drawn. */
+.atlas-age-map-grid.is-tabbed > .atlas-age-map-side.is-hidden {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 .atlas-age-map-grid.is-tabbed .atlas-age-map-side > h3 {
   display: none;
@@ -261,14 +269,15 @@
   min-height: 0;
   line-height: 1.2;
 }
+/* The story frame's expand icon (36px) sits at the right end of this row. */
 .atlas-age-map-pair.is-narrow > .atlas-age-map-tabs {
-  padding-right: 54px;
+  padding-right: 44px;
 }
 .atlas-age-map-pair.is-narrow > .atlas-age-map-tabs button {
-  min-height: 0;
+  min-height: 36px;
   line-height: 1.2;
   padding: 4px;
-  font-size: 12px;
+  font-size: 13px;
 }
 .atlas-age-map-pair.is-narrow > .atlas-age-map-values {
   display: none;

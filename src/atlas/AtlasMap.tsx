@@ -37,6 +37,9 @@ interface AtlasMapProps {
   onBasemapChange?: (basemap: AtlasBasemap) => void;
   /** A control shown at the right end of a compact map's legend row. */
   legendAction?: ReactNode;
+  /** Measures the hover card lists instead of the mapped one, so a swipe
+   * comparison can show both years wherever the pointer is. */
+  tipMetrics?: string[];
 }
 type BoundaryProperties = { code: string; name: string; site?: string; city?: string; source_url?: string; coordinate_source_url?: string; location_note?: string; location_precision?: string; health_authority_code?: string; value?: number | null; radius?: number; selected?: boolean; focused?: boolean };
 type BoundaryCollection = FeatureCollection<Geometry, BoundaryProperties>;
@@ -131,10 +134,13 @@ function motionDuration(duration: number) {
 }
 
 export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSelectRegion, compact = false,
-  focusRegions, scaleDomain, interactive = true, controls = true, dormant = false, camera, onCameraChange, basemap: controlledBasemap, onBasemapChange, legendAction }: AtlasMapProps) {
+  focusRegions, scaleDomain, interactive = true, controls = true, dormant = false, camera, onCameraChange, basemap: controlledBasemap, onBasemapChange, legendAction, tipMetrics }: AtlasMapProps) {
   const container = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
   const popupRef = useRef<maplibregl.Popup | null>(null);
+  // The boundary collection last given to the region source, so a new chapter
+  // on the same file sends only feature state.
+  const sentBoundaries = useRef<BoundaryCollection | null>(null);
   const labelMarkers = useRef<Array<{ marker: maplibregl.Marker; radius: number }>>([]);
   const applyingCamera = useRef(false);
   const fitted = useRef(false);
@@ -160,8 +166,8 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
   const previousDataset = useRef('');
   const basemapApplied = useRef(false);
   const basemapReady = useRef(false);
-  const latest = useRef({ dataset, metric, rows, onSelectRegion, interactive, controls, camera, onCameraChange });
-  latest.current = { dataset, metric, rows, onSelectRegion, interactive, controls, camera, onCameraChange };
+  const latest = useRef({ dataset, metric, rows, onSelectRegion, interactive, controls, camera, onCameraChange, tipMetrics });
+  latest.current = { dataset, metric, rows, onSelectRegion, interactive, controls, camera, onCameraChange, tipMetrics };
   const metricColumn = dataset.columns.find(column => column.key === metric);
   const isInstitution = dataset.geography === 'institution';
   const isCity = dataset.geography === 'city';
@@ -297,7 +303,10 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
       // Keep place/road labels above the transparent data overlay.
       setRasterSources(Object.values(map.getStyle().sources).filter(source => source.type === 'raster' || source.type === 'raster-dem').length);
       const labels = map.getStyle().layers.find(layer => layer.type === 'symbol')?.id;
-      map.addSource('nhhr-boundaries', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+      // Regions are keyed by their code, so a chapter's values, focus and
+      // selection travel as feature state rather than a new copy of the shapes.
+      map.addSource('nhhr-boundaries', { type: 'geojson', data: { type: 'FeatureCollection', features: [] }, promoteId: 'code' });
+      sentBoundaries.current = null;
       if (isRoute) {
         map.addSource('nhhr-connections', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
         map.addLayer({ id: 'nhhr-schedule-connections', type: 'line', source: 'nhhr-connections', paint: { 'line-color': '#977000', 'line-width': 2, 'line-dasharray': [3, 2], 'line-opacity': 0.85 } }, labels);
@@ -308,10 +317,11 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
         map.addLayer({ id: 'nhhr-institution-hit', type: 'circle', source: 'nhhr-boundaries', paint: { 'circle-radius': ['max', 12, ['coalesce', ['get', 'radius'], 0]], 'circle-opacity': 0 } }, labels);
         map.addLayer({ id: 'nhhr-institution-selected', type: 'circle', source: 'nhhr-boundaries', filter: ['any', ['==', ['get', 'selected'], true], ['==', ['get', 'focused'], true]], paint: { 'circle-radius': ['+', 4, ['max', 3, ['coalesce', ['get', 'radius'], 0]]], 'circle-opacity': 0, 'circle-stroke-color': '#977000', 'circle-stroke-width': 2 } }, labels);
       } else {
-        map.addLayer({ id: 'nhhr-region-fill', type: 'fill', source: 'nhhr-boundaries', paint: { 'fill-color': MISSING_COLOR, 'fill-opacity': ['case', ['==', ['get', 'value'], null], 0.1, 0.48] } }, labels);
+        map.addLayer({ id: 'nhhr-region-fill', type: 'fill', source: 'nhhr-boundaries', paint: { 'fill-color': MISSING_COLOR, 'fill-opacity': ['case', ['==', ['feature-state', 'value'], null], 0.1, 0.48] } }, labels);
         map.addLayer({ id: 'nhhr-region-line', type: 'line', source: 'nhhr-boundaries', paint: { 'line-color': '#6d9399', 'line-width': 0.8 } }, labels);
-        map.addLayer({ id: 'nhhr-selected-line', type: 'line', source: 'nhhr-boundaries', filter: ['==', ['get', 'selected'], true], paint: { 'line-color': '#172c35', 'line-width': 3 } }, labels);
-        map.addLayer({ id: 'nhhr-focused-line', type: 'line', source: 'nhhr-boundaries', filter: ['==', ['get', 'focused'], true], paint: { 'line-color': '#035642', 'line-width': 3 } }, labels);
+        // Feature state cannot filter, so the outlines are drawn for every region and shown by opacity.
+        map.addLayer({ id: 'nhhr-selected-line', type: 'line', source: 'nhhr-boundaries', paint: { 'line-color': '#172c35', 'line-width': 3, 'line-opacity': ['case', ['boolean', ['feature-state', 'selected'], false], 1, 0] } }, labels);
+        map.addLayer({ id: 'nhhr-focused-line', type: 'line', source: 'nhhr-boundaries', paint: { 'line-color': '#035642', 'line-width': 3, 'line-opacity': ['case', ['boolean', ['feature-state', 'focused'], false], 1, 0] } }, labels);
       }
       setStyleRevision(revision => revision + 1);
       setReady(true);
@@ -353,13 +363,18 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
       if (!properties) return;
       // The place in bold, then the measure and its value, in the UNBC card style (basemap.css).
       const current = latest.current;
-      const column = current.dataset.columns.find(item => item.key === current.metric);
       const node = document.createElement('div');
       node.className = 'atlas-map-tip';
       const place = document.createElement('strong'); place.textContent = String(properties.name ?? '');
-      const measure = document.createElement('span'); measure.className = 'atlas-map-tip-measure'; measure.textContent = column?.label ?? current.metric;
-      const value = document.createElement('span'); value.className = 'atlas-map-tip-value'; value.textContent = format(numeric(properties.value), column?.unit);
-      node.append(place, measure, value);
+      node.append(place);
+      const records = current.tipMetrics && current.rows.filter(row => getBoundaryJoin(current.dataset, row) === String(properties.code ?? ''));
+      for (const key of current.tipMetrics ?? [current.metric]) {
+        const column = current.dataset.columns.find(item => item.key === key);
+        const measure = document.createElement('span'); measure.className = 'atlas-map-tip-measure'; measure.textContent = column?.label ?? key;
+        const value = document.createElement('span'); value.className = 'atlas-map-tip-value';
+        value.textContent = format(records ? mapGroupValue(current.dataset, records, key) : numeric(event.features?.[0]?.state?.value ?? properties.value), column?.unit);
+        node.append(measure, value);
+      }
       popupRef.current?.remove();
       popupRef.current = new maplibregl.Popup({ closeButton: false, closeOnClick: false, className: 'atlas-map-popup', offset: 10, maxWidth: '260px' }).setLngLat(event.lngLat).setDOMContent(node).addTo(map);
     });
@@ -398,6 +413,25 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !ready || !boundaries || !map.getSource('nhhr-boundaries')) return;
+    if (!isPoint) {
+      // Regions: the shapes go to the map once per boundary file (a few MB that
+      // MapLibre would otherwise re-tile on every chapter); each chapter then
+      // only recolours them and moves its outlines.
+      const source = map.getSource('nhhr-boundaries') as GeoJSONSource;
+      if (sentBoundaries.current !== boundaries) { source.setData(boundaries); sentBoundaries.current = boundaries; }
+      for (const feature of boundaries.features) {
+        const code = feature.properties.code;
+        map.setFeatureState({ source: 'nhhr-boundaries', id: code }, { value: mapGroupValue(dataset, grouped.get(code), metric), selected: code === selectedCode, focused: focusedCodes.has(code) });
+      }
+      const value: ExpressionSpecification = ['feature-state', 'value'];
+      map.setPaintProperty('nhhr-region-fill', 'fill-color', min === max
+        ? ['case', ['==', value, null], MISSING_COLOR, colorStops[1]]
+        : ['case', ['==', value, null], MISSING_COLOR,
+          ['interpolate', ['linear'], value, min, colorStops[0], diverging ? 0 : (min + max) / 2, colorStops[1], max, colorStops[2]]]);
+      labelMarkers.current.forEach(({ marker }) => marker.remove()); labelMarkers.current = [];
+      popupRef.current?.remove();
+      return;
+    }
     const joined: BoundaryCollection = { ...boundaries, features: boundaries.features.filter(feature => !isPoint || grouped.has(feature.properties.code)).map(feature => {
       const matching = grouped.get(feature.properties.code);
       const value = mapGroupValue(dataset, matching, metric);
@@ -407,12 +441,8 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
       } };
     }) };
     (map.getSource('nhhr-boundaries') as GeoJSONSource).setData(joined);
-    const colors: ExpressionSpecification = min === max
-      ? ['case', ['==', ['get', 'value'], null], MISSING_COLOR, colorStops[1]]
-      : ['case', ['==', ['get', 'value'], null], MISSING_COLOR,
-        ['interpolate', ['linear'], ['get', 'value'], min, colorStops[0], diverging ? 0 : (min + max) / 2, colorStops[1], max, colorStops[2]]];
-    if (!isPoint) map.setPaintProperty('nhhr-region-fill', 'fill-color', colors);
-    else { map.setPaintProperty('nhhr-institution-bubble', 'circle-color', pointColor); map.setPaintProperty('nhhr-institution-location', 'circle-stroke-color', ['case', ['==', ['get', 'value'], null], '#849399', pointColor]); }
+    sentBoundaries.current = null;
+    { map.setPaintProperty('nhhr-institution-bubble', 'circle-color', pointColor); map.setPaintProperty('nhhr-institution-location', 'circle-stroke-color', ['case', ['==', ['get', 'value'], null], '#849399', pointColor]); }
     labelMarkers.current.forEach(({ marker }) => marker.remove()); labelMarkers.current = [];
     if (isPoint) joined.features.forEach(feature => {
       if (feature.geometry.type !== 'Point') return;

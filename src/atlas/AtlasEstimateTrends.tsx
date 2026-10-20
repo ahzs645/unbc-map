@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { AtlasDataset, AtlasRow } from "./types";
 import { formatValue } from "./AtlasChart";
 
@@ -30,17 +32,26 @@ export default function AtlasEstimateTrends({ dataset, rows, metric, totalLabel 
     if (points.length) panels.unshift({ name: totalLabel, points, note: `Sum of ${areas.size} areas` });
   }
   const column = dataset.columns.find(item => item.key === metric);
+  // A phone's story panel shows one area at a time, starting with the regional
+  // total, and steps through the rest; every other view shows them all (CSS).
+  const [current, setCurrent] = useState(0);
+  const shown = Math.min(current, panels.length - 1);
   return <div className="atlas-trend-multiples" data-testid="estimate-trends">
     <div className="atlas-trend-key">
       <strong>{column?.label ?? metric}{column?.unit ? ` (${column.unit})` : ""}</strong>
-      <span><i className="is-estimate" aria-hidden="true" />Source estimate</span>
+      <span><i className="is-estimate" aria-hidden="true" /><span className="atlas-trend-key-long">Source e</span><span className="atlas-trend-key-short">E</span>stimate</span>
       <span><i className="is-projection" aria-hidden="true" />Projection</span>
     </div>
-    <ul>{panels.map(panel => <TrendPanel key={panel.name} panel={panel} unit={column?.unit} />)}</ul>
+    {panels.length > 1 && <div className="atlas-trend-pager">
+      <button type="button" aria-label="Previous area" disabled={shown === 0} onClick={() => setCurrent(shown - 1)}><ChevronLeft size={18} aria-hidden="true" /></button>
+      <p aria-live="polite"><strong>{panels[shown]?.name}</strong><span>{shown + 1} of {panels.length}</span></p>
+      <button type="button" aria-label="Next area" disabled={shown === panels.length - 1} onClick={() => setCurrent(shown + 1)}><ChevronRight size={18} aria-hidden="true" /></button>
+    </div>}
+    <ul>{panels.map((panel, index) => <TrendPanel key={panel.name} panel={panel} unit={column?.unit} current={index === shown} />)}</ul>
   </div>;
 }
 
-function TrendPanel({ panel, unit }: { panel: Panel; unit?: string }) {
+function TrendPanel({ panel, unit, current }: { panel: Panel; unit?: string; current: boolean }) {
   const estimates = panel.points.filter(point => !point.projection);
   const projection = panel.points.find(point => point.projection);
   const first = estimates[0], last = estimates.at(-1);
@@ -57,7 +68,7 @@ function TrendPanel({ panel, unit }: { panel: Panel; unit?: string }) {
   const estimateChange = change(first, last);
   const projectionChange = change(last, projection);
   const summary = `${panel.name}: ${first ? `${formatValue(first.value, unit)} in the ${first.year} estimate` : ""}${last && last !== first ? `, ${formatValue(last.value, unit)} in the ${last.year} estimate` : ""}${projection ? `, ${formatValue(projection.value, unit)} in the ${projection.year} projection` : ""}.`;
-  return <li className={`atlas-trend-panel${panel.note ? " is-total" : ""}`}>
+  return <li className={`atlas-trend-panel${panel.note ? " is-total" : ""}${current ? " is-current" : ""}`}>
     <div className="atlas-trend-heading"><h4>{panel.name}</h4>{panel.note && <span>{panel.note}</span>}</div>
     <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label={summary}>
       {projection && <rect className="atlas-trend-band" x={x(at(projection)) - step / 2} y={0} width={width - (x(at(projection)) - step / 2)} height={height - bottom + 4} />}

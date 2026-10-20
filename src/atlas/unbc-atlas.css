@@ -75,7 +75,6 @@
 /* Reading links are teal and underlined, as in unbc.ca body copy. */
 .atlas-app .atlas-source-notes a,
 .atlas-app .atlas-chapter-source a,
-.atlas-app .atlas-storymap-sources a,
 .atlas-app .atlas-institution-scope a,
 .atlas-app .atlas-map-join-note a,
 .atlas-app .atlas-inventory-summary a,
@@ -87,7 +86,6 @@
 }
 .atlas-app .atlas-source-notes a:hover,
 .atlas-app .atlas-chapter-source a:hover,
-.atlas-app .atlas-storymap-sources a:hover,
 .atlas-app .atlas-institution-scope a:hover,
 .atlas-app .atlas-inventory-summary a:hover,
 .atlas-app .atlas-source-register-actions a:hover {
@@ -854,8 +852,7 @@
   .atlas-app .atlas-basemap-picker select,
   .atlas-app .atlas-chapter-values summary,
   .atlas-app .atlas-comparison-values summary,
-  .atlas-app .atlas-age-map-values summary,
-  .atlas-app .atlas-storymap-sources summary {
+  .atlas-app .atlas-age-map-values summary {
     min-height: 40px;
   }
   .atlas-app .atlas-chapter-values summary,
@@ -958,6 +955,30 @@
 .atlas-app .atlas-story-chapters button[aria-current="location"] {
   color: var(--atlas-green);
 }
+/* The current chapter never outgrows the rail; a longer title runs as a
+   ticker (AtlasStoryMap fitTicker), easing to its end and back. */
+.atlas-app .atlas-story-chapters button[aria-current="location"] {
+  max-width: 100%;
+  overflow: hidden;
+}
+.atlas-story-chapter-label {
+  display: inline-block;
+}
+.atlas-story-chapters button.is-ticker .atlas-story-chapter-label {
+  animation: atlas-story-ticker var(--ticker-duration, 8s) ease-in-out infinite alternate;
+}
+@keyframes atlas-story-ticker {
+  0%, 15% { transform: translateX(0); }
+  85%, 100% { transform: translateX(var(--ticker-shift, 0)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .atlas-story-chapters button.is-ticker .atlas-story-chapter-label {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation: none;
+  }
+}
 .atlas-app .atlas-story-chapters button[aria-current="location"]::after {
   content: "";
   position: absolute;
@@ -1009,10 +1030,17 @@
   .atlas-story-back .atlas-story-bar-label {
     display: none;
   }
+  /* A narrow bar holds just the current chapter, between its arrows. */
   .atlas-app .atlas-story-chapters {
-    gap: 14px;
-    -webkit-mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
-    mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent);
+    justify-content: center;
+    overflow: hidden;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .atlas-story-chapters::before,
+  .atlas-story-chapters::after,
+  .atlas-app .atlas-story-chapters button:not([aria-current="location"]) {
+    display: none;
   }
 }
 .atlas-app .atlas-story-back {
@@ -1048,10 +1076,9 @@
     height: 100vh;
     height: 100dvh;
     min-height: 0;
+    /* Hidden, not clip: the story scrolls this shell by the header's height
+       to slide the header away (AtlasStoryMap), while readers cannot. */
     overflow: hidden;
-    /* Clip, so chapter links that scroll the reader into view cannot scroll
-       the header away. */
-    overflow: clip;
   }
   .is-story-full > .chrome-slot {
     flex: none;
@@ -1059,7 +1086,16 @@
   .is-story-full .unbc-subheader {
     display: none;
   }
-  .is-story-full > .atlas-app,
+  /* The story is a full window high under the header, so hiding the header
+     reveals the rest of it without resizing the reader or its maps. */
+  .is-story-full > .atlas-app {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+  }
   .is-story-full #atlas-main {
     display: flex;
     flex: 1;
@@ -1158,15 +1194,6 @@
 }
 .atlas-app .atlas-story-reader .atlas-story-contents button:hover {
   text-decoration-color: #fff;
-}
-.is-story-full .atlas-storymap-sources {
-  box-sizing: border-box;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 40px var(--unbc-gutter, 15px) 56px;
-}
-.atlas-storymap-sources .atlas-story-back {
-  margin-top: 28px;
 }
 @media (max-width: 767px) {
   .atlas-story-cover {

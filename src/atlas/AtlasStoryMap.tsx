@@ -83,6 +83,11 @@ function ExpandMediaButton() {
   return <button type="button" className="atlas-expand-media" onClick={expand}>Expand media ↗</button>;
 }
 
+// The other chapters, nearest first (the next one before the previous).
+function byDistance(chapters: StoryMapChapter[], index: number) {
+  return chapters.map((chapter, i) => ({ chapter, d: i > index ? (i - index) * 2 - 1 : (index - i) * 2 })).filter(item => item.d > 0).sort((a, b) => a.d - b.d).map(item => item.chapter);
+}
+
 // Map views stay mounted once a chapter has shown them. Moving between, say, a
 // single map and the paired maps then reveals an already-drawn view instead of
 // starting new maps that paint their basemap and regions from blank.
@@ -103,7 +108,7 @@ function KeptView({ kind, chapter, dormant, selectedRegion, onSelectRegion }: { 
   </div>;
 }
 
-function ChapterEvidence({ chapter }: { chapter: StoryMapChapter }) {
+function ChapterEvidence({ chapter, nearby = [] }: { chapter: StoryMapChapter; nearby?: StoryMapChapter[] }) {
   const dataset = atlasDatasets.find(item => item.id === chapter.evidence.datasetId)!;
   const rows = useMemo(() => chapterRows(dataset, chapter), [dataset, chapter]);
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
@@ -111,9 +116,34 @@ function ChapterEvidence({ chapter }: { chapter: StoryMapChapter }) {
   const evidence = chapter.evidence;
   const isMap = evidence.kind === "map";
   const kept = useRef<Partial<Record<KeptKind, StoryMapChapter>>>({});
+  // Every map view the story uses is drawn hidden in advance, so reaching it
+  // reveals a painted map rather than one starting from blank. Starting a map
+  // is GPU set-up (a WebGL context, its canvas and shaders), not loading, and
+  // it blocks the page, so it waits until the shown map has loaded and its
+  // camera move has finished, then takes one idle moment per view, nearest
+  // chapter first.
+  const evidenceRoot = useRef<HTMLDivElement>(null);
   if (isKept(evidence.kind)) kept.current[evidence.kind] = chapter;
+  const [warmNext, setWarmNext] = useState<string>();
+  const findCold = () => nearby.find(next => isKept(next.evidence.kind) && !kept.current[next.evidence.kind]);
+  let cold = findCold();
+  if (cold && warmNext === cold.id && isKept(cold.evidence.kind)) { kept.current[cold.evidence.kind] = cold; cold = findCold(); }
+  useEffect(() => {
+    if (!cold) return;
+    const warm = () => setWarmNext(cold.id);
+    const idle = typeof window.requestIdleCallback === "function";
+    const shownLoaded = () => [...evidenceRoot.current?.querySelectorAll('.atlas-chapter-view:not(.is-dormant) [data-testid="atlas-map-state"]') ?? []]
+      .every(state => state.getAttribute("data-ready") === "true" && state.getAttribute("data-basemap-status") !== "loading");
+    let handle = 0, timer = 0;
+    const check = () => {
+      if (!shownLoaded()) { timer = window.setTimeout(check, 400); return; }
+      handle = idle ? window.requestIdleCallback(warm, { timeout: 1500 }) : window.setTimeout(warm, 0);
+    };
+    timer = window.setTimeout(check, 700);
+    return () => { window.clearTimeout(timer); if (idle) window.cancelIdleCallback(handle); else window.clearTimeout(handle); };
+  }, [chapter.id, cold?.id]);
   const periodTypes = [...new Set(rows.map(row => row.population_type).filter(Boolean))];
-  return <div className="atlas-chapter-evidence" data-testid="story-evidence" data-chapter={chapter.id} data-dataset={dataset.id} data-metric={evidence.metric} data-period={evidence.year ?? "all"}>
+  return <div ref={evidenceRoot} className="atlas-chapter-evidence" data-testid="story-evidence" data-chapter={chapter.id} data-dataset={dataset.id} data-metric={evidence.metric} data-period={evidence.year ?? "all"}>
     <div className="atlas-chapter-evidence-heading"><strong>{dataset.title}</strong><span>{evidence.year ? `${evidence.year}${periodTypes.length ? ` · ${periodTypes.join(", ")}` : ""}` : dataset.timeLabel}{evidence.filters ? ` · ${Object.entries(evidence.filters).map(([key, value]) => key === "route_slug" ? rows[0]?.route_label ?? value : value).join(" · ")}` : ""}</span></div>
     <div className={`atlas-chapter-viz is-${evidence.kind}`}>
       {keptKinds.map(kind => kept.current[kind] && <KeptView key={kind} kind={kind} chapter={kept.current[kind]!} dormant={kind !== evidence.kind} selectedRegion={selectedRegion} onSelectRegion={setSelectedRegion} />)}
@@ -126,11 +156,44 @@ function ChapterEvidence({ chapter }: { chapter: StoryMapChapter }) {
   </div>;
 }
 
+// A current chapter title too long for the rail scrolls back and forth, like a
+// ticker, instead of being cut off; reduced motion keeps an ellipsis (CSS).
+function fitTicker(nav: HTMLElement, current: HTMLElement) {
+  nav.querySelectorAll<HTMLElement>(".is-ticker").forEach(button => { if (button !== current) button.classList.remove("is-ticker"); });
+  const label = current.querySelector<HTMLElement>(".atlas-story-chapter-label");
+  if (!label) return;
+  const overflow = label.scrollWidth - current.clientWidth;
+  current.classList.toggle("is-ticker", overflow > 1);
+  current.style.setProperty("--ticker-shift", `${-Math.ceil(overflow + 4)}px`);
+  current.style.setProperty("--ticker-duration", `${Math.max(6, overflow / 24 + 4).toFixed(1)}s`);
+}
+
+const phoneQuery = "(max-width: 700px)";
+function usePhone() {
+  const [phone, setPhone] = useState(() => typeof window !== "undefined" && window.matchMedia(phoneQuery).matches);
+  useEffect(() => {
+    const media = window.matchMedia(phoneQuery);
+    const update = () => setPhone(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+  return phone;
+}
+
+// On a phone a chapter opens with its lead paragraph; the method and caveat
+// paragraphs that follow fold away, so the map changes more often as you scroll.
+function ChapterText({ paragraphs, folded }: { paragraphs: string[]; folded: boolean }) {
+  if (!folded || paragraphs.length < 2) return <>{paragraphs.map((paragraph, p) => <p key={p}>{paragraph}</p>)}</>;
+  return <><p>{paragraphs[0]}</p><details className="atlas-chapter-more"><summary>More about this data</summary>{paragraphs.slice(1).map((paragraph, p) => <p key={p}>{paragraph}</p>)}</details></>;
+}
+
 export default function AtlasStoryMap({ story, onExplore, onCopy, onBack }: { story: StoryDefinition; onExplore?: (chapter: StoryMapChapter) => void; onCopy: () => void; onBack: () => void }) {
   const scrollRoot = useRef<HTMLDivElement>(null);
   const chapterRail = useRef<HTMLElement>(null);
   const panels = useRef<Array<HTMLElement | null>>([]);
   const active = useReadingSection(scrollRoot, panels, story.chapters.length);
+  const phone = usePhone();
   useStoryChapterUrl(scrollRoot, story.chapters.map(chapter => chapter.id));
   // The current chapter sits in the middle of the rail; the others fade out at
   // its edges. It is centred on opening and on resize too, without animation.
@@ -138,6 +201,7 @@ export default function AtlasStoryMap({ story, onExplore, onCopy, onBack }: { st
     const nav = chapterRail.current;
     const button = nav?.querySelector<HTMLElement>('[aria-current="location"]');
     if (!nav || !button) return;
+    fitTicker(nav, button);
     const navBounds = nav.getBoundingClientRect(), buttonBounds = button.getBoundingClientRect();
     nav.scrollTo({ left: nav.scrollLeft + buttonBounds.left - navBounds.left - (nav.clientWidth - button.clientWidth) / 2, behavior: smooth && !window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "smooth" : "auto" });
   };
@@ -159,6 +223,43 @@ export default function AtlasStoryMap({ story, onExplore, onCopy, onBack }: { st
     const observer = new ResizeObserver(measure); observer.observe(root);
     return () => observer.disconnect();
   }, []);
+  // Where the story is locked to the window, the UNBC header shows only on the
+  // cover. The window-high reader sits below it, so reading on scrolls the
+  // locked shell by the header's height: the header slides out and nothing is
+  // resized, so the maps never redraw. It returns at the top of the reader, or
+  // when keyboard focus moves into it. Separate hide and show points keep it
+  // from flickering between the two.
+  useEffect(() => {
+    const root = scrollRoot.current, shell = root?.closest<HTMLElement>(".unbc-atlas-shell");
+    const header = shell?.querySelector<HTMLElement>(":scope > .chrome-slot");
+    if (!root || !shell || !header) return;
+    const locked = window.matchMedia("(min-width: 701px)");
+    let reading = false;
+    const show = (next: boolean, instant = false) => {
+      reading = next;
+      shell.classList.toggle("is-story-reading", next);
+      if (!locked.matches) return;
+      const smooth = !instant && !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      shell.scrollTo({ top: next ? header.offsetHeight : 0, behavior: smooth ? "smooth" : "auto" });
+    };
+    const update = () => {
+      const inHeader = header.contains(document.activeElement);
+      const next = inHeader ? false : reading ? root.scrollTop > 4 : root.scrollTop > 24;
+      if (next !== reading) show(next);
+    };
+    const reset = () => show(reading, true);
+    show(!header.contains(document.activeElement) && root.scrollTop > 24, true);
+    root.addEventListener("scroll", update, { passive: true });
+    header.addEventListener("focusin", update); header.addEventListener("focusout", update);
+    locked.addEventListener("change", reset);
+    return () => {
+      root.removeEventListener("scroll", update);
+      header.removeEventListener("focusin", update); header.removeEventListener("focusout", update);
+      locked.removeEventListener("change", reset);
+      shell.classList.remove("is-story-reading");
+      shell.scrollTo({ top: 0 });
+    };
+  }, []);
   const select = (index: number) => {
     const root = scrollRoot.current, panel = panels.current[index];
     if (!root || !panel) return;
@@ -177,25 +278,24 @@ export default function AtlasStoryMap({ story, onExplore, onCopy, onBack }: { st
     root.scrollTo({ top: cover.offsetHeight, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
     root.focus({ preventScroll: true });
   };
-  const sources = [...new Set(story.chapters.map(chapter => chapter.evidence.datasetId))].map(id => atlasDatasets.find(item => item.id === id)!);
   const storiesUrl = atlasStoriesHome;
+  const backToStories = <a className="atlas-story-back" href={storiesUrl} onClick={event => { if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) { event.preventDefault(); onBack(); } }}><ArrowLeft size={16} aria-hidden="true" />Back to all stories</a>;
   // The story fills the window below the UNBC header, as a PGMaps project
   // story does: one slim bar (back, the chapter rail between its previous and
   // next steps, and the story link), then one reader that scrolls from the
-  // cover through the chapters to the sources.
+  // cover through the chapters; the last one ends with the way back.
   return <article className="atlas-storymap">
     <div className="atlas-story-toolbar">
       <a className="atlas-story-back" href={storiesUrl} aria-label="All stories" onClick={event => { if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) { event.preventDefault(); onBack(); } }}><ArrowLeft size={16} aria-hidden="true" /><span className="atlas-story-bar-label">All stories</span></a>
       <button className="atlas-story-step" aria-label="Previous chapter" disabled={active === 0} onClick={() => select(active - 1)}><ChevronLeft size={18} aria-hidden="true" /></button>
-      <nav ref={chapterRail} className="atlas-story-chapters" data-testid="editorial-nav" aria-label="Story chapters">{story.chapters.map((chapter, index) => <button key={chapter.id} type="button" aria-current={index === active ? "location" : undefined} onClick={() => select(index)}>{index + 1}. {chapter.title}</button>)}</nav>
+      <nav ref={chapterRail} className="atlas-story-chapters" data-testid="editorial-nav" aria-label="Story chapters">{story.chapters.map((chapter, index) => <button key={chapter.id} type="button" aria-current={index === active ? "location" : undefined} onClick={() => select(index)}><span className="atlas-story-chapter-label">{index + 1}. {chapter.title}</span></button>)}</nav>
       <button className="atlas-story-step" aria-label="Next chapter" disabled={active === story.chapters.length - 1} onClick={() => select(active + 1)}><ChevronRight size={18} aria-hidden="true" /></button>
       <span className="unbc-sr-only" aria-live="polite">Chapter {active + 1} of {story.chapters.length}: {story.chapters[active]?.title}</span>
       <button className="atlas-story-copy" aria-label="Copy story link" title="Copy story link" onClick={onCopy}><Link2 size={16} aria-hidden="true" /><span className="atlas-story-bar-label">Copy story link</span></button>
     </div>
     <div ref={scrollRoot} className="editorial-story atlas-story-reader" data-theme="light" tabIndex={0} role="region" aria-label="Guided story reader" data-testid="story-reader" data-active-chapter={story.chapters[active]?.id}>
       <header className="atlas-story-cover"><div className="atlas-story-cover-copy"><p className="atlas-eyebrow">Guided story map · {story.topic}</p><h1>{story.title}</h1><p>{story.summary}</p><button className="atlas-primary" onClick={begin}>Begin reading <ChevronRight size={16} aria-hidden="true" /></button></div><nav className="atlas-story-contents" aria-label="Chapters"><p>{story.chapters.length} chapters</p><ol>{story.chapters.map((chapter, index) => <li key={chapter.id}><button onClick={() => select(index)}>{chapter.title}</button></li>)}</ol></nav></header>
-      <StorySidecar id={`storymap-${story.id}`} scrollRoot={scrollRoot} slides={story.chapters.map((chapter, index) => ({ id: chapter.id, media: <ChapterEvidence chapter={chapter} />, content: <div ref={element => { panels.current[index] = element?.closest<HTMLElement>(".editorial-slide") ?? null; }}><p className="atlas-eyebrow">Chapter {index + 1} / {story.chapters.length}</p><h2>{chapter.title}</h2>{chapter.takeaway && <div className="atlas-chapter-takeaway"><strong>{chapter.takeaway.value}</strong><span>{chapter.takeaway.label}</span></div>}{chapter.paragraphs.map((paragraph, p) => <p key={p}>{paragraph}</p>)}{onExplore && <button className="atlas-text-button" onClick={() => onExplore(chapter)}>Explore the source data <ArrowUpRight size={16} /></button>}{FLAGS.stories.storyMapValues && <ChapterValues chapter={chapter} />}</div> }))} />
-      <div className="atlas-storymap-sources"><h2>Sources</h2><p>Each source keeps its original period. Projections and scenarios are labelled where they appear.</p>{sources.map(dataset => <details key={dataset.id}><summary>{dataset.title} · {dataset.timeLabel}</summary><div><p>{dataset.description}</p><ul>{dataset.notes.map((note, index) => <li key={index}>{note}</li>)}</ul>{atlasDev && <p>Zoer dataset: <code>{dataset.datasetId}</code><br />Source table: <code>{dataset.tableName}</code></p>}{(atlasDev || !isZoerUrl(dataset.sourceUrl)) && <a href={dataset.sourceUrl} target="_blank" rel="noreferrer">Open source reference <ExternalLink size={14} /></a>}</div></details>)}<a className="atlas-story-back" href={storiesUrl} onClick={event => { if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) { event.preventDefault(); onBack(); } }}><ArrowLeft size={16} aria-hidden="true" />Back to all stories</a></div>
+      <StorySidecar id={`storymap-${story.id}`} scrollRoot={scrollRoot} slides={story.chapters.map((chapter, index) => ({ id: chapter.id, media: <ChapterEvidence chapter={chapter} nearby={byDistance(story.chapters, index)} />, content: <div ref={element => { panels.current[index] = element?.closest<HTMLElement>(".editorial-slide") ?? null; }}><p className="atlas-eyebrow">Chapter {index + 1} / {story.chapters.length}</p><h2>{chapter.title}</h2>{chapter.takeaway && <div className="atlas-chapter-takeaway"><strong>{chapter.takeaway.value}</strong><span>{chapter.takeaway.label}</span></div>}<ChapterText paragraphs={chapter.paragraphs} folded={phone} />{onExplore && <button className="atlas-text-button" onClick={() => onExplore(chapter)}>Explore the source data <ArrowUpRight size={16} /></button>}{FLAGS.stories.storyMapValues && <ChapterValues chapter={chapter} />}{index === story.chapters.length - 1 && <div className="atlas-chapter-end">{backToStories}</div>}</div> }))} />
     </div>
   </article>;
 }

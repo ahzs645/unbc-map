@@ -91,17 +91,22 @@ function PairedAgeWorkspace({ dataset, rows, compact = false, focusRegions, sele
     if (!expanded && element.open) element.close();
   }, [expanded]);
 
+  // Tabs on a narrow panel hide the other map rather than removing it, so
+  // switching between Share and Count reveals a drawn map, not a blank one.
   const maps = (inDialog = false) => <div className={`atlas-age-map-grid${narrow && !inDialog ? ' is-tabbed' : ''}`}>
-    {views.filter(view => inDialog || !narrow || activeView === view.id).map(view => <section
-      key={view.id} className={`atlas-age-map-side atlas-age-map-${view.id}`} aria-label={`${view.title} map (${view.unit})`}>
+    {views.map(view => {
+      const hidden = narrow && !inDialog && activeView !== view.id;
+      return <section key={view.id} className={`atlas-age-map-side atlas-age-map-${view.id}${hidden ? ' is-hidden' : ''}`} aria-label={`${view.title} map (${view.unit})`}
+        {...(hidden ? { 'aria-hidden': true, inert: '' } as Record<string, unknown> : {})}>
       <h3>{view.title} <span>({view.unit})</span></h3>
       <div className="atlas-age-map-stage"><AtlasMap key={`${fitRevision}-${inDialog ? 'expanded' : 'inline'}-${view.id}`}
         dataset={dataset} rows={rows} metric={view.metric} compact focusRegions={focusRegions}
         selectedRegion={selection} onSelectRegion={select} camera={camera} onCameraChange={next => publishCamera(next, view.id, inDialog)}
         // A story chapter's pair has no room for map controls; its expanded view does.
-        basemap={basemap} onBasemapChange={setBasemap} interactive controls={inDialog || !compact} dormant={dormant} />
+        basemap={basemap} onBasemapChange={setBasemap} interactive controls={inDialog || !compact} dormant={dormant || hidden} />
       </div>
-    </section>)}
+    </section>;
+    })}
   </div>;
 
   const values = <details className="atlas-age-map-values">

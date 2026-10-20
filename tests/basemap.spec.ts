@@ -14,7 +14,7 @@ test('story basemaps load and switching preserves the camera, canvas and data', 
   await expect(state).toHaveAttribute('data-rendered-features', /^[1-9]\d*$/);
   await expect(page.getByRole('combobox', { name: 'Basemap', exact: true })).toHaveValue('streets');
   const camera = await state.getAttribute('data-camera');
-  const canvas = await page.locator('.atlas-map-canvas canvas').elementHandle();
+  const canvas = await page.locator('.atlas-chapter-view:not(.is-dormant) .atlas-map-canvas canvas').elementHandle(); // hidden views are warmed in advance
   await page.getByRole('combobox', { name: 'Basemap', exact: true }).selectOption('dark');
   await expect(state).toHaveAttribute('data-basemap-status', 'ready');
   await expect(state).toHaveAttribute('data-basemap-features', /^[1-9]\d*$/);
@@ -23,8 +23,9 @@ test('story basemaps load and switching preserves the camera, canvas and data', 
   await expect(state).toHaveAttribute('data-basemap-format', 'vector');
   await expect(state).toHaveAttribute('data-raster-sources', '0');
   expect(await canvas!.evaluate(element => element.isConnected)).toBe(true);
-  await expect(page.locator('.maplibregl-ctrl-attrib')).toContainText('Test reference vector basemap');
-  await expect(page.locator('.maplibregl-ctrl-attrib')).toContainText('Province of British Columbia');
+  const attribution = page.locator('.atlas-chapter-view:not(.is-dormant) .maplibregl-ctrl-attrib');
+  await expect(attribution).toContainText('Test reference vector basemap');
+  await expect(attribution).toContainText('Province of British Columbia');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   expect(errors).toEqual([]);
 });

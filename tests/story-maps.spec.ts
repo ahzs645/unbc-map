@@ -24,7 +24,7 @@ test("reading changes the focused map without replacing its canvas, and shares t
   await expect(state).toHaveAttribute("data-ready", "true");
   await expect(state).toHaveAttribute("data-matched-count", "17");
   await expect(state).toHaveAttribute("data-rendered-features", /^[1-9]\d*$/);
-  const canvas = await page.locator(".atlas-map-canvas canvas").elementHandle();
+  const canvas = await page.locator(".atlas-chapter-view:not(.is-dormant) .atlas-map-canvas canvas").elementHandle(); // hidden views are warmed in advance
   await page.getByRole("button", { name: "Begin reading", exact: true }).click();
   // The full-page reader scrolls past its cover to the first chapter.
   await expect.poll(() => page.getByTestId("story-reader").evaluate(root => root.querySelector(".atlas-story-cover")!.getBoundingClientRect().bottom - root.getBoundingClientRect().top)).toBeLessThan(1);

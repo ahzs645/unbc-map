@@ -78,7 +78,7 @@ export default function AtlasMapComparison({ dataset, rows, metric, comparisonMe
     <div ref={stage} className="atlas-comparison-stage" data-testid={dormant ? undefined : "atlas-map-comparison"} data-reveal={reveal}
       data-scale-domain={JSON.stringify(domain)} style={{ position: 'relative', flex: 1, minHeight: 180, overflow: 'hidden' }}>
       <div className="atlas-comparison-map atlas-comparison-map-earlier" style={{ position: 'absolute', inset: 0 }}>
-        <AtlasMap dataset={dataset} rows={rows} metric={metric} compact focusRegions={focusRegions} scaleDomain={domain} onCameraChange={setCamera} basemap={basemap} onBasemapChange={setBasemap} dormant={dormant} />
+        <AtlasMap dataset={dataset} rows={rows} metric={metric} compact focusRegions={focusRegions} scaleDomain={domain} onCameraChange={setCamera} basemap={basemap} onBasemapChange={setBasemap} dormant={dormant} tipMetrics={[metric, comparisonMetric]} />
       </div>
       <div className="atlas-comparison-map atlas-comparison-map-later" aria-hidden="true"
         style={{ position: 'absolute', inset: 0, pointerEvents: 'none', clipPath: `inset(0 0 0 ${100 - reveal}%)` }}>

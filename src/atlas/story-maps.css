@@ -81,6 +81,51 @@
   font-size: 15px;
   line-height: 1.5;
 }
+.atlas-chapter-more {
+  margin: 4px 0 16px;
+}
+.atlas-chapter-more summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  color: #035642;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+.atlas-chapter-more summary::-webkit-details-marker {
+  display: none;
+}
+.atlas-chapter-more summary::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  flex: none;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.15s ease;
+}
+.atlas-chapter-more[open] summary::before {
+  transform: translateY(1px) rotate(225deg);
+}
+@media (max-width: 700px) {
+  /* On phones the takeaway is a line of emphasis, not a panel. */
+  .atlas-chapter-takeaway {
+    padding: 2px 0 2px 12px;
+    background: none;
+    gap: 0;
+  }
+  .atlas-chapter-takeaway strong {
+    font-size: 22px;
+  }
+  .atlas-chapter-takeaway span {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #525154;
+  }
+}
 .atlas-chapter-values {
   margin-top: 18px;
   font-size: 14px;
@@ -251,6 +296,11 @@
 }
 /* Swipe: drag the divider (or its handle) across the map; the handle is
    also a keyboard slider. The hit strip is wider than the line. */
+/* The hover card belongs to the earlier map, which the clipped later map
+   covers; lift it above both maps and the divider so it is never cut. */
+.atlas-comparison-map-earlier .maplibregl-popup {
+  z-index: 5;
+}
 .atlas-comparison-swipe {
   position: absolute;
   z-index: 4;
@@ -308,33 +358,6 @@
   padding: 6px;
   border-bottom: 1px solid #eae7e5;
   text-align: left;
-}
-.atlas-storymap-sources {
-  max-width: 1140px;
-  margin: 32px auto 0;
-  font-size: 15px;
-  line-height: 1.7;
-}
-.atlas-storymap-sources details {
-  border-bottom: 1px solid #eae7e5;
-  padding: 12px 0;
-}
-.atlas-storymap-sources summary {
-  cursor: pointer;
-  color: #035642;
-}
-.atlas-storymap-sources code {
-  overflow-wrap: anywhere;
-}
-.atlas-storymap-sources ul {
-  padding-left: 20px;
-  list-style: disc;
-}
-.atlas-storymap-sources li {
-  margin: 8px 0;
-}
-.atlas-storymap-sources a {
-  color: #035642;
 }
 .atlas-scenario-lab {
   container: scenario / inline-size;
@@ -472,7 +495,7 @@
     padding: 24px 16px 32px;
   }
   /* On phones the reader fills the screen once it is reached, gives the
-     evidence about half of it, and hands the scroll back to the page at
+     evidence about two-fifths of it, and hands the scroll back to the page at
      either end rather than trapping it. */
   .atlas-story-reader.editorial-story {
     /* The full screen below the sticky story toolbar. */
@@ -482,7 +505,7 @@
     scroll-margin-top: var(--atlas-story-bar, 52px);
     --editorial-nav: 1px;
     --editorial-top: 1px;
-    --atlas-media: clamp(300px, calc(var(--editorial-viewport, 640px) * 0.55), 440px);
+    --atlas-media: clamp(240px, calc(var(--editorial-viewport, 640px) * 0.4), 340px);
   }
   .atlas-story-reader .editorial-immersive {
     display: block;
@@ -674,9 +697,12 @@
     opacity: 0;
     cursor: pointer;
   }
+  /* Flex, not grid: the zero-size label would take a second grid row and
+     push the icon above centre. */
   .atlas-story-reader .editorial-immersive-media .editorial-expand[aria-expanded="false"] {
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 36px;
     height: 36px;
     min-height: 36px;
@@ -692,14 +718,28 @@
     -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7'/%3E%3C/svg%3E") center / contain no-repeat;
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7'/%3E%3C/svg%3E") center / contain no-repeat;
   }
-  /* On a map the expand icon takes the zoom buttons' corner. */
+  /* On a map the expand icon sits level with the basemap picker, in the
+     corner the hidden zoom buttons leave. */
   .atlas-story-reader .editorial-immersive-media:has(.atlas-chapter-viz.is-map) .editorial-expand[aria-expanded="false"] {
-    top: 58px;
+    top: 16px;
     right: 16px;
   }
   .atlas-story-reader .editorial-immersive-media:has(.atlas-chapter-viz.is-comparison) .editorial-expand[aria-expanded="false"] {
-    top: 83px;
+    top: 41px;
     right: 16px;
+  }
+  /* The paired maps' Share/Count tabs and the trends pager are each a 36px
+     row at the top of the panel; the icon ends that row. */
+  .atlas-story-reader .editorial-immersive-media:has(.atlas-chapter-viz.is-paired, .atlas-chapter-viz.is-trends) .editorial-expand[aria-expanded="false"] {
+    border: 1px solid #cdcfc4;
+  }
+  .atlas-story-reader .editorial-immersive-media:has(.atlas-chapter-viz.is-paired) .editorial-expand[aria-expanded="false"] {
+    top: 8px;
+    right: 8px;
+  }
+  .atlas-story-reader .editorial-immersive-media:has(.atlas-chapter-viz.is-trends) .editorial-expand[aria-expanded="false"] {
+    top: 16px;
+    right: 20px;
   }
   /* Charts and the paired maps, which carry their own controls, keep the
      icon in the heading row; leave it room. */
@@ -733,6 +773,10 @@
   display: flex;
   justify-content: flex-end;
 }
+/* The last chapter's text ends with the way back to the other stories. */
+.atlas-chapter-end {
+  margin-top: 20px;
+}
 .atlas-map-compact [data-testid="atlas-map-state"] > .atlas-map-legend,
 .atlas-map-compact [data-testid="atlas-map-state"] > .atlas-point-legend {
   flex: 1 1 auto;
@@ -741,7 +785,7 @@
 @media (max-width: 700px) {
   /* Phones keep the frame's icon toggle in the map corner. */
   .atlas-story-reader .editorial-expandable:not(.is-expanded) > .editorial-expand {
-    display: grid;
+    display: flex;
   }
   .atlas-story-reader .atlas-expand-media,
   .atlas-story-reader .atlas-chapter-actions {
@@ -793,6 +837,131 @@
   border: 2px solid #977000;
   background: #fff;
   box-shadow: 0 0 0 3px #f4efe1;
+}
+/* The one-area-at-a-time pager, and the key's short "Estimate", belong to a
+   phone's story panel only. */
+.atlas-trend-pager,
+.atlas-trend-key-short {
+  display: none;
+}
+@media (max-width: 700px) {
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-pager {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .atlas-trend-pager p {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  .atlas-trend-pager strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+  }
+  .atlas-trend-pager span {
+    font-size: 12px;
+    color: #525154;
+  }
+  .atlas-app .atlas-trend-pager button {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    border-radius: 2px;
+    background: var(--unbc-warm, #f0eee9);
+    color: #29292a;
+    cursor: pointer;
+  }
+  .atlas-app .atlas-trend-pager button:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel:not(.is-current) {
+    display: none;
+  }
+  /* The one area fills the panel: the chart takes whatever height is left
+     (keeping its proportions), the figures sit in two columns beneath it. */
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-chapter-viz.is-trends {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-multiples {
+    height: 100%;
+    box-sizing: border-box;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-multiples ul {
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr);
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel svg {
+    flex: 1 1 0;
+    min-height: 60px;
+    height: 100%;
+    max-height: none;
+  }
+  /* The pager names the area; the panel keeps only the total's note. */
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-heading h4,
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-heading:not(:has(span)) {
+    display: none;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel dl {
+    flex: none;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-multiples {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 8px 12px 10px;
+    gap: 8px;
+  }
+  /* The key is the top row, beside the expand icon; the area pager sits under
+     the chart, away from the story's own chapter arrows. */
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-pager {
+    order: 1;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key {
+    order: -1;
+    min-height: 36px;
+    padding-right: 44px;
+    flex-wrap: nowrap;
+    gap: 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    font-size: 12px;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key-long {
+    display: none;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key-short {
+    display: inline;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key i {
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+  }
 }
 .atlas-trend-multiples ul {
   list-style: none;

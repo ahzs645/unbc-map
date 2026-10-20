@@ -154,7 +154,9 @@ for(const story of expansionStoryMaps) for(const chapter of story.chapters) {
       // also differ by the fixed desktop/phone viewport; join counts stay exact.
       // The story map's size decides how many neighbours show around the three
       // Northern HSDAs; the chapter rail sits in the toolbar, not over the map.
-      const rendered = dataset.geography==='institution' ? mappedCounts[chapter.id] : dataset.geography==='hsda' ? (testInfo.project.name==='mobile' ? 10 : 8) : dataset.geography==='er' ? dataset.mapLocationsAsset==='boundaries-lfs-er-2021.geojson' ? 7 : 8 : dataset.geography==='hr2015' ? 3 : 7;
+      // Desktop maps take the full window once the header slides away; phone
+      // maps take two-fifths of the screen.
+      const rendered = dataset.geography==='institution' ? mappedCounts[chapter.id] : dataset.geography==='hsda' ? (testInfo.project.name==='mobile' ? 9 : 11) : dataset.geography==='er' ? dataset.mapLocationsAsset==='boundaries-lfs-er-2021.geojson' ? 7 : 8 : dataset.geography==='hr2015' ? 3 : 7;
       await expect(state).toHaveAttribute('data-rendered-features',String(rendered));await expect(state).toHaveAttribute('data-basemap-format','vector');await expect(state).toHaveAttribute('data-raster-sources','0');
       if(evidence.scaleDomain) await expect(state).toHaveAttribute('data-scale-domain',JSON.stringify(evidence.scaleDomain));
     } else await expect(source.getByTestId('atlas-map-state')).toHaveCount(0);
