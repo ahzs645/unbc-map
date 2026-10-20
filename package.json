@@ -7,7 +7,7 @@
     "packages/geo-toolkit"
   ],
   "scripts": {
-    "toolkit:build": "node scripts/build-toolkit.mjs",
+    "toolkit:build": "npm run build --workspace @pgmaps/geo-toolkit",
     "dev": "vite --host 127.0.0.1",
     "dev:all": "ATLAS_MANIFEST=all vite --host 127.0.0.1",
     "build": "npm run toolkit:build && tsc --noEmit && vite build && node scripts/prepare-spa-pages.mjs",
