@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { AtlasDataset, AtlasRow } from "./types";
 import { formatValue } from "./AtlasChart";
@@ -55,7 +55,19 @@ function TrendPanel({ panel, unit, current }: { panel: Panel; unit?: string; cur
   const estimates = panel.points.filter(point => !point.projection);
   const projection = panel.points.find(point => point.projection);
   const first = estimates[0], last = estimates.at(-1);
-  const width = 240, height = 92, left = 6, right = 6, top = 10, bottom = 20;
+  // The chart is drawn in its box's own pixels, so it can fill whatever room
+  // the panel gives it while its year labels and points keep their size.
+  const plot = useRef<HTMLDivElement>(null);
+  const [size, setSize] = useState({ width: 240, height: 92 });
+  useLayoutEffect(() => {
+    const element = plot.current;
+    if (!element) return;
+    const measure = () => { const width = element.clientWidth, height = element.clientHeight; if (width > 0 && height > 0) setSize(previous => previous.width === width && previous.height === height ? previous : { width, height }); };
+    measure();
+    const observer = new ResizeObserver(measure); observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+  const { width, height } = size, left = 6, right = 6, top = 10, bottom = 20;
   const values = panel.points.map(point => point.value);
   const low = Math.min(...values), high = Math.max(...values);
   const pad = (high - low || high * 0.02 || 1) * 0.18;
@@ -70,13 +82,13 @@ function TrendPanel({ panel, unit, current }: { panel: Panel; unit?: string; cur
   const summary = `${panel.name}: ${first ? `${formatValue(first.value, unit)} in the ${first.year} estimate` : ""}${last && last !== first ? `, ${formatValue(last.value, unit)} in the ${last.year} estimate` : ""}${projection ? `, ${formatValue(projection.value, unit)} in the ${projection.year} projection` : ""}.`;
   return <li className={`atlas-trend-panel${panel.note ? " is-total" : ""}${current ? " is-current" : ""}`}>
     <div className="atlas-trend-heading"><h4>{panel.name}</h4>{panel.note && <span>{panel.note}</span>}</div>
-    <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label={summary}>
+    <div ref={plot} className="atlas-trend-plot"><svg viewBox={`0 0 ${width} ${height}`} width={width} height={height} role="img" aria-label={summary}>
       {projection && <rect className="atlas-trend-band" x={x(at(projection)) - step / 2} y={0} width={width - (x(at(projection)) - step / 2)} height={height - bottom + 4} />}
       <polyline className="atlas-trend-line" points={estimates.map(point => `${x(at(point))},${y(point.value)}`).join(" ")} />
       {estimates.map(point => <circle key={point.year} className="atlas-trend-estimate" cx={x(at(point))} cy={y(point.value)} r={3.5} />)}
       {projection && <circle className="atlas-trend-projection" cx={x(at(projection))} cy={y(projection.value)} r={4.5} />}
       {panel.points.map((point, index) => (index === 0 || point === last || point === projection) && <text key={point.year} className="atlas-trend-year" x={x(index)} y={height - 5} textAnchor={index === 0 ? "start" : point === projection ? "end" : "middle"}>{point.year}</text>)}
-    </svg>
+    </svg></div>
     <dl>
       {first && last && <div><dt>Estimates {first.year}→{last.year}</dt><dd><span>{percent(estimateChange)}</span>{formatValue(first.value)} → {formatValue(last.value)}</dd></div>}
       {projection && <div className="is-projection"><dt>{last ? <>Projection {last.year}→{projection.year}</> : <>{projection.year} projection</>}</dt><dd><span>{percent(projectionChange)}</span>{formatValue(projection.value)}</dd></div>}

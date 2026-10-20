@@ -20,7 +20,7 @@ Nine guided stories contain fifty-nine source-backed chapters, using the PGMaps 
 | `education-and-health` | Education pipelines and Northern health context | Inspect labelled BC projections, verified institutional enrolment and Northern HA disease rates |
 | `facilities-and-investment` | Facilities, directory records and reported investment | Explore reviewed directory additions and original capital-project reporting windows |
 
-The chapter hash is shareable and restores inside the bounded story reader, including on phones. The maps remain mounted while readers change focus or measures. All maps have accessible regional-value tables and links to the data explorer; charts retain their source grain. Media expansion, keyboard controls and reduced-motion preferences are supported. Population projections have hollow chart points and dashed lines.
+The chapter hash is shareable and restores inside the bounded story reader, including on phones. The maps remain mounted while readers change focus or measures, and the map views a story needs are drawn in advance, so chapter changes recolour and move a drawn map rather than start a new one. [docs/story-maps.md](docs/story-maps.md) covers authoring, the reader on each screen size, the transition rules and testing. All maps have accessible regional-value tables and links to the data explorer; charts retain their source grain. Media expansion, keyboard controls and reduced-motion preferences are supported. Population projections have hollow chart points and dashed lines.
 
 The scenario reader preserves custom inputs in its URL, reproduces the three collected cases, validates inputs and displays travel and patient-time values separately. Its arithmetic is not an NHHR forecast or observed impact. Physical trial and hospital points use independently reviewed official identity/address and returned OpenStreetMap evidence. Travel lines follow source event order schematically; no road routes, facility catchments or Indigenous territory boundaries are inferred.
 
@@ -68,7 +68,7 @@ The completed mapping-gap review recovers the full official 2011 NSERC export, a
 
 ## Develop
 
-Requires Node.js 22.12 or newer and npm 11.19.0. Initialize the existing toolkit and logo submodules when cloning.
+Requires Node.js 22.12 or newer and npm 11.19.0. Initialize the existing toolkit and logo submodules when cloning. [AGENTS.md](AGENTS.md) sets out the working practice: checks before pushing, data regeneration, toolkit updates and which docs to update with a change.
 
 ```sh
 npm ci

@@ -838,107 +838,111 @@
   background: #fff;
   box-shadow: 0 0 0 3px #f4efe1;
 }
-/* The one-area-at-a-time pager, and the key's short "Estimate", belong to a
-   phone's story panel only. */
+/* In a story panel, at every width, the trends read one area at a time: the
+   regional total first, then each area, stepped with the pager under the
+   chart. The expanded view and the explorer keep the full grid. */
 .atlas-trend-pager,
 .atlas-trend-key-short {
   display: none;
 }
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-pager {
+  order: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.atlas-trend-pager p {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.atlas-trend-pager strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+}
+.atlas-trend-pager span {
+  font-size: 12px;
+  color: #525154;
+}
+.atlas-app .atlas-trend-pager button {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: var(--unbc-warm, #f0eee9);
+  color: #29292a;
+  cursor: pointer;
+}
+.atlas-app .atlas-trend-pager button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel:not(.is-current) {
+  display: none;
+}
+/* The one area fills the panel: the chart takes the height that is left and
+   the figures sit in two columns beneath it. */
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-chapter-viz.is-trends {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-multiples {
+  height: 100%;
+  box-sizing: border-box;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-multiples ul {
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+}
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  align-items: stretch;
+  justify-content: center;
+}
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-plot {
+  flex: 1 1 0;
+  min-height: 60px;
+  max-height: 360px;
+  aspect-ratio: auto;
+}
+/* The pager names the area; the panel keeps only the total's note. */
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-heading h4,
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-heading:not(:has(span)) {
+  display: none;
+}
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel dl {
+  flex: none;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+}
+/* The key is the top row. */
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key {
+  order: -1;
+  min-height: 36px;
+}
 @media (max-width: 700px) {
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-pager {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .atlas-trend-pager p {
-    flex: 1;
-    min-width: 0;
-    margin: 0;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 8px;
-    white-space: nowrap;
-  }
-  .atlas-trend-pager strong {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 15px;
-  }
-  .atlas-trend-pager span {
-    font-size: 12px;
-    color: #525154;
-  }
-  .atlas-app .atlas-trend-pager button {
-    display: grid;
-    place-items: center;
-    flex: none;
-    width: 36px;
-    height: 36px;
-    padding: 0;
-    border: 0;
-    border-radius: 2px;
-    background: var(--unbc-warm, #f0eee9);
-    color: #29292a;
-    cursor: pointer;
-  }
-  .atlas-app .atlas-trend-pager button:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel:not(.is-current) {
-    display: none;
-  }
-  /* The one area fills the panel: the chart takes whatever height is left
-     (keeping its proportions), the figures sit in two columns beneath it. */
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-chapter-viz.is-trends {
-    flex: 1 1 auto;
-    min-height: 0;
-  }
   .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-multiples {
-    height: 100%;
-    box-sizing: border-box;
-    grid-template-rows: auto minmax(0, 1fr) auto;
-  }
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-multiples ul {
-    min-height: 0;
-    grid-template-rows: minmax(0, 1fr);
-  }
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel {
-    grid-column: 1 / -1;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-  }
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel svg {
-    flex: 1 1 0;
-    min-height: 60px;
-    height: 100%;
-    max-height: none;
-  }
-  /* The pager names the area; the panel keeps only the total's note. */
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-heading h4,
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-heading:not(:has(span)) {
-    display: none;
-  }
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel dl {
-    flex: none;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 16px;
-  }
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-multiples {
-    grid-template-columns: minmax(0, 1fr);
     padding: 8px 12px 10px;
     gap: 8px;
   }
-  /* The key is the top row, beside the expand icon; the area pager sits under
-     the chart, away from the story's own chapter arrows. */
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-pager {
-    order: 1;
-  }
+  /* On a phone the key is one small line beside the expand icon. */
   .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key {
-    order: -1;
-    min-height: 36px;
     padding-right: 44px;
     flex-wrap: nowrap;
     gap: 12px;
@@ -1014,7 +1018,7 @@
 .atlas-trend-panel.is-total .atlas-trend-heading {
   grid-column: 1 / -1;
 }
-.atlas-trend-panel.is-total svg {
+.atlas-trend-panel.is-total .atlas-trend-plot {
   max-height: 96px;
 }
 .atlas-trend-heading {
@@ -1037,9 +1041,17 @@
   color: #525154;
   white-space: nowrap;
 }
-.atlas-trend-panel svg {
+.atlas-trend-plot {
+  position: relative;
   width: 100%;
-  height: auto;
+  aspect-ratio: 240 / 92;
+  min-width: 0;
+}
+/* The box sets the size and the chart is drawn to fit it (AtlasEstimateTrends),
+   so a size measured in one layout never props the box open in another. */
+.atlas-trend-panel svg {
+  position: absolute;
+  inset: 0;
   display: block;
   overflow: visible;
 }
@@ -1092,9 +1104,16 @@
 .atlas-trend-panel .is-projection dd span {
   color: #794e00;
 }
+/* The total's figures wrap rather than run off; a narrower grid stacks its
+   chart above them. */
 .atlas-trend-panel.is-total dl {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   column-gap: 16px;
+}
+@container (max-width: 760px) {
+  .atlas-trend-panel.is-total {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 @media (max-width: 700px) {
   .atlas-trend-multiples {
