@@ -195,6 +195,12 @@
   visibility: hidden;
   pointer-events: none;
 }
+
+/* Label placement sets `visibility` on each marker, which beats the hidden view
+   it inherits from and would float a hidden map's labels over the next chapter. */
+.atlas-chapter-view.is-dormant .maplibregl-marker {
+  visibility: hidden !important;
+}
 .atlas-chapter-viz .atlas-chart {
   padding: 18px;
 }

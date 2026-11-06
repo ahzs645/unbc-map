@@ -26,6 +26,23 @@ test("the stories page lists exactly the stories the manifest switches on", asyn
   if (!flags.site.campusLinks) await expect(page.locator(".unbc-chrome a", { hasText: /^Campus map$/ })).toHaveCount(0);
 });
 
+test("an unknown address says the page was not found", async ({ page }) => {
+  test.skip(!flags.projects.atlas || flags.locked.atlas, "the public Atlas is off or locked");
+  await page.goto("./no-such-page");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Page not found");
+  await expect(page).toHaveTitle("Page not found · NHHR Atlas");
+});
+
+test("each story page describes itself to link previews", async ({ page }) => {
+  const [id] = [...manifest.enabledStoryMaps];
+  test.skip(!id || !flags.projects.atlas || flags.locked.atlas, "no story map is published");
+  const html = await readFile(`dist/${id}/index.html`, "utf8");
+  const { scanned } = manifest as unknown as { scanned: { storyMapText: Map<string, { title: string; summary: string }> } };
+  const { title } = scanned.storyMapText.get(id)!;
+  expect(html).toContain(`<title>${title} · NHHR Atlas</title>`);
+  expect(html).toContain(`<meta property="og:title" content="${title} · NHHR Atlas"`);
+});
+
 test("switched-off stories are left out of the published files", async ({ page }) => {
   const scripts = (await readdir("dist/assets")).filter(name => name.endsWith(".js"));
   const bundle = (await Promise.all(scripts.map(name => readFile(`dist/assets/${name}`, "utf8")))).join("\n");
@@ -37,9 +54,14 @@ test("switched-off stories are left out of the published files", async ({ page }
   if (process.env.ATLAS_TEST_PASSWORD) expect(bundle).not.toContain(process.env.ATLAS_TEST_PASSWORD);
   if (!flags.pages.sources) for (const text of ["Start at the source.", "What's in this release.", "Read sources and methods"]) expect(bundle, "the switched-off Sources page").not.toContain(text);
   if (!flags.pages.explore) expect(bundle, "the switched-off explorer").not.toContain("Explore the data");
+  // public/ is copied whole, so the build has to remove what is switched off.
+  if (!flags.pages.sources) {
+    const published = await readdir("dist/data/nhhr");
+    expect(published.filter(name => !/^(?:boundaries-|locations-|travel-route-connections)/.test(name)), "data files outside the maps").toEqual([]);
+  }
   test.skip(!off.length || !flags.projects.atlas || flags.locked.atlas, "every story map is on, or the Atlas is locked");
   await page.goto(`./${off[0]}`);
-  await expect(page.getByText("This link does not match a story in the current collection.")).toBeVisible();
+  await expect(page.getByText("This page isn’t part of the Atlas.")).toBeVisible();
 });
 
 test("the explorer offers only the switched-on displays and controls", async ({ page }) => {

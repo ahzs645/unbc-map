@@ -47,7 +47,12 @@ type BoundaryProperties = { code: string; name: string; site?: string; city?: st
 type BoundaryCollection = FeatureCollection<Geometry, BoundaryProperties>;
 type ConnectionCollection = FeatureCollection<Geometry, { segment_id: string; event_ids: string[]; route_slug: string; service_day: string }>;
 const BC_BOUNDS: [[number, number], [number, number]] = [[-139.1, 48.1], [-114.0, 60.2]];
-const MISSING_COLOR = '#d8e1e4';
+// Missing has to read as a different thing from a low value, so it sits outside
+// the blue-teal ramp. The legend uses these opacities too: the same colours at
+// a lower opacity over the basemap would not match what it shows.
+const MISSING_COLOR = '#b5afa4';
+const MISSING_OPACITY = 0.38;
+const VALUE_OPACITY = 0.82;
 
 // Story chapters and explorer views often share one boundary file. Each file
 // is fetched and normalized once per page, so moving between them reuses it.
@@ -212,6 +217,8 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
   const min = validDomain ? validDomain[0] : values.length ? Math.min(...values) : 0;
   const max = validDomain ? validDomain[1] : values.length ? Math.max(...values) : 0;
   const diverging = min < 0 && max > 0;
+  // A chapter can cap its scale so one outlier does not flatten every other region.
+  const capped = !!validDomain && values.some(value => value > max);
   const colorStops = diverging ? ['#b86842', '#f3efda', '#165d68'] : basemap === 'dark' ? ['#334e4a', '#509780', '#9bdbc9'] : ['#d8edf0', '#238495', '#124653'];
   const pointColor = basemap === 'dark' ? '#85c9b4' : '#035642';
   const selectedRow = rows.find(row => String(row[dataset.entityField]) === selectedRegion);
@@ -309,7 +316,7 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
         map.addLayer({ id: 'nhhr-institution-hit', type: 'circle', source: 'nhhr-boundaries', paint: { 'circle-radius': ['max', 12, ['coalesce', ['get', 'radius'], 0]], 'circle-opacity': 0 } }, labels);
         map.addLayer({ id: 'nhhr-institution-selected', type: 'circle', source: 'nhhr-boundaries', filter: ['any', ['==', ['get', 'selected'], true], ['==', ['get', 'focused'], true]], paint: { 'circle-radius': ['+', 4, ['max', 3, ['coalesce', ['get', 'radius'], 0]]], 'circle-opacity': 0, 'circle-stroke-color': '#977000', 'circle-stroke-width': 2 } }, labels);
       } else {
-        map.addLayer({ id: 'nhhr-region-fill', type: 'fill', source: 'nhhr-boundaries', paint: { 'fill-color': MISSING_COLOR, 'fill-opacity': ['case', ['==', ['feature-state', 'value'], null], 0.1, 0.48] } }, labels);
+        map.addLayer({ id: 'nhhr-region-fill', type: 'fill', source: 'nhhr-boundaries', paint: { 'fill-color': MISSING_COLOR, 'fill-opacity': ['case', ['==', ['feature-state', 'value'], null], MISSING_OPACITY, VALUE_OPACITY] } }, labels);
         map.addLayer({ id: 'nhhr-region-line', type: 'line', source: 'nhhr-boundaries', paint: { 'line-color': '#6d9399', 'line-width': 0.8 } }, labels);
         // Feature state cannot filter, so the outlines are drawn for every region and shown by opacity.
         map.addLayer({ id: 'nhhr-selected-line', type: 'line', source: 'nhhr-boundaries', paint: { 'line-color': '#172c35', 'line-width': 3, 'line-opacity': ['case', ['boolean', ['feature-state', 'selected'], false], 1, 0] } }, labels);
@@ -529,9 +536,9 @@ export default function AtlasMap({ dataset, metric, rows, selectedRegion, onSele
       </div> : <div className="atlas-map-legend" aria-label="Map legend" style={{ display: 'flex', gap: compact ? 8 : 12, alignItems: 'center', flexWrap: 'wrap', ...(compact ? { fontSize: 13 } : {}) }}>
         <strong>{metricColumn?.label || metric}{metricColumn?.unit && metricColumn.unit !== '%' ? ` (${metricColumn.unit})` : ''}</strong>
         <span>{format(values.length || validDomain ? min : null, metricColumn?.unit)}</span>
-        <span aria-hidden="true" style={{ width: 100, height: 10, borderRadius: 6, background: min === max ? colorStops[1] : `linear-gradient(90deg, ${colorStops.join(',')})` }} />
-        <span>{format(values.length || validDomain ? max : null, metricColumn?.unit)}</span>
-        <span><i aria-hidden="true" style={{ display: 'inline-block', width: 10, height: 10, background: MISSING_COLOR, marginRight: 5 }} />No data</span>
+        <span aria-hidden="true" style={{ width: 100, height: 10, borderRadius: 6, opacity: VALUE_OPACITY, background: min === max ? colorStops[1] : `linear-gradient(90deg, ${colorStops.join(',')})` }} />
+        <span>{format(values.length || validDomain ? max : null, metricColumn?.unit)}{capped ? ' or more' : ''}</span>
+        <span><i aria-hidden="true" style={{ display: 'inline-block', width: 10, height: 10, background: MISSING_COLOR, opacity: MISSING_OPACITY, marginRight: 5 }} />No data</span>
       </div>}
       {legendAction}
       {!compact && <><p className="atlas-map-join-note" style={{ fontSize: 14, marginBottom: 8 }}>{join.matched} {isStop ? 'source rows with reviewed stop references' : `exact ${isPoint ? `${pointNoun} location matches` : 'boundary joins'}`} · {join.unmatched} unmatched rows · {join.missing} missing values{join.ambiguous > 0 ? ` · ${join.ambiguous} ambiguous rows withheld (filter to one observation per ${isPoint ? pointNoun : 'region'})` : ''}.</p>

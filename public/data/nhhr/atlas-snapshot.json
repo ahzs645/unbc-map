@@ -30,7 +30,7 @@
         },
         {
           "key": "works",
-          "label": "Works",
+          "label": "Publications",
           "type": "number",
           "unit": "works"
         },
@@ -3283,12 +3283,13 @@
       "kicker": "Workforce · regional evidence",
       "summary": "Compare Northern health regions with the rest of BC, using the source’s 2024 physician rates.",
       "body": [
-        "The Northern profile spans Northwest, Northern Interior, and Northeast health service delivery areas. The map joins public regional counts and rates to their corresponding HSDA boundaries.",
-        "In the collected 2024 source, Northern specialist rates range from 26.5 to 95.9 per 100,000 people. Explore each region rather than treating Northern BC as one uniform workforce.",
+        "Northeast has the lowest specialist rate of BC's 16 health service delivery areas: 26.5 per 100,000 people in the 2024 source, less than half the next lowest, Northwest at 53.9.",
+        "Northern specialist rates range from 26.5 to 95.9 per 100,000 people across the Northwest, Northern Interior, and Northeast health service delivery areas, so Northern BC is not one uniform workforce.",
         "Physician supply helps frame feasibility questions. It does not measure vacancies, appointment waits, research coordinator capacity, or the impact of NHHR. Those require validation evidence."
       ],
       "datasetId": "physicians-hsda",
       "metric": "specialists_per_100k_2024",
+      "chartOrder": "low",
       "featured": true
     },
     {
@@ -3297,9 +3298,9 @@
       "kicker": "Clinical research · exact-city sites",
       "summary": "The collected registry snapshot contains 10 studies with a Prince George site. What could expand local trial access?",
       "body": [
-        "Prince George has 10 exact-city study matches in the collected summary, including 7 coded oncology studies. Open the study portfolio to inspect titles, facilities, domains, and public registry links.",
+        "Prince George has 10 exact-city study matches in the collected summary, including 7 coded oncology studies.",
         "City-site counts establish a recorded footprint. They do not show local enrollment, protocol eligibility, screening failures, operating capacity, or whether a listed trial is available now.",
-        "Use the evidence tracker to identify the next questions for institutions: enrollment and referral pathways, staffing, governance requirements, and community priorities. Interview findings are not included in this public snapshot."
+        "The next questions are for institutions: enrollment and referral pathways, staffing, governance requirements, and community priorities. Interview findings are not included in this public snapshot."
       ],
       "datasetId": "clinical-city",
       "metric": "exact_city_site_studies",
@@ -3309,11 +3310,11 @@
       "id": "research-scale",
       "title": "Research capacity in context",
       "kicker": "Research capacity · institutions",
-      "summary": "Read publications, CIHR payments, and NSERC awards as complementary evidence of institutional scale.",
+      "summary": "Read publications and research funding as complementary evidence of institutional scale.",
       "body": [
         "The collected OpenAlex table records 523 UNBC-affiliated works in 2025. Compare the five-year series with selected institutions, keeping institutional scope and overlapping affiliations in view.",
         "CIHR payments describe recorded fiscal-year cash flow, while NSERC amounts describe the source award measure. Different measures and broad institutional mandates make a single combined league table misleading.",
-        "CIHR 2025 project records all carry zero payments in this collected summary. The explorer excludes that year from the paid series because payment coverage is incomplete. Public funding and publications do not establish NHHR-attributable returns."
+        "CIHR 2025 project records all carry zero payments in this collected summary, so that year is left out of the paid series: payment coverage is incomplete. Public funding and publications do not establish NHHR-attributable returns."
       ],
       "datasetId": "publications",
       "metric": "works",
@@ -3323,11 +3324,11 @@
       "id": "regional-denominators",
       "title": "Count people once before calculating a rate",
       "kicker": "Population · data quality",
-      "summary": "A verified source-row check corrects a doubled Northern population denominator and enables LHA mapping.",
+      "summary": "A verified source-row check corrects a doubled Northern population denominator.",
       "body": [
         "The collected health-authority summary reports Northern at 596,414 in 2025. Tracing it to the original BC Stats rows shows Female + Male + Total were added together. The Gender=T source total is 298,207.",
         "The same duplication appears in the selected LHA summary. Prince George LHA is 105,544 in the raw total row, compared with 211,088 in the earlier summary. The atlas uses one total row per LHA and year.",
-        "Explore the Northern LHA map with the source estimate/projection type visible. These are health-area populations, not municipal populations or NHHR participants, and 2025 is a projection."
+        "Each figure keeps its source estimate or projection label. These are health-area populations, not municipal populations or NHHR participants, and 2025 is a projection."
       ],
       "datasetId": "population-lha",
       "metric": "population"

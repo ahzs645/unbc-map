@@ -49,4 +49,6 @@ export interface AtlasStory {
   featured?: boolean;
   visualization?: "pairedAgeMaps";
   mapFilters?: Record<string, string>;
+  /** Opening bar order, for a story whose finding is the top or bottom of the list. */
+  chartOrder?: "low" | "high";
 }

@@ -24,7 +24,7 @@ Core data reviewed on **11 October 2026**, with supplementary evidence and locat
 | `chsa-connections.json` | 2 | 4,459 |
 | Total | 71 | 10,382 |
 
-Six short stories are retained in the core snapshot and 36 more are authored in the Atlas modules; nine guided routes contain 62 chapters. Atlas maps use vector Streets and Dark basemaps, defaulting to Streets. The original campus map retains its existing imagery options.
+Six short stories are retained in the core snapshot and 36 more are authored in the Atlas modules; fifteen guided routes contain 101 chapters. Atlas maps use vector Streets and Dark basemaps, defaulting to Streets. The original campus map retains its existing imagery options.
 
 The authoritative NHHR Data Space manifest lists **86 datasets, 3,382 tables, and 46,415,914 table rows** at revision 93, updated 7 October 2026. These are **inventory counts with overlapping raw/derived data and cached workbook grids**, not unique scientific observations and not the number of records loaded by this atlas.
 

@@ -6,7 +6,7 @@ What the published site contains is set in [`manifest/`](manifest/README.md): wh
 
 ## Guided story maps
 
-Nine guided stories contain fifty-nine source-backed chapters, using the PGMaps GeoToolkit's reusable sidecar, chapter navigation and reading-section components:
+Fifteen guided stories contain 101 source-backed chapters, using the PGMaps GeoToolkit's reusable sidecar, chapter navigation and reading-section components:
 
 | Route under `/` (or `/dev/projects/`) | Story | Interaction |
 | --- | --- | --- |
@@ -19,14 +19,20 @@ Nine guided stories contain fifty-nine source-backed chapters, using the PGMaps 
 | `workforce-context` | Workforce measures answer different questions | Compare observed professional supply, wages, worked hours, vacancies and historical cancer measures |
 | `education-and-health` | Education pipelines and Northern health context | Inspect labelled BC projections, verified institutional enrolment and Northern HA disease rates |
 | `facilities-and-investment` | Facilities, directory records and reported investment | Explore reviewed directory additions and original capital-project reporting windows |
+| `two-northern-cities` | Two northern cities, two trial portfolios | Compare Prince George and Thunder Bay across registered studies, sites, sponsors and university scale |
+| `the-northeast-gap` | The Northeast gap | Follow physician, nursing and allied-health rates beside the youngest population in the North |
+| `the-norths-lungs` | The North’s lungs | Read archived cancer rates with confidence intervals, COPD and asthma trends, and community COPD prevalence |
+| `waiting-for-surgery` | Waiting for surgery | Compare Northern Health list sizes, medians and 90th percentiles with suppressed groups kept missing |
+| `what-care-costs` | What care costs | Compare cost per weighted case by authority and site, then capital project values |
+| `keeping-the-workforce` | Keeping the workforce | Set BC overtime, vacancies, migration and projected entrants beside what can be seen for the North |
 
-The chapter hash is shareable and restores inside the bounded story reader, including on phones. The maps remain mounted while readers change focus or measures, and the map views a story needs are drawn in advance, so chapter changes recolour and move a drawn map rather than start a new one. [docs/story-maps.md](docs/story-maps.md) covers authoring, the reader on each screen size, the transition rules and testing. All maps have accessible regional-value tables and links to the data explorer; charts retain their source grain. Media expansion, keyboard controls and reduced-motion preferences are supported. Population projections have hollow chart points and dashed lines.
+The chapter hash is shareable and restores inside the bounded story reader, including on phones. The maps remain mounted while readers change focus or measures, and the map views a story needs are drawn in advance, so chapter changes recolour and move a drawn map rather than start a new one. The last six read across datasets and are switched off in `manifest/content.json` for now, so they appear only in `npm run dev:all` and `npm run build:all`. [docs/story-maps.md](docs/story-maps.md) covers authoring, the reader on each screen size, the transition rules and testing. All maps have accessible regional-value tables and links to the data explorer; charts retain their source grain. Media expansion, keyboard controls and reduced-motion preferences are supported. Population projections have hollow chart points and dashed lines.
 
 The scenario reader preserves custom inputs in its URL, reproduces the three collected cases, validates inputs and displays travel and patient-time values separately. Its arithmetic is not an NHHR forecast or observed impact. Physical trial and hospital points use independently reviewed official identity/address and returned OpenStreetMap evidence. Travel lines follow source event order schematically; no road routes, facility catchments or Indigenous territory boundaries are inferred.
 
 ## Explore the evidence
 
-- Browse forty evidence stories connecting regional context, research capacity, clinical trials and verified sites, population, patient travel, surgical waits, hospital directory/cost records, nursing supply and university research income.
+- Browse forty-two evidence stories connecting regional context, research capacity, clinical trials and verified sites, population, patient travel, surgical waits, hospital directory/cost records, nursing supply and university research income.
 - Search and filter the reviewed source views (current counts are generated in `public/data/nhhr/catalogue-review.json`), select a measure, compare entities and periods, and switch between Map, Chart and Table views. The same subset drives every view and the CSV export. Source summaries and supporting rows overlap; the count is not independent people, trials or journeys. Graduate and occupation projections, historical fiscal records and observed measures retain separate definitions.
 - Explore physician measures on BC Health Service Delivery Area polygons and population measures on Local Health Area polygons. Map publication, CIHR, NSERC and CAUBO research-income institutional comparators at reviewed representative campus or research-site locations, including verified McMaster context.
 - Explore 54 verified physical hospital directory sites plus eight independently verified HealthLink additions, 363 original facility/fiscal-year cost records, three verified trial facilities and historical schedule references with explicit town/facility precision. Broad or unresolved descriptions remain in the source records without invented points.
@@ -64,7 +70,7 @@ The trial release maps nine original study-site relationships at three verified 
 
 The travel release preserves 286 historical schedule events, with 280 located references: 184 coarse town references and 96 facility/address references. Six events at two unresolved labels remain unmapped. Its 58 location groups use 56 reference points, and 28 schematic segments retain recorded order across 26 legs. Arrival/departure records remain separate; no road paths, distances, journey durations, passengers or service frequency are inferred. See the [travel provenance](public/data/nhhr/travel-network-provenance.json), [location evidence](public/data/nhhr/locations-travel-stops.README.md), [stop geometry](public/data/nhhr/locations-travel-stops.geojson) and [schematic connections](public/data/nhhr/travel-route-connections.geojson).
 
-The completed mapping-gap review recovers the full official 2011 NSERC export, adds two clearly attributed PHSA CHSA rate views on matching 2018 display boundaries, and verifies six additional civic-address parcel references for capital records. The release contains 71 explorer views / 10,382 source rows, 42 short stories and 62 chapters across nine guides. The 29 publicly listed Northern CHSAs do not provide complete Northern coverage; newer PGMaps boundary codes cannot replace changed 2018 areas. See [the completion report](docs/nhhr-mapping-gap-completion.md) and [CHSA boundary provenance](public/data/nhhr/boundaries-chsa-2018.README.md).
+The completed mapping-gap review recovers the full official 2011 NSERC export, adds two clearly attributed PHSA CHSA rate views on matching 2018 display boundaries, and verifies six additional civic-address parcel references for capital records. The release contains 71 explorer views / 10,382 source rows, 42 short stories at that release, and 62 chapters across nine guides; the six cross-dataset guides added since bring that to 101 chapters across fifteen. The 29 publicly listed Northern CHSAs do not provide complete Northern coverage; newer PGMaps boundary codes cannot replace changed 2018 areas. See [the completion report](docs/nhhr-mapping-gap-completion.md) and [CHSA boundary provenance](public/data/nhhr/boundaries-chsa-2018.README.md).
 
 ## Develop
 
@@ -160,7 +166,7 @@ The [facility-condition release](public/data/nhhr/trial-facility-conditions.json
 
 The [complete review](docs/nhhr-catalogue-review.md) covers all **85 public NHHR Zoer dataset entries**, matched by exact dataset UUID. C058 has seven distinct dataset UUIDs under one source-family label; those entries are not collapsed by the family name. The authorized manifest remains revision 93. Original scientific files and table lineage were inspected by source family; the manifest does not embed those measurements.
 
-The Atlas now contains **71 explorer views / 10,382 loaded source rows**, with **69 primary views from 46 Zoer collections and two separately attributed PHSA supplements**, **42 short stories and 62 chapters across nine guided routes**. These are bounded selections at overlapping grains, not distinct people, grants, publications or studies. The UNBC design and logo remain intact; Atlas basemaps remain vector-only.
+The Atlas now contains **71 explorer views / 10,382 loaded source rows**, with **69 primary views from 46 Zoer collections and two separately attributed PHSA supplements**, **42 short stories and 101 chapters across fifteen guided routes**. These are bounded selections at overlapping grains, not distinct people, grants, publications or studies. The UNBC design and logo remain intact; Atlas basemaps remain vector-only.
 
 New guided routes are `/dev/projects/community-context`, `/dev/projects/research-resources` and `/dev/projects/workforce-context`. They connect municipal and Census housing context, workforce/source definitions and separate research-resource measures. Maps, charts, source records, CSV downloads and shared URLs keep the same subset. Month and quarter charts retain original labels and missing periods; defaults on an entity field are visible in the entity selector rather than hidden filters.
 

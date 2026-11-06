@@ -30,6 +30,7 @@ export function scanContent() {
   const datasetIds = new Set();
   const stories = new Map();
   const storyMaps = new Map();
+  const storyMapText = new Map();
   for (const name of readdirSync(snapshotDir).filter(file => file.endsWith(".json"))) {
     const json = readJson(`${snapshotDir}/${name}`);
     for (const dataset of json.datasets ?? []) datasetIds.add(dataset.id);
@@ -62,11 +63,12 @@ export function scanContent() {
     const visit = node => {
       const kind = contentKind(node);
       if (kind) (kind === "story" ? stories : storyMaps).set(propertyText(node, "id"), datasetsOf(node));
+      if (kind === "storyMap") storyMapText.set(propertyText(node, "id"), { title: propertyText(node, "title"), summary: propertyText(node, "summary") });
       ts.forEachChild(node, visit);
     };
     visit(file);
   }
-  return { datasetIds, stories, storyMaps };
+  return { datasetIds, stories, storyMaps, storyMapText };
 }
 
 function propertyText(object, name) {

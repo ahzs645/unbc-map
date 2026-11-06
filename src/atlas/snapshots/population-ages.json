@@ -17,7 +17,8 @@
         "Age groups exactly partition the source Total: 0–19, 20–64, and 65+, with terminal 90+ included once. All 102 totals, area names and source types match the existing vetted LHA population dataset.",
         "Age 65+ share is calculated as 100 × population_65_plus / Total, stored as percentage points (0–100) and rounded to 6 decimal places. Counts are exact source integers.",
         "SourceType is retained: 2025 is a Projection in this collected source, not an observed census count. Boundary capture and population reference periods are distinct.",
-        "Age structure is demographic context; it does not measure health-service use, disease prevalence, research participants, dependency or NHHR effects."
+        "Age structure is demographic context; it does not measure health-service use, disease prevalence, research participants, dependency or NHHR effects.",
+        "Small-area age estimates can shift between years without a matching change in people. Telegraph Creek LHA moves from 91 people aged 65+ in 2020 to 262 in 2021 while its total barely changes; the jump is in the BC Stats file, continues through its projections and is concentrated at ages 81–84 and 90+. Fort Nelson (613 to 778, 2021–2022) and Nechako (2,710 to 3,194, 2021–2022) show smaller steps. Read these as breaks in the series rather than ageing, and treat percentages for very small areas with caution."
       ],
       "columns": [
         {

@@ -77,7 +77,7 @@ def build(input_dir):
     add('publications', 'publications', 'Research publications by institution',
         'Annual OpenAlex work counts for eight selected institutional comparators.',
         'Research capacity', 'institution', 'observed', '2021–2025 · collected April 2026', 'OpenAlex · NHHR derived summary', 'https://openalex.org/',
-        [column('comparator','Institution / city'),column('publication_year','Publication year'),column('works','Works',True,'works'),column('display_name','OpenAlex institution'),column('openalex_id','OpenAlex ID')],
+        [column('comparator','Institution / city'),column('publication_year','Publication year'),column('works','Publications',True,'works'),column('display_name','OpenAlex institution'),column('openalex_id','OpenAlex ID')],
         'works','comparator',[
         'Institution-affiliated works cover all research fields, not health research alone. They are not NHHR-attributable outputs.',
         'Institution counts overlap when a work has multiple affiliations; do not sum them into a regional total.',
@@ -204,23 +204,28 @@ def build(input_dir):
     pg_city=selected('clinical-city','query_city','Prince George')[0]
     northern=[r for r in by_id['physicians-hsda']['rows'] if str(r['health_region_code']).startswith('595')]
     unbc=next(r for r in selected('publications','publication_year','2025') if r['openalex_id']=='I151934421')
+    # Story wording has to hold in every build: the published manifest ships a
+    # table-only explorer and fewer datasets, so a story cannot send readers to
+    # a filter, map or dataset that might not be there.
+    by_specialists=sorted(by_id['physicians-hsda']['rows'],key=lambda r:r['specialists_per_100k_2024'])
+    lowest,next_lowest=by_specialists[0],by_specialists[1]
     stories=[
         dict(id='northern-workforce',title='Where specialist supply is thinnest',kicker='Workforce · regional evidence',summary='Compare Northern health regions with the rest of BC, using the source’s 2024 physician rates.',body=[
-            'The Northern profile spans Northwest, Northern Interior, and Northeast health service delivery areas. The map joins public regional counts and rates to their corresponding HSDA boundaries.',
-            'In the collected 2024 source, Northern specialist rates range from '+f"{min(r['specialists_per_100k_2024'] for r in northern):.1f} to {max(r['specialists_per_100k_2024'] for r in northern):.1f}"+' per 100,000 people. Explore each region rather than treating Northern BC as one uniform workforce.',
-            'Physician supply helps frame feasibility questions. It does not measure vacancies, appointment waits, research coordinator capacity, or the impact of NHHR. Those require validation evidence.'],datasetId='physicians-hsda',metric='specialists_per_100k_2024',featured=True),
+            f"{lowest['health_region'].removesuffix(' HSDA')} has the lowest specialist rate of BC's {len(by_specialists)} health service delivery areas: {lowest['specialists_per_100k_2024']:.1f} per 100,000 people in the 2024 source, less than half the next lowest, {next_lowest['health_region'].removesuffix(' HSDA')} at {next_lowest['specialists_per_100k_2024']:.1f}.",
+            'Northern specialist rates range from '+f"{min(r['specialists_per_100k_2024'] for r in northern):.1f} to {max(r['specialists_per_100k_2024'] for r in northern):.1f}"+' per 100,000 people across the Northwest, Northern Interior, and Northeast health service delivery areas, so Northern BC is not one uniform workforce.',
+            'Physician supply helps frame feasibility questions. It does not measure vacancies, appointment waits, research coordinator capacity, or the impact of NHHR. Those require validation evidence.'],datasetId='physicians-hsda',metric='specialists_per_100k_2024',chartOrder='low',featured=True),
         dict(id='clinical-access',title='A small registered portfolio, a concrete starting point',kicker='Clinical research · exact-city sites',summary=f"The collected registry snapshot contains {pg_city['exact_city_site_studies']} studies with a Prince George site. What could expand local trial access?",body=[
-            f"Prince George has {pg_city['exact_city_site_studies']} exact-city study matches in the collected summary, including {pg_city['oncology_studies']} coded oncology studies. Open the study portfolio to inspect titles, facilities, domains, and public registry links.",
+            f"Prince George has {pg_city['exact_city_site_studies']} exact-city study matches in the collected summary, including {pg_city['oncology_studies']} coded oncology studies.",
             'City-site counts establish a recorded footprint. They do not show local enrollment, protocol eligibility, screening failures, operating capacity, or whether a listed trial is available now.',
-            'Use the evidence tracker to identify the next questions for institutions: enrollment and referral pathways, staffing, governance requirements, and community priorities. Interview findings are not included in this public snapshot.'],datasetId='clinical-city',metric='exact_city_site_studies',featured=True),
-        dict(id='research-scale',title='Research capacity in context',kicker='Research capacity · institutions',summary='Read publications, CIHR payments, and NSERC awards as complementary evidence of institutional scale.',body=[
+            'The next questions are for institutions: enrollment and referral pathways, staffing, governance requirements, and community priorities. Interview findings are not included in this public snapshot.'],datasetId='clinical-city',metric='exact_city_site_studies',featured=True),
+        dict(id='research-scale',title='Research capacity in context',kicker='Research capacity · institutions',summary='Read publications and research funding as complementary evidence of institutional scale.',body=[
             f"The collected OpenAlex table records {unbc['works']} UNBC-affiliated works in 2025. Compare the five-year series with selected institutions, keeping institutional scope and overlapping affiliations in view.",
             'CIHR payments describe recorded fiscal-year cash flow, while NSERC amounts describe the source award measure. Different measures and broad institutional mandates make a single combined league table misleading.',
-            'CIHR 2025 project records all carry zero payments in this collected summary. The explorer excludes that year from the paid series because payment coverage is incomplete. Public funding and publications do not establish NHHR-attributable returns.'],datasetId='publications',metric='works',featured=True),
-        dict(id='regional-denominators',title='Count people once before calculating a rate',kicker='Population · data quality',summary='A verified source-row check corrects a doubled Northern population denominator and enables LHA mapping.',body=[
+            'CIHR 2025 project records all carry zero payments in this collected summary, so that year is left out of the paid series: payment coverage is incomplete. Public funding and publications do not establish NHHR-attributable returns.'],datasetId='publications',metric='works',featured=True),
+        dict(id='regional-denominators',title='Count people once before calculating a rate',kicker='Population · data quality',summary='A verified source-row check corrects a doubled Northern population denominator.',body=[
             'The collected health-authority summary reports Northern at 596,414 in 2025. Tracing it to the original BC Stats rows shows Female + Male + Total were added together. The Gender=T source total is 298,207.',
             'The same duplication appears in the selected LHA summary. Prince George LHA is 105,544 in the raw total row, compared with 211,088 in the earlier summary. The atlas uses one total row per LHA and year.',
-            'Explore the Northern LHA map with the source estimate/projection type visible. These are health-area populations, not municipal populations or NHHR participants, and 2025 is a projection.'],datasetId='population-lha',metric='population'),
+            'Each figure keeps its source estimate or projection label. These are health-area populations, not municipal populations or NHHR participants, and 2025 is a projection.'],datasetId='population-lha',metric='population'),
         dict(id='travel-assumptions',title='What would reducing travel be worth?',kicker='Access and travel · hypothetical cases',summary='Explore three planning cases and the assumptions that drive modelled travel and patient time values.',body=[
             'The base case assumes 300 patients reached, 450 avoided trips, and $900 per trip, producing $405,000 in modelled travel value. Its patient-time calculation assumes six hours per person at $35 per hour, producing $63,000.',
             'These calculations illustrate how assumptions affect potential value. They are not observed benefits, forecasts, or evidence that NHHR has avoided any trips. The doubled population field in the original scenario source is omitted.',
