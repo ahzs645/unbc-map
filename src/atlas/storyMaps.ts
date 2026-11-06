@@ -4,6 +4,7 @@ import type { AtlasRow } from "./types";
 import { scrubZoer } from "./mode";
 import { expansionStoryMaps } from './expansionStoryMaps';
 import { followupStoryMaps } from './followupStoryMaps';
+import { evidenceStoryMaps } from './evidenceStoryMaps';
 
 export interface StoryMapChapter {
   id: string;
@@ -19,6 +20,8 @@ export interface StoryMapChapter {
     comparisonMetric?: string;
     scaleDomain?: [number, number];
     filters?: Record<string, string>;
+    /** Opening bar order, for a chart whose finding is the top or bottom of the list. */
+    order?: "low" | "high";
   };
   takeaway?: { value: string; label: string };
 }
@@ -93,6 +96,15 @@ const northeastProjection = sum(
 
 const physicians = rows("physicians-hsda");
 const northernRegions = ["Northwest HSDA", "Northern Interior HSDA", "Northeast HSDA"];
+const bySpecialistRate = [...physicians].sort((a, b) => (number(a, "specialists_per_100k_2024") ?? Infinity) - (number(b, "specialists_per_100k_2024") ?? Infinity));
+const lowestSpecialistRate = number(bySpecialistRate[0], "specialists_per_100k_2024");
+const nextSpecialistRate = number(bySpecialistRate[1], "specialists_per_100k_2024");
+const highestSpecialistRate = number(bySpecialistRate[bySpecialistRate.length - 1], "specialists_per_100k_2024");
+const regionName = (row: AtlasRow | undefined) => String(row?.health_region ?? "").replace(/ HSDA$/, "");
+// Vancouver's rate is about twice the next highest; a scale reaching it leaves
+// every Northern region the same pale colour, so the chapters cap at the next.
+const specialistRateCap = number(bySpecialistRate[bySpecialistRate.length - 2], "specialists_per_100k_2024");
+const specialistRateDomain: [number, number] | undefined = specialistRateCap === undefined ? undefined : [0, specialistRateCap];
 const northernPhysicians = physicians.filter((row) =>
   northernRegions.includes(String(row.health_region)),
 );
@@ -117,6 +129,8 @@ const specialistCountDomain: [number, number] | undefined =
 const princeGeorgeStudies = rows("clinical-pg");
 const oncologyStudies = princeGeorgeStudies.filter((row) => row.condition_domain === "Cancer / oncology");
 const princeGeorgeCity = rows("clinical-city").find((row) => row.query_city === "Prince George");
+const quesnelAges = rows('population-lha-ages').find(row => row.region_name === 'Quesnel' && row.year === '2025');
+const princeGeorgeAges = rows('population-lha-ages').find(row => row.region_name === 'Prince George' && row.year === '2025');
 const unbcPublications = rows("publications").filter((row) => row.comparator === "UNBC / Prince George");
 const unbcPayments = rows("cihr-payments").filter((row) => row.comparator === "UNBC / Prince George");
 const schedules = rows("travel-schedule");
@@ -207,12 +221,13 @@ export const atlasStoryMaps: AtlasStoryMap[] = scrubZoer([
         id: 'older-population-share-and-count',
         title: 'Compare the share of older people with their number',
         paragraphs: [
-          'In the 2025 projection, Telegraph Creek LHA has 245 people aged 65+ out of 794 people, a share of 30.9%. Prince George LHA has 18,654 people aged 65+ out of 105,544, a share of 17.7%. The area with the higher share is not necessarily the area with the larger number of older people.',
-          'The paired maps show these two measures on the same Northern LHA geography and synchronized view, outlining Telegraph Creek and Prince George while retaining all seventeen source areas. Each map has its own labelled scale: percentages on one side and people on the other. On a narrow story panel, switch between Share and Count or expand the maps.',
+          `In the 2025 projection, ${format(number(quesnelAges, 'share_65_plus'), 1)}% of Quesnel LHA is aged 65+, ${format(number(quesnelAges, 'population_65_plus'))} of ${format(number(quesnelAges, 'total_population'))} people. In Prince George LHA the share is ${format(number(princeGeorgeAges, 'share_65_plus'), 1)}%, but that is ${format(number(princeGeorgeAges, 'population_65_plus'))} of ${format(number(princeGeorgeAges, 'total_population'))} people. The area with the higher share is not necessarily the area with more older people.`,
+          'The paired maps show these two measures on the same Northern LHA geography and synchronized view, outlining Quesnel and Prince George while retaining all seventeen source areas. Each map has its own labelled scale: percentages on one side and people on the other. On a narrow story panel, switch between Share and Count or expand the maps.',
           'Both measures come from the same original Gender=T age row for each area and year. The age 65+ count includes ages 65–89 and the source 90+ category once. All age groups reconcile to the original total. The 2025 figures remain projections, and the polygons provide geographic context rather than a disease or service catchment.',
+          'Very small areas need caution. Telegraph Creek LHA shows the highest share on this map, but its source count of people aged 65+ jumps from 91 in 2020 to 262 in 2021 while its population barely changes, which looks like a break in the series rather than ageing.',
         ],
-        evidence: { kind: 'paired', datasetId: 'population-lha-ages', metric: 'share_65_plus', comparisonMetric: 'population_65_plus', year: '2025', focusRegions: ['Telegraph Creek', 'Prince George'] },
-        takeaway: { value: '30.9% · 245 people', label: 'Telegraph Creek LHA aged 65+ · 2025 projection' },
+        evidence: { kind: 'paired', datasetId: 'population-lha-ages', metric: 'share_65_plus', comparisonMetric: 'population_65_plus', year: '2025', focusRegions: ['Quesnel', 'Prince George'] },
+        takeaway: { value: `${format(number(quesnelAges, 'share_65_plus'), 1)}% · ${format(number(quesnelAges, 'population_65_plus'))} people`, label: 'Quesnel LHA aged 65+ · 2025 projection' },
       },
       {
         id: "estimates-and-projections",
@@ -239,24 +254,24 @@ export const atlasStoryMaps: AtlasStoryMap[] = scrubZoer([
         id: "regional-supply",
         title: "Start with a comparable regional measure",
         paragraphs: [
-          "The reviewed physician dataset covers sixteen BC health service delivery areas. Its 2024 specialist rates allow a regional comparison using the source's measure per 100,000 people, while the counts answer a separate question about the number of physicians recorded.",
-          "The Atlas preserves the published rates. It does not recompute them from its population series. An explicit crosswalk joins source 59xx health-region codes to BC HSDA polygons; the shading represents regional aggregates rather than physician practice locations.",
+          `Specialist rates in BC run from ${format(lowestSpecialistRate, 1)} per 100,000 people in ${regionName(bySpecialistRate[0])} to ${format(highestSpecialistRate, 1)} in ${regionName(bySpecialistRate[bySpecialistRate.length - 1])}, across the ${physicians.length} health service delivery areas in the 2024 source. The counts answer a separate question about the number of physicians recorded.`,
+          `The Atlas preserves the published rates. It does not recompute them from its population series. An explicit crosswalk joins source 59xx health-region codes to BC HSDA polygons; the shading represents regional aggregates rather than physician practice locations. ${regionName(bySpecialistRate[bySpecialistRate.length - 1])} sits beyond the top of the colour scale, so the other regions stay distinguishable.`,
         ],
-        evidence: { kind: "map", datasetId: "physicians-hsda", metric: "specialists_per_100k_2024" },
-        takeaway: { value: String(physicians.length), label: "BC health service delivery areas in the reviewed snapshot" },
+        evidence: { kind: "map", datasetId: "physicians-hsda", metric: "specialists_per_100k_2024", scaleDomain: specialistRateDomain },
+        takeaway: { value: `${format(lowestSpecialistRate, 1)} – ${format(highestSpecialistRate, 1)}`, label: `Specialists per 100,000 · lowest and highest of ${physicians.length} BC regions · 2024` },
       },
       {
         id: "the-northeast",
         title: "Focus on the Northeast",
         paragraphs: [
-          `Northeast HSDA has ${format(number(northeastPhysicians, "specialists_2024"))} specialists in the 2024 source, with a rate of ${format(northeastRate, 1)} per 100,000. The corresponding 2020 count is ${format(number(northeastPhysicians, "specialists_2020"))}. The count and the rate provide different perspectives on the same area.`,
+          `Northeast HSDA has the lowest specialist rate in BC: ${format(northeastRate, 1)} per 100,000, less than half the next lowest, ${regionName(bySpecialistRate[1])} at ${format(nextSpecialistRate, 1)}. That rate reflects ${format(number(northeastPhysicians, "specialists_2024"))} specialists in the 2024 source, up from ${format(number(northeastPhysicians, "specialists_2020"))} in 2020.`,
           "These figures do not identify specialties, vacancies, full-time equivalents, appointment waits, or research staff. They can frame questions about operating a research network, but they cannot answer those questions alone.",
         ],
         evidence: {
           kind: "map", datasetId: "physicians-hsda", metric: "specialists_per_100k_2024",
-          focusRegions: ["Northeast HSDA"],
+          focusRegions: ["Northeast HSDA"], scaleDomain: specialistRateDomain,
         },
-        takeaway: { value: format(northeastRate, 1), label: "Northeast specialists per 100,000 · 2024 source rate" },
+        takeaway: { value: format(northeastRate, 1), label: "Northeast specialists per 100,000 · lowest in BC · 2024" },
       },
       {
         id: "two-northern-contrasts",
@@ -267,7 +282,7 @@ export const atlasStoryMaps: AtlasStoryMap[] = scrubZoer([
         ],
         evidence: {
           kind: "map", datasetId: "physicians-hsda", metric: "specialists_per_100k_2024",
-          focusRegions: ["Northwest HSDA", "Northern Interior HSDA"],
+          focusRegions: ["Northwest HSDA", "Northern Interior HSDA"], scaleDomain: specialistRateDomain,
         },
         takeaway: { value: `${format(northwestRate, 1)} / ${format(interiorRate, 1)}`, label: "Northwest / Northern Interior · specialists per 100,000 in 2024" },
       },
@@ -290,7 +305,7 @@ export const atlasStoryMaps: AtlasStoryMap[] = scrubZoer([
         title: "Add a separate nursing perspective",
         paragraphs: [
           `The three Northern HSDAs record ${format(sum(northernNPs2024, 'direct_care_nurses'))} nurse practitioners employed in direct care in the 2024 source: 14 in Northwest, 28 in Northern Interior and 7 in Northeast. The map shows their publisher rates per 10,000 population, not the physician dataset's per-100,000 scale.`,
-          "The source tables also distinguish registered nurses, licensed practical nurses and registered psychiatric nurses. Select one type and year in the explorer before mapping; the Atlas never sums regional or professional rates. Counts and publisher rates answer different questions.",
+          "The source tables also distinguish registered nurses, licensed practical nurses and registered psychiatric nurses. This map shows one type and year, because the Atlas never sums regional or professional rates. Counts and publisher rates answer different questions.",
           "Direct-care employment excludes administration, education and research. It does not identify research staffing, vacancies, full-time equivalents or appointment access. Missing source markers remain missing, and the source's historical mapping changes and the contextual polygon vintage limit comparisons.",
         ],
         evidence: { kind: "map", datasetId: "nursing-workforce-northern", metric: "direct_care_per_10k", year: "2024", filters: { nursing_type: "Nurse practitioners" }, focusRegions: northernRegions },
@@ -530,4 +545,5 @@ export const atlasStoryMaps: AtlasStoryMap[] = scrubZoer([
   },
   ...expansionStoryMaps,
   ...followupStoryMaps,
+  ...evidenceStoryMaps,
 ]);

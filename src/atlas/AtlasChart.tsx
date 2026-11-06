@@ -101,8 +101,8 @@ function TrendChart({ dataset, rows, metric, unit, onSelect, embedded = false }:
   </div>;
 }
 
-export default function AtlasChart({ dataset, rows, metric, compact = false, embedded = false, onSelect }: { dataset: AtlasDataset; rows: AtlasRow[]; metric: string; compact?: boolean; embedded?: boolean; onSelect?: (row: AtlasRow) => void }) {
-  const [sort, setSort] = useState("source");
+export default function AtlasChart({ dataset, rows, metric, compact = false, embedded = false, onSelect, initialOrder = "source" }: { dataset: AtlasDataset; rows: AtlasRow[]; metric: string; compact?: boolean; embedded?: boolean; onSelect?: (row: AtlasRow) => void; initialOrder?: "source" | "low" | "high" }) {
+  const [sort, setSort] = useState<string>(initialOrder);
   const [expanded, setExpanded] = useState(false);
   const [active, setActive] = useState<number | null>(null);
   const [mode, setMode] = useState<"trend" | "records">("trend");
@@ -125,19 +125,21 @@ export default function AtlasChart({ dataset, rows, metric, compact = false, emb
   const range = maximum - minimum || 1;
   const zero = (-minimum / range) * 100;
   const missing = rows.length - numeric.length;
+  const oneRowPerEntity = new Set(rows.map(row => row[dataset.entityField])).size === rows.length;
 
   if (rowUnits.length > 1) return <div className="atlas-empty"><strong>These records use different units.</strong><p>Filter to one unit or view the table. Comparing {rowUnits.join(", ")} on a shared numeric axis would be misleading.</p></div>;
   if (!numeric.length) return <div className="atlas-empty"><strong>No reported numeric values in this view.</strong><p>Try another measure or clear your filters. Missing values are kept as missing.</p></div>;
 
   return <div className={`atlas-chart${compact ? " atlas-chart-compact" : ""}${embedded ? " atlas-chart-embedded" : ""}`}>
-    {!compact && <div className="atlas-chart-heading"><div><h3>{column?.label ?? metric}</h3><p>{unit ? `Unit: ${unit}. ` : ""}{canTrend && mode === "trend" ? "Compare reported source records over time." : "Each bar represents one source record; values are not summed."}</p></div>{(!canTrend || mode === "records") && <label className="atlas-sort">Order<select aria-label="Chart order" value={sort} onChange={event => { setSort(event.target.value); setActive(null); }}><option value="source">Source order</option><option value="high">Highest first</option><option value="low">Lowest first</option></select></label>}</div>}
+    {!compact && <div className="atlas-chart-heading"><div><h3>{column?.label ?? metric}</h3><p>{unit && unit.toLowerCase() !== (column?.label ?? metric).toLowerCase() ? `Unit: ${unit}. ` : ""}{canTrend && mode === "trend" ? "Compare reported source records over time." : "Each bar represents one source record; values are not summed."}</p></div>{(!canTrend || mode === "records") && <label className="atlas-sort">Order<select aria-label="Chart order" value={sort} onChange={event => { setSort(event.target.value); setActive(null); }}><option value="source">Source order</option><option value="high">Highest first</option><option value="low">Lowest first</option></select></label>}</div>}
     {!compact && canTrend && <div className="atlas-chart-mode" aria-label="Chart type"><button className={mode === "trend" ? "is-active" : ""} aria-pressed={mode === "trend"} onClick={() => setMode("trend")}>Trends over time</button><button className={mode === "records" ? "is-active" : ""} aria-pressed={mode === "records"} onClick={() => setMode("records")}>Source record bars</button></div>}
     {!compact && canTrend && mode === "trend" ? <TrendChart dataset={dataset} rows={rows} metric={metric} unit={unit} onSelect={onSelect} embedded={embedded} /> : <>
     <div className="atlas-bars" role="list" aria-label={`${column?.label ?? metric} by source record`}>
       {shown.map(({ row, value }, index) => {
         const left = value < 0 ? ((value - minimum) / range) * 100 : zero;
         const width = (Math.abs(value) / range) * 100;
-        const label = rowLabel(dataset, row);
+        // In a story chart the entity alone names each bar; identifiers are for the records.
+        const label = embedded && oneRowPerEntity ? String(row[dataset.entityField]) : rowLabel(dataset, row);
         return <button type="button" role="listitem" className={`atlas-bar-row${active === index ? " is-active" : ""}`} key={`${index}-${label}`} title={`${label}: ${formatValue(value, unit)}`} aria-label={`${label}: ${formatValue(value, unit)}`} onClick={() => { setActive(index); onSelect?.(row); }}>
           <span className="atlas-bar-label">{label}</span><span className="atlas-bar-track"><span className="atlas-bar-zero" style={{ left: `${zero}%` }} /><span className="atlas-bar-fill" style={{ left: `${left}%`, width: `${value === 0 ? 0 : Math.max(width, .5)}%` }} /></span><span className="atlas-bar-value">{formatValue(value, unit)}</span>
         </button>;

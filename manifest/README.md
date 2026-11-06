@@ -81,4 +81,10 @@ missing field or an unknown placeholder.
 - `datasets.extra`: dataset ids to keep as well.
 
 The workspace's Zoer catalogue keeps its review notes about every collection.
-The boundary and location files in `public/` are always copied.
+
+`public/` is copied whole, then `scripts/prepare-spa-pages.mjs` removes what the
+build does not use: with `pages.sources` off, only the boundary, location and
+route files the maps fetch stay under `data/nhhr/`. Snapshots, provenance and
+review notes go, and the story text and rows the build keeps ship in its bundle.
+With `pages.sources` on, the Sources page links those files, so all of them stay,
+including the snapshots of switched-off stories.

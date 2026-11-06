@@ -147,7 +147,7 @@ function ChapterEvidence({ chapter, nearby = [] }: { chapter: StoryMapChapter; n
     <div className="atlas-chapter-evidence-heading"><strong>{dataset.title}</strong><span>{evidence.year ? `${evidence.year}${periodTypes.length ? ` · ${periodTypes.join(", ")}` : ""}` : dataset.timeLabel}{evidence.filters ? ` · ${Object.entries(evidence.filters).map(([key, value]) => key === "route_slug" ? rows[0]?.route_label ?? value : value).join(" · ")}` : ""}</span></div>
     <div className={`atlas-chapter-viz is-${evidence.kind}`}>
       {keptKinds.map(kind => kept.current[kind] && <KeptView key={kind} kind={kind} chapter={kept.current[kind]!} dormant={kind !== evidence.kind} selectedRegion={selectedRegion} onSelectRegion={setSelectedRegion} />)}
-      {evidence.kind === "chart" && (dataset.id === "clinical-condition-mix" ? <AtlasConditionMix dataset={dataset} rows={rows} metric={evidence.metric} compact /> : <AtlasChart dataset={dataset} rows={rows} metric={evidence.metric} embedded />)}
+      {evidence.kind === "chart" && (dataset.id === "clinical-condition-mix" ? <AtlasConditionMix dataset={dataset} rows={rows} metric={evidence.metric} compact /> : <AtlasChart key={chapter.id} dataset={dataset} rows={rows} metric={evidence.metric} embedded initialOrder={evidence.order} />)}
       {evidence.kind === "trends" && <AtlasEstimateTrends dataset={dataset} rows={rows} metric={evidence.metric} totalLabel="All Northern LHAs" />}
       {evidence.kind === "scenario" && <ScenarioLab dataset={dataset} />}
     </div>

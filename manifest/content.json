@@ -8,7 +8,13 @@
     "research-resources": false,
     "workforce-context": false,
     "education-and-health": false,
-    "facilities-and-investment": false
+    "facilities-and-investment": false,
+    "two-northern-cities": false,
+    "the-northeast-gap": false,
+    "the-norths-lungs": false,
+    "waiting-for-surgery": false,
+    "what-care-costs": false,
+    "keeping-the-workforce": false
   },
   "stories": {
     "northern-workforce": true,

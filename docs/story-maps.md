@@ -10,7 +10,7 @@ behaviour changes. Working practice for the whole repository is in
 
 | Area | Files |
 | --- | --- |
-| Story definitions | `src/atlas/storyMaps.ts`, `expansionStoryMaps.ts`, `followupStoryMaps.ts` (`AtlasStoryMap`, `StoryMapChapter`) |
+| Story definitions | `src/atlas/storyMaps.ts`, `expansionStoryMaps.ts`, `followupStoryMaps.ts`, `evidenceStoryMaps.ts` (`AtlasStoryMap`, `StoryMapChapter`) |
 | Reader | `src/atlas/AtlasStoryMap.tsx`: toolbar and chapter rail, cover, `StorySidecar` slides, `ChapterEvidence`, kept views, warm-up, header behaviour, chapter text |
 | Evidence views | `AtlasMap.tsx` (regions and points), `AtlasMapComparison.tsx` (swipe between two periods), `AtlasPairedAgeMaps.tsx` (share and count), `AtlasEstimateTrends.tsx` (estimates and a projection), `AtlasChart.tsx`, `AtlasConditionMix.tsx`, `ScenarioLab` in `AtlasStoryMap.tsx` |
 | Chapter links | `src/atlas/useStoryChapterUrl.ts` restores `#chapter` inside the bounded reader |
@@ -33,17 +33,20 @@ behaviour changes. Working practice for the whole repository is in
 
    | Kind | Use for | Notes |
    | --- | --- | --- |
-   | `map` | One measure on regions or points | `metric`, `year`, `focusRegions` (outlined and fitted), `scaleDomain` to hold a colour range across chapters, `filters` |
+   | `map` | One measure on regions or points | `metric`, `year`, `focusRegions` (outlined and fitted), `filters`, `scaleDomain` to hold a colour range across chapters or cap it below an outlier (values above the cap take the top colour and the legend reads "or more"; say so in the chapter) |
    | `comparison` | The same measure in two periods | `metric` and `comparisonMetric` must share a unit; both maps share one colour domain, camera and basemap |
    | `paired` | Share and count of older people | Separate scales, shared camera and selection; tabs on narrow panels |
    | `trends` | Estimates with a labelled projection | Story panel shows the total, then one area per screen |
-   | `chart` | Non-geographic measures | Keeps the source grain |
+   | `chart` | Non-geographic measures | Keeps the source grain. `order: "low"` or `"high"` opens the bars ranked, when the finding is the top or bottom of the list |
    | `scenario` | Hypothetical travel assumptions | Never presented as a forecast |
 
    A new kind needs a case in `ChapterEvidence`. If it draws a map, add it to
    `keptKinds` so it follows the rules below.
-3. **Switch it on** in `manifest/content.json`. Datasets used by enabled
+3. **Switch it on** in `manifest/content.json`, or list it as `false` to keep it
+   out of the published site while it is reviewed. Datasets used by enabled
    stories are included automatically (`"include": "stories"`).
+   A story cannot point readers at a filter, map or dataset the published
+   manifest might leave out, so write about the evidence on the page.
 4. **Update the README** story table and counts.
 5. **Test** (see [Tests](#tests)). `tests/story-maps.spec.ts` walks every
    chapter of the listed stories; add a new story's id to that list.

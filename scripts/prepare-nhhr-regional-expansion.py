@@ -354,13 +354,13 @@ def main():
  print({d['id']:len(d['rows']) for d in ds})
 
 VIEW_NOTES={
-'census-housing-cd': [
+'census-housing-cd': ['Northern Rockies reports 0.0 for both owner and tenant core housing need. That is the published value, but it is not a measured absence of need: the same source table counts 20 households in core need (1.2%), counts are rounded to the nearest five, and the area carries a non-zero data quality flag and 18.0% long-form nonresponse.',
  '2021 Census housing and economic context for 29 BC census divisions. Income refers to 2020; housing and labour indicators retain their published reference periods and household or person universes.',
  'Exact 2021 DGUID and native CD codes join Statistics Canada 2021 display polygons. No health-region conversion or population allocation is applied.',
  'Owner and tenant percentages have separate denominators. Core housing need excludes ineligible households; the published non-farm, non-reserve private-household and 25% sample definitions apply.',
  'Rounded Census counts, suppression symbols, data quality flags and long-form nonresponse rates are retained. Indigenous community values are not inferred from surrounding regional totals.',
  'Percentages are percentage points. Income and dwelling values are nominal source dollars; rented shelter cost is CAD per month.'],
-'census-housing-csd': [
+'census-housing-csd': ['Northern Rockies reports 0.0 for both owner and tenant core housing need. That is the published value, but it is not a measured absence of need: the same source table counts 20 households in core need (1.2%), counts are rounded to the nearest five, and the area carries a non-zero data quality flag and 18.0% long-form nonresponse.',
  '2021 Census housing and economic context for seven Northern municipalities. Income refers to 2020; housing and labour indicators retain their published reference periods and household or person universes.',
  'Exact 2021 DGUID and native CSD codes join Statistics Canada 2021 display polygons. No health-region conversion or population allocation is applied.',
  'Owner and tenant percentages have separate denominators. Core housing need excludes ineligible households; the published non-farm, non-reserve private-household and 25% sample definitions apply.',

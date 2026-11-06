@@ -3,7 +3,7 @@
     {
       "id": "census-housing-cd",
       "title": "BC regional housing and income",
-      "description": "2021 Census housing and economic context for 29 BC census divisions. Income refers to 2020; housing and labour indicators retain their published reference periods and household or person universes.",
+      "description": "Northern Rockies reports 0.0 for both owner and tenant core housing need. That is the published value, but it is not a measured absence of need: the same source table counts 20 households in core need (1.2%), counts are rounded to the nearest five, and the area carries a non-zero data quality flag and 18.0% long-form nonresponse.",
       "topic": "Regional context",
       "geography": "cd",
       "status": "observed",
@@ -13,6 +13,7 @@
       "datasetId": "47c4df52-1822-4901-8c8e-79b393df33a2",
       "tableName": "nhhr_data_c058_04_380b82eac47e_zip_data_c058_sta",
       "notes": [
+        "Northern Rockies reports 0.0 for both owner and tenant core housing need. That is the published value, but it is not a measured absence of need: the same source table counts 20 households in core need (1.2%), counts are rounded to the nearest five, and the area carries a non-zero data quality flag and 18.0% long-form nonresponse.",
         "2021 Census housing and economic context for 29 BC census divisions. Income refers to 2020; housing and labour indicators retain their published reference periods and household or person universes.",
         "Exact 2021 DGUID and native CD codes join Statistics Canada 2021 display polygons. No health-region conversion or population allocation is applied.",
         "Owner and tenant percentages have separate denominators. Core housing need excludes ineligible households; the published non-farm, non-reserve private-household and 25% sample definitions apply.",
@@ -1461,7 +1462,7 @@
     {
       "id": "census-housing-csd",
       "title": "Northern municipal housing and income",
-      "description": "2021 Census housing and economic context for seven Northern municipalities. Income refers to 2020; housing and labour indicators retain their published reference periods and household or person universes.",
+      "description": "Northern Rockies reports 0.0 for both owner and tenant core housing need. That is the published value, but it is not a measured absence of need: the same source table counts 20 households in core need (1.2%), counts are rounded to the nearest five, and the area carries a non-zero data quality flag and 18.0% long-form nonresponse.",
       "topic": "Regional context",
       "geography": "csd",
       "status": "observed",
@@ -1471,6 +1472,7 @@
       "datasetId": "47c4df52-1822-4901-8c8e-79b393df33a2",
       "tableName": "nhhr_data_c058_04_380b82eac47e_zip_data_c0_16",
       "notes": [
+        "Northern Rockies reports 0.0 for both owner and tenant core housing need. That is the published value, but it is not a measured absence of need: the same source table counts 20 households in core need (1.2%), counts are rounded to the nearest five, and the area carries a non-zero data quality flag and 18.0% long-form nonresponse.",
         "2021 Census housing and economic context for seven Northern municipalities. Income refers to 2020; housing and labour indicators retain their published reference periods and household or person universes.",
         "Exact 2021 DGUID and native CSD codes join Statistics Canada 2021 display polygons. No health-region conversion or population allocation is applied.",
         "Owner and tenant percentages have separate denominators. Core housing need excludes ineligible households; the published non-farm, non-reserve private-household and 25% sample definitions apply.",

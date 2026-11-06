@@ -7,7 +7,7 @@ test("guided stories preserve NHHR branding and open canonical routes", async ({
   await page.goto("dev/projects");
   await expect(page.locator(".unbc-logo--header")).toHaveAttribute("aria-label", "University of Northern British Columbia Northern Hub for Health Research");
   await expect(page.locator(".unbc-logo--header text")).toHaveText(["Northern Hub for", "Health Research"]);
-  await expect(page.locator(".atlas-storymap-card")).toHaveCount(9);
+  await expect(page.locator(".atlas-storymap-card")).toHaveCount(15);
   await expect(page.locator(".atlas-story-card")).toHaveCount(42);
   await page.getByRole("link", { name: /One North, many communities/ }).click();
   await expect(page).toHaveURL(/dev\/projects\/northern-communities/);
@@ -119,7 +119,33 @@ test("travel assumptions reproduce source cases, recalculate, reject invalid inp
   await expect(page.locator(".atlas-scenario-caveat")).toContainText("not a forecast");
 });
 
-for (const id of ["northern-communities", "physician-supply", "research-pathways", "travel-and-time", "community-context", "research-resources", "workforce-context"]) {
+test("the Northeast chapter states its finding on a scale that keeps Northern regions apart", async ({ page }) => {
+  await page.goto("dev/projects/physician-supply#the-northeast");
+  await expect(page.getByTestId("story-reader")).toHaveAttribute("data-active-chapter", "the-northeast");
+  await expect(page.locator("#the-northeast")).toContainText("the lowest specialist rate in BC");
+  const shown = page.locator(".atlas-chapter-view:not(.is-dormant)");
+  await expect(shown.locator(".atlas-map-legend")).toContainText("or more");
+  await expect(shown.getByTestId("atlas-map-state")).toHaveAttribute("data-scale-domain", /^\[?0,/);
+});
+
+test("a hidden map's labels do not show over the next chapter", async ({ page }) => {
+  await page.goto("dev/projects/what-care-costs#sites-vary");
+  await expect(page.getByTestId("story-reader")).toHaveAttribute("data-active-chapter", "sites-vary");
+  await expect(page.locator(".atlas-chapter-view:not(.is-dormant) .atlas-institution-label").first()).toBeVisible();
+  await page.getByRole("button", { name: "Next chapter", exact: true }).click();
+  await expect(page.getByTestId("story-reader")).toHaveAttribute("data-active-chapter", "size-is-not-the-whole-answer");
+  const hidden = page.locator(".atlas-chapter-view.is-dormant .atlas-institution-label");
+  expect(await hidden.count()).toBeGreaterThan(0);
+  await expect(hidden.first()).toBeHidden();
+});
+
+test("a story about the lowest value opens with that value first", async ({ page }) => {
+  await page.goto("dev/projects?story=northern-workforce");
+  await expect(page.getByLabel("Chart order")).toHaveValue("low");
+  await expect(page.locator(".atlas-bar-row").first()).toContainText("Northeast HSDA");
+});
+
+for (const id of ["northern-communities", "physician-supply", "research-pathways", "travel-and-time", "community-context", "research-resources", "workforce-context", "two-northern-cities", "the-northeast-gap", "the-norths-lungs", "waiting-for-surgery", "what-care-costs", "keeping-the-workforce"]) {
   test(`every ${id} chapter is reachable, expands accessibly and stays within the viewport`, async ({ page }) => {
     await page.goto(`dev/projects/${id}`);
     const nav = page.getByTestId("editorial-nav");
