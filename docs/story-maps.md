@@ -36,7 +36,7 @@ behaviour changes. Working practice for the whole repository is in
    | `map` | One measure on regions or points | `metric`, `year`, `focusRegions` (outlined and fitted), `scaleDomain` to hold a colour range across chapters, `filters` |
    | `comparison` | The same measure in two periods | `metric` and `comparisonMetric` must share a unit; both maps share one colour domain, camera and basemap |
    | `paired` | Share and count of older people | Separate scales, shared camera and selection; tabs on narrow panels |
-   | `trends` | Estimates with a labelled projection | Story panel shows the total, then one area per screen |
+   | `trends` | Estimates with a labelled projection | Every area on one chart with a table of figures beneath; set `layout: "focus"` for one area large with the rest listed beside it |
    | `chart` | Non-geographic measures | Keeps the source grain |
    | `scenario` | Hypothetical travel assumptions | Never presented as a forecast |
 
@@ -79,9 +79,21 @@ behaviour changes. Working practice for the whole repository is in
 
 - "Expand media" opens the full view, which adds the dataset heading, source
   line, captions and value tables (`.editorial-expandable.is-expanded`).
-- Trends: one area per screen in the story panel at every width; the expanded
-  view and the explorer keep the full grid. Each chart is drawn in its box's
-  own pixels, so it fills the space while labels keep their size.
+- Trends: `AtlasEstimateTrends` has two layouts, chosen per chapter with
+  `evidence.layout`. The default, `together`, puts every area on one chart in
+  percent since the first year, so large and small areas compare on one axis,
+  with people counts in the table beneath. `focus` shows one area in people
+  with the others as a list to switch between, using the same percent range for
+  every area so a larger chart never steepens a small change. It is not used by
+  a published chapter; preview it at
+  `/dev/projects/northern-communities?trends=focus#estimates-and-projections`.
+  Both set the projection apart in a shaded column and never join it to the
+  estimates, and neither shows the step from the last estimate to the
+  projection as a change. On phones and in windows under 560px tall the story
+  panel keeps the chart (`together`) or turns the list into a row of chips
+  (`focus`); the table and every figure are in the expanded view. A chart is
+  drawn in its box's own pixels, so it fills the space while labels keep their
+  size.
 - A swipe comparison's hover card sits above both maps and lists both
   periods (`tipMetrics`), since the pointer may be over either side.
 

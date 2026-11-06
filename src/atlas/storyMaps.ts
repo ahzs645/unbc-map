@@ -19,6 +19,8 @@ export interface StoryMapChapter {
     comparisonMetric?: string;
     scaleDomain?: [number, number];
     filters?: Record<string, string>;
+    /** `trends` only: every area on one chart (the default), or one area large. */
+    layout?: "together" | "focus";
   };
   takeaway?: { value: string; label: string };
 }

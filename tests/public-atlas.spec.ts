@@ -63,17 +63,73 @@ test("story maps keep the visual first and the details in Expand media", async (
   await expect(expanded).toHaveCount(0);
 });
 
-test("estimates and the projection read as one panel per area", async ({ page }) => {
+test("estimates and the projection share one chart with their figures beneath", async ({ page }) => {
   await page.goto("./northern-communities#estimates-and-projections");
   const trends = page.getByTestId("estimate-trends");
   await expect(trends).toBeVisible();
-  await expect(trends.locator(".atlas-trend-panel")).toHaveCount(5);
-  const total = trends.locator(".atlas-trend-panel.is-total");
-  await expect(total).toContainText("All Northern LHAs");
-  await expect(total).toContainText("293,489 → 302,955");
-  await expect(total).toContainText("298,207");
-  await expect(trends.locator(".atlas-trend-panel", { hasText: "Prince George" })).toContainText("+4.2%");
+  await expect(trends.locator(".atlas-trend-series")).toHaveCount(5);
+  await expect(trends.locator(".atlas-trend-end")).toHaveCount(5);
+  // Each projection is its own ring; a line never reaches it.
   await expect(trends.locator(".atlas-trend-projection")).toHaveCount(5);
+  await expect(trends.locator(".atlas-trend-series polyline").first()).toHaveAttribute("points", /^(\S+ ){4}\S+$/);
+  const total = trends.locator(".atlas-trend-table tr.is-total");
+  await expect(total).toContainText("All Northern LHAs");
+  await expect(total).toContainText("Sum of 17 areas");
+  await expect(total).toContainText("293,489");
+  await expect(total).toContainText("302,955");
+  await expect(total).toContainText("+3.2%");
+  await expect(total).toContainText("298,207");
+  await expect(trends.locator(".atlas-trend-table tr", { hasText: "Prince George" })).toContainText("+4.2%");
+  const svg = trends.locator(".atlas-trend-plot svg");
+  await svg.hover({ position: { x: 100, y: 100 } });
+  await expect(trends.getByTestId("trend-tip")).toContainText("Source estimate");
+  await page.mouse.move(0, 0);
+  await expect(trends.getByTestId("trend-tip")).toHaveCount(0);
+  await page.getByRole("button", { name: "Expand media ↗", exact: true }).click();
+  const expanded = page.getByRole("dialog", { name: "Expanded story media", exact: true });
+  // The whole table can be reached: the last row is not cut off.
+  const lastRow = expanded.locator(".atlas-trend-table tbody tr").last();
+  await lastRow.scrollIntoViewIfNeeded();
+  await expect(lastRow).toBeInViewport({ ratio: 1 });
+  await page.keyboard.press("Escape");
+  await expect(expanded).toHaveCount(0);
+});
+
+test("a phone's story panel keeps the chart and leaves the table to Expand", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("./northern-communities#estimates-and-projections");
+  const trends = page.getByTestId("estimate-trends");
+  await expect(trends.locator(".atlas-trend-series")).toHaveCount(5);
+  await expect(trends.locator(".atlas-trend-table")).toBeHidden();
+  const panel = (await trends.boundingBox())!;
+  for (const label of await trends.locator(".atlas-trend-end").all()) {
+    const box = (await label.boundingBox())!;
+    expect(box.x + box.width).toBeLessThanOrEqual(panel.x + panel.width);
+  }
+  await trends.locator(".atlas-trend-plot svg").hover({ position: { x: 190, y: 120 } });
+  const tip = (await trends.getByTestId("trend-tip").boundingBox())!;
+  expect(tip.x).toBeGreaterThanOrEqual(panel.x);
+  expect(tip.x + tip.width).toBeLessThanOrEqual(panel.x + panel.width);
+  await page.locator(".editorial-expand").first().click();
+  await expect(trends.locator(".atlas-trend-table")).toBeVisible();
+  const total = trends.locator(".atlas-trend-table tr.is-total");
+  await expect(total).toContainText("293,489");
+  const lastRow = trends.locator(".atlas-trend-table tbody tr").last();
+  await lastRow.scrollIntoViewIfNeeded();
+  await expect(lastRow).toBeInViewport({ ratio: 1 });
+  // Names may wrap once but are not squeezed to a word per line.
+  expect((await total.locator("th").boundingBox())!.width).toBeGreaterThanOrEqual(90);
+});
+
+test("the focus layout stays available for a chapter that asks for it", async ({ page }) => {
+  await page.goto("dev/projects/northern-communities?trends=focus#estimates-and-projections");
+  const trends = page.getByTestId("estimate-trends");
+  await expect(trends.locator(".atlas-trend-focus h4")).toContainText("All Northern LHAs");
+  await expect(trends.locator(".atlas-trend-focus nav button")).toHaveCount(5);
+  await expect(trends.locator(".atlas-trend-value")).toHaveText(["293,489", "302,955", "298,207"]);
+  await trends.getByRole("button", { name: /Prince Rupert/ }).click();
+  await expect(trends.locator(".atlas-trend-focus h4")).toContainText("Prince Rupert");
+  await expect(trends.locator(".atlas-trend-value")).toHaveText(["14,167", "14,240", "13,825"]);
 });
 
 test("chapters sharing a boundary file keep one map", async ({ page }) => {

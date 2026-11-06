@@ -728,8 +728,8 @@
     top: 41px;
     right: 16px;
   }
-  /* The paired maps' Share/Count tabs and the trends pager are each a 36px
-     row at the top of the panel; the icon ends that row. */
+  /* The paired maps' Share/Count tabs and the trends key are each a 36px row
+     at the top of the panel; the icon ends that row. */
   .atlas-story-reader .editorial-immersive-media:has(.atlas-chapter-viz.is-paired, .atlas-chapter-viz.is-trends) .editorial-expand[aria-expanded="false"] {
     border: 1px solid #cdcfc4;
   }
@@ -796,18 +796,36 @@
   }
 }
 
-/* ---- Estimates and a projection, one area per panel ----------------------- */
-/* The trends take their own height, so the source line follows them rather
-   than a stretch of empty panel. Columns follow the panel's width, not the
-   window's: two across in a story, four in the wide expanded view. */
+/* ---- Estimates and a projection ------------------------------------------- */
+/* The trends fill what the panel gives them. Two layouts share these rules:
+   every area on one chart (the default) and one area large (`layout: "focus"`). */
 .atlas-chapter-viz.is-trends {
-  flex: 0 1 auto;
+  flex: 1 1 auto;
+  min-height: 0;
 }
-.atlas-trend-multiples {
+/* Expanded, the chart keeps a readable height and anything past the window
+   scrolls, so the last rows of the table are never cut off by the source line. */
+.atlas-story-reader .editorial-expandable.is-expanded .atlas-chapter-viz.is-trends {
+  overflow-y: auto;
+}
+.atlas-trends {
   container-type: inline-size;
-  padding: 14px 18px;
+  box-sizing: border-box;
+  padding: 12px 16px 14px;
   display: grid;
+  /* A one-line key must not widen the column and push the chart past the panel. */
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
   gap: 10px;
+}
+.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trends {
+  height: 100%;
+}
+.atlas-story-reader .editorial-expandable.is-expanded .atlas-trends {
+  min-height: 100%;
+}
+.atlas-story-reader .editorial-expandable.is-expanded .atlas-trend-plot {
+  min-height: 280px;
 }
 .atlas-trend-key {
   display: flex;
@@ -815,11 +833,11 @@
   align-items: center;
   gap: 4px 16px;
   font-size: 13px;
-  color: #525154;
+  color: var(--atlas-muted, #525154);
 }
 .atlas-trend-key strong {
   font-size: 15px;
-  color: #29292a;
+  color: var(--atlas-ink, #29292a);
   margin-right: auto;
 }
 .atlas-trend-key i {
@@ -831,225 +849,24 @@
   vertical-align: -1px;
 }
 .atlas-trend-key i.is-estimate {
-  background: #035642;
+  background: var(--atlas-green, #035642);
 }
 .atlas-trend-key i.is-projection {
-  border: 2px solid #977000;
+  border: 2px solid var(--unbc-gold, #977000);
   background: #fff;
   box-shadow: 0 0 0 3px #f4efe1;
 }
-/* In a story panel, at every width, the trends read one area at a time: the
-   regional total first, then each area, stepped with the pager under the
-   chart. The expanded view and the explorer keep the full grid. */
-.atlas-trend-pager,
 .atlas-trend-key-short {
   display: none;
 }
-.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-pager {
-  order: 1;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.atlas-trend-pager p {
-  flex: 1;
-  min-width: 0;
-  margin: 0;
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 8px;
-  white-space: nowrap;
-}
-.atlas-trend-pager strong {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 15px;
-}
-.atlas-trend-pager span {
-  font-size: 12px;
-  color: #525154;
-}
-.atlas-app .atlas-trend-pager button {
-  display: grid;
-  place-items: center;
-  flex: none;
-  width: 36px;
-  height: 36px;
-  padding: 0;
-  border: 0;
-  border-radius: 2px;
-  background: var(--unbc-warm, #f0eee9);
-  color: #29292a;
-  cursor: pointer;
-}
-.atlas-app .atlas-trend-pager button:disabled {
-  opacity: 0.4;
-  cursor: default;
-}
-.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel:not(.is-current) {
-  display: none;
-}
-/* The one area fills the panel: the chart takes the height that is left and
-   the figures sit in two columns beneath it. */
-.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-chapter-viz.is-trends {
-  flex: 1 1 auto;
-  min-height: 0;
-}
-.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-multiples {
-  height: 100%;
-  box-sizing: border-box;
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: auto minmax(0, 1fr) auto;
-}
-.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-multiples ul {
-  min-height: 0;
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: minmax(0, 1fr);
-}
-.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  align-items: stretch;
-  justify-content: center;
-}
-.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-plot {
-  flex: 1 1 0;
-  min-height: 60px;
-  max-height: 360px;
-  aspect-ratio: auto;
-}
-/* The pager names the area; the panel keeps only the total's note. */
-.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-heading h4,
-.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-heading:not(:has(span)) {
-  display: none;
-}
-.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-panel dl {
-  flex: none;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 16px;
-}
-/* The key is the top row. */
-.atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key {
-  order: -1;
-  min-height: 36px;
-}
-@media (max-width: 700px) {
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-multiples {
-    padding: 8px 12px 10px;
-    gap: 8px;
-  }
-  /* On a phone the key is one small line beside the expand icon. */
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key {
-    padding-right: 44px;
-    flex-wrap: nowrap;
-    gap: 12px;
-    font-size: 12px;
-    white-space: nowrap;
-  }
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key strong {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-width: 0;
-    font-size: 12px;
-  }
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key-long {
-    display: none;
-  }
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key-short {
-    display: inline;
-  }
-  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key i {
-    width: 8px;
-    height: 8px;
-    margin-right: 4px;
-  }
-}
-.atlas-trend-multiples ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-@container (min-width: 460px) {
-  .atlas-trend-multiples ul {
-    gap: 14px;
-  }
-  .atlas-trend-panel {
-    padding: 10px 14px 12px;
-    gap: 6px;
-  }
-  .atlas-app .atlas-trend-heading h4 {
-    font-size: 15px;
-  }
-  .atlas-trend-panel dl {
-    font-size: 13px;
-  }
-  .atlas-trend-panel dd span {
-    font-size: 20px;
-  }
-}
-@container (min-width: 900px) {
-  .atlas-trend-multiples ul {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-.atlas-trend-panel {
-  border: 1px solid #e3e0dc;
-  border-top: 3px solid #035642;
-  padding: 8px 10px 10px;
-  display: grid;
-  gap: 4px;
-  align-content: start;
-  min-width: 0;
-}
-/* The regional total spans the row: its line on the left, figures right. */
-.atlas-trend-panel.is-total {
-  grid-column: 1 / -1;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-  column-gap: 20px;
-  align-items: center;
-  background: #f7f8f6;
-}
-.atlas-trend-panel.is-total .atlas-trend-heading {
-  grid-column: 1 / -1;
-}
-.atlas-trend-panel.is-total .atlas-trend-plot {
-  max-height: 96px;
-}
-.atlas-trend-heading {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  min-width: 0;
-}
-.atlas-app .atlas-trend-heading h4 {
-  margin: 0;
-  font-size: 14px;
-  font-family: var(--unbc-bold);
-  font-weight: 700;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.atlas-trend-heading span {
-  font-size: 12px;
-  color: #525154;
-  white-space: nowrap;
-}
-.atlas-trend-plot {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 240 / 92;
-  min-width: 0;
-}
 /* The box sets the size and the chart is drawn to fit it (AtlasEstimateTrends),
    so a size measured in one layout never props the box open in another. */
-.atlas-trend-panel svg {
+.atlas-trend-plot {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+.atlas-trend-plot > svg {
   position: absolute;
   inset: 0;
   display: block;
@@ -1058,79 +875,444 @@
 .atlas-trend-band {
   fill: #f4efe1;
 }
+.atlas-trend-grid {
+  stroke: var(--atlas-line, #eae7e5);
+  stroke-width: 1;
+}
+.atlas-trend-base {
+  stroke: var(--unbc-soft, #777677);
+  stroke-width: 1;
+}
+.atlas-trend-cross {
+  stroke: var(--atlas-ink, #29292a);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
 .atlas-trend-line {
   fill: none;
-  stroke: #035642;
+  stroke: var(--atlas-green, #035642);
   stroke-width: 2;
 }
 .atlas-trend-estimate {
-  fill: #035642;
+  fill: var(--atlas-green, #035642);
 }
 .atlas-trend-projection {
   fill: #fff;
-  stroke: #977000;
+  stroke: var(--unbc-gold, #977000);
   stroke-width: 2.5;
 }
 .atlas-trend-year {
   font-size: 11px;
-  fill: #525154;
+  fill: var(--atlas-muted, #525154);
 }
-.atlas-trend-panel dl {
+.atlas-trend-value {
+  font-size: 12px;
+  fill: var(--atlas-ink, #29292a);
+  font-variant-numeric: tabular-nums;
+}
+.atlas-trend-tip {
+  position: absolute;
+  top: 4px;
+  z-index: 2;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: calc(100% - 16px);
+  padding: 8px 10px;
+  border: 1px solid var(--atlas-line, #eae7e5);
+  border-top: 3px solid var(--atlas-green, #035642);
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(41, 41, 42, 0.16);
+  font-size: 12px;
+  line-height: 1.35;
+  pointer-events: none;
+}
+.atlas-trend-tip p {
+  margin: 0 0 4px;
+  color: var(--atlas-muted, #525154);
+}
+.atlas-trend-tip strong {
+  margin-right: 6px;
+  color: var(--atlas-ink, #29292a);
+}
+.atlas-trend-tip dl {
   margin: 0;
   display: grid;
-  gap: 6px;
-  font-size: 12px;
-  line-height: 1.3;
+  gap: 2px;
 }
-/* One line each, matching "Estimates 2020→2024" with "Projection 2024→2025". */
-.atlas-trend-panel dt {
-  overflow: hidden;
-  color: #525154;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.atlas-trend-tip dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
 }
-.atlas-trend-panel dd {
+.atlas-trend-tip dd {
   margin: 0;
   font-variant-numeric: tabular-nums;
-  color: #29292a;
 }
-.atlas-trend-panel dd span {
-  display: block;
-  font-size: 17px;
-  color: #035642;
+.atlas-trend-tip dd span {
+  display: inline-block;
+  min-width: 46px;
+  text-align: right;
+  color: var(--atlas-muted, #525154);
+}
+.atlas-trend-tip .is-total {
   font-family: var(--unbc-bold);
   font-weight: 700;
 }
-.atlas-trend-panel .is-projection dd span {
+
+/* One chart: green is the region, warm grey each area and gold the projection,
+   as on the rest of the Atlas. */
+.atlas-trend-together {
+  min-height: 0;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 12px;
+}
+.atlas-trend-end {
+  font-size: 13px;
+  fill: var(--atlas-ink, #29292a);
+}
+.atlas-trend-end.is-total {
+  font-family: var(--unbc-bold);
+  font-weight: 700;
+}
+/* Green is the region, warm grey each area and gold the projection, as on the
+   rest of the Atlas. The areas are told apart by their end labels: past 2022
+   their lines do not cross, so no hue outside the UNBC palette is needed. */
+.atlas-trend-series polyline {
+  fill: none;
+  stroke: var(--unbc-soft, #777677);
+  stroke-width: 2;
+}
+.atlas-trend-series circle:not(.atlas-trend-projection) {
+  fill: var(--unbc-soft, #777677);
+  stroke: #fff;
+  stroke-width: 1.5;
+}
+.atlas-trend-series.is-total polyline {
+  stroke: var(--atlas-green, #035642);
+  stroke-width: 3;
+}
+.atlas-trend-series.is-total circle:not(.atlas-trend-projection) {
+  fill: var(--atlas-green, #035642);
+}
+.atlas-trend-series.is-hot polyline {
+  stroke: var(--atlas-ink, #29292a);
+}
+.atlas-trend-series.is-hot circle:not(.atlas-trend-projection) {
+  fill: var(--atlas-ink, #29292a);
+}
+.atlas-trend-together .is-dimmed {
+  opacity: 0.25;
+}
+/* The narrowest phones scroll the table rather than cut a column off. */
+.atlas-trend-table {
+  overflow-x: auto;
+}
+.atlas-trend-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+/* unbc.ca tables: a warm header row and 2px warm rules. */
+.atlas-trend-table th,
+.atlas-trend-table td {
+  padding: 5px 8px;
+  border-bottom: 2px solid var(--unbc-warm, #eae7e5);
+  text-align: right;
+  white-space: nowrap;
+  font-weight: 400;
+}
+.atlas-trend-table thead th {
+  background: var(--unbc-warm, #eae7e5);
+  border-bottom: 0;
+  font-family: var(--unbc-bold);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--atlas-ink, #29292a);
+}
+.atlas-trend-table tbody tr:hover {
+  background: #f9f9f9;
+}
+.atlas-trend-table th:first-child {
+  text-align: left;
+}
+.atlas-trend-table .is-total th,
+.atlas-trend-table .is-total td {
+  font-family: var(--unbc-bold);
+  font-weight: 700;
+}
+.atlas-trend-table tbody th span {
+  display: block;
+  font-family: "bcsans-regular", "BC Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--atlas-muted, #525154);
+}
+.atlas-trend-table td.is-projection {
   color: #794e00;
+  background: #f4efe1;
 }
-/* The total's figures wrap rather than run off; a narrower grid stacks its
-   chart above them. */
-.atlas-trend-panel.is-total dl {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  column-gap: 16px;
+@container (max-width: 620px) {
+  .atlas-trend-table th,
+  .atlas-trend-table td {
+    padding: 4px 5px;
+    font-size: 12px;
+  }
 }
-@container (max-width: 760px) {
-  .atlas-trend-panel.is-total {
-    grid-template-columns: minmax(0, 1fr);
+/* A narrow story panel keeps the question the table answers: where each area
+   ended and what it is projected to be. The start year stays on the chart's
+   axis, and the expanded view keeps every column. */
+@container (max-width: 480px) {
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-table th:nth-child(2),
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-table td:nth-child(2) {
+    display: none;
+  }
+  .atlas-trend-table thead th {
+    white-space: normal;
+    vertical-align: bottom;
+  }
+  .atlas-trend-table th,
+  .atlas-trend-table td {
+    padding-inline: 3px;
+  }
+  /* Names take two lines at most rather than being squeezed to one word each. */
+  .atlas-trend-table tbody th {
+    min-width: 90px;
+    white-space: normal;
+  }
+}
+/* Phones and short windows give the panel's height to the chart: the exact
+   figures stay one tap away under Expand, and the key is one line. */
+@media (max-width: 700px), (max-height: 560px) {
+  .atlas-trend-key-long {
+    display: none;
+  }
+  .atlas-trend-key-short {
+    display: inline;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-table {
+    display: none;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-together {
+    grid-template-rows: minmax(0, 1fr);
   }
 }
 @media (max-width: 700px) {
-  .atlas-trend-multiples {
-    padding: 8px;
-    gap: 8px;
+  .atlas-trends {
+    padding: 8px 12px 10px;
+    gap: 6px;
   }
+  /* On a phone the key is one small line beside the expand icon. */
   .atlas-trend-key {
+    flex-wrap: nowrap;
+    gap: 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .atlas-story-reader .editorial-expandable:not(.is-expanded) .atlas-trend-key {
+    min-height: 36px;
     padding-right: 44px;
   }
-  .atlas-trend-multiples ul {
-    gap: 8px;
+  .atlas-trend-key strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    font-size: 12px;
   }
-  .atlas-trend-panel.is-total {
-    grid-template-columns: 1fr;
+  .atlas-trend-key i {
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
   }
-  .atlas-trend-panel dd span {
+  .atlas-trend-end {
+    font-size: 12px;
+  }
+  .atlas-app .atlas-trends h4 {
+    font-size: 14px;
+  }
+  .atlas-trend-figures p {
+    font-size: 12px;
+  }
+  .atlas-trend-figures b {
     font-size: 15px;
+    margin-right: 4px;
+  }
+}
+
+/* Focus: one area large, with all of them listed as the way to switch. */
+.atlas-app .atlas-trends h4 {
+  margin: 0;
+  font-size: 15px;
+  font-family: var(--unbc-bold);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.atlas-trends h4 span {
+  margin-left: 8px;
+  font-family: "bcsans-regular", "BC Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--atlas-muted, #525154);
+}
+.atlas-trend-figures p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.3;
+  color: var(--atlas-ink, #29292a);
+  font-variant-numeric: tabular-nums;
+}
+.atlas-trend-figures b {
+  margin-right: 6px;
+  font-family: var(--unbc-bold);
+  font-size: 17px;
+  color: var(--atlas-green, #035642);
+}
+.atlas-trend-figures .is-projection,
+.atlas-trend-figures .is-projection b {
+  color: #794e00;
+}
+.atlas-trend-focus {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 216px;
+  gap: 16px;
+}
+.atlas-trend-focus section {
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 10px;
+}
+.atlas-trend-focus-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 20px;
+}
+.atlas-trend-focus-head .atlas-trend-figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+}
+.atlas-trend-focus nav {
+  display: grid;
+  grid-auto-rows: minmax(0, 1fr);
+  gap: 8px;
+  min-height: 0;
+}
+.atlas-app .atlas-trend-focus nav button {
+  padding: 8px 12px;
+  border: 1px solid var(--atlas-line, #eae7e5);
+  border-left: 3px solid var(--atlas-line, #eae7e5);
+  border-radius: 0;
+  background: #fff;
+  color: var(--atlas-ink, #29292a);
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 2px 10px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.25;
+}
+.atlas-trend-focus nav button span {
+  grid-column: 1 / -1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.atlas-trend-focus nav button b {
+  font-family: var(--unbc-bold);
+  font-size: 16px;
+  color: var(--atlas-green, #035642);
+  font-variant-numeric: tabular-nums;
+}
+.atlas-app .atlas-trend-focus nav button:hover {
+  background: var(--unbc-warm, #eae7e5);
+}
+.atlas-app .atlas-trend-focus nav button[aria-pressed="true"] {
+  border-left-color: var(--atlas-green, #035642);
+  background: var(--unbc-warm, #eae7e5);
+  font-family: var(--unbc-bold);
+}
+.atlas-trend-spark polyline {
+  fill: none;
+  stroke: var(--atlas-green, #035642);
+  stroke-width: 1.5;
+}
+.atlas-trend-spark circle {
+  fill: #fff;
+  stroke: var(--unbc-gold, #977000);
+  stroke-width: 1.5;
+}
+@container (max-width: 620px) {
+  .atlas-trend-focus {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+  .atlas-trend-focus nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+  }
+  .atlas-trend-spark {
+    display: none;
+  }
+}
+
+/* Phones and short windows: the areas are a row of chips under the chart. */
+@media (max-width: 700px), (max-height: 560px) {
+  .atlas-trend-focus {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) 36px;
+    gap: 6px;
+  }
+  .atlas-trend-focus section {
+    gap: 2px;
+  }
+  /* The chip names the area, so the figures take the row. */
+  .atlas-trend-focus-head {
+    gap: 0 12px;
+  }
+  .atlas-trend-focus-head h4 {
+    display: none;
+  }
+  .atlas-trend-focus-head .atlas-trend-figures {
+    flex-wrap: nowrap;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  /* The areas become one row of 36px chips that scrolls sideways. */
+  .atlas-trend-focus nav {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    min-width: 0;
+  }
+  .atlas-app .atlas-trend-focus nav button {
+    flex: none;
+    display: block;
+    padding: 0 10px;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    border-radius: 2px;
+    background: var(--unbc-warm, #eae7e5);
+    font-size: 13px;
+  }
+  .atlas-app .atlas-trend-focus nav button[aria-pressed="true"] {
+    border-bottom-color: var(--atlas-green, #035642);
+  }
+  .atlas-trend-focus nav button b {
+    display: none;
   }
 }
 /* Expanded on a phone, the paired maps' value table still comes along. */
